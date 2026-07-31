@@ -14,6 +14,7 @@ const path = require('path');
 
 const P = JSON.parse(fs.readFileSync(path.join(__dirname, 'logo_parts.json'), 'utf8'));
 const ORANGE = '#FC5802', INK = '#17130F', CREAM = '#F5F0E7', WHITE = '#FDFCFC', PAPERINK = '#1A1613';
+const MUTED = '#6f665c', GOOD = '#37d67a';
 
 // ---------- utilities ----------
 function rng(seed) { // small deterministic PRNG so a run is reproducible from its seed
@@ -43,6 +44,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-s
 .eyebrow{font-family:ui-monospace,Menlo,monospace;font-size:26px;letter-spacing:.22em;text-transform:uppercase;font-weight:700}
 .display{font-weight:800;letter-spacing:-.02em;line-height:.98;transform:skewX(-4deg);transform-origin:left}
 .display .accent{color:${ORANGE}}
+.h{font-weight:800;letter-spacing:-.02em;line-height:1.02}
 .foot{margin-top:auto;display:flex;align-items:center;justify-content:space-between}
 .foot .lg{height:52px}
 .foot .lg svg{height:52px;width:auto;display:block}
@@ -130,7 +132,130 @@ function L_carousel(p) { // rendered as a single strong cover
       <div class="cta" style="color:${ORANGE}"><span class="dot"></span>${p.cta || 'growthterminal.io'}</div></div>
   </div>`;
 }
-const RENDER = { statement: L_statement, contrast: L_contrast, stat: L_stat, vs: L_vs, carousel: L_carousel };
+// B) Live product diagnosis card
+function L_card(p) {
+  return `<div class="stage" style="background:${INK};color:${WHITE}">
+    <div class="grain"></div>
+    <div class="eyebrow" style="color:${ORANGE}">${p.eyebrow}</div>
+    <div style="flex:1;display:flex;align-items:center">
+      <div style="width:100%;background:#211b15;border:1px solid rgba(255,255,255,.1);border-radius:28px;padding:48px 46px">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:32px">
+          <span class="mono" style="font-size:22px;letter-spacing:.14em;color:#9a8f82;text-transform:uppercase">#1 constraint detected</span>
+          <span class="mono" style="font-size:20px;color:${GOOD};display:flex;align-items:center;gap:8px"><span style="width:10px;height:10px;border-radius:50%;background:${GOOD};display:inline-block"></span>VERIFIED</span></div>
+        <div class="h" style="font-size:92px;color:${ORANGE};margin-bottom:30px">${p.constraint}</div>
+        <div style="height:16px;border-radius:10px;background:#000;overflow:hidden;margin-bottom:14px"><div style="width:${p.pct}%;height:100%;background:${ORANGE}"></div></div>
+        <div style="display:flex;justify-content:space-between;font-size:26px"><span style="color:#9a8f82">Impact</span><span style="font-weight:800">${p.impact}</span></div>
+        <div style="display:flex;justify-content:space-between;font-size:26px;margin-top:12px"><span style="color:#9a8f82">Confidence</span><span style="font-weight:800;color:${GOOD}">${p.confidence}</span></div>
+      </div></div>
+    ${p.sub ? `<div style="font-size:32px;font-weight:600;max-width:840px;margin:24px 0 8px">${p.sub}</div>` : ''}
+    <div class="foot"><div class="lg">${logo(ORANGE, WHITE)}</div>
+      <div class="cta" style="color:${ORANGE}"><span class="dot"></span>${p.cta || 'growthterminal.io'}</div></div>
+  </div>`;
+}
+
+// C) Quote card (cream)
+function L_quote(p) {
+  return `<div class="stage" style="background:${CREAM};color:${PAPERINK}">
+    <div class="grain" style="background-image:radial-gradient(rgba(0,0,0,.4) 1px,transparent 1px)"></div>
+    <div style="font-size:220px;line-height:.6;color:${ORANGE};font-weight:800;height:120px">&ldquo;</div>
+    <div style="flex:1;display:flex;align-items:center">
+      <div class="h" style="font-size:82px">${p.quote}</div></div>
+    <div class="mono" style="font-size:26px;letter-spacing:.1em;color:#8a7f70;margin-bottom:20px">&mdash; GROWTH TERMINAL</div>
+    <div class="foot"><div class="lg">${logo(ORANGE, INK)}</div>
+      <div class="cta" style="color:${ORANGE}"><span class="dot"></span>${p.cta || 'growthterminal.io'}</div></div>
+  </div>`;
+}
+
+// D) Annotated highlight (hand-drawn circle)
+function L_annotated(p) {
+  return `<div class="stage" style="background:${INK};color:${WHITE}">
+    <div class="grain"></div>
+    <div class="eyebrow" style="color:${ORANGE}">${p.eyebrow}</div>
+    <div style="flex:1;display:flex;align-items:center"><div>
+      <div style="font-size:74px;font-weight:800;line-height:1.15;max-width:880px">${p.pre}<span style="position:relative;white-space:nowrap;color:${ORANGE}">${p.circled}<svg style="position:absolute;left:-18px;top:-14px;width:${p.ring || 640}px;height:150px" viewBox="0 0 ${p.ring || 640} 150"><ellipse cx="${(p.ring || 640) / 2}" cy="78" rx="${(p.ring || 640) / 2 - 12}" ry="60" fill="none" stroke="${ORANGE}" stroke-width="5" transform="rotate(-3 ${(p.ring || 640) / 2} 78)"/></svg></span>${p.post}</div>
+      </div></div>
+    ${p.sub ? `<div style="font-size:30px;opacity:.8;max-width:820px;margin-bottom:8px">${p.sub}</div>` : ''}
+    <div class="foot"><div class="lg">${logo(ORANGE, WHITE)}</div>
+      <div class="cta" style="color:${ORANGE}"><span class="dot"></span>${p.cta || 'growthterminal.io'}</div></div>
+  </div>`;
+}
+
+// E) Funnel with the leak stage highlighted
+function L_funnel(p) {
+  const bars = p.stages.map(s => `
+    <div style="display:flex;align-items:center;gap:26px;margin:0 0 18px">
+      <div class="mono" style="width:210px;text-align:right;font-size:28px;color:#b8afa2">${s[0]}</div>
+      <div style="flex:1;display:flex;justify-content:center">
+        <div style="width:${s[2] * 100}%;height:74px;border-radius:12px;background:${s[3] ? ORANGE : '#2c251e'};display:flex;align-items:center;justify-content:flex-end;padding-right:22px;font-weight:800;font-size:30px;color:${s[3] ? INK : WHITE}">${s[1]}</div>
+      </div>
+      <div style="width:150px;font-size:24px;color:${ORANGE};font-weight:700">${s[3] ? '&larr; leak' : ''}</div>
+    </div>`).join('');
+  return `<div class="stage" style="background:${INK};color:${WHITE}">
+    <div class="grain"></div>
+    <div class="eyebrow" style="color:${ORANGE}">${p.eyebrow}</div>
+    <div class="h" style="font-size:60px;margin:18px 0 6px">${p.hook}</div>
+    <div style="flex:1;display:flex;flex-direction:column;justify-content:center">${bars}</div>
+    ${p.sub ? `<div style="font-size:30px;opacity:.82;max-width:840px;margin-bottom:8px">${p.sub}</div>` : ''}
+    <div class="foot"><div class="lg">${logo(ORANGE, WHITE)}</div>
+      <div class="cta" style="color:${ORANGE}"><span class="dot"></span>${p.cta || 'growthterminal.io'}</div></div>
+  </div>`;
+}
+
+// F) Ranked constraints (horizontal bars, #1 highlighted)
+function L_ranked(p) {
+  const bars = p.rows.map((r, i) => `
+    <div style="margin:0 0 22px">
+      <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px">
+        <span style="font-size:30px;font-weight:${r[2] ? 800 : 600};color:${r[2] ? WHITE : '#b8afa2'}"><span class="mono" style="color:${ORANGE};margin-right:14px">${i + 1}</span>${r[0]}</span>
+        <span class="mono" style="font-size:26px;color:${r[2] ? ORANGE : MUTED};font-weight:700">${r[1]}</span></div>
+      <div style="height:22px;border-radius:8px;background:#221c16;overflow:hidden"><div style="width:${r[1]}%;height:100%;border-radius:8px;background:${r[2] ? ORANGE : '#4a4038'}"></div></div>
+    </div>`).join('');
+  return `<div class="stage" style="background:${INK};color:${WHITE}">
+    <div class="grain"></div>
+    <div class="eyebrow" style="color:${ORANGE}">${p.eyebrow}</div>
+    <div class="h" style="font-size:60px;margin:18px 0 6px">${p.hook}</div>
+    <div style="flex:1;display:flex;flex-direction:column;justify-content:center">${bars}
+      <div class="mono" style="font-size:22px;color:${MUTED};margin-top:6px">&hellip;7 more, ranked by impact on your revenue</div></div>
+    ${p.sub ? `<div style="font-size:30px;opacity:.82;max-width:840px;margin-bottom:8px">${p.sub}</div>` : ''}
+    <div class="foot"><div class="lg">${logo(ORANGE, WHITE)}</div>
+      <div class="cta" style="color:${ORANGE}"><span class="dot"></span>${p.cta || 'growthterminal.io'}</div></div>
+  </div>`;
+}
+
+// G) Forecast-vs-actual trajectory
+function L_trajectory(p) {
+  const W = 880, H = 440, pad = 20;
+  const fc = p.fc, ac = p.ac;
+  const lo = 40, hi = Math.max(...fc.map(x => x[1]), ...ac.map(x => x[1])) + 4;
+  const mx = v => pad + (v / 5) * (W - 2 * pad);
+  const my = v => H - pad - ((v - lo) / (hi - lo)) * (H - 2 * pad);
+  const line = pts => pts.map((pt, i) => (i ? 'L' : 'M') + mx(pt[0]).toFixed(1) + ' ' + my(pt[1]).toFixed(1)).join(' ');
+  const dots = pts => pts.map(pt => `<circle cx="${mx(pt[0]).toFixed(1)}" cy="${my(pt[1]).toFixed(1)}" r="7" fill="${ORANGE}" stroke="${INK}" stroke-width="3"/>`).join('');
+  return `<div class="stage" style="background:${INK};color:${WHITE}">
+    <div class="grain"></div>
+    <div class="eyebrow" style="color:${ORANGE}">${p.eyebrow}</div>
+    <div class="h" style="font-size:60px;margin:18px 0 6px">${p.hook}</div>
+    <div style="flex:1;display:flex;flex-direction:column;justify-content:center">
+      <div style="display:flex;gap:34px;margin-bottom:16px" class="mono">
+        <span style="font-size:24px;color:#b8afa2"><span style="display:inline-block;width:26px;height:0;border-top:3px dashed #b8afa2;vertical-align:middle;margin-right:10px"></span>Forecast</span>
+        <span style="font-size:24px;color:${ORANGE}"><span style="display:inline-block;width:26px;height:0;border-top:3px solid ${ORANGE};vertical-align:middle;margin-right:10px"></span>Actual</span>
+        <span style="font-size:24px;color:${GOOD};margin-left:auto">&#10003; VERIFIED</span>
+      </div>
+      <svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">
+        ${[0.35, 0.55, 0.75].map(f => `<line x1="${pad}" y1="${(H * f).toFixed(0)}" x2="${W - pad}" y2="${(H * f).toFixed(0)}" stroke="rgba(255,255,255,.08)" stroke-width="1"/>`).join('')}
+        <path d="${line(fc)}" fill="none" stroke="#b8afa2" stroke-width="3" stroke-dasharray="8 8" stroke-linecap="round"/>
+        <path d="${line(ac)}" fill="none" stroke="${ORANGE}" stroke-width="4" stroke-linecap="round"/>
+        ${dots(ac)}
+      </svg>
+    </div>
+    ${p.sub ? `<div style="font-size:30px;opacity:.82;max-width:860px;margin-bottom:8px">${p.sub}</div>` : ''}
+    <div class="foot"><div class="lg">${logo(ORANGE, WHITE)}</div>
+      <div class="cta" style="color:${ORANGE}"><span class="dot"></span>${p.cta || 'growthterminal.io'}</div></div>
+  </div>`;
+}
+
+const RENDER = { statement: L_statement, contrast: L_contrast, stat: L_stat, vs: L_vs, carousel: L_carousel,
+  card: L_card, quote: L_quote, annotated: L_annotated, funnel: L_funnel, ranked: L_ranked, trajectory: L_trajectory };
 
 // ---------- content atoms ----------
 // The 12 places growth actually gets stuck (GT's core model) + a symptom line each.
@@ -333,10 +458,121 @@ function gen_carousel(r) {
     caption: b.cap, first_comment: b.fc, sig: 'car:' + b.big + stripHtml(b.hook).slice(0, 20) };
 }
 
+// B) Live diagnosis card — shows the product output
+function gen_card(r) {
+  const bank = [
+    { c: 'Retention', impact: '$88K–$140K / yr', conf: '92%', pct: 78 },
+    { c: 'Activation', impact: '$60K–$110K / yr', conf: '88%', pct: 71 },
+    { c: 'Pricing', impact: '$120K–$300K / yr', conf: '84%', pct: 64 },
+    { c: 'Conversion', impact: '$45K–$95K / yr', conf: '90%', pct: 69 },
+  ];
+  const b = pick(bank, r);
+  return { layout: 'card', eyebrow: '◆ Live diagnosis', constraint: b.c, impact: b.impact, confidence: b.conf, pct: b.pct,
+    sub: `This is what you get back. Not a dashboard — a verdict.`, hook: `#1 constraint: ${b.c}`,
+    caption: `This is what a Growth Terminal diagnosis looks like.\n\nNot 40 metrics to interpret — one constraint, named, with the dollar range it's costing you and how sure we are. Here, ${b.c.toLowerCase()} was capping the business by ${b.impact.replace(' / yr', ' a year')}.\n\nYours is one run away.`,
+    first_comment: `What would you do differently if your #1 constraint came pre-priced?`,
+    sig: 'card:' + b.c };
+}
+
+// C) Quote card (cream, share-bait)
+function gen_quote(r) {
+  const bank = [
+    { q: `The most expensive number in growth is the one you ${accent('can’t see')}.`,
+      cap: `The most expensive number in growth is the one you can't see.\n\nA hidden constraint never sends an invoice — it just quietly caps every month. Growth Terminal makes it visible and puts a dollar range on it.`,
+      fc: `The scariest line item is the one that never shows up on the P&L.` },
+    { q: `You don’t get a dashboard. You get a ${accent('verdict')}.`,
+      cap: `You don't get a dashboard. You get a verdict.\n\nDashboards show 40 numbers and let you pick the story. We name the one constraint holding you back, price it, and verify the call against real revenue.`,
+      fc: `Clarity beats another chart. Every time.` },
+    { q: `Fix the ${accent('constraint')}. Not the symptom.`,
+      cap: `Fix the constraint, not the symptom.\n\n"Conversion is low" is a symptom. The real constraint usually sits one step upstream. We trace it back to the source so you fix the thing that actually moves the number.`,
+      fc: `What symptom have you been treating that keeps coming back?` },
+    { q: `${accent('Diagnosis')} before treatment. Always.`,
+      cap: `Diagnosis before treatment. Always.\n\nMost growth mistakes aren't strategy failures — they're diagnosis failures. Get the constraint right first, then move.`,
+      fc: `Would you take the medicine before the diagnosis? Same in growth.` },
+  ];
+  const b = pick(bank, r);
+  return { layout: 'quote', quote: b.q, hook: stripHtml(b.q), caption: b.cap, first_comment: b.fc,
+    sig: 'quote:' + stripHtml(b.q).slice(0, 36) };
+}
+
+// D) Annotated highlight (hand-drawn circle)
+function gen_annotated(r) {
+  const bank = [
+    { pre: `You don’t have a traffic problem. You have a `, circled: `diagnosis problem`, post: `.`, ring: 640,
+      sub: `Everyone treats the symptom. We find the cause.`,
+      cap: `You don't have a traffic problem. You have a diagnosis problem.\n\nMore traffic into a funnel that leaks somewhere else just costs more. We find where growth is actually stuck first — then you spend.`,
+      fc: `Where do you *think* you're stuck — and how sure are you?` },
+    { pre: `You’re not behind. You’re working on the `, circled: `wrong constraint`, post: `.`, ring: 620,
+      sub: `Effort on the wrong lever still feels like work.`,
+      cap: `You're not behind. You're working on the wrong constraint.\n\nThe effort is real; the target is off. Growth Terminal points you at the one lever that's actually capping you this quarter.`,
+      fc: `Perfect execution on the wrong target still loses.` },
+    { pre: `It’s not that growth is `, circled: `hard`, post: `. It’s mis-measured.`, ring: 300,
+      sub: `The right number, ranked above the noise.`,
+      cap: `It's not that growth is hard. It's mis-measured.\n\nToo many metrics, no ranking. We score the twelve places growth gets stuck and hand you the one that matters most right now.`,
+      fc: `How many metrics do you track that never change a decision?` },
+  ];
+  const b = pick(bank, r);
+  return { layout: 'annotated', eyebrow: '◆ Read this twice', pre: b.pre, circled: b.circled, post: b.post, ring: b.ring,
+    sub: b.sub, hook: b.pre + b.circled + b.post, caption: b.cap, first_comment: b.fc,
+    sig: 'ann:' + b.circled };
+}
+
+// E) Funnel with the leak highlighted
+function gen_funnel(r) {
+  const bank = [
+    { hook: `Your funnel isn’t<br>slow. It’s ${accent('leaking.')}`,
+      stages: [['Visitors', '100%', 1.0, false], ['Signups', '32%', 0.62, false], ['Activated', '15%', 0.40, true], ['Retained', '9%', 0.30, false]],
+      sub: `Activation is where most of your growth quietly disappears. We find the exact stage — and price it.`,
+      cap: `Most growth doesn't die at the top of the funnel. It leaks in the middle.\n\nHere, activation is the drop that's costing the most — people sign up and never reach the first win. Growth Terminal pinpoints the leaking stage and tells you what sealing it is worth.`,
+      fc: `Where does your funnel leak hardest — top, middle, or bottom?` },
+    { hook: `You don’t need more<br>leads. You need to ${accent('keep them.')}`,
+      stages: [['Leads', '100%', 1.0, false], ['Booked', '41%', 0.66, false], ['Closed', '19%', 0.44, false], ['Retained', '11%', 0.32, true]],
+      sub: `Pouring leads into a leaky retention stage just costs more. Fix the leak first.`,
+      cap: `More leads into a leaky funnel just costs more.\n\nWhen retention is the constraint, every new lead is a bucket with a hole in it. Growth Terminal shows you the stage doing the damage before you spend another dollar on top-of-funnel.`,
+      fc: `Are you filling the bucket or fixing the hole?` },
+  ];
+  const b = pick(bank, r);
+  return { layout: 'funnel', eyebrow: '◆ Where growth leaks', hook: b.hook, stages: b.stages, sub: b.sub,
+    caption: b.cap, first_comment: b.fc, sig: 'funnel:' + stripHtml(b.hook).slice(0, 24) };
+}
+
+// F) Ranked constraints
+function gen_ranked(r) {
+  const bank = [
+    { hook: `The 12 places growth<br>gets stuck — ${accent('scored.')}`,
+      rows: [['Retention', 94, true], ['Activation', 81, false], ['Pricing', 63, false], ['Acquisition', 48, false], ['Conversion', 35, false]] },
+    { hook: `We rank all twelve.<br>You fix the ${accent('#1.')}`,
+      rows: [['Pricing', 91, true], ['Conversion', 77, false], ['Retention', 66, false], ['Offer', 52, false], ['Traffic', 40, false]] },
+  ];
+  const b = pick(bank, r);
+  return { layout: 'ranked', eyebrow: '◆ Ranked for you', hook: b.hook, rows: b.rows,
+    sub: `We don’t hand you a checklist. We tell you which one to fix first.`,
+    caption: `Twelve places growth gets stuck. We score all of them against your data and rank them.\n\nThe point isn't the list — it's knowing which one is your #1 right now, with the dollar range attached. That's the move that changes the quarter.`,
+    first_comment: `If you could only fix one this quarter, do you know which?`,
+    sig: 'ranked:' + b.rows[0][0] };
+}
+
+// G) Forecast-vs-actual trajectory
+function gen_trajectory(r) {
+  const bank = [
+    { fc: [[0, 60], [1, 88], [2, 120], [3, 150], [4, 182], [5, 210]], ac: [[0, 58], [1, 84], [2, 128], [3, 150], [4, 196], [5, 224]] },
+    { fc: [[0, 50], [1, 70], [2, 96], [3, 128], [4, 160], [5, 190]], ac: [[0, 52], [1, 74], [2, 92], [3, 134], [4, 168], [5, 205]] },
+  ];
+  const b = pick(bank, r);
+  return { layout: 'trajectory', eyebrow: '◆ We grade our own calls', hook: `The forecast, checked<br>against ${accent('real revenue.')}`,
+    fc: b.fc, ac: b.ac,
+    sub: `Every prediction we make gets tracked against what actually happened. When we’re wrong, you see it too.`,
+    caption: `Everyone in growth makes confident calls. Almost no one checks them.\n\nGrowth Terminal logs every forecast and tracks it against your real revenue — verified or missed. You build trust in the calls that keep landing and catch the ones that don't. Accountability is the feature.`,
+    first_comment: `When we're wrong, the tool says so. That's the point.`,
+    sig: 'traj:' + b.ac[5][1] };
+}
+
 // Weighted mix of generators. Statement/constraint are the workhorses; the rest add variety.
 const GENERATORS = [
   gen_statement, gen_statement, gen_constraint, gen_constraint,
-  gen_stat, gen_stat, gen_contrast, gen_contrast, gen_vs, gen_carousel,
+  gen_stat, gen_contrast, gen_vs, gen_carousel,
+  gen_card, gen_card, gen_quote, gen_annotated,
+  gen_funnel, gen_ranked, gen_trajectory,
 ];
 
 // ---------- pick a fresh post (avoid recent repeats) ----------
