@@ -717,6 +717,9 @@ async function renderReel(page, post, base) {
     '-c:v', 'libx264', '-pix_fmt', 'yuv420p', '-movflags', '+faststart', base + '.mp4', '-loglevel', 'error']);
   fs.rmSync(framesDir, { recursive: true, force: true });
 }
+function ffmpegAvailable() {
+  try { execFileSync('ffmpeg', ['-version'], { stdio: 'ignore' }); return true; } catch { return false; }
+}
 function pruneCreatives(prefix, exts, keep) {
   try {
     const dir = path.join(__dirname, 'creatives'), primaryExt = exts[0];
@@ -763,7 +766,10 @@ function pruneCreatives(prefix, exts, keep) {
   const now = new Date();
   const stampStr = stamp(now);
   const REEL_RATE = parseFloat(process.env.GT_REEL_RATE || '0.4'); // ~40% of runs are Reels
-  const wantReel = rng(((now.getTime() >>> 0) ^ 0xA5A5A5A5) >>> 0)() < REEL_RATE;
+  // Only attempt a Reel if ffmpeg is available — otherwise fall back to a static post (never crash the run).
+  const hasFfmpeg = ffmpegAvailable();
+  if (!hasFfmpeg) console.log('note: ffmpeg not found — posting a static image this run');
+  const wantReel = hasFfmpeg && rng(((now.getTime() >>> 0) ^ 0xA5A5A5A5) >>> 0)() < REEL_RATE;
   let meta;
 
   if (wantReel) {
