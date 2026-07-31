@@ -9,6 +9,7 @@
 // Usage:  node generate.js            -> writes creatives/<file>.jpg + meta.json
 //         node generate.js --preview N -> renders N samples to creatives/ for QA
 const { chromium } = require('playwright');
+const { execFileSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
@@ -611,6 +612,124 @@ function stamp(d) {
   return `${d.getFullYear()}${p(d.getMonth() + 1)}${p(d.getDate())}_${p(d.getHours())}${p(d.getMinutes())}${p(d.getSeconds())}`;
 }
 
+// ==================== REELS (animated 1080x1920 MP4) ====================
+const clamp01 = x => Math.max(0, Math.min(1, x));
+const easeOut = x => 1 - Math.pow(1 - clamp01(x), 2);
+const easeIO  = x => { x = clamp01(x); return x < .5 ? 2 * x * x : 1 - Math.pow(-2 * x + 2, 2) / 2; };
+function rlogo(h) { return logo(ORANGE, WHITE).replace('<svg', `<svg style="height:${h}px;width:auto;display:block"`); }
+const RGRAIN = `<div style="position:absolute;inset:0;opacity:.04;pointer-events:none;background-image:radial-gradient(rgba(255,255,255,.5) 1px,transparent 1px);background-size:4px 4px"></div>`;
+function rstage(inner, glowT) {
+  const g = 150 + Math.sin(glowT * Math.PI * 2) * 30;
+  return `<div style="width:1080px;height:1920px;background:${INK};color:${WHITE};position:relative;overflow:hidden;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;padding:150px 96px;display:flex;flex-direction:column">
+    <div style="position:absolute;width:760px;height:760px;border-radius:50%;filter:blur(${g}px);opacity:.5;background:${ORANGE};top:-160px;right:-200px"></div>${RGRAIN}${inner}</div>`;
+}
+function rfoot(op) {
+  return `<div style="display:flex;align-items:center;justify-content:space-between;opacity:${op};transform:translateY(${(1 - op) * 16}px)">
+    <div>${rlogo(58)}</div>
+    <div style="font-family:ui-monospace,Menlo,monospace;font-size:30px;font-weight:700;color:${ORANGE};display:flex;align-items:center;gap:14px"><span style="width:14px;height:14px;border-radius:50%;background:${ORANGE}"></span>growthterminal.io</div></div>`;
+}
+function cardFrame(t, p) {
+  const appear = easeOut((t - 0.03) / 0.25), wordIn = easeOut((t - 0.12) / 0.28);
+  const meter = easeIO((t - 0.22) / 0.5) * p.pct, conf = Math.round(easeIO((t - 0.30) / 0.5) * p.confidence);
+  const verIn = easeOut((t - 0.72) / 0.12), ctaIn = easeOut((t - 0.80) / 0.18);
+  const inner = `<div style="font-family:ui-monospace,Menlo,monospace;font-size:30px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:${ORANGE};opacity:${appear};transform:translateY(${(1 - appear) * 20}px)">◆ Live diagnosis</div>
+    <div style="font-size:66px;font-weight:800;letter-spacing:-.02em;line-height:1.04;margin-top:26px;opacity:${appear};transform:translateY(${(1 - appear) * 24}px)">${p.headline}</div>
+    <div style="flex:1;display:flex;align-items:center">
+      <div style="width:100%;background:#211b15;border:1px solid rgba(255,255,255,.1);border-radius:34px;padding:60px 56px;opacity:${appear};transform:translateY(${(1 - appear) * 30}px)">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:36px">
+          <span style="font-family:ui-monospace,Menlo,monospace;font-size:26px;letter-spacing:.14em;color:#9a8f82;text-transform:uppercase">#1 constraint detected</span>
+          <span style="font-family:ui-monospace,Menlo,monospace;font-size:24px;color:${GOOD};display:flex;align-items:center;gap:10px;opacity:${verIn};transform:scale(${0.8 + verIn * 0.2})"><span style="width:12px;height:12px;border-radius:50%;background:${GOOD};display:inline-block"></span>VERIFIED</span></div>
+        <div style="height:${wordIn * 120}px;overflow:hidden"><div style="font-size:120px;font-weight:800;letter-spacing:-.02em;color:${ORANGE};line-height:1;transform:translateY(${(1 - wordIn) * 40}px);opacity:${wordIn}">${p.constraint}</div></div>
+        <div style="height:20px;border-radius:12px;background:#000;overflow:hidden;margin:40px 0 20px"><div style="width:${meter}%;height:100%;background:${ORANGE}"></div></div>
+        <div style="display:flex;justify-content:space-between;font-size:34px"><span style="color:#9a8f82">Impact</span><span style="font-weight:800">${p.impact}</span></div>
+        <div style="display:flex;justify-content:space-between;font-size:34px;margin-top:16px"><span style="color:#9a8f82">Confidence</span><span style="font-weight:800;color:${GOOD}">${conf}%</span></div>
+      </div></div>${rfoot(ctaIn)}`;
+  return rstage(inner, t);
+}
+function countupFrame(t, p) {
+  const appear = easeOut((t - 0.03) / 0.22), prog = easeIO((t - 0.15) / 0.55);
+  const val = Math.round(prog * p.big), labelIn = easeOut((t - 0.45) / 0.3), ctaIn = easeOut((t - 0.80) / 0.18);
+  const inner = `<div style="font-family:ui-monospace,Menlo,monospace;font-size:30px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:${ORANGE};opacity:${appear}">◆ ${p.eyebrow}</div>
+    <div style="flex:1;display:flex;flex-direction:column;justify-content:center">
+      <div style="font-family:ui-monospace,Menlo,monospace;font-size:340px;font-weight:700;color:${ORANGE};line-height:.9;letter-spacing:-.04em;opacity:${appear}">${p.prefix}${val}${p.suffix}</div>
+      <div style="font-size:52px;font-weight:800;max-width:880px;line-height:1.15;margin-top:24px;opacity:${labelIn};transform:translateY(${(1 - labelIn) * 20}px)">${p.label}</div>
+    </div>${rfoot(ctaIn)}`;
+  return rstage(inner, t);
+}
+const REEL_FRAME = { card: cardFrame, countup: countupFrame };
+
+function reel_card(r) {
+  const bank = [
+    { c: 'Retention', impact: '$88K–$140K / yr', conf: 92, pct: 78, head: 'We name your #1<br>growth constraint.' },
+    { c: 'Activation', impact: '$60K–$110K / yr', conf: 88, pct: 71, head: 'Your growth has<br>one real bottleneck.' },
+    { c: 'Pricing', impact: '$120K–$300K / yr', conf: 84, pct: 64, head: 'The costly constraint<br>is the hidden one.' },
+  ];
+  const b = pick(bank, r);
+  return { rlayout: 'card', constraint: b.c, impact: b.impact, confidence: b.conf, pct: b.pct, headline: b.head,
+    hook: `#1 constraint: ${b.c}`,
+    caption: `This is what a Growth Terminal diagnosis looks like — one constraint, named, priced, and verified against real revenue. Here, ${b.c.toLowerCase()} was capping the business by ${b.impact.replace(' / yr', ' a year')}.\n\nYours is one run away.`,
+    first_comment: `What would you do differently if your #1 constraint came pre-priced?`,
+    sig: 'reelcard:' + b.c };
+}
+function reel_countup(r) {
+  const bank = [
+    { big: 12, prefix: '', suffix: '', eyebrow: 'Save this', label: 'the number of places growth actually gets stuck. We rank all twelve and name yours.',
+      caption: `Growth only gets stuck in twelve places. The hard part is knowing which one is YOUR #1 right now — with a dollar range attached. That's the whole job Growth Terminal does.`,
+      fc: `Which of the 12 is biting hardest this quarter?`, sig: 'reelnum:12' },
+    { big: 60, prefix: '', suffix: ' sec', eyebrow: 'Install to insight', label: 'from spreadsheet to diagnosis. No onboarding, no migration.',
+      caption: `60 seconds from spreadsheet to diagnosis. Add the add-on to Google Sheets, point it at the report you already have, and get your #1 constraint ranked and priced before your coffee's cold.`,
+      fc: `Genuinely ~60 seconds. It reads the sheet you already have open.`, sig: 'reelnum:60' },
+    { big: 140, prefix: '$', suffix: 'K', eyebrow: 'What it’s worth', label: '/yr — the value of one constraint you couldn’t see, finally priced.',
+      caption: `Every diagnosis ends with a dollar range, not a vibe. A real number on a real constraint — so you decide with a figure instead of a hunch.`,
+      fc: `What would change if every problem came pre-priced?`, sig: 'reelnum:140' },
+  ];
+  const b = pick(bank, r);
+  return { rlayout: 'countup', big: b.big, prefix: b.prefix, suffix: b.suffix, eyebrow: b.eyebrow, label: b.label,
+    hook: `${b.prefix}${b.big}${b.suffix}`, caption: b.caption, first_comment: b.fc, sig: b.sig };
+}
+const REEL_GENERATORS = [reel_card, reel_card, reel_countup];
+
+function buildReel(seed, recent) {
+  const r = rng((seed ^ 0x5bd1e995) >>> 0);
+  for (let a = 0; a < 40; a++) {
+    const post = pick(REEL_GENERATORS, r)(r);
+    if (recent.includes(post.sig) && a < 30) continue;
+    post.hashtags = tags(r);
+    post.append_cta = pick(['\n\n→ growthterminal.io', '\n\nRun the free 60-second diagnostic — link in bio.',
+      '\n\nDiagnose your #1 constraint free. Link in bio.'], r);
+    return post;
+  }
+}
+async function renderReel(page, post, base) {
+  await page.setViewportSize({ width: 1080, height: 1920 });
+  const framesDir = path.join(__dirname, 'reel_frames');
+  if (fs.existsSync(framesDir)) fs.rmSync(framesDir, { recursive: true, force: true });
+  fs.mkdirSync(framesDir);
+  const FPS = 24, SECS = 5, N = FPS * SECS, fn = REEL_FRAME[post.rlayout];
+  const clip = { x: 0, y: 0, width: 1080, height: 1920 };
+  for (let i = 0; i < N; i++) {
+    const t = i / (N - 1);
+    await page.setContent(`<!DOCTYPE html><html><head><meta charset="utf8"><style>*{margin:0;padding:0;box-sizing:border-box}</style></head><body>${fn(t, post)}</body></html>`, { waitUntil: 'domcontentloaded' });
+    await page.screenshot({ path: path.join(framesDir, `f${String(i).padStart(3, '0')}.png`), clip });
+  }
+  await page.screenshot({ path: base + '.jpg', type: 'jpeg', quality: 92, clip }); // last frame = cover
+  execFileSync('ffmpeg', ['-y', '-framerate', String(FPS), '-i', path.join(framesDir, 'f%03d.png'),
+    '-c:v', 'libx264', '-pix_fmt', 'yuv420p', '-movflags', '+faststart', base + '.mp4', '-loglevel', 'error']);
+  fs.rmSync(framesDir, { recursive: true, force: true });
+}
+function pruneCreatives(prefix, exts, keep) {
+  try {
+    const dir = path.join(__dirname, 'creatives'), primaryExt = exts[0];
+    const primaries = fs.readdirSync(dir).filter(f => f.startsWith(prefix) && f.endsWith(primaryExt)).sort();
+    if (primaries.length > keep) {
+      for (const f of primaries.slice(0, primaries.length - keep)) {
+        const stem = f.slice(0, -primaryExt.length);
+        for (const e of exts) { try { fs.unlinkSync(path.join(dir, stem + e)); } catch {} }
+      }
+    }
+  } catch {}
+}
+
 // ---------- main ----------
 (async () => {
   const args = process.argv.slice(2);
@@ -639,42 +758,52 @@ function stamp(d) {
     return;
   }
 
-  // LIVE mode: build one fresh post, render it, record it, write meta.json
+  // LIVE mode: build one fresh post (sometimes a Reel), render, record, write meta.json
   const recent = loadUsed();
   const now = new Date();
-  const post = buildPost((now.getTime() >>> 0), recent);
-  const fname = `gt_auto_${stamp(now)}.jpg`;
-  const base = path.join(__dirname, 'creatives', fname.replace('.jpg', ''));
-  await renderPost(page, post, base);
-  await b.close();
+  const stampStr = stamp(now);
+  const REEL_RATE = parseFloat(process.env.GT_REEL_RATE || '0.4'); // ~40% of runs are Reels
+  const wantReel = rng(((now.getTime() >>> 0) ^ 0xA5A5A5A5) >>> 0)() < REEL_RATE;
+  let meta;
 
-  // prune old auto creatives so the repo stays lean (keep newest ~60)
-  try {
-    const dir = path.join(__dirname, 'creatives');
-    const autos = fs.readdirSync(dir).filter(f => f.startsWith('gt_auto_') && (f.endsWith('.jpg') || f.endsWith('.png'))).sort();
-    const jpgs = autos.filter(f => f.endsWith('.jpg'));
-    if (jpgs.length > 60) {
-      for (const f of jpgs.slice(0, jpgs.length - 60)) {
-        try { fs.unlinkSync(path.join(dir, f)); } catch {}
-        try { fs.unlinkSync(path.join(dir, f.replace('.jpg', '.png'))); } catch {}
-      }
-    }
-  } catch {}
-
-  const caption = (post.caption || '').trim() + (post.append_cta || '');
-  const meta = {
-    generated_at: now.toISOString(),
-    media_file: 'creatives/' + fname,
-    layout: post.layout,
-    caption,
-    hashtags: post.hashtags,
-    first_comment: post.first_comment || '',
-    alt_text: stripHtml(post.hook || post.big || post.stat || post.label),
-    sig: post.sig,
-  };
+  if (wantReel) {
+    const post = buildReel((now.getTime() >>> 0), recent);
+    const rbase = path.join(__dirname, 'creatives', `gt_reel_${stampStr}`);
+    await renderReel(page, post, rbase);
+    await b.close();
+    pruneCreatives('gt_reel_', ['.mp4', '.jpg'], 30);
+    const caption = (post.caption || '').trim() + (post.append_cta || '');
+    meta = {
+      generated_at: now.toISOString(),
+      media_file: `creatives/gt_reel_${stampStr}.jpg`, // still cover (Facebook image + IG Reel cover + dashboard)
+      video_file: `creatives/gt_reel_${stampStr}.mp4`, // the Reel itself (Instagram)
+      is_reel: true,
+      layout: 'reel:' + post.rlayout,
+      caption, hashtags: post.hashtags, first_comment: post.first_comment || '',
+      alt_text: stripHtml(post.hook || ''), sig: post.sig,
+    };
+    recent.push(post.sig);
+    console.log(`generated REEL [${post.rlayout}] -> ${meta.video_file}`);
+  } else {
+    const post = buildPost((now.getTime() >>> 0), recent);
+    const fname = `gt_auto_${stampStr}.jpg`;
+    const base = path.join(__dirname, 'creatives', fname.replace('.jpg', ''));
+    await renderPost(page, post, base);
+    await b.close();
+    pruneCreatives('gt_auto_', ['.jpg', '.png'], 60);
+    const caption = (post.caption || '').trim() + (post.append_cta || '');
+    meta = {
+      generated_at: now.toISOString(),
+      media_file: 'creatives/' + fname,
+      is_reel: false,
+      layout: post.layout,
+      caption, hashtags: post.hashtags, first_comment: post.first_comment || '',
+      alt_text: stripHtml(post.hook || post.big || post.stat || post.label), sig: post.sig,
+    };
+    recent.push(post.sig);
+    console.log(`generated [${post.layout}] -> ${meta.media_file}`);
+  }
   fs.writeFileSync(path.join(__dirname, 'meta.json'), JSON.stringify(meta, null, 2));
-  recent.push(post.sig);
   saveUsed(recent);
-  console.log(`generated [${post.layout}] -> ${meta.media_file}`);
-  console.log(`caption: ${caption.slice(0, 90).replace(/\n/g, ' ')}…`);
+  console.log(`caption: ${(meta.caption || '').slice(0, 90).replace(/\n/g, ' ')}…`);
 })().catch(e => { console.error('FATAL', e); process.exit(1); });
