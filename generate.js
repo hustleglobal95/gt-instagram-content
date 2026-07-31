@@ -255,8 +255,27 @@ function L_trajectory(p) {
   </div>`;
 }
 
+// H) Tweet card — "authority reminder" format (avatar + verified name + one line)
+function L_tweet(p) {
+  const check = `<span style="display:inline-flex;width:36px;height:36px;border-radius:50%;background:${ORANGE};align-items:center;justify-content:center;color:#000;font-size:23px;font-weight:900;line-height:1">✓</span>`;
+  const avatar = `<div style="width:100px;height:100px;border-radius:50%;background:#1a1613;display:flex;align-items:center;justify-content:center;flex:none">
+    <svg viewBox="${P.icon}" xmlns="http://www.w3.org/2000/svg" style="height:52px;width:auto"><g fill="${ORANGE}" ${P.tf}>${P.orange}</g><g fill="${WHITE}" ${P.tf}>${P.white}</g></svg></div>`;
+  return `<div class="stage" style="background:#000;color:${WHITE};justify-content:center">
+    <div style="display:flex;align-items:center;gap:24px;margin-bottom:40px">
+      ${avatar}
+      <div>
+        <div style="display:flex;align-items:center;gap:12px;font-size:40px;font-weight:800;letter-spacing:-.01em">Growth Terminal ${check}</div>
+        <div style="font-size:33px;color:#8a8f98;margin-top:3px">@growthterminal</div>
+      </div>
+    </div>
+    <div style="font-size:${p.size || 62}px;font-weight:500;line-height:1.32;letter-spacing:-.01em;max-width:900px">${p.tweet}</div>
+    <div style="position:absolute;left:88px;bottom:76px;font-family:ui-monospace,Menlo,monospace;font-size:24px;letter-spacing:.08em;color:#5b6068">growthterminal.io</div>
+  </div>`;
+}
+
 const RENDER = { statement: L_statement, contrast: L_contrast, stat: L_stat, vs: L_vs, carousel: L_carousel,
-  card: L_card, quote: L_quote, annotated: L_annotated, funnel: L_funnel, ranked: L_ranked, trajectory: L_trajectory };
+  card: L_card, quote: L_quote, annotated: L_annotated, funnel: L_funnel, ranked: L_ranked, trajectory: L_trajectory,
+  tweet: L_tweet };
 
 // ---------- content atoms ----------
 // The 12 places growth actually gets stuck (GT's core model) + a symptom line each.
@@ -568,12 +587,40 @@ function gen_trajectory(r) {
     sig: 'traj:' + b.ac[5][1] };
 }
 
+// H) Tweet card — authority "reminder" one-liners
+function gen_tweet(r) {
+  const bank = [
+    { tweet: `Reminder: your growth isn’t slow.<br>It’s mis-diagnosed.`, size: 66,
+      cap: `Your growth isn't slow — it's mis-diagnosed.\n\nMost teams pour real effort into a lever that was never the bottleneck. The work is hard; the target is wrong. Growth Terminal finds the constraint actually capping you before you spend another quarter on the wrong one.`,
+      fc: `What are you working on right now — and how sure are you it's the real constraint?` },
+    { tweet: `The most expensive number in growth is the one you can’t see.`, size: 58,
+      cap: `A hidden constraint never sends an invoice. It just quietly caps every month. Growth Terminal makes that number visible and puts a dollar range on it — so you can act on it instead of absorbing it.`,
+      fc: `The scariest line item is the one that never shows up on the P&L.` },
+    { tweet: `Reminder: diagnosis before treatment. Always.`, size: 66,
+      cap: `Most growth mistakes aren't strategy failures — they're diagnosis failures. Executing hard against the wrong constraint burns a whole quarter before anyone can prove it was the wrong call. Get the diagnosis right first.`,
+      fc: `Would you take the medicine before the diagnosis? Same in growth.` },
+    { tweet: `You don’t need more dashboards.<br>You need one verdict.`, size: 66,
+      cap: `Most teams are drowning in dashboards and starving for a decision. Growth Terminal reads the data you already have and makes the call: your #1 constraint, what it's worth, and the plan. A verdict beats another chart.`,
+      fc: `How many dashboards do you check that never change a decision?` },
+    { tweet: `Reminder: stop optimizing the lever that was never stuck.`, size: 60,
+      cap: `Perfect execution on the wrong lever still loses. Before you optimize, make sure it's the thing actually capping growth. We rank the twelve places growth gets stuck and hand you the one that matters most right now.`,
+      fc: `Which lever are you optimizing — and is it even the bottleneck?` },
+    { tweet: `You can’t fix the constraint you can’t see.`, size: 64,
+      cap: `You can't fix the constraint you can't see. Most growth stays stuck because the real bottleneck is invisible on a dashboard. Growth Terminal names it, prices it, and verifies the call against your real revenue.`,
+      fc: `What if the thing capping you isn't the thing you're looking at?` },
+  ];
+  const b = pick(bank, r);
+  return { layout: 'tweet', tweet: b.tweet, size: b.size, hook: stripHtml(b.tweet),
+    caption: b.cap, first_comment: b.fc, sig: 'tweet:' + stripHtml(b.tweet).slice(0, 36) };
+}
+
 // Weighted mix of generators. Statement/constraint are the workhorses; the rest add variety.
 const GENERATORS = [
   gen_statement, gen_statement, gen_constraint, gen_constraint,
   gen_stat, gen_contrast, gen_vs, gen_carousel,
   gen_card, gen_card, gen_quote, gen_annotated,
   gen_funnel, gen_ranked, gen_trajectory,
+  gen_tweet, gen_tweet,
 ];
 
 // ---------- pick a fresh post (avoid recent repeats) ----------
