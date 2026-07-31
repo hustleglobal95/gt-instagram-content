@@ -1,0 +1,73 @@
+name: GT Auto-Post (4x/day)
+
+on:
+  schedule:
+    - cron: '0 13 * * *'   # 09:00 ET
+    - cron: '0 17 * * *'   # 13:00 ET
+    - cron: '0 21 * * *'   # 17:00 ET
+    - cron: '0 1 * * *'    # 21:00 ET
+  workflow_dispatch:
+
+concurrency:
+  group: gt-autopost
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Playwright + Chromium
+        run: |
+          npm install
+          npx playwright install --with-deps chromium
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Python deps
+        run: pip install requests
+
+      - name: Generate a fresh creative
+        run: node generate.js
+
+      - name: Commit the new creative (so its image URL is public)
+        run: |
+          git config user.name  "gt-autopost[bot]"
+          git config user.email "gt-autopost@users.noreply.github.com"
+          git add creatives meta.json used_log.json
+          git commit -m "auto: new creative $(date -u +%Y-%m-%dT%H:%MZ)" || echo "nothing to commit"
+          git pull --rebase origin ${{ github.ref_name }} || true
+          git push
+
+      - name: Publish to Instagram
+        env:
+          GT_IG_USER_ID:      ${{ secrets.GT_IG_USER_ID }}
+          GT_IG_ACCESS_TOKEN: ${{ secrets.GT_IG_ACCESS_TOKEN }}
+          GT_GITHUB_REPO:     ${{ secrets.GT_GITHUB_REPO }}
+          GT_GITHUB_BRANCH:   ${{ github.ref_name }}
+          GT_API_BASE:        ${{ secrets.GT_API_BASE }}
+          GT_DRY_RUN:         ${{ secrets.GT_DRY_RUN }}
+        run: python post_now.py
+
+      - name: Commit the posting record
+        if: always()
+        run: |
+          git config user.name  "gt-autopost[bot]"
+          git config user.email "gt-autopost@users.noreply.github.com"
+          git add posted_log.json || true
+          git commit -m "auto: posted record $(date -u +%Y-%m-%dT%H:%MZ)" || echo "nothing to commit"
+          git pull --rebase origin ${{ github.ref_name }} || true
+          git push || true
