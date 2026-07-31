@@ -1,14 +1,25 @@
 name: GT Auto-Post (4x/day)
 
+# Posts 4 times a day, every day. Each run generates ONE fresh on-brand creative,
+# commits it, publishes it to Instagram, and commits the record back.
+#
+# Times are set for US Eastern (EDT, UTC-4): ~9am, 1pm, 5pm, 9pm.
+# GitHub cron is UTC. If you're on winter time (EST, UTC-5) and want the same
+# local clock times, add 1 hour to each UTC value below.
 on:
   schedule:
-    # Florida time (US Eastern). Minutes at :07 to dodge GitHub's top-of-the-hour delay.
+    # Florida time (US Eastern). Minutes set to :07 — NOT :00 — to dodge GitHub's
+    # top-of-the-hour cron stampede, which is what caused the ~2-hour delay.
+    # These UTC values are for EDT (summer, UTC-4). Florida switches to EST
+    # (UTC-5) on Nov 2, 2026 — at that point add 1 hour to each UTC value below
+    # (14, 18, 22, 2) or ask me to update it, so the Florida clock times stay put.
     - cron: '7 13 * * *'   # ~9:07 AM Florida
     - cron: '7 17 * * *'   # ~1:07 PM Florida
     - cron: '7 21 * * *'   # ~5:07 PM Florida
     - cron: '7 1 * * *'    # ~9:07 PM Florida
-  workflow_dispatch:
+  workflow_dispatch:        # lets you trigger a run by hand from the Actions tab
 
+# Don't let two runs overlap (they both push to the repo).
 concurrency:
   group: gt-autopost
   cancel-in-progress: false
@@ -53,14 +64,17 @@ jobs:
           git pull --rebase origin ${{ github.ref_name }} || true
           git push
 
-      - name: Publish to Instagram
+      - name: Publish to Instagram + Facebook
         env:
-          GT_IG_USER_ID:      ${{ secrets.GT_IG_USER_ID }}
-          GT_IG_ACCESS_TOKEN: ${{ secrets.GT_IG_ACCESS_TOKEN }}
-          GT_GITHUB_REPO:     ${{ secrets.GT_GITHUB_REPO }}
-          GT_GITHUB_BRANCH:   ${{ github.ref_name }}
-          GT_API_BASE:        ${{ secrets.GT_API_BASE }}
-          GT_DRY_RUN:         ${{ secrets.GT_DRY_RUN }}
+          GT_IG_USER_ID:          ${{ secrets.GT_IG_USER_ID }}
+          GT_IG_ACCESS_TOKEN:     ${{ secrets.GT_IG_ACCESS_TOKEN }}
+          GT_GITHUB_REPO:         ${{ secrets.GT_GITHUB_REPO }}
+          GT_GITHUB_BRANCH:       ${{ github.ref_name }}
+          GT_API_BASE:            ${{ secrets.GT_API_BASE }}
+          GT_DRY_RUN:             ${{ secrets.GT_DRY_RUN }}
+          # Facebook Page (leave unset to skip FB posting)
+          GT_FB_PAGE_ID:          ${{ secrets.GT_FB_PAGE_ID }}
+          GT_FB_PAGE_ACCESS_TOKEN: ${{ secrets.GT_FB_PAGE_ACCESS_TOKEN }}
         run: python post_now.py
 
       - name: Commit the posting record
