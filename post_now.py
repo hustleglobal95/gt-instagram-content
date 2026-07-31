@@ -83,10 +83,45 @@ def _api_post(path, data):
     return j
 
 
+def _api_get(path, params=None):
+    params = dict(params or {}, access_token=TOKEN)
+    r = requests.get(f"{API_BASE}/{path}", params=params, timeout=60)
+    try:
+        j = r.json()
+    except Exception:
+        raise RuntimeError(f"non-JSON response ({r.status_code}): {r.text[:300]}")
+    if "error" in j:
+        raise RuntimeError(f"IG API error: {j['error'].get('message')} ({j['error'].get('code')})")
+    return j
+
+
 def publish_single(image_url, caption):
     c = _api_post(f"{IG_USER_ID}/media", {"image_url": image_url, "caption": caption})
     time.sleep(WAIT_SECONDS)  # let IG finish processing the image before publishing
     pub = _api_post(f"{IG_USER_ID}/media_publish", {"creation_id": c["id"]})
+    return pub["id"]
+
+
+def publish_reel(video_url, caption, cover_url=None):
+    """Publish an Instagram Reel. Video is processed asynchronously, so we must
+    poll the container until status_code == FINISHED before publishing."""
+    data = {"media_type": "REELS", "video_url": video_url, "caption": caption, "share_to_feed": "true"}
+    if cover_url:
+        data["cover_url"] = cover_url
+    c = _api_post(f"{IG_USER_ID}/media", data)
+    cid = c["id"]
+    for i in range(30):  # up to ~30 * WAIT_SECONDS (default 5 min)
+        st = _api_get(cid, {"fields": "status_code,status"})
+        code = st.get("status_code")
+        if code == "FINISHED":
+            break
+        if code == "ERROR":
+            raise RuntimeError(f"Reel processing failed: {st.get('status')}")
+        print(f"    reel processing… ({i + 1}/30, {code})")
+        time.sleep(WAIT_SECONDS)
+    else:
+        raise RuntimeError("Reel did not finish processing in time")
+    pub = _api_post(f"{IG_USER_ID}/media_publish", {"creation_id": cid})
     return pub["id"]
 
 
@@ -152,12 +187,15 @@ def main():
     fb_message = (meta.get("caption") or "").rstrip()    # Facebook: caption; hashtags optional
     if FB_INCLUDE_HASHTAGS and meta.get("hashtags"):
         fb_message = fb_message + "\n\n" + meta["hashtags"]
-    url = raw_url(meta["media_file"])
+    url = raw_url(meta["media_file"])                    # still image (FB post + Reel cover)
+    is_reel = bool(meta.get("is_reel") and meta.get("video_file"))
+    video_url = raw_url(meta["video_file"]) if is_reel else None
+    ig_label = "Instagram Reel" if is_reel else "Instagram"
     mode = "DRY RUN" if DRY_RUN else "LIVE"
     now = datetime.datetime.utcnow().isoformat() + "Z"
-    targets = "Instagram" + (" + Facebook" if FB_ENABLED else "")
-    print(f"[{now}] {mode} · publishing {meta['media_file']} [{meta.get('layout')}] → {targets}")
-    print(f"  image: {url}")
+    targets = ig_label + (" + Facebook" if FB_ENABLED else "")
+    print(f"[{now}] {mode} · publishing {meta.get('video_file') or meta['media_file']} [{meta.get('layout')}] → {targets}")
+    print(f"  media: {video_url or url}")
     print(f"  caption: {caption[:90].replace(chr(10), ' ')}…")
 
     if DRY_RUN:
@@ -167,16 +205,22 @@ def main():
     if not wait_for_url(url):
         print("✗ Image URL never went live — is the repo public and the image committed before this step?")
         sys.exit(1)
+    if is_reel and not wait_for_url(video_url):
+        print("✗ Reel video URL never went live — is the repo public and the .mp4 committed before this step?")
+        sys.exit(1)
 
     ig_id = fb_id = None
 
-    # --- Instagram ---
+    # --- Instagram (Reel or photo) ---
     try:
-        ig_id = publish_single(url, caption)
+        if is_reel:
+            ig_id = publish_reel(video_url, caption, cover_url=url)
+        else:
+            ig_id = publish_single(url, caption)
         post_comment(ig_id, comment)
-        print(f"  ✓ Instagram published as {ig_id}")
+        print(f"  ✓ {ig_label} published as {ig_id}")
     except Exception as e:
-        print(f"  ✗ Instagram failed: {e}")
+        print(f"  ✗ {ig_label} failed: {e}")
 
     # --- Facebook Page (non-fatal: a FB failure must not lose a good IG post) ---
     if FB_ENABLED:
@@ -191,6 +235,7 @@ def main():
     if ig_id or fb_id:
         state = load_state()
         state.append({"media_id": ig_id, "fb_post_id": fb_id, "at": now, "file": meta["media_file"],
+                      "is_reel": is_reel, "video_file": meta.get("video_file"),
                       "layout": meta.get("layout"), "sig": meta.get("sig"),
                       "caption": meta.get("caption", ""), "hashtags": meta.get("hashtags", ""),
                       "first_comment": meta.get("first_comment", "")})
