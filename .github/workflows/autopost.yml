@@ -2,10 +2,11 @@ name: GT Auto-Post (4x/day)
 
 on:
   schedule:
-    - cron: '0 13 * * *'   # 09:00 ET
-    - cron: '0 17 * * *'   # 13:00 ET
-    - cron: '0 21 * * *'   # 17:00 ET
-    - cron: '0 1 * * *'    # 21:00 ET
+    # Florida time (US Eastern). Minutes at :07 to dodge GitHub's top-of-the-hour delay.
+    - cron: '7 13 * * *'   # ~9:07 AM Florida
+    - cron: '7 17 * * *'   # ~1:07 PM Florida
+    - cron: '7 21 * * *'   # ~5:07 PM Florida
+    - cron: '7 1 * * *'    # ~9:07 PM Florida
   workflow_dispatch:
 
 concurrency:
