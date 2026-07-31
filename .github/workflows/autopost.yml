@@ -1,23 +1,10 @@
 name: GT Auto-Post (4x/day)
 
-# Posts 4 times a day, every day. Each run generates ONE fresh on-brand creative,
-# commits it, publishes it to Instagram, and commits the record back.
-#
-# Times are set for US Eastern (EDT, UTC-4): ~9am, 1pm, 5pm, 9pm.
-# GitHub cron is UTC. If you're on winter time (EST, UTC-5) and want the same
-# local clock times, add 1 hour to each UTC value below.
+# Posts 4 times a day. Triggered externally by cron-job.org at the exact Florida
+# times (9am, 1pm, 5pm, 9pm ET, DST handled), which calls this workflow via the
+# GitHub API. No internal schedule — cron-job.org is the sole trigger.
 on:
-  schedule:
-    # Florida time (US Eastern). Minutes set to :07 — NOT :00 — to dodge GitHub's
-    # top-of-the-hour cron stampede, which is what caused the ~2-hour delay.
-    # These UTC values are for EDT (summer, UTC-4). Florida switches to EST
-    # (UTC-5) on Nov 2, 2026 — at that point add 1 hour to each UTC value below
-    # (14, 18, 22, 2) or ask me to update it, so the Florida clock times stay put.
-    - cron: '7 13 * * *'   # ~9:07 AM Florida
-    - cron: '7 17 * * *'   # ~1:07 PM Florida
-    - cron: '7 21 * * *'   # ~5:07 PM Florida
-    - cron: '7 1 * * *'    # ~9:07 PM Florida
-  workflow_dispatch:        # lets you trigger a run by hand from the Actions tab
+  workflow_dispatch:        # fired by cron-job.org (and lets you run it by hand)
 
 # Don't let two runs overlap (they both push to the repo).
 concurrency:
