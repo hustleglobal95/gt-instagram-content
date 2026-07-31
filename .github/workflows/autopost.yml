@@ -44,6 +44,9 @@ jobs:
           npm install
           npx playwright install --with-deps chromium
 
+      - name: Install ffmpeg (for Reels)
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
