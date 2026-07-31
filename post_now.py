@@ -41,6 +41,13 @@ TAGS_AS_COMMENT = gv("HASHTAGS_AS_COMMENT", "0") == "1"
 DRY_RUN    = gv("DRY_RUN", "1") != "0"
 WAIT_SECONDS = int(gv("WAIT_SECONDS", "10") or "10")
 
+# Facebook Page publishing (optional — enabled automatically if creds are present).
+FB_API_BASE = (gv("FB_API_BASE", "https://graph.facebook.com/v21.0") or "https://graph.facebook.com/v21.0").rstrip("/")
+FB_PAGE_ID  = gv("FB_PAGE_ID").strip()
+FB_TOKEN    = gv("FB_PAGE_ACCESS_TOKEN").strip()
+FB_INCLUDE_HASHTAGS = gv("FB_HASHTAGS", "0") == "1"   # default: no hashtag wall on Facebook
+FB_ENABLED  = gv("FB_ENABLED", "1") != "0" and bool(FB_PAGE_ID and FB_TOKEN)
+
 RAW = f"https://raw.githubusercontent.com/{REPO}/{BRANCH}"
 STATE_FILE = "posted_log.json"
 
@@ -92,6 +99,20 @@ def post_comment(media_id, message):
         print(f"    (first comment skipped — needs manage_comments scope; non-fatal: {e})")
 
 
+def publish_facebook_photo(image_url, message):
+    """Publish a photo post to the Facebook Page. Uses the Page access token."""
+    r = requests.post(f"{FB_API_BASE}/{FB_PAGE_ID}/photos",
+                      data={"url": image_url, "caption": message, "access_token": FB_TOKEN},
+                      timeout=90)
+    try:
+        j = r.json()
+    except Exception:
+        raise RuntimeError(f"non-JSON response ({r.status_code}): {r.text[:300]}")
+    if "error" in j:
+        raise RuntimeError(f"FB API error: {j['error'].get('message')} ({j['error'].get('code')})")
+    return j.get("post_id") or j.get("id")
+
+
 def load_state():
     try:
         with open(STATE_FILE) as f:
@@ -126,33 +147,58 @@ def main():
         print(f"✗ Could not read meta.json (did generate.js run?): {e}")
         sys.exit(1)
 
-    caption = build_caption(meta)
+    caption = build_caption(meta)                       # Instagram: caption + hashtags
     comment = meta.get("first_comment") or (meta.get("hashtags") if TAGS_AS_COMMENT else "")
+    fb_message = (meta.get("caption") or "").rstrip()    # Facebook: caption; hashtags optional
+    if FB_INCLUDE_HASHTAGS and meta.get("hashtags"):
+        fb_message = fb_message + "\n\n" + meta["hashtags"]
     url = raw_url(meta["media_file"])
     mode = "DRY RUN" if DRY_RUN else "LIVE"
     now = datetime.datetime.utcnow().isoformat() + "Z"
-    print(f"[{now}] {mode} · publishing {meta['media_file']} [{meta.get('layout')}]")
+    targets = "Instagram" + (" + Facebook" if FB_ENABLED else "")
+    print(f"[{now}] {mode} · publishing {meta['media_file']} [{meta.get('layout')}] → {targets}")
     print(f"  image: {url}")
     print(f"  caption: {caption[:90].replace(chr(10), ' ')}…")
 
     if DRY_RUN:
-        print("  [dry-run] not publishing. Set GT_DRY_RUN=0 to go live.")
+        print(f"  [dry-run] would publish to {targets}. Set GT_DRY_RUN=0 to go live.")
         return
 
     if not wait_for_url(url):
         print("✗ Image URL never went live — is the repo public and the image committed before this step?")
         sys.exit(1)
 
+    ig_id = fb_id = None
+
+    # --- Instagram ---
     try:
-        mid = publish_single(url, caption)
-        post_comment(mid, comment)
-        print(f"  ✓ published as {mid}")
-        state = load_state()
-        state.append({"media_id": mid, "at": now, "file": meta["media_file"],
-                      "layout": meta.get("layout"), "sig": meta.get("sig")})
-        save_state(state)
+        ig_id = publish_single(url, caption)
+        post_comment(ig_id, comment)
+        print(f"  ✓ Instagram published as {ig_id}")
     except Exception as e:
-        print(f"  ✗ failed: {e}")
+        print(f"  ✗ Instagram failed: {e}")
+
+    # --- Facebook Page (non-fatal: a FB failure must not lose a good IG post) ---
+    if FB_ENABLED:
+        try:
+            fb_id = publish_facebook_photo(url, fb_message)
+            print(f"  ✓ Facebook published as {fb_id}")
+        except Exception as e:
+            print(f"  ✗ Facebook failed (non-fatal): {e}")
+    else:
+        print("  · Facebook disabled (set GT_FB_PAGE_ID + GT_FB_PAGE_ACCESS_TOKEN to enable)")
+
+    if ig_id or fb_id:
+        state = load_state()
+        state.append({"media_id": ig_id, "fb_post_id": fb_id, "at": now, "file": meta["media_file"],
+                      "layout": meta.get("layout"), "sig": meta.get("sig"),
+                      "caption": meta.get("caption", ""), "hashtags": meta.get("hashtags", ""),
+                      "first_comment": meta.get("first_comment", "")})
+        save_state(state)
+
+    # Fail the run only if the primary channel (Instagram) didn't post.
+    if not ig_id:
+        print("  ✗ Instagram did not publish — failing the run.")
         sys.exit(1)
 
     print("done.")
