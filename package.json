@@ -1,0 +1,13 @@
+{
+  "name": "gt-instagram-content",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Growth Terminal — auto-generating Instagram content engine",
+  "scripts": {
+    "generate": "node generate.js",
+    "preview": "node generate.js --preview 8"
+  },
+  "dependencies": {
+    "playwright": "^1.47.0"
+  }
+}
