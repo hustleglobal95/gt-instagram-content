@@ -1,11 +1,12 @@
 {
-  "generated_at": "2026-07-31T22:42:47.193Z",
-  "media_file": "creatives/gt_auto_20260731_224247.jpg",
-  "is_reel": false,
-  "layout": "quote",
-  "caption": "Diagnosis before treatment. Always.\n\nMost growth mistakes aren't strategy failures — they're diagnosis failures. Get the constraint right first, then move.\n\nDiagnose your #1 constraint free. Link in bio.",
-  "hashtags": "#growthterminal #b2bsaas #growthmarketing #scaleup #googlesheets #productmarketing #retention #saas #bootstrapping #leadership #kpis",
-  "first_comment": "Would you take the medicine before the diagnosis? Same in growth.",
-  "alt_text": "Diagnosis before treatment. Always.",
-  "sig": "quote:Diagnosis before treatment. Always."
+  "generated_at": "2026-08-01T01:01:07.312Z",
+  "media_file": "creatives/gt_reel_20260801_010107.jpg",
+  "video_file": "creatives/gt_reel_20260801_010107.mp4",
+  "is_reel": true,
+  "layout": "reel:card",
+  "caption": "This is what a Growth Terminal diagnosis looks like — one constraint, named, priced, and verified against real revenue. Here, pricing was capping the business by $120K–$300K a year.\n\nYours is one run away.\n\n→ growthterminal.io",
+  "hashtags": "#growthterminal #b2bsaas #growthmarketing #startuptools #startuptips #foundertips #bootstrapping #analytics #startups #unitmetrics #saasmarketing",
+  "first_comment": "What would you do differently if your #1 constraint came pre-priced?",
+  "alt_text": "#1 constraint: Pricing",
+  "sig": "reelcard:Pricing"
 }
