@@ -1,12 +1,11 @@
 {
-  "generated_at": "2026-08-01T01:01:07.312Z",
-  "media_file": "creatives/gt_reel_20260801_010107.jpg",
-  "video_file": "creatives/gt_reel_20260801_010107.mp4",
-  "is_reel": true,
-  "layout": "reel:card",
-  "caption": "This is what a Growth Terminal diagnosis looks like — one constraint, named, priced, and verified against real revenue. Here, pricing was capping the business by $120K–$300K a year.\n\nYours is one run away.\n\n→ growthterminal.io",
-  "hashtags": "#growthterminal #b2bsaas #growthmarketing #startuptools #startuptips #foundertips #bootstrapping #analytics #startups #unitmetrics #saasmarketing",
-  "first_comment": "What would you do differently if your #1 constraint came pre-priced?",
-  "alt_text": "#1 constraint: Pricing",
-  "sig": "reelcard:Pricing"
+  "generated_at": "2026-08-01T13:01:07.660Z",
+  "media_file": "creatives/gt_auto_20260801_130107.jpg",
+  "is_reel": false,
+  "layout": "funnel",
+  "caption": "Most growth doesn't die at the top of the funnel. It leaks in the middle.\n\nHere, activation is the drop that's costing the most — people sign up and never reach the first win. Growth Terminal pinpoints the leaking stage and tells you what sealing it is worth.\n\n→ growthterminal.io",
+  "hashtags": "#growthterminal #b2bsaas #growthmarketing #revenuegrowth #kpis #analytics #googlesheets #leadership #foundertips #saasmarketing #growthstrategy",
+  "first_comment": "Where does your funnel leak hardest — top, middle, or bottom?",
+  "alt_text": "Your funnel isn’t slow. It’s leaking.",
+  "sig": "funnel:Your funnel isn’t slow. "
 }
