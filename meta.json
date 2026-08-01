@@ -1,12 +1,11 @@
 {
-  "generated_at": "2026-08-01T17:01:36.696Z",
-  "media_file": "creatives/gt_reel_20260801_170136.jpg",
-  "video_file": "creatives/gt_reel_20260801_170136.mp4",
-  "is_reel": true,
-  "layout": "reel:countup",
-  "caption": "Growth only gets stuck in twelve places. The hard part is knowing which one is YOUR #1 right now — with a dollar range attached. That's the whole job Growth Terminal does.\n\nRun the free 60-second diagnostic — link in bio.",
-  "hashtags": "#growthterminal #b2bsaas #growthmarketing #datadriven #businessgrowth #startupgrowth #startups #accountability #growthhacking #startuptools #growthstrategy",
-  "first_comment": "Which of the 12 is biting hardest this quarter?",
-  "alt_text": "12",
-  "sig": "reelnum:12"
+  "generated_at": "2026-08-01T21:01:10.954Z",
+  "media_file": "creatives/gt_auto_20260801_210110.jpg",
+  "is_reel": false,
+  "layout": "card",
+  "caption": "This is what a Growth Terminal diagnosis looks like.\n\nNot 40 metrics to interpret — one constraint, named, with the dollar range it's costing you and how sure we are. Here, activation was capping the business by $60K–$110K a year.\n\nYours is one run away.\n\nDiagnose your #1 constraint free. Link in bio.",
+  "hashtags": "#growthterminal #b2bsaas #growthmarketing #businessgrowth #marketingstrategy #googlesheets #founders #growthstrategy #bootstrapping #forecasting #scaleup",
+  "first_comment": "What would you do differently if your #1 constraint came pre-priced?",
+  "alt_text": "#1 constraint: Activation",
+  "sig": "card:Activation"
 }
