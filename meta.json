@@ -1,11 +1,12 @@
 {
-  "generated_at": "2026-08-02T13:01:07.424Z",
-  "media_file": "creatives/gt_auto_20260802_130107.jpg",
-  "is_reel": false,
-  "layout": "statement",
-  "caption": "Is pricing your #1 constraint right now?\n\nThe tell: you are leaving margin on the table on every deal. It's one of the twelve places growth gets stuck — but it's only worth fixing first if it's actually your biggest. Growth Terminal ranks all twelve against your data and tells you whether pricing is really the one, or a symptom of something upstream.\n\n→ growthterminal.io",
-  "hashtags": "#growthterminal #b2bsaas #growthmarketing #saasmarketing #startuptips #saas #startuptools #productmarketing #leadership #foundertips #kpis",
-  "first_comment": "Does \"you are leaving margin on the table on every deal\" sound like your account this quarter? 👇",
-  "alt_text": "Is pricing your #1 constraint?",
-  "sig": "cons:Pricing"
+  "generated_at": "2026-08-02T17:01:21.464Z",
+  "media_file": "creatives/gt_reel_20260802_170121.jpg",
+  "video_file": "creatives/gt_reel_20260802_170121.mp4",
+  "is_reel": true,
+  "layout": "reel:countup",
+  "caption": "60 seconds from spreadsheet to diagnosis. Add the add-on to Google Sheets, point it at the report you already have, and get your #1 constraint ranked and priced before your coffee's cold.\n\nDiagnose your #1 constraint free. Link in bio.",
+  "hashtags": "#growthterminal #b2bsaas #growthmarketing #startups #revenuegrowth #unitmetrics #opportunitycost #datadriven #leadership #growthstrategy #growthhacking",
+  "first_comment": "Genuinely ~60 seconds. It reads the sheet you already have open.",
+  "alt_text": "60 sec",
+  "sig": "reelnum:60"
 }
