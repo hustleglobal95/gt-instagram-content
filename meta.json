@@ -1,12 +1,11 @@
 {
-  "generated_at": "2026-08-02T01:01:22.203Z",
-  "media_file": "creatives/gt_reel_20260802_010122.jpg",
-  "video_file": "creatives/gt_reel_20260802_010122.mp4",
-  "is_reel": true,
-  "layout": "reel:card",
-  "caption": "This is what a Growth Terminal diagnosis looks like — one constraint, named, priced, and verified against real revenue. Here, activation was capping the business by $60K–$110K a year.\n\nYours is one run away.\n\nDiagnose your #1 constraint free. Link in bio.",
-  "hashtags": "#growthterminal #b2bsaas #growthmarketing #googlesheets #kpis #opportunitycost #foundertips #startuptools #growthstrategy #cro #marketinganalytics",
-  "first_comment": "What would you do differently if your #1 constraint came pre-priced?",
-  "alt_text": "#1 constraint: Activation",
-  "sig": "reelcard:Activation"
+  "generated_at": "2026-08-02T13:01:07.424Z",
+  "media_file": "creatives/gt_auto_20260802_130107.jpg",
+  "is_reel": false,
+  "layout": "statement",
+  "caption": "Is pricing your #1 constraint right now?\n\nThe tell: you are leaving margin on the table on every deal. It's one of the twelve places growth gets stuck — but it's only worth fixing first if it's actually your biggest. Growth Terminal ranks all twelve against your data and tells you whether pricing is really the one, or a symptom of something upstream.\n\n→ growthterminal.io",
+  "hashtags": "#growthterminal #b2bsaas #growthmarketing #saasmarketing #startuptips #saas #startuptools #productmarketing #leadership #foundertips #kpis",
+  "first_comment": "Does \"you are leaving margin on the table on every deal\" sound like your account this quarter? 👇",
+  "alt_text": "Is pricing your #1 constraint?",
+  "sig": "cons:Pricing"
 }
