@@ -1,4 +1,4 @@
-// Growth Terminal — auto-generating content engine
+// Growth Terminal, auto-generating content engine
 // Each run: assembles ONE fresh, on-brand Instagram creative (1080x1350) from a
 // large combinatorial content bank, renders it to JPEG, writes meta.json for the
 // publisher, and records what it used so posts don't repeat for a long time.
@@ -46,9 +46,11 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-s
 .display{font-weight:800;letter-spacing:-.02em;line-height:.98;transform:skewX(-4deg);transform-origin:left}
 .display .accent{color:${ORANGE}}
 .h{font-weight:800;letter-spacing:-.02em;line-height:1.02}
+.h .accent{color:${ORANGE}}
 .foot{margin-top:auto;display:flex;align-items:center;justify-content:space-between}
 .foot .lg{height:52px}
 .foot .lg svg{height:52px;width:auto;display:block}
+.toplogo svg{height:60px;width:auto;display:block}
 .cta{font-family:ui-monospace,Menlo,monospace;font-size:24px;font-weight:700;letter-spacing:.02em;display:flex;align-items:center;gap:12px}
 .cta .dot{width:12px;height:12px;border-radius:50%;background:${ORANGE}}
 .grain{position:absolute;inset:0;opacity:.04;pointer-events:none;background-image:radial-gradient(rgba(255,255,255,.5) 1px,transparent 1px);background-size:4px 4px}
@@ -255,7 +257,7 @@ function L_trajectory(p) {
   </div>`;
 }
 
-// H) Tweet card — "authority reminder" format (avatar + verified name + one line)
+// H) Tweet card, "authority reminder" format (avatar + verified name + one line)
 function L_tweet(p) {
   const check = `<span style="display:inline-flex;width:36px;height:36px;border-radius:50%;background:${ORANGE};align-items:center;justify-content:center;color:#000;font-size:23px;font-weight:900;line-height:1">✓</span>`;
   const avatar = `<div style="width:100px;height:100px;border-radius:50%;background:#1a1613;display:flex;align-items:center;justify-content:center;flex:none">
@@ -273,9 +275,28 @@ function L_tweet(p) {
   </div>`;
 }
 
+// Editorial hero, the big-tech ad format: logo top-left, one large upright headline,
+// a single subhead line, generous negative space, a tiny caption bottom-left. Warm,
+// photographic dark ground. Deliberately un-skewed and quiet (contrast to .display layouts).
+function L_editorial(p) {
+  return `<div class="stage" style="background:radial-gradient(120% 90% at 78% 12%, #3a2a18 0%, #241a10 42%, ${INK} 100%);color:${WHITE};padding:104px 96px">
+    <div class="glow" style="width:820px;height:820px;background:${ORANGE};opacity:.28;top:-260px;right:-240px"></div>
+    <div class="grain"></div>
+    <div class="toplogo">${logo(ORANGE, WHITE)}</div>
+    <div style="flex:1;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:20px">
+      <div class="h" style="font-size:${p.size || 92}px;max-width:900px">${p.hook}</div>
+      ${p.sub ? `<div style="font-size:38px;line-height:1.32;font-weight:500;max-width:760px;opacity:.72;margin-top:32px">${p.sub}</div>` : ''}
+    </div>
+    <div style="display:flex;align-items:center;justify-content:space-between">
+      <div class="mono" style="font-size:22px;letter-spacing:.06em;color:rgba(253,252,252,.42)">${p.caps || 'Growth diagnosis · Google Sheets'}</div>
+      <div class="cta" style="color:${ORANGE};font-size:22px"><span class="dot" style="width:10px;height:10px"></span>growthterminal.io</div>
+    </div>
+  </div>`;
+}
+
 const RENDER = { statement: L_statement, contrast: L_contrast, stat: L_stat, vs: L_vs, carousel: L_carousel,
   card: L_card, quote: L_quote, annotated: L_annotated, funnel: L_funnel, ranked: L_ranked, trajectory: L_trajectory,
-  tweet: L_tweet };
+  tweet: L_tweet, editorial: L_editorial };
 
 // ---------- content atoms ----------
 // The 12 places growth actually gets stuck (GT's core model) + a symptom line each.
@@ -294,7 +315,7 @@ const CONSTRAINTS = [
   ['Pricing', 'you are leaving margin on the table on every deal'],
 ];
 
-// Rotating hashtag pool — each post pulls a fresh subset so blocks vary (IG best practice).
+// Rotating hashtag pool, each post pulls a fresh subset so blocks vary (IG best practice).
 const CORE_TAGS = ['#growthterminal', '#b2bsaas', '#growthmarketing'];
 const TAG_POOL = ['#saas', '#startups', '#founders', '#foundertips', '#startuptips', '#revenueops',
   '#revenuegrowth', '#growthstrategy', '#marketingstrategy', '#growthhacking', '#businessgrowth',
@@ -306,7 +327,7 @@ function tags(r) {
 }
 const EYEBROWS = ['◆ Growth Terminal', '◆ Diagnosis, not dashboard', '◆ The one constraint',
   '◆ Priced, not guessed', '◆ Verify the call', '◆ Run the diagnostic'];
-const CTA_BIO = ['Free 60-second diagnostic — link in bio.', 'Run the free diagnostic. Link in bio.',
+const CTA_BIO = ['Free 60-second diagnostic, link in bio.', 'Run the free diagnostic. Link in bio.',
   'Diagnose your #1 constraint free. Link in bio.', 'Try it free in Google Sheets. Link in bio.',
   '→ growthterminal.io'];
 
@@ -316,28 +337,28 @@ const CTA_BIO = ['Free 60-second diagnostic — link in bio.', 'Run the free dia
 function gen_statement(r) {
   const bank = [
     { hook: `You don't get a<br>dashboard.<br>You get a ${accent('verdict')}.`,
-      sub: `Every analysis ends in a graded prediction — the #1 constraint, its dollar range, and a 90-day plan.`, size: 116,
+      sub: `Every analysis ends in a graded prediction: the #1 constraint, its dollar range, and a 90-day plan.`, size: 116,
       cap: `You don't get a dashboard. You get a verdict.\n\nDashboards show you 40 numbers and let you pick the story. Growth Terminal names the ONE constraint holding your growth back, tells you the dollar range it's worth, then verifies the call against real revenue.\n\nClarity first. No 40-tab spreadsheet.`,
       fc: `What's the one constraint you *think* is holding your growth back right now? 👇` },
-    { hook: `We tell you the ${accent('one')} thing holding your growth back — and what it's worth.`,
+    { hook: `We tell you the ${accent('one')} thing holding your growth back, and what it's worth.`,
       sub: `In Google Sheets. In about 60 seconds.`, size: 100,
-      cap: `Most "growth advice" gives you ten things to fix. That's the problem.\n\nGrowth Terminal names the single biggest constraint on your revenue right now — and quantifies what fixing it is worth. One move, ranked above everything else, with a number attached.`,
-      fc: `Diagnosis before treatment — always. Where are you stuck?` },
+      cap: `Most "growth advice" gives you ten things to fix. That's the problem.\n\nGrowth Terminal names the single biggest constraint on your revenue right now, and quantifies what fixing it is worth. One move, ranked above everything else, with a number attached.`,
+      fc: `Diagnosis before treatment, always. Where are you stuck?` },
     { hook: `Verified.<br>Not ${accent('vibes')}.`,
-      sub: `We track every forecast against real revenue — and show you when we were wrong.`, size: 122,
-      cap: `Verified. Not vibes.\n\nEveryone in growth makes confident calls. Almost no one checks them. Growth Terminal logs every forecast, tracks it against your actual revenue, and grades itself — verified or missed — so you trust the calls that keep landing and catch the ones that don't.`,
+      sub: `We track every forecast against real revenue, and show you when we were wrong.`, size: 122,
+      cap: `Verified. Not vibes.\n\nEveryone in growth makes confident calls. Almost no one checks them. Growth Terminal logs every forecast, tracks it against your actual revenue, and grades itself, verified or missed, so you trust the calls that keep landing and catch the ones that don't.`,
       fc: `When we're wrong, the tool says so. That's the point.` },
     { hook: `Your growth isn't ${accent('slow')}.<br>It's mis-diagnosed.`,
       sub: `You're pulling a real lever. It just isn't the one that's stuck.`, size: 108,
-      cap: `Your growth isn't slow. It's mis-diagnosed.\n\nMost teams are executing hard on a lever that was never the bottleneck. The effort is real; the target is wrong. Growth Terminal finds the constraint that's actually capping you — before you spend another quarter on the wrong one.`,
+      cap: `Your growth isn't slow. It's mis-diagnosed.\n\nMost teams are executing hard on a lever that was never the bottleneck. The effort is real; the target is wrong. Growth Terminal finds the constraint that's actually capping you, before you spend another quarter on the wrong one.`,
       fc: `Effort on the wrong lever still feels like work. That's the trap.` },
     { hook: `Ten problems.<br>${accent('One')} that matters<br>this quarter.`,
       sub: `We rank them so you stop spreading yourself across all ten.`, size: 112,
-      cap: `You can always find ten things to fix. You can only afford to fix one well this quarter.\n\nGrowth Terminal ranks all twelve places growth gets stuck and tells you which one is yours right now — so your team points at a single target instead of ten.`,
+      cap: `You can always find ten things to fix. You can only afford to fix one well this quarter.\n\nGrowth Terminal ranks all twelve places growth gets stuck and tells you which one is yours right now, so your team points at a single target instead of ten.`,
       fc: `If everything is a priority, nothing is. Which one is yours?` },
     { hook: `The most expensive number in growth is the one you ${accent("can't see")}.`,
       sub: `A hidden constraint doesn't send an invoice. It just quietly caps you.`, size: 92, bg: 'cream',
-      cap: `The most expensive number in growth is the one you can't see.\n\nA hidden constraint never sends an invoice — it just quietly caps every month. Growth Terminal makes that number visible and puts a dollar range on it, so you can act on it instead of absorbing it.`,
+      cap: `The most expensive number in growth is the one you can't see.\n\nA hidden constraint never sends an invoice, it just quietly caps every month. Growth Terminal makes that number visible and puts a dollar range on it, so you can act on it instead of absorbing it.`,
       fc: `The scariest line item is the one that never shows up on the P&L.` },
     { hook: `Point it at the sheet you ${accent('already have')} open.`,
       sub: `No new platform. No export. The add-on reads the report you already run.`, size: 104,
@@ -345,15 +366,15 @@ function gen_statement(r) {
       fc: `It runs where your data already lives. Nothing to migrate.` },
     { hook: `Stop guessing which lever to ${accent('pull')}.`,
       sub: `You already have the data. You're missing the diagnosis.`, size: 112,
-      cap: `Stop guessing which lever to pull.\n\nYou already have the data — you're missing the diagnosis. Growth Terminal reads what you already track, ranks where growth is actually stuck, and names the one move worth making first, with the dollar range attached.`,
-      fc: `Which lever are you pulling right now — and how sure are you?` },
+      cap: `Stop guessing which lever to pull.\n\nYou already have the data, you're missing the diagnosis. Growth Terminal reads what you already track, ranks where growth is actually stuck, and names the one move worth making first, with the dollar range attached.`,
+      fc: `Which lever are you pulling right now, and how sure are you?` },
     { hook: `A second opinion for your ${accent('growth')}.`,
       sub: `The one you'd get from an operator who's seen the pattern a hundred times.`, size: 116,
-      cap: `Think of it as a second opinion for your growth.\n\nThe kind you'd get from an operator who has seen this exact pattern a hundred times — which constraint is really biting, what it's worth, and what to do in the next 90 days. Except it runs in your spreadsheet, in a minute.`,
+      cap: `Think of it as a second opinion for your growth.\n\nThe kind you'd get from an operator who has seen this exact pattern a hundred times, which constraint is really biting, what it's worth, and what to do in the next 90 days. Except it runs in your spreadsheet, in a minute.`,
       fc: `Would a second opinion change what you're working on this month?` },
     { hook: `Fix the ${accent('constraint')}.<br>Not the symptom.`,
       sub: `Low conversion is usually a symptom. The constraint sits one step upstream.`, size: 116,
-      cap: `Fix the constraint, not the symptom.\n\n"Conversion is low" is a symptom. The real constraint usually sits one step upstream — the offer, the traffic quality, the activation moment. Growth Terminal traces the symptom back to its source so you fix the thing that actually moves the number.`,
+      cap: `Fix the constraint, not the symptom.\n\n"Conversion is low" is a symptom. The real constraint usually sits one step upstream, the offer, the traffic quality, the activation moment. Growth Terminal traces the symptom back to its source so you fix the thing that actually moves the number.`,
       fc: `What symptom have you been treating that keeps coming back?` },
   ];
   const b = pick(bank, r);
@@ -366,11 +387,11 @@ function gen_contrast(r) {
   const bank = [
     { lead: `Most growth mistakes are not strategy failures.`, big: `THEY'RE<br>${accent('DIAGNOSIS')}<br>FAILURES.`, size: 128,
       sub: `Executing hard against the wrong constraint burns a full quarter before anyone can prove it was the wrong call.`,
-      cap: `Most growth mistakes aren't strategy failures. They're diagnosis failures.\n\nThe team executes hard — new channels, new pricing, new funnel — against a constraint that was never the real bottleneck. A whole quarter gone before anyone can prove the call was wrong. Get the diagnosis right first. Then move.`,
+      cap: `Most growth mistakes aren't strategy failures. They're diagnosis failures.\n\nThe team executes hard, new channels, new pricing, new funnel, against a constraint that was never the real bottleneck. A whole quarter gone before anyone can prove the call was wrong. Get the diagnosis right first. Then move.`,
       fc: `Ever spent a quarter on the wrong lever? Same. That's why this exists.` },
     { lead: `Stop guessing which lever to pull.`, big: `DIAGNOSE IT<br>IN ${accent('60 SECONDS')}.`, size: 116,
       sub: `Add the Growth Terminal add-on to the sheet you already have open.`,
-      cap: `Stop guessing which lever to pull.\n\nGrowth Terminal reads the report you already export, ranks the twelve places growth gets stuck, and tells you which one is yours — with the dollar range attached. No new platform. It runs where your data already lives.`,
+      cap: `Stop guessing which lever to pull.\n\nGrowth Terminal reads the report you already export, ranks the twelve places growth gets stuck, and tells you which one is yours, with the dollar range attached. No new platform. It runs where your data already lives.`,
       fc: `It's a Google Sheets add-on. Your data never leaves the sheet.` },
     { lead: `More dashboards won't save you.`, big: `YOU DON'T NEED<br>MORE ${accent('DATA')}.<br>YOU NEED A CALL.`, size: 108,
       sub: `A verdict you can act on beats another chart you have to interpret.`,
@@ -378,15 +399,15 @@ function gen_contrast(r) {
       fc: `How many dashboards do you check that never change a decision?` },
     { lead: `The bottleneck is rarely where it hurts.`, big: `THE PAIN AND THE<br>${accent('CAUSE')} ARE NOT<br>THE SAME PLACE.`, size: 96,
       sub: `Churn shows up at the end. It usually starts at activation.`,
-      cap: `The bottleneck is rarely where it hurts.\n\nChurn shows up at the end of the journey — but it usually starts at a weak activation moment weeks earlier. Growth Terminal traces the pain back to its cause so you fix the source, not the symptom.`,
-      fc: `Where does it hurt — and are you sure that's where it starts?` },
+      cap: `The bottleneck is rarely where it hurts.\n\nChurn shows up at the end of the journey, but it usually starts at a weak activation moment weeks earlier. Growth Terminal traces the pain back to its cause so you fix the source, not the symptom.`,
+      fc: `Where does it hurt, and are you sure that's where it starts?` },
     { lead: `Effort is not the problem.`, big: `YOU'RE WORKING<br>HARD ON THE<br>${accent('WRONG THING')}.`, size: 110,
       sub: `The most expensive quarter is the one spent executing perfectly against the wrong constraint.`,
-      cap: `Effort is not your problem. Aim is.\n\nThe most expensive quarter a team can have is one spent executing perfectly — against the wrong constraint. Growth Terminal makes sure the thing you pour effort into is the thing actually capping your growth.`,
+      cap: `Effort is not your problem. Aim is.\n\nThe most expensive quarter a team can have is one spent executing perfectly, against the wrong constraint. Growth Terminal makes sure the thing you pour effort into is the thing actually capping your growth.`,
       fc: `Perfect execution on the wrong target still loses. Aim first.` },
     { lead: `Advice is cheap. Being right is not.`, big: `EVERYONE HAS<br>A ${accent('TAKE')}.<br>WE HAVE A SCORE.`, size: 104,
       sub: `Every call we make gets graded against your real revenue.`,
-      cap: `Advice is cheap. Being right is not.\n\nEveryone has a take on your growth. Growth Terminal is the only one that grades its own — every forecast tracked against your real revenue, marked verified or missed. Opinions are free; a track record isn't.`,
+      cap: `Advice is cheap. Being right is not.\n\nEveryone has a take on your growth. Growth Terminal is the only one that grades its own, every forecast tracked against your real revenue, marked verified or missed. Opinions are free; a track record isn't.`,
       fc: `Whose growth advice has ever been scored against reality? Ours is.` },
   ];
   const b = pick(bank, r);
@@ -396,9 +417,9 @@ function gen_contrast(r) {
 
 function gen_stat(r) {
   const bank = [
-    { stat: `$88K–$140K`, label: `The constraint you couldn't see — priced, per year.`, size: 190,
+    { stat: `$88K–$140K`, label: `The constraint you couldn't see. Priced, per year.`, size: 190,
       sub: `Every diagnosis ends with a dollar range, not a vibe.`,
-      cap: `"$88K–$140K / yr."\n\nThat's a real range from a real diagnosis — the annual value of one unfixed constraint. Growth Terminal doesn't just tell you what's wrong; it tells you what fixing it is worth, so you decide with a number instead of a hunch.`,
+      cap: `"$88K–$140K / yr."\n\nThat's a real range from a real diagnosis: the annual value of one unfixed constraint. Growth Terminal doesn't just tell you what's wrong; it tells you what fixing it is worth, so you decide with a number instead of a hunch.`,
       fc: `Every constraint we surface comes with a dollar range. Decisions get easier.` },
     { stat: `60 sec`, label: `From spreadsheet to diagnosis.`, size: 220,
       sub: `Add to Sheets → understand → diagnose → forecast → verify.`,
@@ -406,19 +427,19 @@ function gen_stat(r) {
       fc: `Genuinely ~60 seconds. It reads the sheet you already have open.` },
     { stat: `12`, label: `The number of places growth actually gets stuck.`, size: 260,
       sub: `Acquisition, activation, retention, conversion, pricing… we rank all twelve and name yours.`,
-      cap: `Growth only gets stuck in twelve places.\n\nAcquisition · Activation · Retention · Conversion · Traffic · Offer · Capacity · Churn · Fulfilment · Cash collection · Utilisation · Pricing. The hard part isn't the list — it's knowing which one is YOUR #1 right now. That's the whole job.`,
+      cap: `Growth only gets stuck in twelve places.\n\nAcquisition · Activation · Retention · Conversion · Traffic · Offer · Capacity · Churn · Fulfilment · Cash collection · Utilisation · Pricing. The hard part isn't the list, it's knowing which one is YOUR #1 right now. That's the whole job.`,
       fc: `Which of the 12 is biting you hardest this quarter?` },
     { stat: `1`, label: `One constraint. Ranked above everything else.`, size: 300,
-      sub: `Not a to-do list. A single, prioritised move — with a number on it.`,
-      cap: `One.\n\nThat's how many constraints you should be working on right now. Growth Terminal ranks all twelve and hands you the single one that's capping you this quarter — with the dollar range attached — so your team executes against one clear target.`,
+      sub: `Not a to-do list. A single, prioritised move, with a number on it.`,
+      cap: `One.\n\nThat's how many constraints you should be working on right now. Growth Terminal ranks all twelve and hands you the single one that's capping you this quarter, with the dollar range attached, so your team executes against one clear target.`,
       fc: `If you could only fix one thing this quarter, do you know which?` },
     { stat: `$0`, label: `The cost to find out what's really stuck.`, size: 260,
       sub: `The 60-second diagnostic is free. The clarity isn't optional.`,
-      cap: `$0 to find out what's actually capping your growth.\n\nThe 60-second diagnostic is free — run it on the data you already have. You'll get your #1 constraint, ranked and priced. The clarity is the point; the price is zero.`,
+      cap: `$0 to find out what's actually capping your growth.\n\nThe 60-second diagnostic is free, run it on the data you already have. You'll get your #1 constraint, ranked and priced. The clarity is the point; the price is zero.`,
       fc: `Free to run. What's the harm in a second opinion?` },
     { stat: `90 days`, label: `From diagnosis to a plan you can actually run.`, size: 190,
-      sub: `Every verdict ships with a 90-day plan — then we grade it.`,
-      cap: `A diagnosis without a plan is just a nice chart.\n\nEvery Growth Terminal verdict ships with a concrete 90-day plan for the constraint it found — then tracks the outcome against your real revenue and grades the call. Diagnosis, plan, and a scorecard.`,
+      sub: `Every verdict ships with a 90-day plan, then we grade it.`,
+      cap: `A diagnosis without a plan is just a nice chart.\n\nEvery Growth Terminal verdict ships with a concrete 90-day plan for the constraint it found, then tracks the outcome against your real revenue and grades the call. Diagnosis, plan, and a scorecard.`,
       fc: `A verdict is step one. The 90-day plan is where it pays off.` },
   ];
   const b = pick(bank, r);
@@ -430,19 +451,19 @@ function gen_vs(r) {
   const bank = [
     { hook: `Priced against the<br>mistake, not the<br>${accent('dashboard')}.`,
       them: [
-        { who: 'Agencies', what: 'execute the work — but never tell you which move is worth the most.' },
+        { who: 'Agencies', what: 'execute the work, but never tell you which move is worth the most.' },
         { who: 'Consultants', what: 'advise, then move on. Nobody checks whether the call held.' },
         { who: 'Dashboards', what: 'report the past. Not one view answers "what\'s the one move now?"' }],
       us: `Grades its own call. Names the constraint, prices it, verifies it against real revenue.`,
-      cap: `Agencies execute. Consultants advise, then leave. Dashboards report the past.\n\nNone of them close the loop. Growth Terminal names the #1 constraint, prices it, hands you a 90-day plan — then grades its own forecast against your actual revenue. When we're wrong, you'll see that too. That's the difference: it's accountable.`,
+      cap: `Agencies execute. Consultants advise, then leave. Dashboards report the past.\n\nNone of them close the loop. Growth Terminal names the #1 constraint, prices it, hands you a 90-day plan, then grades its own forecast against your actual revenue. When we're wrong, you'll see that too. That's the difference: it's accountable.`,
       fc: `The verify step is the whole point. We show you when the call was wrong.` },
-    { hook: `Built to make a<br>${accent('call')} — not<br>more reports.`,
+    { hook: `Built to make a<br>${accent('call')}, not<br>more reports.`,
       them: [
         { who: 'BI tools', what: 'show you everything and decide nothing.' },
-        { who: 'Gut feel', what: 'is fast and confident — and unaccountable.' },
+        { who: 'Gut feel', what: 'is fast and confident, and unaccountable.' },
         { who: 'Spreadsheets', what: 'hold the data but never rank what matters.' }],
       us: `Reads your data and makes the call: the #1 constraint, priced, with a plan.`,
-      cap: `BI tools show everything and decide nothing. Gut feel is fast but unaccountable. Spreadsheets hold the data but never rank what matters.\n\nGrowth Terminal reads what you already track and makes the call — your #1 constraint, priced, with a 90-day plan. A decision, not another dashboard.`,
+      cap: `BI tools show everything and decide nothing. Gut feel is fast but unaccountable. Spreadsheets hold the data but never rank what matters.\n\nGrowth Terminal reads what you already track and makes the call, your #1 constraint, priced, with a 90-day plan. A decision, not another dashboard.`,
       fc: `A tool that decides, not just displays. That's the whole idea.` },
   ];
   const b = pick(bank, r);
@@ -450,13 +471,13 @@ function gen_vs(r) {
     caption: b.cap, first_comment: b.fc, sig: 'vs:' + stripHtml(b.hook).slice(0, 40) };
 }
 
-// Generated per-constraint post ("Is <X> your #1?") — 12 distinct, on-brand posts.
+// Generated per-constraint post ("Is <X> your #1?"), 12 distinct, on-brand posts.
 function gen_constraint(r) {
   const [name, symptom] = pick(CONSTRAINTS, r);
   const hook = `Is ${accent(name.toLowerCase())} your<br>#1 constraint?`;
   return { layout: 'statement', bg: 'dark', size: 110, eyebrow: '◆ The one constraint',
     hook, sub: `The tell: ${symptom}.`,
-    caption: `Is ${name.toLowerCase()} your #1 constraint right now?\n\nThe tell: ${symptom}. It's one of the twelve places growth gets stuck — but it's only worth fixing first if it's actually your biggest. Growth Terminal ranks all twelve against your data and tells you whether ${name.toLowerCase()} is really the one, or a symptom of something upstream.`,
+    caption: `Is ${name.toLowerCase()} your #1 constraint right now?\n\nThe tell: ${symptom}. It's one of the twelve places growth gets stuck, but it's only worth fixing first if it's actually your biggest. Growth Terminal ranks all twelve against your data and tells you whether ${name.toLowerCase()} is really the one, or a symptom of something upstream.`,
     first_comment: `Does "${symptom}" sound like your account this quarter? 👇`,
     sig: 'cons:' + name };
 }
@@ -466,11 +487,11 @@ function gen_carousel(r) {
   const bank = [
     { big: `12`, hook: `The 12 places growth<br>actually gets ${accent('stuck')}.`,
       sub: `Which one is yours? Find out in 60 seconds.`,
-      cap: `Growth only gets stuck in twelve places. Save this. 👇\n\nAcquisition · Activation · Retention · Conversion · Traffic · Offer · Capacity · Churn · Fulfilment · Cash collection · Utilisation · Pricing.\n\nThe hard part is knowing which one is YOUR #1 right now — with a dollar range attached. That's the whole job Growth Terminal does.`,
+      cap: `Growth only gets stuck in twelve places. Save this. 👇\n\nAcquisition · Activation · Retention · Conversion · Traffic · Offer · Capacity · Churn · Fulfilment · Cash collection · Utilisation · Pricing.\n\nThe hard part is knowing which one is YOUR #1 right now, with a dollar range attached. That's the whole job Growth Terminal does.`,
       fc: `Which of the 12 is biting hardest this quarter?` },
     { big: `3`, hook: `3 questions that reveal<br>your real ${accent('bottleneck')}.`,
       sub: `Save this before your next growth meeting.`,
-      cap: `Three questions that reveal your real bottleneck. Save this. 👇\n\n1. Where does momentum die — before signup, at first use, or after?\n2. If you doubled traffic tomorrow, what breaks first?\n3. What's the one number that, if it moved 10%, changes everything?\n\nGrowth Terminal answers all three against your data — and prices the fix.`,
+      cap: `Three questions that reveal your real bottleneck. Save this. 👇\n\n1. Where does momentum die, before signup, at first use, or after?\n2. If you doubled traffic tomorrow, what breaks first?\n3. What's the one number that, if it moved 10%, changes everything?\n\nGrowth Terminal answers all three against your data, and prices the fix.`,
       fc: `Answer #2 honestly and you usually find the constraint.` },
   ];
   const b = pick(bank, r);
@@ -478,7 +499,7 @@ function gen_carousel(r) {
     caption: b.cap, first_comment: b.fc, sig: 'car:' + b.big + stripHtml(b.hook).slice(0, 20) };
 }
 
-// B) Live diagnosis card — shows the product output
+// B) Live diagnosis card, shows the product output
 function gen_card(r) {
   const bank = [
     { c: 'Retention', impact: '$88K–$140K / yr', conf: '92%', pct: 78 },
@@ -488,8 +509,8 @@ function gen_card(r) {
   ];
   const b = pick(bank, r);
   return { layout: 'card', eyebrow: '◆ Live diagnosis', constraint: b.c, impact: b.impact, confidence: b.conf, pct: b.pct,
-    sub: `This is what you get back. Not a dashboard — a verdict.`, hook: `#1 constraint: ${b.c}`,
-    caption: `This is what a Growth Terminal diagnosis looks like.\n\nNot 40 metrics to interpret — one constraint, named, with the dollar range it's costing you and how sure we are. Here, ${b.c.toLowerCase()} was capping the business by ${b.impact.replace(' / yr', ' a year')}.\n\nYours is one run away.`,
+    sub: `This is what you get back. Not a dashboard. A verdict.`, hook: `#1 constraint: ${b.c}`,
+    caption: `This is what a Growth Terminal diagnosis looks like.\n\nNot 40 metrics to interpret, one constraint, named, with the dollar range it's costing you and how sure we are. Here, ${b.c.toLowerCase()} was capping the business by ${b.impact.replace(' / yr', ' a year')}.\n\nYours is one run away.`,
     first_comment: `What would you do differently if your #1 constraint came pre-priced?`,
     sig: 'card:' + b.c };
 }
@@ -498,7 +519,7 @@ function gen_card(r) {
 function gen_quote(r) {
   const bank = [
     { q: `The most expensive number in growth is the one you ${accent('can’t see')}.`,
-      cap: `The most expensive number in growth is the one you can't see.\n\nA hidden constraint never sends an invoice — it just quietly caps every month. Growth Terminal makes it visible and puts a dollar range on it.`,
+      cap: `The most expensive number in growth is the one you can't see.\n\nA hidden constraint never sends an invoice, it just quietly caps every month. Growth Terminal makes it visible and puts a dollar range on it.`,
       fc: `The scariest line item is the one that never shows up on the P&L.` },
     { q: `You don’t get a dashboard. You get a ${accent('verdict')}.`,
       cap: `You don't get a dashboard. You get a verdict.\n\nDashboards show 40 numbers and let you pick the story. We name the one constraint holding you back, price it, and verify the call against real revenue.`,
@@ -507,7 +528,7 @@ function gen_quote(r) {
       cap: `Fix the constraint, not the symptom.\n\n"Conversion is low" is a symptom. The real constraint usually sits one step upstream. We trace it back to the source so you fix the thing that actually moves the number.`,
       fc: `What symptom have you been treating that keeps coming back?` },
     { q: `${accent('Diagnosis')} before treatment. Always.`,
-      cap: `Diagnosis before treatment. Always.\n\nMost growth mistakes aren't strategy failures — they're diagnosis failures. Get the constraint right first, then move.`,
+      cap: `Diagnosis before treatment. Always.\n\nMost growth mistakes aren't strategy failures, they're diagnosis failures. Get the constraint right first, then move.`,
       fc: `Would you take the medicine before the diagnosis? Same in growth.` },
   ];
   const b = pick(bank, r);
@@ -520,8 +541,8 @@ function gen_annotated(r) {
   const bank = [
     { pre: `You don’t have a traffic problem. You have a `, circled: `diagnosis problem`, post: `.`, ring: 640,
       sub: `Everyone treats the symptom. We find the cause.`,
-      cap: `You don't have a traffic problem. You have a diagnosis problem.\n\nMore traffic into a funnel that leaks somewhere else just costs more. We find where growth is actually stuck first — then you spend.`,
-      fc: `Where do you *think* you're stuck — and how sure are you?` },
+      cap: `You don't have a traffic problem. You have a diagnosis problem.\n\nMore traffic into a funnel that leaks somewhere else just costs more. We find where growth is actually stuck first, then you spend.`,
+      fc: `Where do you *think* you're stuck, and how sure are you?` },
     { pre: `You’re not behind. You’re working on the `, circled: `wrong constraint`, post: `.`, ring: 620,
       sub: `Effort on the wrong lever still feels like work.`,
       cap: `You're not behind. You're working on the wrong constraint.\n\nThe effort is real; the target is off. Growth Terminal points you at the one lever that's actually capping you this quarter.`,
@@ -542,9 +563,9 @@ function gen_funnel(r) {
   const bank = [
     { hook: `Your funnel isn’t<br>slow. It’s ${accent('leaking.')}`,
       stages: [['Visitors', '100%', 1.0, false], ['Signups', '32%', 0.62, false], ['Activated', '15%', 0.40, true], ['Retained', '9%', 0.30, false]],
-      sub: `Activation is where most of your growth quietly disappears. We find the exact stage — and price it.`,
-      cap: `Most growth doesn't die at the top of the funnel. It leaks in the middle.\n\nHere, activation is the drop that's costing the most — people sign up and never reach the first win. Growth Terminal pinpoints the leaking stage and tells you what sealing it is worth.`,
-      fc: `Where does your funnel leak hardest — top, middle, or bottom?` },
+      sub: `Activation is where most of your growth quietly disappears. We find the exact stage, and price it.`,
+      cap: `Most growth doesn't die at the top of the funnel. It leaks in the middle.\n\nHere, activation is the drop that's costing the most, people sign up and never reach the first win. Growth Terminal pinpoints the leaking stage and tells you what sealing it is worth.`,
+      fc: `Where does your funnel leak hardest, top, middle, or bottom?` },
     { hook: `You don’t need more<br>leads. You need to ${accent('keep them.')}`,
       stages: [['Leads', '100%', 1.0, false], ['Booked', '41%', 0.66, false], ['Closed', '19%', 0.44, false], ['Retained', '11%', 0.32, true]],
       sub: `Pouring leads into a leaky retention stage just costs more. Fix the leak first.`,
@@ -559,7 +580,7 @@ function gen_funnel(r) {
 // F) Ranked constraints
 function gen_ranked(r) {
   const bank = [
-    { hook: `The 12 places growth<br>gets stuck — ${accent('scored.')}`,
+    { hook: `The 12 places growth<br>gets stuck: ${accent('scored.')}`,
       rows: [['Retention', 94, true], ['Activation', 81, false], ['Pricing', 63, false], ['Acquisition', 48, false], ['Conversion', 35, false]] },
     { hook: `We rank all twelve.<br>You fix the ${accent('#1.')}`,
       rows: [['Pricing', 91, true], ['Conversion', 77, false], ['Retention', 66, false], ['Offer', 52, false], ['Traffic', 40, false]] },
@@ -567,7 +588,7 @@ function gen_ranked(r) {
   const b = pick(bank, r);
   return { layout: 'ranked', eyebrow: '◆ Ranked for you', hook: b.hook, rows: b.rows,
     sub: `We don’t hand you a checklist. We tell you which one to fix first.`,
-    caption: `Twelve places growth gets stuck. We score all of them against your data and rank them.\n\nThe point isn't the list — it's knowing which one is your #1 right now, with the dollar range attached. That's the move that changes the quarter.`,
+    caption: `Twelve places growth gets stuck. We score all of them against your data and rank them.\n\nThe point isn't the list, it's knowing which one is your #1 right now, with the dollar range attached. That's the move that changes the quarter.`,
     first_comment: `If you could only fix one this quarter, do you know which?`,
     sig: 'ranked:' + b.rows[0][0] };
 }
@@ -582,29 +603,29 @@ function gen_trajectory(r) {
   return { layout: 'trajectory', eyebrow: '◆ We grade our own calls', hook: `The forecast, checked<br>against ${accent('real revenue.')}`,
     fc: b.fc, ac: b.ac,
     sub: `Every prediction we make gets tracked against what actually happened. When we’re wrong, you see it too.`,
-    caption: `Everyone in growth makes confident calls. Almost no one checks them.\n\nGrowth Terminal logs every forecast and tracks it against your real revenue — verified or missed. You build trust in the calls that keep landing and catch the ones that don't. Accountability is the feature.`,
+    caption: `Everyone in growth makes confident calls. Almost no one checks them.\n\nGrowth Terminal logs every forecast and tracks it against your real revenue, verified or missed. You build trust in the calls that keep landing and catch the ones that don't. Accountability is the feature.`,
     first_comment: `When we're wrong, the tool says so. That's the point.`,
     sig: 'traj:' + b.ac[5][1] };
 }
 
-// H) Tweet card — authority "reminder" one-liners
+// H) Tweet card, authority "reminder" one-liners
 function gen_tweet(r) {
   const bank = [
     { tweet: `Reminder: your growth isn’t slow.<br>It’s mis-diagnosed.`, size: 66,
-      cap: `Your growth isn't slow — it's mis-diagnosed.\n\nMost teams pour real effort into a lever that was never the bottleneck. The work is hard; the target is wrong. Growth Terminal finds the constraint actually capping you before you spend another quarter on the wrong one.`,
-      fc: `What are you working on right now — and how sure are you it's the real constraint?` },
+      cap: `Your growth isn't slow, it's mis-diagnosed.\n\nMost teams pour real effort into a lever that was never the bottleneck. The work is hard; the target is wrong. Growth Terminal finds the constraint actually capping you before you spend another quarter on the wrong one.`,
+      fc: `What are you working on right now, and how sure are you it's the real constraint?` },
     { tweet: `The most expensive number in growth is the one you can’t see.`, size: 58,
-      cap: `A hidden constraint never sends an invoice. It just quietly caps every month. Growth Terminal makes that number visible and puts a dollar range on it — so you can act on it instead of absorbing it.`,
+      cap: `A hidden constraint never sends an invoice. It just quietly caps every month. Growth Terminal makes that number visible and puts a dollar range on it, so you can act on it instead of absorbing it.`,
       fc: `The scariest line item is the one that never shows up on the P&L.` },
     { tweet: `Reminder: diagnosis before treatment. Always.`, size: 66,
-      cap: `Most growth mistakes aren't strategy failures — they're diagnosis failures. Executing hard against the wrong constraint burns a whole quarter before anyone can prove it was the wrong call. Get the diagnosis right first.`,
+      cap: `Most growth mistakes aren't strategy failures, they're diagnosis failures. Executing hard against the wrong constraint burns a whole quarter before anyone can prove it was the wrong call. Get the diagnosis right first.`,
       fc: `Would you take the medicine before the diagnosis? Same in growth.` },
     { tweet: `You don’t need more dashboards.<br>You need one verdict.`, size: 66,
       cap: `Most teams are drowning in dashboards and starving for a decision. Growth Terminal reads the data you already have and makes the call: your #1 constraint, what it's worth, and the plan. A verdict beats another chart.`,
       fc: `How many dashboards do you check that never change a decision?` },
     { tweet: `Reminder: stop optimizing the lever that was never stuck.`, size: 60,
       cap: `Perfect execution on the wrong lever still loses. Before you optimize, make sure it's the thing actually capping growth. We rank the twelve places growth gets stuck and hand you the one that matters most right now.`,
-      fc: `Which lever are you optimizing — and is it even the bottleneck?` },
+      fc: `Which lever are you optimizing, and is it even the bottleneck?` },
     { tweet: `You can’t fix the constraint you can’t see.`, size: 64,
       cap: `You can't fix the constraint you can't see. Most growth stays stuck because the real bottleneck is invisible on a dashboard. Growth Terminal names it, prices it, and verifies the call against your real revenue.`,
       fc: `What if the thing capping you isn't the thing you're looking at?` },
@@ -614,13 +635,49 @@ function gen_tweet(r) {
     caption: b.cap, first_comment: b.fc, sig: 'tweet:' + stripHtml(b.tweet).slice(0, 36) };
 }
 
+// Editorial hero, the "big-tech ad" format. A confident single line + a quiet subhead,
+// logo top-left, lots of air. The headline stays plain (no <br> gymnastics) so it reads
+// like a campaign, not an infographic.
+function gen_editorial(r) {
+  const bank = [
+    { hook: `See where your growth is <span class="accent">actually</span> stuck.`,
+      sub: `One constraint, named and priced, from the report you already run.`, size: 96,
+      caps: `Growth diagnosis · Google Sheets`,
+      cap: `See where your growth is actually stuck.\n\nNot ten things to fix. The one constraint capping your revenue right now, with a dollar range on it. Growth Terminal reads the report you already run and makes the call.`,
+      fc: `If you had to name your #1 constraint in one word, what would it be? 👇` },
+    { hook: `Know what's working <span class="accent">before</span> you scale it.`,
+      sub: `Every call gets tracked against real revenue, verified or missed.`, size: 92,
+      caps: `Verified against real revenue`,
+      cap: `Know what's working before you pour budget into it.\n\nMost growth calls are never checked. Growth Terminal logs every forecast, grades it against your actual revenue, and shows you when it was wrong, so you scale the plays that keep landing.`,
+      fc: `How many of last quarter's "wins" did you actually verify?` },
+    { hook: `Track where growth is driving <span class="accent">real</span> results.`,
+      sub: `The twelve places growth gets stuck, ranked for your business.`, size: 92,
+      caps: `12 constraints · ranked for you`,
+      cap: `Track where growth is actually driving results, and where it isn't.\n\nGrowth Terminal ranks the twelve places growth gets stuck, names the one that's yours this quarter, and prices what fixing it is worth. A verdict, not another dashboard.`,
+      fc: `Which of the 12 do you think is biting hardest right now?` },
+    { hook: `Your #1 constraint, <span class="accent">priced</span>, in about a minute.`,
+      sub: `No new platform. It reads the spreadsheet you already have open.`, size: 90,
+      caps: `~60 seconds · no migration`,
+      cap: `Your #1 constraint, named and priced, in about a minute.\n\nPoint the add-on at the report you already export. It ranks where growth is stuck, tells you which one is yours, and attaches a dollar range. Your data never leaves the sheet.`,
+      fc: `It runs where your data already lives. Nothing to migrate.` },
+    { hook: `Stop optimizing the lever that was <span class="accent">never</span> stuck.`,
+      sub: `Perfect execution on the wrong constraint still loses the quarter.`, size: 88,
+      caps: `Diagnosis before treatment`,
+      cap: `Stop optimizing the lever that was never the bottleneck.\n\nEffort on the wrong constraint still feels like work, and still loses. Growth Terminal finds the one that's actually capping you before you spend another quarter aimed at the wrong target.`,
+      fc: `What lever are you pulling right now, and are you sure it's the stuck one?` },
+  ];
+  const b = pick(bank, r);
+  return { layout: 'editorial', hook: b.hook, sub: b.sub, size: b.size, caps: b.caps,
+    caption: b.cap, first_comment: b.fc, sig: 'edit:' + stripHtml(b.hook).slice(0, 40) };
+}
+
 // Weighted mix of generators. Statement/constraint are the workhorses; the rest add variety.
 const GENERATORS = [
   gen_statement, gen_statement, gen_constraint, gen_constraint,
   gen_stat, gen_contrast, gen_vs, gen_carousel,
   gen_card, gen_card, gen_quote, gen_annotated,
   gen_funnel, gen_ranked, gen_trajectory,
-  gen_tweet, gen_tweet,
+  gen_tweet, gen_tweet, gen_editorial, gen_editorial,
 ];
 
 // ---------- pick a fresh post (avoid recent repeats) ----------
@@ -638,7 +695,7 @@ function buildPost(seed, recent) {
     if (recent.includes(post.sig) && attempt < 30) continue; // try for something fresh
     post.hashtags = tags(r);
     post.cta = pick(CTA_BIO, r);
-    post.append_cta = pick(['\n\n→ growthterminal.io', '\n\nRun the free 60-second diagnostic — link in bio.',
+    post.append_cta = pick(['\n\n→ growthterminal.io', '\n\nRun the free 60-second diagnostic, link in bio.',
       '\n\nDiagnose your #1 constraint free. Link in bio.'], r);
     return post;
   }
@@ -714,20 +771,20 @@ function reel_card(r) {
   const b = pick(bank, r);
   return { rlayout: 'card', constraint: b.c, impact: b.impact, confidence: b.conf, pct: b.pct, headline: b.head,
     hook: `#1 constraint: ${b.c}`,
-    caption: `This is what a Growth Terminal diagnosis looks like — one constraint, named, priced, and verified against real revenue. Here, ${b.c.toLowerCase()} was capping the business by ${b.impact.replace(' / yr', ' a year')}.\n\nYours is one run away.`,
+    caption: `This is what a Growth Terminal diagnosis looks like, one constraint, named, priced, and verified against real revenue. Here, ${b.c.toLowerCase()} was capping the business by ${b.impact.replace(' / yr', ' a year')}.\n\nYours is one run away.`,
     first_comment: `What would you do differently if your #1 constraint came pre-priced?`,
     sig: 'reelcard:' + b.c };
 }
 function reel_countup(r) {
   const bank = [
     { big: 12, prefix: '', suffix: '', eyebrow: 'Save this', label: 'the number of places growth actually gets stuck. We rank all twelve and name yours.',
-      caption: `Growth only gets stuck in twelve places. The hard part is knowing which one is YOUR #1 right now — with a dollar range attached. That's the whole job Growth Terminal does.`,
+      caption: `Growth only gets stuck in twelve places. The hard part is knowing which one is YOUR #1 right now, with a dollar range attached. That's the whole job Growth Terminal does.`,
       fc: `Which of the 12 is biting hardest this quarter?`, sig: 'reelnum:12' },
     { big: 60, prefix: '', suffix: ' sec', eyebrow: 'Install to insight', label: 'from spreadsheet to diagnosis. No onboarding, no migration.',
       caption: `60 seconds from spreadsheet to diagnosis. Add the add-on to Google Sheets, point it at the report you already have, and get your #1 constraint ranked and priced before your coffee's cold.`,
       fc: `Genuinely ~60 seconds. It reads the sheet you already have open.`, sig: 'reelnum:60' },
-    { big: 140, prefix: '$', suffix: 'K', eyebrow: 'What it’s worth', label: '/yr — the value of one constraint you couldn’t see, finally priced.',
-      caption: `Every diagnosis ends with a dollar range, not a vibe. A real number on a real constraint — so you decide with a figure instead of a hunch.`,
+    { big: 140, prefix: '$', suffix: 'K', eyebrow: 'What it’s worth', label: '/yr, the value of one constraint you couldn’t see, finally priced.',
+      caption: `Every diagnosis ends with a dollar range, not a vibe. A real number on a real constraint, so you decide with a figure instead of a hunch.`,
       fc: `What would change if every problem came pre-priced?`, sig: 'reelnum:140' },
   ];
   const b = pick(bank, r);
@@ -742,7 +799,7 @@ function buildReel(seed, recent) {
     const post = pick(REEL_GENERATORS, r)(r);
     if (recent.includes(post.sig) && a < 30) continue;
     post.hashtags = tags(r);
-    post.append_cta = pick(['\n\n→ growthterminal.io', '\n\nRun the free 60-second diagnostic — link in bio.',
+    post.append_cta = pick(['\n\n→ growthterminal.io', '\n\nRun the free 60-second diagnostic, link in bio.',
       '\n\nDiagnose your #1 constraint free. Link in bio.'], r);
     return post;
   }
@@ -813,9 +870,9 @@ function pruneCreatives(prefix, exts, keep) {
   const now = new Date();
   const stampStr = stamp(now);
   const REEL_RATE = parseFloat(process.env.GT_REEL_RATE || '0.4'); // ~40% of runs are Reels
-  // Only attempt a Reel if ffmpeg is available — otherwise fall back to a static post (never crash the run).
+  // Only attempt a Reel if ffmpeg is available, otherwise fall back to a static post (never crash the run).
   const hasFfmpeg = ffmpegAvailable();
-  if (!hasFfmpeg) console.log('note: ffmpeg not found — posting a static image this run');
+  if (!hasFfmpeg) console.log('note: ffmpeg not found, posting a static image this run');
   const wantReel = hasFfmpeg && rng(((now.getTime() >>> 0) ^ 0xA5A5A5A5) >>> 0)() < REEL_RATE;
   let meta;
 
