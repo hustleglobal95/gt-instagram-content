@@ -314,18 +314,24 @@ function L_editorial(p) {
 }
 
 // ---------- editorial photo backgrounds + legibility QA ----------
-// Curated pool of on-brand photo grounds (warm workspace + upscale architecture).
-// ONLY add URLs that passed a look-check. The poster fetches + base64-embeds each at
-// render time (GitHub Actions has network), and EVERY render still runs the contrast
-// gate below, because headline length/position varies per post.
-const EDITORIAL_BGS = [
-  'https://www.trybloom.ai/img/f2c06d7d-a216-4181-aca0-ae0d1281673e', // founder at desk, burnt-orange/ink
-  'https://www.trybloom.ai/img/148e8066-104e-4661-be1d-1b27758addeb', // hands on keyboard, charcoal + amber
-  'https://www.trybloom.ai/img/36d3a202-b6f0-4765-ae4b-54ad8159429a', // modern office, rich brown, moody
-  'https://www.trybloom.ai/img/d985c954-d5d0-43c8-a1b4-11e3ea694129', // glass towers, blue hour
-  'https://www.trybloom.ai/img/4acac9fd-1dd2-446e-bdcb-9a2506c62f3e', // tower facade, deep amber/charcoal
-  'https://www.trybloom.ai/img/4c2bc72a-480b-40bc-94db-ade5f8efa38f', // financial district skyline, blue dusk
-];
+// The photo grounds live in ./backgrounds (committed to the repo; no CDN dependency).
+// Each is a curated realism image already vetted by process_backgrounds.py; every render
+// STILL runs the contrast gate below, because headline length/position varies per post.
+const BG_DIR = path.join(__dirname, 'backgrounds');
+function listEditorialBgs() {
+  try {
+    return fs.readdirSync(BG_DIR)
+      .filter(f => /\.(jpe?g|png|webp)$/i.test(f))
+      .map(f => path.join(BG_DIR, f));
+  } catch { return []; }
+}
+// Local file -> base64 data URL (so the in-page canvas can read pixels untainted).
+function fileToDataUrl(fp) {
+  const buf = fs.readFileSync(fp);
+  const ext = path.extname(fp).slice(1).toLowerCase();
+  const ct = ext === 'png' ? 'image/png' : ext === 'webp' ? 'image/webp' : 'image/jpeg';
+  return `data:${ct};base64,` + buf.toString('base64');
+}
 
 // The text zone (of the 1080x1350 stage) the headline + subhead occupy. We measure the
 // background luminance here and size the scrim to guarantee legibility over it.
@@ -389,23 +395,133 @@ function editorialQA(stats) {
 // Pick a background that passes the gate; set post.bgImage + post.scrim. Returns false if
 // none pass (caller falls back to the gradient editorial; a bad photo never ships).
 async function prepareEditorialPhoto(page, post, r, pool) {
-  const urls = shuffle((pool || EDITORIAL_BGS).slice(), r);
+  const items = shuffle((pool || listEditorialBgs()).slice(), r);
   await page.setContent('<!DOCTYPE html><html><body></body></html>', { waitUntil: 'domcontentloaded' });
-  for (const url of urls) {
+  for (const item of items) {
     let dataUrl;
-    try { dataUrl = url.startsWith('data:') ? url : await fetchDataUrl(url); }
-    catch (e) { console.log(`editorial bg fetch failed (${url.slice(-12)}): ${e.message}`); continue; }
+    try {
+      dataUrl = item.startsWith('data:') ? item
+        : /^https?:/.test(item) ? await fetchDataUrl(item)   // legacy URL support
+        : fileToDataUrl(item);                                // local file in ./backgrounds
+    } catch (e) { console.log(`editorial bg load failed (${path.basename(item)}): ${e.message}`); continue; }
     const stats = await measureBgLuminance(page, dataUrl, QA_TEXTBOX);
     const qa = editorialQA(stats);
-    console.log(`editorial QA [${url.slice(-14)}] p95=${qa.p95} scrim=${qa.scrim} contrast=${qa.contrast}:1 -> ${qa.pass ? 'PASS' : 'REJECT (' + qa.reason + ')'}`);
-    if (qa.pass) { post.bgImage = dataUrl; post.scrim = qa.scrim; post.qa = qa; post.bg_url = url; return true; }
+    const label = /^https?:|^data:/.test(item) ? item.slice(-14) : path.basename(item);
+    console.log(`editorial QA [${label}] p95=${qa.p95} scrim=${qa.scrim} contrast=${qa.contrast}:1 -> ${qa.pass ? 'PASS' : 'REJECT (' + qa.reason + ')'}`);
+    if (qa.pass) { post.bgImage = dataUrl; post.scrim = qa.scrim; post.qa = qa; post.bg_url = /^https?:/.test(item) ? item : path.basename(item); return true; }
   }
   return false;
 }
 
+// ==================== PRODUCT ADS (the store) ====================
+// Catalog. Add a product = add an object. status 'live' sells now; the SOON list teases.
+const PRODUCTS = [
+  { id: 'funnel', name: 'Funnel & Conversion Tracker', price: '$79',
+    hooks: [
+      `Find the <span class="accent">one step</span> your funnel is leaking.`,
+      `Your funnel has <span class="accent">one</span> weak step. This finds it.`,
+      `Stop guessing which funnel step to <span class="accent">fix</span>.`,
+    ],
+    sub: `It names your weakest step, prices the fix in dollars, and simulates the upside. In Google Sheets™.`,
+    features: ['Weakest step, flagged against your own targets', 'Every fix sized in dollars, then ranked', 'What-if simulator, trends and benchmarks'],
+    caps: 'Google Sheets™ · instant download',
+    captions: [
+`Your funnel has one step leaking more than the rest. The Funnel & Conversion Tracker finds it, tells you what fixing it is worth in dollars, and lets you simulate the upside before you spend a cent.\n\n8 tabs, built in Google Sheets™. $79, instant download. Link in bio.`,
+`Most trackers show you conversion rates. This one tells you what to do with them: which step is costing you the most, how much fixing it is worth, and what your revenue looks like if you close the gap.\n\nFunnel & Conversion Tracker. $79 in Google Sheets™. Link in bio.`,
+    ],
+    fcs: [`Which funnel step do you think is your weakest right now?`, `Diagnosis before treatment, even in a spreadsheet.`],
+  },
+];
+// Coming soon: rename to your real roadmap. These just tease what's next in the store.
+const PRODUCTS_SOON = [
+  { name: 'Retention & Churn Tracker', teaser: `See exactly where revenue leaks after the sale.` },
+  { name: 'Unit Economics Cockpit', teaser: `CAC, LTV and payback in one view, so you know if growth actually pays.` },
+  { name: 'Pricing & Offer Analyzer', teaser: `Find the margin you're leaving on the table on every deal.` },
+];
+
+// A compact "money shot" of the product: the diagnosis output, browser-chrome mock.
+function productMock() {
+  const rows = [
+    ['Visitors', '12,000', '', false],
+    ['Leads', '420', '3.5%', false],
+    ['Qualified', '76', '18.1%', true],
+    ['Opportunities', '41', '53.9%', false],
+    ['Customers', '14', '34.1%', false],
+  ];
+  const body = rows.map(([s, v, c, weak]) => `<div style="display:flex;justify-content:space-between;align-items:center;padding:15px 26px;background:${weak ? '#FBEBE4' : '#fff'};border-bottom:1px solid #ece3d6">
+    <span style="font-weight:700;color:${INK};font-size:27px">${s}</span>
+    <span style="color:#8A8178;font-size:25px;flex:1;text-align:right;padding-right:40px">${v}</span>
+    <span style="font-weight:${weak ? 800 : 500};color:${weak ? '#C7513A' : INK};font-size:27px;width:110px;text-align:right">${c}</span></div>`).join('');
+  return `<div style="width:100%;border-radius:18px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.45);border:1px solid #ece3d6">
+    <div style="background:${INK};padding:15px 22px;display:flex;align-items:center;gap:12px">
+      <span style="width:12px;height:12px;border-radius:50%;background:#5b524a"></span><span style="width:12px;height:12px;border-radius:50%;background:#5b524a"></span><span style="width:12px;height:12px;border-radius:50%;background:#5b524a"></span>
+      <span style="color:#cfc7bb;font-size:20px;font-weight:600">Funnel &amp; Conversion Tracker.xlsx</span></div>
+    <div>${body}</div>
+    <div style="background:${ORANGE};color:#fff;font-weight:800;font-size:25px;padding:20px 24px;line-height:1.3">⚠ Weakest step: Qualified is 18.1% vs your 25% target. Fixing it is worth ≈ $15,385/yr.</div>
+  </div>`;
+}
+
+// Screenshot-led product ad: headline + the product mock + price/CTA.
+function L_prodshot(p) {
+  return `<div class="stage" style="background:${INK};color:${WHITE}">
+    <div class="glow" style="width:640px;height:640px;background:${ORANGE};top:-190px;right:-190px"></div>
+    <div class="grain"></div>
+    <div class="eyebrow" style="color:${ORANGE}">${p.eyebrow || '◆ New in the store'}</div>
+    <div class="h" style="font-size:${p.size || 66}px;max-width:920px;margin-top:16px">${p.hook}</div>
+    <div style="flex:1;display:flex;align-items:center">${p.mock}</div>
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:24px">
+      <div style="display:flex;align-items:center;gap:18px">
+        <span style="background:${ORANGE};color:${INK};font-weight:800;font-size:34px;padding:8px 22px;border-radius:12px">${p.price}</span>
+        <div><div style="font-size:26px;font-weight:800">${p.name}</div><div class="mono" style="font-size:17px;color:#9a8f82">${p.caps}</div></div>
+      </div>
+      <div class="cta" style="color:${ORANGE};font-size:26px"><span class="dot"></span>Link in bio.</div>
+    </div>
+    <div class="foot"><div class="lg">${logo(ORANGE, WHITE)}</div>
+      <div class="cta" style="color:${ORANGE}"><span class="dot"></span>growthterminal.io</div></div>
+  </div>`;
+}
+
+// Editorial product ad: bold claim + feature ticks + price, no screenshot.
+function L_prodclaim(p) {
+  return `<div class="stage" style="background:${INK};color:${WHITE}">
+    <div class="glow" style="width:760px;height:760px;background:${ORANGE};top:-200px;right:-220px"></div>
+    <div class="grain"></div>
+    <div class="eyebrow" style="color:${ORANGE}">${p.eyebrow || '◆ In the store'}</div>
+    <div style="flex:1;display:flex;flex-direction:column;justify-content:center">
+      <div class="display" style="font-size:${p.size || 100}px">${p.hook}</div>
+      ${p.sub ? `<div style="font-size:34px;line-height:1.35;opacity:.84;max-width:860px;margin-top:28px">${p.sub}</div>` : ''}
+      ${p.features ? `<div style="margin-top:34px;display:flex;flex-direction:column;gap:16px">${p.features.map(f => `<div style="display:flex;align-items:center;gap:16px;font-size:28px"><span style="color:${GOOD};font-weight:800">✓</span>${f}</div>`).join('')}</div>` : ''}
+    </div>
+    <div style="display:flex;align-items:center;gap:18px;margin-bottom:24px">
+      <span style="background:${ORANGE};color:${INK};font-weight:800;font-size:36px;padding:10px 24px;border-radius:12px">${p.price}</span>
+      <span style="font-size:30px;font-weight:800">${p.name}</span>
+      <span class="mono" style="font-size:17px;color:#9a8f82">${p.caps}</span>
+    </div>
+    <div class="foot"><div class="lg">${logo(ORANGE, WHITE)}</div>
+      <div class="cta" style="color:${ORANGE}"><span class="dot"></span>Link in bio.</div></div>
+  </div>`;
+}
+
+// Coming-soon teaser.
+function L_prodsoon(p) {
+  return `<div class="stage" style="background:${INK};color:${WHITE}">
+    <div class="glow" style="width:640px;height:640px;background:${ORANGE};opacity:.35;bottom:-200px;left:-160px"></div>
+    <div class="grain"></div>
+    <div class="eyebrow" style="color:${ORANGE}">◆ Coming soon</div>
+    <div style="flex:1;display:flex;flex-direction:column;justify-content:center">
+      <div class="display" style="font-size:${p.size || 96}px">${p.hook}</div>
+      <div style="font-size:34px;opacity:.84;max-width:860px;margin-top:28px">${p.sub}</div>
+      <div class="mono" style="margin-top:34px;font-size:22px;letter-spacing:.14em;color:${GOOD};text-transform:uppercase">▸ Next in the Growth Terminal store</div>
+    </div>
+    <div class="foot"><div class="lg">${logo(ORANGE, WHITE)}</div>
+      <div class="cta" style="color:${ORANGE}"><span class="dot"></span>Get it first. Link in bio.</div></div>
+  </div>`;
+}
+
 const RENDER = { statement: L_statement, contrast: L_contrast, stat: L_stat, vs: L_vs, carousel: L_carousel,
   card: L_card, quote: L_quote, annotated: L_annotated, funnel: L_funnel, ranked: L_ranked, trajectory: L_trajectory,
-  tweet: L_tweet, editorial: L_editorial };
+  tweet: L_tweet, editorial: L_editorial,
+  prodshot: L_prodshot, prodclaim: L_prodclaim, prodsoon: L_prodsoon };
 
 // ---------- content atoms ----------
 // The 12 places growth actually gets stuck (GT's core model) + a symptom line each.
@@ -810,6 +926,42 @@ function buildPost(seed, recent) {
   }
 }
 
+// ---------- product ad generators ----------
+function gen_product(r) {
+  const prod = pick(PRODUCTS, r);
+  const style = r() < 0.5 ? 'shot' : 'claim';
+  const hook = pick(prod.hooks, r);
+  const caption = pick(prod.captions, r);
+  const fc = pick(prod.fcs, r);
+  if (style === 'shot') {
+    return { layout: 'prodshot', hook, name: prod.name, price: prod.price, caps: prod.caps,
+      mock: productMock(), eyebrow: '◆ New in the store', size: 66,
+      caption, first_comment: fc, sig: 'prodshot:' + prod.id + ':' + stripHtml(hook).slice(0, 22) };
+  }
+  return { layout: 'prodclaim', hook, sub: prod.sub, features: prod.features, name: prod.name, price: prod.price, caps: prod.caps,
+    eyebrow: '◆ In the store', size: 100,
+    caption, first_comment: fc, sig: 'prodclaim:' + prod.id + ':' + stripHtml(hook).slice(0, 22) };
+}
+function gen_product_soon(r) {
+  const s = pick(PRODUCTS_SOON, r);
+  return { layout: 'prodsoon', hook: `Coming soon:<br>${accent(stripHtml(s.name) + '.')}`, sub: s.teaser, size: 88,
+    caption: `Coming soon to the Growth Terminal store: ${s.name}.\n\n${s.teaser}\n\nWant it first? Link in bio.`,
+    first_comment: `What would you want this one to do? Tell me below.`,
+    sig: 'prodsoon:' + stripHtml(s.name).slice(0, 24) };
+}
+// ~1 in 4 product posts teases a coming-soon product; the rest sell what's live.
+function buildProductPost(seed, recent) {
+  const r = rng((seed ^ 0x50D0C7) >>> 0);
+  for (let attempt = 0; attempt < 40; attempt++) {
+    const gen = r() < 0.25 ? gen_product_soon : gen_product;
+    const post = gen(r);
+    if (recent.includes(post.sig) && attempt < 30) continue;
+    post.hashtags = tags(r);
+    post.append_cta = '\n\n→ growthterminal.io';
+    return post;
+  }
+}
+
 // ---------- render one post to a JPEG ----------
 async function renderPost(page, post, outBase) {
   const html = `<!DOCTYPE html><html><head><meta charset="utf8"><style>${CSS}</style></head><body>${RENDER[post.layout](post)}</body></html>`;
@@ -949,7 +1101,7 @@ function pruneCreatives(prefix, exts, keep) {
 // Exported for the QA test harness (require); must come before the self-run guard.
 module.exports = {
   L_editorial, measureBgLuminance, editorialQA, prepareEditorialPhoto,
-  fetchDataUrl, EDITORIAL_BGS, QA_TEXTBOX, CSS,
+  fetchDataUrl, fileToDataUrl, listEditorialBgs, QA_TEXTBOX, CSS,
 };
 
 // ---------- main (only when run directly, not when required for tests) ----------
@@ -984,11 +1136,14 @@ if (require.main === module) (async () => {
   const recent = loadUsed();
   const now = new Date();
   const stampStr = stamp(now);
-  const REEL_RATE = parseFloat(process.env.GT_REEL_RATE || '0.4'); // ~40% of runs are Reels
+  // ~1 in 3 posts is a store/product ad (rest is brand/value content). Product ads are static.
+  const PRODUCT_RATE = parseFloat(process.env.GT_PRODUCT_RATE || '0.33');
+  const wantProduct = rng(((now.getTime() >>> 0) ^ 0x50D0C7A) >>> 0)() < PRODUCT_RATE;
+  const REEL_RATE = parseFloat(process.env.GT_REEL_RATE || '0.4'); // ~40% of the rest are Reels
   // Only attempt a Reel if ffmpeg is available, otherwise fall back to a static post (never crash the run).
   const hasFfmpeg = ffmpegAvailable();
   if (!hasFfmpeg) console.log('note: ffmpeg not found, posting a static image this run');
-  const wantReel = hasFfmpeg && rng(((now.getTime() >>> 0) ^ 0xA5A5A5A5) >>> 0)() < REEL_RATE;
+  const wantReel = !wantProduct && hasFfmpeg && rng(((now.getTime() >>> 0) ^ 0xA5A5A5A5) >>> 0)() < REEL_RATE;
   let meta;
 
   if (wantReel) {
@@ -1010,10 +1165,11 @@ if (require.main === module) (async () => {
     recent.push(post.sig);
     console.log(`generated REEL [${post.rlayout}] -> ${meta.video_file}`);
   } else {
-    const post = buildPost((now.getTime() >>> 0), recent);
+    // Product ad (~1 in 3) or brand/value post; product falls back to brand if none is fresh.
+    const post = (wantProduct ? buildProductPost((now.getTime() >>> 0), recent) : null) || buildPost((now.getTime() >>> 0), recent);
     // Editorial posts try a photographic ground; the contrast gate decides. If no photo
     // passes, we render the safe gradient editorial instead; a bad creative never ships.
-    if (post.layout === 'editorial' && EDITORIAL_BGS.length) {
+    if (post.layout === 'editorial' && listEditorialBgs().length) {
       const photoRate = parseFloat(process.env.GT_EDITORIAL_PHOTO_RATE || '0.7');
       const wantPhoto = rng(((now.getTime() >>> 0) ^ 0x7e5a11c3) >>> 0)() < photoRate;
       if (wantPhoto) {
