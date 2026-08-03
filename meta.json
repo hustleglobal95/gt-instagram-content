@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-08-03T04:04:22.958Z",
-  "media_file": "creatives/gt_reel_20260803_040422.jpg",
-  "video_file": "creatives/gt_reel_20260803_040422.mp4",
+  "generated_at": "2026-08-03T13:01:20.066Z",
+  "media_file": "creatives/gt_reel_20260803_130120.jpg",
+  "video_file": "creatives/gt_reel_20260803_130120.mp4",
   "is_reel": true,
   "layout": "reel:card",
-  "caption": "This is what a Growth Terminal diagnosis looks like, one constraint, named, priced, and verified against real revenue. Here, activation was capping the business by $60K–$110K a year.\n\nYours is one run away.\n\nRun the free 60-second diagnostic, link in bio.",
-  "hashtags": "#growthterminal #b2bsaas #growthmarketing #leadership #bootstrapping #revenueops #businessgrowth #opportunitycost #retention #accountability #marketingstrategy",
+  "caption": "This is what a Growth Terminal diagnosis looks like, one constraint, named, priced, and verified against real revenue. Here, pricing was capping the business by $120K–$300K a year.\n\nYours is one run away.\n\n→ growthterminal.io",
+  "hashtags": "#growthterminal #b2bsaas #growthmarketing #cro #productmarketing #unitmetrics #forecasting #bootstrapping #businessgrowth #marketinganalytics #datadriven",
   "first_comment": "What would you do differently if your #1 constraint came pre-priced?",
-  "alt_text": "#1 constraint: Activation",
-  "sig": "reelcard:Activation"
+  "alt_text": "#1 constraint: Pricing",
+  "sig": "reelcard:Pricing"
 }
