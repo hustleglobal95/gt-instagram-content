@@ -1,13 +1,12 @@
 {
-  "generated_at": "2026-08-03T03:42:28.290Z",
-  "media_file": "creatives/gt_auto_20260803_034228.jpg",
-  "is_reel": false,
-  "layout": "vs",
-  "editorial_bg": null,
-  "qa": null,
-  "caption": "BI tools show everything and decide nothing. Gut feel is fast but unaccountable. Spreadsheets hold the data but never rank what matters.\n\nGrowth Terminal reads what you already track and makes the call, your #1 constraint, priced, with a 90-day plan. A decision, not another dashboard.\n\n→ growthterminal.io",
-  "hashtags": "#growthterminal #b2bsaas #growthmarketing #opportunitycost #startups #revenuegrowth #marketinganalytics #leadership #cro #businessgrowth #startuptools",
-  "first_comment": "A tool that decides, not just displays. That's the whole idea.",
-  "alt_text": "Built to make a call , not more reports.",
-  "sig": "vs:Built to make a call , not more reports."
+  "generated_at": "2026-08-03T04:04:22.958Z",
+  "media_file": "creatives/gt_reel_20260803_040422.jpg",
+  "video_file": "creatives/gt_reel_20260803_040422.mp4",
+  "is_reel": true,
+  "layout": "reel:card",
+  "caption": "This is what a Growth Terminal diagnosis looks like, one constraint, named, priced, and verified against real revenue. Here, activation was capping the business by $60K–$110K a year.\n\nYours is one run away.\n\nRun the free 60-second diagnostic, link in bio.",
+  "hashtags": "#growthterminal #b2bsaas #growthmarketing #leadership #bootstrapping #revenueops #businessgrowth #opportunitycost #retention #accountability #marketingstrategy",
+  "first_comment": "What would you do differently if your #1 constraint came pre-priced?",
+  "alt_text": "#1 constraint: Activation",
+  "sig": "reelcard:Activation"
 }
