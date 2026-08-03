@@ -314,12 +314,12 @@ function L_editorial(p) {
 // render time (GitHub Actions has network), and EVERY render still runs the contrast
 // gate below, because headline length/position varies per post.
 const EDITORIAL_BGS = [
-  'https://www.trybloom.ai/img/3988a022-6047-4542-8995-65e5bc4c0282', // founder at warm desk
-  'https://www.trybloom.ai/img/2add09dc-fdf6-4ff3-b644-473e121a4d35', // hands on keyboard, screen glow
-  'https://www.trybloom.ai/img/fbf7374a-7fd8-4c9b-a36c-ad35f8042d89', // warm modern office
-  'https://www.trybloom.ai/img/ac4b6df8-1981-4789-8327-e1a21bfe8118', // glass towers, golden hour
-  'https://www.trybloom.ai/img/283a67a1-b3ca-48de-9681-7feb20c4c5f3', // tower facade, warm reflections
-  'https://www.trybloom.ai/img/7a0952de-f3a8-4bea-8443-5aa83d2a2993', // financial district skyline, dusk
+  'https://www.trybloom.ai/img/f2c06d7d-a216-4181-aca0-ae0d1281673e', // founder at desk, burnt-orange/ink
+  'https://www.trybloom.ai/img/148e8066-104e-4661-be1d-1b27758addeb', // hands on keyboard, charcoal + amber
+  'https://www.trybloom.ai/img/36d3a202-b6f0-4765-ae4b-54ad8159429a', // modern office, rich brown, moody
+  'https://www.trybloom.ai/img/d985c954-d5d0-43c8-a1b4-11e3ea694129', // glass towers, blue hour
+  'https://www.trybloom.ai/img/4acac9fd-1dd2-446e-bdcb-9a2506c62f3e', // tower facade, deep amber/charcoal
+  'https://www.trybloom.ai/img/4c2bc72a-480b-40bc-94db-ade5f8efa38f', // financial district skyline, blue dusk
 ];
 
 // The text zone (of the 1080x1350 stage) the headline + subhead occupy. We measure the
