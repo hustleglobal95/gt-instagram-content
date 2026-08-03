@@ -105,17 +105,22 @@ function L_vs(p) {
   const rows = p.them.map(t => `<div style="display:flex;gap:16px;align-items:baseline;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.12)">
     <span class="mono" style="color:#8a8178;font-size:26px;min-width:150px">${t.who}</span>
     <span style="font-size:30px;opacity:.8">${t.what}</span></div>`).join('');
-  return `<div class="stage" style="background:${INK};color:${WHITE}">
+  return `<div class="stage" style="background:${INK};color:${WHITE};justify-content:space-between">
+    <div class="glow" style="width:680px;height:680px;background:${ORANGE};top:-180px;right:-180px"></div>
     <div class="grain"></div>
-    <div class="eyebrow" style="color:${ORANGE}">${p.eyebrow}</div>
-    <div class="display" style="font-size:78px;margin:26px 0 40px">${p.hook}</div>
-    <div>${rows}</div>
-    <div style="margin-top:36px;background:${ORANGE};color:${INK};border-radius:20px;padding:30px 34px">
-      <div class="mono" style="font-size:24px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;opacity:.75">Growth Terminal</div>
-      <div style="font-size:44px;font-weight:800;letter-spacing:-.01em;margin-top:8px">${p.us}</div>
+    <div>
+      <div class="eyebrow" style="color:${ORANGE}">${p.eyebrow}</div>
+      <div class="display" style="font-size:82px;margin:26px 0 48px">${p.hook}</div>
+      <div>${rows}</div>
     </div>
-    <div class="foot" style="margin-top:44px"><div class="lg">${logo(INK, INK)}</div>
-      <div class="cta" style="color:${WHITE}"><span class="dot"></span>${p.cta || 'growthterminal.io'}</div></div>
+    <div>
+      <div style="background:#211b15;border:1px solid rgba(255,255,255,.1);border-left:6px solid ${ORANGE};border-radius:20px;padding:34px 38px">
+        <div class="mono" style="font-size:24px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:${ORANGE}">Growth Terminal</div>
+        <div style="font-size:46px;font-weight:800;letter-spacing:-.01em;margin-top:10px;color:${WHITE}">${p.us}</div>
+      </div>
+      <div class="foot" style="margin-top:40px"><div class="lg">${logo(ORANGE, WHITE)}</div>
+        <div class="cta" style="color:${ORANGE}"><span class="dot"></span>${p.cta || 'growthterminal.io'}</div></div>
+    </div>
   </div>`;
 }
 function L_carousel(p) { // rendered as a single strong cover
