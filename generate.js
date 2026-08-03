@@ -279,19 +279,123 @@ function L_tweet(p) {
 // a single subhead line, generous negative space, a tiny caption bottom-left. Warm,
 // photographic dark ground. Deliberately un-skewed and quiet (contrast to .display layouts).
 function L_editorial(p) {
-  return `<div class="stage" style="background:radial-gradient(120% 90% at 78% 12%, #3a2a18 0%, #241a10 42%, ${INK} 100%);color:${WHITE};padding:104px 96px">
-    <div class="glow" style="width:820px;height:820px;background:${ORANGE};opacity:.28;top:-260px;right:-240px"></div>
+  const photo = !!p.bgImage;
+  // Photo mode: real image ground + adaptive dark scrim (sized by the QA gate) so the
+  // headline always clears the contrast bar. Non-photo: the warm gradient ground.
+  const bg = photo
+    ? `background:#0a0806 center/cover no-repeat url('${p.bgImage}');`
+    : `background:radial-gradient(120% 90% at 78% 12%, #3a2a18 0%, #241a10 42%, ${INK} 100%);`;
+  const op = photo ? (p.scrim != null ? p.scrim : 0.4) : 0;
+  const opR = (op * 0.7).toFixed(3);
+  // Solid under the whole lower band (where the text sits), fading out above it; plus a
+  // left-side wash so the lower-left reads calm. Kept ~constant across the text box so the
+  // measured contrast holds regardless of headline length.
+  const scrim = photo ? `<div style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(to top, rgba(9,7,5,${op}) 0%, rgba(9,7,5,${op}) 58%, rgba(9,7,5,0) 82%), linear-gradient(to right, rgba(9,7,5,${opR}) 0%, rgba(9,7,5,0) 55%)"></div>` : '';
+  const tshadow = photo ? 'text-shadow:0 2px 34px rgba(0,0,0,.6),0 1px 3px rgba(0,0,0,.55);' : '';
+  return `<div class="stage" style="${bg}color:${WHITE};padding:104px 96px;overflow:hidden">
+    ${photo ? '' : `<div class="glow" style="width:820px;height:820px;background:${ORANGE};opacity:.28;top:-260px;right:-240px"></div>`}
+    ${scrim}
     <div class="grain"></div>
-    <div class="toplogo">${logo(ORANGE, WHITE)}</div>
-    <div style="flex:1;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:20px">
-      <div class="h" style="font-size:${p.size || 92}px;max-width:900px">${p.hook}</div>
-      ${p.sub ? `<div style="font-size:38px;line-height:1.32;font-weight:500;max-width:760px;opacity:.72;margin-top:32px">${p.sub}</div>` : ''}
+    <div class="toplogo" style="position:relative">${logo(ORANGE, WHITE)}</div>
+    <div style="flex:1;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:20px;position:relative">
+      <div class="h" style="font-size:${p.size || 92}px;max-width:900px;${tshadow}">${p.hook}</div>
+      ${p.sub ? `<div style="font-size:38px;line-height:1.32;font-weight:500;max-width:760px;opacity:${photo ? '.9' : '.72'};margin-top:32px;${tshadow}">${p.sub}</div>` : ''}
     </div>
-    <div style="display:flex;align-items:center;justify-content:space-between">
-      <div class="mono" style="font-size:22px;letter-spacing:.06em;color:rgba(253,252,252,.42)">${p.caps || 'Growth diagnosis · Google Sheets'}</div>
+    <div style="display:flex;align-items:center;justify-content:space-between;position:relative">
+      <div class="mono" style="font-size:22px;letter-spacing:.06em;color:rgba(253,252,252,${photo ? '.62' : '.42'})">${p.caps || 'Growth diagnosis · Google Sheets™'}</div>
       <div class="cta" style="color:${ORANGE};font-size:22px"><span class="dot" style="width:10px;height:10px"></span>growthterminal.io</div>
     </div>
   </div>`;
+}
+
+// ---------- editorial photo backgrounds + legibility QA ----------
+// Curated pool of on-brand photo grounds (warm workspace + upscale architecture).
+// ONLY add URLs that passed a look-check. The poster fetches + base64-embeds each at
+// render time (GitHub Actions has network), and EVERY render still runs the contrast
+// gate below, because headline length/position varies per post.
+const EDITORIAL_BGS = [
+  'https://www.trybloom.ai/img/3988a022-6047-4542-8995-65e5bc4c0282', // founder at warm desk
+  'https://www.trybloom.ai/img/2add09dc-fdf6-4ff3-b644-473e121a4d35', // hands on keyboard, screen glow
+  'https://www.trybloom.ai/img/fbf7374a-7fd8-4c9b-a36c-ad35f8042d89', // warm modern office
+  'https://www.trybloom.ai/img/ac4b6df8-1981-4789-8327-e1a21bfe8118', // glass towers, golden hour
+  'https://www.trybloom.ai/img/283a67a1-b3ca-48de-9681-7feb20c4c5f3', // tower facade, warm reflections
+  'https://www.trybloom.ai/img/7a0952de-f3a8-4bea-8443-5aa83d2a2993', // financial district skyline, dusk
+];
+
+// The text zone (of the 1080x1350 stage) the headline + subhead occupy. We measure the
+// background luminance here and size the scrim to guarantee legibility over it.
+const QA_TEXTBOX = { x: 80, y: 640, w: 920, h: 560 };
+const QA_TARGET_LUM = 0.16;   // scrimmed bg luminance we aim to sit at/below (white-on-bg ≈ 5:1)
+const QA_MIN_CONTRAST = 4.5;  // WCAG AA (large text only needs 3:1; we hold 4.5 for margin)
+const QA_MAX_SCRIM = 0.78;    // beyond this the photo is nuked to near-black -> reject, don't post
+const QA_BASE_SCRIM = 0.2;    // floor scrim even on dark grounds (depth + text-shadow anchor)
+
+// Node fetch -> base64 data URL (so the in-page canvas can read pixels untainted).
+async function fetchDataUrl(url) {
+  const res = await fetch(url);
+  if (!res.ok) throw new Error(`bg fetch ${res.status}`);
+  const buf = Buffer.from(await res.arrayBuffer());
+  const ct = res.headers.get('content-type') || 'image/jpeg';
+  return `data:${ct};base64,` + buf.toString('base64');
+}
+
+// Sample the text-box luminance of a background (cover-fit onto the stage), in-page via
+// canvas so there's no native image dependency and no CORS taint (data URL = same-origin).
+async function measureBgLuminance(page, bgDataUrl, box) {
+  return await page.evaluate(async ({ bg, box }) => {
+    const img = new Image(); img.src = bg; await img.decode();
+    const W = 1080, H = 1350;
+    const c = document.createElement('canvas'); c.width = W; c.height = H;
+    const ctx = c.getContext('2d');
+    const ir = img.width / img.height, sr = W / H;        // cover-fit (match background-size:cover)
+    let dw, dh, dx, dy;
+    if (ir > sr) { dh = H; dw = H * ir; dx = (W - dw) / 2; dy = 0; }
+    else { dw = W; dh = W / ir; dx = 0; dy = (H - dh) / 2; }
+    ctx.drawImage(img, dx, dy, dw, dh);
+    const d = ctx.getImageData(box.x, box.y, box.w, box.h).data;
+    const lin = v => { v /= 255; return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4); };
+    const lums = [];
+    for (let i = 0; i < d.length; i += 12) {              // step ~3px for speed
+      lums.push(0.2126 * lin(d[i]) + 0.7152 * lin(d[i + 1]) + 0.0722 * lin(d[i + 2]));
+    }
+    lums.sort((a, b) => a - b);
+    const q = f => lums[Math.min(lums.length - 1, Math.floor(f * lums.length))];
+    return { mean: lums.reduce((a, b) => a + b, 0) / lums.length, p50: q(0.5), p95: q(0.95), max: lums[lums.length - 1] };
+  }, { bg: bgDataUrl, box });
+}
+
+// Given the worst-case (p95) background luminance under the text, size the scrim and decide
+// whether the creative may post. White text has luminance ~1.0; WCAG contrast = 1.05/(L+0.05).
+function editorialQA(stats) {
+  const p95 = stats.p95;
+  // opacity needed to pull the brightest text-zone pixels down to the target luminance
+  const need = p95 <= QA_TARGET_LUM ? QA_BASE_SCRIM : Math.max(QA_BASE_SCRIM, 1 - QA_TARGET_LUM / p95);
+  const scrim = Math.min(0.96, need);
+  const effLum = (1 - scrim) * p95;                       // scrim colour is ~black, so residual ≈ (1-op)*bg
+  const contrast = 1.05 / (effLum + 0.05);
+  const pass = need <= QA_MAX_SCRIM && contrast >= QA_MIN_CONTRAST;
+  return {
+    pass, scrim: +scrim.toFixed(3), contrast: +contrast.toFixed(2),
+    effLum: +effLum.toFixed(3), p95: +p95.toFixed(3),
+    reason: pass ? 'ok' : (need > QA_MAX_SCRIM ? 'text zone too bright/busy' : 'contrast below bar'),
+  };
+}
+
+// Pick a background that passes the gate; set post.bgImage + post.scrim. Returns false if
+// none pass (caller falls back to the gradient editorial; a bad photo never ships).
+async function prepareEditorialPhoto(page, post, r, pool) {
+  const urls = shuffle((pool || EDITORIAL_BGS).slice(), r);
+  await page.setContent('<!DOCTYPE html><html><body></body></html>', { waitUntil: 'domcontentloaded' });
+  for (const url of urls) {
+    let dataUrl;
+    try { dataUrl = url.startsWith('data:') ? url : await fetchDataUrl(url); }
+    catch (e) { console.log(`editorial bg fetch failed (${url.slice(-12)}): ${e.message}`); continue; }
+    const stats = await measureBgLuminance(page, dataUrl, QA_TEXTBOX);
+    const qa = editorialQA(stats);
+    console.log(`editorial QA [${url.slice(-14)}] p95=${qa.p95} scrim=${qa.scrim} contrast=${qa.contrast}:1 -> ${qa.pass ? 'PASS' : 'REJECT (' + qa.reason + ')'}`);
+    if (qa.pass) { post.bgImage = dataUrl; post.scrim = qa.scrim; post.qa = qa; post.bg_url = url; return true; }
+  }
+  return false;
 }
 
 const RENDER = { statement: L_statement, contrast: L_contrast, stat: L_stat, vs: L_vs, carousel: L_carousel,
@@ -328,7 +432,7 @@ function tags(r) {
 const EYEBROWS = ['◆ Growth Terminal', '◆ Diagnosis, not dashboard', '◆ The one constraint',
   '◆ Priced, not guessed', '◆ Verify the call', '◆ Run the diagnostic'];
 const CTA_BIO = ['Free 60-second diagnostic, link in bio.', 'Run the free diagnostic. Link in bio.',
-  'Diagnose your #1 constraint free. Link in bio.', 'Try it free in Google Sheets. Link in bio.',
+  'Diagnose your #1 constraint free. Link in bio.', 'Try it free in Google Sheets™. Link in bio.',
   '→ growthterminal.io'];
 
 // ---------- generators (each returns a fully-formed post object) ----------
@@ -341,7 +445,7 @@ function gen_statement(r) {
       cap: `You don't get a dashboard. You get a verdict.\n\nDashboards show you 40 numbers and let you pick the story. Growth Terminal names the ONE constraint holding your growth back, tells you the dollar range it's worth, then verifies the call against real revenue.\n\nClarity first. No 40-tab spreadsheet.`,
       fc: `What's the one constraint you *think* is holding your growth back right now? 👇` },
     { hook: `We tell you the ${accent('one')} thing holding your growth back, and what it's worth.`,
-      sub: `In Google Sheets. In about 60 seconds.`, size: 100,
+      sub: `In Google Sheets™. In about 60 seconds.`, size: 100,
       cap: `Most "growth advice" gives you ten things to fix. That's the problem.\n\nGrowth Terminal names the single biggest constraint on your revenue right now, and quantifies what fixing it is worth. One move, ranked above everything else, with a number attached.`,
       fc: `Diagnosis before treatment, always. Where are you stuck?` },
     { hook: `Verified.<br>Not ${accent('vibes')}.`,
@@ -362,7 +466,7 @@ function gen_statement(r) {
       fc: `The scariest line item is the one that never shows up on the P&L.` },
     { hook: `Point it at the sheet you ${accent('already have')} open.`,
       sub: `No new platform. No export. The add-on reads the report you already run.`, size: 104,
-      cap: `No new platform. No migration. No export.\n\nGrowth Terminal is a Google Sheets add-on. Point it at the report you already export, and it ranks the twelve places growth gets stuck, tells you which one is yours, and prices it. Your data never leaves the sheet.`,
+      cap: `No new platform. No migration. No export.\n\nGrowth Terminal is a Google Sheets™ add-on. Point it at the report you already export, and it ranks the twelve places growth gets stuck, tells you which one is yours, and prices it. Your data never leaves the sheet.`,
       fc: `It runs where your data already lives. Nothing to migrate.` },
     { hook: `Stop guessing which lever to ${accent('pull')}.`,
       sub: `You already have the data. You're missing the diagnosis.`, size: 112,
@@ -392,7 +496,7 @@ function gen_contrast(r) {
     { lead: `Stop guessing which lever to pull.`, big: `DIAGNOSE IT<br>IN ${accent('60 SECONDS')}.`, size: 116,
       sub: `Add the Growth Terminal add-on to the sheet you already have open.`,
       cap: `Stop guessing which lever to pull.\n\nGrowth Terminal reads the report you already export, ranks the twelve places growth gets stuck, and tells you which one is yours, with the dollar range attached. No new platform. It runs where your data already lives.`,
-      fc: `It's a Google Sheets add-on. Your data never leaves the sheet.` },
+      fc: `It's a Google Sheets™ add-on. Your data never leaves the sheet.` },
     { lead: `More dashboards won't save you.`, big: `YOU DON'T NEED<br>MORE ${accent('DATA')}.<br>YOU NEED A CALL.`, size: 108,
       sub: `A verdict you can act on beats another chart you have to interpret.`,
       cap: `You don't need more data. You need a call.\n\nMost teams are drowning in dashboards and starving for a decision. Growth Terminal reads the data you already have and makes the call: here's your #1 constraint, here's what it's worth, here's the plan. A verdict beats another chart.`,
@@ -423,7 +527,7 @@ function gen_stat(r) {
       fc: `Every constraint we surface comes with a dollar range. Decisions get easier.` },
     { stat: `60 sec`, label: `From spreadsheet to diagnosis.`, size: 220,
       sub: `Add to Sheets → understand → diagnose → forecast → verify.`,
-      cap: `60 seconds from spreadsheet to diagnosis.\n\nNo onboarding call. No data migration. Add the add-on to Google Sheets, point it at the report you already have, and get your #1 growth constraint ranked and priced before your coffee's cold.`,
+      cap: `60 seconds from spreadsheet to diagnosis.\n\nNo onboarding call. No data migration. Add the add-on to Google Sheets™, point it at the report you already have, and get your #1 growth constraint ranked and priced before your coffee's cold.`,
       fc: `Genuinely ~60 seconds. It reads the sheet you already have open.` },
     { stat: `12`, label: `The number of places growth actually gets stuck.`, size: 260,
       sub: `Acquisition, activation, retention, conversion, pricing… we rank all twelve and name yours.`,
@@ -642,7 +746,7 @@ function gen_editorial(r) {
   const bank = [
     { hook: `See where your growth is <span class="accent">actually</span> stuck.`,
       sub: `One constraint, named and priced, from the report you already run.`, size: 96,
-      caps: `Growth diagnosis · Google Sheets`,
+      caps: `Growth diagnosis · Google Sheets™`,
       cap: `See where your growth is actually stuck.\n\nNot ten things to fix. The one constraint capping your revenue right now, with a dollar range on it. Growth Terminal reads the report you already run and makes the call.`,
       fc: `If you had to name your #1 constraint in one word, what would it be? 👇` },
     { hook: `Know what's working <span class="accent">before</span> you scale it.`,
@@ -781,7 +885,7 @@ function reel_countup(r) {
       caption: `Growth only gets stuck in twelve places. The hard part is knowing which one is YOUR #1 right now, with a dollar range attached. That's the whole job Growth Terminal does.`,
       fc: `Which of the 12 is biting hardest this quarter?`, sig: 'reelnum:12' },
     { big: 60, prefix: '', suffix: ' sec', eyebrow: 'Install to insight', label: 'from spreadsheet to diagnosis. No onboarding, no migration.',
-      caption: `60 seconds from spreadsheet to diagnosis. Add the add-on to Google Sheets, point it at the report you already have, and get your #1 constraint ranked and priced before your coffee's cold.`,
+      caption: `60 seconds from spreadsheet to diagnosis. Add the add-on to Google Sheets™, point it at the report you already have, and get your #1 constraint ranked and priced before your coffee's cold.`,
       fc: `Genuinely ~60 seconds. It reads the sheet you already have open.`, sig: 'reelnum:60' },
     { big: 140, prefix: '$', suffix: 'K', eyebrow: 'What it’s worth', label: '/yr, the value of one constraint you couldn’t see, finally priced.',
       caption: `Every diagnosis ends with a dollar range, not a vibe. A real number on a real constraint, so you decide with a figure instead of a hunch.`,
@@ -837,8 +941,14 @@ function pruneCreatives(prefix, exts, keep) {
   } catch {}
 }
 
-// ---------- main ----------
-(async () => {
+// Exported for the QA test harness (require); must come before the self-run guard.
+module.exports = {
+  L_editorial, measureBgLuminance, editorialQA, prepareEditorialPhoto,
+  fetchDataUrl, EDITORIAL_BGS, QA_TEXTBOX, CSS,
+};
+
+// ---------- main (only when run directly, not when required for tests) ----------
+if (require.main === module) (async () => {
   const args = process.argv.slice(2);
   const previewIdx = args.indexOf('--preview');
   const previewN = previewIdx >= 0 ? parseInt(args[previewIdx + 1] || '6', 10) : 0;
@@ -896,6 +1006,16 @@ function pruneCreatives(prefix, exts, keep) {
     console.log(`generated REEL [${post.rlayout}] -> ${meta.video_file}`);
   } else {
     const post = buildPost((now.getTime() >>> 0), recent);
+    // Editorial posts try a photographic ground; the contrast gate decides. If no photo
+    // passes, we render the safe gradient editorial instead; a bad creative never ships.
+    if (post.layout === 'editorial' && EDITORIAL_BGS.length) {
+      const photoRate = parseFloat(process.env.GT_EDITORIAL_PHOTO_RATE || '0.7');
+      const wantPhoto = rng(((now.getTime() >>> 0) ^ 0x7e5a11c3) >>> 0)() < photoRate;
+      if (wantPhoto) {
+        const ok = await prepareEditorialPhoto(page, post, rng(((now.getTime() >>> 0) ^ 0x1234abcd) >>> 0));
+        console.log(ok ? `editorial: photo passed QA (scrim ${post.scrim}, contrast ${post.qa.contrast}:1)` : 'editorial: no background passed QA -> gradient fallback');
+      }
+    }
     const fname = `gt_auto_${stampStr}.jpg`;
     const base = path.join(__dirname, 'creatives', fname.replace('.jpg', ''));
     await renderPost(page, post, base);
@@ -907,11 +1027,13 @@ function pruneCreatives(prefix, exts, keep) {
       media_file: 'creatives/' + fname,
       is_reel: false,
       layout: post.layout,
+      editorial_bg: post.bg_url || null,          // which photo (null = gradient fallback)
+      qa: post.qa || null,                        // contrast audit trail for the dashboard
       caption, hashtags: post.hashtags, first_comment: post.first_comment || '',
       alt_text: stripHtml(post.hook || post.big || post.stat || post.label), sig: post.sig,
     };
     recent.push(post.sig);
-    console.log(`generated [${post.layout}] -> ${meta.media_file}`);
+    console.log(`generated [${post.layout}${post.bgImage ? ':photo' : ''}] -> ${meta.media_file}`);
   }
   fs.writeFileSync(path.join(__dirname, 'meta.json'), JSON.stringify(meta, null, 2));
   saveUsed(recent);
