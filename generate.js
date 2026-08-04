@@ -325,15 +325,53 @@ function listEditorialBgs() {
       .map(f => path.join(BG_DIR, f));
   } catch { return []; }
 }
-// Feature-ad people photos live in ./people (AI-generated portraits, black ground).
-// Drop images in to add faces; the feature layout only fires when this folder is non-empty.
+// Feature-ad people photos. Primary home is a ./people folder, but if the images are
+// committed at the repo root instead (GitHub's web UI makes folders fiddly), we also
+// pick up any root file named like a person shot: gt_face_*, gt_scene_*, gt_person_*,
+// person_* (image extensions only, so logos/backgrounds/creatives are never matched).
 const PEOPLE_DIR = path.join(__dirname, 'people');
+const IMG_RE = /\.(jpe?g|png|webp)$/i;
+const PERSON_NAME_RE = /^(gt_)?(face|scene|person)[_-].*\.(jpe?g|png|webp)$/i;
 function listPeople() {
+  const out = [];
   try {
-    return fs.readdirSync(PEOPLE_DIR)
-      .filter(f => /\.(jpe?g|png|webp)$/i.test(f))
-      .map(f => path.join(PEOPLE_DIR, f));
-  } catch { return []; }
+    for (const f of fs.readdirSync(PEOPLE_DIR)) {
+      if (IMG_RE.test(f)) out.push(path.join(PEOPLE_DIR, f));
+    }
+  } catch { /* no people/ folder, fall through to root scan */ }
+  try {
+    for (const f of fs.readdirSync(__dirname)) {
+      if (PERSON_NAME_RE.test(f)) out.push(path.join(__dirname, f));
+    }
+  } catch { /* ignore */ }
+  return out;
+}
+// Read pixel dimensions from a PNG or JPEG header (no image library needed), so the feature
+// layout can pick "scene" (wide, environmental) vs "portrait" (square/tall headshot) framing.
+function imageSize(fp) {
+  try {
+    const b = fs.readFileSync(fp);
+    if (b.length > 24 && b[0] === 0x89 && b[1] === 0x50) { // PNG
+      return { w: b.readUInt32BE(16), h: b.readUInt32BE(20) };
+    }
+    if (b[0] === 0xFF && b[1] === 0xD8) { // JPEG: scan for a start-of-frame marker
+      let i = 2;
+      while (i < b.length - 8) {
+        if (b[i] !== 0xFF) { i++; continue; }
+        const m = b[i + 1];
+        if (m >= 0xC0 && m <= 0xCF && m !== 0xC4 && m !== 0xC8 && m !== 0xCC) {
+          return { h: b.readUInt16BE(i + 5), w: b.readUInt16BE(i + 7) };
+        }
+        i += 2 + b.readUInt16BE(i + 2);
+      }
+    }
+  } catch { /* fall through */ }
+  return null;
+}
+// Wide images read as environmental scenes; square/tall as studio portraits.
+function personMode(fp) {
+  const s = imageSize(fp);
+  return (s && s.w / s.h >= 1.3) ? 'scene' : 'portrait';
 }
 // Local file -> base64 data URL (so the in-page canvas can read pixels untainted).
 function fileToDataUrl(fp) {
@@ -528,34 +566,48 @@ function L_prodsoon(p) {
   </div>`;
 }
 
-// Feature ad: an environmental "operator at work" photo (AI-generated, dark interior) full-
-// bleed as the ground, with the pitch (headline + Diagnose/Forecast/Plan/Verify + CTA) in a
-// LEFT column over the dark side of the room. The subject sits right and is always visible;
-// a left-to-right ink scrim plus top/bottom anchors guarantee the copy stays legible over any
-// shot. Typographic steps, no icon set.
+// Feature ad: the pitch (headline + Diagnose/Forecast/Plan/Verify + CTA) in a LEFT column,
+// with the AI-person photo on the right. The photo treatment ADAPTS to the shot type:
+//   - "scene"    (wide environmental "operator at work" shots): full-bleed with a left ink
+//                 scrim, subject sits right in the room.
+//   - "portrait" (square/vertical studio headshots): a bright, vignetted right-hand panel so
+//                 the face is always clearly visible.
+// The shot type is decided by aspect ratio in buildFeaturePost (post.personMode). Copy is
+// identical for both. Typographic steps, no icon set.
 function L_feature(p) {
   const img = p.personImage || '';
-  const bg = img
-    ? `background-color:#0a0806;background-image:url('${img}');background-size:cover;background-position:70% 42%;background-repeat:no-repeat;`
-    : `background:radial-gradient(120% 90% at 80% 20%, #2a1e12 0%, ${INK} 62%);`;
-  // Text-column scrim (left), plus soft top and bottom anchors for the logo/URL and the CTA row.
-  const scrim = `<div style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(to right, ${INK} 0%, ${INK} 20%, rgba(23,19,15,.88) 40%, rgba(23,19,15,.48) 58%, rgba(23,19,15,0) 76%), linear-gradient(to top, rgba(10,8,6,.86) 0%, rgba(10,8,6,0) 24%), linear-gradient(to bottom, rgba(10,8,6,.62) 0%, rgba(10,8,6,0) 15%)"></div>`;
+  const scene = p.personMode === 'scene';
   const ts = 'text-shadow:0 2px 22px rgba(0,0,0,.72),0 1px 3px rgba(0,0,0,.6);';
+  const PW = 500; // portrait panel width
+  let photo;
+  if (!img) {
+    photo = `<div style="position:absolute;inset:0;background:radial-gradient(120% 90% at 80% 20%, #2a1e12 0%, ${INK} 62%)"></div>`;
+  } else if (scene) {
+    photo = `<div style="position:absolute;inset:0;background-color:#0a0806;background-image:url('${img}');background-size:cover;background-position:70% 42%;background-repeat:no-repeat"></div>
+      <div style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(to right, ${INK} 0%, ${INK} 20%, rgba(23,19,15,.88) 40%, rgba(23,19,15,.48) 58%, rgba(23,19,15,0) 76%), linear-gradient(to top, rgba(10,8,6,.86) 0%, rgba(10,8,6,0) 24%), linear-gradient(to bottom, rgba(10,8,6,.62) 0%, rgba(10,8,6,0) 15%)"></div>`;
+  } else {
+    photo = `<div style="position:absolute;top:0;right:0;width:${PW}px;height:1350px;background-color:#0a0806;background-image:url('${img}');background-size:cover;background-position:50% 20%;background-repeat:no-repeat;filter:brightness(1.16) contrast(1.05) saturate(1.06)"></div>
+      <div style="position:absolute;top:0;right:0;width:${PW}px;height:1350px;pointer-events:none;background:radial-gradient(74% 56% at 48% 33%, transparent 46%, rgba(10,8,6,.92) 100%)"></div>
+      <div style="position:absolute;top:0;left:${1080 - PW - 40}px;width:250px;height:1350px;pointer-events:none;background:linear-gradient(to right, ${INK} 0%, rgba(23,19,15,.55) 48%, rgba(23,19,15,0) 100%)"></div>
+      <div style="position:absolute;bottom:0;left:0;right:0;height:230px;pointer-events:none;background:linear-gradient(to top, rgba(10,8,6,.72), rgba(10,8,6,0))"></div>
+      <div style="position:absolute;top:0;right:0;width:${PW}px;height:220px;pointer-events:none;background:linear-gradient(to bottom, rgba(10,8,6,.82), rgba(10,8,6,0))"></div>`;
+  }
+  const colMax = scene ? 560 : 490;
   const steps = (p.steps || []).map(s => `
     <div style="display:flex;gap:18px;align-items:flex-start;margin-top:22px">
       <div class="mono" style="font-size:22px;font-weight:700;color:${ORANGE};letter-spacing:.08em;min-width:34px;padding-top:5px;${ts}">${s.n}</div>
       <div><div class="mono" style="font-size:24px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:${ORANGE};${ts}">${s.label}</div>
         <div style="font-size:29px;font-weight:600;color:${WHITE};opacity:.94;margin-top:3px;line-height:1.2;${ts}">${s.desc}</div></div>
     </div>`).join('');
-  return `<div class="stage" style="${bg}color:${WHITE};padding:84px 80px;overflow:hidden">
-    ${scrim}<div class="grain"></div>
+  return `<div class="stage" style="background:${INK};color:${WHITE};padding:84px 80px;overflow:hidden">
+    ${photo}<div class="grain"></div>
     <div style="position:relative;display:flex;align-items:center;justify-content:space-between">
       <div class="toplogo">${logo(ORANGE, WHITE)}</div>
       <div class="cta" style="color:${ORANGE};font-size:22px;${ts}"><span class="dot" style="width:10px;height:10px"></span>growthterminal.io</div>
     </div>
-    <div style="position:relative;flex:1;display:flex;flex-direction:column;justify-content:center;max-width:560px">
+    <div style="position:relative;flex:1;display:flex;flex-direction:column;justify-content:center;max-width:${colMax}px">
       <div class="h" style="font-size:${p.size || 74}px;${ts}">${p.hook}</div>
-      ${p.sub ? `<div style="font-size:31px;line-height:1.32;font-weight:500;opacity:.92;margin-top:22px;max-width:500px;${ts}">${p.sub}</div>` : ''}
+      ${p.sub ? `<div style="font-size:31px;line-height:1.32;font-weight:500;opacity:.92;margin-top:22px;max-width:${colMax - 60}px;${ts}">${p.sub}</div>` : ''}
       <div style="margin-top:14px">${steps}</div>
     </div>
     <div style="position:relative;display:flex;align-items:center;justify-content:space-between;gap:20px">
@@ -1022,6 +1074,7 @@ function buildFeaturePost(seed, recent) {
     post.person_file = path.basename(pf);
     post.sig = post.sig + ':' + post.person_file;
     if (recent.includes(post.sig) && attempt < 30) continue;
+    post.personMode = personMode(pf);          // scene (wide) or portrait (headshot)
     post.personImage = fileToDataUrl(pf);
     post.hashtags = tags(r);
     post.cta = pick(CTA_BIO, r);
