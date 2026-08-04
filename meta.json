@@ -1,13 +1,12 @@
 {
-  "generated_at": "2026-08-04T17:01:43.518Z",
-  "media_file": "creatives/gt_auto_20260804_170143.jpg",
-  "is_reel": false,
-  "layout": "prodshot",
-  "editorial_bg": null,
-  "qa": null,
-  "caption": "Your funnel has one step leaking more than the rest. The Funnel & Conversion Tracker finds it, tells you what fixing it is worth in dollars, and lets you simulate the upside before you spend a cent.\n\n8 tabs, built in Google Sheets™. $79, instant download. Link in bio.\n\n→ growthterminal.io",
-  "hashtags": "#growthterminal #b2bsaas #growthmarketing #growthstrategy #cro #productmarketing #foundertips #retention #bootstrapping #revenueops #kpis",
-  "first_comment": "Which funnel step do you think is your weakest right now?",
-  "alt_text": "Find the one step your funnel is leaking.",
-  "sig": "prodshot:funnel:Find the one step your"
+  "generated_at": "2026-08-04T21:01:22.968Z",
+  "media_file": "creatives/gt_reel_20260804_210122.jpg",
+  "video_file": "creatives/gt_reel_20260804_210122.mp4",
+  "is_reel": true,
+  "layout": "reel:card",
+  "caption": "This is what a Growth Terminal diagnosis looks like, one constraint, named, priced, and verified against real revenue. Here, retention was capping the business by $88K–$140K a year.\n\nYours is one run away.\n\n→ growthterminal.io",
+  "hashtags": "#growthterminal #b2bsaas #growthmarketing #accountability #growthstrategy #founders #revenueops #startupgrowth #scaleup #forecasting #bootstrapping",
+  "first_comment": "What would you do differently if your #1 constraint came pre-priced?",
+  "alt_text": "#1 constraint: Retention",
+  "sig": "reelcard:Retention"
 }
