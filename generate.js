@@ -325,6 +325,16 @@ function listEditorialBgs() {
       .map(f => path.join(BG_DIR, f));
   } catch { return []; }
 }
+// Feature-ad people photos live in ./people (AI-generated portraits, black ground).
+// Drop images in to add faces; the feature layout only fires when this folder is non-empty.
+const PEOPLE_DIR = path.join(__dirname, 'people');
+function listPeople() {
+  try {
+    return fs.readdirSync(PEOPLE_DIR)
+      .filter(f => /\.(jpe?g|png|webp)$/i.test(f))
+      .map(f => path.join(PEOPLE_DIR, f));
+  } catch { return []; }
+}
 // Local file -> base64 data URL (so the in-page canvas can read pixels untainted).
 function fileToDataUrl(fp) {
   const buf = fs.readFileSync(fp);
@@ -518,9 +528,47 @@ function L_prodsoon(p) {
   </div>`;
 }
 
+// Feature ad: an environmental "operator at work" photo (AI-generated, dark interior) full-
+// bleed as the ground, with the pitch (headline + Diagnose/Forecast/Plan/Verify + CTA) in a
+// LEFT column over the dark side of the room. The subject sits right and is always visible;
+// a left-to-right ink scrim plus top/bottom anchors guarantee the copy stays legible over any
+// shot. Typographic steps, no icon set.
+function L_feature(p) {
+  const img = p.personImage || '';
+  const bg = img
+    ? `background-color:#0a0806;background-image:url('${img}');background-size:cover;background-position:70% 42%;background-repeat:no-repeat;`
+    : `background:radial-gradient(120% 90% at 80% 20%, #2a1e12 0%, ${INK} 62%);`;
+  // Text-column scrim (left), plus soft top and bottom anchors for the logo/URL and the CTA row.
+  const scrim = `<div style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(to right, ${INK} 0%, ${INK} 20%, rgba(23,19,15,.88) 40%, rgba(23,19,15,.48) 58%, rgba(23,19,15,0) 76%), linear-gradient(to top, rgba(10,8,6,.86) 0%, rgba(10,8,6,0) 24%), linear-gradient(to bottom, rgba(10,8,6,.62) 0%, rgba(10,8,6,0) 15%)"></div>`;
+  const ts = 'text-shadow:0 2px 22px rgba(0,0,0,.72),0 1px 3px rgba(0,0,0,.6);';
+  const steps = (p.steps || []).map(s => `
+    <div style="display:flex;gap:18px;align-items:flex-start;margin-top:22px">
+      <div class="mono" style="font-size:22px;font-weight:700;color:${ORANGE};letter-spacing:.08em;min-width:34px;padding-top:5px;${ts}">${s.n}</div>
+      <div><div class="mono" style="font-size:24px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:${ORANGE};${ts}">${s.label}</div>
+        <div style="font-size:29px;font-weight:600;color:${WHITE};opacity:.94;margin-top:3px;line-height:1.2;${ts}">${s.desc}</div></div>
+    </div>`).join('');
+  return `<div class="stage" style="${bg}color:${WHITE};padding:84px 80px;overflow:hidden">
+    ${scrim}<div class="grain"></div>
+    <div style="position:relative;display:flex;align-items:center;justify-content:space-between">
+      <div class="toplogo">${logo(ORANGE, WHITE)}</div>
+      <div class="cta" style="color:${ORANGE};font-size:22px;${ts}"><span class="dot" style="width:10px;height:10px"></span>growthterminal.io</div>
+    </div>
+    <div style="position:relative;flex:1;display:flex;flex-direction:column;justify-content:center;max-width:560px">
+      <div class="h" style="font-size:${p.size || 74}px;${ts}">${p.hook}</div>
+      ${p.sub ? `<div style="font-size:31px;line-height:1.32;font-weight:500;opacity:.92;margin-top:22px;max-width:500px;${ts}">${p.sub}</div>` : ''}
+      <div style="margin-top:14px">${steps}</div>
+    </div>
+    <div style="position:relative;display:flex;align-items:center;justify-content:space-between;gap:20px">
+      <div style="display:inline-flex;align-items:center;gap:16px;background:${ORANGE};color:${WHITE};padding:22px 34px;border-radius:14px;font-weight:800;font-size:30px;box-shadow:0 14px 32px -12px rgba(252,88,2,.6)">
+        <span style="display:inline-flex;width:34px;height:34px;border-radius:8px;background:rgba(255,255,255,.18);align-items:center;justify-content:center;font-size:22px">&#8250;</span>${p.button || 'Run your analysis'}</div>
+      <div style="font-size:26px;font-weight:700;${ts}">Better decisions. <span style="color:${ORANGE}">Faster growth.</span></div>
+    </div>
+  </div>`;
+}
+
 const RENDER = { statement: L_statement, contrast: L_contrast, stat: L_stat, vs: L_vs, carousel: L_carousel,
   card: L_card, quote: L_quote, annotated: L_annotated, funnel: L_funnel, ranked: L_ranked, trajectory: L_trajectory,
-  tweet: L_tweet, editorial: L_editorial,
+  tweet: L_tweet, editorial: L_editorial, feature: L_feature,
   prodshot: L_prodshot, prodclaim: L_prodclaim, prodsoon: L_prodsoon };
 
 // ---------- content atoms ----------
@@ -896,6 +944,42 @@ function gen_editorial(r) {
     caption: b.cap, first_comment: b.fc, sig: 'edit:' + stripHtml(b.hook).slice(0, 40) };
 }
 
+// Feature ad generator: the full explainer creative laid over an AI-person portrait.
+const FEATURE_STEPS = [
+  { n: '01', label: 'Diagnose', desc: 'Pinpoint your #1 growth constraint' },
+  { n: '02', label: 'Forecast', desc: 'See the revenue impact, priced' },
+  { n: '03', label: 'Plan', desc: 'Get a 90-day plan built to execute' },
+  { n: '04', label: 'Verify', desc: 'Track progress. Prove results.' },
+];
+function gen_feature(r) {
+  const bank = [
+    { hook: `Find the one constraint ${accent('holding your growth back.')}`, size: 80,
+      sub: `AI-powered analysis. Clear answers. A 90-day plan that drives results.`,
+      cap: `Find the one constraint holding your growth back.\n\nGrowth Terminal reads the report you already run, names the single constraint capping revenue, prices it, and hands you a 90-day plan. Diagnosis, not another dashboard.`,
+      fc: `If you had to name your #1 constraint in one word, what would it be? 👇` },
+    { hook: `Stop guessing where your ${accent('growth is stuck.')}`, size: 84,
+      sub: `Name the one constraint, price the upside, and get the plan to fix it.`,
+      cap: `Stop guessing where your growth is stuck.\n\nMost teams pour budget into the part of the funnel that already works. Growth Terminal ranks the twelve places growth gets stuck, names yours, and puts a dollar range on the fix.`,
+      fc: `Which of the 12 constraints do you think is biting hardest right now?` },
+    { hook: `The one fix worth ${accent('more than the other ten.')}`, size: 82,
+      sub: `Diagnose the real bottleneck, forecast the upside, execute in 90 days.`,
+      cap: `The one move worth more than the other ten.\n\nPerfect execution on the wrong constraint still loses the quarter. Growth Terminal finds the one that is actually capping you, prices it, and gives you the plan.`,
+      fc: `What lever are you pulling right now, and are you sure it is the stuck one?` },
+    { hook: `Your #1 growth constraint, ${accent('named and priced.')}`, size: 82,
+      sub: `From the report you already run. A verdict, not another dashboard.`,
+      cap: `Your #1 growth constraint, named and priced, in about a minute.\n\nPoint the add-on at the spreadsheet you already have open. It ranks where growth is stuck, tells you which one is yours, and attaches a dollar range.`,
+      fc: `It runs where your data already lives. Nothing to migrate.` },
+    { hook: `Know what's capping revenue ${accent('before you scale.')}`, size: 82,
+      sub: `AI-powered diagnosis, a dollar range, and a plan you can start Monday.`,
+      cap: `Know what is capping revenue before you scale it.\n\nGrowth Terminal diagnoses the constraint, forecasts the upside as a range, and grades the call against real revenue. Verified, not vibes.`,
+      fc: `How many of last quarter's "wins" did you actually verify?` },
+  ];
+  const b = pick(bank, r);
+  return { layout: 'feature', hook: b.hook, sub: b.sub, size: b.size, steps: FEATURE_STEPS,
+    button: 'Run your analysis', caps: b.caps || 'Growth diagnosis',
+    caption: b.cap, first_comment: b.fc, sig: 'feat:' + stripHtml(b.hook).slice(0, 40) };
+}
+
 // Weighted mix of generators. Statement/constraint are the workhorses; the rest add variety.
 const GENERATORS = [
   gen_statement, gen_statement, gen_constraint, gen_constraint,
@@ -918,6 +1002,27 @@ function buildPost(seed, recent) {
     const gen = pick(GENERATORS, r);
     const post = gen(r);
     if (recent.includes(post.sig) && attempt < 30) continue; // try for something fresh
+    post.hashtags = tags(r);
+    post.cta = pick(CTA_BIO, r);
+    post.append_cta = pick(['\n\n→ growthterminal.io', '\n\nRun the free 60-second diagnostic, link in bio.',
+      '\n\nDiagnose your #1 constraint free. Link in bio.'], r);
+    return post;
+  }
+}
+
+// Build a feature ad: gen_feature + an AI-person photo from ./people. Returns null if the
+// people folder is empty, so callers fall back to a normal post (never crash the run).
+function buildFeaturePost(seed, recent) {
+  const people = listPeople();
+  if (!people.length) return null;
+  const r = rng(seed);
+  for (let attempt = 0; attempt < 40; attempt++) {
+    const post = gen_feature(r);
+    const pf = pick(people, r);
+    post.person_file = path.basename(pf);
+    post.sig = post.sig + ':' + post.person_file;
+    if (recent.includes(post.sig) && attempt < 30) continue;
+    post.personImage = fileToDataUrl(pf);
     post.hashtags = tags(r);
     post.cta = pick(CTA_BIO, r);
     post.append_cta = pick(['\n\n→ growthterminal.io', '\n\nRun the free 60-second diagnostic, link in bio.',
@@ -1121,12 +1226,15 @@ if (require.main === module) (async () => {
   if (previewN > 0) {
     // QA mode: render N varied samples, no state changes
     const recent = [];
+    const havePeople = listPeople().length > 0;
     for (let i = 0; i < previewN; i++) {
-      const post = buildPost((Date.now() >>> 0) + i * 7919, recent);
+      const seed = (Date.now() >>> 0) + i * 7919;
+      // Every 3rd preview is a feature ad when the people folder has faces, so the QA batch shows them.
+      const post = (havePeople && i % 3 === 2 && buildFeaturePost(seed, recent)) || buildPost(seed, recent);
       recent.push(post.sig);
       const base = path.join(__dirname, 'creatives', `preview_${String(i + 1).padStart(2, '0')}_${post.layout}`);
       await renderPost(page, post, base);
-      console.log(`preview ${i + 1}: [${post.layout}] ${stripHtml(post.hook || post.big || post.stat || post.label).slice(0, 60)}`);
+      console.log(`preview ${i + 1}: [${post.layout}${post.person_file ? ':' + post.person_file.slice(0, 14) : ''}] ${stripHtml(post.hook || post.big || post.stat || post.label).slice(0, 56)}`);
     }
     await b.close();
     return;
@@ -1144,6 +1252,10 @@ if (require.main === module) (async () => {
   const hasFfmpeg = ffmpegAvailable();
   if (!hasFfmpeg) console.log('note: ffmpeg not found, posting a static image this run');
   const wantReel = !wantProduct && hasFfmpeg && rng(((now.getTime() >>> 0) ^ 0xA5A5A5A5) >>> 0)() < REEL_RATE;
+  // Feature ad (portrait + full pitch). Only when ./people has faces; disable with GT_FEATURE_RATE=0.
+  const FEATURE_RATE = parseFloat(process.env.GT_FEATURE_RATE || '0.18');
+  const wantFeature = !wantProduct && !wantReel && listPeople().length > 0 &&
+    rng(((now.getTime() >>> 0) ^ 0x0F2A7C11) >>> 0)() < FEATURE_RATE;
   let meta;
 
   if (wantReel) {
@@ -1166,7 +1278,9 @@ if (require.main === module) (async () => {
     console.log(`generated REEL [${post.rlayout}] -> ${meta.video_file}`);
   } else {
     // Product ad (~1 in 3) or brand/value post; product falls back to brand if none is fresh.
-    const post = (wantProduct ? buildProductPost((now.getTime() >>> 0), recent) : null) || buildPost((now.getTime() >>> 0), recent);
+    const post = (wantFeature ? buildFeaturePost((now.getTime() >>> 0), recent) : null)
+      || (wantProduct ? buildProductPost((now.getTime() >>> 0), recent) : null)
+      || buildPost((now.getTime() >>> 0), recent);
     // Editorial posts try a photographic ground; the contrast gate decides. If no photo
     // passes, we render the safe gradient editorial instead; a bad creative never ships.
     if (post.layout === 'editorial' && listEditorialBgs().length) {
@@ -1189,6 +1303,7 @@ if (require.main === module) (async () => {
       is_reel: false,
       layout: post.layout,
       editorial_bg: post.bg_url || null,          // which photo (null = gradient fallback)
+      person: post.person_file || null,           // feature-ad face used (null otherwise)
       qa: post.qa || null,                        // contrast audit trail for the dashboard
       caption, hashtags: post.hashtags, first_comment: post.first_comment || '',
       alt_text: stripHtml(post.hook || post.big || post.stat || post.label), sig: post.sig,
