@@ -1,0 +1,44 @@
+# .github/workflows/threads-autopost.yml
+# Growth Terminal — Threads auto-poster. Mirrors autopost.yml (Instagram).
+# Place this file at .github/workflows/ in the SAME repo as generate.js, and put
+# the threads_*.js files at the repo root so logs land where the dashboard reads them.
+
+name: Threads Auto-Poster
+
+on:
+  schedule:
+    # 11:00, 15:00, 19:00 ET (offset from the Instagram slots so they don't overlap).
+    # GitHub cron is UTC; EDT = UTC-4. Adjust if you prefer other times.
+    - cron: "0 15,19,23 * * *"
+  workflow_dispatch: {}   # the dashboard "Post one now" button hits this
+
+permissions:
+  contents: write         # to commit the updated logs
+
+concurrency:
+  group: threads-autopost
+  cancel-in-progress: false
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Publish next Threads post
+        env:
+          THREADS_ACCOUNTS: ${{ secrets.THREADS_ACCOUNTS }}   # JSON array of {name,userId,token}
+          GT_DRY_RUN: ${{ vars.GT_DRY_RUN }}                  # set to 1 to pause (generates + logs, no publish)
+        run: node threads_post_now.js
+
+      - name: Commit logs
+        run: |
+          git config user.name "gt-threads-bot"
+          git config user.email "bot@growthterminal.local"
+          git add threads_posted_log.json threads_used_log.json 2>/dev/null || true
+          git diff --staged --quiet || git commit -m "threads: publish + log [skip ci]"
+          git push
