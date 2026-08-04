@@ -1,0 +1,49 @@
+# .github/workflows/insights.yml
+# Growth Terminal, collect Instagram + Facebook engagement for published posts and
+# commit performance_log.json (the dashboard's Performance panel reads it).
+# Place at .github/workflows/ in the same repo as generate.js / post_now.py.
+
+name: GT Insights Collector
+
+on:
+  schedule:
+    # Once a day at 05:30 UTC (engagement has settled overnight). Adjust freely.
+    - cron: "30 5 * * *"
+  workflow_dispatch: {}   # run on demand from the Actions tab or the dashboard button
+
+permissions:
+  contents: write         # to commit performance_log.json
+
+concurrency:
+  group: gt-insights
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install deps
+        run: pip install requests
+
+      - name: Collect engagement
+        env:
+          GT_IG_ACCESS_TOKEN: ${{ secrets.GT_IG_ACCESS_TOKEN }}
+          GT_API_BASE: ${{ vars.GT_API_BASE }}
+          GT_FB_PAGE_ACCESS_TOKEN: ${{ secrets.GT_FB_PAGE_ACCESS_TOKEN }}
+          GT_FB_API_BASE: ${{ vars.GT_FB_API_BASE }}
+          GT_INSIGHTS_LOOKBACK: ${{ vars.GT_INSIGHTS_LOOKBACK }}
+        run: python collect_insights.py
+
+      - name: Commit performance log
+        run: |
+          git config user.name "gt-insights-bot"
+          git config user.email "bot@growthterminal.local"
+          git add performance_log.json 2>/dev/null || true
+          git diff --staged --quiet || git commit -m "insights: refresh performance_log [skip ci]"
+          git push
