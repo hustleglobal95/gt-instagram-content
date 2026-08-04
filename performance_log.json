@@ -1,0 +1,634 @@
+{
+  "updated": "2026-08-04T19:24:13.118048Z",
+  "count": 32,
+  "posts": [
+    {
+      "sig": "card:Activation",
+      "layout": "card",
+      "file": "creatives/gt_auto_20260801_210110.jpg",
+      "is_reel": false,
+      "at": "2026-08-01T21:01:13.344125Z",
+      "caption": "This is what a Growth Terminal diagnosis looks like.\n\nNot 40 metrics to interpret \u2014 one constraint, named, with the doll",
+      "permalink": "",
+      "ig": null,
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 1,
+        "reach": 0,
+        "engagement": 1
+      },
+      "engagement": 1
+    },
+    {
+      "sig": "stat:$0The cost to find out what's really stu",
+      "layout": "stat",
+      "file": "creatives/gt_auto_20260731_024003.jpg",
+      "is_reel": false,
+      "at": "2026-07-31T02:40:05.892133Z",
+      "caption": "",
+      "permalink": "",
+      "ig": null,
+      "fb": null,
+      "engagement": 0
+    },
+    {
+      "sig": "cons:Acquisition",
+      "layout": "statement",
+      "file": "creatives/gt_auto_20260731_151337.jpg",
+      "is_reel": false,
+      "at": "2026-07-31T15:13:41.033183Z",
+      "caption": "",
+      "permalink": "",
+      "ig": null,
+      "fb": null,
+      "engagement": 0
+    },
+    {
+      "sig": "stmt:Stop guessing which lever to pull .",
+      "layout": "statement",
+      "file": "creatives/gt_auto_20260731_171731.jpg",
+      "is_reel": false,
+      "at": "2026-07-31T17:17:33.270846Z",
+      "caption": "Stop guessing which lever to pull.\n\nYou already have the data \u2014 you're missing the diagnosis. Growth Terminal reads what",
+      "permalink": "",
+      "ig": null,
+      "fb": null,
+      "engagement": 0
+    },
+    {
+      "sig": "stmt:A second opinion for your growth .",
+      "layout": "statement",
+      "file": "creatives/gt_auto_20260731_174747.jpg",
+      "is_reel": false,
+      "at": "2026-07-31T17:47:49.645854Z",
+      "caption": "Think of it as a second opinion for your growth.\n\nThe kind you'd get from an operator who has seen this exact pattern a ",
+      "permalink": "",
+      "ig": null,
+      "fb": null,
+      "engagement": 0
+    },
+    {
+      "sig": "stmt:Point it at the sheet you already have o",
+      "layout": "statement",
+      "file": "creatives/gt_auto_20260731_181924.jpg",
+      "is_reel": false,
+      "at": "2026-07-31T18:19:26.780334Z",
+      "caption": "No new platform. No migration. No export.\n\nGrowth Terminal is a Google Sheets add-on. Point it at the report you already",
+      "permalink": "",
+      "ig": null,
+      "fb": null,
+      "engagement": 0
+    },
+    {
+      "sig": "stat:$88K\u2013$140KThe constraint you couldn't se",
+      "layout": "stat",
+      "file": "creatives/gt_auto_20260731_184052.jpg",
+      "is_reel": false,
+      "at": "2026-07-31T18:40:54.687999Z",
+      "caption": "\"$88K\u2013$140K / yr.\"\n\nThat's a real range from a real diagnosis \u2014 the annual value of one unfixed constraint. Growth Termi",
+      "permalink": "",
+      "ig": null,
+      "fb": null,
+      "engagement": 0
+    },
+    {
+      "sig": "cons:Churn",
+      "layout": "statement",
+      "file": "creatives/gt_auto_20260731_184214.jpg",
+      "is_reel": false,
+      "at": "2026-07-31T18:42:18.491193Z",
+      "caption": "Is churn your #1 constraint right now?\n\nThe tell: you refill a leaking bucket every single month. It's one of the twelve",
+      "permalink": "",
+      "ig": null,
+      "fb": null,
+      "engagement": 0
+    },
+    {
+      "sig": "cons:Capacity",
+      "layout": "statement",
+      "file": "creatives/gt_auto_20260731_194227.jpg",
+      "is_reel": false,
+      "at": "2026-07-31T19:42:29.497263Z",
+      "caption": "Is capacity your #1 constraint right now?\n\nThe tell: demand is there and you physically cannot serve it. It's one of the",
+      "permalink": "",
+      "ig": null,
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 0
+    },
+    {
+      "sig": "ranked:Retention",
+      "layout": "ranked",
+      "file": "creatives/gt_auto_20260731_201721.jpg",
+      "is_reel": false,
+      "at": "2026-07-31T20:17:23.665282Z",
+      "caption": "Twelve places growth gets stuck. We score all of them against your data and rank them.\n\nThe point isn't the list \u2014 it's ",
+      "permalink": "",
+      "ig": null,
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 0
+    },
+    {
+      "sig": "reelcard:Retention",
+      "layout": "reel:card",
+      "file": "creatives/gt_reel_20260731_214453.jpg",
+      "is_reel": true,
+      "at": "2026-07-31T21:45:13.118562Z",
+      "caption": "This is what a Growth Terminal diagnosis looks like \u2014 one constraint, named, priced, and verified against real revenue. ",
+      "permalink": "",
+      "ig": null,
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 0
+    },
+    {
+      "sig": "stmt:Ten problems. One that matters this quar",
+      "layout": "statement",
+      "file": "creatives/gt_auto_20260731_221325.jpg",
+      "is_reel": false,
+      "at": "2026-07-31T22:13:28.653994Z",
+      "caption": "You can always find ten things to fix. You can only afford to fix one well this quarter.\n\nGrowth Terminal ranks all twel",
+      "permalink": "",
+      "ig": null,
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 0
+    },
+    {
+      "sig": "card:Retention",
+      "layout": "card",
+      "file": "creatives/gt_auto_20260731_223435.jpg",
+      "is_reel": false,
+      "at": "2026-07-31T22:34:38.132206Z",
+      "caption": "This is what a Growth Terminal diagnosis looks like.\n\nNot 40 metrics to interpret \u2014 one constraint, named, with the doll",
+      "permalink": "",
+      "ig": null,
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 0
+    },
+    {
+      "sig": "quote:Diagnosis before treatment. Always.",
+      "layout": "quote",
+      "file": "creatives/gt_auto_20260731_224247.jpg",
+      "is_reel": false,
+      "at": "2026-07-31T22:42:49.691534Z",
+      "caption": "Diagnosis before treatment. Always.\n\nMost growth mistakes aren't strategy failures \u2014 they're diagnosis failures. Get the",
+      "permalink": "",
+      "ig": null,
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 0
+    },
+    {
+      "sig": "reelcard:Pricing",
+      "layout": "reel:card",
+      "file": "creatives/gt_reel_20260801_010107.jpg",
+      "is_reel": true,
+      "at": "2026-08-01T01:01:32.292803Z",
+      "caption": "This is what a Growth Terminal diagnosis looks like \u2014 one constraint, named, priced, and verified against real revenue. ",
+      "permalink": "",
+      "ig": null,
+      "fb": null,
+      "engagement": 0
+    },
+    {
+      "sig": "funnel:Your funnel isn\u2019t slow. ",
+      "layout": "funnel",
+      "file": "creatives/gt_auto_20260801_130107.jpg",
+      "is_reel": false,
+      "at": "2026-08-01T13:01:10.218863Z",
+      "caption": "Most growth doesn't die at the top of the funnel. It leaks in the middle.\n\nHere, activation is the drop that's costing t",
+      "permalink": "",
+      "ig": null,
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 0
+    },
+    {
+      "sig": "reelnum:12",
+      "layout": "reel:countup",
+      "file": "creatives/gt_reel_20260801_170136.jpg",
+      "is_reel": true,
+      "at": "2026-08-01T17:02:02.293319Z",
+      "caption": "Growth only gets stuck in twelve places. The hard part is knowing which one is YOUR #1 right now \u2014 with a dollar range a",
+      "permalink": "",
+      "ig": null,
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 0
+    },
+    {
+      "sig": "reelcard:Activation",
+      "layout": "reel:card",
+      "file": "creatives/gt_reel_20260802_010122.jpg",
+      "is_reel": true,
+      "at": "2026-08-02T01:01:47.619330Z",
+      "caption": "This is what a Growth Terminal diagnosis looks like \u2014 one constraint, named, priced, and verified against real revenue. ",
+      "permalink": "",
+      "ig": null,
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 0
+    },
+    {
+      "sig": "cons:Pricing",
+      "layout": "statement",
+      "file": "creatives/gt_auto_20260802_130107.jpg",
+      "is_reel": false,
+      "at": "2026-08-02T13:01:09.938270Z",
+      "caption": "Is pricing your #1 constraint right now?\n\nThe tell: you are leaving margin on the table on every deal. It's one of the t",
+      "permalink": "",
+      "ig": null,
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 0
+    },
+    {
+      "sig": "reelnum:60",
+      "layout": "reel:countup",
+      "file": "creatives/gt_reel_20260802_170121.jpg",
+      "is_reel": true,
+      "at": "2026-08-02T17:01:40.289653Z",
+      "caption": "60 seconds from spreadsheet to diagnosis. Add the add-on to Google Sheets, point it at the report you already have, and ",
+      "permalink": "",
+      "ig": null,
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 0
+    },
+    {
+      "sig": "stat:90 daysFrom diagnosis to a plan you can ",
+      "layout": "stat",
+      "file": "creatives/gt_auto_20260802_210116.jpg",
+      "is_reel": false,
+      "at": "2026-08-02T21:01:19.286543Z",
+      "caption": "A diagnosis without a plan is just a nice chart.\n\nEvery Growth Terminal verdict ships with a concrete 90-day plan for th",
+      "permalink": "",
+      "ig": null,
+      "fb": null,
+      "engagement": 0
+    },
+    {
+      "sig": "reelnum:140",
+      "layout": "reel:countup",
+      "file": "creatives/gt_reel_20260803_010105.jpg",
+      "is_reel": true,
+      "at": "2026-08-03T01:01:30.258938Z",
+      "caption": "Every diagnosis ends with a dollar range, not a vibe. A real number on a real constraint \u2014 so you decide with a figure i",
+      "permalink": "",
+      "ig": null,
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 0
+    },
+    {
+      "sig": "edit:Track where growth is driving real resul",
+      "layout": "editorial",
+      "file": "creatives/gt_auto_20260803_022115.jpg",
+      "is_reel": false,
+      "at": "2026-08-03T02:21:18.740194Z",
+      "caption": "Track where growth is actually driving results, and where it isn't.\n\nGrowth Terminal ranks the twelve places growth gets",
+      "permalink": "",
+      "ig": null,
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 0
+    },
+    {
+      "sig": "cons:Offer",
+      "layout": "statement",
+      "file": "creatives/gt_auto_20260803_031422.jpg",
+      "is_reel": false,
+      "at": "2026-08-03T03:14:25.569479Z",
+      "caption": "Is offer your #1 constraint right now?\n\nThe tell: what you sell is close, but not quite worth the price. It's one of the",
+      "permalink": "",
+      "ig": null,
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 0
+    },
+    {
+      "sig": "vs:Built to make a call , not more reports.",
+      "layout": "vs",
+      "file": "creatives/gt_auto_20260803_034228.jpg",
+      "is_reel": false,
+      "at": "2026-08-03T03:42:31.137852Z",
+      "caption": "BI tools show everything and decide nothing. Gut feel is fast but unaccountable. Spreadsheets hold the data but never ra",
+      "permalink": "",
+      "ig": null,
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 0
+    },
+    {
+      "sig": "reelcard:Activation",
+      "layout": "reel:card",
+      "file": "creatives/gt_reel_20260803_040422.jpg",
+      "is_reel": true,
+      "at": "2026-08-03T04:04:48.081079Z",
+      "caption": "This is what a Growth Terminal diagnosis looks like, one constraint, named, priced, and verified against real revenue. H",
+      "permalink": "",
+      "ig": null,
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 0
+    },
+    {
+      "sig": "reelcard:Pricing",
+      "layout": "reel:card",
+      "file": "creatives/gt_reel_20260803_130120.jpg",
+      "is_reel": true,
+      "at": "2026-08-03T13:01:44.997992Z",
+      "caption": "This is what a Growth Terminal diagnosis looks like, one constraint, named, priced, and verified against real revenue. H",
+      "permalink": "",
+      "ig": null,
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 0
+    },
+    {
+      "sig": "prodsoon:Pricing & Offer Analyzer",
+      "layout": "prodsoon",
+      "file": "creatives/gt_auto_20260803_170145.jpg",
+      "is_reel": false,
+      "at": "2026-08-03T17:01:48.403280Z",
+      "caption": "Coming soon to the Growth Terminal store: Pricing & Offer Analyzer.\n\nFind the margin you're leaving on the table on ever",
+      "permalink": "",
+      "ig": null,
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 0
+    },
+    {
+      "sig": "car:12The 12 places growth",
+      "layout": "carousel",
+      "file": "creatives/gt_auto_20260803_210107.jpg",
+      "is_reel": false,
+      "at": "2026-08-03T21:01:09.944847Z",
+      "caption": "Growth only gets stuck in twelve places. Save this. \ud83d\udc47\n\nAcquisition \u00b7 Activation \u00b7 Retention \u00b7 Conversion \u00b7 Traffic \u00b7 Off",
+      "permalink": "",
+      "ig": null,
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 0
+    },
+    {
+      "sig": "quote:You don\u2019t get a dashboard. You get a",
+      "layout": "quote",
+      "file": "creatives/gt_auto_20260804_010120.jpg",
+      "is_reel": false,
+      "at": "2026-08-04T01:01:23.483940Z",
+      "caption": "You don't get a dashboard. You get a verdict.\n\nDashboards show 40 numbers and let you pick the story. We name the one co",
+      "permalink": "",
+      "ig": null,
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 0
+    },
+    {
+      "sig": "prodshot:funnel:Stop guessing which fu",
+      "layout": "prodshot",
+      "file": "creatives/gt_auto_20260804_130114.jpg",
+      "is_reel": false,
+      "at": "2026-08-04T13:01:17.187566Z",
+      "caption": "Most trackers show you conversion rates. This one tells you what to do with them: which step is costing you the most, ho",
+      "permalink": "",
+      "ig": null,
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 0
+    },
+    {
+      "sig": "prodshot:funnel:Find the one step your",
+      "layout": "prodshot",
+      "file": "creatives/gt_auto_20260804_170143.jpg",
+      "is_reel": false,
+      "at": "2026-08-04T17:01:47.921013Z",
+      "caption": "Your funnel has one step leaking more than the rest. The Funnel & Conversion Tracker finds it, tells you what fixing it ",
+      "permalink": "",
+      "ig": null,
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 0
+    }
+  ],
+  "by_format": [
+    {
+      "layout": "card",
+      "posts": 2,
+      "engagement": 1,
+      "ig_engagement": 0,
+      "fb_engagement": 1,
+      "avg_engagement": 0.5
+    },
+    {
+      "layout": "stat",
+      "posts": 3,
+      "engagement": 0,
+      "ig_engagement": 0,
+      "fb_engagement": 0,
+      "avg_engagement": 0.0
+    },
+    {
+      "layout": "statement",
+      "posts": 9,
+      "engagement": 0,
+      "ig_engagement": 0,
+      "fb_engagement": 0,
+      "avg_engagement": 0.0
+    },
+    {
+      "layout": "ranked",
+      "posts": 1,
+      "engagement": 0,
+      "ig_engagement": 0,
+      "fb_engagement": 0,
+      "avg_engagement": 0.0
+    },
+    {
+      "layout": "reel:card",
+      "posts": 5,
+      "engagement": 0,
+      "ig_engagement": 0,
+      "fb_engagement": 0,
+      "avg_engagement": 0.0
+    },
+    {
+      "layout": "quote",
+      "posts": 2,
+      "engagement": 0,
+      "ig_engagement": 0,
+      "fb_engagement": 0,
+      "avg_engagement": 0.0
+    },
+    {
+      "layout": "funnel",
+      "posts": 1,
+      "engagement": 0,
+      "ig_engagement": 0,
+      "fb_engagement": 0,
+      "avg_engagement": 0.0
+    },
+    {
+      "layout": "reel:countup",
+      "posts": 3,
+      "engagement": 0,
+      "ig_engagement": 0,
+      "fb_engagement": 0,
+      "avg_engagement": 0.0
+    },
+    {
+      "layout": "editorial",
+      "posts": 1,
+      "engagement": 0,
+      "ig_engagement": 0,
+      "fb_engagement": 0,
+      "avg_engagement": 0.0
+    },
+    {
+      "layout": "vs",
+      "posts": 1,
+      "engagement": 0,
+      "ig_engagement": 0,
+      "fb_engagement": 0,
+      "avg_engagement": 0.0
+    },
+    {
+      "layout": "prodsoon",
+      "posts": 1,
+      "engagement": 0,
+      "ig_engagement": 0,
+      "fb_engagement": 0,
+      "avg_engagement": 0.0
+    },
+    {
+      "layout": "carousel",
+      "posts": 1,
+      "engagement": 0,
+      "ig_engagement": 0,
+      "fb_engagement": 0,
+      "avg_engagement": 0.0
+    },
+    {
+      "layout": "prodshot",
+      "posts": 2,
+      "engagement": 0,
+      "ig_engagement": 0,
+      "fb_engagement": 0,
+      "avg_engagement": 0.0
+    }
+  ]
+}
