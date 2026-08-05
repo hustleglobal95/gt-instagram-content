@@ -1,6 +1,6 @@
 {
-  "updated": "2026-08-04T19:24:13.118048Z",
-  "count": 32,
+  "updated": "2026-08-05T08:01:09.517918Z",
+  "count": 34,
   "posts": [
     {
       "sig": "card:Activation",
@@ -523,6 +523,42 @@
         "engagement": 0
       },
       "engagement": 0
+    },
+    {
+      "sig": "reelcard:Retention",
+      "layout": "reel:card",
+      "file": "creatives/gt_reel_20260804_210122.jpg",
+      "is_reel": true,
+      "at": "2026-08-04T21:01:48.053833Z",
+      "caption": "This is what a Growth Terminal diagnosis looks like, one constraint, named, priced, and verified against real revenue. H",
+      "permalink": "",
+      "ig": null,
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 0
+    },
+    {
+      "sig": "reelnum:60",
+      "layout": "reel:countup",
+      "file": "creatives/gt_reel_20260805_010106.jpg",
+      "is_reel": true,
+      "at": "2026-08-05T01:01:32.507036Z",
+      "caption": "60 seconds from spreadsheet to diagnosis. Add the add-on to Google Sheets\u2122, point it at the report you already have, and",
+      "permalink": "",
+      "ig": null,
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 0
     }
   ],
   "by_format": [
@@ -560,7 +596,7 @@
     },
     {
       "layout": "reel:card",
-      "posts": 5,
+      "posts": 6,
       "engagement": 0,
       "ig_engagement": 0,
       "fb_engagement": 0,
@@ -584,7 +620,7 @@
     },
     {
       "layout": "reel:countup",
-      "posts": 3,
+      "posts": 4,
       "engagement": 0,
       "ig_engagement": 0,
       "fb_engagement": 0,
