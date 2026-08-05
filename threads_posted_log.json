@@ -50,5 +50,18 @@
       "markusreidgt": "17943245277274009"
     },
     "errors": {}
+  },
+  {
+    "at": "2026-08-05T16:39:22.336Z",
+    "text": "Every company has one constraint that limits everything else.\n\nRight now it's usually one of:\n• Retention\n• Cash flow\n• Sales conversion\n• Delivery capacity\n\nFind that one first. Everything downstream gets easier.",
+    "pillar": "constraint",
+    "kind": "systems",
+    "accounts": [
+      "markusreidgt"
+    ],
+    "ids": {
+      "markusreidgt": "18173862901425160"
+    },
+    "errors": {}
   }
 ]
