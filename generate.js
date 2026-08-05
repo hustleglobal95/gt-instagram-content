@@ -1,3 +1,28 @@
+/* =======================================================================
+   GROWTH TERMINAL AUTOPOSTER  |  PERMANENT FORMAT LOCK  |  DO NOT VIOLATE
+   -----------------------------------------------------------------------
+   Every creative format in this file is APPROVED and PERMANENT. Never
+   remove, disable, or downgrade any of them, and never drop one from the
+   GENERATORS or REEL_GENERATORS rotation. You may ADD new formats. The
+   existing ones must keep posting, always.
+
+   Approved static layouts (RENDER map, all permanent):
+     statement  (the ink background with the soft orange-gradient glow),
+     contrast, stat, vs, carousel, card, quote, annotated, funnel, ranked,
+     trajectory, tweet, editorial, feature (AI-people photo ads), prodshot,
+     prodclaim, prodsoon, edserif, edterminal, edmanifesto.
+   Approved reels: reel_card, reel_countup.
+   Approved service ads: gen_svc_serif, gen_svc_manifesto.
+
+   Standing brand rules for EVERY creative (never break):
+     - The GT logo (long wordmark or GT monogram) appears on EVERY ad.
+     - Signal Amber #FC5802 is the only accent color.
+     - Inter leads. Fraunces is an ACCENT display used on a minority of
+       editorial ads (about a third), never the leader font.
+     - Never use the word "hub".
+     - No em dashes anywhere, including in generated captions.
+   ======================================================================= */
+
 // Growth Terminal, auto-generating content engine
 // Each run: assembles ONE fresh, on-brand Instagram creative (1080x1350) from a
 // large combinatorial content bank, renders it to JPEG, writes meta.json for the
@@ -53,6 +78,7 @@ body{font-family:'ITight',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Ari
 .foot .lg{height:52px}
 .foot .lg svg{height:52px;width:auto;display:block}
 .toplogo svg{height:60px;width:auto;display:block}
+.gtmark svg{height:42px;width:auto;display:block}
 .cta{font-family:'JBM',ui-monospace,Menlo,monospace;font-size:24px;font-weight:700;letter-spacing:.02em;display:flex;align-items:center;gap:12px}
 .cta .dot{width:12px;height:12px;border-radius:50%;background:${ORANGE}}
 .grain{position:absolute;inset:0;opacity:.04;pointer-events:none;background-image:radial-gradient(rgba(255,255,255,.5) 1px,transparent 1px);background-size:4px 4px}
@@ -173,7 +199,7 @@ function L_quote(p) {
     <div style="font-size:220px;line-height:.6;color:${ORANGE};font-weight:800;height:120px">&ldquo;</div>
     <div style="flex:1;display:flex;align-items:center">
       <div class="h" style="font-size:82px">${p.quote}</div></div>
-    <div class="mono" style="font-size:26px;letter-spacing:.1em;color:#8a7f70;margin-bottom:20px">&mdash; GROWTH TERMINAL</div>
+    <div class="mono" style="font-size:26px;letter-spacing:.1em;color:#8a7f70;margin-bottom:20px">GROWTH TERMINAL</div>
     <div class="foot"><div class="lg">${logo(ORANGE, INK)}</div>
       <div class="cta" style="color:${ORANGE}"><span class="dot"></span>${p.cta || 'growthterminal.io'}</div></div>
   </div>`;
@@ -1048,19 +1074,19 @@ function L_edserif(p) {
   return `<div class="stage" style="background:${CREAM};padding:96px 90px;display:flex;flex-direction:column">
     <div class="grain"></div>
     <div style="display:flex;justify-content:space-between;align-items:center">
-      <div class="mono" style="color:${INK};font-weight:700;font-size:20px;letter-spacing:.26em">GROWTH&nbsp;TERMINAL</div>
+      <div class="gtmark">${logo(ORANGE, INK)}</div>
       <div class="mono" style="color:#8a8073;font-weight:500;font-size:19px;letter-spacing:.18em">${p.tag || 'DIAGNOSTIC'}</div>
     </div>
     <div style="height:2px;background:${INK};margin-top:24px;opacity:.92"></div>
     <div style="margin-top:64px">
       <div class="mono" style="color:${ORANGE};font-weight:700;font-size:22px;letter-spacing:.24em;margin-bottom:32px">${p.kicker}</div>
-      <div class="fr" style="color:${INK};font-weight:900;font-size:${p.size || 100}px;line-height:.99;letter-spacing:-.015em">${p.head} <span class="fri" style="font-weight:500">${p.emph}</span></div>
+      ${p.serif ? `<div class="fr" style="color:${INK};font-weight:900;font-size:${p.size || 100}px;line-height:.99;letter-spacing:-.015em">${p.head} <span class="fri" style="font-weight:500">${p.emph}</span></div>` : `<div style="font-family:'ITight',sans-serif;color:${INK};font-weight:800;font-size:${Math.round((p.size||100)*0.9)}px;line-height:1.0;letter-spacing:-.03em">${p.head} <span style="color:${ORANGE}">${p.emph}</span></div>`}
     </div>
     <div class="hairline" style="background:${INK};opacity:.2;margin:60px 0 38px"></div>
     <div style="color:#4a423a;font-weight:600;font-size:33px;line-height:1.34;max-width:850px">${p.sub}</div>
     <div style="margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end">
       <div>
-        <div class="mono" style="color:${ORANGE};font-weight:700;font-size:25px;letter-spacing:.12em">RUN YOUR ANALYSIS</div>
+        <div class="mono" style="color:${ORANGE};font-weight:700;font-size:25px;letter-spacing:.12em">${p.cta_label || 'RUN YOUR ANALYSIS'}</div>
         <div style="height:2px;width:330px;background:${ORANGE};margin-top:11px"></div>
       </div>
       <div class="mono" style="color:#8a8073;font-weight:500;font-size:22px;letter-spacing:.06em">growthterminal.io</div>
@@ -1072,7 +1098,7 @@ function L_edterminal(p) {
   return `<div class="stage" style="background:radial-gradient(120% 80% at 50% 0%, #1d1811 0%, ${INK} 55%, #100c09 100%);padding:90px 86px;display:flex;flex-direction:column">
     <div class="grain"></div>
     <div style="display:flex;justify-content:space-between;align-items:center">
-      <div class="mono" style="color:${CREAM};font-weight:700;font-size:20px;letter-spacing:.26em">GROWTH&nbsp;TERMINAL</div>
+      <div class="gtmark">${logo(ORANGE, CREAM)}</div>
       <div class="mono" style="color:#8a8074;font-weight:500;font-size:19px;letter-spacing:.14em">growthterminal.io</div>
     </div>
     <div style="height:1px;background:#ffffff14;margin-top:24px"></div>
@@ -1101,9 +1127,9 @@ function L_edterminal(p) {
 function L_edmanifesto(p) {
   return `<div class="stage" style="background:${INK};padding:98px 90px;display:flex;flex-direction:column">
     <div class="grain"></div>
-    <div class="mono" style="color:${ORANGE};font-weight:700;font-size:22px;letter-spacing:.24em">GROWTH TERMINAL</div>
-    <div class="fr" style="margin-top:auto;color:${CREAM};font-weight:400;font-size:${p.size || 84}px;line-height:1.07;letter-spacing:-.01em">${p.body}</div>
-    <div class="fr" style="color:${ORANGE};font-weight:900;font-size:${(p.size || 84) + 4}px;line-height:1;letter-spacing:-.02em;margin-top:40px">${p.punch}</div>
+    <div class="gtmark">${logo(ORANGE, CREAM)}</div>
+    ${p.serif ? `<div class="fr" style="margin-top:auto;color:${CREAM};font-weight:400;font-size:${p.size || 84}px;line-height:1.07;letter-spacing:-.01em">${p.body}</div>` : `<div style="margin-top:auto;font-family:'ITight',sans-serif;color:${CREAM};font-weight:800;font-size:${Math.round((p.size||84)*0.94)}px;line-height:1.04;letter-spacing:-.03em">${p.body.replace(/class="fri" style="[^"]*"/g, 'style="color:'+ORANGE+';font-weight:800"')}</div>`}
+    ${p.serif ? `<div class="fr" style="color:${ORANGE};font-weight:900;font-size:${(p.size || 84) + 4}px;line-height:1;letter-spacing:-.02em;margin-top:40px">${p.punch}</div>` : `<div style="font-family:'ITight',sans-serif;color:${ORANGE};font-weight:800;font-size:${(p.size || 84) + 2}px;line-height:1;letter-spacing:-.03em;margin-top:40px">${p.punch}</div>`}
     <div style="margin-top:auto;padding-top:64px">
       <div style="height:1px;background:#ffffff1f;margin-bottom:26px"></div>
       <div style="display:flex;justify-content:space-between;align-items:center">
@@ -1143,7 +1169,7 @@ function gen_edserif(r) {
       fc:'The scariest line item is the one that never shows up on the P&L.' },
   ];
   const b = pick(bank, r);
-  return { layout:'edserif', tag:'DIAGNOSTIC', kicker:b.kicker, head:b.head, emph:b.emph, sub:b.sub, size:b.size,
+  return { layout:'edserif', serif:r()<0.35, tag:'DIAGNOSTIC', kicker:b.kicker, head:b.head, emph:b.emph, sub:b.sub, size:b.size,
     caption:b.cap, first_comment:b.fc, sig:'eds:'+stripHtml(b.head+b.emph).slice(0,36) };
 }
 
@@ -1189,8 +1215,70 @@ function gen_edmanifesto(r) {
       fc:'The costliest constraints are the ones nobody puts a name to.' },
   ];
   const b = pick(bank, r);
-  return { layout:'edmanifesto', body:b.body, punch:b.punch, foot:b.foot, size:b.size,
+  return { layout:'edmanifesto', serif:r()<0.4, body:b.body, punch:b.punch, foot:b.foot, size:b.size,
     caption:b.cap, first_comment:b.fc, sig:'edm:'+stripHtml(b.punch+b.foot).slice(0,36) };
+}
+
+// ================= SERVICES / HUB CONTENT (the bigger brand) =================
+// Ads reflecting the full Growth Terminal hub: AI voice agents, custom AI
+// assistants, the content engine, done-for-you Business Solutions, templates,
+// and the "one system, many ways in" positioning. Rendered through the editorial
+// layouts (edserif, edmanifesto). Drawn from the master brand file.
+
+function gen_svc_serif(r) {
+  const bank = [
+    { tag:'AI SOLUTIONS', kicker:'AI VOICE AGENTS', head:'A voice agent that answers', emph:'every call, day or night.', size:96,
+      sub:'It picks up in your brand voice, qualifies the caller, and books the meeting straight to your calendar. No lead waits, no call lost.',
+      cap:'Your growth leaks at the first missed call. Growth Terminal builds you an AI voice agent that answers 24/7 in your brand voice, qualifies the caller, and books the meeting. One of the AI Solutions inside Business Solutions.',
+      fc:'How many calls go to voicemail in a week? That is pipeline walking out.' },
+    { tag:'AI SOLUTIONS', kicker:'CUSTOM AI ASSISTANTS', head:'An assistant trained on', emph:'your business, not everyone.', size:96,
+      sub:'It drafts replies in your voice, holds your price, works objections, and updates your pipeline. A trained teammate, not a generic chatbot.',
+      cap:'Most chatbots discount to close. Ours holds your price and works the objection, then logs the deal and schedules the follow-up. A custom GPT trained on your business.',
+      fc:'What is the one reply your team keeps rewriting? Automate that first.' },
+    { tag:'AI SOLUTIONS', kicker:'AUTOMATED CONTENT ENGINE', head:'On-brand content,', emph:'posted for you every day.', size:100,
+      sub:'It builds posts from your creative bank and publishes across Instagram, Facebook, Threads, and TikTok, then tracks what performs.',
+      cap:'Consistent content, zero manual work. The Growth Terminal content engine posts on-brand creatives daily across every platform and sharpens on what performs.',
+      fc:'How many days did your content go dark last month? Autopilot fixes that.' },
+    { tag:'BUSINESS SOLUTIONS', kicker:'DONE FOR YOU', head:'We build the machine,', emph:'and keep it running.', size:100,
+      sub:'Our team runs the diagnosis, builds the 90-day plan, and verifies the outcome against real revenue. Fully managed.',
+      cap:'Not enough hours to fix the constraint yourself? Business Solutions runs the diagnosis, builds the plan, and verifies it against real revenue. Fully managed by our team.',
+      fc:'Would you rather run the fix, or have it run for you?' },
+    { tag:'ONE SYSTEM', kicker:'ONE SYSTEM', head:'One system.', emph:'Every way in.', size:112,
+      sub:'Diagnose it yourself in a spreadsheet, grab a template, add AI voice, assistants, and content, or have our team run the whole thing.',
+      cap:'Growth Terminal is one system. Diagnose it yourself in Google Sheets™, grab a template, add AI voice agents and assistants, or have us build and run it. One diagnosis-first system, several ways in.',
+      fc:'Which way in fits you: do it yourself, a template, or done for you?' },
+    { tag:'GT TEMPLATES', kicker:'READY-MADE TEMPLATES', head:'Answers today,', emph:'from $79.', size:104,
+      sub:'Ready-made Google Sheets templates for pricing, retention, and forecasting. Copy in your numbers, get answers, keep them forever.',
+      cap:'Not ready for the full engine? Grab a GT template. Ready-made Google Sheets™ for pricing, retention, and forecasting. Copy, paste your numbers, get answers today. From $79.',
+      fc:'Which would move your number most: pricing, retention, or forecasting?' },
+  ];
+  const b = pick(bank, r);
+  const SVC_CTA = { 'AI SOLUTIONS':'SEE AI SOLUTIONS', 'BUSINESS SOLUTIONS':'BOOK A CALL',
+    'ONE SYSTEM':'SEE EVERY WAY IN', 'GT TEMPLATES':'BROWSE TEMPLATES' };
+  return { layout:'edserif', serif:r()<0.35, tag:b.tag, kicker:b.kicker, head:b.head, emph:b.emph, sub:b.sub, size:b.size,
+    cta_label:SVC_CTA[b.tag] || 'RUN YOUR ANALYSIS',
+    caption:b.cap, first_comment:b.fc, sig:'svcs:'+stripHtml(b.kicker).slice(0,32) };
+}
+
+function gen_svc_manifesto(r) {
+  const I = s => '<span class="fri" style="font-weight:500;color:'+WHITE+'">'+s+'</span>';
+  const bank = [
+    { body:'You do not need ten vendors. You need one system that '+I('diagnoses')+', then '+I('builds')+' it.', punch:'That is Growth Terminal.', foot:'Diagnosis, templates, AI, and done-for-you, all Growth Terminal.', size:82,
+      cap:'You do not need ten vendors. You need one system that diagnoses the constraint, then builds and runs the fix. Diagnosis, templates, AI voice and assistants, content, and done-for-you, all Growth Terminal.',
+      fc:'How many tools are you stitching together right now?' },
+    { body:'A diagnosis is step one. Then someone has to '+I('build')+' it and '+I('run')+' it.', punch:'We do both.', foot:'Done-for-you strategy, content, and AI, managed by our team.', size:82,
+      cap:'A diagnosis is step one. Then someone has to build the plan and run it. Growth Terminal Business Solutions does both: strategy, content, and AI, fully managed.',
+      fc:'Where do most growth plans die: the diagnosis, or the execution?' },
+    { body:'Your AI should '+I('hold')+' your price, not '+I('discount')+' to close.', punch:'Ours does.', foot:'Custom AI assistants trained on your business.', size:84,
+      cap:'Your AI should hold your price, not discount to close. Growth Terminal builds custom AI assistants trained on your business that work the objection and keep your margin.',
+      fc:'Would your current chatbot give away 10% to avoid a hard question?' },
+    { body:'Every missed call is '+I('pipeline')+' walking out the door.', punch:'So we answer them.', foot:'AI voice agents, 24/7, in your brand voice.', size:86,
+      cap:'Every missed call is pipeline walking out the door. Growth Terminal builds AI voice agents that answer 24/7 in your brand voice, qualify the caller, and book the meeting.',
+      fc:'What does one missed call cost you? Now multiply by a month.' },
+  ];
+  const b = pick(bank, r);
+  return { layout:'edmanifesto', serif:r()<0.4, body:b.body, punch:b.punch, foot:b.foot, size:b.size,
+    caption:b.cap, first_comment:b.fc, sig:'svcm:'+stripHtml(b.punch+b.foot).slice(0,32) };
 }
 
 const GENERATORS = [
@@ -1200,6 +1288,7 @@ const GENERATORS = [
   gen_funnel, gen_ranked, gen_trajectory,
   gen_tweet, gen_tweet, gen_editorial, gen_editorial,
   gen_edserif, gen_edserif, gen_edterminal, gen_edmanifesto,
+  gen_svc_serif, gen_svc_serif, gen_svc_manifesto, gen_svc_manifesto,
 ];
 
 // ---------- pick a fresh post (avoid recent repeats) ----------
