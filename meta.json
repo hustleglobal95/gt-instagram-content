@@ -1,14 +1,12 @@
 {
-  "generated_at": "2026-08-05T13:01:06.301Z",
-  "media_file": "creatives/gt_auto_20260805_130106.jpg",
-  "is_reel": false,
-  "layout": "edmanifesto",
-  "editorial_bg": null,
-  "person": null,
-  "qa": null,
-  "caption": "You can find ten things to fix. You can only afford to fix one well.\n\nWe rank them. Growth Terminal ranks the twelve places growth gets stuck and names the one that is yours this quarter, so your team points at a single target.\n\nDiagnose your #1 constraint free. Link in bio.",
-  "hashtags": "#growthterminal #b2bsaas #growthmarketing #leadership #cro #saasmarketing #unitmetrics #analytics #productmarketing #marketingstrategy #kpis",
-  "first_comment": "What are you fixing this quarter, and is it the real constraint?",
-  "alt_text": "",
-  "sig": "edm:We rank them.The #1 constraint on yo"
+  "generated_at": "2026-08-05T17:01:13.319Z",
+  "media_file": "creatives/gt_reel_20260805_170113.jpg",
+  "video_file": "creatives/gt_reel_20260805_170113.mp4",
+  "is_reel": true,
+  "layout": "reel:countup",
+  "caption": "Every diagnosis ends with a dollar range, not a vibe. A real number on a real constraint, so you decide with a figure instead of a hunch.\n\nDiagnose your #1 constraint free. Link in bio.",
+  "hashtags": "#growthterminal #b2bsaas #growthmarketing #startupgrowth #startuptools #revenueops #founders #opportunitycost #bootstrapping #businessgrowth #startups",
+  "first_comment": "What would change if every problem came pre-priced?",
+  "alt_text": "$140K",
+  "sig": "reelnum:140"
 }
