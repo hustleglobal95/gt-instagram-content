@@ -11,7 +11,7 @@
      contrast, stat, vs, carousel, card, quote, annotated, funnel, ranked,
      trajectory, tweet, editorial, feature (AI-people photo ads), prodshot,
      prodclaim, prodsoon, edserif, edterminal, edmanifesto.
-   Approved reels: reel_card, reel_countup.
+   Approved reels: reel_card, reel_countup, reel_feature (Ken Burns people reel).
    Approved service ads: gen_svc_serif, gen_svc_manifesto.
 
    Standing brand rules for EVERY creative (never break):
@@ -21,6 +21,11 @@
        editorial ads (about a third), never the leader font.
      - Never use the word "hub".
      - No em dashes anywhere, including in generated captions.
+     - Type restraint: each ad commits to ONE type personality. Do not
+       stack Fraunces, Inter, and mono as competing display type in a single
+       creative. A format is Inter-led, or Fraunces-led (a minority), or
+       mono-forward, plus small supporting labels. Never cram every font or
+       element into one ad.
    ======================================================================= */
 
 // Growth Terminal, auto-generating content engine
@@ -1430,7 +1435,45 @@ function countupFrame(t, p) {
     </div>${rfoot(ctaIn)}`;
   return rstage(inner, t);
 }
-const REEL_FRAME = { card: cardFrame, countup: countupFrame };
+
+// Ken Burns "feature reel": a person photo slowly pushes in while a single, restrained
+// message builds over it. One type personality (Inter headline + mono labels + amber),
+// never a font pile-up. Logo always present. Fires only when ./people has images.
+function featureReelFrame(t, p){
+  const zoom = 1.02 + easeIO(t)*0.09;
+  const kIn = easeOut((t-0.05)/0.22), hIn = easeOut((t-0.18)/0.42), fIn = easeOut((t-0.78)/0.18);
+  const pos = p.personMode==='scene' ? '68% 42%' : '50% 26%';
+  return `<style>${FONTS}</style>
+  <div style="width:1080px;height:1920px;background:${INK};position:relative;overflow:hidden">
+    <div style="position:absolute;inset:0;background-image:url('${p.personImage}');background-size:cover;background-position:${pos};transform:scale(${zoom});transform-origin:center;filter:brightness(1.03) contrast(1.03)"></div>
+    <div style="position:absolute;inset:0;background:linear-gradient(180deg, rgba(23,19,15,.5) 0%, rgba(23,19,15,0) 30%, rgba(23,19,15,.5) 58%, rgba(23,19,15,.97) 100%)"></div>
+    ${RGRAIN}
+    <div style="position:absolute;top:96px;left:96px;opacity:${kIn};transform:translateY(${(1-kIn)*-10}px)">${rlogo(58)}</div>
+    <div style="position:absolute;left:96px;right:96px;bottom:150px;display:flex;flex-direction:column;gap:26px">
+      <div style="font-family:'JBM',ui-monospace,monospace;font-size:30px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:${ORANGE};opacity:${kIn};transform:translateY(${(1-kIn)*16}px)">${p.kicker}</div>
+      <div style="font-family:'ITight',-apple-system,sans-serif;font-size:98px;font-weight:800;letter-spacing:-.03em;line-height:1.02;color:${WHITE};opacity:${hIn};transform:translateY(${(1-hIn)*26}px)">${p.headline}</div>
+      <div style="display:flex;align-items:center;gap:14px;font-family:'JBM',ui-monospace,monospace;font-size:30px;font-weight:700;color:${CREAM};opacity:${fIn};transform:translateY(${(1-fIn)*16}px)"><span style="width:14px;height:14px;border-radius:50%;background:${ORANGE}"></span>growthterminal.io</div>
+    </div>
+  </div>`;
+}
+function reel_feature(r){
+  const people = listPeople();
+  if(!people.length) return null;
+  const pf = pick(people, r);
+  const bank = [
+    { kicker:'GROWTH DIAGNOSIS', head:'We name the one<br>constraint capping<br>your revenue.' },
+    { kicker:'DIAGNOSIS, NOT A DASHBOARD', head:'Your growth has<br>one real<br>bottleneck.' },
+    { kicker:'VERIFIED, NOT VIBES', head:'Priced, planned,<br>and graded against<br>real revenue.' },
+    { kicker:'THE ONE CONSTRAINT', head:'Stop guessing<br>where your growth<br>is stuck.' },
+  ];
+  const b = pick(bank, r);
+  return { rlayout:'feature', personImage: fileToDataUrl(pf), personMode: personMode(pf), person_file: path.basename(pf),
+    kicker:b.kicker, headline:b.head,
+    caption:`We find the one constraint capping your revenue, price the fix, and grade every call against real revenue. Diagnosis, not a dashboard. Run the free 60-second diagnostic.`,
+    first_comment:`What do you think your #1 constraint is right now?`,
+    sig:'reelfeat:'+stripHtml(b.head).slice(0,24) };
+}
+const REEL_FRAME = { card: cardFrame, countup: countupFrame, feature: featureReelFrame };
 
 function reel_card(r) {
   const bank = [
@@ -1461,12 +1504,13 @@ function reel_countup(r) {
   return { rlayout: 'countup', big: b.big, prefix: b.prefix, suffix: b.suffix, eyebrow: b.eyebrow, label: b.label,
     hook: `${b.prefix}${b.big}${b.suffix}`, caption: b.caption, first_comment: b.fc, sig: b.sig };
 }
-const REEL_GENERATORS = [reel_card, reel_card, reel_countup];
+const REEL_GENERATORS = [reel_card, reel_card, reel_countup, reel_feature];
 
 function buildReel(seed, recent) {
   const r = rng((seed ^ 0x5bd1e995) >>> 0);
   for (let a = 0; a < 40; a++) {
     const post = pick(REEL_GENERATORS, r)(r);
+    if (!post) continue;
     if (recent.includes(post.sig) && a < 30) continue;
     post.hashtags = tags(r);
     post.append_cta = pick(['\n\n→ growthterminal.io', '\n\nRun the free 60-second diagnostic, link in bio.',
@@ -1484,6 +1528,7 @@ async function renderReel(page, post, base) {
   for (let i = 0; i < N; i++) {
     const t = i / (N - 1);
     await page.setContent(`<!DOCTYPE html><html><head><meta charset="utf8"><style>*{margin:0;padding:0;box-sizing:border-box}</style></head><body>${fn(t, post)}</body></html>`, { waitUntil: 'domcontentloaded' });
+    try { await page.evaluate(() => document.fonts && document.fonts.ready); } catch (e) {}
     await page.screenshot({ path: path.join(framesDir, `f${String(i).padStart(3, '0')}.png`), clip });
   }
   await page.screenshot({ path: base + '.jpg', type: 'jpeg', quality: 92, clip }); // last frame = cover
