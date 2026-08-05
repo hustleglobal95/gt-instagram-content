@@ -37,5 +37,18 @@
       "markusreidgt": "17893106154665864"
     },
     "errors": {}
+  },
+  {
+    "at": "2026-08-04T23:59:54.640Z",
+    "text": "Growth has an order of operations:\n\n1. Find the one constraint limiting everything else\n2. Fix it until it's no longer the limit\n3. Re-diagnose, the constraint has moved\n\nMost businesses skip step 1 and wonder why effort doesn't turn into growth.",
+    "pillar": "constraint",
+    "kind": "systems",
+    "accounts": [
+      "markusreidgt"
+    ],
+    "ids": {
+      "markusreidgt": "17943245277274009"
+    },
+    "errors": {}
   }
 ]
