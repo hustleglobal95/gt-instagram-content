@@ -39,6 +39,8 @@
 // Usage:  node generate.js            -> writes creatives/<file>.jpg + meta.json
 //         node generate.js --preview N -> renders N samples to creatives/ for QA
 const { chromium } = require('playwright');
+// Satori renderer (fast, browser-free) for the ported static layouts; Playwright handles the rest.
+const { renderPostSatori, SATORI_LAYOUTS } = require('./satori/render_satori');
 const { execFileSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -307,8 +309,8 @@ function L_tweet(p) {
     <div style="display:flex;align-items:center;gap:24px;margin-bottom:40px">
       ${avatar}
       <div>
-        <div style="display:flex;align-items:center;gap:12px;font-size:40px;font-weight:800;letter-spacing:-.01em">Growth Terminal ${check}</div>
-        <div style="font-size:33px;color:#8a8f98;margin-top:3px">@growthterminal</div>
+        <div style="display:flex;align-items:center;gap:12px;font-size:36px;font-weight:800;letter-spacing:-.01em">Markus Reid · Growth Terminal.io ${check}</div>
+        <div style="font-size:33px;color:#8a8f98;margin-top:3px">@markusreidgt</div>
       </div>
     </div>
     <div style="font-size:${p.size || 62}px;font-weight:500;line-height:1.32;letter-spacing:-.01em;max-width:900px">${p.tweet}</div>
@@ -1377,6 +1379,8 @@ function buildProductPost(seed, recent) {
 
 // ---------- render one post to a JPEG ----------
 async function renderPost(page, post, outBase) {
+  // Ported layouts render with Satori (no headless browser); everything else falls through to Playwright.
+  if (SATORI_LAYOUTS.has(post.layout)) { await renderPostSatori(post, outBase); return; }
   const html = `<!DOCTYPE html><html><head><meta charset="utf8"><style>${FONTS}${CSS}</style></head><body>${RENDER[post.layout](post)}</body></html>`;
   await page.setContent(html, { waitUntil: 'networkidle' });
   try { await page.evaluate(() => document.fonts && document.fonts.ready); } catch (e) {}
