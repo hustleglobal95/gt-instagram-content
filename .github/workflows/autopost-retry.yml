@@ -1,0 +1,63 @@
+name: Autoposter Retry (self-healing)
+
+# WHY THIS EXISTS
+# ---------------
+# When GitHub Actions has a hiccup (like the "Failed to resolve action download
+# info / Service Unavailable" outage), your autoposter run fails in the SETUP
+# phase, before any of your code runs, and a scheduled post gets skipped.
+#
+# This workflow watches the autoposter. The moment a run finishes with FAILURE,
+# it waits for GitHub Actions to be healthy again and automatically re-runs the
+# failed jobs. It uses ONLY the built-in GITHUB_TOKEN (nothing of yours is
+# stored) and pure `gh` + `curl` (NO `uses:` actions), so it can't be taken down
+# by the same "can't download actions" problem that breaks the main workflow.
+#
+# SETUP: drop this file in .github/workflows/ next to autopost.yml, then push to
+# your default branch (workflow_run triggers only fire from the default branch).
+
+on:
+  workflow_run:
+    workflows: ["GT Auto-Post (4x/day)"]   # must match the `name:` in autopost.yml exactly
+    types: [completed]
+
+permissions:
+  actions: write      # needed to re-run a workflow
+  contents: read
+
+jobs:
+  retry:
+    # Only act when the autoposter FAILED, and cap auto-retries so a genuine code
+    # bug can't loop forever. run_attempt 1 -> up to 2 automatic retries (max 3 total).
+    if: >
+      github.event.workflow_run.conclusion == 'failure' &&
+      github.event.workflow_run.run_attempt < 3
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+      RUN_ID:   ${{ github.event.workflow_run.id }}
+      ATTEMPT:  ${{ github.event.workflow_run.run_attempt }}
+    steps:
+      - name: Wait for Actions to recover, then re-run the failed post
+        run: |
+          set -e
+          echo "Autoposter run $RUN_ID failed (attempt $ATTEMPT). Starting self-heal..."
+
+          # Wait out any GitHub Actions outage: poll the public status page for up
+          # to ~15 minutes, proceeding as soon as Actions reports operational.
+          for i in $(seq 1 15); do
+            status=$(curl -sf https://www.githubstatus.com/api/v2/summary.json \
+                     | jq -r '.components[] | select(.name=="Actions") | .status' 2>/dev/null || echo unknown)
+            echo "check $i/15: GitHub Actions status = ${status}"
+            if [ "$status" = "operational" ]; then
+              echo "Actions is healthy again."
+              break
+            fi
+            sleep 60
+          done
+
+          # Small extra cushion for any lingering blip, then re-run only the
+          # failed jobs of the original run (won't double-post: it never posted).
+          sleep 30
+          echo "Re-running failed jobs for run $RUN_ID ..."
+          gh run rerun "$RUN_ID" --failed || gh run rerun "$RUN_ID"
+          echo "Re-run requested. Attempt $ATTEMPT of max 3."
