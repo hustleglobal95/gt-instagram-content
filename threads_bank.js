@@ -163,4 +163,55 @@ const FORMATS = [
   { pillar: 'product', kind: 'product', render: () => `We built Growth Terminal for one reason:\n\nEvery business we looked at already had the answer in its own data, and no way to see it.\n\nThe constraint was never information. It was interpretation.` },
 ];
 
-module.exports = { FORMATS, SYMPTOM_DISEASE, CEILINGS, SOFT_CTA };
+// =====================================================================
+// THREAD FORMATS — reply-chain deep-dives (the "Threads Challenge" franchise).
+// A thread format has thread() -> [hook, reply1, reply2, ...] instead of render().
+// The hook stops the scroll; the replies teach a full framework. Each part is a
+// separate published post chained via reply_to_id. Every part must be <=500 chars.
+// These are what make @markusreidgt read as THE growth-marketing voice, not a tips
+// account. Add more here to run deep-dives more often; they rotate like any format.
+// =====================================================================
+const THREADS = [
+  // The four ceilings — the signature systems teardown
+  { pillar: 'systems', kind: 'thread', thread: () => [
+    `Every business hits one of four growth ceilings.\n\nMost try to scale through the wrong one, then wonder why the effort never moves revenue.\n\nHere's how to tell which one is capping you.`,
+    `1. Lead generation\n\nNot enough of the right people are finding you.\n\nTell: pipeline stays thin no matter how hard the team sells. The fix is upstream of sales, not inside it.`,
+    `2. Sales conversion\n\nInterest is fine, the yes isn't landing.\n\nTell: a lot of "let me think about it." Usually an offer or positioning problem wearing a lead-gen costume.`,
+    `3. Delivery capacity\n\nYou could sell more than you can deliver well.\n\nTell: growth makes quality slip. Selling harder here just books future churn.`,
+    `4. Retention\n\nYou refill a leaking bucket every month.\n\nTell: revenue is flat while acquisition is up. The most expensive ceiling, and the one owners look at last.`,
+    `Find your ceiling before you scale.\n\nScaling the wrong one doesn't grow you, it makes the bottleneck worse.\n\nName the one that's actually capping you, fix it, then re-diagnose. The ceiling always moves.`,
+  ] },
+
+  // Find your constraint in 10 minutes — the playbook teardown
+  { pillar: 'constraint', kind: 'thread', thread: () => [
+    `You can find the one thing capping your growth in about 10 minutes.\n\nNo tools. No consultant. Just your own numbers.\n\nHere's the exact process.`,
+    `Step 1: List your funnel stages, in order.\n\nVisitor, lead, qualified, customer, repeat. Whatever yours are, write them down left to right.`,
+    `Step 2: Put the conversion rate between each stage.\n\nRough numbers are fine. You're looking for the shape, not the decimals.`,
+    `Step 3: Find the biggest drop.\n\nThe stage where the most people fall out, relative to the ones around it, is your constraint. That's where the money is leaking.`,
+    `Step 4: Price it.\n\nIf that stage converted like its neighbors, how much more revenue would you have? That gap is what the constraint is costing you per year.`,
+    `Now you have the one move that matters, ranked above everything else.\n\nMost businesses skip this and burn a whole quarter optimizing a stage that was never the problem.`,
+  ] },
+
+  // The 5 numbers under revenue — the forecasting teardown
+  { pillar: 'forecasting', kind: 'thread', thread: () => [
+    `Revenue feels random until you find the 4–5 numbers underneath it.\n\nThen next quarter stops being a guess and starts being a calculation.\n\nHere are the five.`,
+    `1. Qualified leads in.\n\nNot all leads, the ones that actually fit. Garbage in, garbage forecast.`,
+    `2. Conversion rate.\n\nLead to customer. This is where most "marketing problems" are actually hiding.`,
+    `3. Average deal size.\n\nThe quietest lever. A pricing or packaging change moves this without a single new lead.`,
+    `4. Churn.\n\nEvery point of churn is a tax on every future month. Small changes compound hard.`,
+    `5. Cycle time.\n\nHow long from first touch to cash. Shorten it and everything upstream gets cheaper.`,
+    `Move those five and revenue moves.\n\nWatch revenue alone and you're always a quarter late, reacting to a number that's already set.`,
+  ] },
+
+  // Business Solutions deep-dive — teaches, then sells the done-for-you line
+  { pillar: 'solution', kind: 'thread', thread: () => [
+    `Most growth advice stops at the diagnosis.\n\nThe hard part was never knowing what's wrong. It's having the time and the system to actually fix it.\n\nHere's what closes that gap.`,
+    `A diagnosis names the constraint.\n\nBut a name doesn't ship. Someone has to build the 90-day plan and run it, while you keep the business running.`,
+    `That's the trap most owners are in. They can see the problem clearly. They just can't bolt another full-time job onto their week to fix it.`,
+    `Three ways through it:\n\n• Do it yourself with a template\n• Run the diagnostic and execute in-house\n• Have us build and run the whole system`,
+    `Whichever rung you're on, the thinking is identical: name the one constraint, price the fix, and grade the call against your real revenue.`,
+    `That's Growth Terminal. Diagnosis-first, done at whatever level you need.\n\nStart free, scale to done-for-you when you're ready.\n\ngrowthterminal.io`,
+  ] },
+];
+
+module.exports = { FORMATS, THREADS, SYMPTOM_DISEASE, CEILINGS, SOFT_CTA };
