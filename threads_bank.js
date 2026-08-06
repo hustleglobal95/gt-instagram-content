@@ -9,6 +9,13 @@
  * new format here. Voice rules live in GT_THREADS_VOICE.md.
  *
  * Every format returns finished post text (<=500 chars, short lines, no hashtags).
+ *
+ * MIX (what @markusreidgt reps): mostly TEACHING — aphorisms, playbooks, systems,
+ * operator-voice authority — so Markus Reid becomes a growth-marketing voice.
+ * Business-Solutions posts (kind:'solution') sell the done-for-you line, but as a
+ * consequence of an insight, with a soft growthterminal.io sign-off. They're ~1 in 6
+ * of the bank on purpose; teaching earns the follow, the follow buys the solution.
+ * CTAs appear ONLY on solution posts. Everything else leaves the reader smarter.
  */
 
 // ---------------- content pools (slot variety) ----------------
@@ -23,6 +30,14 @@ const SYMPTOM_DISEASE = [
 
 const CEILINGS = ['Lead generation', 'Sales conversion', 'Delivery capacity', 'Retention', 'Cash flow', 'Hiring'];
 
+// soft, non-pitchy sign-offs — used ONLY on kind:'solution' posts
+const SOFT_CTA = [
+  `growthterminal.io`,
+  `Diagnose your #1 constraint free → growthterminal.io`,
+  `We build and run it for you. growthterminal.io`,
+  `One system, every way in → growthterminal.io`,
+];
+
 const pick = (arr) => arr[Math.floor(Math.random() * arr.length)];
 const pickN = (arr, n) => {
   const a = [...arr];
@@ -32,7 +47,8 @@ const pickN = (arr, n) => {
 };
 
 // ---------------- formats ----------------
-// kind: aphorism | systems | authority | diagnostic | progression | formula | bi | mistake | product
+// kind: aphorism | systems | authority | diagnostic | progression | formula | bi
+//     | mistake | product | reframe | hook | framework | playbook | operator | solution
 const FORMATS = [
   // --- Aphorism / contrast ---
   { pillar: 'constraint', kind: 'aphorism', render: () => `Revenue problems are usually symptoms.\nConstraints are the disease.` },
@@ -84,43 +100,67 @@ const FORMATS = [
   // --- Core formula (surprise -> misread -> framework -> takeaway) ---
   { pillar: 'constraint', kind: 'formula', render: () => `Most businesses don't need more customers.\nThey need fewer hidden bottlenecks.\n\nEvery company has one constraint that limits everything else:\n• Sales\n• Fulfillment\n• Cash flow\n• Hiring\n\nFind that constraint first. Everything else gets easier.` },
 
-  // --- Product as consequence (~1 in 10) ---
-  { pillar: 'product', kind: 'product', render: () => `We built Growth Terminal for one reason:\n\nEvery business we looked at already had the answer in its own data, and no way to see it.\n\nThe constraint was never information. It was interpretation.` },
-
   // =====================================================================
-  // CALIBRATED formats, the structures actually winning on Threads
-  // (foundr / hormozi / audienceassetlab). Weighted heavily on purpose.
+  // CALIBRATED reframe formats (foundr / hormozi structures)
   // =====================================================================
-
-  // "Stop X before Y.", imperative reframe (top performer)
   { pillar: 'constraint', kind: 'reframe', render: () => `Stop scaling the channel before you've fixed the funnel.` },
   { pillar: 'mistake', kind: 'reframe', render: () => `Stop hiring before you've fixed the process.\n\nMore people in a broken process just buys a more expensive bottleneck.` },
   { pillar: 'bi', kind: 'reframe', render: () => `Stop buying traffic you can't measure.\n\nYou're not growing.\n\nYou're funding a leak you can't see.` },
   { pillar: 'decision', kind: 'reframe', render: () => `Stop optimizing the metric that isn't the constraint.\n\nEverything else is just motion.` },
-
-  // "X without Y is just Z.", the contrast punch
   { pillar: 'constraint', kind: 'reframe', render: () => `Growth without a diagnosis is just expensive guessing.` },
   { pillar: 'decision', kind: 'reframe', render: () => `A dashboard without a decision is just decoration.` },
   { pillar: 'bi', kind: 'reframe', render: () => `Data without interpretation is just noise with confidence.` },
   { pillar: 'constraint', kind: 'reframe', render: () => `More traffic without conversion is just a bigger leak.` },
-
-  // "X is just [reframe]." / "X isn't a problem. It's a [reframe]."
   { pillar: 'constraint', kind: 'reframe', render: () => `A revenue problem is just a constraint you haven't named yet.` },
   { pillar: 'mistake', kind: 'reframe', render: () => `Most marketing problems are just operations problems with better lighting.` },
   { pillar: 'mistake', kind: 'reframe', render: () => `Losing a bad-fit customer isn't churn.\n\nIt's a filter.` },
   { pillar: 'constraint', kind: 'reframe', render: () => `The business that scales doesn't need more customers.\n\nIt needs fewer bottlenecks.` },
-
-  // "Fastest way to X: [one surprising answer].", colon hook
   { pillar: 'constraint', kind: 'hook', render: () => `Fastest way to grow:\n\nFix the slowest step.` },
   { pillar: 'decision', kind: 'hook', render: () => `Fastest way to waste a budget:\n\nScale before you diagnose.` },
   { pillar: 'bi', kind: 'hook', render: () => `Fastest way to find the bottleneck:\n\nFollow the money to the stage it stops moving.` },
-
-  // Framework + staccato triad closer (hormozi "Promote. Deliver. Build.")
   { pillar: 'systems', kind: 'framework', render: () => `Every business runs on the same loop:\n\nGet attention.\nConvert it.\nKeep it.\n\nMost break at step 2, and spend all their money on step 1.` },
   { pillar: 'constraint', kind: 'framework', render: () => `Fixing growth is three moves:\n\nName the constraint.\nFix it.\nRe-diagnose.\n\nThe constraint always moves. Most people stop after one.` },
-
-  // Observed-pattern authority (real, un-fakeable angle)
   { pillar: 'mistake', kind: 'authority', render: () => `We keep seeing the same thing across businesses:\n\nThe leak is never where the owner is looking.\n\nIt's one stage upstream.` },
+
+  // =====================================================================
+  // GROWTH-MARKETING PLAYBOOKS — well-structured, actually-teach-something tips.
+  // This is the "gold mine": every one leaves the reader able to do the thing.
+  // =====================================================================
+  { pillar: 'systems', kind: 'playbook', render: () => `How to find your growth constraint in 10 minutes:\n\n1. List your funnel stages\n2. Write the conversion rate between each\n3. Find the biggest drop\n\nThat drop is costing you the most. Fix it before you touch anything else.` },
+  { pillar: 'forecasting', kind: 'playbook', render: () => `The 5 numbers that actually drive revenue:\n\n• Qualified leads in\n• Conversion rate\n• Average deal size\n• Churn\n• Sales cycle length\n\nMove these and revenue moves. Watch revenue alone and you're always a quarter behind.` },
+  { pillar: 'constraint', kind: 'playbook', render: () => `Retention is a math problem before it's a loyalty problem.\n\nKeep 90% of customers a month and you lose a third in a year.\nAt 95%, you lose half that.\n\nA 5-point retention gain beats most ad campaigns. Nobody budgets for it.` },
+  { pillar: 'mistake', kind: 'playbook', render: () => `Before you raise your budget, raise your offer.\n\nA stronger offer lifts every number downstream: click, convert, close, retain.\n\nMost "traffic problems" are offer problems in disguise.` },
+  { pillar: 'constraint', kind: 'playbook', render: () => `Pricing is the fastest lever you have.\n\nNo new leads. No new headcount.\nA 10% price increase drops almost straight to margin.\n\nMost businesses are underpriced, because they never actually tested it.` },
+  { pillar: 'mistake', kind: 'playbook', render: () => `Activation is where quiet churn starts.\n\nIf a new customer doesn't hit their first win fast, they're already gone, they just haven't told you yet.\n\nFix the first week before you spend another dollar on acquisition.` },
+  { pillar: 'decision', kind: 'playbook', render: () => `Don't optimize every metric. Pick one per stage:\n\n• Top: qualified leads\n• Middle: conversion rate\n• Bottom: retention\n\nOne number per stage keeps the team on the constraint, not the noise.` },
+  { pillar: 'decision', kind: 'playbook', render: () => `A one-line test for any growth idea:\n\nDoes it fix the constraint, or just add motion?\n\nIf it doesn't move the one stage that's stuck, it's activity, not growth.` },
+
+  // =====================================================================
+  // OPERATOR VOICE — Markus, first-person, thinking in public. Builds the
+  // person as a growth-marketing voice, not just the product.
+  // =====================================================================
+  { pillar: 'constraint', kind: 'operator', render: () => `I've looked at hundreds of businesses.\n\nThe leak is almost never where the owner is looking.\n\nIt's one stage upstream, in the number nobody watches.` },
+  { pillar: 'mistake', kind: 'operator', render: () => `The mistake I see most:\n\nScaling the channel before fixing the funnel.\n\nMore traffic into a leak doesn't grow you. It just makes the leak more expensive.` },
+  { pillar: 'decision', kind: 'operator', render: () => `Every founder I talk to wants a growth tactic.\n\nAlmost none can name their #1 constraint.\n\nThe tactic doesn't matter until you know which lever is actually stuck.` },
+  { pillar: 'forecasting', kind: 'operator', render: () => `I stopped trusting revenue as a metric years ago.\n\nIt's a lagging output. By the time it moves, the decision that moved it is a quarter old.\n\nI watch the 4–5 inputs instead.` },
+  { pillar: 'constraint', kind: 'operator', render: () => `The businesses that scale fastest aren't doing more.\n\nThey found the one bottleneck, removed it, then found the next.\n\nSubtraction, not addition. Almost nobody runs it that way.` },
+
+  // =====================================================================
+  // BUSINESS SOLUTIONS — value-first, ends in the done-for-you consequence.
+  // The ONLY posts that carry a soft growthterminal.io sign-off. ~1 in 6.
+  // =====================================================================
+  { pillar: 'solution', kind: 'solution', render: () => `Most owners can find the constraint.\nFewer have the time to fix it.\n\nThat's the whole reason Business Solutions exists: we run the diagnosis, build the 90-day plan, and grade it against your real revenue.\n\nYou stay in your zone. The fix still ships.\n\n${SOFT_CTA[0]}` },
+  { pillar: 'solution', kind: 'solution', render: () => `Every missed call is pipeline walking out the door.\n\nWe build AI voice agents that answer 24/7 in your brand voice, qualify the caller, and book the meeting.\n\nNo lead waits. No call lost.\n\n${SOFT_CTA[2]}` },
+  { pillar: 'solution', kind: 'solution', render: () => `Your AI shouldn't discount to close.\n\nWe build custom assistants trained on your business: they hold your price, work the objection, and update your pipeline.\n\nA trained teammate, not a toy chatbot.\n\n${SOFT_CTA[0]}` },
+  { pillar: 'solution', kind: 'solution', render: () => `Consistency isn't willpower. It's a system.\n\nOur content engine builds on-brand posts from your creative bank and publishes daily across every platform, then sharpens on what performs.\n\nYour feed stops going dark.\n\n${SOFT_CTA[0]}` },
+  { pillar: 'solution', kind: 'solution', render: () => `You don't need ten vendors.\n\nYou need one system that diagnoses the constraint, then builds and runs the fix.\n\nDiagnose it yourself, grab a template, or have us run the whole thing.\n\n${SOFT_CTA[3]}` },
+  { pillar: 'solution', kind: 'solution', render: () => `Not ready for the full engine?\n\nStart with a template. Ready-made Google Sheets for pricing, retention, and forecasting.\n\nCopy in your numbers, get answers today. From $79.\n\n${SOFT_CTA[0]}` },
+  { pillar: 'solution', kind: 'solution', render: () => `A diagnosis is step one.\n\nThen someone has to build the plan and run it. That's where most growth dies, in the execution, not the insight.\n\nWe do both, and grade the outcome against real revenue.\n\n${SOFT_CTA[1]}` },
+  { pillar: 'solution', kind: 'solution', render: () => `Sometimes the constraint is you.\n\nNot as a failing, as a math problem: the owner has only so many hours, and the fix needs more.\n\nDone-for-you exists for exactly that. We run the plan so growth doesn't wait on your calendar.\n\n${SOFT_CTA[0]}` },
+  { pillar: 'solution', kind: 'solution', render: () => `You can start free and never pay us a cent.\n\nRun the 60-second diagnostic. Grab a $79 template. Or, when you want it handled, we build and run the whole system.\n\nSame diagnosis-first thinking, every rung of the ladder.\n\n${SOFT_CTA[0]}` },
+
+  // --- Product as consequence (the original, kept) ---
+  { pillar: 'product', kind: 'product', render: () => `We built Growth Terminal for one reason:\n\nEvery business we looked at already had the answer in its own data, and no way to see it.\n\nThe constraint was never information. It was interpretation.` },
 ];
 
-module.exports = { FORMATS, SYMPTOM_DISEASE, CEILINGS };
+module.exports = { FORMATS, SYMPTOM_DISEASE, CEILINGS, SOFT_CTA };
