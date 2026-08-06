@@ -8,6 +8,9 @@
     "preview": "node generate.js --preview 8"
   },
   "dependencies": {
-    "playwright": "^1.47.0"
+    "playwright": "^1.47.0",
+    "satori": "^0.12.0",
+    "@resvg/resvg-js": "^2.6.2",
+    "sharp": "^0.33.5"
   }
 }
