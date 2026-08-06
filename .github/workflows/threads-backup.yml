@@ -6,11 +6,12 @@ name: Threads Backup (missed-post catcher)
 # in-progress OR queued Threads run in the recent window.
 # Uses only the built-in GITHUB_TOKEN and gh (no `uses:`, no stored secrets).
 # Put in .github/workflows/ and push to the default branch.
-# Threads posts at 15:00 / 19:00 / 23:00 UTC; backup checks at :20 past each.
+# Threads now posts 5x/day at 01/13/16/19/22 UTC (:08); backup checks at :28 past each.
+# (When Florida moves to EST on Nov 2 2026, add 1 hour to each UTC hour below.)
 
 on:
   schedule:
-    - cron: '20 15,19,23 * * *'
+    - cron: '28 1,13,16,19,22 * * *'
   workflow_dispatch:
 
 permissions:
