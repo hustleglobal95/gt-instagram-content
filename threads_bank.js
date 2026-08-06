@@ -38,6 +38,7 @@ const SOFT_CTA = [
   `One system, every way in → growthterminal.io`,
 ];
 
+const art = (w) => (/^[aeiou]/i.test(w) ? 'an' : 'a'); // a/an by first letter, so "an offer problem" reads right
 const pick = (arr) => arr[Math.floor(Math.random() * arr.length)];
 const pickN = (arr, n) => {
   const a = [...arr];
@@ -59,7 +60,7 @@ const FORMATS = [
   { pillar: 'mistake', kind: 'aphorism', render: () => `Adding features usually slows growth.\n\nEvery new feature is one more thing that can break, confuse, or distract.` },
   { pillar: 'mistake', kind: 'aphorism', render: () => {
       const s = pick(SYMPTOM_DISEASE);
-      return `Most owners think it's a ${s.symptom} problem.\nUsually it's a ${s.constraint} problem.\n\nThe symptom is where it hurts. The constraint is where you fix it.`;
+      return `Most owners think it's ${art(s.symptom)} ${s.symptom} problem.\nUsually it's ${art(s.constraint)} ${s.constraint} problem.\n\nThe symptom is where it hurts. The constraint is where you fix it.`;
     } },
 
   // --- Systems lists ---
@@ -74,7 +75,7 @@ const FORMATS = [
   // --- Authority (the un-fakeable one) ---
   { pillar: 'mistake', kind: 'authority', render: () => {
       const s = pick(SYMPTOM_DISEASE);
-      return `After analyzing hundreds of businesses, one pattern keeps showing up:\n\nMost think they have a ${s.symptom} problem.\nMost actually have a ${s.constraint} problem.\n\nThe symptom is loud. The constraint is quiet. Growth lives in the quiet one.`;
+      return `After analyzing hundreds of businesses, one pattern keeps showing up:\n\nMost think they have ${art(s.symptom)} ${s.symptom} problem.\nMost actually have ${art(s.constraint)} ${s.constraint} problem.\n\nThe symptom is loud. The constraint is quiet. Growth lives in the quiet one.`;
     } },
   { pillar: 'constraint', kind: 'authority', render: () => `The most common thing we see across businesses:\n\nThey're spending to grow the part of the funnel that already works, \nand starving the part that's actually broken.` },
 
