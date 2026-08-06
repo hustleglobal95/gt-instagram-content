@@ -8,9 +8,10 @@ name: Autoposter Retry (self-healing)
 #
 # This workflow watches the autoposter. The moment a run finishes with FAILURE,
 # it waits for GitHub Actions to be healthy again and automatically re-runs the
-# failed jobs. It uses ONLY the built-in GITHUB_TOKEN (nothing of yours is
-# stored) and pure `gh` + `curl` (NO `uses:` actions), so it can't be taken down
-# by the same "can't download actions" problem that breaks the main workflow.
+# failed jobs, then pings you that a self-heal happened. It uses ONLY the
+# built-in GITHUB_TOKEN (nothing of yours is stored) and pure `gh` + `curl`
+# (NO `uses:` actions), so it can't be taken down by the same "can't download
+# actions" problem that breaks the main workflow.
 #
 # SETUP: drop this file in .github/workflows/ next to autopost.yml, then push to
 # your default branch (workflow_run triggers only fire from the default branch).
@@ -21,7 +22,8 @@ on:
     types: [completed]
 
 permissions:
-  actions: write      # needed to re-run a workflow
+  actions: write      # re-run a workflow
+  issues: write       # fallback heads-up ping (see notify step)
   contents: read
 
 jobs:
@@ -36,6 +38,7 @@ jobs:
       GH_TOKEN: ${{ github.token }}
       RUN_ID:   ${{ github.event.workflow_run.id }}
       ATTEMPT:  ${{ github.event.workflow_run.run_attempt }}
+      RUN_URL:  ${{ github.event.workflow_run.html_url }}
     steps:
       - name: Wait for Actions to recover, then re-run the failed post
         run: |
@@ -48,16 +51,30 @@ jobs:
             status=$(curl -sf https://www.githubstatus.com/api/v2/summary.json \
                      | jq -r '.components[] | select(.name=="Actions") | .status' 2>/dev/null || echo unknown)
             echo "check $i/15: GitHub Actions status = ${status}"
-            if [ "$status" = "operational" ]; then
-              echo "Actions is healthy again."
-              break
-            fi
+            if [ "$status" = "operational" ]; then echo "Actions is healthy again."; break; fi
             sleep 60
           done
 
-          # Small extra cushion for any lingering blip, then re-run only the
-          # failed jobs of the original run (won't double-post: it never posted).
+          # Small extra cushion, then re-run only the failed jobs of the original
+          # run (won't double-post: a failed run never posted).
           sleep 30
           echo "Re-running failed jobs for run $RUN_ID ..."
           gh run rerun "$RUN_ID" --failed || gh run rerun "$RUN_ID"
           echo "Re-run requested. Attempt $ATTEMPT of max 3."
+
+      - name: Heads-up ping
+        if: always()
+        env:
+          SLACK: ${{ secrets.SLACK_WEBHOOK_URL }}   # optional: add this repo secret to get Slack pings
+        run: |
+          MSG="Autoposter self-healed: run ${RUN_ID} failed (attempt ${ATTEMPT}) and was automatically re-run. ${RUN_URL}"
+          echo "$MSG" >> "$GITHUB_STEP_SUMMARY"
+          if [ -n "$SLACK" ]; then
+            curl -sf -X POST -H 'Content-type: application/json' \
+              --data "$(jq -n --arg t "$MSG" '{text:$t}')" "$SLACK" || echo "slack notify failed"
+          else
+            # No Slack webhook set -> open a GitHub issue instead. GitHub emails
+            # repo watchers, so you still get a heads-up in your inbox.
+            gh issue create --title "Autoposter self-healed ($(date -u +%Y-%m-%dT%H:%MZ))" \
+              --body "$MSG" || echo "issue notify failed"
+          fi

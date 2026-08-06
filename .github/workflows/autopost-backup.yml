@@ -1,0 +1,82 @@
+name: Autoposter Backup (missed-post catcher)
+
+# WHY THIS EXISTS
+# ---------------
+# Sometimes GitHub silently DROPS a scheduled cron (under load, or during an
+# outage the run never even gets created) — so there's no "failed run" for the
+# retry workflow to catch. This backup runs ~20 minutes after each scheduled
+# post and asks a simple question: "did the main autoposter actually run this
+# slot?" If yes (succeeded, or is still running), it does nothing. If no, it
+# fires a catch-up post and pings you.
+#
+# It will NOT double-post: it only triggers when there is no successful OR
+# in-progress OR queued primary run in the recent window.
+#
+# Uses only the built-in GITHUB_TOKEN and `gh` (no `uses:`, no stored secrets).
+# SETUP: put in .github/workflows/ next to autopost.yml and push to the default
+# branch. Backup times mirror the primary's :07 slots, 20 min later (:27).
+# (Same DST note as autopost.yml: these UTC times are EDT/UTC-4; when Florida
+#  switches to EST on Nov 2 2026, add 1 hour to each so the local times hold.)
+
+on:
+  schedule:
+    - cron: '27 13 * * *'   # ~20 min after the ~9:07 AM Florida post
+    - cron: '27 17 * * *'   # ~20 min after the ~1:07 PM Florida post
+    - cron: '27 21 * * *'   # ~20 min after the ~5:07 PM Florida post
+    - cron: '27 1 * * *'    # ~20 min after the ~9:07 PM Florida post
+  workflow_dispatch:
+
+permissions:
+  actions: write      # list runs + trigger the primary workflow
+  issues: write       # fallback heads-up ping
+  contents: read
+
+concurrency:
+  group: gt-autopost-backup
+  cancel-in-progress: false
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+      WF: "GT Auto-Post (4x/day)"   # must match the primary workflow's `name:`
+    steps:
+      - name: Fire a catch-up post only if this slot was missed
+        run: |
+          set -e
+          # Pull the primary workflow's runs from the last ~40 minutes.
+          FILTER="[.[] | select(.workflowName==\"$WF\") | select((now - (.createdAt|fromdateiso8601)) < 2400)]"
+          recent=$(gh run list --limit 40 \
+                   --json databaseId,status,conclusion,createdAt,workflowName \
+                   --jq "$FILTER")
+          echo "Primary runs in the last ~40 min: $(echo "$recent" | jq 'length')"
+
+          # If any recent primary run succeeded, is queued, or is in progress,
+          # the slot is covered — do nothing (this is what prevents double posts).
+          covered=$(echo "$recent" | jq '[.[] | select(.status=="queued" or .status=="in_progress" or .conclusion=="success")] | length')
+          if [ "${covered:-0}" -gt 0 ]; then
+            echo "Primary already posted or is running this slot — backup not needed."
+            exit 0
+          fi
+
+          echo "No successful/pending primary run found — firing a catch-up post."
+          # Re-uses the exact primary pipeline via workflow_dispatch.
+          # If your workflow filename isn't picked up by name, the fallback uses autopost.yml.
+          gh workflow run "$WF" || gh workflow run autopost.yml
+          echo "FIRED=1" >> "$GITHUB_ENV"
+
+      - name: Heads-up ping (only if the backup fired)
+        if: env.FIRED == '1'
+        env:
+          SLACK: ${{ secrets.SLACK_WEBHOOK_URL }}   # optional: add this repo secret for Slack pings
+        run: |
+          MSG="Autoposter backup fired: the scheduled post looked missed, so a catch-up run was triggered. ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions"
+          echo "$MSG" >> "$GITHUB_STEP_SUMMARY"
+          if [ -n "$SLACK" ]; then
+            curl -sf -X POST -H 'Content-type: application/json' \
+              --data "$(jq -n --arg t "$MSG" '{text:$t}')" "$SLACK" || echo "slack notify failed"
+          else
+            gh issue create --title "Autoposter backup fired ($(date -u +%Y-%m-%dT%H:%MZ))" \
+              --body "$MSG" || echo "issue notify failed"
+          fi
