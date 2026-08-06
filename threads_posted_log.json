@@ -89,5 +89,22 @@
       "markusreidgt": "18111913768890054"
     },
     "errors": {}
+  },
+  {
+    "at": "2026-08-06T01:17:29.736Z",
+    "text": "Pricing is the fastest lever you have.\n\nNo new leads. No new headcount.\nA 10% price increase drops almost straight to margin.\n\nMost businesses are underpriced, because they never actually tested it.",
+    "parts": [
+      "Pricing is the fastest lever you have.\n\nNo new leads. No new headcount.\nA 10% price increase drops almost straight to margin.\n\nMost businesses are underpriced, because they never actually tested it."
+    ],
+    "isThread": false,
+    "pillar": "constraint",
+    "kind": "playbook",
+    "accounts": [
+      "markusreidgt"
+    ],
+    "ids": {
+      "markusreidgt": "18089817311555753"
+    },
+    "errors": {}
   }
 ]
