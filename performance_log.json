@@ -1,6 +1,6 @@
 {
-  "updated": "2026-08-05T08:01:09.517918Z",
-  "count": 34,
+  "updated": "2026-08-06T08:00:01.061405Z",
+  "count": 40,
   "posts": [
     {
       "sig": "card:Activation",
@@ -15,6 +15,42 @@
         "reactions": 0,
         "comments": 0,
         "shares": 1,
+        "reach": 0,
+        "engagement": 1
+      },
+      "engagement": 1
+    },
+    {
+      "sig": "svcm:That is Growth Terminal.Diagnosi",
+      "layout": "edmanifesto",
+      "file": "creatives/gt_auto_20260805_205355.jpg",
+      "is_reel": false,
+      "at": "2026-08-05T20:53:58.406284Z",
+      "caption": "You do not need ten vendors. You need one system that diagnoses the constraint, then builds and runs the fix. Diagnosis,",
+      "permalink": "",
+      "ig": null,
+      "fb": {
+        "reactions": 1,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 1
+      },
+      "engagement": 1
+    },
+    {
+      "sig": "reelfeat:We name the one constrai",
+      "layout": "reel:feature",
+      "file": "creatives/gt_reel_20260806_001147.jpg",
+      "is_reel": true,
+      "at": "2026-08-06T00:13:35.582903Z",
+      "caption": "We find the one constraint capping your revenue, price the fix, and grade every call against real revenue. Diagnosis, no",
+      "permalink": "",
+      "ig": null,
+      "fb": {
+        "reactions": 1,
+        "comments": 0,
+        "shares": 0,
         "reach": 0,
         "engagement": 1
       },
@@ -559,9 +595,89 @@
         "engagement": 0
       },
       "engagement": 0
+    },
+    {
+      "sig": "edm:We rank them.The #1 constraint on yo",
+      "layout": "edmanifesto",
+      "file": "creatives/gt_auto_20260805_130106.jpg",
+      "is_reel": false,
+      "at": "2026-08-05T13:01:09.074200Z",
+      "caption": "You can find ten things to fix. You can only afford to fix one well.\n\nWe rank them. Growth Terminal ranks the twelve pla",
+      "permalink": "",
+      "ig": null,
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 0
+    },
+    {
+      "sig": "reelnum:140",
+      "layout": "reel:countup",
+      "file": "creatives/gt_reel_20260805_170113.jpg",
+      "is_reel": true,
+      "at": "2026-08-05T17:01:38.626633Z",
+      "caption": "Every diagnosis ends with a dollar range, not a vibe. A real number on a real constraint, so you decide with a figure in",
+      "permalink": "",
+      "ig": null,
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 0
+    },
+    {
+      "sig": "eds:Stop guessingwhich lever to pull.",
+      "layout": "edserif",
+      "file": "creatives/gt_auto_20260805_210113.jpg",
+      "is_reel": false,
+      "at": "2026-08-05T21:01:18.475550Z",
+      "caption": "Stop guessing which lever to pull.\n\nYou already have the data, you are missing the diagnosis. Growth Terminal reads what",
+      "permalink": "",
+      "ig": null,
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 0
+    },
+    {
+      "sig": "svcm:So we answer them.AI voice agent",
+      "layout": "edmanifesto",
+      "file": "creatives/gt_auto_20260806_010125.jpg",
+      "is_reel": false,
+      "at": "2026-08-06T01:01:27.201543Z",
+      "caption": "Every missed call is pipeline walking out the door. Growth Terminal builds AI voice agents that answer 24/7 in your bran",
+      "permalink": "",
+      "ig": null,
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 0
     }
   ],
   "by_format": [
+    {
+      "layout": "reel:feature",
+      "posts": 1,
+      "engagement": 1,
+      "ig_engagement": 0,
+      "fb_engagement": 1,
+      "avg_engagement": 1.0
+    },
     {
       "layout": "card",
       "posts": 2,
@@ -569,6 +685,14 @@
       "ig_engagement": 0,
       "fb_engagement": 1,
       "avg_engagement": 0.5
+    },
+    {
+      "layout": "edmanifesto",
+      "posts": 3,
+      "engagement": 1,
+      "ig_engagement": 0,
+      "fb_engagement": 1,
+      "avg_engagement": 0.3
     },
     {
       "layout": "stat",
@@ -620,7 +744,7 @@
     },
     {
       "layout": "reel:countup",
-      "posts": 4,
+      "posts": 5,
       "engagement": 0,
       "ig_engagement": 0,
       "fb_engagement": 0,
@@ -661,6 +785,14 @@
     {
       "layout": "prodshot",
       "posts": 2,
+      "engagement": 0,
+      "ig_engagement": 0,
+      "fb_engagement": 0,
+      "avg_engagement": 0.0
+    },
+    {
+      "layout": "edserif",
+      "posts": 1,
       "engagement": 0,
       "ig_engagement": 0,
       "fb_engagement": 0,
