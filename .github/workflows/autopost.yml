@@ -45,6 +45,23 @@ jobs:
       - name: Generate a fresh creative
         run: node generate.js
 
+      - name: Screen creative for AI slop
+        # Vision-model quality gate: blocks AI slop before anything is committed or posted.
+        # Needs a vision key (set OPENAI_API_KEY or ANTHROPIC_API_KEY in repo Secrets).
+        # Fail-open by default: with no key / API down it allows the post (set GUARD_FAIL_CLOSED=1 to flip).
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          # SLOP_STRICT_AI: "0"       # "1" also blocks anything that merely looks AI-generated
+          # SLOP_MIN_QUALITY: "55"
+          # GUARD_FAIL_CLOSED: "0"    # "1" refuses to post when the check can't run
+        run: |
+          IMG=$(ls -t creatives/*.jpg creatives/*.jpeg creatives/*.png creatives/*.webp 2>/dev/null | head -1)
+          if [ -z "$IMG" ]; then echo "No image creative to screen; skipping."; exit 0; fi
+          if [ -z "$(find "$IMG" -mmin -10)" ]; then echo "Newest image isn't fresh (video Reel run?); skipping."; exit 0; fi
+          echo "Screening $IMG for AI slop..."
+          node slop-guard.js "$IMG"
+
       - name: Commit the new creative (so its image URL is public)
         run: |
           git config user.name  "gt-autopost[bot]"
