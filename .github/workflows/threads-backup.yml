@@ -1,0 +1,62 @@
+name: Threads Backup (missed-post catcher)
+
+# Runs ~20 min after each Threads post slot. If GitHub silently DROPPED the
+# scheduled run (no failed run for the retry to catch), this fires a catch-up.
+# It will NOT double-post: it only triggers when there is no successful OR
+# in-progress OR queued Threads run in the recent window.
+# Uses only the built-in GITHUB_TOKEN and gh (no `uses:`, no stored secrets).
+# Put in .github/workflows/ and push to the default branch.
+# Threads posts at 15:00 / 19:00 / 23:00 UTC; backup checks at :20 past each.
+
+on:
+  schedule:
+    - cron: '20 15,19,23 * * *'
+  workflow_dispatch:
+
+permissions:
+  actions: write
+  issues: write
+  contents: read
+
+concurrency:
+  group: threads-autopost-backup
+  cancel-in-progress: false
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+      WF: "Threads Auto-Poster"   # must match threads-autopost.yml `name:`
+    steps:
+      - name: Fire a catch-up post only if this slot was missed
+        run: |
+          set -e
+          FILTER="[.[] | select(.workflowName==\"$WF\") | select((now - (.createdAt|fromdateiso8601)) < 2400)]"
+          recent=$(gh run list --limit 40 \
+                   --json databaseId,status,conclusion,createdAt,workflowName \
+                   --jq "$FILTER")
+          echo "Threads runs in the last ~40 min: $(echo "$recent" | jq 'length')"
+          covered=$(echo "$recent" | jq '[.[] | select(.status=="queued" or .status=="in_progress" or .conclusion=="success")] | length')
+          if [ "${covered:-0}" -gt 0 ]; then
+            echo "Threads already posted or is running this slot — backup not needed."
+            exit 0
+          fi
+          echo "No successful/pending Threads run found — firing a catch-up post."
+          gh workflow run "$WF" || gh workflow run threads-autopost.yml
+          echo "FIRED=1" >> "$GITHUB_ENV"
+
+      - name: Heads-up ping (only if the backup fired)
+        if: env.FIRED == '1'
+        env:
+          SLACK: ${{ secrets.SLACK_WEBHOOK_URL }}
+        run: |
+          MSG="Threads autoposter backup fired: the scheduled post looked missed, so a catch-up run was triggered. ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions"
+          echo "$MSG" >> "$GITHUB_STEP_SUMMARY"
+          if [ -n "$SLACK" ]; then
+            curl -sf -X POST -H 'Content-type: application/json' \
+              --data "$(jq -n --arg t "$MSG" '{text:$t}')" "$SLACK" || echo "slack notify failed"
+          else
+            gh issue create --title "Threads autoposter backup fired ($(date -u +%Y-%m-%dT%H:%MZ))" \
+              --body "$MSG" || echo "issue notify failed"
+          fi

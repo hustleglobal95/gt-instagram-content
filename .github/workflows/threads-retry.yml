@@ -1,0 +1,60 @@
+name: Threads Retry (self-healing)
+
+# Auto-re-runs the Threads Auto-Poster when a run fails (e.g. a GitHub Actions
+# outage that breaks the setup phase). Waits for Actions to recover first, then
+# re-runs the failed jobs and pings you. Uses only the built-in GITHUB_TOKEN and
+# pure gh + curl (no `uses:`), so the same outage class can't break the fixer.
+# Put in .github/workflows/ and push to the default branch.
+
+on:
+  workflow_run:
+    workflows: ["Threads Auto-Poster"]   # must match threads-autopost.yml `name:`
+    types: [completed]
+
+permissions:
+  actions: write
+  issues: write
+  contents: read
+
+jobs:
+  retry:
+    if: >
+      github.event.workflow_run.conclusion == 'failure' &&
+      github.event.workflow_run.run_attempt < 3
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+      RUN_ID:   ${{ github.event.workflow_run.id }}
+      ATTEMPT:  ${{ github.event.workflow_run.run_attempt }}
+      RUN_URL:  ${{ github.event.workflow_run.html_url }}
+    steps:
+      - name: Wait for Actions to recover, then re-run the failed post
+        run: |
+          set -e
+          echo "Threads run $RUN_ID failed (attempt $ATTEMPT). Starting self-heal..."
+          for i in $(seq 1 15); do
+            status=$(curl -sf https://www.githubstatus.com/api/v2/summary.json \
+                     | jq -r '.components[] | select(.name=="Actions") | .status' 2>/dev/null || echo unknown)
+            echo "check $i/15: GitHub Actions status = ${status}"
+            if [ "$status" = "operational" ]; then echo "Actions is healthy again."; break; fi
+            sleep 60
+          done
+          sleep 30
+          echo "Re-running failed jobs for run $RUN_ID ..."
+          gh run rerun "$RUN_ID" --failed || gh run rerun "$RUN_ID"
+          echo "Re-run requested. Attempt $ATTEMPT of max 3."
+
+      - name: Heads-up ping
+        if: always()
+        env:
+          SLACK: ${{ secrets.SLACK_WEBHOOK_URL }}
+        run: |
+          MSG="Threads autoposter self-healed: run ${RUN_ID} failed (attempt ${ATTEMPT}) and was automatically re-run. ${RUN_URL}"
+          echo "$MSG" >> "$GITHUB_STEP_SUMMARY"
+          if [ -n "$SLACK" ]; then
+            curl -sf -X POST -H 'Content-type: application/json' \
+              --data "$(jq -n --arg t "$MSG" '{text:$t}')" "$SLACK" || echo "slack notify failed"
+          else
+            gh issue create --title "Threads autoposter self-healed ($(date -u +%Y-%m-%dT%H:%MZ))" \
+              --body "$MSG" || echo "issue notify failed"
+          fi
