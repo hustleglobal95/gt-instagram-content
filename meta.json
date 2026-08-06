@@ -1,14 +1,12 @@
 {
-  "generated_at": "2026-08-05T21:01:13.753Z",
-  "media_file": "creatives/gt_auto_20260805_210113.jpg",
-  "is_reel": false,
-  "layout": "edserif",
-  "editorial_bg": null,
-  "person": null,
-  "qa": null,
-  "caption": "Stop guessing which lever to pull.\n\nYou already have the data, you are missing the diagnosis. Growth Terminal reads what you already track, ranks where growth is actually stuck, and names the one move worth making first.\n\n→ growthterminal.io",
-  "hashtags": "#growthterminal #b2bsaas #growthmarketing #marketingstrategy #businessgrowth #revenuegrowth #foundertips #accountability #analytics #retention #leadership",
-  "first_comment": "Which lever are you pulling right now, and how sure are you?",
+  "generated_at": "2026-08-06T00:11:47.059Z",
+  "media_file": "creatives/gt_reel_20260806_001147.jpg",
+  "video_file": "creatives/gt_reel_20260806_001147.mp4",
+  "is_reel": true,
+  "layout": "reel:feature",
+  "caption": "We find the one constraint capping your revenue, price the fix, and grade every call against real revenue. Diagnosis, not a dashboard. Run the free 60-second diagnostic.\n\nRun the free 60-second diagnostic, link in bio.",
+  "hashtags": "#growthterminal #b2bsaas #growthmarketing #scaleup #unitmetrics #googlesheets #leadership #marketingstrategy #growthhacking #businessgrowth #marketinganalytics",
+  "first_comment": "What do you think your #1 constraint is right now?",
   "alt_text": "",
-  "sig": "eds:Stop guessingwhich lever to pull."
+  "sig": "reelfeat:We name the one constrai"
 }
