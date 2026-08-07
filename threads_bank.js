@@ -77,10 +77,10 @@ const SOFT_CTA = [
 
 // soft OFFER CTAs (~20% of posts) — funnel to the System / diagnosis.
 const OFFER_CTA = [
-  "The full System \u2014 playbook + tracker \u2014 is here \u2192 hustler95.gumroad.com/l/acxcvh",
-  "Want the 10-minute diagnosis as a done-for-you system? \u2192 hustler95.gumroad.com/l/acxcvh",
-  "The Growth Hacking System runs this for you, step by step \u2192 hustler95.gumroad.com/l/acxcvh",
-  "Stop guessing. The System names your #1 constraint and fixes it \u2192 hustler95.gumroad.com/l/acxcvh",
+  "The full System \u2014 playbook + tracker \u2014 is here \u2192 www.growthterminal.io/system",
+  "Want the 10-minute diagnosis as a done-for-you system? \u2192 www.growthterminal.io/system",
+  "The Growth Hacking System runs this for you, step by step \u2192 www.growthterminal.io/system",
+  "Stop guessing. The System names your #1 constraint and fixes it \u2192 www.growthterminal.io/system",
 ];
 
 // kept for compatibility / dashboard use
