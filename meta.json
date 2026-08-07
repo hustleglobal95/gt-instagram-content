@@ -1,14 +1,12 @@
 {
-  "generated_at": "2026-08-07T17:01:28.485Z",
-  "media_file": "creatives/gt_auto_20260807_170128.jpg",
-  "is_reel": false,
-  "layout": "edserif",
-  "editorial_bg": null,
-  "person": null,
-  "qa": null,
-  "caption": "Find the one constraint capping your revenue.\n\nMost growth advice hands you ten things to fix. Growth Terminal names the single constraint capping your revenue right now, prices what fixing it is worth, and grades the call against what actually happens.\n\n→ growthterminal.io",
-  "hashtags": "#growthterminal #b2bsaas #growthmarketing #scaleup #startups #startupgrowth #foundertips #retention #unitmetrics #growthhacking #saasmarketing",
-  "first_comment": "What do you think your #1 constraint is right now? 👇",
+  "generated_at": "2026-08-07T21:01:13.572Z",
+  "media_file": "creatives/gt_reel_20260807_210113.jpg",
+  "video_file": "creatives/gt_reel_20260807_210113.mp4",
+  "is_reel": true,
+  "layout": "reel:feature",
+  "caption": "We find the one constraint capping your revenue, price the fix, and grade every call against real revenue. Diagnosis, not a dashboard. Run the free 60-second diagnostic.\n\nRun the free 60-second diagnostic, link in bio.",
+  "hashtags": "#growthterminal #b2bsaas #growthmarketing #cro #accountability #saas #growthhacking #revenueops #kpis #opportunitycost #forecasting",
+  "first_comment": "What do you think your #1 constraint is right now?",
   "alt_text": "",
-  "sig": "eds:Find the one constraintcapping your "
+  "sig": "reelfeat:Your growth has one real"
 }
