@@ -1,6 +1,6 @@
 {
-  "updated": "2026-08-06T08:00:01.061405Z",
-  "count": 40,
+  "updated": "2026-08-07T06:43:57.112721Z",
+  "count": 43,
   "posts": [
     {
       "sig": "card:Activation",
@@ -44,6 +44,24 @@
       "file": "creatives/gt_reel_20260806_001147.jpg",
       "is_reel": true,
       "at": "2026-08-06T00:13:35.582903Z",
+      "caption": "We find the one constraint capping your revenue, price the fix, and grade every call against real revenue. Diagnosis, no",
+      "permalink": "",
+      "ig": null,
+      "fb": {
+        "reactions": 1,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 1
+      },
+      "engagement": 1
+    },
+    {
+      "sig": "reelfeat:Priced, planned, and gra",
+      "layout": "reel:feature",
+      "file": "creatives/gt_reel_20260807_010114.jpg",
+      "is_reel": true,
+      "at": "2026-08-07T01:03:05.558393Z",
       "caption": "We find the one constraint capping your revenue, price the fix, and grade every call against real revenue. Diagnosis, no",
       "permalink": "",
       "ig": null,
@@ -667,15 +685,51 @@
         "engagement": 0
       },
       "engagement": 0
+    },
+    {
+      "sig": "funnel:You don\u2019t need more lead",
+      "layout": "funnel",
+      "file": "creatives/gt_auto_20260806_130133.jpg",
+      "is_reel": false,
+      "at": "2026-08-06T13:01:36.074170Z",
+      "caption": "More leads into a leaky funnel just costs more.\n\nWhen retention is the constraint, every new lead is a bucket with a hol",
+      "permalink": "",
+      "ig": null,
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 0
+    },
+    {
+      "sig": "prodclaim:funnel:Stop guessing which fu",
+      "layout": "prodclaim",
+      "file": "creatives/gt_auto_20260806_210120.jpg",
+      "is_reel": false,
+      "at": "2026-08-06T21:01:22.869753Z",
+      "caption": "Most trackers show you conversion rates. This one tells you what to do with them: which step is costing you the most, ho",
+      "permalink": "",
+      "ig": null,
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 0
     }
   ],
   "by_format": [
     {
       "layout": "reel:feature",
-      "posts": 1,
-      "engagement": 1,
+      "posts": 2,
+      "engagement": 2,
       "ig_engagement": 0,
-      "fb_engagement": 1,
+      "fb_engagement": 2,
       "avg_engagement": 1.0
     },
     {
@@ -736,7 +790,7 @@
     },
     {
       "layout": "funnel",
-      "posts": 1,
+      "posts": 2,
       "engagement": 0,
       "ig_engagement": 0,
       "fb_engagement": 0,
@@ -792,6 +846,14 @@
     },
     {
       "layout": "edserif",
+      "posts": 1,
+      "engagement": 0,
+      "ig_engagement": 0,
+      "fb_engagement": 0,
+      "avg_engagement": 0.0
+    },
+    {
+      "layout": "prodclaim",
       "posts": 1,
       "engagement": 0,
       "ig_engagement": 0,
