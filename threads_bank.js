@@ -164,7 +164,87 @@ const FORMATS = [
 ];
 
 // ---------- THREADS (reply-chain deep-dives; framework-driven) ----------
+// ---------- numbered-rules reply chain ----------
+// A high-retention Threads structure. Anatomy of each post:
+//   "N. THE X RULE"  ->  2-sentence body  ->  standalone kicker  ->  (n/7) counter
+// Five rules are drawn fresh from the pool per run, so the chain never repeats.
+const RULES = [
+  { n: 'THE DIAGNOSIS RULE',
+    b: 'Name the constraint before you touch a tactic. Effort aimed at the wrong stage doesn’t just waste the money, it hides the real leak for another quarter.',
+    k: 'Diagnose first. The rest is guessing.' },
+  { n: 'THE ONE LEVER RULE',
+    b: 'Pick the single lowest number in your funnel, not five things to improve. Ten half-fixes cancel out. One full fix compounds.',
+    k: 'One lever, all week.' },
+  { n: 'THE LEAK RULE',
+    b: 'More traffic into a leaking funnel just leaks faster. If 2% convert, doubling visitors doubles the waste right along with it.',
+    k: 'Plug it before you pour.' },
+  { n: 'THE SYMPTOM RULE',
+    b: '“We need a rebrand” is a positioning problem. “Sales are slow” is usually the offer. The complaint is never the constraint.',
+    k: 'Treat the disease, not the noise.' },
+  { n: 'THE SCORECARD RULE',
+    b: 'Write the forecast down before you start, then go back and check it. A diagnosis you never verify is a horoscope.',
+    k: 'Keep score or you’re telling stories.' },
+  { n: 'THE PRICE-IT RULE',
+    b: 'Put a dollar figure on the gap you found. “Fix the lead step” is a shrug. “The lead step costs us $216k a year” is a decision.',
+    k: 'A constraint you can price is one you’ll actually fix.' },
+  { n: 'THE DISTRIBUTION RULE',
+    b: 'Spend 20% making it and 80% getting it seen. Most people invert that, then wonder why the best thing they wrote died quietly.',
+    k: 'Reach is a job, not a hope.' },
+  { n: 'THE HOOK RULE',
+    b: 'Spend as long on line one as on the other ten. Your best idea with a weak opener is a tree falling in an empty forest.',
+    k: 'No stop, no read, no growth.' },
+  { n: 'THE RETENTION RULE',
+    b: 'Plug the leak before you scale the pour. Acquisition on top of churn is a bucket with holes and a bigger hose.',
+    k: 'Growth is retention with a smaller leak.' },
+  { n: 'THE ACTIVATION RULE',
+    b: 'People don’t churn at the end, they churn at the beginning. Get them to the first real win fast and the rest takes care of itself.',
+    k: 'Nobody leaves what they’ve actually used.' },
+  { n: 'THE PRICING RULE',
+    b: 'A price change needs no new leads, no new hires, no new channel. It’s the fastest lever you own and the one you’ll avoid longest.',
+    k: 'Same traffic, different number.' },
+  { n: 'THE OFFER RULE',
+    b: 'A clear offer to 100 people beats a clever brand to 10,000. Fix what you’re selling before you fix who sees it.',
+    k: 'Nail the what before the who.' },
+  { n: 'THE KILL-DATE RULE',
+    b: 'Set a budget, a success threshold and a kill date before any test. A test without a kill criterion isn’t a test, it’s a slow leak.',
+    k: 'Decide how it ends before it begins.' },
+  { n: 'THE ONE-METRIC RULE',
+    b: 'Move one number a mile instead of ten numbers an inch. If a task doesn’t touch this week’s metric, it waits.',
+    k: 'Depth on one beats a thin layer on ten.' },
+  { n: 'THE COMPOUND RULE',
+    b: 'Fix the biggest leak, then run the diagnosis again, because the constraint moves. Chasing one at a time is what makes gains stack instead of cancel.',
+    k: 'The constraint always moves. Follow it.' },
+  { n: 'THE EVIDENCE RULE',
+    b: '“It feels like it’s working” is not a result. Pick the number before you start so you can’t move the goalposts afterward.',
+    k: 'Feelings aren’t findings.' },
+];
+
+const RULE_HOOKS = [
+  () => `Everyone thinks they have a traffic problem.\n\nAlmost nobody does.\n\n5 rules for finding what’s actually capping your growth 👇`,
+  () => `Most growth advice is a pile of tactics with no diagnosis.\n\n5 rules that fix that 👇`,
+  () => `You don’t have a growth problem.\n\nYou have a diagnosis problem.\n\n5 rules I’d give any founder who feels stuck 👇`,
+  () => `Ten scattered tactics cancel out.\n\nOne named constraint compounds.\n\n5 rules for telling the difference 👇`,
+];
+
+const RULE_CLOSES = [
+  () => `Five rules, one idea:\n\nFind the one thing capping you. Fix only that. Then prove it moved.\n\nThat’s the whole system. (7/7)`,
+  () => `If you keep one line from this:\n\nthe complaint is never the constraint.\n\nDiagnose before you spend. (7/7)`,
+  () => `That’s the loop:\n\ndiagnose → fix one thing → check whether it moved.\n\nRun it weekly and it compounds. (7/7)`,
+  () => `Run the loop weekly and the gains stack instead of cancel.\n\n${pick(OFFER_CTA)} (7/7)`,
+];
+
+const rulesThread = () => {
+  const five = pickN(RULES, 5);
+  const out = [clamp(pick(RULE_HOOKS)())];
+  five.forEach((r, i) => out.push(clamp(`${i + 1}. ${r.n}\n\n${r.b}\n\n${r.k} (${i + 2}/7)`)));
+  out.push(clamp(pick(RULE_CLOSES)()));
+  return out;
+};
+
 const THREADS = [
+  // Numbered-rules chain — scannable, high-retention (hook + 5 named rules + close)
+  { pillar: 'playbook', kind: 'thread', thread: rulesThread },
+
   // PAS deep-dive: the traffic myth
   { pillar: 'constraint', kind: 'thread', thread: () => [
     clamp(`Everyone thinks they have a traffic problem.\n\nAlmost nobody does.\n\nA short thread on finding the real constraint \u2014 and growing without spending a cent more \ud83d\udc47`),
