@@ -1,14 +1,12 @@
 {
-  "generated_at": "2026-08-06T21:01:20.235Z",
-  "media_file": "creatives/gt_auto_20260806_210120.jpg",
-  "is_reel": false,
-  "layout": "prodclaim",
-  "editorial_bg": null,
-  "person": null,
-  "qa": null,
-  "caption": "Most trackers show you conversion rates. This one tells you what to do with them: which step is costing you the most, how much fixing it is worth, and what your revenue looks like if you close the gap.\n\nFunnel & Conversion Tracker. $79 in Google Sheets™. Link in bio.\n\n→ growthterminal.io",
-  "hashtags": "#growthterminal #b2bsaas #growthmarketing #startuptools #marketingstrategy #retention #opportunitycost #founders #analytics #bootstrapping #revenueops",
-  "first_comment": "Which funnel step do you think is your weakest right now?",
-  "alt_text": "Stop guessing which funnel step to fix .",
-  "sig": "prodclaim:funnel:Stop guessing which fu"
+  "generated_at": "2026-08-07T01:01:14.230Z",
+  "media_file": "creatives/gt_reel_20260807_010114.jpg",
+  "video_file": "creatives/gt_reel_20260807_010114.mp4",
+  "is_reel": true,
+  "layout": "reel:feature",
+  "caption": "We find the one constraint capping your revenue, price the fix, and grade every call against real revenue. Diagnosis, not a dashboard. Run the free 60-second diagnostic.\n\nDiagnose your #1 constraint free. Link in bio.",
+  "hashtags": "#growthterminal #b2bsaas #growthmarketing #marketinganalytics #saasmarketing #unitmetrics #growthhacking #marketingstrategy #growthstrategy #founders #saas",
+  "first_comment": "What do you think your #1 constraint is right now?",
+  "alt_text": "",
+  "sig": "reelfeat:Priced, planned, and gra"
 }
