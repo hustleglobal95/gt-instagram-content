@@ -1,6 +1,6 @@
 {
-  "updated": "2026-08-07T06:43:57.112721Z",
-  "count": 43,
+  "updated": "2026-08-08T06:05:33.278868Z",
+  "count": 47,
   "posts": [
     {
       "sig": "card:Activation",
@@ -721,23 +721,95 @@
         "engagement": 0
       },
       "engagement": 0
+    },
+    {
+      "sig": "reelfeat:Stop guessing where your",
+      "layout": "reel:feature",
+      "file": "creatives/gt_reel_20260807_130119.jpg",
+      "is_reel": true,
+      "at": "2026-08-07T13:02:53.472049Z",
+      "caption": "We find the one constraint capping your revenue, price the fix, and grade every call against real revenue. Diagnosis, no",
+      "permalink": "",
+      "ig": null,
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 0
+    },
+    {
+      "sig": "eds:Find the one constraintcapping your ",
+      "layout": "edserif",
+      "file": "creatives/gt_auto_20260807_170128.jpg",
+      "is_reel": false,
+      "at": "2026-08-07T17:01:33.715824Z",
+      "caption": "Find the one constraint capping your revenue.\n\nMost growth advice hands you ten things to fix. Growth Terminal names the",
+      "permalink": "",
+      "ig": null,
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 0
+    },
+    {
+      "sig": "reelfeat:Your growth has one real",
+      "layout": "reel:feature",
+      "file": "creatives/gt_reel_20260807_210113.jpg",
+      "is_reel": true,
+      "at": "2026-08-07T21:02:46.855993Z",
+      "caption": "We find the one constraint capping your revenue, price the fix, and grade every call against real revenue. Diagnosis, no",
+      "permalink": "",
+      "ig": null,
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 0
+    },
+    {
+      "sig": "prodshot:funnel:Your funnel has one we",
+      "layout": "prodshot",
+      "file": "creatives/gt_auto_20260808_010110.jpg",
+      "is_reel": false,
+      "at": "2026-08-08T01:01:15.699230Z",
+      "caption": "Most trackers show you conversion rates. This one tells you what to do with them: which step is costing you the most, ho",
+      "permalink": "",
+      "ig": null,
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 0
     }
   ],
   "by_format": [
-    {
-      "layout": "reel:feature",
-      "posts": 2,
-      "engagement": 2,
-      "ig_engagement": 0,
-      "fb_engagement": 2,
-      "avg_engagement": 1.0
-    },
     {
       "layout": "card",
       "posts": 2,
       "engagement": 1,
       "ig_engagement": 0,
       "fb_engagement": 1,
+      "avg_engagement": 0.5
+    },
+    {
+      "layout": "reel:feature",
+      "posts": 4,
+      "engagement": 2,
+      "ig_engagement": 0,
+      "fb_engagement": 2,
       "avg_engagement": 0.5
     },
     {
@@ -838,7 +910,7 @@
     },
     {
       "layout": "prodshot",
-      "posts": 2,
+      "posts": 3,
       "engagement": 0,
       "ig_engagement": 0,
       "fb_engagement": 0,
@@ -846,7 +918,7 @@
     },
     {
       "layout": "edserif",
-      "posts": 1,
+      "posts": 2,
       "engagement": 0,
       "ig_engagement": 0,
       "fb_engagement": 0,
