@@ -1,12 +1,14 @@
 {
-  "generated_at": "2026-08-08T17:01:12.521Z",
-  "media_file": "creatives/gt_reel_20260808_170112.jpg",
-  "video_file": "creatives/gt_reel_20260808_170112.mp4",
-  "is_reel": true,
-  "layout": "reel:countup",
-  "caption": "Every diagnosis ends with a dollar range, not a vibe. A real number on a real constraint, so you decide with a figure instead of a hunch.\n\nDiagnose your #1 constraint free. Link in bio.",
-  "hashtags": "#growthterminal #b2bsaas #growthmarketing #leadership #startups #datadriven #revenueops #foundertips #saasmarketing #businessgrowth #retention",
-  "first_comment": "What would change if every problem came pre-priced?",
-  "alt_text": "$140K",
-  "sig": "reelnum:140"
+  "generated_at": "2026-08-08T21:01:05.396Z",
+  "media_file": "creatives/gt_auto_20260808_210105.jpg",
+  "is_reel": false,
+  "layout": "feature",
+  "editorial_bg": null,
+  "person": "gt_face_03.png",
+  "qa": null,
+  "caption": "Find the one constraint holding your growth back.\n\nGrowth Terminal reads the report you already run, names the single constraint capping revenue, prices it, and hands you a 90-day plan. Diagnosis, not another dashboard.\n\nDiagnose your #1 constraint free. Link in bio.",
+  "hashtags": "#growthterminal #b2bsaas #growthmarketing #opportunitycost #datadriven #scaleup #retention #forecasting #cro #startuptools #kpis",
+  "first_comment": "If you had to name your #1 constraint in one word, what would it be? 👇",
+  "alt_text": "Find the one constraint holding your growth back.",
+  "sig": "feat:Find the one constraint holding your gro:gt_face_03.png"
 }
