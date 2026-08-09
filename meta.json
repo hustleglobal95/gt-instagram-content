@@ -1,14 +1,12 @@
 {
-  "generated_at": "2026-08-08T21:01:05.396Z",
-  "media_file": "creatives/gt_auto_20260808_210105.jpg",
-  "is_reel": false,
-  "layout": "feature",
-  "editorial_bg": null,
-  "person": "gt_face_03.png",
-  "qa": null,
-  "caption": "Find the one constraint holding your growth back.\n\nGrowth Terminal reads the report you already run, names the single constraint capping revenue, prices it, and hands you a 90-day plan. Diagnosis, not another dashboard.\n\nDiagnose your #1 constraint free. Link in bio.",
-  "hashtags": "#growthterminal #b2bsaas #growthmarketing #opportunitycost #datadriven #scaleup #retention #forecasting #cro #startuptools #kpis",
-  "first_comment": "If you had to name your #1 constraint in one word, what would it be? 👇",
-  "alt_text": "Find the one constraint holding your growth back.",
-  "sig": "feat:Find the one constraint holding your gro:gt_face_03.png"
+  "generated_at": "2026-08-09T01:01:07.669Z",
+  "media_file": "creatives/gt_reel_20260809_010107.jpg",
+  "video_file": "creatives/gt_reel_20260809_010107.mp4",
+  "is_reel": true,
+  "layout": "reel:feature",
+  "caption": "We find the one constraint capping your revenue, price the fix, and grade every call against real revenue. Diagnosis, not a dashboard. Run the free 60-second diagnostic.\n\n→ growthterminal.io",
+  "hashtags": "#growthterminal #b2bsaas #growthmarketing #growthstrategy #saas #startuptips #kpis #googlesheets #saasmarketing #startups #opportunitycost",
+  "first_comment": "What do you think your #1 constraint is right now?",
+  "alt_text": "",
+  "sig": "reelfeat:Stop guessing where your"
 }
