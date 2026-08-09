@@ -1,7 +1,43 @@
 {
-  "updated": "2026-08-08T06:05:33.278868Z",
-  "count": 47,
+  "updated": "2026-08-09T06:07:06.775196Z",
+  "count": 51,
   "posts": [
+    {
+      "sig": "reelfeat:We name the one constrai",
+      "layout": "reel:feature",
+      "file": "creatives/gt_reel_20260806_001147.jpg",
+      "is_reel": true,
+      "at": "2026-08-06T00:13:35.582903Z",
+      "caption": "We find the one constraint capping your revenue, price the fix, and grade every call against real revenue. Diagnosis, no",
+      "permalink": "",
+      "ig": null,
+      "fb": {
+        "reactions": 2,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 2
+      },
+      "engagement": 2
+    },
+    {
+      "sig": "prodclaim:funnel:Your funnel has one we",
+      "layout": "prodclaim",
+      "file": "creatives/gt_auto_20260808_130127.jpg",
+      "is_reel": false,
+      "at": "2026-08-08T13:01:32.563626Z",
+      "caption": "Most trackers show you conversion rates. This one tells you what to do with them: which step is costing you the most, ho",
+      "permalink": "",
+      "ig": null,
+      "fb": {
+        "reactions": 2,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 2
+      },
+      "engagement": 2
+    },
     {
       "sig": "card:Activation",
       "layout": "card",
@@ -9,6 +45,24 @@
       "is_reel": false,
       "at": "2026-08-01T21:01:13.344125Z",
       "caption": "This is what a Growth Terminal diagnosis looks like.\n\nNot 40 metrics to interpret \u2014 one constraint, named, with the doll",
+      "permalink": "",
+      "ig": null,
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 1,
+        "reach": 0,
+        "engagement": 1
+      },
+      "engagement": 1
+    },
+    {
+      "sig": "edm:We rank them.The #1 constraint on yo",
+      "layout": "edmanifesto",
+      "file": "creatives/gt_auto_20260805_130106.jpg",
+      "is_reel": false,
+      "at": "2026-08-05T13:01:09.074200Z",
+      "caption": "You can find ten things to fix. You can only afford to fix one well.\n\nWe rank them. Growth Terminal ranks the twelve pla",
       "permalink": "",
       "ig": null,
       "fb": {
@@ -39,11 +93,11 @@
       "engagement": 1
     },
     {
-      "sig": "reelfeat:We name the one constrai",
+      "sig": "reelfeat:Priced, planned, and gra",
       "layout": "reel:feature",
-      "file": "creatives/gt_reel_20260806_001147.jpg",
+      "file": "creatives/gt_reel_20260807_010114.jpg",
       "is_reel": true,
-      "at": "2026-08-06T00:13:35.582903Z",
+      "at": "2026-08-07T01:03:05.558393Z",
       "caption": "We find the one constraint capping your revenue, price the fix, and grade every call against real revenue. Diagnosis, no",
       "permalink": "",
       "ig": null,
@@ -57,12 +111,48 @@
       "engagement": 1
     },
     {
-      "sig": "reelfeat:Priced, planned, and gra",
-      "layout": "reel:feature",
-      "file": "creatives/gt_reel_20260807_010114.jpg",
+      "sig": "prodshot:funnel:Your funnel has one we",
+      "layout": "prodshot",
+      "file": "creatives/gt_auto_20260808_010110.jpg",
+      "is_reel": false,
+      "at": "2026-08-08T01:01:15.699230Z",
+      "caption": "Most trackers show you conversion rates. This one tells you what to do with them: which step is costing you the most, ho",
+      "permalink": "",
+      "ig": null,
+      "fb": {
+        "reactions": 1,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 1
+      },
+      "engagement": 1
+    },
+    {
+      "sig": "reelnum:140",
+      "layout": "reel:countup",
+      "file": "creatives/gt_reel_20260808_170112.jpg",
       "is_reel": true,
-      "at": "2026-08-07T01:03:05.558393Z",
-      "caption": "We find the one constraint capping your revenue, price the fix, and grade every call against real revenue. Diagnosis, no",
+      "at": "2026-08-08T17:01:42.344463Z",
+      "caption": "Every diagnosis ends with a dollar range, not a vibe. A real number on a real constraint, so you decide with a figure in",
+      "permalink": "",
+      "ig": null,
+      "fb": {
+        "reactions": 1,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 1
+      },
+      "engagement": 1
+    },
+    {
+      "sig": "feat:Find the one constraint holding your gro:gt_face_03.png",
+      "layout": "feature",
+      "file": "creatives/gt_auto_20260808_210105.jpg",
+      "is_reel": false,
+      "at": "2026-08-08T21:01:10.349469Z",
+      "caption": "Find the one constraint holding your growth back.\n\nGrowth Terminal reads the report you already run, names the single co",
       "permalink": "",
       "ig": null,
       "fb": {
@@ -615,24 +705,6 @@
       "engagement": 0
     },
     {
-      "sig": "edm:We rank them.The #1 constraint on yo",
-      "layout": "edmanifesto",
-      "file": "creatives/gt_auto_20260805_130106.jpg",
-      "is_reel": false,
-      "at": "2026-08-05T13:01:09.074200Z",
-      "caption": "You can find ten things to fix. You can only afford to fix one well.\n\nWe rank them. Growth Terminal ranks the twelve pla",
-      "permalink": "",
-      "ig": null,
-      "fb": {
-        "reactions": 0,
-        "comments": 0,
-        "shares": 0,
-        "reach": 0,
-        "engagement": 0
-      },
-      "engagement": 0
-    },
-    {
       "sig": "reelnum:140",
       "layout": "reel:countup",
       "file": "creatives/gt_reel_20260805_170113.jpg",
@@ -777,12 +849,12 @@
       "engagement": 0
     },
     {
-      "sig": "prodshot:funnel:Your funnel has one we",
-      "layout": "prodshot",
-      "file": "creatives/gt_auto_20260808_010110.jpg",
-      "is_reel": false,
-      "at": "2026-08-08T01:01:15.699230Z",
-      "caption": "Most trackers show you conversion rates. This one tells you what to do with them: which step is costing you the most, ho",
+      "sig": "reelfeat:Stop guessing where your",
+      "layout": "reel:feature",
+      "file": "creatives/gt_reel_20260809_010107.jpg",
+      "is_reel": true,
+      "at": "2026-08-09T01:02:38.235758Z",
+      "caption": "We find the one constraint capping your revenue, price the fix, and grade every call against real revenue. Diagnosis, no",
       "permalink": "",
       "ig": null,
       "fb": {
@@ -797,6 +869,38 @@
   ],
   "by_format": [
     {
+      "layout": "prodclaim",
+      "posts": 2,
+      "engagement": 2,
+      "ig_engagement": 0,
+      "fb_engagement": 2,
+      "avg_engagement": 1.0
+    },
+    {
+      "layout": "feature",
+      "posts": 1,
+      "engagement": 1,
+      "ig_engagement": 0,
+      "fb_engagement": 1,
+      "avg_engagement": 1.0
+    },
+    {
+      "layout": "edmanifesto",
+      "posts": 3,
+      "engagement": 2,
+      "ig_engagement": 0,
+      "fb_engagement": 2,
+      "avg_engagement": 0.7
+    },
+    {
+      "layout": "reel:feature",
+      "posts": 5,
+      "engagement": 3,
+      "ig_engagement": 0,
+      "fb_engagement": 3,
+      "avg_engagement": 0.6
+    },
+    {
       "layout": "card",
       "posts": 2,
       "engagement": 1,
@@ -805,20 +909,20 @@
       "avg_engagement": 0.5
     },
     {
-      "layout": "reel:feature",
-      "posts": 4,
-      "engagement": 2,
-      "ig_engagement": 0,
-      "fb_engagement": 2,
-      "avg_engagement": 0.5
-    },
-    {
-      "layout": "edmanifesto",
+      "layout": "prodshot",
       "posts": 3,
       "engagement": 1,
       "ig_engagement": 0,
       "fb_engagement": 1,
       "avg_engagement": 0.3
+    },
+    {
+      "layout": "reel:countup",
+      "posts": 6,
+      "engagement": 1,
+      "ig_engagement": 0,
+      "fb_engagement": 1,
+      "avg_engagement": 0.2
     },
     {
       "layout": "stat",
@@ -869,14 +973,6 @@
       "avg_engagement": 0.0
     },
     {
-      "layout": "reel:countup",
-      "posts": 5,
-      "engagement": 0,
-      "ig_engagement": 0,
-      "fb_engagement": 0,
-      "avg_engagement": 0.0
-    },
-    {
       "layout": "editorial",
       "posts": 1,
       "engagement": 0,
@@ -909,24 +1005,8 @@
       "avg_engagement": 0.0
     },
     {
-      "layout": "prodshot",
-      "posts": 3,
-      "engagement": 0,
-      "ig_engagement": 0,
-      "fb_engagement": 0,
-      "avg_engagement": 0.0
-    },
-    {
       "layout": "edserif",
       "posts": 2,
-      "engagement": 0,
-      "ig_engagement": 0,
-      "fb_engagement": 0,
-      "avg_engagement": 0.0
-    },
-    {
-      "layout": "prodclaim",
-      "posts": 1,
       "engagement": 0,
       "ig_engagement": 0,
       "fb_engagement": 0,
