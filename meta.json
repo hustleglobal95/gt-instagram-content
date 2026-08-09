@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-08-09T17:01:43.390Z",
-  "media_file": "creatives/gt_auto_20260809_170143.jpg",
+  "generated_at": "2026-08-09T21:01:15.177Z",
+  "media_file": "creatives/gt_auto_20260809_210115.jpg",
   "is_reel": false,
-  "layout": "tweet",
+  "layout": "feature",
   "editorial_bg": null,
-  "person": null,
+  "person": "gt_face_07.png",
   "qa": null,
-  "caption": "Most teams are drowning in dashboards and starving for a decision. Growth Terminal reads the data you already have and makes the call: your #1 constraint, what it's worth, and the plan. A verdict beats another chart.\n\nDiagnose your #1 constraint free. Link in bio.",
-  "hashtags": "#growthterminal #b2bsaas #growthmarketing #forecasting #foundertips #datadriven #founders #startups #startupgrowth #productmarketing #cro",
-  "first_comment": "How many dashboards do you check that never change a decision?",
-  "alt_text": "You don’t need more dashboards. You need one verdict.",
-  "sig": "tweet:You don’t need more dashboards. You "
+  "caption": "The one move worth more than the other ten.\n\nPerfect execution on the wrong constraint still loses the quarter. Growth Terminal finds the one that is actually capping you, prices it, and gives you the plan.\n\nRun the free 60-second diagnostic, link in bio.",
+  "hashtags": "#growthterminal #b2bsaas #growthmarketing #marketingstrategy #opportunitycost #leadership #bootstrapping #startupgrowth #growthhacking #revenueops #analytics",
+  "first_comment": "What lever are you pulling right now, and are you sure it is the stuck one?",
+  "alt_text": "The one fix worth more than the other ten.",
+  "sig": "feat:The one fix worth more than the other te:gt_face_07.png"
 }
