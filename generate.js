@@ -781,9 +781,9 @@ function gen_contrast(r) {
 
 function gen_stat(r) {
   const bank = [
-    { stat: `$88K–$140K`, label: `The constraint you couldn't see. Priced, per year.`, size: 190,
+    { stat: `$88K-$140K`, label: `The constraint you couldn't see. Priced, per year.`, size: 190,
       sub: `Every diagnosis ends with a dollar range, not a vibe.`,
-      cap: `"$88K–$140K / yr."\n\nThat's a real range from a real diagnosis: the annual value of one unfixed constraint. Growth Terminal doesn't just tell you what's wrong; it tells you what fixing it is worth, so you decide with a number instead of a hunch.`,
+      cap: `"$88K-$140K / yr."\n\nThat's a real range from a real diagnosis: the annual value of one unfixed constraint. Growth Terminal doesn't just tell you what's wrong; it tells you what fixing it is worth, so you decide with a number instead of a hunch.`,
       fc: `Every constraint we surface comes with a dollar range. Decisions get easier.` },
     { stat: `60 sec`, label: `From spreadsheet to diagnosis.`, size: 220,
       sub: `Add to Sheets → understand → diagnose → forecast → verify.`,
@@ -866,10 +866,10 @@ function gen_carousel(r) {
 // B) Live diagnosis card, shows the product output
 function gen_card(r) {
   const bank = [
-    { c: 'Retention', impact: '$88K–$140K / yr', conf: '92%', pct: 78 },
-    { c: 'Activation', impact: '$60K–$110K / yr', conf: '88%', pct: 71 },
-    { c: 'Pricing', impact: '$120K–$300K / yr', conf: '84%', pct: 64 },
-    { c: 'Conversion', impact: '$45K–$95K / yr', conf: '90%', pct: 69 },
+    { c: 'Retention', impact: '$88K-$140K / yr', conf: '92%', pct: 78 },
+    { c: 'Activation', impact: '$60K-$110K / yr', conf: '88%', pct: 71 },
+    { c: 'Pricing', impact: '$120K-$300K / yr', conf: '84%', pct: 64 },
+    { c: 'Conversion', impact: '$45K-$95K / yr', conf: '90%', pct: 69 },
   ];
   const b = pick(bank, r);
   return { layout: 'card', eyebrow: '◆ Live diagnosis', constraint: b.c, impact: b.impact, confidence: b.conf, pct: b.pct,
@@ -1527,9 +1527,9 @@ const REEL_FRAME = { card: cardFrame, countup: countupFrame, feature: featureRee
 
 function reel_card(r) {
   const bank = [
-    { c: 'Retention', impact: '$88K–$140K / yr', conf: 92, pct: 78, head: 'We name your #1<br>growth constraint.' },
-    { c: 'Activation', impact: '$60K–$110K / yr', conf: 88, pct: 71, head: 'Your growth has<br>one real bottleneck.' },
-    { c: 'Pricing', impact: '$120K–$300K / yr', conf: 84, pct: 64, head: 'The costly constraint<br>is the hidden one.' },
+    { c: 'Retention', impact: '$88K-$140K / yr', conf: 92, pct: 78, head: 'We name your #1<br>growth constraint.' },
+    { c: 'Activation', impact: '$60K-$110K / yr', conf: 88, pct: 71, head: 'Your growth has<br>one real bottleneck.' },
+    { c: 'Pricing', impact: '$120K-$300K / yr', conf: 84, pct: 64, head: 'The costly constraint<br>is the hidden one.' },
   ];
   const b = pick(bank, r);
   return { rlayout: 'card', constraint: b.c, impact: b.impact, confidence: b.conf, pct: b.pct, headline: b.head,
@@ -1603,9 +1603,13 @@ function pruneCreatives(prefix, exts, keep) {
 }
 
 // Exported for the QA test harness (require); must come before the self-run guard.
+// RENDER/GENERATORS are exported so ad_structure.js can score every layout in the
+// bank without launching a browser or posting anything. The self-run guard below
+// means requiring this file has no side effects beyond building the banks.
 module.exports = {
   L_editorial, measureBgLuminance, editorialQA, prepareEditorialPhoto,
   fetchDataUrl, fileToDataUrl, listEditorialBgs, QA_TEXTBOX, CSS,
+  RENDER, GENERATORS, rng, pick, stripHtml,
 };
 
 // ---------- main (only when run directly, not when required for tests) ----------
@@ -1630,6 +1634,25 @@ if (require.main === module) (async () => {
     // LIVE mode is untouched by this.
     const lIdx = args.indexOf('--layouts');
     const wanted = lIdx >= 0 ? String(args[lIdx + 1] || '').split(',').map(x => x.trim()).filter(Boolean) : [];
+
+    /* QA only: --draft <name> renders a bank_extensions entry directly, including
+       ready:false ones. The ready gate exists so a draft can be LOOKED AT before
+       it can post; without this there was no way to look at it. This path never
+       touches used_log.json or meta.json, so it cannot cause a post. */
+    const dIdx = args.indexOf('--draft');
+    if (dIdx >= 0) {
+      const names = String(args[dIdx + 1] || '').split(',').map(x => x.trim()).filter(Boolean);
+      for (let i = 0; i < names.length; i++) {
+        const e = EXT.find(x => x.name === names[i]);
+        if (!e) { console.log('no bank extension named ' + names[i]); continue; }
+        const post = e.pick(rng((Date.now() >>> 0) + i * 7919), pick);
+        const base = path.join(__dirname, 'creatives', `draft_${post.layout}`);
+        await renderPost(page, post, base);
+        console.log(`draft: [${post.layout}] ready:${e.ready} -> ${base}.jpg`);
+      }
+      await b.close();
+      return;
+    }
     for (let i = 0; i < previewN; i++) {
       const seed = (Date.now() >>> 0) + i * 7919;
       let pinned;
