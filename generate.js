@@ -1288,6 +1288,29 @@ function gen_svc_manifesto(r) {
     caption:b.cap, first_comment:b.fc, sig:'svcm:'+stripHtml(b.punch+b.foot).slice(0,32) };
 }
 
+/* ---------------------------------------------------------------- injected
+ * Layouts added by the inspiration loop live in bank_extensions.js, so this
+ * file is never rewritten by automation. Only entries flagged ready enter the
+ * rotation. Everything else can be rendered for review and stays out of the
+ * poster. See inject.js and inspiration_queue.json. */
+const EXT = (() => {
+  try { return require('./bank_extensions.js').EXTENSIONS || []; }
+  catch { return []; }
+})();
+const EXT_CTX = { logo, grain: '<div class="grain"></div>' };
+
+for (const e of EXT) {
+  RENDER[e.name] = (p) => e.render(p, EXT_CTX);
+}
+const EXT_READY = EXT.filter(e => e.ready);
+const EXT_GENERATORS = EXT_READY.map(e => (r) => e.pick(r, pick));
+if (EXT.length) {
+  console.log('bank extensions: ' + EXT.length + ' loaded, ' + EXT_READY.length + ' in rotation'
+    + (EXT.length > EXT_READY.length
+      ? ' (' + EXT.filter(e => !e.ready).map(e => e.name).join(', ') + ' awaiting review)'
+      : ''));
+}
+
 const GENERATORS = [
   gen_statement, gen_statement, gen_constraint, gen_constraint,
   gen_stat, gen_contrast, gen_vs, gen_carousel,
@@ -1296,7 +1319,7 @@ const GENERATORS = [
   gen_tweet, gen_tweet, gen_editorial, gen_editorial,
   gen_edserif, gen_edserif, gen_edterminal, gen_edmanifesto,
   gen_svc_serif, gen_svc_serif, gen_svc_manifesto, gen_svc_manifesto,
-];
+].concat(EXT_GENERATORS, EXT_GENERATORS);
 
 // ---------- pick a fresh post (avoid recent repeats) ----------
 const USED_LOG = path.join(__dirname, 'used_log.json');
@@ -1603,10 +1626,22 @@ if (require.main === module) (async () => {
     // QA mode: render N varied samples, no state changes
     const recent = [];
     const havePeople = listPeople().length > 0;
+    // QA only: --layouts a,b,c pins the batch to specific layouts, in order.
+    // LIVE mode is untouched by this.
+    const lIdx = args.indexOf('--layouts');
+    const wanted = lIdx >= 0 ? String(args[lIdx + 1] || '').split(',').map(x => x.trim()).filter(Boolean) : [];
     for (let i = 0; i < previewN; i++) {
       const seed = (Date.now() >>> 0) + i * 7919;
+      let pinned;
+      if (wanted.length) {
+        const want = wanted[i % wanted.length];
+        for (let t = 0; t < 500 && !pinned; t++) {
+          const cand = buildPost(seed + t * 131, recent);
+          if (cand && cand.layout === want) pinned = cand;
+        }
+      }
       // Every 3rd preview is a feature ad when the people folder has faces, so the QA batch shows them.
-      const post = (havePeople && i % 3 === 2 && buildFeaturePost(seed, recent)) || buildPost(seed, recent);
+      const post = pinned || (havePeople && i % 3 === 2 && buildFeaturePost(seed, recent)) || buildPost(seed, recent);
       recent.push(post.sig);
       const base = path.join(__dirname, 'creatives', `preview_${String(i + 1).padStart(2, '0')}_${post.layout}`);
       await renderPost(page, post, base);

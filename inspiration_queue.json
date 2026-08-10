@@ -1,0 +1,230 @@
+[
+  {
+    "id": "ha_12cyipv",
+    "source": "hand",
+    "url": "https://www.vibemyad.com/blog/10-b2b-static-ad-examples-worth-stealing-from-2026",
+    "capturedAt": "2026-08-10T00:03:15.740Z",
+    "name": "Before and after metric card",
+    "structure": {
+      "anatomy": "Frame splits vertically. Starting number left, desired number right, a divider or arrow between them. Labels sit small under each figure. Product attribution is a single line at the base. No qualifier language anywhere."
+    },
+    "whyItWorks": "The gap between the two numbers does the persuading. Nothing has to be claimed, the reader does the subtraction themselves and arrives at the conclusion unaided.",
+    "gtAngle": "Left is the constraint today, right is the same number after the fix, with the engine dollar range as the divider. This is the one format that shows what Growth Terminal is actually selling, the delta, rather than describing it.",
+    "nearestExistingLayout": null,
+    "novelty": "no close match in the bank",
+    "status": "new"
+  },
+  {
+    "id": "ha_90jrkk",
+    "source": "hand",
+    "url": "https://www.grafit.agency/blog/b2b-saas-ad-design-guide",
+    "capturedAt": "2026-08-10T00:03:15.740Z",
+    "name": "Report cover, lead magnet",
+    "structure": {
+      "anatomy": "Composition mimics a printed industry report. Oversized title, a single branded object centred, production quality doing the persuading. Download CTA at the base. Deliberately editorial rather than promotional."
+    },
+    "whyItWorks": "Perceived production value transfers to perceived substance before a word is read. A generic template reads as filler, a designed cover reads as research worth an email address.",
+    "gtAngle": "The intelligence briefing and the state of growth reviews research already exist on the site and have no ad format pointing at them. This is a distribution layout for assets that are already written.",
+    "nearestExistingLayout": null,
+    "novelty": "no close match in the bank",
+    "status": "new"
+  },
+  {
+    "id": "ha_16pggmv",
+    "source": "hand",
+    "url": "https://www.vibemyad.com/blog/10-b2b-static-ad-examples-worth-stealing-from-2026",
+    "capturedAt": "2026-08-10T00:03:15.740Z",
+    "name": "Behaviour call out",
+    "structure": {
+      "anatomy": "Small icon or illustration anchors one side. A single line names a specific thing the reader already does. A stat or qualifier sits below it. The CTA asks for something the reader already possesses rather than a commitment."
+    },
+    "whyItWorks": "Naming a behaviour the reader recognises in themselves earns the next two seconds. The ask is low friction because it requests something already in hand.",
+    "gtAngle": "Growth Terminal reads a spreadsheet the reader already has open. The ask is literally a file they already own, which is exactly the low friction shape this format is built for.",
+    "nearestExistingLayout": null,
+    "novelty": "no close match in the bank",
+    "status": "injected",
+    "decidedAt": "2026-08-10T00:34:32.866Z",
+    "injectedAs": "behaviourcall",
+    "injectedAt": "2026-08-10T00:34:32.915Z"
+  },
+  {
+    "id": "ha_1svignh",
+    "source": "hand",
+    "url": "https://www.vibemyad.com/blog/10-b2b-static-ad-examples-worth-stealing-from-2026",
+    "capturedAt": "2026-08-10T00:03:15.740Z",
+    "name": "Proprietary data insight",
+    "structure": {
+      "anatomy": "A branded chart carrying an insight only this company could produce. Minimal supporting text. The visualization is both the proof and the product demonstration at once."
+    },
+    "whyItWorks": "The product generates the data and the data becomes the advertisement. It cannot be copied by a competitor because they do not have the dataset.",
+    "gtAngle": "The engine has run analyses across twelve constraint categories. Which constraint bites most often, and at what severity, is a number nobody else can publish. This is the strongest long term format on the list because it compounds as more analyses run.",
+    "nearestExistingLayout": null,
+    "novelty": "no close match in the bank",
+    "status": "new"
+  },
+  {
+    "id": "ha_smh8f3",
+    "source": "hand",
+    "url": "https://www.grafit.agency/blog/b2b-saas-ad-design-guide",
+    "capturedAt": "2026-08-10T00:03:15.740Z",
+    "name": "Event or live session",
+    "structure": {
+      "anatomy": "A coloured pill label sets urgency at the top. Faces with titles occupy the centre. A branded object backs the composition. Date and time anchor the base. CTA drives registration rather than purchase."
+    },
+    "whyItWorks": "A real deadline plus a human face create time pressure and social proof in the same frame, without either being claimed in copy.",
+    "gtAngle": "Only worth building when there is a real session to run. Filed so the shape exists when it is needed, not before.",
+    "nearestExistingLayout": null,
+    "novelty": "no close match in the bank",
+    "status": "new"
+  },
+  {
+    "id": "ha_1tjzo6d",
+    "source": "hand",
+    "url": "https://www.vibemyad.com/blog/10-b2b-static-ad-examples-worth-stealing-from-2026",
+    "capturedAt": "2026-08-10T00:03:15.740Z",
+    "name": "Case study metric with customer logo",
+    "structure": {
+      "anatomy": "An outcome statement, a recognisable customer logo directly beneath, restrained typography, one CTA, no secondary copy at all."
+    },
+    "whyItWorks": "The logo validates the claim before the reader has time to form an objection. Peer credibility outranks any brand assertion.",
+    "gtAngle": "BLOCKED, not unbuilt. This format needs a named customer willing to be shown with a real number. Building the layout before that exists would mean inventing one. Revisit when the first customer agrees to be named.",
+    "nearestExistingLayout": null,
+    "novelty": "no close match in the bank",
+    "status": "new"
+  },
+  {
+    "id": "ha_1lkix0a",
+    "source": "hand",
+    "url": "https://www.vibemyad.com/blog/10-b2b-static-ad-examples-worth-stealing-from-2026",
+    "capturedAt": "2026-08-10T00:03:15.740Z",
+    "name": "Giant metric typography",
+    "structure": {
+      "anatomy": "One oversized number occupies more than half the frame. A short context line sits under it. Branding is small. Legible at thumbnail scale, functions as a billboard."
+    },
+    "whyItWorks": "Scale alone stops the scroll. The number is readable before the reader has decided whether to read.",
+    "gtAngle": "The bank already has stat. Worth checking whether stat pushes the number far enough, since this variant is specifically about billboard scale rather than a number with supporting copy.",
+    "nearestExistingLayout": "stat",
+    "novelty": "variant of stat",
+    "status": "parked"
+  },
+  {
+    "id": "ha_vpu01m",
+    "source": "hand",
+    "url": "https://www.grafit.agency/blog/b2b-saas-ad-design-guide",
+    "capturedAt": "2026-08-10T00:03:15.740Z",
+    "name": "Bold headline over product UI",
+    "structure": {
+      "anatomy": "Headline owns the upper third, product screenshot fills the lower half, often device framed. Logo small in a corner, one CTA anchoring the base."
+    },
+    "whyItWorks": "The headline does not make a claim, it shows one. Visual and verbal aligned on the same use case turn the ad into evidence.",
+    "gtAngle": "Already added as the highlight layout, built from the Owner ad. Parked as confirmation the shape was worth taking.",
+    "nearestExistingLayout": "highlight",
+    "novelty": "variant of highlight",
+    "status": "parked"
+  },
+  {
+    "id": "ha_138j0jk",
+    "source": "hand",
+    "url": "https://www.grafit.agency/blog/b2b-saas-ad-design-guide",
+    "capturedAt": "2026-08-10T00:03:15.740Z",
+    "name": "Metric first social proof",
+    "structure": {
+      "anatomy": "Large display metric centred, customer attribution directly beneath, brand and CTA in a footer bar."
+    },
+    "whyItWorks": "A verifiable figure tied to a named source feels testable in a way a generic outcome claim never does.",
+    "gtAngle": "Variant of stat. Blocked by the same missing ingredient as the case study format, a named customer.",
+    "nearestExistingLayout": "stat",
+    "novelty": "variant of stat",
+    "status": "parked"
+  },
+  {
+    "id": "ha_143l2tg",
+    "source": "hand",
+    "url": "https://www.grafit.agency/blog/b2b-saas-ad-design-guide",
+    "capturedAt": "2026-08-10T00:03:15.740Z",
+    "name": "Product UI as hero",
+    "structure": {
+      "anatomy": "Interface occupies nearly the whole frame, text minimal, headline and logo in opposite corners, dark background receding."
+    },
+    "whyItWorks": "When the product design is self explanatory the workflow is recognised instantly by the right operator and ignored by everyone else, which is efficient targeting.",
+    "gtAngle": "prodshot covers this. Parked.",
+    "nearestExistingLayout": "prodshot",
+    "novelty": "variant of prodshot",
+    "status": "parked"
+  },
+  {
+    "id": "ha_1a6ews8",
+    "source": "hand",
+    "url": "https://www.grafit.agency/blog/b2b-saas-ad-design-guide",
+    "capturedAt": "2026-08-10T00:03:15.740Z",
+    "name": "Pattern interrupt",
+    "structure": {
+      "anatomy": "One striking image that breaks the category visual template. Strikethrough text, unexpected colour, or a visual joke. Minimal copy, plain CTA."
+    },
+    "whyItWorks": "Contrast against the feed does the scroll stopping before any text registers.",
+    "gtAngle": "contrast and statement cover the typographic version. The meme version is off brand for a diagnostic tool and would cost more credibility than it buys.",
+    "nearestExistingLayout": "contrast",
+    "novelty": "variant of contrast",
+    "status": "parked"
+  },
+  {
+    "id": "ha_1h8k8s6",
+    "source": "hand",
+    "url": "https://www.vibemyad.com/blog/10-b2b-static-ad-examples-worth-stealing-from-2026",
+    "capturedAt": "2026-08-10T00:03:15.740Z",
+    "name": "Executive quote stack",
+    "structure": {
+      "anatomy": "Quote occupies the primary real estate. Name, title and company logo stack below it. Surrounding visual kept deliberately quiet."
+    },
+    "whyItWorks": "A verifiable attributed claim outranks anything the brand says about itself.",
+    "gtAngle": "quote layout already exists. Needs real attributed quotes before it should run.",
+    "nearestExistingLayout": "quote",
+    "novelty": "variant of quote",
+    "status": "parked"
+  },
+  {
+    "id": "ha_dl3qnn",
+    "source": "hand",
+    "url": "https://www.vibemyad.com/blog/10-b2b-static-ad-examples-worth-stealing-from-2026",
+    "capturedAt": "2026-08-10T00:03:15.740Z",
+    "name": "Live product demo with odd number",
+    "structure": {
+      "anatomy": "Screenshot of the product mid task, carrying a deliberately non round number. Minimal headline."
+    },
+    "whyItWorks": "Specificity reads as real customer data. A round number reads as an illustration, an odd one reads as a screenshot.",
+    "gtAngle": "Worth borrowing as a rule rather than a layout: dollar ranges in creatives should be odd, matching what the engine actually returns.",
+    "nearestExistingLayout": "prodshot",
+    "novelty": "variant of prodshot",
+    "status": "parked"
+  },
+  {
+    "id": "ha_t3uvgr",
+    "source": "hand",
+    "url": "https://www.vibemyad.com/blog/10-b2b-static-ad-examples-worth-stealing-from-2026",
+    "capturedAt": "2026-08-10T00:03:15.740Z",
+    "name": "Compressed dual claim headline",
+    "structure": {
+      "anatomy": "Under ten words carrying both a magnitude and a speed claim at equal weight."
+    },
+    "whyItWorks": "It answers how much and how fast in one line, closing the two most common objections simultaneously.",
+    "gtAngle": "A copy rule rather than a layout. The size of the constraint plus about sixty seconds is exactly this shape, and it belongs in the hook pools rather than in a new renderer.",
+    "nearestExistingLayout": "statement",
+    "novelty": "variant of statement",
+    "status": "parked"
+  },
+  {
+    "id": "ha_1rkcadb",
+    "source": "hand",
+    "url": "https://www.vibemyad.com/blog/10-b2b-static-ad-examples-worth-stealing-from-2026",
+    "capturedAt": "2026-08-10T00:03:15.740Z",
+    "name": "Localized or vertical messaging",
+    "structure": {
+      "anatomy": "One visual treatment held constant while the headline carries a regional or vertical marker."
+    },
+    "whyItWorks": "Signals the ad was made for this specific reader rather than broadcast, at almost no production cost.",
+    "gtAngle": "Not a layout, a variant axis. The industry playbook pages already exist for agency, ecommerce, saas, b2b services, coaching and local services, so the copy already exists to feed it.",
+    "nearestExistingLayout": null,
+    "novelty": "no close match in the bank",
+    "status": "new"
+  }
+]
