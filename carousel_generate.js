@@ -184,18 +184,18 @@ const CAROUSELS = [
 
 /* Hashtags. Same shape as generate.js, kept local on purpose: requiring
    generate.js would execute a 400KB module that four workflows depend on. */
-const CORE_TAGS = ['#growthterminal', '#b2bsaas', '#growthmarketing'];
-const TAG_POOL = ['#saas', '#startups', '#founders', '#foundertips', '#startuptips', '#revenueops',
-  '#revenuegrowth', '#growthstrategy', '#marketingstrategy', '#businessgrowth', '#scaleup',
-  '#startupgrowth', '#datadriven', '#analytics', '#kpis', '#cro', '#retention', '#saasmarketing',
-  '#googlesheets', '#startuptools', '#marketinganalytics', '#forecasting', '#bootstrapping'];
+const CORE_TAGS = ['#growthterminal'];
+const TAG_POOL = ['#b2bsaas', '#saasgrowth', '#saasfounder', '#agencyowner', '#agencylife',
+  '#consultingbusiness', '#fractionalcmo', '#revenueoperations', '#b2bmarketing',
+  '#marketingops', '#foundertips', '#bootstrappedfounder', '#startupmetrics', '#uniteconomics',
+  '#googlesheetstips'];
 function tags(r) {
   const pool = TAG_POOL.slice();
   for (let i = pool.length - 1; i > 0; i--) {
     const j = Math.floor(r() * (i + 1));
     const t = pool[i]; pool[i] = pool[j]; pool[j] = t;
   }
-  return CORE_TAGS.concat(pool.slice(0, 8)).join(' ');
+  return CORE_TAGS.concat(pool.slice(0, 3)).join(' ');
 }
 
 /* ------------------------------------------------------------------ main */

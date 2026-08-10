@@ -679,15 +679,18 @@ const CONSTRAINTS = [
   ['Pricing', 'you are leaving margin on the table on every deal'],
 ];
 
-// Rotating hashtag pool, each post pulls a fresh subset so blocks vary (IG best practice).
-const CORE_TAGS = ['#growthterminal', '#b2bsaas', '#growthmarketing'];
-const TAG_POOL = ['#saas', '#startups', '#founders', '#foundertips', '#startuptips', '#revenueops',
-  '#revenuegrowth', '#growthstrategy', '#marketingstrategy', '#growthhacking', '#businessgrowth',
-  '#scaleup', '#startupgrowth', '#datadriven', '#analytics', '#kpis', '#cro', '#retention',
-  '#productmarketing', '#saasmarketing', '#googlesheets', '#startuptools', '#marketinganalytics',
-  '#unitmetrics', '#leadership', '#forecasting', '#accountability', '#opportunitycost', '#bootstrapping'];
+// Hashtags: 4 per post, not 11. Instagram treats hashtags as search context now,
+// not a reach lever, and huge generic tags (#saas, #startups, #founders) bury a
+// small account in seconds. So: one brand tag always, plus 3 rotated from a small
+// pool of mid-size tags that match the actual audience (founders and operators of
+// small B2B services teams). Fewer, tighter, varied per post.
+const CORE_TAGS = ['#growthterminal'];
+const TAG_POOL = ['#b2bsaas', '#saasgrowth', '#saasfounder', '#agencyowner', '#agencylife',
+  '#consultingbusiness', '#fractionalcmo', '#revenueoperations', '#b2bmarketing',
+  '#marketingops', '#foundertips', '#bootstrappedfounder', '#startupmetrics', '#uniteconomics',
+  '#googlesheetstips'];
 function tags(r) {
-  return CORE_TAGS.concat(shuffle(TAG_POOL, r).slice(0, 8)).join(' ');
+  return CORE_TAGS.concat(shuffle(TAG_POOL, r).slice(0, 3)).join(' ');
 }
 const EYEBROWS = ['◆ Growth Terminal', '◆ Diagnosis, not dashboard', '◆ The one constraint',
   '◆ Priced, not guessed', '◆ Verify the call', '◆ Run the diagnostic'];
