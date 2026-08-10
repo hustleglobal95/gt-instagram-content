@@ -25,6 +25,7 @@ on:
       - 'ad_structure.js'
       - 'carousel_generate.js'
       - 'copy_engine.js'
+      - 'deep_research.js'
   workflow_dispatch:
 
 permissions:
@@ -114,7 +115,7 @@ jobs:
           EM, EN = chr(8212), chr(8211)
           bad = []
           for f in ['generate.js', 'bank_extensions.js', 'ad_structure.js',
-                    'carousel_generate.js', 'copy_engine.js']:
+                    'carousel_generate.js', 'copy_engine.js', 'deep_research.js']:
               try:
                   s = open(f, encoding='utf-8').read()
               except FileNotFoundError:

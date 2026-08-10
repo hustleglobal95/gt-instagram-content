@@ -1,0 +1,96 @@
+name: GT Deep Research (weekly)
+
+# The learning loop. Once a week it reads recent marketing and copywriting
+# writing, distills reusable patterns with a model, and files them as briefs in
+# inspiration_queue.json plus a knowledge base in research_notes.json.
+#
+# WHAT IT CAN NEVER DO
+# Post. Its entire output is two JSON files that sit behind the same review
+# gate as everything else: a brief becomes a layout only through inject.js,
+# and a layout posts only after a human flips ready to true. A bad research
+# run costs one rejected brief at review time, nothing more.
+#
+# KEYS
+# Uses ANTHROPIC_API_KEY or OPENAI_API_KEY from repo secrets, the same ones
+# slop-guard already uses. With neither present the run still collects fresh
+# articles into the knowledge base and says plainly that it distilled nothing.
+#
+# It shares the gt-autopost concurrency group because it pushes to the repo,
+# and serialising the pushers is what prevents rebase races between workflows.
+
+on:
+  schedule:
+    - cron: '40 14 * * 1'
+  workflow_dispatch:
+
+concurrency:
+  group: gt-autopost
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Pull structural sources (existing loop)
+        # research.js needs no npm install; it is dependency free. Meta Ad
+        # Library only activates if GT_META_TOKEN is set; RSS runs regardless.
+        env:
+          GT_META_TOKEN: ${{ secrets.GT_META_TOKEN }}
+        run: node research.js --pull || echo "structural pull degraded, continuing"
+
+      - name: Deep research run
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: node deep_research.js --run
+
+      - name: Digest to run summary
+        run: |
+          {
+            echo '## Deep research digest'
+            echo ''
+            echo '```'
+            node deep_research.js --digest
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Guard the queue against dashes
+        # Model output is scrubbed in code, and then checked again here,
+        # because the standing rule gets verified at every layer it crosses.
+        run: |
+          python3 - <<'PY'
+          import sys
+          EM, EN = chr(8212), chr(8211)
+          bad = []
+          for f in ['inspiration_queue.json', 'research_notes.json']:
+              try:
+                  s = open(f, encoding='utf-8').read()
+              except FileNotFoundError:
+                  continue
+              if s.count(EM) or s.count(EN):
+                  bad.append(f)
+          if bad:
+              print('FAIL: dashes reached ' + ', '.join(bad))
+              sys.exit(1)
+          print('queue clean')
+          PY
+
+      - name: Commit the research
+        run: |
+          git config user.name  "gt-research[bot]"
+          git config user.email "gt-research@users.noreply.github.com"
+          git add inspiration_queue.json research_notes.json research.config.json 2>/dev/null || true
+          git commit -m "research: weekly deep research run $(date -u +%Y-%m-%dT%H:%MZ)" || echo "nothing new this week"
+          git pull --rebase origin ${{ github.ref_name }} || true
+          git push || true
