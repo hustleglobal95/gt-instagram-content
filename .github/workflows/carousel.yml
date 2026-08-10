@@ -21,6 +21,11 @@ on:
   schedule:
     - cron: '10 15 * * *'
   workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Build and check everything, publish nothing'
+        type: boolean
+        default: true
 
 concurrency:
   group: gt-autopost
@@ -87,7 +92,10 @@ jobs:
           GT_GITHUB_REPO:         ${{ secrets.GT_GITHUB_REPO }}
           GT_GITHUB_BRANCH:       ${{ github.ref_name }}
           GT_API_BASE:            ${{ secrets.GT_API_BASE }}
-          GT_DRY_RUN:             ${{ secrets.GT_DRY_RUN }}
+          # A hand-fired run defaults to dry so the pipeline can be proved end to
+          # end without posting. Scheduled runs leave inputs.dry_run empty and
+          # fall through to the repo secret, exactly like the 4x/day poster.
+          GT_DRY_RUN:             ${{ inputs.dry_run == true && '1' || secrets.GT_DRY_RUN }}
           # Facebook Page (leave unset to skip FB posting)
           GT_FB_PAGE_ID:          ${{ secrets.GT_FB_PAGE_ID }}
           GT_FB_PAGE_ACCESS_TOKEN: ${{ secrets.GT_FB_PAGE_ACCESS_TOKEN }}
