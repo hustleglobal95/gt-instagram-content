@@ -90,7 +90,28 @@ const EXTENSIONS = [
         before: ['Clean the export', 'Model the funnel', 'Rank the leaks', 'Size the fix'],
         foot: 'About 60 seconds, in Google Sheets.',
         cap: 'Four steps you can skip.\n\nThe work of finding a constraint is real, it is just not work that a human needs to do by hand every quarter. Paste the sheet you already keep and the engine does the ranking and the sizing.',
-        fc: 'Which of those four eats the most of your week?' }
+        fc: 'Which of those four eats the most of your week?' },
+
+      { headline: 'Every call answered. Even at 2am.',
+        beforeLabel: 'Today', after: 'Agent books the meeting', afterLabel: 'With the agent',
+        before: ['Rings out', 'Lead calls a rival', 'Voicemail piles up', 'Follow up Monday'],
+        foot: 'AI voice agents. growthterminal.io',
+        cap: 'Every call answered. Even at 2am.\n\nYour growth leaks at the first missed call. The Growth Terminal voice agent picks up 24/7 in your brand voice, hears the objection, works it, and books the meeting straight to your calendar.',
+        fc: 'How many calls went to voicemail at your business this week?' },
+
+      { headline: 'A week of content, off your plate.',
+        beforeLabel: 'By hand', after: 'The engine runs daily', afterLabel: 'Automated',
+        before: ['Design the ad', 'Write the caption', 'Post on 4 apps', 'Check what worked'],
+        foot: 'Photo ads included. growthterminal.io',
+        cap: 'A week of content, off your plate.\n\nThe Growth Terminal content engine builds on-brand photo ads and posts from your creative bank, publishes daily across the main platforms, and sharpens on what performs.',
+        fc: 'How many days did your feed go dark last month?' },
+
+      { headline: 'Market research, before your coffee.',
+        beforeLabel: 'By hand', after: 'Briefed by 7am', afterLabel: 'With GT',
+        before: ['Scan the competitors', 'Chase the trends', 'Compile the notes', 'Brief the team'],
+        foot: 'Custom AI assistants. growthterminal.io',
+        cap: 'Market research, before your coffee.\n\nA custom Growth Terminal assistant, trained on your business and not everyone, scans your market overnight and hands you the brief. Research is how a small team scales a brand without hiring one.',
+        fc: 'Who does this work at your company today, and what does it cost you?' }
     ],
 
     pick(r, pick) {
@@ -154,7 +175,27 @@ const EXTENSIONS = [
       { claim: 'It tells you why it might be wrong.', voice: "That's honest",
         footnote: 'Revenue constraint intelligence',
         cap: 'It tells you why it might be wrong.\n\nEvery diagnosis ships with the evidence against it and the specific thing that would disprove it. A tool that only shows you what agrees with it is selling confidence, not analysis.',
-        fc: 'Would you rather be reassured or be right?' }
+        fc: 'Would you rather be reassured or be right?' },
+
+      { claim: 'The rejection gets handled, not heard.', voice: "That's closed",
+        footnote: 'AI voice agents, on call 24/7',
+        cap: 'The rejection gets handled, not heard.\n\nMost businesses lose the deal at the first no. The GT voice agent hears the objection, works it in your brand voice, holds your price, and books the next step. It answers 24/7, so no lead cools in a queue.',
+        fc: 'What happens at your business when a caller says the price is too high?' },
+
+      { claim: 'It answers before the lead cools.', voice: "That's booked",
+        footnote: 'AI voice agents, answering 24/7',
+        cap: 'It answers before the lead cools.\n\nSpeed to lead decides most deals. The GT voice agent picks up every call, qualifies the caller, and puts the meeting on your calendar while your competitor is still checking voicemail.',
+        fc: 'How fast does your team get back to a missed call today?' },
+
+      { claim: 'Your feed posts itself. On brand, daily.', voice: "That's consistent",
+        footnote: 'Content engine, 4 platforms, photo ads included',
+        cap: 'Your feed posts itself. On brand, daily.\n\nThe GT content engine builds photo ads and posts from your creative bank and publishes across Instagram, Facebook, Threads, and TikTok, then learns from what performs. Consistency without the daily grind.',
+        fc: 'What would daily posting do for your brand if it cost you zero hours?' },
+
+      { claim: 'Research that never sleeps on your brand.', voice: "That's scaled",
+        footnote: 'Custom AI assistants, 1 brief every morning',
+        cap: 'Research that never sleeps on your brand.\n\nA custom assistant trained on your business scans your market, your competitors, and your niche overnight, and briefs you in the morning. Scaling a brand is a research job before it is a content job.',
+        fc: 'When did you last have time to properly study your own market?' }
     ],
 
     pick(r, pick) {
@@ -214,7 +255,25 @@ const EXTENSIONS = [
         sub: 'No migration, no onboarding call. The numbers you keep are enough.',
         proof: 'Runs inside Google Sheets, no data leaves your workbook',
         cap: 'It reads the sheet you already have open.\n\nThe hardest part of most growth tools is the setup. Growth Terminal starts from the spreadsheet you already keep, which means the first answer arrives before the first meeting would have.',
-        fc: 'How long did your last tool take before it told you anything?' }
+        fc: 'How long did your last tool take before it told you anything?' },
+
+      { headline: 'Stop losing deals at the first no.', cta: 'Hear it handle a no',
+        sub: 'The voice agent hears the objection, works it in your brand voice, and books the next step.',
+        proof: 'Answers 24/7, books to your calendar. growthterminal.io',
+        cap: 'Stop losing deals at the first no.\n\nA rejection is a question wearing a costume. The Growth Terminal voice agent answers every call, works the objection without dropping your price, and books the meeting. Sales recovery, running around the clock.',
+        fc: 'What is the objection your team hears most, and who handles it at 9pm?' },
+
+      { headline: 'Your content, on autopilot.', cta: 'See what it posts',
+        sub: 'Daily photo ads and posts across 4 platforms, sharpened by what performs.',
+        proof: 'Instagram, Facebook, Threads, TikTok. Photo ads included',
+        cap: 'Your content, on autopilot.\n\nThe GT content engine turns your creative bank into daily photo ads and posts across the main platforms, and it learns from the numbers. The same engine that runs this account can run yours.',
+        fc: 'This account you are reading is run by that engine. Ask us anything about it.' },
+
+      { headline: 'A researcher on your team, always on.', cta: 'Meet the assistant',
+        sub: 'Trained on your business, not everyone. It studies your market and briefs you first thing.',
+        proof: 'Custom AI assistants, 1 brief a morning. growthterminal.io',
+        cap: 'A researcher on your team, always on.\n\nBrands scale on insight before they scale on content. A custom GT assistant studies your market overnight and hands you the brief each morning, so every post, offer, and pitch starts from knowledge.',
+        fc: 'What would you do differently if you truly knew your market cold?' }
     ],
 
     pick(r, pick) {
