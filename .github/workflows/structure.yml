@@ -1,0 +1,89 @@
+name: GT Structure Check
+
+# Scores every layout in the bank against ad_structure.js and fails on a real
+# structural regression.
+#
+# WHY IT IS ITS OWN WORKFLOW
+# It must never be able to cost a post. The autoposter and the carousel run on
+# their own schedules and touch nothing here; this runs on pushes that change
+# the creative code, so a regression is caught when it is introduced rather than
+# four posts later. Nothing in this workflow publishes, commits, or needs a
+# secret. It only reads and reports.
+#
+# THE FLOOR
+# The bank's weakest layout scores in the mid seventies today. The gate sits at
+# 60, which is well below that, so it trips on a genuine break rather than on a
+# layout being slightly worse than its neighbour. Raise the floor as the bank
+# improves. Never lower it to make a red run green.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'generate.js'
+      - 'bank_extensions.js'
+      - 'ad_structure.js'
+      - 'carousel_generate.js'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  structure:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Score the bank
+        run: |
+          node ad_structure.js --bank | tee /tmp/bank.txt
+          {
+            echo '## Bank structure score'
+            echo ''
+            echo '```'
+            cat /tmp/bank.txt
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Gate on structural regression
+        run: node ad_structure.js --gate 60
+
+      - name: Report which proven structures are still missing
+        run: |
+          {
+            echo '## Structural gaps'
+            echo ''
+            echo '```'
+            node ad_structure.js --gaps
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: No em or en dashes anywhere in the creative code
+        # The standing rule on this account. A rule that is not checked is not a
+        # rule, so it is checked here on every push that touches these files.
+        run: |
+          python3 - <<'PY'
+          import sys
+          bad = []
+          for f in ['generate.js', 'bank_extensions.js', 'ad_structure.js',
+                    'carousel_generate.js']:
+              try:
+                  s = open(f, encoding='utf-8').read()
+              except FileNotFoundError:
+                  continue
+              em, en = s.count('—'), s.count('–')
+              print(f'{f}: em {em}, en {en}')
+              if em or en:
+                  bad.append(f)
+          if bad:
+              print('FAIL: em or en dashes present in ' + ', '.join(bad))
+              sys.exit(1)
+          print('clean')
+          PY
