@@ -33,6 +33,9 @@ FB_API   = (gv("FB_API_BASE", "https://graph.facebook.com/v21.0") or "https://gr
 FB_TOKEN = gv("FB_PAGE_ACCESS_TOKEN").strip()
 LOOKBACK = int(gv("INSIGHTS_LOOKBACK", "150") or "150")
 
+IG_ERRORS = []
+FB_ERRORS = []
+
 POSTED_FILE = "posted_log.json"
 OUT_FILE    = "performance_log.json"
 
@@ -51,6 +54,12 @@ def ig_metrics(media_id, is_reel):
     out = {"likes": 0, "comments": 0, "saved": 0, "shares": 0, "reach": 0, "permalink": ""}
     base = _get(IG_API, media_id, {"fields": "like_count,comments_count,permalink", "access_token": IG_TOKEN})
     if "error" in base:
+        msg = (base.get("error") or {}).get("message", "unknown error")
+        # Loud on purpose. A silent None here is indistinguishable from a post
+        # that genuinely got zero engagement, and that lie poisons every
+        # downstream weighting decision. Record it so it cannot hide.
+        IG_ERRORS.append({"media_id": media_id, "message": msg})
+        print("  ig FAILED for %s: %s" % (media_id, msg), flush=True)
         return None
     out["likes"] = int(base.get("like_count") or 0)
     out["comments"] = int(base.get("comments_count") or 0)
@@ -112,6 +121,7 @@ def main():
             "ig": None, "fb": None, "engagement": 0,
         }
         if IG_TOKEN and p.get("media_id"):
+            row["_ig_attempted"] = True
             ig = ig_metrics(p["media_id"], row["is_reel"])
             if ig:
                 row["ig"] = ig
@@ -145,10 +155,24 @@ def main():
         "count": len(rows),
         "posts": sorted(rows, key=lambda r: r["engagement"], reverse=True),
         "by_format": sorted(fmt.values(), key=lambda d: d["avg_engagement"], reverse=True),
+        # Collection health. Without this, a total API failure and a genuine
+        # zero engagement week look identical in the file, and anything that
+        # reads this file downstream cannot tell which it is looking at.
+        "collection": {
+            "ig_attempted": sum(1 for r in rows if r.get("_ig_attempted")),
+            "ig_succeeded": sum(1 for r in rows if r.get("ig")),
+            "ig_errors": IG_ERRORS[:20],
+            "ig_error_count": len(IG_ERRORS),
+            "fb_succeeded": sum(1 for r in rows if r.get("fb")),
+        },
     }
     with open(OUT_FILE, "w") as f:
         json.dump(out, f, indent=2)
     print(f"Wrote {OUT_FILE}: {len(rows)} posts, {len(fmt)} formats.")
+    if IG_ERRORS:
+        print(f"WARNING: {len(IG_ERRORS)} Instagram lookups failed. "
+              f"First: {IG_ERRORS[0]['message']}")
+        print("Instagram engagement in this file is NOT reliable until that is fixed.")
 
 
 if __name__ == "__main__":

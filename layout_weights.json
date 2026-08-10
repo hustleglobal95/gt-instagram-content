@@ -1,0 +1,20 @@
+{
+  "active": false,
+  "diagnostics": {
+    "totalPosts": 51,
+    "totalEngagement": 11,
+    "igEngagement": 0,
+    "fbEngagement": 11,
+    "formats": 18,
+    "formatsWithAnyEngagement": 7,
+    "collectionHealth": null
+  },
+  "reason": "Instagram engagement is zero across 51 posts and this file carries no collection health block, so a total collection failure cannot be distinguished from genuine zero engagement. Re-run collect_insights.py after its patch, then look again.",
+  "evaluatedAt": "2026-08-10T00:11:13.990Z",
+  "gates": {
+    "MIN_TOTAL_ENGAGEMENT": 100,
+    "MIN_POSTS_PER_FORMAT": 8,
+    "MAX_WEIGHT": 4,
+    "MIN_WEIGHT": 1
+  }
+}

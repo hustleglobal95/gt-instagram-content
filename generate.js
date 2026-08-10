@@ -1305,11 +1305,34 @@ const RECENT_WINDOW = 24; // don't repeat a signature within the last N posts
 function loadUsed() { try { return JSON.parse(fs.readFileSync(USED_LOG, 'utf8')); } catch { return []; } }
 function saveUsed(list) { fs.writeFileSync(USED_LOG, JSON.stringify(list.slice(-200), null, 2)); }
 
+/* Learned weighting. learn.js writes layout_weights.json from the engagement
+   rollup. It stays inactive until the data can actually support a ranking, so
+   this is a no-op by default and the rotation behaves exactly as before. */
+const LEARNED = (() => {
+  try {
+    const w = JSON.parse(fs.readFileSync(path.join(__dirname, 'layout_weights.json'), 'utf8'));
+    if (w && w.active && w.weights) {
+      console.log('learned weights active: ' + JSON.stringify(w.weights));
+      return w;
+    }
+    if (w && !w.active) console.log('learned weights inactive: ' + (w.reason || 'no reason given'));
+  } catch { /* file absent on a fresh checkout, that is fine */ }
+  return null;
+})();
+
 function buildPost(seed, recent) {
   const r = rng(seed);
   for (let attempt = 0; attempt < 40; attempt++) {
     const gen = pick(GENERATORS, r);
     const post = gen(r);
+    // Weighted acceptance. A layout weighted 4 is taken every time, a layout
+    // weighted 1 is taken a quarter of the time. Late attempts accept anything
+    // so a run can never fail to produce a post.
+    if (LEARNED && attempt < 25) {
+      const max = (LEARNED.gates && LEARNED.gates.MAX_WEIGHT) || 4;
+      const w = LEARNED.weights[post.layout];
+      if (w !== undefined && r() > (w / max)) continue;
+    }
     if (recent.includes(post.sig) && attempt < 30) continue; // try for something fresh
     post.hashtags = tags(r);
     post.cta = pick(CTA_BIO, r);
