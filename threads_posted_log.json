@@ -297,5 +297,20 @@
       "markusreidgt": "18022229258907226"
     },
     "errors": {}
+  },
+  {
+    "at": "2026-08-10T04:05:02.701Z",
+    "text": "Find your #1 growth constraint in 10 minutes:\n\n1. List your funnel: reach → clicks → leads → sales.\n2. Put the % next to each stage.\n3. Circle the lowest.\n\nThat’s your constraint. Work only there this week.",
+    "parts": [
+      "Find your #1 growth constraint in 10 minutes:\n\n1. List your funnel: reach → clicks → leads → sales.\n2. Put the % next to each stage.\n3. Circle the lowest.\n\nThat’s your constraint. Work only there this week."
+    ],
+    "isThread": false,
+    "pillar": "systems",
+    "kind": "playbook",
+    "accounts": [],
+    "ids": {},
+    "errors": {
+      "markusreidgt": "Threads API 400: Error validating access token: You cannot access the app till you log in to www.threads.com and follow the instructions given."
+    }
   }
 ]
