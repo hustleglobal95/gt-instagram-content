@@ -1,16 +1,103 @@
 {
   "active": false,
   "diagnostics": {
-    "totalPosts": 51,
-    "totalEngagement": 11,
+    "totalPosts": 56,
+    "totalEngagement": 72,
     "igEngagement": 0,
-    "fbEngagement": 11,
-    "formats": 18,
-    "formatsWithAnyEngagement": 7,
-    "collectionHealth": null
+    "fbEngagement": 72,
+    "formats": 20,
+    "formatsWithAnyEngagement": 18,
+    "collectionHealth": {
+      "ig_attempted": 56,
+      "ig_succeeded": 0,
+      "ig_errors": [
+        {
+          "media_id": "18481929595099633",
+          "message": "Invalid OAuth access token - Cannot parse access token"
+        },
+        {
+          "media_id": "18125520325664850",
+          "message": "Invalid OAuth access token - Cannot parse access token"
+        },
+        {
+          "media_id": "17984490015041376",
+          "message": "Invalid OAuth access token - Cannot parse access token"
+        },
+        {
+          "media_id": "18119783353852552",
+          "message": "Invalid OAuth access token - Cannot parse access token"
+        },
+        {
+          "media_id": "18132885907619498",
+          "message": "Invalid OAuth access token - Cannot parse access token"
+        },
+        {
+          "media_id": "18116406731297318",
+          "message": "Invalid OAuth access token - Cannot parse access token"
+        },
+        {
+          "media_id": "18112561831949273",
+          "message": "Invalid OAuth access token - Cannot parse access token"
+        },
+        {
+          "media_id": "17891751243664816",
+          "message": "Invalid OAuth access token - Cannot parse access token"
+        },
+        {
+          "media_id": "18377087227233622",
+          "message": "Invalid OAuth access token - Cannot parse access token"
+        },
+        {
+          "media_id": "17959213338076883",
+          "message": "Invalid OAuth access token - Cannot parse access token"
+        },
+        {
+          "media_id": "18118286693509792",
+          "message": "Invalid OAuth access token - Cannot parse access token"
+        },
+        {
+          "media_id": "18349726909223396",
+          "message": "Invalid OAuth access token - Cannot parse access token"
+        },
+        {
+          "media_id": "18090322304118138",
+          "message": "Invalid OAuth access token - Cannot parse access token"
+        },
+        {
+          "media_id": "17900210535483655",
+          "message": "Invalid OAuth access token - Cannot parse access token"
+        },
+        {
+          "media_id": "17906986956287111",
+          "message": "Invalid OAuth access token - Cannot parse access token"
+        },
+        {
+          "media_id": "18606818419058450",
+          "message": "Invalid OAuth access token - Cannot parse access token"
+        },
+        {
+          "media_id": "18099466148213655",
+          "message": "Invalid OAuth access token - Cannot parse access token"
+        },
+        {
+          "media_id": "18190147012388410",
+          "message": "Invalid OAuth access token - Cannot parse access token"
+        },
+        {
+          "media_id": "18101807432211494",
+          "message": "Invalid OAuth access token - Cannot parse access token"
+        },
+        {
+          "media_id": "17868589908586917",
+          "message": "Invalid OAuth access token - Cannot parse access token"
+        }
+      ],
+      "ig_error_count": 56,
+      "fb_succeeded": 47
+    }
   },
-  "reason": "Instagram engagement is zero across 51 posts and this file carries no collection health block, so a total collection failure cannot be distinguished from genuine zero engagement. Re-run collect_insights.py after its patch, then look again.",
-  "evaluatedAt": "2026-08-10T00:11:13.990Z",
+  "reason": "Instagram collection is failing. 56 lookups errored and none succeeded, so every Instagram format reads as zero. Fix collection before any weighting decision is made.",
+  "evaluatedAt": "2026-08-10T06:51:28.392Z",
   "gates": {
     "MIN_TOTAL_ENGAGEMENT": 100,
     "MIN_POSTS_PER_FORMAT": 8,
