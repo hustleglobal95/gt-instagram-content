@@ -384,5 +384,22 @@
       "markusreidgt": "17964618360134497"
     },
     "errors": {}
+  },
+  {
+    "at": "2026-08-10T20:57:53.271Z",
+    "text": "More content can’t out-run a weak offer.",
+    "parts": [
+      "More content can’t out-run a weak offer."
+    ],
+    "isThread": false,
+    "pillar": "constraint",
+    "kind": "aphorism",
+    "accounts": [
+      "markusreidgt"
+    ],
+    "ids": {
+      "markusreidgt": "17916053610425582"
+    },
+    "errors": {}
   }
 ]
