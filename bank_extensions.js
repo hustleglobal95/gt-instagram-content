@@ -27,7 +27,7 @@ const EXTENSIONS = [
   {
     name: 'checklist',
     briefId: 'struct_asymmetric_checklist',
-    ready: false,
+    ready: true,
     note: 'Asymmetric before/after checklist, read off Rippling (3 variants). The '
         + 'argument is carried by the asymmetry, four unchecked boxes against one '
         + 'checked box, not by the copy. Nothing here needs a superlative.',
@@ -129,7 +129,7 @@ const EXTENSIONS = [
   {
     name: 'twozone',
     briefId: 'struct_two_zone_voice',
-    ready: false,
+    ready: true,
     note: 'Hard two zone split, read off Brex (2 variants). Upper field states the '
         + 'claim plainly. Lower field carries voice and a footnote, no information. '
         + 'This is the only entry in the bank with a second register, which is what '
@@ -212,7 +212,7 @@ const EXTENSIONS = [
   {
     name: 'demoted',
     briefId: 'struct_demoted_proof',
-    ready: false,
+    ready: true,
     note: 'Demoted proof, read off BambooHR (2 variants) and Gusto. The headline is a '
         + 'plain claim, the CTA sits mid canvas, and the number is set small at the '
         + 'foot. Every other layout in this bank shouts its number, which is exactly '
