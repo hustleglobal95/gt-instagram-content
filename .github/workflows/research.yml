@@ -86,6 +86,18 @@ jobs:
           print('queue clean')
           PY
 
+      - name: Drop the digest into Slack
+        # Posts the run's digest to the channel behind SLACK_WEBHOOK_URL.
+        # No secret set: skips quietly. Slack down: says so, never fails the run.
+        env:
+          SLACK: ${{ secrets.SLACK_WEBHOOK_URL }}
+        run: |
+          if [ -z "$SLACK" ]; then echo "no SLACK_WEBHOOK_URL secret, skipping Slack drop"; exit 0; fi
+          node deep_research.js --digest | head -60 \
+            | jq -Rs '{text: ("GT weekly ad research just ran.\n```" + . + "```\nReview queue: node research.js --review --status new")}' \
+            | curl -sf -X POST -H 'Content-type: application/json' -d @- "$SLACK" \
+            && echo "digest dropped into Slack" || echo "slack post failed (non-fatal)"
+
       - name: Commit the research
         run: |
           git config user.name  "gt-research[bot]"
