@@ -239,5 +239,586 @@
     },
     "whyItWorks": "It shows the product doing its job instead of describing it. The ringed row is the product moment. The reader follows the arrows and experiences the compression from 40 numbers to 1 decision.",
     "gtAngle": "This IS the GT flow: paste the sheet, the engine ranks constraints against benchmarks, one gets named and priced, the verdict card says fix this first."
+  },
+  {
+    "id": "rs_15165x5",
+    "source": "rss",
+    "url": "https://www.marketingdive.com/news/nielsen-acquires-doubleverify-to-link-ad-verification-audience-measurement/827319/",
+    "capturedAt": "2026-08-10T03:06:43.989Z",
+    "structure": {
+      "wordCount": 9,
+      "lineCount": 1,
+      "avgWordsPerLine": 9,
+      "hookLength": 9,
+      "signals": [],
+      "hasImage": false,
+      "hasVideo": false,
+      "platforms": []
+    },
+    "nearestExistingLayout": null,
+    "novelty": "no close match in the bank",
+    "note": "headline pattern from https://www.marketingdive.com/feeds/news/",
+    "gtAngle": "",
+    "status": "new"
+  },
+  {
+    "id": "rs_f4vh59",
+    "source": "rss",
+    "url": "https://www.marketingdive.com/news/behind-reddit-and-youtubes-roles-in-ai-visibility/827313/",
+    "capturedAt": "2026-08-10T03:06:43.990Z",
+    "structure": {
+      "wordCount": 8,
+      "lineCount": 1,
+      "avgWordsPerLine": 8,
+      "hookLength": 8,
+      "signals": [],
+      "hasImage": false,
+      "hasVideo": false,
+      "platforms": []
+    },
+    "nearestExistingLayout": null,
+    "novelty": "no close match in the bank",
+    "note": "headline pattern from https://www.marketingdive.com/feeds/news/",
+    "gtAngle": "",
+    "status": "new"
+  },
+  {
+    "id": "rs_7iuh10",
+    "source": "rss",
+    "url": "https://www.marketingdive.com/news/foot-locker-role-in-sneaker-culture-with-new-brand-platform/827210/",
+    "capturedAt": "2026-08-10T03:06:43.990Z",
+    "structure": {
+      "wordCount": 11,
+      "lineCount": 1,
+      "avgWordsPerLine": 11,
+      "hookLength": 11,
+      "signals": [],
+      "hasImage": false,
+      "hasVideo": false,
+      "platforms": []
+    },
+    "nearestExistingLayout": null,
+    "novelty": "no close match in the bank",
+    "note": "headline pattern from https://www.marketingdive.com/feeds/news/",
+    "gtAngle": "",
+    "status": "new"
+  },
+  {
+    "id": "rs_m6fli1",
+    "source": "rss",
+    "url": "https://www.marketingdive.com/news/sociable-snapchat-tries-to-teach-brands-to-be-funny/827235/",
+    "capturedAt": "2026-08-10T03:06:43.990Z",
+    "structure": {
+      "wordCount": 9,
+      "lineCount": 1,
+      "avgWordsPerLine": 9,
+      "hookLength": 9,
+      "signals": [],
+      "hasImage": false,
+      "hasVideo": false,
+      "platforms": []
+    },
+    "nearestExistingLayout": null,
+    "novelty": "no close match in the bank",
+    "note": "headline pattern from https://www.marketingdive.com/feeds/news/",
+    "gtAngle": "",
+    "status": "new"
+  },
+  {
+    "id": "rs_1you1mv",
+    "source": "rss",
+    "url": "https://www.marketingdive.com/news/kraft-heinz-zeroes-in-on-marketing-as-it-pours-another-100m-into-turnaroun/827183/",
+    "capturedAt": "2026-08-10T03:06:43.990Z",
+    "structure": {
+      "wordCount": 11,
+      "lineCount": 1,
+      "avgWordsPerLine": 11,
+      "hookLength": 11,
+      "signals": [],
+      "hasImage": false,
+      "hasVideo": false,
+      "platforms": []
+    },
+    "nearestExistingLayout": null,
+    "novelty": "no close match in the bank",
+    "note": "headline pattern from https://www.marketingdive.com/feeds/news/",
+    "gtAngle": "",
+    "status": "new"
+  },
+  {
+    "id": "rs_1kqohn2",
+    "source": "rss",
+    "url": "https://www.marketingdive.com/news/papa-johns-changes-cmo-role-ramps-up-mass-marketing-amid-struggles/827203/",
+    "capturedAt": "2026-08-10T03:06:43.990Z",
+    "structure": {
+      "wordCount": 10,
+      "lineCount": 1,
+      "avgWordsPerLine": 10,
+      "hookLength": 10,
+      "signals": [],
+      "hasImage": false,
+      "hasVideo": false,
+      "platforms": []
+    },
+    "nearestExistingLayout": null,
+    "novelty": "no close match in the bank",
+    "note": "headline pattern from https://www.marketingdive.com/feeds/news/",
+    "gtAngle": "",
+    "status": "new"
+  },
+  {
+    "id": "rs_l8430j",
+    "source": "rss",
+    "url": "https://www.marketingdive.com/news/fossil-ads-using-ai-to-identify-target-profiles-earn-588m-impressions/827148/",
+    "capturedAt": "2026-08-10T03:06:43.990Z",
+    "structure": {
+      "wordCount": 11,
+      "lineCount": 1,
+      "avgWordsPerLine": 11,
+      "hookLength": 11,
+      "signals": [],
+      "hasImage": false,
+      "hasVideo": false,
+      "platforms": []
+    },
+    "nearestExistingLayout": null,
+    "novelty": "no close match in the bank",
+    "note": "headline pattern from https://www.marketingdive.com/feeds/news/",
+    "gtAngle": "",
+    "status": "new"
+  },
+  {
+    "id": "rs_16w8dj1",
+    "source": "rss",
+    "url": "https://www.marketingdive.com/news/a-cmos-guide-to-machine-relations/826421/",
+    "capturedAt": "2026-08-10T03:06:43.990Z",
+    "structure": {
+      "wordCount": 6,
+      "lineCount": 1,
+      "avgWordsPerLine": 6,
+      "hookLength": 6,
+      "signals": [],
+      "hasImage": false,
+      "hasVideo": false,
+      "platforms": []
+    },
+    "nearestExistingLayout": null,
+    "novelty": "no close match in the bank",
+    "note": "headline pattern from https://www.marketingdive.com/feeds/news/",
+    "gtAngle": "",
+    "status": "new"
+  },
+  {
+    "id": "rs_1plmww7",
+    "source": "rss",
+    "url": "https://www.marketingdive.com/news/lillys-womens-sports-push-gets-assist-from-wnba-on-prime-campaign/827059/",
+    "capturedAt": "2026-08-10T03:06:43.990Z",
+    "structure": {
+      "wordCount": 11,
+      "lineCount": 1,
+      "avgWordsPerLine": 11,
+      "hookLength": 11,
+      "signals": [],
+      "hasImage": false,
+      "hasVideo": false,
+      "platforms": []
+    },
+    "nearestExistingLayout": null,
+    "novelty": "no close match in the bank",
+    "note": "headline pattern from https://www.marketingdive.com/feeds/news/",
+    "gtAngle": "",
+    "status": "new"
+  },
+  {
+    "id": "rs_1fan3is",
+    "source": "rss",
+    "url": "https://www.marketingdive.com/news/disney-tiktok-partner-on-content-sharing-as-creators-fuel-fandom/827054/",
+    "capturedAt": "2026-08-10T03:06:43.990Z",
+    "structure": {
+      "wordCount": 10,
+      "lineCount": 1,
+      "avgWordsPerLine": 10,
+      "hookLength": 10,
+      "signals": [],
+      "hasImage": false,
+      "hasVideo": false,
+      "platforms": []
+    },
+    "nearestExistingLayout": null,
+    "novelty": "no close match in the bank",
+    "note": "headline pattern from https://www.marketingdive.com/feeds/news/",
+    "gtAngle": "",
+    "status": "new"
+  },
+  {
+    "id": "rs_lr0zkb",
+    "source": "rss",
+    "url": "http://advertising-age.blogspot.com/2012/07/is-your-product-positioning-corn-fed.html",
+    "capturedAt": "2026-08-10T03:06:44.243Z",
+    "structure": {
+      "wordCount": 6,
+      "lineCount": 1,
+      "avgWordsPerLine": 6,
+      "hookLength": 6,
+      "signals": [],
+      "hasImage": false,
+      "hasVideo": false,
+      "platforms": []
+    },
+    "nearestExistingLayout": null,
+    "novelty": "no close match in the bank",
+    "note": "headline pattern from https://feeds.feedburner.com/AdvertisingAge",
+    "gtAngle": "",
+    "status": "new"
+  },
+  {
+    "id": "rs_at86j7",
+    "source": "rss",
+    "url": "http://advertising-age.blogspot.com/2012/07/coke-cannes.html",
+    "capturedAt": "2026-08-10T03:06:44.243Z",
+    "structure": {
+      "wordCount": 2,
+      "lineCount": 1,
+      "avgWordsPerLine": 2,
+      "hookLength": 2,
+      "signals": [],
+      "hasImage": false,
+      "hasVideo": false,
+      "platforms": []
+    },
+    "nearestExistingLayout": null,
+    "novelty": "no close match in the bank",
+    "note": "headline pattern from https://feeds.feedburner.com/AdvertisingAge",
+    "gtAngle": "",
+    "status": "new"
+  },
+  {
+    "id": "rs_1pi7gve",
+    "source": "rss",
+    "url": "http://advertising-age.blogspot.com/2012/03/strategy-of-whiz-kids.html",
+    "capturedAt": "2026-08-10T03:06:44.243Z",
+    "structure": {
+      "wordCount": 5,
+      "lineCount": 1,
+      "avgWordsPerLine": 5,
+      "hookLength": 5,
+      "signals": [],
+      "hasImage": false,
+      "hasVideo": false,
+      "platforms": []
+    },
+    "nearestExistingLayout": null,
+    "novelty": "no close match in the bank",
+    "note": "headline pattern from https://feeds.feedburner.com/AdvertisingAge",
+    "gtAngle": "",
+    "status": "new"
+  },
+  {
+    "id": "rs_1hsg956",
+    "source": "rss",
+    "url": "http://advertising-age.blogspot.com/2010/08/supersized-economy-there-is-no-value.html",
+    "capturedAt": "2026-08-10T03:06:44.243Z",
+    "structure": {
+      "wordCount": 8,
+      "lineCount": 1,
+      "avgWordsPerLine": 8,
+      "hookLength": 8,
+      "signals": [],
+      "hasImage": false,
+      "hasVideo": false,
+      "platforms": []
+    },
+    "nearestExistingLayout": null,
+    "novelty": "no close match in the bank",
+    "note": "headline pattern from https://feeds.feedburner.com/AdvertisingAge",
+    "gtAngle": "",
+    "status": "new"
+  },
+  {
+    "id": "rs_bb5pl1",
+    "source": "rss",
+    "url": "http://advertising-age.blogspot.com/2010/08/california-governors-election.html",
+    "capturedAt": "2026-08-10T03:06:44.243Z",
+    "structure": {
+      "wordCount": 8,
+      "lineCount": 1,
+      "avgWordsPerLine": 8,
+      "hookLength": 8,
+      "signals": [],
+      "hasImage": false,
+      "hasVideo": false,
+      "platforms": []
+    },
+    "nearestExistingLayout": null,
+    "novelty": "no close match in the bank",
+    "note": "headline pattern from https://feeds.feedburner.com/AdvertisingAge",
+    "gtAngle": "",
+    "status": "new"
+  },
+  {
+    "id": "rs_1152zti",
+    "source": "rss",
+    "url": "http://advertising-age.blogspot.com/2010/07/what-business-are-you-really-in.html",
+    "capturedAt": "2026-08-10T03:06:44.243Z",
+    "structure": {
+      "wordCount": 6,
+      "lineCount": 1,
+      "avgWordsPerLine": 6,
+      "hookLength": 6,
+      "signals": [
+        "opens on a question, pulls the reader in"
+      ],
+      "hasImage": false,
+      "hasVideo": false,
+      "platforms": []
+    },
+    "nearestExistingLayout": "annotated",
+    "novelty": "variant of annotated",
+    "note": "headline pattern from https://feeds.feedburner.com/AdvertisingAge",
+    "gtAngle": "",
+    "status": "parked"
+  },
+  {
+    "id": "rs_tu7kj1",
+    "source": "rss",
+    "url": "http://advertising-age.blogspot.com/2010/06/how-do-you-tell-brands-story-marketing.html",
+    "capturedAt": "2026-08-10T03:06:44.243Z",
+    "structure": {
+      "wordCount": 20,
+      "lineCount": 1,
+      "avgWordsPerLine": 20,
+      "hookLength": 20,
+      "signals": [
+        "opens on a question, pulls the reader in"
+      ],
+      "hasImage": false,
+      "hasVideo": false,
+      "platforms": []
+    },
+    "nearestExistingLayout": "annotated",
+    "novelty": "variant of annotated",
+    "note": "headline pattern from https://feeds.feedburner.com/AdvertisingAge",
+    "gtAngle": "",
+    "status": "parked"
+  },
+  {
+    "id": "rs_d9jjq1",
+    "source": "rss",
+    "url": "http://advertising-age.blogspot.com/2010/04/forbes-columnist-sramana-mitra-features.html",
+    "capturedAt": "2026-08-10T03:06:44.243Z",
+    "structure": {
+      "wordCount": 13,
+      "lineCount": 1,
+      "avgWordsPerLine": 13,
+      "hookLength": 13,
+      "signals": [],
+      "hasImage": false,
+      "hasVideo": false,
+      "platforms": []
+    },
+    "nearestExistingLayout": null,
+    "novelty": "no close match in the bank",
+    "note": "headline pattern from https://feeds.feedburner.com/AdvertisingAge",
+    "gtAngle": "",
+    "status": "new"
+  },
+  {
+    "id": "rs_1qjgwq6",
+    "source": "rss",
+    "url": "http://advertising-age.blogspot.com/2010/04/official-google-blog-different-kind-of.html",
+    "capturedAt": "2026-08-10T03:06:44.243Z",
+    "structure": {
+      "wordCount": 9,
+      "lineCount": 1,
+      "avgWordsPerLine": 9,
+      "hookLength": 9,
+      "signals": [],
+      "hasImage": false,
+      "hasVideo": false,
+      "platforms": []
+    },
+    "nearestExistingLayout": null,
+    "novelty": "no close match in the bank",
+    "note": "headline pattern from https://feeds.feedburner.com/AdvertisingAge",
+    "gtAngle": "",
+    "status": "new"
+  },
+  {
+    "id": "rs_3gw881",
+    "source": "rss",
+    "url": "http://advertising-age.blogspot.com/2010/03/oraquel-toothbrush-sterilizer-versus.html",
+    "capturedAt": "2026-08-10T03:06:44.243Z",
+    "structure": {
+      "wordCount": 13,
+      "lineCount": 1,
+      "avgWordsPerLine": 13,
+      "hookLength": 13,
+      "signals": [],
+      "hasImage": false,
+      "hasVideo": false,
+      "platforms": []
+    },
+    "nearestExistingLayout": null,
+    "novelty": "no close match in the bank",
+    "note": "headline pattern from https://feeds.feedburner.com/AdvertisingAge",
+    "gtAngle": "",
+    "status": "new"
+  },
+  {
+    "id": "rs_1xdsn96",
+    "source": "rss",
+    "url": "http://advertising-age.blogspot.com/2010/03/germ-terminator-versus-oraquel.html",
+    "capturedAt": "2026-08-10T03:06:44.243Z",
+    "structure": {
+      "wordCount": 9,
+      "lineCount": 1,
+      "avgWordsPerLine": 9,
+      "hookLength": 9,
+      "signals": [],
+      "hasImage": false,
+      "hasVideo": false,
+      "platforms": []
+    },
+    "nearestExistingLayout": null,
+    "novelty": "no close match in the bank",
+    "note": "headline pattern from https://feeds.feedburner.com/AdvertisingAge",
+    "gtAngle": "",
+    "status": "new"
+  },
+  {
+    "id": "rs_gvyzk4",
+    "source": "rss",
+    "url": "http://advertising-age.blogspot.com/2010/03/brandwash-economics-of-marketing.html",
+    "capturedAt": "2026-08-10T03:06:44.243Z",
+    "structure": {
+      "wordCount": 9,
+      "lineCount": 1,
+      "avgWordsPerLine": 9,
+      "hookLength": 9,
+      "signals": [],
+      "hasImage": false,
+      "hasVideo": false,
+      "platforms": []
+    },
+    "nearestExistingLayout": null,
+    "novelty": "no close match in the bank",
+    "note": "headline pattern from https://feeds.feedburner.com/AdvertisingAge",
+    "gtAngle": "",
+    "status": "new"
+  },
+  {
+    "id": "rs_e0maka",
+    "source": "rss",
+    "url": "http://advertising-age.blogspot.com/2010/02/mcdonalds-leverages-wi-fi.html",
+    "capturedAt": "2026-08-10T03:06:44.243Z",
+    "structure": {
+      "wordCount": 3,
+      "lineCount": 1,
+      "avgWordsPerLine": 3,
+      "hookLength": 3,
+      "signals": [],
+      "hasImage": false,
+      "hasVideo": false,
+      "platforms": []
+    },
+    "nearestExistingLayout": null,
+    "novelty": "no close match in the bank",
+    "note": "headline pattern from https://feeds.feedburner.com/AdvertisingAge",
+    "gtAngle": "",
+    "status": "new"
+  },
+  {
+    "id": "rs_12nqtx3",
+    "source": "rss",
+    "url": "http://advertising-age.blogspot.com/2010/01/rave-praise-for-oraquel.html",
+    "capturedAt": "2026-08-10T03:06:44.243Z",
+    "structure": {
+      "wordCount": 4,
+      "lineCount": 1,
+      "avgWordsPerLine": 4,
+      "hookLength": 4,
+      "signals": [],
+      "hasImage": false,
+      "hasVideo": false,
+      "platforms": []
+    },
+    "nearestExistingLayout": null,
+    "novelty": "no close match in the bank",
+    "note": "headline pattern from https://feeds.feedburner.com/AdvertisingAge",
+    "gtAngle": "",
+    "status": "new"
+  },
+  {
+    "id": "rs_mfog2v",
+    "source": "rss",
+    "url": "http://advertising-age.blogspot.com/2010/01/corporate-creative-comas.html",
+    "capturedAt": "2026-08-10T03:06:44.243Z",
+    "structure": {
+      "wordCount": 4,
+      "lineCount": 1,
+      "avgWordsPerLine": 4,
+      "hookLength": 4,
+      "signals": [],
+      "hasImage": false,
+      "hasVideo": false,
+      "platforms": []
+    },
+    "nearestExistingLayout": null,
+    "novelty": "no close match in the bank",
+    "note": "headline pattern from https://feeds.feedburner.com/AdvertisingAge",
+    "gtAngle": "",
+    "status": "new"
+  },
+  {
+    "id": "dr_20260810_1",
+    "source": "deep_research",
+    "name": "unique positioning statement",
+    "status": "new",
+    "addedAt": "2026-08-10T03:06:44.285Z",
+    "structure": {
+      "anatomy": "headline defines the unique value proposition in under 10 words"
+    },
+    "whyItWorks": "It captures what makes a business valuable and differentiates it in the client's mind, ensuring it stands out in a crowded market. Evidence: Positioning is the process of differentiating a product, service or company in the customer’s mind to obtain a strategic competitive advantage",
+    "gtAngle": "a tool could assess the clarity and uniqueness of the positioning statement against competitors",
+    "url": "https://copyhackers.com/2026/04/positioning-101/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=positioning-101"
+  },
+  {
+    "id": "dr_20260810_2",
+    "source": "deep_research",
+    "name": "client-centric value identification",
+    "status": "new",
+    "addedAt": "2026-08-10T03:06:44.285Z",
+    "structure": {
+      "anatomy": "list of client problems solved is presented in bullet points"
+    },
+    "whyItWorks": "It emphasizes understanding client needs and how the business can uniquely solve their problems, which builds stronger connections and loyalty. Evidence: Speed: Your turnaround times are low, and for the right fee, you could make yourself available on short notice",
+    "gtAngle": "a tool could evaluate the relevance of identified client problems to the target audience",
+    "url": "https://copyhackers.com/2026/04/positioning-101/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=positioning-101"
+  },
+  {
+    "id": "dr_20260810_3",
+    "source": "deep_research",
+    "name": "specific link text",
+    "status": "new",
+    "addedAt": "2026-08-10T03:06:44.285Z",
+    "structure": {
+      "anatomy": "link text must be descriptive and unique for different URLs"
+    },
+    "whyItWorks": "Specific link text provides clarity and context for users, especially those using screen readers, which improves accessibility and reduces friction in the buying process. Evidence: 73.73% of marketing emails have no discernible link text, forcing screen reader users to guess where links lead",
+    "gtAngle": "this can be used to assess the clarity of link text in emails and product pages",
+    "url": "https://copyhackers.com/2025/12/accessible-email-copy-for-ecommerce/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=accessible-email-copy-for-ecommerce"
+  },
+  {
+    "id": "dr_20260810_4",
+    "source": "deep_research",
+    "name": "short sentences",
+    "status": "new",
+    "addedAt": "2026-08-10T03:06:44.285Z",
+    "structure": {
+      "anatomy": "sentences should be capped at 20 words"
+    },
+    "whyItWorks": "Short sentences enhance readability and comprehension, making it easier for all users, including those using screen readers, to process information quickly and effectively. Evidence: The British Government's content team found that reader understanding drops off sharply after 25-29 words",
+    "gtAngle": "this can be used to evaluate the length of sentences in product descriptions and emails",
+    "url": "https://copyhackers.com/2025/12/accessible-email-copy-for-ecommerce/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=accessible-email-copy-for-ecommerce"
   }
 ]

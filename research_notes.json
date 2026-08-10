@@ -1,0 +1,80 @@
+{
+  "about": "Deep research knowledge base. Newest run first.",
+  "runs": [
+    {
+      "at": "2026-08-10T03:06:44.285Z",
+      "provider": "openai",
+      "articles": [
+        {
+          "title": "Positioning 101: How to live rent-free in your best clients&#8217; minds",
+          "url": "https://copyhackers.com/2026/04/positioning-101/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=positioning-101"
+        },
+        {
+          "title": "73% of your ecommerce emails are broken (and your customers can&#8217;t tell you)",
+          "url": "https://copyhackers.com/2025/12/accessible-email-copy-for-ecommerce/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=accessible-email-copy-for-ecommerce"
+        },
+        {
+          "title": "AI’s trust problem: The cost of outsourcing your message in a SaaS recession",
+          "url": "https://copyhackers.com/2025/12/ai-messaging-trust-saas/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=ai-messaging-trust-saas"
+        },
+        {
+          "title": "Top Facebook Updates You Can&#8217;t Miss (December 2022 Edition)",
+          "url": "https://adespresso.com/blog/top-updates-facebook-monthly-need-know-now/"
+        },
+        {
+          "title": "63 Instagram Caption Examples for 2023 (And How to Write Your Own)",
+          "url": "https://adespresso.com/blog/perfect-instagram-caption-for-business/"
+        },
+        {
+          "title": "17 Call To Action Examples (+ How to Write the Perfect Social CTA)",
+          "url": "https://adespresso.com/blog/call-to-action-examples/"
+        }
+      ],
+      "findings": [
+        {
+          "id": "dr_20260810_1",
+          "name": "unique positioning statement",
+          "device": "headline defines the unique value proposition in under 10 words",
+          "url": "https://copyhackers.com/2026/04/positioning-101/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=positioning-101"
+        },
+        {
+          "id": "dr_20260810_2",
+          "name": "client-centric value identification",
+          "device": "list of client problems solved is presented in bullet points",
+          "url": "https://copyhackers.com/2026/04/positioning-101/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=positioning-101"
+        },
+        {
+          "id": "dr_20260810_3",
+          "name": "specific link text",
+          "device": "link text must be descriptive and unique for different URLs",
+          "url": "https://copyhackers.com/2025/12/accessible-email-copy-for-ecommerce/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=accessible-email-copy-for-ecommerce"
+        },
+        {
+          "id": "dr_20260810_4",
+          "name": "short sentences",
+          "device": "sentences should be capped at 20 words",
+          "url": "https://copyhackers.com/2025/12/accessible-email-copy-for-ecommerce/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=accessible-email-copy-for-ecommerce"
+        }
+      ],
+      "log": [
+        "DEEP RESEARCH RUN 2026-08-10T03:06:44.285Z",
+        "feed ok: https://www.marketingdive.com/feeds/news/ (10 items)",
+        "  article failed: https://www.marketingdive.com/news/nielsen-acquires-doubleverify-to-link-ad-verification-audience-measurement/827319/ (HTTP 403)",
+        "  article failed: https://www.marketingdive.com/news/behind-reddit-and-youtubes-roles-in-ai-visibility/827313/ (HTTP 403)",
+        "  article failed: https://www.marketingdive.com/news/foot-locker-role-in-sneaker-culture-with-new-brand-platform/827210/ (HTTP 403)",
+        "feed ok: https://feeds.feedburner.com/AdvertisingAge (25 items)",
+        "  article failed: http://advertising-age.blogspot.com/2012/07/is-your-product-positioning-corn-fed.html (HTTP 429)",
+        "  article failed: http://advertising-age.blogspot.com/2012/07/coke-cannes.html (HTTP 429)",
+        "  article failed: http://advertising-age.blogspot.com/2012/03/strategy-of-whiz-kids.html (HTTP 429)",
+        "feed ok: https://copyhackers.com/feed/ (14 items)",
+        "feed ok: https://adespresso.com/feed/ (10 items)",
+        "6 fresh articles collected",
+        "distilling with openai",
+        "  finding: unique positioning statement",
+        "  finding: client-centric value identification",
+        "  finding: specific link text",
+        "  finding: short sentences"
+      ]
+    }
+  ]
+}
