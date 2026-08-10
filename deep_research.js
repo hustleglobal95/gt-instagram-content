@@ -49,12 +49,20 @@ const NOTES = path.join(__dirname, 'research_notes.json');
 /* Feeds chosen for copy and strategy writing rather than industry news.
    Add freely; a dead feed logs and skips. */
 const FEEDS = [
-  'https://www.marketingdive.com/feeds/news/',
-  'https://feeds.feedburner.com/AdvertisingAge',
+  /* Craft and evidence sources. News feeds and content-marketing fluff farms
+     were dropped after the first live runs showed what they produce. A dead
+     feed logs and skips, so speculative additions cost nothing. */
   'https://copyhackers.com/feed/',
   'https://adespresso.com/feed/',
-  'https://blog.hubspot.com/marketing/rss.xml'
+  'https://sparktoro.com/blog/feed/',
+  'https://www.marketingweek.com/feed/',
+  'https://www.growthunhinged.com/feed',
+  'https://ariyh.com/feed'
 ];
+
+/* Titles that are almost never craft: tool comparisons, listicles, news
+   roundups, definitional SEO bait. Skipped before a byte is fetched. */
+const JUNK_TITLE = /\bvs\.?\s|what is\b|features compared|\[\d{4}\]|top \d|updates you|roundup|announces|launches\b/i;
 const MAX_ARTICLES_PER_RUN = 6;   // depth over breadth, every run
 const MAX_ARTICLE_CHARS = 9000;   // enough for the argument, not the comments
 const MAX_NEW_BRIEFS = 4;         // a queue that grows faster than review is noise
@@ -118,9 +126,10 @@ async function collect(log) {
     try {
       const items = parseFeed(await fetchText(feed));
       log('feed ok: ' + feed + ' (' + items.length + ' items)');
-      for (const item of items.slice(0, 3)) {
+      for (const item of items.slice(0, 4)) {
         if (articles.length >= MAX_ARTICLES_PER_RUN) break;
         if (seenUrls.has(item.url)) continue;
+        if (JUNK_TITLE.test(item.title)) { log('  junk title skipped: ' + item.title.slice(0, 60)); continue; }
         try {
           const text = stripPage(await fetchText(item.url));
           if (text.length > 800) articles.push({ ...item, text });
@@ -133,21 +142,27 @@ async function collect(log) {
 }
 
 /* ----------------------------------------------------------------- distill */
-const CONTRACT = `You extract reusable advertising copy and marketing patterns from articles.
+const CONTRACT = `You extract reusable advertising copy and marketing patterns from articles, and you are hard to impress.
 
 Return STRICT JSON: {"findings":[{
   "name": "short pattern name",
   "whyItWorks": "the mechanism, citing what the article actually says or shows",
-  "copyDevice": "one measurable rule a scorer could check, e.g. 'headline names the reader's exact situation in under 8 words'",
-  "evidence": "the strongest concrete detail in the source: a number, a named example, a before/after",
-  "gtAngle": "how a revenue-constraint diagnostic tool could use this honestly, or 'weak fit' if it cannot"
+  "copyDevice": "one testable rule, e.g. 'headline names the reader's exact situation in under 8 words'",
+  "evidence": "the strongest concrete detail in the source, quoted or closely paraphrased",
+  "gtAngle": "one concrete ad idea for a revenue-constraint diagnostic tool, or 'weak fit'",
+  "strength": "strong or weak"
 }]}
 
+What earns "strong", ALL required:
+- The evidence contains a NUMBER, a NAMED brand or campaign with a stated result, or a real before/after. "The article recommends X" is not evidence, it is opinion.
+- The copyDevice is a rule someone could check a draft against and answer yes or no.
+- The gtAngle is a specific ad you could describe to a designer in one sentence.
+Anything less is "weak". Most articles contain zero strong findings, and returning an empty array is the correct output for them. Generic advice, tool comparisons, and vendor content are weak by default.
+
 Rules:
-- Only patterns with real evidence in the text. No evidence, no finding. An empty findings array is a good answer.
 - Never invent statistics, brands, or results.
 - Plain sentences. Never use em dashes or en dashes anywhere.
-- At most 2 findings per article, and only if genuinely distinct.`;
+- At most 2 findings per article.`;
 
 async function distillAnthropic(article) {
   const r = await fetch('https://api.anthropic.com/v1/messages', {
@@ -231,8 +246,9 @@ async function run({ dry }) {
           if (findings.length >= MAX_NEW_BRIEFS) break;
           if (knownNames.has(String(f.name).toLowerCase())) { log('  duplicate skipped: ' + f.name); continue; }
           if (/weak fit/i.test(f.gtAngle || '')) { log('  weak fit skipped: ' + f.name); continue; }
+          if (String(f.strength).toLowerCase() !== 'strong') { log('  weak finding skipped: ' + f.name); continue; }
           findings.push({ ...f, sourceTitle: a.title, sourceUrl: a.url });
-          log('  finding: ' + f.name);
+          log('  STRONG finding: ' + f.name);
         }
       } catch (e) { log('  distill failed for "' + a.title.slice(0, 50) + '": ' + e.message); }
     }
@@ -256,7 +272,8 @@ async function run({ dry }) {
   notes.runs.unshift({
     at: stamp, provider: provider || 'none',
     articles: articles.map(a => ({ title: a.title, url: a.url })),
-    findings: briefs.map(b => ({ id: b.id, name: b.name, device: b.structure.anatomy, url: b.url })),
+    findings: briefs.map((b, i) => ({ id: b.id, name: b.name, device: b.structure.anatomy,
+      evidence: noDashes(findings[i].evidence), angle: b.gtAngle, url: b.url })),
     log: lines
   });
   notes.runs = notes.runs.slice(0, 40);
@@ -267,6 +284,49 @@ async function run({ dry }) {
   log('filed ' + briefs.length + ' new briefs into the queue ('
     + queue.concat(briefs).filter(b => b.status === 'new').length + ' now awaiting review).');
   log('next: node research.js --review --status new');
+}
+
+/* The Slack drop. Blocks, not a text blob: a header, one card per finding
+   with the move, the evidence, and the ad idea, and a footer that says exactly
+   what to do about it. Prints the webhook payload as JSON on stdout. */
+function slackPayload() {
+  const notes = read(NOTES, null);
+  const queue = read(QUEUE, []);
+  const awaiting = queue.filter(b => b.status === 'new').length;
+  if (!notes || !notes.runs.length) {
+    return { text: 'GT research ran but has no runs recorded.' };
+  }
+  const r = notes.runs[0];
+  const day = r.at.slice(0, 10);
+  const blocks = [
+    { type: 'header', text: { type: 'plain_text', text: 'GT ad research, weekly drop', emoji: false } },
+    { type: 'context', elements: [{ type: 'mrkdwn',
+      text: day + '  |  ' + r.articles.length + ' articles read  |  '
+        + r.findings.length + ' findings passed the strength gate  |  '
+        + awaiting + ' briefs awaiting review' }] },
+    { type: 'divider' }
+  ];
+  if (!r.findings.length) {
+    blocks.push({ type: 'section', text: { type: 'mrkdwn',
+      text: 'Nothing this week met the bar: a finding needs a number, a named result, or a real before/after. '
+          + 'An empty week costs nothing. The reading list refreshes next Monday.' } });
+  }
+  for (const f of r.findings) {
+    blocks.push({ type: 'section', text: { type: 'mrkdwn',
+      text: '*' + f.name.toUpperCase() + '*  `' + f.id + '`\n'
+          + '*The move:* ' + f.device + '\n'
+          + '*Evidence:* ' + (f.evidence || 'in the source') + '\n'
+          + '*Ad idea:* ' + (f.angle || 'see brief')
+          + (f.url ? '\n<' + f.url + '|Source>' : '') } });
+    blocks.push({ type: 'divider' });
+  }
+  blocks.push({ type: 'context', elements: [{ type: 'mrkdwn',
+    text: 'To build one: tell Claude the id, like "build ' + (r.findings[0] ? r.findings[0].id : 'dr_...')
+        + '". To dismiss: "junk this batch". Rejected patterns never come back.' }] });
+  return {
+    text: 'GT ad research: ' + r.findings.length + ' findings, ' + awaiting + ' briefs awaiting review',
+    blocks
+  };
 }
 
 function digest() {
@@ -283,6 +343,7 @@ function digest() {
 if (require.main === module) {
   const args = process.argv.slice(2);
   if (args.includes('--digest')) { digest(); process.exit(0); }
+  if (args.includes('--slack')) { console.log(JSON.stringify(slackPayload())); process.exit(0); }
   if (args.includes('--run')) {
     run({ dry: args.includes('--dry') })
       .catch(e => { console.error('run failed: ' + e.message); process.exit(0); /* degrade, never break CI */ });
@@ -291,4 +352,4 @@ if (require.main === module) {
   }
 }
 
-module.exports = { parseFeed, stripPage, parseFindings };
+module.exports = { parseFeed, stripPage, parseFindings, slackPayload };
