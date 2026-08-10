@@ -24,6 +24,7 @@ on:
       - 'bank_extensions.js'
       - 'ad_structure.js'
       - 'carousel_generate.js'
+      - 'copy_engine.js'
   workflow_dispatch:
 
 permissions:
@@ -64,6 +65,32 @@ jobs:
       - name: Gate on structural regression
         run: node ad_structure.js --gate 60
 
+      - name: Score the copy
+        # copy_engine.js measures how each layout is WRITTEN: hook brevity and
+        # devices, figures, second person, caption truncation, first comment,
+        # hype vocabulary, and the dash rule. Same evidence-first design as the
+        # structural scorer, same reason for the gate: a copy regression should
+        # fail the push that introduces it, not the post that publishes it.
+        run: |
+          node copy_engine.js --bank | tee /tmp/copy.txt
+          {
+            echo '## Bank copy score'
+            echo ''
+            echo '```'
+            cat /tmp/copy.txt
+            echo '```'
+            echo '## Copy device coverage'
+            echo ''
+            echo '```'
+            node copy_engine.js --gaps
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Gate on copy regression
+        # Floor 55, current bank floor is in the high sixties. Trips on a real
+        # break, not on a layout being slightly plainer than its neighbour.
+        run: node copy_engine.js --gate 55
+
       - name: Report which proven structures are still missing
         run: |
           {
@@ -87,7 +114,7 @@ jobs:
           EM, EN = chr(8212), chr(8211)
           bad = []
           for f in ['generate.js', 'bank_extensions.js', 'ad_structure.js',
-                    'carousel_generate.js']:
+                    'carousel_generate.js', 'copy_engine.js']:
               try:
                   s = open(f, encoding='utf-8').read()
               except FileNotFoundError:
