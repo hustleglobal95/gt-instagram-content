@@ -93,10 +93,9 @@ jobs:
           SLACK: ${{ secrets.SLACK_WEBHOOK_URL }}
         run: |
           if [ -z "$SLACK" ]; then echo "no SLACK_WEBHOOK_URL secret, skipping Slack drop"; exit 0; fi
-          node deep_research.js --digest | head -60 \
-            | jq -Rs '{text: ("GT weekly ad research just ran.\n```" + . + "```\nReview queue: node research.js --review --status new")}' \
+          node deep_research.js --slack \
             | curl -sf -X POST -H 'Content-type: application/json' -d @- "$SLACK" \
-            && echo "digest dropped into Slack" || echo "slack post failed (non-fatal)"
+            && echo "structured brief dropped into Slack" || echo "slack post failed (non-fatal)"
 
       - name: Commit the research
         run: |
