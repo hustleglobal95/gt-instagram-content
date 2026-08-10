@@ -41,6 +41,15 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Install deps
+        # generate.js pulls in playwright and satori at require time, and
+        # ad_structure.js requires generate.js to reach the bank. No browser is
+        # ever launched here, so the browser download is skipped and this step
+        # stays fast.
+        env:
+          PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: '1'
+        run: npm install --no-audit --no-fund
+
       - name: Score the bank
         run: |
           node ad_structure.js --bank | tee /tmp/bank.txt
@@ -71,6 +80,11 @@ jobs:
         run: |
           python3 - <<'PY'
           import sys
+          # chr(8212) is the em dash, chr(8211) the en dash. Written as code
+          # points on purpose: a guard file that contains the character it bans
+          # is the first thing to trip a wider scan, and then someone weakens the
+          # scan instead of the file.
+          EM, EN = chr(8212), chr(8211)
           bad = []
           for f in ['generate.js', 'bank_extensions.js', 'ad_structure.js',
                     'carousel_generate.js']:
@@ -78,7 +92,7 @@ jobs:
                   s = open(f, encoding='utf-8').read()
               except FileNotFoundError:
                   continue
-              em, en = s.count('—'), s.count('–')
+              em, en = s.count(EM), s.count(EN)
               print(f'{f}: em {em}, en {en}')
               if em or en:
                   bad.append(f)
