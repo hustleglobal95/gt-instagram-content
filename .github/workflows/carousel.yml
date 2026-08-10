@@ -1,0 +1,104 @@
+name: GT Carousel (1x/day)
+
+# One carousel a day, separate from the 4x/day single-image poster.
+#
+# WHY IT IS ITS OWN WORKFLOW
+# --------------------------
+# The carousel pipeline reads carousel_meta.json and never meta.json, so it can
+# never publish the single-image poster's creative by accident, and the single
+# poster can never publish a lone carousel panel. Two files, two pipelines, no
+# shared state except posted_log.json.
+#
+# The schedule is a plain UTC cron rather than the cron-job.org trigger the
+# 4x/day poster uses. A carousel does not need to land on an exact local minute,
+# so 15:10 UTC (11:10 ET in summer, 10:10 ET in winter) is close enough and does
+# not sit on top of any of the four image slots (13:07, 17:07, 21:07, 01:07 UTC).
+#
+# It shares the gt-autopost concurrency group on purpose: both workflows push to
+# this repo, and serialising them is what keeps a rebase race from losing a post.
+
+on:
+  schedule:
+    - cron: '10 15 * * *'
+  workflow_dispatch:
+
+concurrency:
+  group: gt-autopost
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  carousel:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Playwright + Chromium
+        run: |
+          npm install
+          npx playwright install --with-deps chromium
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Python deps
+        run: pip install requests
+
+      - name: Build the carousel
+        # carousel_generate.js aborts before rendering if any panel is missing the
+        # logo, so an unbranded carousel fails here rather than reaching the feed.
+        run: node carousel_generate.js
+
+      - name: Screen the cover panel for AI slop
+        # Same vision gate the single poster uses, run on panel 1, which is the
+        # frame that actually appears in the feed. Fail-open when no key is set.
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          COVER=$(python -c "import json;print(json.load(open('carousel_meta.json'))['media_files'][0])")
+          if [ ! -f "$COVER" ]; then echo "No cover panel found; skipping."; exit 0; fi
+          echo "Screening $COVER for AI slop..."
+          node slop-guard.js "$COVER"
+
+      - name: Commit the panels (so their image URLs are public)
+        run: |
+          git config user.name  "gt-autopost[bot]"
+          git config user.email "gt-autopost@users.noreply.github.com"
+          git add creatives carousel_meta.json
+          git commit -m "auto: new carousel $(date -u +%Y-%m-%dT%H:%MZ)" || echo "nothing to commit"
+          git pull --rebase origin ${{ github.ref_name }} || true
+          git push
+
+      - name: Publish the carousel to Instagram + Facebook
+        env:
+          GT_IG_USER_ID:          ${{ secrets.GT_IG_USER_ID }}
+          GT_IG_ACCESS_TOKEN:     ${{ secrets.GT_IG_ACCESS_TOKEN }}
+          GT_GITHUB_REPO:         ${{ secrets.GT_GITHUB_REPO }}
+          GT_GITHUB_BRANCH:       ${{ github.ref_name }}
+          GT_API_BASE:            ${{ secrets.GT_API_BASE }}
+          GT_DRY_RUN:             ${{ secrets.GT_DRY_RUN }}
+          # Facebook Page (leave unset to skip FB posting)
+          GT_FB_PAGE_ID:          ${{ secrets.GT_FB_PAGE_ID }}
+          GT_FB_PAGE_ACCESS_TOKEN: ${{ secrets.GT_FB_PAGE_ACCESS_TOKEN }}
+        run: python carousel_post.py
+
+      - name: Commit the posting record
+        if: always()
+        run: |
+          git config user.name  "gt-autopost[bot]"
+          git config user.email "gt-autopost@users.noreply.github.com"
+          git add posted_log.json || true
+          git commit -m "auto: posted record $(date -u +%Y-%m-%dT%H:%MZ)" || echo "nothing to commit"
+          git pull --rebase origin ${{ github.ref_name }} || true
+          git push || true
