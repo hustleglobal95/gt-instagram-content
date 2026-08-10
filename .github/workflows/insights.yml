@@ -40,10 +40,21 @@ jobs:
           GT_INSIGHTS_LOOKBACK: ${{ vars.GT_INSIGHTS_LOOKBACK }}
         run: python collect_insights.py
 
-      - name: Commit performance log
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      # Turns the engagement rollup into layout_weights.json. It refuses to
+      # produce weights until the data can support a ranking, so on a quiet
+      # account this writes an inactive file and the rotation is untouched.
+      - name: Learn from performance
+        run: node learn.js
+
+      - name: Commit performance log and weights
         run: |
           git config user.name "gt-insights-bot"
           git config user.email "bot@growthterminal.local"
-          git add performance_log.json 2>/dev/null || true
-          git diff --staged --quiet || git commit -m "insights: refresh performance_log [skip ci]"
+          git add performance_log.json layout_weights.json 2>/dev/null || true
+          git diff --staged --quiet || git commit -m "insights: refresh performance_log and weights [skip ci]"
           git push
