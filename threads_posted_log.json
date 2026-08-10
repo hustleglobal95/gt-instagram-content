@@ -312,5 +312,26 @@
     "errors": {
       "markusreidgt": "Threads API 400: Error validating access token: You cannot access the app till you log in to www.threads.com and follow the instructions given."
     }
+  },
+  {
+    "at": "2026-08-10T13:39:04.872Z",
+    "text": "I turned a dead account around by changing one thing.\n\nNot the topic. Not the frequency.\n\nThe first line 👇",
+    "parts": [
+      "I turned a dead account around by changing one thing.\n\nNot the topic. Not the frequency.\n\nThe first line 👇",
+      "The posts were genuinely good. But every one opened with wallpaper — “Today I want to talk about…”\n\nNobody stops for a warm-up.",
+      "We rewrote only line one for a week:\n\n• name the person\n• name the pain\n• promise the outcome\n\nSame body copy underneath.",
+      "Stops tripled. Same content. The hook was the entire bottleneck.\n\nYour best idea with a weak first line is a tree falling in an empty forest.",
+      "Rule: spend as long on line one as you spend on the other ten.\n\nSave this. Follow for the rest of the system."
+    ],
+    "isThread": true,
+    "pillar": "authority",
+    "kind": "thread",
+    "accounts": [
+      "markusreidgt"
+    ],
+    "ids": {
+      "markusreidgt": "18090181298400170"
+    },
+    "errors": {}
   }
 ]
