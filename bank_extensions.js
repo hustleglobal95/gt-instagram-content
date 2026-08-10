@@ -312,7 +312,7 @@ const EXTENSIONS = [
   {
     name: 'pipeline',
     briefId: 'ha_pipeline3',
-    ready: false,
+    ready: true,
     note: 'Three stage pipeline, from a dropped reference ad. Reports (illegible on '
         + 'purpose) into analysis (one row ringed) into decision (verdict card with '
         + 'the figure). The persuasion is the compression itself: the reader watches '
@@ -437,7 +437,7 @@ const EXTENSIONS = [
   {
     name: 'behaviourcall',
     briefId: 'ha_16pggmv',
-    ready: false,
+    ready: true,
     note: 'Behaviour call out. Naming a behaviour the reader recognises in themselves earns the next two seconds. The ask is low friction because it requests something already in hand.',
 
     /* ANATOMY FROM THE BRIEF, build the layout to match this:
@@ -462,13 +462,24 @@ const EXTENSIONS = [
       </div>`;
     },
 
-    /* Replace these with real copy before flipping ready to true.
-       Every entry needs: the render params, a caption, a first comment, a sig. */
     bank: [
-      { eyebrow: 'TODO', headline: 'TODO write the hook', sub: 'TODO write the support line',
+      { eyebrow: 'Already on your screen', headline: 'You already own the answer.',
+        sub: 'It is the spreadsheet you have open right now. The engine reads it and names your constraint in about 60 seconds.',
         foot: 'growthterminal.io',
-        cap: 'TODO write the caption',
-        fc: 'TODO write the first comment' }
+        cap: 'You already own the answer.\n\nThe diagnosis is not hiding in a tool you have to buy or a dashboard you have to build. It is sitting in the spreadsheet you already keep. Growth Terminal reads it and names the one constraint capping revenue, priced.',
+        fc: 'Which report do you already have open every morning?' },
+
+      { eyebrow: 'The bar is low', headline: 'Bring a sheet. That is all.',
+        sub: 'No migration, no setup call. Paste the report you already export and get 1 verdict back.',
+        foot: 'growthterminal.io',
+        cap: 'Bring a sheet. That is all.\n\nEvery growth tool wants an integration, an onboarding call, and three weeks. Growth Terminal asks for the file you already own. Paste it, get the verdict, argue with the evidence.',
+        fc: 'What stopped you from trying the last tool, the price or the setup?' },
+
+      { eyebrow: 'The morning habit', headline: 'You check it every morning anyway.',
+        sub: 'That daily report holds the 1 constraint capping revenue. GT names it and prices it.',
+        foot: 'growthterminal.io',
+        cap: 'You check it every morning anyway.\n\nThe report you open with your coffee already contains the answer, it just does not rank itself. Growth Terminal reads what you read and hands back the one number worth acting on.',
+        fc: 'What is the first number you look at each day, and is it the right one?' }
     ],
 
     pick(r, pick) {
