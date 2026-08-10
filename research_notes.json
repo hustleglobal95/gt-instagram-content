@@ -2,6 +2,24 @@
   "about": "Deep research knowledge base. Newest run first.",
   "runs": [
     {
+      "at": "2026-08-10T15:36:35.703Z",
+      "provider": "openai",
+      "articles": [],
+      "findings": [],
+      "log": [
+        "DEEP RESEARCH RUN 2026-08-10T15:36:35.703Z",
+        "feed ok: https://copyhackers.com/feed/ (14 items)",
+        "feed ok: https://adespresso.com/feed/ (10 items)",
+        "  junk title skipped: 15 Fresh Facebook Ad Examples to Inspire Your Next Campaign ",
+        "feed ok: https://sparktoro.com/blog/feed/ (10 items)",
+        "feed FAILED: https://www.marketingweek.com/feed/ (HTTP 403)",
+        "feed FAILED: https://www.growthunhinged.com/feed (HTTP 404)",
+        "feed FAILED: https://ariyh.com/feed (HTTP 404)",
+        "0 fresh articles collected",
+        "distilling with openai"
+      ]
+    },
+    {
       "at": "2026-08-10T04:31:31.890Z",
       "provider": "openai",
       "articles": [

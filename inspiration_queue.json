@@ -924,5 +924,89 @@
     "whyItWorks": "This feature allows marketers to understand which brands their audience is familiar with, enhancing targeting and content strategies. Evidence: The new Brand Affinity section can be found in the Keywords and Prompts dropdown.",
     "gtAngle": "Create an ad showcasing how brand affinity data can improve marketing strategies for agencies.",
     "url": "https://sparktoro.com/blog/new-brand-affinity-is-now-live-in-sparktoro-reports/"
+  },
+  {
+    "id": "rs_1kf7v9p",
+    "source": "rss",
+    "url": "https://www.marketingdive.com/news/wpps-streamlined-strategy-secures-new-business-as-revenue-declines-narrow/827443/",
+    "capturedAt": "2026-08-10T15:36:35.315Z",
+    "structure": {
+      "wordCount": 10,
+      "lineCount": 1,
+      "avgWordsPerLine": 10,
+      "hookLength": 10,
+      "signals": [],
+      "hasImage": false,
+      "hasVideo": false,
+      "platforms": []
+    },
+    "nearestExistingLayout": null,
+    "novelty": "no close match in the bank",
+    "note": "headline pattern from https://www.marketingdive.com/feeds/news/",
+    "gtAngle": "",
+    "status": "new"
+  },
+  {
+    "id": "rs_1cd04co",
+    "source": "rss",
+    "url": "https://www.marketingdive.com/news/bazooka-puts-reality-tv-rivalry-center-stage-in-social-forward-campaign/827369/",
+    "capturedAt": "2026-08-10T15:36:35.315Z",
+    "structure": {
+      "wordCount": 10,
+      "lineCount": 1,
+      "avgWordsPerLine": 10,
+      "hookLength": 10,
+      "signals": [],
+      "hasImage": false,
+      "hasVideo": false,
+      "platforms": []
+    },
+    "nearestExistingLayout": null,
+    "novelty": "no close match in the bank",
+    "note": "headline pattern from https://www.marketingdive.com/feeds/news/",
+    "gtAngle": "",
+    "status": "new"
+  },
+  {
+    "id": "rs_1ohmh2k",
+    "source": "rss",
+    "url": "https://www.marketingdive.com/news/jifs-new-campaign-reworks-logo-to-go-beyond-peanut-butter-and-jelly/827414/",
+    "capturedAt": "2026-08-10T15:36:35.315Z",
+    "structure": {
+      "wordCount": 12,
+      "lineCount": 1,
+      "avgWordsPerLine": 12,
+      "hookLength": 12,
+      "signals": [],
+      "hasImage": false,
+      "hasVideo": false,
+      "platforms": []
+    },
+    "nearestExistingLayout": null,
+    "novelty": "no close match in the bank",
+    "note": "headline pattern from https://www.marketingdive.com/feeds/news/",
+    "gtAngle": "",
+    "status": "new"
+  },
+  {
+    "id": "rs_11id1th",
+    "source": "rss",
+    "url": "https://www.marketingdive.com/news/how-pgs-always-discreet-normalizes-incontinence-with-nfl-campaign/827309/",
+    "capturedAt": "2026-08-10T15:36:35.315Z",
+    "structure": {
+      "wordCount": 9,
+      "lineCount": 1,
+      "avgWordsPerLine": 9,
+      "hookLength": 9,
+      "signals": [],
+      "hasImage": false,
+      "hasVideo": false,
+      "platforms": []
+    },
+    "nearestExistingLayout": null,
+    "novelty": "no close match in the bank",
+    "note": "headline pattern from https://www.marketingdive.com/feeds/news/",
+    "gtAngle": "",
+    "status": "new"
   }
 ]
