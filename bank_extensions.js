@@ -195,7 +195,17 @@ const EXTENSIONS = [
       { claim: 'Research that never sleeps on your brand.', voice: "That's scaled",
         footnote: 'Custom AI assistants, 1 brief every morning',
         cap: 'Research that never sleeps on your brand.\n\nA custom assistant trained on your business scans your market, your competitors, and your niche overnight, and briefs you in the morning. Scaling a brand is a research job before it is a content job.',
-        fc: 'When did you last have time to properly study your own market?' }
+        fc: 'When did you last have time to properly study your own market?' },
+
+      { claim: 'Why plan a quarter on a hunch?', voice: "That's diagnosed",
+        footnote: '1 constraint, named in about 60 seconds',
+        cap: 'Why plan a quarter on a hunch?\n\nMost quarterly plans start from a feeling about what is broken. Growth Terminal reads the numbers you already keep, names the one constraint capping revenue, and prices what fixing it is worth. Then the plan starts.',
+        fc: 'What does your planning actually start from, data or a hunch?' },
+
+      { claim: 'What is the wrong fix costing you?', voice: "That's priced",
+        footnote: 'Every gap gets a dollar range, not a guess',
+        cap: 'What is the wrong fix costing you?\n\nEvery quarter spent on the wrong constraint has a price, it is just invisible until someone calculates it. Growth Terminal puts a dollar range on the gap between what you are fixing and what is actually binding.',
+        fc: 'If you had to put a number on last quarter, what did the wrong fix cost?' }
     ],
 
     pick(r, pick) {
@@ -273,7 +283,19 @@ const EXTENSIONS = [
         sub: 'Trained on your business, not everyone. It studies your market and briefs you first thing.',
         proof: 'Custom AI assistants, 1 brief a morning. growthterminal.io',
         cap: 'A researcher on your team, always on.\n\nBrands scale on insight before they scale on content. A custom GT assistant studies your market overnight and hands you the brief each morning, so every post, offer, and pitch starts from knowledge.',
-        fc: 'What would you do differently if you truly knew your market cold?' }
+        fc: 'What would you do differently if you truly knew your market cold?' },
+
+      { headline: 'Which of the 12 is yours?', cta: 'Run the free diagnostic',
+        sub: 'Twelve places growth gets stuck. One of them is capping your revenue right now.',
+        proof: '12 categories, 1 verdict, about 60 seconds',
+        cap: 'Which of the 12 is yours?\n\nGrowth gets stuck in twelve places, and only one of them is yours this quarter. Growth Terminal reads the sheet you already keep and names it, with the dollar range attached.',
+        fc: 'Which of the twelve would you guess is yours right now?' },
+
+      { headline: 'Still guessing what to fix first?', cta: 'Try it free',
+        sub: 'The engine reads your sheet and names the one constraint worth your quarter.',
+        proof: 'About 60 seconds, in Google Sheets. growthterminal.io',
+        cap: 'Still guessing what to fix first?\n\nEffort is rarely the problem, aim is. Growth Terminal ranks the twelve places growth gets stuck against your own numbers and hands back the one worth your quarter, priced.',
+        fc: 'What is first on your fix list right now, and how did it get there?' }
     ],
 
     pick(r, pick) {
