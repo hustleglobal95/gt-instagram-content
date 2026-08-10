@@ -2,6 +2,82 @@
   "about": "Deep research knowledge base. Newest run first.",
   "runs": [
     {
+      "at": "2026-08-10T04:31:31.890Z",
+      "provider": "openai",
+      "articles": [
+        {
+          "title": "How copywriters attract leads right now: Proven 10x plays (not 2x tactics)",
+          "url": "https://copyhackers.com/2025/12/how-copywriters-attract-leads/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=how-copywriters-attract-leads"
+        },
+        {
+          "title": "The BRAND New V3 of SparkToro Is Here",
+          "url": "https://sparktoro.com/blog/the-brand-new-v3-of-sparktoro-is-here/"
+        },
+        {
+          "title": "NEW: Brand Affinity is Now Live in SparkToro Reports",
+          "url": "https://sparktoro.com/blog/new-brand-affinity-is-now-live-in-sparktoro-reports/"
+        },
+        {
+          "title": "7 Reasons Every Marketing Team Should Monitor Brand Mentions",
+          "url": "https://sparktoro.com/blog/7-reasons-every-marketing-team-should-monitor-brand-mentions/"
+        },
+        {
+          "title": "Creating and Promoting Were Never the Same Decision",
+          "url": "https://sparktoro.com/blog/creating-and-promoting-were-never-the-same-decision/"
+        }
+      ],
+      "findings": [
+        {
+          "id": "dr_20260810_1",
+          "name": "Guest Teaching",
+          "device": "headline emphasizes the benefit of borrowing trust from established communities",
+          "evidence": "Jess Haney, a SaaS copywriter, stated that leading trainings inside group coaching programs has been one of the fastest and most consistent ways that I’ve gotten clients.",
+          "angle": "Create an ad promoting a guest teaching opportunity in a paid community targeting your ideal clients.",
+          "url": "https://copyhackers.com/2025/12/how-copywriters-attract-leads/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=how-copywriters-attract-leads"
+        },
+        {
+          "id": "dr_20260810_2",
+          "name": "Podcast Guesting",
+          "device": "headline highlights the long-term benefits of podcast guesting for lead generation",
+          "evidence": "Abi Prendergast mentioned that podcasts have been the single best lead gen source for her, leading to clients at 10, 20, and 50K price points directly from a podcast.",
+          "angle": "Design an ad campaign showcasing the benefits of being a podcast guest for lead generation.",
+          "url": "https://copyhackers.com/2025/12/how-copywriters-attract-leads/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=how-copywriters-attract-leads"
+        },
+        {
+          "id": "dr_20260810_3",
+          "name": "Upgrade Announcement",
+          "device": "headline highlights the major upgrade and its benefits in under 10 words",
+          "evidence": "SparkToro's V3 is the 3rd major iteration since the product's first launch in 2020.",
+          "angle": "Create a launch ad that emphasizes the new features and improvements of SparkToro V3.",
+          "url": "https://sparktoro.com/blog/the-brand-new-v3-of-sparktoro-is-here/"
+        },
+        {
+          "id": "dr_20260810_4",
+          "name": "brand affinity data",
+          "device": "headline clearly states the new feature and its purpose in under 10 words",
+          "evidence": "The new Brand Affinity section can be found in the Keywords and Prompts dropdown.",
+          "angle": "Create an ad showcasing how brand affinity data can improve marketing strategies for agencies.",
+          "url": "https://sparktoro.com/blog/new-brand-affinity-is-now-live-in-sparktoro-reports/"
+        }
+      ],
+      "log": [
+        "DEEP RESEARCH RUN 2026-08-10T04:31:31.890Z",
+        "feed ok: https://copyhackers.com/feed/ (14 items)",
+        "feed ok: https://adespresso.com/feed/ (10 items)",
+        "  junk title skipped: 15 Fresh Facebook Ad Examples to Inspire Your Next Campaign ",
+        "feed ok: https://sparktoro.com/blog/feed/ (10 items)",
+        "feed FAILED: https://www.marketingweek.com/feed/ (HTTP 403)",
+        "feed FAILED: https://www.growthunhinged.com/feed (HTTP 404)",
+        "feed FAILED: https://ariyh.com/feed (HTTP 404)",
+        "5 fresh articles collected",
+        "distilling with openai",
+        "  STRONG finding: Guest Teaching",
+        "  STRONG finding: Podcast Guesting",
+        "  STRONG finding: Upgrade Announcement",
+        "  STRONG finding: brand affinity data"
+      ]
+    },
+    {
       "at": "2026-08-10T04:20:32.600Z",
       "provider": "openai",
       "articles": [

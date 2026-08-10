@@ -872,5 +872,57 @@
     "whyItWorks": "The article highlights the necessity for enterprise marketing platforms to coordinate multiple channels from a single canvas, which enhances campaign effectiveness. Evidence: ask vendors to demonstrate a live orchestration flow that includes at least three channels and a conditional branch based on account-level data.",
     "gtAngle": "This can help organizations evaluate the integration capabilities of marketing platforms.",
     "url": "https://blog.hubspot.com/marketing/enterprise-marketing-automation"
+  },
+  {
+    "id": "dr_20260810_1",
+    "source": "deep_research",
+    "name": "Guest Teaching",
+    "status": "new",
+    "addedAt": "2026-08-10T04:31:31.890Z",
+    "structure": {
+      "anatomy": "headline emphasizes the benefit of borrowing trust from established communities"
+    },
+    "whyItWorks": "It allows you to borrow the trust of an established community, reaching eager, ready-to-buy people who have already invested in solving their problems. Evidence: Jess Haney, a SaaS copywriter, stated that leading trainings inside group coaching programs has been one of the fastest and most consistent ways that I’ve gotten clients.",
+    "gtAngle": "Create an ad promoting a guest teaching opportunity in a paid community targeting your ideal clients.",
+    "url": "https://copyhackers.com/2025/12/how-copywriters-attract-leads/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=how-copywriters-attract-leads"
+  },
+  {
+    "id": "dr_20260810_2",
+    "source": "deep_research",
+    "name": "Podcast Guesting",
+    "status": "new",
+    "addedAt": "2026-08-10T04:31:31.890Z",
+    "structure": {
+      "anatomy": "headline highlights the long-term benefits of podcast guesting for lead generation"
+    },
+    "whyItWorks": "It leverages the host's credibility and audience, creating a stacking effect of exposure that builds trust over time. Evidence: Abi Prendergast mentioned that podcasts have been the single best lead gen source for her, leading to clients at 10, 20, and 50K price points directly from a podcast.",
+    "gtAngle": "Design an ad campaign showcasing the benefits of being a podcast guest for lead generation.",
+    "url": "https://copyhackers.com/2025/12/how-copywriters-attract-leads/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=how-copywriters-attract-leads"
+  },
+  {
+    "id": "dr_20260810_3",
+    "source": "deep_research",
+    "name": "Upgrade Announcement",
+    "status": "new",
+    "addedAt": "2026-08-10T04:31:31.890Z",
+    "structure": {
+      "anatomy": "headline highlights the major upgrade and its benefits in under 10 words"
+    },
+    "whyItWorks": "Announcing a major upgrade creates excitement and urgency among users, encouraging them to explore new features and improvements. Evidence: SparkToro's V3 is the 3rd major iteration since the product's first launch in 2020.",
+    "gtAngle": "Create a launch ad that emphasizes the new features and improvements of SparkToro V3.",
+    "url": "https://sparktoro.com/blog/the-brand-new-v3-of-sparktoro-is-here/"
+  },
+  {
+    "id": "dr_20260810_4",
+    "source": "deep_research",
+    "name": "brand affinity data",
+    "status": "new",
+    "addedAt": "2026-08-10T04:31:31.890Z",
+    "structure": {
+      "anatomy": "headline clearly states the new feature and its purpose in under 10 words"
+    },
+    "whyItWorks": "This feature allows marketers to understand which brands their audience is familiar with, enhancing targeting and content strategies. Evidence: The new Brand Affinity section can be found in the Keywords and Prompts dropdown.",
+    "gtAngle": "Create an ad showcasing how brand affinity data can improve marketing strategies for agencies.",
+    "url": "https://sparktoro.com/blog/new-brand-affinity-is-now-live-in-sparktoro-reports/"
   }
 ]
