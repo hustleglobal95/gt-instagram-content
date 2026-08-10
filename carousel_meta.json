@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-08-10T00:55:47.261Z",
+  "generated_at": "2026-08-10T01:03:33.846Z",
   "kind": "carousel",
-  "layout": "carousel:plan",
+  "layout": "carousel:twelve",
   "media_files": [
-    "creatives/gt_car_20260810005546_1.jpg",
-    "creatives/gt_car_20260810005546_2.jpg",
-    "creatives/gt_car_20260810005546_3.jpg",
-    "creatives/gt_car_20260810005546_4.jpg",
-    "creatives/gt_car_20260810005546_5.jpg"
+    "creatives/gt_car_20260810010331_1.jpg",
+    "creatives/gt_car_20260810010331_2.jpg",
+    "creatives/gt_car_20260810010331_3.jpg",
+    "creatives/gt_car_20260810010331_4.jpg",
+    "creatives/gt_car_20260810010331_5.jpg"
   ],
-  "caption": "A diagnosis without sequencing is just an opinion.\n\nEvery Growth Terminal run ends in a 90 day plan: six phases in order, three decision gates that tell you when to continue or change course, and five leading indicators that move before revenue does.\n\nBuilt from your numbers, not a template.",
-  "hashtags": "#growthterminal #b2bsaas #growthmarketing #businessgrowth #revenueops #forecasting #marketingstrategy #founders #saas #analytics #startups",
-  "first_comment": "Does your current plan have a gate that lets you stop early?",
-  "alt_text": "A diagnosis without sequencing is just an opinion. Every Growth Terminal run ends in a 90 day plan: six phases in order,",
-  "sig": "car:plan"
+  "caption": "Growth gets stuck in twelve places. Only one of them is yours this quarter.\n\nDemand side: acquisition, traffic, conversion, offer.\nKeep side: activation, retention, churn, fulfilment.\nCapacity side: capacity, utilisation, pricing, cash collection.\n\nWorking the wrong one is why effort stops turning into revenue. Growth Terminal names which is yours, prices it, and grades the call.",
+  "hashtags": "#growthterminal #b2bsaas #growthmarketing #startuptools #datadriven #scaleup #marketingstrategy #cro #revenueops #retention #growthstrategy",
+  "first_comment": "Which of the twelve would you guess is yours right now?",
+  "alt_text": "Growth gets stuck in twelve places. Only one of them is yours this quarter. Demand side: acquisition, traffic, conversio",
+  "sig": "car:twelve"
 }
