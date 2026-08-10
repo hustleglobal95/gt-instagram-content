@@ -350,5 +350,22 @@
       "markusreidgt": "18087364796192798"
     },
     "errors": {}
+  },
+  {
+    "at": "2026-08-10T17:05:31.909Z",
+    "text": "Growth is just retention with a smaller leak.",
+    "parts": [
+      "Growth is just retention with a smaller leak."
+    ],
+    "isThread": false,
+    "pillar": "constraint",
+    "kind": "aphorism",
+    "accounts": [
+      "markusreidgt"
+    ],
+    "ids": {
+      "markusreidgt": "17930842011364496"
+    },
+    "errors": {}
   }
 ]
