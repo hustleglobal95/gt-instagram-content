@@ -333,5 +333,22 @@
       "markusreidgt": "18090181298400170"
     },
     "errors": {}
+  },
+  {
+    "at": "2026-08-10T15:13:34.636Z",
+    "text": "The move most people skip: retention-first growth.\n\nPlug the leak before you scale the pour. Acquisition on top of churn is a bucket with holes.\n\nDo this before you touch anything else.",
+    "parts": [
+      "The move most people skip: retention-first growth.\n\nPlug the leak before you scale the pour. Acquisition on top of churn is a bucket with holes.\n\nDo this before you touch anything else."
+    ],
+    "isThread": false,
+    "pillar": "systems",
+    "kind": "framework",
+    "accounts": [
+      "markusreidgt"
+    ],
+    "ids": {
+      "markusreidgt": "18087364796192798"
+    },
+    "errors": {}
   }
 ]
