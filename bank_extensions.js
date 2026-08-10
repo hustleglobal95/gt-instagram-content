@@ -310,6 +310,131 @@ const EXTENSIONS = [
   },
 
   {
+    name: 'pipeline',
+    briefId: 'ha_pipeline3',
+    ready: false,
+    note: 'Three stage pipeline, from a dropped reference ad. Reports (illegible on '
+        + 'purpose) into analysis (one row ringed) into decision (verdict card with '
+        + 'the figure). The persuasion is the compression itself: the reader watches '
+        + '40 numbers become one instruction. This is the only layout in the bank '
+        + 'that shows the product doing its job rather than describing the result.',
+
+    /* p: { metric, current, benchmark, gap, impact, directive, foot } */
+    render(p, ctx) {
+      const { ORANGE, INK, WHITE } = PALETTE;
+      const { logo, grain } = ctx;
+
+      /* Stage one, the mess. Rows of muted junk data, deliberately unreadable. */
+      const junkRow = (i) => `
+        <div style="display:flex;gap:10px;padding:8px 0;opacity:${0.5 - i * 0.04}">
+          ${[46, 34, 28, 30, 26, 34].map(w => `<span style="display:inline-block;height:11px;
+            width:${w + ((i * 7 + w) % 18)}px;border-radius:4px;background:rgba(253,252,252,.35)"></span>`).join('')}
+        </div>`;
+
+      const stageLabel = (n, name, sub) => `
+        <div style="display:flex;align-items:baseline;gap:12px">
+          <span style="font-family:ui-monospace,Menlo,monospace;font-size:21px;font-weight:700;
+            color:${ORANGE}">${n}</span>
+          <span style="font-size:27px;font-weight:800;letter-spacing:.14em;text-transform:uppercase">${name}</span>
+          <span style="font-size:21px;font-weight:500;color:rgba(253,252,252,.55)">${sub}</span>
+        </div>`;
+
+      const arrow = `<div style="text-align:center;font-size:30px;color:${ORANGE};
+        font-weight:800;line-height:1;padding:10px 0">&#8595;</div>`;
+
+      const cell = (v, accent, right) => `<span style="flex:1;text-align:${right ? 'right' : 'left'};
+        font-size:23px;font-weight:${accent ? 800 : 600};color:${accent ? ORANGE : 'rgba(23,19,15,.8)'}">${v}</span>`;
+
+      return `<div class="stage" style="background:${INK};color:${WHITE};padding:70px 74px;display:flex;flex-direction:column">
+        ${grain}
+        <div class="toplogo" style="position:relative;display:flex;justify-content:center;margin-bottom:20px">${logo(ORANGE, WHITE)}</div>
+
+        <div style="position:relative;flex:1;display:flex;flex-direction:column;justify-content:space-evenly">
+        <div style="position:relative">
+          ${stageLabel('01', 'Reports', 'too much data')}
+          <div style="background:rgba(253,252,252,.06);border:1px solid rgba(253,252,252,.1);
+            border-radius:14px;padding:16px 22px;margin-top:12px">
+            ${[0, 1, 2, 3, 4, 5].map(junkRow).join('')}
+          </div>
+        </div>
+        ${arrow}
+        <div style="position:relative">
+          ${stageLabel('02', 'Analysis', 'one constraint isolated')}
+          <div style="background:${WHITE};color:${INK};border-radius:14px;padding:8px 20px;margin-top:12px">
+            <div style="display:flex;gap:10px;padding:10px 4px;border-bottom:1px solid rgba(23,19,15,.12);
+              font-size:21px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:rgba(23,19,15,.5)">
+              <span style="flex:1.6">Metric</span><span style="flex:1;text-align:right">Now</span>
+              <span style="flex:1;text-align:right">Benchmark</span><span style="flex:1;text-align:right">Worth</span>
+            </div>
+            <div style="display:flex;gap:10px;align-items:center;padding:14px 10px;margin:8px 0;
+              border:3px solid ${ORANGE};border-radius:10px">
+              <span style="flex:1.6;font-size:23px;font-weight:800">${p.metric}</span>
+              ${cell(p.current, false, true)}${cell(p.benchmark, false, true)}${cell(p.impact, true, true)}
+            </div>
+            <div style="display:flex;gap:10px;padding:10px;opacity:.45">
+              <span style="flex:1.6;font-size:21px;font-weight:600">${p.alsoRan}</span>
+              ${cell(p.alsoNow, false, true)}${cell(p.alsoBench, false, true)}${cell(p.alsoImpact, false, true)}
+            </div>
+          </div>
+        </div>
+        ${arrow}
+        <div style="position:relative;border:2px solid ${ORANGE};border-radius:16px;padding:34px 34px;
+          display:flex;align-items:center;gap:24px">
+          <div style="flex:1">
+            <div style="font-family:ui-monospace,Menlo,monospace;font-size:21px;font-weight:700;
+              letter-spacing:.16em;text-transform:uppercase;color:${ORANGE}">03 &middot; Decision</div>
+            <div style="font-size:54px;font-weight:800;letter-spacing:-.02em;line-height:1.04;margin-top:10px">${p.headline}</div>
+            <div style="font-size:23px;font-weight:500;margin-top:8px;color:rgba(253,252,252,.75)">${p.directive}</div>
+          </div>
+          <div style="flex:none;text-align:right">
+            <div style="font-size:64px;font-weight:800;letter-spacing:-.02em;color:${ORANGE};line-height:1">${p.gap}</div>
+            <div style="font-size:21px;font-weight:600;margin-top:6px;color:rgba(253,252,252,.6)">${p.gapLabel}</div>
+          </div>
+        </div>
+
+        <div style="position:relative;text-align:center;font-size:27px;font-weight:600;
+          margin-top:10px;color:rgba(253,252,252,.86)">${p.foot}</div>
+        </div>
+      </div>`;
+    },
+
+    bank: [
+      { metric: 'Paid CAC', current: '$113', benchmark: '$85', impact: '+$1.2M',
+        alsoRan: 'Conversion rate', alsoNow: '1.3%', alsoBench: '2.5%', alsoImpact: '+$0.8M',
+        directive: 'Lower paid CAC to $85 or less.', gap: '+$1.2M', gapLabel: 'a year, if fixed',
+        foot: 'Sample analysis. Yours takes about 60 seconds. growthterminal.io',
+        cap: 'From 40 numbers to 1 decision.\n\nThe report has everything and says nothing. Growth Terminal reads it, ranks every gap against benchmarks, and hands back one instruction with the annual value attached. This sample: paid CAC at $113 against an $85 benchmark, worth $1.2M a year.',
+        fc: 'What would your one ringed row be?' },
+
+      { metric: 'Retention', current: '61%', benchmark: '78%', impact: '+$640K',
+        alsoRan: 'Avg order value', alsoNow: '$286', alsoBench: '$350', alsoImpact: '+$210K',
+        directive: 'Close the retention gap before buying more traffic.', gap: '+$640K', gapLabel: 'a year, if fixed',
+        foot: 'Sample analysis. Run yours free. growthterminal.io',
+        cap: 'The leak outranks the funnel.\n\nMost teams buy traffic to outrun churn. The engine ranks both against benchmarks and prices the difference, and in this sample the retention gap is worth three times the next fix. One decision, backed by a number.',
+        fc: 'Are you filling the funnel or fixing the bucket this quarter?' },
+
+      { metric: 'Pricing', current: '$49', benchmark: '$79', impact: '+$900K',
+        alsoRan: 'Email capture', alsoNow: '2.1%', alsoBench: '3.5%', alsoImpact: '+$300K',
+        directive: 'Test the $79 price point on the next cohort.', gap: '+$900K', gapLabel: 'a year, if fixed',
+        foot: 'Sample analysis. Yours takes about 60 seconds. growthterminal.io',
+        cap: 'The most expensive fix is the one you never rank.\n\nPricing sat fourth on this list by gut feel and first by the numbers. Growth Terminal ranks every constraint against benchmarks so the biggest number gets fixed first, not the loudest one.',
+        fc: 'When did you last test your price against a benchmark instead of a feeling?' }
+    ],
+
+    pick(r, pick) {
+      const b = pick(this.bank, r);
+      return {
+        layout: this.name, headline: b.headline || 'Fix this first.',
+        metric: b.metric, current: b.current, benchmark: b.benchmark, impact: b.impact,
+        alsoRan: b.alsoRan, alsoNow: b.alsoNow, alsoBench: b.alsoBench, alsoImpact: b.alsoImpact,
+        directive: b.directive, gap: b.gap, gapLabel: b.gapLabel, foot: b.foot,
+        caption: b.cap, first_comment: b.fc,
+        sig: 'pipe:' + b.metric
+      };
+    }
+  },
+
+  {
     name: 'behaviourcall',
     briefId: 'ha_16pggmv',
     ready: false,

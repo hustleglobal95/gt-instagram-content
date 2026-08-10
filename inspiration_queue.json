@@ -226,5 +226,18 @@
     "nearestExistingLayout": null,
     "novelty": "no close match in the bank",
     "status": "new"
+  },
+  {
+    "id": "ha_pipeline3",
+    "source": "user_dropped_ad",
+    "name": "Three stage pipeline, reports to analysis to decision",
+    "status": "injected",
+    "injectedAs": "pipeline",
+    "addedAt": "2026-08-10T03:30:00Z",
+    "structure": {
+      "anatomy": "Three panels in sequence with arrows between. Panel one: the messy input, a spreadsheet of too much data, deliberately illegible. Panel two: the analysis, a clean metric table with ONE row ringed in brand colour, showing current vs benchmark vs gap vs impact. Panel three: the decision, a bordered verdict card with a directive (FIX THIS FIRST), the specific action, and one large money figure. The persuasion is the transformation: chaos becomes one ringed row becomes one instruction with a number."
+    },
+    "whyItWorks": "It shows the product doing its job instead of describing it. The ringed row is the product moment. The reader follows the arrows and experiences the compression from 40 numbers to 1 decision.",
+    "gtAngle": "This IS the GT flow: paste the sheet, the engine ranks constraints against benchmarks, one gets named and priced, the verdict card says fix this first."
   }
 ]
