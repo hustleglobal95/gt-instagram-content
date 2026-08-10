@@ -2,6 +2,73 @@
   "about": "Deep research knowledge base. Newest run first.",
   "runs": [
     {
+      "at": "2026-08-10T04:20:32.600Z",
+      "provider": "openai",
+      "articles": [
+        {
+          "title": "Is your product positioning \"corn fed?\"",
+          "url": "http://advertising-age.blogspot.com/2012/07/is-your-product-positioning-corn-fed.html"
+        },
+        {
+          "title": "What is enterprise marketing automation? Features, platforms, and best practices",
+          "url": "https://blog.hubspot.com/marketing/enterprise-marketing-automation"
+        },
+        {
+          "title": "HubSpot AEO vs. Scrunch: Which tool fits your workflow?",
+          "url": "https://blog.hubspot.com/marketing/hubspot-vs-scrunch"
+        },
+        {
+          "title": "HubSpot AEO vs. Ahrefs Brand Radar: Features compared [2026]",
+          "url": "https://blog.hubspot.com/marketing/hubspot-vs-ahrefs-aeo"
+        }
+      ],
+      "findings": [
+        {
+          "id": "dr_20260810_1",
+          "name": "corn fed analogy",
+          "device": "uses a strong metaphor to connect product positioning with animal feeding practices",
+          "url": "http://advertising-age.blogspot.com/2012/07/is-your-product-positioning-corn-fed.html"
+        },
+        {
+          "id": "dr_20260810_2",
+          "name": "extreme product makeover",
+          "device": "provides specific examples of successful product transformations",
+          "url": "http://advertising-age.blogspot.com/2012/07/is-your-product-positioning-corn-fed.html"
+        },
+        {
+          "id": "dr_20260810_3",
+          "name": "data architecture audit",
+          "device": "headline suggests a critical first step in platform evaluation",
+          "url": "https://blog.hubspot.com/marketing/enterprise-marketing-automation"
+        },
+        {
+          "id": "dr_20260810_4",
+          "name": "cross-channel orchestration",
+          "device": "call to action for vendors to demonstrate capabilities",
+          "url": "https://blog.hubspot.com/marketing/enterprise-marketing-automation"
+        }
+      ],
+      "log": [
+        "DEEP RESEARCH RUN 2026-08-10T04:20:32.600Z",
+        "feed ok: https://www.marketingdive.com/feeds/news/ (10 items)",
+        "  article failed: https://www.marketingdive.com/news/nielsen-acquires-doubleverify-to-link-ad-verification-audience-measurement/827319/ (HTTP 403)",
+        "  article failed: https://www.marketingdive.com/news/behind-reddit-and-youtubes-roles-in-ai-visibility/827313/ (HTTP 403)",
+        "  article failed: https://www.marketingdive.com/news/foot-locker-role-in-sneaker-culture-with-new-brand-platform/827210/ (HTTP 403)",
+        "feed ok: https://feeds.feedburner.com/AdvertisingAge (25 items)",
+        "  article failed: http://advertising-age.blogspot.com/2012/07/coke-cannes.html (HTTP 429)",
+        "  article failed: http://advertising-age.blogspot.com/2012/03/strategy-of-whiz-kids.html (HTTP 429)",
+        "feed ok: https://copyhackers.com/feed/ (14 items)",
+        "feed ok: https://adespresso.com/feed/ (10 items)",
+        "feed ok: https://blog.hubspot.com/marketing/rss.xml (50 items)",
+        "4 fresh articles collected",
+        "distilling with openai",
+        "  finding: corn fed analogy",
+        "  finding: extreme product makeover",
+        "  finding: data architecture audit",
+        "  finding: cross-channel orchestration"
+      ]
+    },
+    {
       "at": "2026-08-10T03:06:44.285Z",
       "provider": "openai",
       "articles": [

@@ -820,5 +820,57 @@
     "whyItWorks": "Short sentences enhance readability and comprehension, making it easier for all users, including those using screen readers, to process information quickly and effectively. Evidence: The British Government's content team found that reader understanding drops off sharply after 25-29 words",
     "gtAngle": "this can be used to evaluate the length of sentences in product descriptions and emails",
     "url": "https://copyhackers.com/2025/12/accessible-email-copy-for-ecommerce/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=accessible-email-copy-for-ecommerce"
+  },
+  {
+    "id": "dr_20260810_1",
+    "source": "deep_research",
+    "name": "corn fed analogy",
+    "status": "new",
+    "addedAt": "2026-08-10T04:20:32.600Z",
+    "structure": {
+      "anatomy": "uses a strong metaphor to connect product positioning with animal feeding practices"
+    },
+    "whyItWorks": "The article uses the analogy of corn-fed animals to illustrate the dangers of artificially boosting product positioning with excessive marketing spend, making the concept relatable and memorable. Evidence: The article states that 40% of cows will die if fed corn instead of grass, highlighting the risks of poor positioning strategies.",
+    "gtAngle": "This analogy can be used to diagnose whether a company's marketing strategy is sustainable or artificially inflated.",
+    "url": "http://advertising-age.blogspot.com/2012/07/is-your-product-positioning-corn-fed.html"
+  },
+  {
+    "id": "dr_20260810_2",
+    "source": "deep_research",
+    "name": "extreme product makeover",
+    "status": "new",
+    "addedAt": "2026-08-10T04:20:32.600Z",
+    "structure": {
+      "anatomy": "provides specific examples of successful product transformations"
+    },
+    "whyItWorks": "The article emphasizes the success of extreme product makeovers for brands like Folgers and Pampers, showcasing a proven method for revitalizing stagnant sales. Evidence: Folgers, Pampers, and Tylenol became billion-dollar product lines after undergoing makeovers, demonstrating the effectiveness of this strategy.",
+    "gtAngle": "This finding can help identify brands that may benefit from a similar makeover approach.",
+    "url": "http://advertising-age.blogspot.com/2012/07/is-your-product-positioning-corn-fed.html"
+  },
+  {
+    "id": "dr_20260810_3",
+    "source": "deep_research",
+    "name": "data architecture audit",
+    "status": "new",
+    "addedAt": "2026-08-10T04:20:32.600Z",
+    "structure": {
+      "anatomy": "headline suggests a critical first step in platform evaluation"
+    },
+    "whyItWorks": "The article emphasizes the importance of auditing current data architecture to identify fragmentation before selecting an enterprise marketing automation platform. Evidence: If the answer is 'three or more places,' your first purchase criterion should be unified data rather than feature count.",
+    "gtAngle": "This could be used to guide organizations in assessing their data management practices before investing in new tools.",
+    "url": "https://blog.hubspot.com/marketing/enterprise-marketing-automation"
+  },
+  {
+    "id": "dr_20260810_4",
+    "source": "deep_research",
+    "name": "cross-channel orchestration",
+    "status": "new",
+    "addedAt": "2026-08-10T04:20:32.600Z",
+    "structure": {
+      "anatomy": "call to action for vendors to demonstrate capabilities"
+    },
+    "whyItWorks": "The article highlights the necessity for enterprise marketing platforms to coordinate multiple channels from a single canvas, which enhances campaign effectiveness. Evidence: ask vendors to demonstrate a live orchestration flow that includes at least three channels and a conditional branch based on account-level data.",
+    "gtAngle": "This can help organizations evaluate the integration capabilities of marketing platforms.",
+    "url": "https://blog.hubspot.com/marketing/enterprise-marketing-automation"
   }
 ]
