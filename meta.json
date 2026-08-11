@@ -1,14 +1,12 @@
 {
-  "generated_at": "2026-08-11T17:01:47.470Z",
-  "media_file": "creatives/gt_auto_20260811_170147.jpg",
-  "is_reel": false,
-  "layout": "prodsoon",
-  "editorial_bg": null,
-  "person": null,
-  "qa": null,
-  "caption": "Coming soon to the Growth Terminal store: Retention & Churn Tracker.\n\nSee exactly where revenue leaks after the sale.\n\nWant it first? Link in bio.\n\n→ growthterminal.io",
-  "hashtags": "#growthterminal #b2bmarketing #startupmetrics #googlesheetstips",
-  "first_comment": "What would you want this one to do? Tell me below.",
-  "alt_text": "Coming soon: Retention & Churn Tracker.",
-  "sig": "prodsoon:Retention & Churn Tracke"
+  "generated_at": "2026-08-11T21:01:18.329Z",
+  "media_file": "creatives/gt_reel_20260811_210118.jpg",
+  "video_file": "creatives/gt_reel_20260811_210118.mp4",
+  "is_reel": true,
+  "layout": "reel:card",
+  "caption": "This is what a Growth Terminal diagnosis looks like, one constraint, named, priced, and verified against real revenue. Here, pricing was capping the business by $120K-$300K a year.\n\nYours is one run away.\n\n→ growthterminal.io",
+  "hashtags": "#growthterminal #startupmetrics #agencyowner #saasgrowth",
+  "first_comment": "What would you do differently if your #1 constraint came pre-priced?",
+  "alt_text": "#1 constraint: Pricing",
+  "sig": "reelcard:Pricing"
 }
