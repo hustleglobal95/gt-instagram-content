@@ -515,5 +515,22 @@
       "markusreidgt": "17955371015996251"
     },
     "errors": {}
+  },
+  {
+    "at": "2026-08-11T21:00:14.090Z",
+    "text": "“We need more traffic.”\n\nAlmost never true.\n\nMost businesses leak the traffic they already have. A 2% → 4% conversion bump doubles sales with zero new visitors. Find the leak before you buy the water.",
+    "parts": [
+      "“We need more traffic.”\n\nAlmost never true.\n\nMost businesses leak the traffic they already have. A 2% → 4% conversion bump doubles sales with zero new visitors. Find the leak before you buy the water."
+    ],
+    "isThread": false,
+    "pillar": "bi",
+    "kind": "myth",
+    "accounts": [
+      "markusreidgt"
+    ],
+    "ids": {
+      "markusreidgt": "18213498046351013"
+    },
+    "errors": {}
   }
 ]
