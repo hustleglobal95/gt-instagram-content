@@ -418,5 +418,26 @@
       "markusreidgt": "18112359311064952"
     },
     "errors": {}
+  },
+  {
+    "at": "2026-08-11T02:23:45.905Z",
+    "text": "Stop trying to grow.\n\nStart trying to leak less.\n\nThe retention-first playbook 👇",
+    "parts": [
+      "Stop trying to grow.\n\nStart trying to leak less.\n\nThe retention-first playbook 👇",
+      "Acquisition on top of churn is a bucket with holes. You pour faster, it drains faster, you burn cash feeling busy.",
+      "Find your leak: where do people go quiet? Signup → first use? First use → habit? Habit → renewal? One of those is bleeding.",
+      "Fix onboarding first. People don’t abandon what they’ve actually activated. Get them to the “aha” fast and churn drops on its own.",
+      "Then — and only then — scale acquisition. Growth is retention with a smaller leak.\n\nStop guessing. The System names your #1 constraint and fixes it → www.growthterminal.io/system"
+    ],
+    "isThread": true,
+    "pillar": "constraint",
+    "kind": "thread",
+    "accounts": [
+      "markusreidgt"
+    ],
+    "ids": {
+      "markusreidgt": "18093504806637084"
+    },
+    "errors": {}
   }
 ]
