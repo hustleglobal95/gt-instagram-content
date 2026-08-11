@@ -794,5 +794,26 @@
     "caption": "What is the wrong fix costing you?\n\nEvery quarter spent on the wrong constraint has a price, it is just invisible until someone calculates it. Growth Terminal puts a dollar range on the gap between what you are fixing and what is actually binding.\n\n\u2192 growthterminal.io",
     "hashtags": "#growthterminal #agencyowner #agencylife #saasfounder",
     "first_comment": "If you had to put a number on last quarter, what did the wrong fix cost?"
+  },
+  {
+    "media_id": "17902712331493912",
+    "fb_post_id": "1087307654468135_122101135790536059",
+    "at": "2026-08-11T16:08:14.136774Z",
+    "file": "creatives/gt_car_20260811160808_1.jpg",
+    "media_files": [
+      "creatives/gt_car_20260811160808_1.jpg",
+      "creatives/gt_car_20260811160808_2.jpg",
+      "creatives/gt_car_20260811160808_3.jpg",
+      "creatives/gt_car_20260811160808_4.jpg",
+      "creatives/gt_car_20260811160808_5.jpg"
+    ],
+    "is_reel": false,
+    "is_carousel": true,
+    "panels": 5,
+    "layout": "carousel:plan",
+    "sig": "car:plan",
+    "caption": "A diagnosis without sequencing is just an opinion.\n\nEvery Growth Terminal run ends in a 90 day plan: six phases in order, three decision gates that tell you when to continue or change course, and five leading indicators that move before revenue does.\n\nBuilt from your numbers, not a template.",
+    "hashtags": "#growthterminal #consultingbusiness #revenueoperations #foundertips",
+    "first_comment": "Does your current plan have a gate that lets you stop early?"
   }
 ]
