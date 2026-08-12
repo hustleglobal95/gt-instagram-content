@@ -1,12 +1,14 @@
 {
-  "generated_at": "2026-08-12T13:01:11.545Z",
-  "media_file": "creatives/gt_reel_20260812_130111.jpg",
-  "video_file": "creatives/gt_reel_20260812_130111.mp4",
-  "is_reel": true,
-  "layout": "reel:countup",
-  "caption": "Growth only gets stuck in twelve places. The hard part is knowing which one is YOUR #1 right now, with a dollar range attached. That's the whole job Growth Terminal does.\n\nRun the free 60-second diagnostic, link in bio.",
-  "hashtags": "#growthterminal #agencylife #saasfounder #revenueoperations",
-  "first_comment": "Which of the 12 is biting hardest this quarter?",
-  "alt_text": "12",
-  "sig": "reelnum:12"
+  "generated_at": "2026-08-12T17:01:59.176Z",
+  "media_file": "creatives/gt_auto_20260812_170159.jpg",
+  "is_reel": false,
+  "layout": "prodclaim",
+  "editorial_bg": null,
+  "person": null,
+  "qa": null,
+  "caption": "Most trackers show you conversion rates. This one tells you what to do with them: which step is costing you the most, how much fixing it is worth, and what your revenue looks like if you close the gap.\n\nFunnel & Conversion Tracker. $79 in Google Sheets™. Link in bio.\n\n→ growthterminal.io",
+  "hashtags": "#growthterminal #agencyowner #saasgrowth #b2bmarketing",
+  "first_comment": "Diagnosis before treatment, even in a spreadsheet.",
+  "alt_text": "Stop guessing which funnel step to fix .",
+  "sig": "prodclaim:funnel:Stop guessing which fu"
 }
