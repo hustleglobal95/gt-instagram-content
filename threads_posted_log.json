@@ -604,5 +604,22 @@
       "markusreidgt": "17888076858438232"
     },
     "errors": {}
+  },
+  {
+    "at": "2026-08-12T17:08:54.747Z",
+    "text": "“Churn is killing us” usually isn’t what it looks like.\n\nIt’s an onboarding problem.\n\nPeople don’t leave what they’ve actually activated.",
+    "parts": [
+      "“Churn is killing us” usually isn’t what it looks like.\n\nIt’s an onboarding problem.\n\nPeople don’t leave what they’ve actually activated."
+    ],
+    "isThread": false,
+    "pillar": "constraint",
+    "kind": "reframe",
+    "accounts": [
+      "markusreidgt"
+    ],
+    "ids": {
+      "markusreidgt": "17979812106118073"
+    },
+    "errors": {}
   }
 ]
