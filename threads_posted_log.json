@@ -566,5 +566,22 @@
       "markusreidgt": "18098877080213596"
     },
     "errors": {}
+  },
+  {
+    "at": "2026-08-12T13:40:39.951Z",
+    "text": "If your traffic is fine but sales aren’t, this is for you.\n\nThe problem usually isn’t effort. It’s aim.\n\n“Churn is killing us” feels like the issue. It’s an onboarding problem.\n\nPoint the same effort at the real constraint and it finally moves.",
+    "parts": [
+      "If your traffic is fine but sales aren’t, this is for you.\n\nThe problem usually isn’t effort. It’s aim.\n\n“Churn is killing us” feels like the issue. It’s an onboarding problem.\n\nPoint the same effort at the real constraint and it finally moves."
+    ],
+    "isThread": false,
+    "pillar": "decision",
+    "kind": "callout",
+    "accounts": [
+      "markusreidgt"
+    ],
+    "ids": {
+      "markusreidgt": "17972996366918105"
+    },
+    "errors": {}
   }
 ]
