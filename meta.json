@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-08-13T13:01:27.649Z",
-  "media_file": "creatives/gt_auto_20260813_130127.jpg",
+  "generated_at": "2026-08-13T17:01:39.379Z",
+  "media_file": "creatives/gt_auto_20260813_170139.jpg",
   "is_reel": false,
-  "layout": "twozone",
+  "layout": "feature",
   "editorial_bg": null,
-  "person": null,
+  "person": "gt_face_01.png",
   "qa": null,
-  "caption": "Why plan a quarter on a hunch?\n\nMost quarterly plans start from a feeling about what is broken. Growth Terminal reads the numbers you already keep, names the one constraint capping revenue, and prices what fixing it is worth. Then the plan starts.\n\nRun the free 60-second diagnostic, link in bio.",
-  "hashtags": "#growthterminal #marketingops #revenueoperations #startupmetrics",
-  "first_comment": "What does your planning actually start from, data or a hunch?",
-  "alt_text": "",
-  "sig": "tz:Why plan a quarter on a hunch?"
+  "caption": "Find the one constraint holding your growth back.\n\nGrowth Terminal reads the report you already run, names the single constraint capping revenue, prices it, and hands you a 90-day plan. Diagnosis, not another dashboard.\n\n→ growthterminal.io",
+  "hashtags": "#growthterminal #googlesheetstips #startupmetrics #saasgrowth",
+  "first_comment": "If you had to name your #1 constraint in one word, what would it be? 👇",
+  "alt_text": "Find the one constraint holding your growth back.",
+  "sig": "feat:Find the one constraint holding your gro:gt_face_01.png"
 }
