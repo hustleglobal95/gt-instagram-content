@@ -1,0 +1,55 @@
+# .github/workflows/threads-insights.yml
+# Growth Terminal, collect Threads engagement for published posts and commit
+# threads_performance_log.json (the dashboard's Threads panel reads it).
+#
+# The Instagram and Facebook equivalent is insights.yml. This is the same idea
+# for Threads, which never had one, which is why nobody could say which Threads
+# post had done well.
+#
+# Runs after the day's posting has settled, and can be triggered by hand from
+# the Actions tab when you want the numbers now.
+
+name: GT Threads Insights
+
+on:
+  schedule:
+    # 06:10 UTC, half an hour after the image collector, so the two never race
+    # for the same commit on the same branch.
+    - cron: "10 6 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  # Shares a group with the Threads poster on purpose. A collector run that
+  # overlaps a publish would push over the log the publish just wrote.
+  group: threads-autopost
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Collect Threads engagement
+        env:
+          THREADS_ACCOUNTS: ${{ secrets.THREADS_ACCOUNTS }}   # same secret as the poster
+          GT_THREADS_LOOKBACK: ${{ vars.GT_THREADS_LOOKBACK }} # how many recent posts to refresh
+        run: node threads_insights.js
+
+      - name: Commit performance log
+        run: |
+          git config user.name "gt-threads-bot"
+          git config user.email "bot@growthterminal.local"
+          # Pull first: the poster commits to this branch eight times a day and
+          # a stale local ref is the usual reason a bot push fails.
+          git pull --rebase --autostash origin ${GITHUB_REF_NAME} || true
+          git add threads_performance_log.json 2>/dev/null || true
+          git diff --staged --quiet || git commit -m "threads: refresh engagement [skip ci]"
+          git push
