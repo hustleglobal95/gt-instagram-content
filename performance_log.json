@@ -1,26 +1,7 @@
 {
-  "updated": "2026-08-12T06:53:35.365967Z",
-  "count": 66,
+  "updated": "2026-08-13T06:56:53.094343Z",
+  "count": 71,
   "posts": [
-    {
-      "sig": "edm:We rank them.The #1 constraint on yo",
-      "layout": "edmanifesto",
-      "file": "creatives/gt_auto_20260805_130106.jpg",
-      "is_reel": false,
-      "at": "2026-08-05T13:01:09.074200Z",
-      "caption": "You can find ten things to fix. You can only afford to fix one well.\n\nWe rank them. Growth Terminal ranks the twelve pla",
-      "permalink": "",
-      "ig": null,
-      "fb": {
-        "reactions": 2,
-        "comments": 0,
-        "shares": 1,
-        "reach": 0,
-        "engagement": 3
-      },
-      "engagement": 3,
-      "_ig_attempted": true
-    },
     {
       "sig": "reelfeat:We name the one constrai",
       "layout": "reel:feature",
@@ -294,6 +275,25 @@
       "is_reel": true,
       "at": "2026-08-05T01:01:32.507036Z",
       "caption": "60 seconds from spreadsheet to diagnosis. Add the add-on to Google Sheets\u2122, point it at the report you already have, and",
+      "permalink": "",
+      "ig": null,
+      "fb": {
+        "reactions": 2,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 2
+      },
+      "engagement": 2,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "edm:We rank them.The #1 constraint on yo",
+      "layout": "edmanifesto",
+      "file": "creatives/gt_auto_20260805_130106.jpg",
+      "is_reel": false,
+      "at": "2026-08-05T13:01:09.074200Z",
+      "caption": "You can find ten things to fix. You can only afford to fix one well.\n\nWe rank them. Growth Terminal ranks the twelve pla",
       "permalink": "",
       "ig": null,
       "fb": {
@@ -592,25 +592,6 @@
       "_ig_attempted": true
     },
     {
-      "sig": "car:twelve",
-      "layout": "carousel:twelve",
-      "file": "creatives/gt_car_20260810010331_1.jpg",
-      "is_reel": false,
-      "at": "2026-08-10T01:03:38.567959Z",
-      "caption": "Growth gets stuck in twelve places. Only one of them is yours this quarter.\n\nDemand side: acquisition, traffic, conversi",
-      "permalink": "",
-      "ig": null,
-      "fb": {
-        "reactions": 1,
-        "comments": 0,
-        "shares": 1,
-        "reach": 0,
-        "engagement": 2
-      },
-      "engagement": 2,
-      "_ig_attempted": true
-    },
-    {
       "sig": "car:plan",
       "layout": "carousel:plan",
       "file": "creatives/gt_car_20260810160703_1.jpg",
@@ -744,6 +725,25 @@
       "_ig_attempted": true
     },
     {
+      "sig": "car:twelve",
+      "layout": "carousel:twelve",
+      "file": "creatives/gt_car_20260810010331_1.jpg",
+      "is_reel": false,
+      "at": "2026-08-10T01:03:38.567959Z",
+      "caption": "Growth gets stuck in twelve places. Only one of them is yours this quarter.\n\nDemand side: acquisition, traffic, conversi",
+      "permalink": "",
+      "ig": null,
+      "fb": {
+        "reactions": 1,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 1
+      },
+      "engagement": 1,
+      "_ig_attempted": true
+    },
+    {
       "sig": "prodclaim:funnel:Find the one step your",
       "layout": "prodclaim",
       "file": "creatives/gt_auto_20260810_210118.jpg",
@@ -826,6 +826,44 @@
       "is_reel": true,
       "at": "2026-08-12T01:02:39.160334Z",
       "caption": "This is what a Growth Terminal diagnosis looks like, one constraint, named, priced, and verified against real revenue. H",
+      "permalink": "",
+      "ig": null,
+      "fb": {
+        "reactions": 1,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 1
+      },
+      "engagement": 1,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "car:twelve",
+      "layout": "carousel:twelve",
+      "file": "creatives/gt_car_20260812160556_1.jpg",
+      "is_reel": false,
+      "at": "2026-08-12T16:06:03.936846Z",
+      "caption": "Growth gets stuck in twelve places. Only one of them is yours this quarter.\n\nDemand side: acquisition, traffic, conversi",
+      "permalink": "",
+      "ig": null,
+      "fb": {
+        "reactions": 1,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 1
+      },
+      "engagement": 1,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "prodshot:funnel:Your funnel has one we",
+      "layout": "prodshot",
+      "file": "creatives/gt_auto_20260813_010121.jpg",
+      "is_reel": false,
+      "at": "2026-08-13T01:01:27.133459Z",
+      "caption": "Most trackers show you conversion rates. This one tells you what to do with them: which step is costing you the most, ho",
       "permalink": "",
       "ig": null,
       "fb": {
@@ -1195,25 +1233,66 @@
       "fb": null,
       "engagement": 0,
       "_ig_attempted": true
+    },
+    {
+      "sig": "reelnum:12",
+      "layout": "reel:countup",
+      "file": "creatives/gt_reel_20260812_130111.jpg",
+      "is_reel": true,
+      "at": "2026-08-12T13:01:41.163884Z",
+      "caption": "Growth only gets stuck in twelve places. The hard part is knowing which one is YOUR #1 right now, with a dollar range at",
+      "permalink": "",
+      "ig": null,
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 0,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "prodclaim:funnel:Stop guessing which fu",
+      "layout": "prodclaim",
+      "file": "creatives/gt_auto_20260812_170159.jpg",
+      "is_reel": false,
+      "at": "2026-08-12T17:02:03.626385Z",
+      "caption": "Most trackers show you conversion rates. This one tells you what to do with them: which step is costing you the most, ho",
+      "permalink": "",
+      "ig": null,
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 0,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "reelnum:12",
+      "layout": "reel:countup",
+      "file": "creatives/gt_reel_20260812_210142.jpg",
+      "is_reel": true,
+      "at": "2026-08-12T21:02:07.372195Z",
+      "caption": "Growth only gets stuck in twelve places. The hard part is knowing which one is YOUR #1 right now, with a dollar range at",
+      "permalink": "",
+      "ig": null,
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 0,
+      "_ig_attempted": true
     }
   ],
   "by_format": [
-    {
-      "layout": "prodshot",
-      "posts": 3,
-      "engagement": 7,
-      "ig_engagement": 0,
-      "fb_engagement": 7,
-      "avg_engagement": 2.3
-    },
-    {
-      "layout": "edmanifesto",
-      "posts": 4,
-      "engagement": 9,
-      "ig_engagement": 0,
-      "fb_engagement": 9,
-      "avg_engagement": 2.2
-    },
     {
       "layout": "reel:feature",
       "posts": 5,
@@ -1247,6 +1326,22 @@
       "avg_engagement": 2.0
     },
     {
+      "layout": "prodshot",
+      "posts": 4,
+      "engagement": 8,
+      "ig_engagement": 0,
+      "fb_engagement": 8,
+      "avg_engagement": 2.0
+    },
+    {
+      "layout": "edmanifesto",
+      "posts": 4,
+      "engagement": 8,
+      "ig_engagement": 0,
+      "fb_engagement": 8,
+      "avg_engagement": 2.0
+    },
+    {
       "layout": "edserif",
       "posts": 2,
       "engagement": 4,
@@ -1255,23 +1350,7 @@
       "avg_engagement": 2.0
     },
     {
-      "layout": "prodclaim",
-      "posts": 3,
-      "engagement": 6,
-      "ig_engagement": 0,
-      "fb_engagement": 6,
-      "avg_engagement": 2.0
-    },
-    {
       "layout": "tweet",
-      "posts": 1,
-      "engagement": 2,
-      "ig_engagement": 0,
-      "fb_engagement": 2,
-      "avg_engagement": 2.0
-    },
-    {
-      "layout": "carousel:twelve",
       "posts": 1,
       "engagement": 2,
       "ig_engagement": 0,
@@ -1287,11 +1366,11 @@
       "avg_engagement": 1.7
     },
     {
-      "layout": "reel:countup",
-      "posts": 6,
-      "engagement": 9,
+      "layout": "prodclaim",
+      "posts": 4,
+      "engagement": 6,
       "ig_engagement": 0,
-      "fb_engagement": 9,
+      "fb_engagement": 6,
       "avg_engagement": 1.5
     },
     {
@@ -1311,6 +1390,14 @@
       "avg_engagement": 1.2
     },
     {
+      "layout": "reel:countup",
+      "posts": 8,
+      "engagement": 9,
+      "ig_engagement": 0,
+      "fb_engagement": 9,
+      "avg_engagement": 1.1
+    },
+    {
       "layout": "quote",
       "posts": 2,
       "engagement": 2,
@@ -1320,6 +1407,14 @@
     },
     {
       "layout": "funnel",
+      "posts": 2,
+      "engagement": 2,
+      "ig_engagement": 0,
+      "fb_engagement": 2,
+      "avg_engagement": 1.0
+    },
+    {
+      "layout": "carousel:twelve",
       "posts": 2,
       "engagement": 2,
       "ig_engagement": 0,
@@ -1376,7 +1471,7 @@
     }
   ],
   "collection": {
-    "ig_attempted": 66,
+    "ig_attempted": 71,
     "ig_succeeded": 0,
     "ig_errors": [
       {
@@ -1460,7 +1555,7 @@
         "message": "Invalid OAuth access token - Cannot parse access token"
       }
     ],
-    "ig_error_count": 66,
-    "fb_succeeded": 56
+    "ig_error_count": 71,
+    "fb_succeeded": 61
   }
 }
