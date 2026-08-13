@@ -1,12 +1,14 @@
 {
-  "generated_at": "2026-08-12T21:01:42.113Z",
-  "media_file": "creatives/gt_reel_20260812_210142.jpg",
-  "video_file": "creatives/gt_reel_20260812_210142.mp4",
-  "is_reel": true,
-  "layout": "reel:countup",
-  "caption": "Growth only gets stuck in twelve places. The hard part is knowing which one is YOUR #1 right now, with a dollar range attached. That's the whole job Growth Terminal does.\n\nRun the free 60-second diagnostic, link in bio.",
-  "hashtags": "#growthterminal #revenueoperations #marketingops #googlesheetstips",
-  "first_comment": "Which of the 12 is biting hardest this quarter?",
-  "alt_text": "12",
-  "sig": "reelnum:12"
+  "generated_at": "2026-08-13T01:01:21.325Z",
+  "media_file": "creatives/gt_auto_20260813_010121.jpg",
+  "is_reel": false,
+  "layout": "prodshot",
+  "editorial_bg": null,
+  "person": null,
+  "qa": null,
+  "caption": "Most trackers show you conversion rates. This one tells you what to do with them: which step is costing you the most, how much fixing it is worth, and what your revenue looks like if you close the gap.\n\nFunnel & Conversion Tracker. $79 in Google Sheets™. Link in bio.\n\n→ growthterminal.io",
+  "hashtags": "#growthterminal #b2bmarketing #uniteconomics #revenueoperations",
+  "first_comment": "Which funnel step do you think is your weakest right now?",
+  "alt_text": "Your funnel has one weak step. This finds it.",
+  "sig": "prodshot:funnel:Your funnel has one we"
 }
