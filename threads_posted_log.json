@@ -748,5 +748,22 @@
       "markusreidgt": "17990758013833701"
     },
     "errors": {}
+  },
+  {
+    "at": "2026-08-13T19:16:52.576Z",
+    "text": "A clever brand with no offer loses to a clear offer with no brand.",
+    "parts": [
+      "A clever brand with no offer loses to a clear offer with no brand."
+    ],
+    "isThread": false,
+    "pillar": "constraint",
+    "kind": "aphorism",
+    "accounts": [
+      "markusreidgt"
+    ],
+    "ids": {
+      "markusreidgt": "18614240830003188"
+    },
+    "errors": {}
   }
 ]
