@@ -672,5 +672,22 @@
       "markusreidgt": "17863226631658936"
     },
     "errors": {}
+  },
+  {
+    "at": "2026-08-13T02:42:15.389Z",
+    "text": "You’re not overpaying for clicks. You’re underpaying attention.",
+    "parts": [
+      "You’re not overpaying for clicks. You’re underpaying attention."
+    ],
+    "isThread": false,
+    "pillar": "constraint",
+    "kind": "aphorism",
+    "accounts": [
+      "markusreidgt"
+    ],
+    "ids": {
+      "markusreidgt": "17986799817013301"
+    },
+    "errors": {}
   }
 ]
