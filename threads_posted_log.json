@@ -765,5 +765,22 @@
       "markusreidgt": "18614240830003188"
     },
     "errors": {}
+  },
+  {
+    "at": "2026-08-13T22:58:34.167Z",
+    "text": "The number you have not looked at in a month is your constraint.\n\nNot because avoidance is magic. Because you already know it is bad, and looking would mean owning it.\n\nOpen that one first. The discomfort is the signal.",
+    "parts": [
+      "The number you have not looked at in a month is your constraint.\n\nNot because avoidance is magic. Because you already know it is bad, and looking would mean owning it.\n\nOpen that one first. The discomfort is the signal."
+    ],
+    "isThread": false,
+    "pillar": "bi",
+    "kind": "avoid",
+    "accounts": [
+      "markusreidgt"
+    ],
+    "ids": {
+      "markusreidgt": "17988755205001480"
+    },
+    "errors": {}
   }
 ]
