@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-08-13T17:01:39.379Z",
-  "media_file": "creatives/gt_auto_20260813_170139.jpg",
+  "generated_at": "2026-08-13T21:01:21.773Z",
+  "media_file": "creatives/gt_auto_20260813_210121.jpg",
   "is_reel": false,
-  "layout": "feature",
+  "layout": "prodshot",
   "editorial_bg": null,
-  "person": "gt_face_01.png",
+  "person": null,
   "qa": null,
-  "caption": "Find the one constraint holding your growth back.\n\nGrowth Terminal reads the report you already run, names the single constraint capping revenue, prices it, and hands you a 90-day plan. Diagnosis, not another dashboard.\n\n→ growthterminal.io",
-  "hashtags": "#growthterminal #googlesheetstips #startupmetrics #saasgrowth",
-  "first_comment": "If you had to name your #1 constraint in one word, what would it be? 👇",
-  "alt_text": "Find the one constraint holding your growth back.",
-  "sig": "feat:Find the one constraint holding your gro:gt_face_01.png"
+  "caption": "Your funnel has one step leaking more than the rest. The Funnel & Conversion Tracker finds it, tells you what fixing it is worth in dollars, and lets you simulate the upside before you spend a cent.\n\n8 tabs, built in Google Sheets™. $79, instant download. Link in bio.\n\n→ growthterminal.io",
+  "hashtags": "#growthterminal #foundertips #bootstrappedfounder #saasfounder",
+  "first_comment": "Which funnel step do you think is your weakest right now?",
+  "alt_text": "Find the one step your funnel is leaking.",
+  "sig": "prodshot:funnel:Find the one step your"
 }
