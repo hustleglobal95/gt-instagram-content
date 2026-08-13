@@ -291,4 +291,221 @@ const THREADS = [
   ] },
 ];
 
+
+// =============================================================================
+// EXPANSION, August 2026
+// -----------------------------------------------------------------------------
+// Two jobs in this block.
+//
+//   1. Promo entries for the three things worth pointing at: the engine itself,
+//      the AI solutions, and the new guide, Attract, Don’t Sell.
+//   2. Enough teaching entries to keep the promo share where GT_THREADS_VOICE.md
+//      puts it. The generator picks uniformly from the pool, so the promo RATE
+//      is just promo entries over pool size. Four promo entries added to three
+//      existing ones is seven of fifty, which holds the line at the ratio the
+//      bank already ran at instead of tipping the feed into an ad.
+//
+// Variety without cost: each promo entry picks from several finished variants,
+// so four pool slots carry a dozen distinct promo posts. Slots set the rate,
+// variants set the range. Grow the teaching side before adding a fifth slot.
+//
+// Price is named in offer posts only. Teaching posts mention the guide and let
+// the page do the rest.
+// =============================================================================
+
+// ---------- CTAs for the new destinations ----------
+const GUIDE_CTA = [
+  'Attract, Don’t Sell, the field guide → www.growthterminal.io/products/?p=attract-don-t-sell',
+  'I wrote the whole method down → www.growthterminal.io/products/?p=attract-don-t-sell',
+  'The 30-day attraction plan is in the guide → www.growthterminal.io/products/?p=attract-don-t-sell',
+];
+
+const SOLUTIONS_CTA = [
+  'We build these for operators → www.growthterminal.io/ai-solutions',
+  'Content, assistants, voice agents → www.growthterminal.io/ai-solutions',
+  'The AI solutions that run this for you → www.growthterminal.io/ai-solutions',
+];
+
+const PLATFORM_CTA = [
+  'Run the free diagnostic → www.growthterminal.io/diagnostic',
+  'See how the engine reads a business → www.growthterminal.io/how-it-works',
+  'Start with the free diagnostic, no card → www.growthterminal.io/diagnostic',
+];
+
+// ---------- pools for the teaching side ----------
+const CEILING_SET = [
+  { name: 'lead generation', tell: 'nobody new is arriving' },
+  { name: 'conversion', tell: 'they arrive and leave' },
+  { name: 'delivery', tell: 'you sell more than you can service' },
+  { name: 'retention', tell: 'you refill the same bucket every month' },
+];
+
+const LEADING = [
+  { lag: 'revenue', lead: 'qualified conversations booked' },
+  { lag: 'churn', lead: 'accounts that hit first value in week one' },
+  { lag: 'pipeline', lead: 'replies per hundred sends' },
+  { lag: 'profit', lead: 'hours per delivered job' },
+];
+
+// ---------- promo entries (4 pool slots) ----------
+const PROMO_FORMATS = [
+  // 1. The guide, taught first. Product as the consequence of the insight.
+  { pillar: 'product', kind: 'value_cta', render: () => pick([
+    clamp(`Selling harder makes people trust you less.\n\nEvery extra push reads as a reason to doubt, because confident businesses do not chase.\n\nThe move is to be findable and obviously right, so the buyer arrives already sold.\n\n${pick(GUIDE_CTA)}`),
+    clamp(`Demand does not start when someone is ready to buy.\n\nIt starts months earlier, when they are still describing the problem to themselves in their own words.\n\nWhoever is there for that conversation wins the sale later, without competing on price.\n\n${pick(GUIDE_CTA)}`),
+    clamp(`Being the obvious choice is not a branding exercise.\n\nIt is what happens when one business has answered the question everyone else is still pitching around.\n\nYou do not win by being louder. You win by being the one already there.\n\n${pick(GUIDE_CTA)}`),
+  ]) },
+
+  // 2. The guide, direct. Price named here, and only here.
+  { pillar: 'product', kind: 'offer', render: () => pick([
+    clamp(`New: Attract, Don’t Sell.\n\nHow to build trust, create demand, and make your business the obvious choice.\n\nInside:\n• why pushing lowers trust\n• the content framework\n• demand before intent\n• a 30-day plan\n\nPDF guide, $55 one-time, 30-day guarantee → www.growthterminal.io/products/?p=attract-don-t-sell`),
+    clamp(`If you are tired of chasing leads, I wrote the alternative down.\n\nAttract, Don’t Sell is a field guide for founders who want to be found instead: the trust framework, how to create demand before anyone is ready, and a 30-day plan you can start this week.\n\n$55 one-time → www.growthterminal.io/products/?p=attract-don-t-sell`),
+    clamp(`Most guides tell you to post more.\n\nThis one tells you what to post, in what order, so buyers arrive already convinced.\n\nAttract, Don’t Sell. Positioning, demand creation, and a 30-day attraction plan.\n\n$55, one-time, 30-day guarantee → www.growthterminal.io/products/?p=attract-don-t-sell`),
+  ]) },
+
+  // 3. The AI solutions. Named plainly, because vagueness is what kills this pitch.
+  { pillar: 'solution', kind: 'offer', render: () => pick([
+    clamp(`Most businesses do not need more software.\n\nThey need the three jobs nobody has time for to just happen.\n\nSo that is what we build:\n• automated social content\n• custom AI assistants\n• AI voice agents\n\nSame team, same numbers, more output. ${pick(SOLUTIONS_CTA)}`),
+    clamp(`Automate the thing you keep doing badly because you are tired, not the thing you enjoy.\n\nFor most operators that is posting, answering the same questions, and picking up the phone.\n\nWe build all three: content, assistants, voice agents. ${pick(SOLUTIONS_CTA)}`),
+    clamp(`AI is not a strategy. It is a way to stop losing revenue to your own bandwidth.\n\nMissed calls, unanswered questions, a feed that went quiet in March. Each one has a number attached.\n\nFind the leak first, then automate exactly that. ${pick(SOLUTIONS_CTA)}`),
+  ]) },
+
+  // 4. The engine. What "grow further" actually means once the obvious is done.
+  { pillar: 'product', kind: 'offer', render: () => pick([
+    clamp(`You have done the obvious things. Growth flattened anyway.\n\nThat is normal. The obvious things move the metrics that were already fine.\n\nGrowth Terminal reads the whole business, names the one constraint holding the rest down, prices it, then checks the fix against real revenue.\n\n${pick(PLATFORM_CTA)}`),
+    clamp(`A dashboard shows you numbers. It does not tell you which one to work on.\n\nThat gap is the whole product.\n\nGrowth Terminal finds the single constraint limiting revenue, puts a dollar figure on it, hands you a 90-day plan, and verifies the result.\n\n${pick(PLATFORM_CTA)}`),
+    clamp(`More revenue from the business you already have.\n\nNot more traffic, not a rebrand. One constraint named, priced, fixed, and verified against what actually landed in the bank.\n\nThat is what the engine does, and it is why the plan comes with a number attached.\n\n${pick(PLATFORM_CTA)}`),
+  ]) },
+];
+
+// ---------- teaching entries (22 single-post slots) ----------
+const VALUE_FORMATS = [
+  // Systems list: the four ceilings
+  { pillar: 'systems', kind: 'ceilings', render: () => { const c = pick(CEILING_SET);
+    return clamp(`Every business hits one of four ceilings:\n\n• lead generation\n• conversion\n• delivery\n• retention\n\nYou can tell which one you are on by the symptom. Right now ${c.tell}, so yours is ${c.name}.\n\nWork there. The other three are not your problem this quarter.`); } },
+
+  // Authority pattern: the complaint is never the constraint
+  { pillar: 'bi', kind: 'authority', render: () => pick([
+    clamp(`After enough analyses you stop believing the complaint.\n\nWe keep seeing the same thing: the owner names the loudest number, and the constraint sits two stages upstream, quiet, unmeasured, doing all the damage.\n\nThe complaint is where it hurts. The constraint is where it started.`),
+    clamp(`A pattern we keep seeing: the business that says it needs more leads is usually the one that never followed up on the last hundred.\n\nNothing is wrong with the top of the funnel. The follow-up step has no owner.\n\nCheck the boring stage before you buy traffic.`),
+    clamp(`The businesses that grow fastest are rarely doing more things.\n\nThey are doing the same number of things, aimed at one stage, for long enough to see it move.\n\nWe keep seeing focus beat effort by a wide margin, and it is never the fun answer.`),
+  ]) },
+
+  // Progression
+  { pillar: 'systems', kind: 'progression', render: () => pick([
+    clamp(`The first million is acquisition.\n\nThe second is friction.\n\nThe third is almost always delivery, because you finally sold more than you can service and the cracks show up as churn.\n\nSame company, three different jobs. Most people keep running the first one.`),
+    clamp(`Early on, growth is about being found.\n\nThen it is about being understood.\n\nThen it is about being kept.\n\nEach stage needs a different fix, and using the last stage’s playbook on this one is why growth feels stuck.`),
+  ]) },
+
+  // Diagnostic: three questions
+  { pillar: 'decision', kind: 'diagnostic', render: () => pick([
+    clamp(`Before you spend another dollar on ads, answer three things:\n\n1. What percent of visitors buy today?\n2. What happens to a lead nobody calls back?\n3. Which stage loses the most people?\n\nIf you cannot answer these, ads will not fix it. They will just make the leak more expensive.`),
+    clamp(`Before you hire, answer three things:\n\n1. Is this a people problem or a process problem?\n2. What breaks if nobody does this at all?\n3. Who owns the number this role is meant to move?\n\nMost first hires are a process problem given a salary.`),
+    clamp(`Before you rebrand, answer three things:\n\n1. Can a stranger say what you sell in one line?\n2. Do buyers hesitate on price or on trust?\n3. What do the people who said no actually say?\n\nA rebrand is what companies do instead of fixing positioning.`),
+  ]) },
+
+  // Aphorism / contrast pair
+  { pillar: 'bi', kind: 'contrast', render: () => pick([
+    'Businesses do not fail for lack of data.\n\nThey fail because nobody can tell signal from noise.',
+    'Dashboards do not grow businesses.\n\nDecisions do.',
+    'Revenue problems are usually symptoms.\n\nConstraints are the disease.',
+    'Every spreadsheet tells a story.\n\nMost owners never learn to read it.',
+    'You do not have a traffic problem.\n\nYou have a diagnosis problem.',
+  ]) },
+
+  // Forecasting: revenue is not random
+  { pillar: 'forecast', kind: 'leading', render: () => { const m = pick(LEADING);
+    return clamp(`Revenue is not random. It is a handful of leading indicators with a delay on them.\n\nStop staring at ${m.lag}. It already happened.\n\nWatch ${m.lead} instead. That is the number you can still change this week, and it is the one that shows up in ${m.lag} next month.`); } },
+
+  // Forecasting: write it down first
+  { pillar: 'forecast', kind: 'scorecard', render: () => clamp(
+    `Write the forecast down before you start.\n\nNot to be right. To find out whether you understand your own business.\n\nA prediction you never check is a horoscope, and a quarter you never scored is a quarter you cannot learn from.\n\nOne line, one number, one date. Then go back and look.`) },
+
+  // BI: averages hide the constraint
+  { pillar: 'bi', kind: 'segment', render: () => clamp(
+    `An average is a place to hide.\n\nA 3% conversion rate is often 8% from one source and almost nothing from the other three, and the blended number tells you to do more of everything.\n\nSplit it before you act. The constraint lives in a segment, never in the average.`) },
+
+  // BI: the metric you avoid
+  { pillar: 'bi', kind: 'avoid', render: () => clamp(
+    `The number you have not looked at in a month is your constraint.\n\nNot because avoidance is magic. Because you already know it is bad, and looking would mean owning it.\n\nOpen that one first. The discomfort is the signal.`) },
+
+  // Decision: price the gap
+  { pillar: 'decision', kind: 'price_it', render: () => clamp(
+    `Put a number on the gap or nothing happens.\n\n"We should improve follow-up" is a shrug in a meeting.\n\n"Follow-up costs us about $18k a month" is a decision with a deadline.\n\nSame fact. Only one of them gets scheduled.`) },
+
+  // Decision: reversible vs not
+  { pillar: 'decision', kind: 'reversible', render: () => clamp(
+    `Sort every decision into two piles: reversible and not.\n\nReversible ones deserve a day, not a committee. Make them fast and be wrong cheaply.\n\nThe other pile deserves the week you keep spending on the first one.\n\nMost teams have this exactly backwards.`) },
+
+  // Mistakes: marketing vs operations
+  { pillar: 'mistakes', kind: 'ops', render: () => clamp(
+    `Most startups think they have a marketing problem.\n\nMost have an operations problem wearing a marketing costume.\n\nThe leads arrive. Nobody calls back for two days. The quote takes a week. The buyer moves on and it gets logged as "the ads did not work."\n\nCheck the handoff before the headline.`) },
+
+  // Mistakes: features slow growth
+  { pillar: 'mistakes', kind: 'features', render: () => clamp(
+    `Adding features usually slows growth.\n\nEvery one adds a decision for the buyer, a page to the site, a thing to support, and a reason to hesitate.\n\nThe fastest-growing version of your product is often the one with fewer options and a clearer promise.`) },
+
+  // Mistakes: discounting
+  { pillar: 'mistakes', kind: 'discount', render: () => clamp(
+    `A discount is a tax you pay for unclear value.\n\nWhen the buyer cannot see why it is worth the price, the only lever left is the price.\n\nFix the explanation before you cut the number. One is free and permanent, the other is neither.`) },
+
+  // Mistakes: hiring at a process problem
+  { pillar: 'mistakes', kind: 'hiring', render: () => clamp(
+    `Hiring at a process problem gives the problem a salary.\n\nIf the work is undefined, the new person inherits the confusion and now two people are guessing.\n\nWrite the process down badly, run it yourself for two weeks, then hire against what you learned.`) },
+
+  // Systems: the weekly loop
+  { pillar: 'systems', kind: 'loop', render: () => clamp(
+    `The whole operating system, three steps:\n\n1. Name the constraint.\n2. Move only that number.\n3. Verify it moved.\n\nStep three is the one everyone skips, which is why the same fix gets "tried" four times a year and nobody can say whether it worked.`) },
+
+  // Systems: capacity before demand
+  { pillar: 'systems', kind: 'capacity', render: () => clamp(
+    `Do not sell what you cannot deliver on time.\n\nDemand you cannot service turns into refunds, bad reviews, and a team that starts avoiding the inbox.\n\nCapacity first, then the campaign. Growth you have to apologise for is not growth.`) },
+
+  // Systems: one-page review
+  { pillar: 'systems', kind: 'review', render: () => clamp(
+    `A useful monthly review fits on one page:\n\n• the constraint\n• what we changed\n• what moved\n• next constraint\n\nIf it takes twelve slides, nobody reads it and no one is accountable to it. Length is how teams hide from the second bullet.`) },
+
+  // Constraint: the leak
+  { pillar: 'constraint', kind: 'leak', render: () => clamp(
+    `Doubling traffic doubles the leak.\n\nIf two in a hundred buy, buying a thousand more visitors buys you nine hundred and eighty more people who do not.\n\nYou did not grow. You paid full price to watch the same thing happen at a bigger scale.`) },
+
+  // Constraint: one lever
+  { pillar: 'constraint', kind: 'lever', render: () => clamp(
+    `Ten improvements at ten percent effort each cancel out.\n\nOne improvement at full effort compounds.\n\nThe reason last quarter felt busy and flat is not that you did too little. It is that you spread it so thin nothing crossed the threshold where anyone would notice.`) },
+
+  // Constraint: activation
+  { pillar: 'constraint', kind: 'activation', render: () => clamp(
+    `People do not abandon what they have actually used.\n\nMost churn is not a product failure late. It is a first-week failure that took three months to show up on the invoice.\n\nMeasure how many reach real value in week one. That number predicts the renewal.`) },
+
+  // Authority: what analysis actually looks like
+  { pillar: 'authority', kind: 'story', render: () => pick([
+    clamp(`A founder wanted help scaling ads.\n\nWe looked at the funnel first. Every quote went out as a PDF attachment, and roughly half were never opened.\n\nWe put the price on a web page instead. Same spend, same traffic, more closes.\n\nThe ad account was never the problem.`),
+    clamp(`A business swore its market had gone quiet.\n\nThe calls were still coming. Nobody had checked the voicemail box in five weeks.\n\nThat is not a funny story, it is the most common kind of constraint: cheap, boring, and invisible until somebody looks.`),
+  ]) },
+];
+
+// ---------- teaching entries (2 thread slots) ----------
+const VALUE_THREADS = [
+  // The four ceilings, taught properly
+  { pillar: 'systems', kind: 'thread', thread: () => [
+    clamp(`Every business is stuck on one of four ceilings.\n\nMost owners are working on the wrong one.\n\nHow to tell which is yours`),
+    clamp(`Ceiling one, lead generation. Nobody new is arriving. This is the only one where "more marketing" is the honest answer, and it is the one people assume they have by default.`),
+    clamp(`Ceiling two, conversion. They arrive and leave. Traffic is fine, the offer or the page is not, and every extra visitor makes the loss bigger rather than smaller.`),
+    clamp(`Ceiling three, delivery. You sold more than you can service. Symptoms look like unhappy customers, but the cause is capacity, and hiring is only the answer once the process is written down.`),
+    clamp(`Ceiling four, retention. You refill the same bucket every month. Acquisition works and nothing accumulates, which is the most expensive way to run a business.\n\nName yours. Work only there.\n\n${pick(SOFT_CTA)}`),
+  ] },
+
+  // Reading your own numbers
+  { pillar: 'bi', kind: 'thread', thread: () => [
+    clamp(`Your spreadsheet already knows what is wrong.\n\nMost owners never learn to read it.\n\nFour questions that pull the answer out`),
+    clamp(`One. Where do people go quiet? Put a percentage between every stage. The lowest one is not a mystery, it is an address.`),
+    clamp(`Two. What does the average hide? Split by source, by segment, by month. Blended numbers are where constraints go to be invisible.`),
+    clamp(`Three. What is this costing? Multiply the gap by the value of a customer. A percentage is an opinion. A dollar figure is a decision.`),
+    clamp(`Four. Did it move? Write the number before you change anything, then check it in thirty days. Without that step you are collecting stories, not evidence.\n\n${pick(SOFT_CTA)}`),
+  ] },
+];
+
+FORMATS.push(...PROMO_FORMATS, ...VALUE_FORMATS);
+THREADS.push(...VALUE_THREADS);
+
 module.exports = { FORMATS, THREADS, SYMPTOM_DISEASE, CEILINGS, SOFT_CTA };
