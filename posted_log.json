@@ -940,5 +940,26 @@
     "caption": "Why plan a quarter on a hunch?\n\nMost quarterly plans start from a feeling about what is broken. Growth Terminal reads the numbers you already keep, names the one constraint capping revenue, and prices what fixing it is worth. Then the plan starts.\n\nRun the free 60-second diagnostic, link in bio.",
     "hashtags": "#growthterminal #marketingops #revenueoperations #startupmetrics",
     "first_comment": "What does your planning actually start from, data or a hunch?"
+  },
+  {
+    "media_id": "18113260027758634",
+    "fb_post_id": "1087307654468135_122101195862536059",
+    "at": "2026-08-13T16:05:48.186756Z",
+    "file": "creatives/gt_car_20260813160542_1.jpg",
+    "media_files": [
+      "creatives/gt_car_20260813160542_1.jpg",
+      "creatives/gt_car_20260813160542_2.jpg",
+      "creatives/gt_car_20260813160542_3.jpg",
+      "creatives/gt_car_20260813160542_4.jpg",
+      "creatives/gt_car_20260813160542_5.jpg"
+    ],
+    "is_reel": false,
+    "is_carousel": true,
+    "panels": 5,
+    "layout": "carousel:twelve",
+    "sig": "car:twelve",
+    "caption": "Growth gets stuck in twelve places. Only one of them is yours this quarter.\n\nDemand side: acquisition, traffic, conversion, offer.\nKeep side: activation, retention, churn, fulfilment.\nCapacity side: capacity, utilisation, pricing, cash collection.\n\nWorking the wrong one is why effort stops turning into revenue. Growth Terminal names which is yours, prices it, and grades the call.",
+    "hashtags": "#growthterminal #agencyowner #fractionalcmo #b2bsaas",
+    "first_comment": "Which of the twelve would you guess is yours right now?"
   }
 ]
