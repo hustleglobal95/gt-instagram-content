@@ -799,5 +799,22 @@
       "markusreidgt": "18138715165607279"
     },
     "errors": {}
+  },
+  {
+    "at": "2026-08-14T13:36:11.977Z",
+    "text": "A useful monthly review fits on one page:\n\n• the constraint\n• what we changed\n• what moved\n• next constraint\n\nIf it takes twelve slides, nobody reads it and no one is accountable to it. Length is how teams hide from the second bullet.",
+    "parts": [
+      "A useful monthly review fits on one page:\n\n• the constraint\n• what we changed\n• what moved\n• next constraint\n\nIf it takes twelve slides, nobody reads it and no one is accountable to it. Length is how teams hide from the second bullet."
+    ],
+    "isThread": false,
+    "pillar": "systems",
+    "kind": "review",
+    "accounts": [
+      "markusreidgt"
+    ],
+    "ids": {
+      "markusreidgt": "17964183803962229"
+    },
+    "errors": {}
   }
 ]
