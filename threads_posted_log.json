@@ -850,5 +850,22 @@
       "markusreidgt": "18100979279362196"
     },
     "errors": {}
+  },
+  {
+    "at": "2026-08-14T19:09:34.613Z",
+    "text": "Most startups think they have a marketing problem.\n\nMost have an operations problem wearing a marketing costume.\n\nThe leads arrive. Nobody calls back for two days. The quote takes a week. The buyer moves on and it gets logged as \"the ads did not work.\"\n\nCheck the handoff before the headline.",
+    "parts": [
+      "Most startups think they have a marketing problem.\n\nMost have an operations problem wearing a marketing costume.\n\nThe leads arrive. Nobody calls back for two days. The quote takes a week. The buyer moves on and it gets logged as \"the ads did not work.\"\n\nCheck the handoff before the headline."
+    ],
+    "isThread": false,
+    "pillar": "mistakes",
+    "kind": "ops",
+    "accounts": [
+      "markusreidgt"
+    ],
+    "ids": {
+      "markusreidgt": "18097939856011990"
+    },
+    "errors": {}
   }
 ]
