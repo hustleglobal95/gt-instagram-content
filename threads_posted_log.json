@@ -867,5 +867,22 @@
       "markusreidgt": "18097939856011990"
     },
     "errors": {}
+  },
+  {
+    "at": "2026-08-14T20:41:49.840Z",
+    "text": "Put a number on the gap or nothing happens.\n\n\"We should improve follow-up\" is a shrug in a meeting.\n\n\"Follow-up costs us about $18k a month\" is a decision with a deadline.\n\nSame fact. Only one of them gets scheduled.",
+    "parts": [
+      "Put a number on the gap or nothing happens.\n\n\"We should improve follow-up\" is a shrug in a meeting.\n\n\"Follow-up costs us about $18k a month\" is a decision with a deadline.\n\nSame fact. Only one of them gets scheduled."
+    ],
+    "isThread": false,
+    "pillar": "decision",
+    "kind": "price_it",
+    "accounts": [
+      "markusreidgt"
+    ],
+    "ids": {
+      "markusreidgt": "17860759344679991"
+    },
+    "errors": {}
   }
 ]
