@@ -1,6 +1,6 @@
 {
-  "updated": "2026-08-13T20:59:09.251Z",
-  "count": 44,
+  "updated": "2026-08-14T07:48:52.152Z",
+  "count": 46,
   "ranking_basis": "per_1k",
   "top": [
     {
@@ -135,16 +135,16 @@
       ],
       "permalink": "https://www.threads.com/@markusreidgt/post/Db-3ieJlwQR",
       "metrics": {
-        "views": 41,
+        "views": 43,
         "likes": 0,
         "replies": 4,
         "reposts": 0,
         "quotes": 0,
         "shares": 0
       },
-      "views": 41,
+      "views": 43,
       "engagement": 4,
-      "per_1k": 97.56,
+      "per_1k": 93.02,
       "basis": "per_1k"
     },
     {
@@ -183,16 +183,16 @@
       ],
       "permalink": "https://www.threads.com/@markusreidgt/post/Db_eBzRmi_F",
       "metrics": {
-        "views": 105,
+        "views": 152,
         "likes": 2,
         "replies": 0,
         "reposts": 0,
         "quotes": 0,
         "shares": 0
       },
-      "views": 105,
+      "views": 152,
       "engagement": 2,
-      "per_1k": 19.05,
+      "per_1k": 13.16,
       "basis": "per_1k"
     },
     {
@@ -377,16 +377,16 @@
       ],
       "permalink": "https://www.threads.com/@markusreidgt/post/Db-3ieJlwQR",
       "metrics": {
-        "views": 41,
+        "views": 43,
         "likes": 0,
         "replies": 4,
         "reposts": 0,
         "quotes": 0,
         "shares": 0
       },
-      "views": 41,
+      "views": 43,
       "engagement": 4,
-      "per_1k": 97.56,
+      "per_1k": 93.02,
       "basis": "per_1k"
     },
     {
@@ -425,16 +425,16 @@
       ],
       "permalink": "https://www.threads.com/@markusreidgt/post/Db_eBzRmi_F",
       "metrics": {
-        "views": 105,
+        "views": 152,
         "likes": 2,
         "replies": 0,
         "reposts": 0,
         "quotes": 0,
         "shares": 0
       },
-      "views": 105,
+      "views": 152,
       "engagement": 2,
-      "per_1k": 19.05,
+      "per_1k": 13.16,
       "basis": "per_1k"
     },
     {
@@ -521,14 +521,14 @@
       ],
       "permalink": "https://www.threads.com/@markusreidgt/post/Db8dHrVka51",
       "metrics": {
-        "views": 1020,
+        "views": 1021,
         "likes": 0,
         "replies": 4,
         "reposts": 0,
         "quotes": 0,
         "shares": 0
       },
-      "views": 1020,
+      "views": 1021,
       "engagement": 4,
       "per_1k": 3.92,
       "basis": "per_1k"
@@ -582,6 +582,78 @@
       "basis": "per_1k"
     },
     {
+      "at": "2026-08-13T02:42:15.389Z",
+      "pillar": "constraint",
+      "kind": "aphorism",
+      "isThread": false,
+      "parts": 1,
+      "text": "You’re not overpaying for clicks. You’re underpaying attention.",
+      "accounts": [
+        "markusreidgt"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/Db9sNAijl_3",
+      "metrics": {
+        "views": 604,
+        "likes": 1,
+        "replies": 0,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 604,
+      "engagement": 1,
+      "per_1k": 1.66,
+      "basis": "per_1k"
+    },
+    {
+      "at": "2026-08-14T02:40:50.348Z",
+      "pillar": "solution",
+      "kind": "offer",
+      "isThread": false,
+      "parts": 1,
+      "text": "Most “growth” advice is a pile of tactics with no diagnosis.\n\n“We need to post more”? The real issue is a hook problem — and you can’t fix what you haven’t named.\n\nThe System names it, then fixes it. The Growth Hacking System runs this for ",
+      "accounts": [
+        "markusreidgt"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/DcAQ1gOli3G",
+      "metrics": {
+        "views": 1,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 1,
+      "engagement": 0,
+      "per_1k": 0,
+      "basis": "per_1k"
+    },
+    {
+      "at": "2026-08-13T22:58:34.167Z",
+      "pillar": "bi",
+      "kind": "avoid",
+      "isThread": false,
+      "parts": 1,
+      "text": "The number you have not looked at in a month is your constraint.\n\nNot because avoidance is magic. Because you already know it is bad, and looking would mean owning it.\n\nOpen that one first. The discomfort is the signal.",
+      "accounts": [
+        "markusreidgt"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/Db_3Zg-CVLM",
+      "metrics": {
+        "views": 25,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 25,
+      "engagement": 0,
+      "per_1k": 0,
+      "basis": "per_1k"
+    },
+    {
       "at": "2026-08-13T15:11:32.869Z",
       "pillar": "playbook",
       "kind": "howto",
@@ -601,30 +673,6 @@
         "shares": 0
       },
       "views": 6,
-      "engagement": 0,
-      "per_1k": 0,
-      "basis": "per_1k"
-    },
-    {
-      "at": "2026-08-13T02:42:15.389Z",
-      "pillar": "constraint",
-      "kind": "aphorism",
-      "isThread": false,
-      "parts": 1,
-      "text": "You’re not overpaying for clicks. You’re underpaying attention.",
-      "accounts": [
-        "markusreidgt"
-      ],
-      "permalink": "https://www.threads.com/@markusreidgt/post/Db9sNAijl_3",
-      "metrics": {
-        "views": 600,
-        "likes": 0,
-        "replies": 0,
-        "reposts": 0,
-        "quotes": 0,
-        "shares": 0
-      },
-      "views": 600,
       "engagement": 0,
       "per_1k": 0,
       "basis": "per_1k"
@@ -1324,8 +1372,8 @@
       "posts": 10,
       "engagement": 20,
       "avg_engagement": 2,
-      "views": 1755,
-      "avg_per_1k": 47.51
+      "views": 1758,
+      "avg_per_1k": 47.06
     },
     {
       "key": "decision",
@@ -1338,10 +1386,10 @@
     {
       "key": "constraint",
       "posts": 14,
-      "engagement": 9,
-      "avg_engagement": 0.64,
-      "views": 3343,
-      "avg_per_1k": 2.55
+      "engagement": 10,
+      "avg_engagement": 0.71,
+      "views": 3394,
+      "avg_per_1k": 2.22
     },
     {
       "key": "mistake",
@@ -1353,10 +1401,10 @@
     },
     {
       "key": "solution",
-      "posts": 2,
+      "posts": 3,
       "engagement": 0,
       "avg_engagement": 0,
-      "views": 12,
+      "views": 13,
       "avg_per_1k": 0
     },
     {
@@ -1369,10 +1417,10 @@
     },
     {
       "key": "bi",
-      "posts": 4,
+      "posts": 5,
       "engagement": 0,
       "avg_engagement": 0,
-      "views": 83,
+      "views": 108,
       "avg_per_1k": 0
     }
   ],
@@ -1382,8 +1430,8 @@
       "posts": 8,
       "engagement": 32,
       "avg_engagement": 4,
-      "views": 2747,
-      "avg_per_1k": 237.42
+      "views": 2750,
+      "avg_per_1k": 236.85
     },
     {
       "key": "callout",
@@ -1395,19 +1443,19 @@
     },
     {
       "key": "offer",
-      "posts": 4,
+      "posts": 5,
       "engagement": 2,
-      "avg_engagement": 0.5,
-      "views": 25,
-      "avg_per_1k": 51.28
+      "avg_engagement": 0.4,
+      "views": 26,
+      "avg_per_1k": 38.46
     },
     {
       "key": "aphorism",
       "posts": 7,
-      "engagement": 4,
-      "avg_engagement": 0.57,
-      "views": 1743,
-      "avg_per_1k": 3.91
+      "engagement": 5,
+      "avg_engagement": 0.71,
+      "views": 1794,
+      "avg_per_1k": 3.31
     },
     {
       "key": "hook",
@@ -1512,6 +1560,14 @@
       "avg_engagement": 0,
       "views": 3,
       "avg_per_1k": 0
+    },
+    {
+      "key": "avoid",
+      "posts": 1,
+      "engagement": 0,
+      "avg_engagement": 0,
+      "views": 25,
+      "avg_per_1k": 0
     }
   ],
   "by_shape": [
@@ -1520,21 +1576,21 @@
       "posts": 8,
       "engagement": 32,
       "avg_engagement": 4,
-      "views": 2747,
-      "avg_per_1k": 237.42
+      "views": 2750,
+      "avg_per_1k": 236.85
     },
     {
       "key": "single",
-      "posts": 36,
-      "engagement": 9,
-      "avg_engagement": 0.25,
-      "views": 3165,
-      "avg_per_1k": 10.34
+      "posts": 38,
+      "engagement": 10,
+      "avg_engagement": 0.26,
+      "views": 3242,
+      "avg_per_1k": 9.65
     }
   ],
   "collection": {
-    "attempted": 44,
-    "succeeded": 44,
+    "attempted": 46,
+    "succeeded": 46,
     "reduced_metric_set": 0,
     "errors": []
   }
