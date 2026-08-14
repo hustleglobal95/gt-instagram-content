@@ -1013,5 +1013,26 @@
     "caption": "Is traffic your #1 constraint right now?\n\nThe tell: the top of the funnel is thinner than the model needs. It's one of the twelve places growth gets stuck, but it's only worth fixing first if it's actually your biggest. Growth Terminal ranks all twelve against your data and tells you whether traffic is really the one, or a symptom of something upstream.\n\nRun the free 60-second diagnostic, link in bio.",
     "hashtags": "#growthterminal #saasfounder #revenueoperations #foundertips",
     "first_comment": "Does \"the top of the funnel is thinner than the model needs\" sound like your account this quarter? \ud83d\udc47"
+  },
+  {
+    "media_id": "18129044326631391",
+    "fb_post_id": "1087307654468135_122101233242536059",
+    "at": "2026-08-14T16:00:46.233795Z",
+    "file": "creatives/gt_car_20260814160039_1.jpg",
+    "media_files": [
+      "creatives/gt_car_20260814160039_1.jpg",
+      "creatives/gt_car_20260814160039_2.jpg",
+      "creatives/gt_car_20260814160039_3.jpg",
+      "creatives/gt_car_20260814160039_4.jpg",
+      "creatives/gt_car_20260814160039_5.jpg"
+    ],
+    "is_reel": false,
+    "is_carousel": true,
+    "panels": 5,
+    "layout": "carousel:verdict",
+    "sig": "car:verdict",
+    "caption": "Most tools show you what agrees with them.\n\nGrowth Terminal names the constraint, lists the evidence for the call, then publishes the evidence against it and what would prove the diagnosis wrong.\n\nThen a 90 day plan with decision gates, and a grade against real revenue once the quarter plays out.",
+    "hashtags": "#growthterminal #foundertips #agencylife #saasgrowth",
+    "first_comment": "When did a tool last tell you why it might be wrong?"
   }
 ]
