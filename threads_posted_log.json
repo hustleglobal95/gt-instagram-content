@@ -833,5 +833,22 @@
       "markusreidgt": "18085724297667741"
     },
     "errors": {}
+  },
+  {
+    "at": "2026-08-14T17:07:01.622Z",
+    "text": "The one-metric week:\n\nPick the single metric your constraint lives in. Move only that for 7 days. Ignore the rest.\n\nMore of these on @markusreidgt.",
+    "parts": [
+      "The one-metric week:\n\nPick the single metric your constraint lives in. Move only that for 7 days. Ignore the rest.\n\nMore of these on @markusreidgt."
+    ],
+    "isThread": false,
+    "pillar": "systems",
+    "kind": "value_cta",
+    "accounts": [
+      "markusreidgt"
+    ],
+    "ids": {
+      "markusreidgt": "18100979279362196"
+    },
+    "errors": {}
   }
 ]
