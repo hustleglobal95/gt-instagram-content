@@ -816,5 +816,22 @@
       "markusreidgt": "17964183803962229"
     },
     "errors": {}
+  },
+  {
+    "at": "2026-08-14T15:04:35.446Z",
+    "text": "The whole operating system, three steps:\n\n1. Name the constraint.\n2. Move only that number.\n3. Verify it moved.\n\nStep three is the one everyone skips, which is why the same fix gets \"tried\" four times a year and nobody can say whether it worked.",
+    "parts": [
+      "The whole operating system, three steps:\n\n1. Name the constraint.\n2. Move only that number.\n3. Verify it moved.\n\nStep three is the one everyone skips, which is why the same fix gets \"tried\" four times a year and nobody can say whether it worked."
+    ],
+    "isThread": false,
+    "pillar": "systems",
+    "kind": "loop",
+    "accounts": [
+      "markusreidgt"
+    ],
+    "ids": {
+      "markusreidgt": "18085724297667741"
+    },
+    "errors": {}
   }
 ]
