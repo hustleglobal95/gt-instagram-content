@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-08-13T16:05:42.920Z",
+  "generated_at": "2026-08-14T16:00:40.997Z",
   "kind": "carousel",
-  "layout": "carousel:twelve",
+  "layout": "carousel:verdict",
   "media_files": [
-    "creatives/gt_car_20260813160542_1.jpg",
-    "creatives/gt_car_20260813160542_2.jpg",
-    "creatives/gt_car_20260813160542_3.jpg",
-    "creatives/gt_car_20260813160542_4.jpg",
-    "creatives/gt_car_20260813160542_5.jpg"
+    "creatives/gt_car_20260814160039_1.jpg",
+    "creatives/gt_car_20260814160039_2.jpg",
+    "creatives/gt_car_20260814160039_3.jpg",
+    "creatives/gt_car_20260814160039_4.jpg",
+    "creatives/gt_car_20260814160039_5.jpg"
   ],
-  "caption": "Growth gets stuck in twelve places. Only one of them is yours this quarter.\n\nDemand side: acquisition, traffic, conversion, offer.\nKeep side: activation, retention, churn, fulfilment.\nCapacity side: capacity, utilisation, pricing, cash collection.\n\nWorking the wrong one is why effort stops turning into revenue. Growth Terminal names which is yours, prices it, and grades the call.",
-  "hashtags": "#growthterminal #agencyowner #fractionalcmo #b2bsaas",
-  "first_comment": "Which of the twelve would you guess is yours right now?",
-  "alt_text": "Growth gets stuck in twelve places. Only one of them is yours this quarter. Demand side: acquisition, traffic, conversio",
-  "sig": "car:twelve"
+  "caption": "Most tools show you what agrees with them.\n\nGrowth Terminal names the constraint, lists the evidence for the call, then publishes the evidence against it and what would prove the diagnosis wrong.\n\nThen a 90 day plan with decision gates, and a grade against real revenue once the quarter plays out.",
+  "hashtags": "#growthterminal #foundertips #agencylife #saasgrowth",
+  "first_comment": "When did a tool last tell you why it might be wrong?",
+  "alt_text": "Most tools show you what agrees with them. Growth Terminal names the constraint, lists the evidence for the call, then p",
+  "sig": "car:verdict"
 }
