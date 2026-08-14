@@ -1,6 +1,6 @@
 {
-  "updated": "2026-08-13T06:56:53.094343Z",
-  "count": 71,
+  "updated": "2026-08-14T06:54:02.955006Z",
+  "count": 76,
   "posts": [
     {
       "sig": "reelfeat:We name the one constrai",
@@ -1290,6 +1290,101 @@
       },
       "engagement": 0,
       "_ig_attempted": true
+    },
+    {
+      "sig": "tz:Why plan a quarter on a hunch?",
+      "layout": "twozone",
+      "file": "creatives/gt_auto_20260813_130127.jpg",
+      "is_reel": false,
+      "at": "2026-08-13T13:01:34.239583Z",
+      "caption": "Why plan a quarter on a hunch?\n\nMost quarterly plans start from a feeling about what is broken. Growth Terminal reads th",
+      "permalink": "",
+      "ig": null,
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 0,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "car:twelve",
+      "layout": "carousel:twelve",
+      "file": "creatives/gt_car_20260813160542_1.jpg",
+      "is_reel": false,
+      "at": "2026-08-13T16:05:48.186756Z",
+      "caption": "Growth gets stuck in twelve places. Only one of them is yours this quarter.\n\nDemand side: acquisition, traffic, conversi",
+      "permalink": "",
+      "ig": null,
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 0,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "feat:Find the one constraint holding your gro:gt_face_01.png",
+      "layout": "feature",
+      "file": "creatives/gt_auto_20260813_170139.jpg",
+      "is_reel": false,
+      "at": "2026-08-13T17:01:45.071879Z",
+      "caption": "Find the one constraint holding your growth back.\n\nGrowth Terminal reads the report you already run, names the single co",
+      "permalink": "",
+      "ig": null,
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 0,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "prodshot:funnel:Find the one step your",
+      "layout": "prodshot",
+      "file": "creatives/gt_auto_20260813_210121.jpg",
+      "is_reel": false,
+      "at": "2026-08-13T21:01:27.724301Z",
+      "caption": "Your funnel has one step leaking more than the rest. The Funnel & Conversion Tracker finds it, tells you what fixing it ",
+      "permalink": "",
+      "ig": null,
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 0,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "beha:You check it every morning any",
+      "layout": "behaviourcall",
+      "file": "creatives/gt_auto_20260814_010111.jpg",
+      "is_reel": false,
+      "at": "2026-08-14T01:01:17.046874Z",
+      "caption": "You check it every morning anyway.\n\nThe report you open with your coffee already contains the answer, it just does not r",
+      "permalink": "",
+      "ig": null,
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 0,
+      "_ig_attempted": true
     }
   ],
   "by_format": [
@@ -1326,14 +1421,6 @@
       "avg_engagement": 2.0
     },
     {
-      "layout": "prodshot",
-      "posts": 4,
-      "engagement": 8,
-      "ig_engagement": 0,
-      "fb_engagement": 8,
-      "avg_engagement": 2.0
-    },
-    {
       "layout": "edmanifesto",
       "posts": 4,
       "engagement": 8,
@@ -1358,12 +1445,12 @@
       "avg_engagement": 2.0
     },
     {
-      "layout": "feature",
-      "posts": 3,
-      "engagement": 5,
+      "layout": "prodshot",
+      "posts": 5,
+      "engagement": 8,
       "ig_engagement": 0,
-      "fb_engagement": 5,
-      "avg_engagement": 1.7
+      "fb_engagement": 8,
+      "avg_engagement": 1.6
     },
     {
       "layout": "prodclaim",
@@ -1383,6 +1470,14 @@
     },
     {
       "layout": "prodsoon",
+      "posts": 4,
+      "engagement": 5,
+      "ig_engagement": 0,
+      "fb_engagement": 5,
+      "avg_engagement": 1.2
+    },
+    {
+      "layout": "feature",
       "posts": 4,
       "engagement": 5,
       "ig_engagement": 0,
@@ -1414,20 +1509,20 @@
       "avg_engagement": 1.0
     },
     {
-      "layout": "carousel:twelve",
-      "posts": 2,
-      "engagement": 2,
-      "ig_engagement": 0,
-      "fb_engagement": 2,
-      "avg_engagement": 1.0
-    },
-    {
       "layout": "reel:card",
       "posts": 8,
       "engagement": 6,
       "ig_engagement": 0,
       "fb_engagement": 6,
       "avg_engagement": 0.8
+    },
+    {
+      "layout": "carousel:twelve",
+      "posts": 3,
+      "engagement": 2,
+      "ig_engagement": 0,
+      "fb_engagement": 2,
+      "avg_engagement": 0.7
     },
     {
       "layout": "card",
@@ -1439,11 +1534,11 @@
     },
     {
       "layout": "twozone",
-      "posts": 2,
+      "posts": 3,
       "engagement": 1,
       "ig_engagement": 0,
       "fb_engagement": 1,
-      "avg_engagement": 0.5
+      "avg_engagement": 0.3
     },
     {
       "layout": "statement",
@@ -1468,10 +1563,18 @@
       "ig_engagement": 0,
       "fb_engagement": 0,
       "avg_engagement": 0.0
+    },
+    {
+      "layout": "behaviourcall",
+      "posts": 1,
+      "engagement": 0,
+      "ig_engagement": 0,
+      "fb_engagement": 0,
+      "avg_engagement": 0.0
     }
   ],
   "collection": {
-    "ig_attempted": 71,
+    "ig_attempted": 76,
     "ig_succeeded": 0,
     "ig_errors": [
       {
@@ -1555,7 +1658,7 @@
         "message": "Invalid OAuth access token - Cannot parse access token"
       }
     ],
-    "ig_error_count": 71,
-    "fb_succeeded": 61
+    "ig_error_count": 76,
+    "fb_succeeded": 66
   }
 }
