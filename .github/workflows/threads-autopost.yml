@@ -7,10 +7,18 @@ name: Threads Auto-Poster
 
 on:
   schedule:
-    # 8x/day, every ~2h from 8am to 10pm ET (EDT = UTC-4). Minute :08 (not :00)
-    # to dodge GitHub's top-of-hour cron drops. When Florida switches to EST
-    # (UTC-5) on Nov 2 2026, add 1 hour to each UTC hour below.
-    - cron: "8 0,2,12,14,16,18,20,22 * * *"
+    # 12x/day across 7am to 11pm ET (EDT = UTC-4).
+    #
+    # The old schedule asked for 8 and delivered 3 to 7. GitHub drops scheduled
+    # runs under load and there is no retry for a slot that never fired, so the
+    # fix is more slots at less contested minutes rather than one denser list.
+    # Two expressions, both well away from :00, which is when every cron on the
+    # platform wakes up at once.
+    #
+    # When Florida switches to EST (UTC-5) on Nov 2 2026, add 1 hour to every
+    # UTC hour below.
+    - cron: "8 11,14,17,20,23,2 * * *"    # 7am 10am 1pm 4pm 7pm 10pm ET
+    - cron: "38 12,15,18,21,0,3 * * *"    # 8:38am 11:38am 2:38pm 5:38pm 8:38pm 11:38pm ET
   workflow_dispatch: {}   # the dashboard "Post one now" button hits this
 
 permissions:
