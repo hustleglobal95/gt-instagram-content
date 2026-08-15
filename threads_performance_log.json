@@ -1,129 +1,17 @@
 {
-  "updated": "2026-08-15T01:11:15.426Z",
-  "count": 52,
+  "updated": "2026-08-15T06:56:36.506Z",
+  "count": 54,
   "ranking_basis": "per_1k",
+  "min_views_for_rate": 25,
+  "rate_eligible": 22,
+  "reach": {
+    "views": 6251,
+    "interactions": 48,
+    "median_views": 13.5,
+    "zero_interaction_posts": 37
+  },
   "top": [
     {
-      "at": "2026-08-10T13:39:04.872Z",
-      "pillar": "authority",
-      "kind": "thread",
-      "isThread": true,
-      "parts": 5,
-      "text": "I turned a dead account around by changing one thing.\n\nNot the topic. Not the frequency.\n\nThe first line 👇",
-      "accounts": [
-        "markusreidgt"
-      ],
-      "permalink": "https://www.threads.com/@markusreidgt/post/Db3I_MIEkod",
-      "metrics": {
-        "views": 3,
-        "likes": 0,
-        "replies": 4,
-        "reposts": 0,
-        "quotes": 0,
-        "shares": 0
-      },
-      "views": 3,
-      "engagement": 4,
-      "per_1k": 1333.33,
-      "basis": "per_1k"
-    },
-    {
-      "at": "2026-08-08T23:25:19.238Z",
-      "pillar": "systems",
-      "kind": "thread",
-      "isThread": true,
-      "parts": 5,
-      "text": "Your content isn’t the problem.\n\nYour distribution is.\n\nWhy great posts die and average posts win 👇",
-      "accounts": [
-        "markusreidgt"
-      ],
-      "permalink": "https://www.threads.com/@markusreidgt/post/DbzCfFVH-Ph",
-      "metrics": {
-        "views": 15,
-        "likes": 0,
-        "replies": 4,
-        "reposts": 0,
-        "quotes": 0,
-        "shares": 0
-      },
-      "views": 15,
-      "engagement": 4,
-      "per_1k": 266.67,
-      "basis": "per_1k"
-    },
-    {
-      "at": "2026-08-12T20:59:02.934Z",
-      "pillar": "decision",
-      "kind": "callout",
-      "isThread": false,
-      "parts": 1,
-      "text": "If you’re about to spend on ads, stop for 30 seconds.\n\nThe problem usually isn’t effort. It’s aim.\n\n“Our content isn’t working” feels like the issue. It’s a distribution problem.\n\nPoint the same effort at the real constraint and it finally ",
-      "accounts": [
-        "markusreidgt"
-      ],
-      "permalink": "https://www.threads.com/@markusreidgt/post/Db9E7WcAYqz",
-      "metrics": {
-        "views": 6,
-        "likes": 0,
-        "replies": 0,
-        "reposts": 1,
-        "quotes": 0,
-        "shares": 0
-      },
-      "views": 6,
-      "engagement": 1,
-      "per_1k": 166.67,
-      "basis": "per_1k"
-    },
-    {
-      "at": "2026-08-11T22:58:51.199Z",
-      "pillar": "product",
-      "kind": "offer",
-      "isThread": false,
-      "parts": 1,
-      "text": "I built a system that finds your #1 growth constraint and hands you the fix.\n\nNot another dashboard of numbers — a diagnosis that tells you the one thing to work on.\n\nSo you stop guessing and move one metric a week. The Growth Hacking Syste",
-      "accounts": [
-        "markusreidgt"
-      ],
-      "permalink": "https://www.threads.com/@markusreidgt/post/Db6t14_nHU0",
-      "metrics": {
-        "views": 13,
-        "likes": 2,
-        "replies": 0,
-        "reposts": 0,
-        "quotes": 0,
-        "shares": 0
-      },
-      "views": 13,
-      "engagement": 2,
-      "per_1k": 153.85,
-      "basis": "per_1k"
-    },
-    {
-      "at": "2026-08-14T19:09:34.613Z",
-      "pillar": "mistakes",
-      "kind": "ops",
-      "isThread": false,
-      "parts": 1,
-      "text": "Most startups think they have a marketing problem.\n\nMost have an operations problem wearing a marketing costume.\n\nThe leads arrive. Nobody calls back for two days. The quote takes a week. The buyer moves on and it gets logged as \"the ads di",
-      "accounts": [
-        "markusreidgt"
-      ],
-      "permalink": "https://www.threads.com/@markusreidgt/post/DcCB_M6Fgbo",
-      "metrics": {
-        "views": 9,
-        "likes": 1,
-        "replies": 0,
-        "reposts": 0,
-        "quotes": 0,
-        "shares": 0
-      },
-      "views": 9,
-      "engagement": 1,
-      "per_1k": 111.11,
-      "basis": "per_1k"
-    },
-    {
       "at": "2026-08-13T17:08:51.833Z",
       "pillar": "systems",
       "kind": "thread",
@@ -145,6 +33,7 @@
       "views": 40,
       "engagement": 4,
       "per_1k": 100,
+      "rateReliable": true,
       "basis": "per_1k"
     },
     {
@@ -169,6 +58,7 @@
       "views": 43,
       "engagement": 4,
       "per_1k": 93.02,
+      "rateReliable": true,
       "basis": "per_1k"
     },
     {
@@ -193,6 +83,32 @@
       "views": 46,
       "engagement": 4,
       "per_1k": 86.96,
+      "rateReliable": true,
+      "basis": "per_1k"
+    },
+    {
+      "at": "2026-08-15T03:02:24.439Z",
+      "pillar": "playbook",
+      "kind": "thread",
+      "isThread": true,
+      "parts": 5,
+      "text": "You can learn more in five customer conversations than in five months of analytics.\n\nWhat to actually ask",
+      "accounts": [
+        "markusreidgt"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/DcC4GWRFQjZ",
+      "metrics": {
+        "views": 163,
+        "likes": 0,
+        "replies": 4,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 1
+      },
+      "views": 163,
+      "engagement": 5,
+      "per_1k": 30.67,
+      "rateReliable": true,
       "basis": "per_1k"
     },
     {
@@ -217,6 +133,7 @@
       "views": 152,
       "engagement": 2,
       "per_1k": 13.16,
+      "rateReliable": true,
       "basis": "per_1k"
     },
     {
@@ -241,248 +158,7 @@
       "views": 240,
       "engagement": 2,
       "per_1k": 8.33,
-      "basis": "per_1k"
-    }
-  ],
-  "posts": [
-    {
-      "at": "2026-08-10T13:39:04.872Z",
-      "pillar": "authority",
-      "kind": "thread",
-      "isThread": true,
-      "parts": 5,
-      "text": "I turned a dead account around by changing one thing.\n\nNot the topic. Not the frequency.\n\nThe first line 👇",
-      "accounts": [
-        "markusreidgt"
-      ],
-      "permalink": "https://www.threads.com/@markusreidgt/post/Db3I_MIEkod",
-      "metrics": {
-        "views": 3,
-        "likes": 0,
-        "replies": 4,
-        "reposts": 0,
-        "quotes": 0,
-        "shares": 0
-      },
-      "views": 3,
-      "engagement": 4,
-      "per_1k": 1333.33,
-      "basis": "per_1k"
-    },
-    {
-      "at": "2026-08-08T23:25:19.238Z",
-      "pillar": "systems",
-      "kind": "thread",
-      "isThread": true,
-      "parts": 5,
-      "text": "Your content isn’t the problem.\n\nYour distribution is.\n\nWhy great posts die and average posts win 👇",
-      "accounts": [
-        "markusreidgt"
-      ],
-      "permalink": "https://www.threads.com/@markusreidgt/post/DbzCfFVH-Ph",
-      "metrics": {
-        "views": 15,
-        "likes": 0,
-        "replies": 4,
-        "reposts": 0,
-        "quotes": 0,
-        "shares": 0
-      },
-      "views": 15,
-      "engagement": 4,
-      "per_1k": 266.67,
-      "basis": "per_1k"
-    },
-    {
-      "at": "2026-08-12T20:59:02.934Z",
-      "pillar": "decision",
-      "kind": "callout",
-      "isThread": false,
-      "parts": 1,
-      "text": "If you’re about to spend on ads, stop for 30 seconds.\n\nThe problem usually isn’t effort. It’s aim.\n\n“Our content isn’t working” feels like the issue. It’s a distribution problem.\n\nPoint the same effort at the real constraint and it finally ",
-      "accounts": [
-        "markusreidgt"
-      ],
-      "permalink": "https://www.threads.com/@markusreidgt/post/Db9E7WcAYqz",
-      "metrics": {
-        "views": 6,
-        "likes": 0,
-        "replies": 0,
-        "reposts": 1,
-        "quotes": 0,
-        "shares": 0
-      },
-      "views": 6,
-      "engagement": 1,
-      "per_1k": 166.67,
-      "basis": "per_1k"
-    },
-    {
-      "at": "2026-08-11T22:58:51.199Z",
-      "pillar": "product",
-      "kind": "offer",
-      "isThread": false,
-      "parts": 1,
-      "text": "I built a system that finds your #1 growth constraint and hands you the fix.\n\nNot another dashboard of numbers — a diagnosis that tells you the one thing to work on.\n\nSo you stop guessing and move one metric a week. The Growth Hacking Syste",
-      "accounts": [
-        "markusreidgt"
-      ],
-      "permalink": "https://www.threads.com/@markusreidgt/post/Db6t14_nHU0",
-      "metrics": {
-        "views": 13,
-        "likes": 2,
-        "replies": 0,
-        "reposts": 0,
-        "quotes": 0,
-        "shares": 0
-      },
-      "views": 13,
-      "engagement": 2,
-      "per_1k": 153.85,
-      "basis": "per_1k"
-    },
-    {
-      "at": "2026-08-14T19:09:34.613Z",
-      "pillar": "mistakes",
-      "kind": "ops",
-      "isThread": false,
-      "parts": 1,
-      "text": "Most startups think they have a marketing problem.\n\nMost have an operations problem wearing a marketing costume.\n\nThe leads arrive. Nobody calls back for two days. The quote takes a week. The buyer moves on and it gets logged as \"the ads di",
-      "accounts": [
-        "markusreidgt"
-      ],
-      "permalink": "https://www.threads.com/@markusreidgt/post/DcCB_M6Fgbo",
-      "metrics": {
-        "views": 9,
-        "likes": 1,
-        "replies": 0,
-        "reposts": 0,
-        "quotes": 0,
-        "shares": 0
-      },
-      "views": 9,
-      "engagement": 1,
-      "per_1k": 111.11,
-      "basis": "per_1k"
-    },
-    {
-      "at": "2026-08-13T17:08:51.833Z",
-      "pillar": "systems",
-      "kind": "thread",
-      "isThread": true,
-      "parts": 5,
-      "text": "The reason you feel busy and flat:\n\nyou’re moving ten metrics an inch instead of one metric a mile.\n\nThe one-metric week 👇",
-      "accounts": [
-        "markusreidgt"
-      ],
-      "permalink": "https://www.threads.com/@markusreidgt/post/Db_PYMalMDn",
-      "metrics": {
-        "views": 40,
-        "likes": 0,
-        "replies": 4,
-        "reposts": 0,
-        "quotes": 0,
-        "shares": 0
-      },
-      "views": 40,
-      "engagement": 4,
-      "per_1k": 100,
-      "basis": "per_1k"
-    },
-    {
-      "at": "2026-08-13T13:40:32.623Z",
-      "pillar": "systems",
-      "kind": "thread",
-      "isThread": true,
-      "parts": 5,
-      "text": "Your content isn’t the problem.\n\nYour distribution is.\n\nWhy great posts die and average posts win 👇",
-      "accounts": [
-        "markusreidgt"
-      ],
-      "permalink": "https://www.threads.com/@markusreidgt/post/Db-3ieJlwQR",
-      "metrics": {
-        "views": 43,
-        "likes": 0,
-        "replies": 4,
-        "reposts": 0,
-        "quotes": 0,
-        "shares": 0
-      },
-      "views": 43,
-      "engagement": 4,
-      "per_1k": 93.02,
-      "basis": "per_1k"
-    },
-    {
-      "at": "2026-08-11T17:09:28.041Z",
-      "pillar": "authority",
-      "kind": "thread",
-      "isThread": true,
-      "parts": 5,
-      "text": "I turned a dead account around by changing one thing.\n\nNot the topic. Not the frequency.\n\nThe first line 👇",
-      "accounts": [
-        "markusreidgt"
-      ],
-      "permalink": "https://www.threads.com/@markusreidgt/post/Db6F27GFm3v",
-      "metrics": {
-        "views": 46,
-        "likes": 0,
-        "replies": 4,
-        "reposts": 0,
-        "quotes": 0,
-        "shares": 0
-      },
-      "views": 46,
-      "engagement": 4,
-      "per_1k": 86.96,
-      "basis": "per_1k"
-    },
-    {
-      "at": "2026-08-13T19:16:52.576Z",
-      "pillar": "constraint",
-      "kind": "aphorism",
-      "isThread": false,
-      "parts": 1,
-      "text": "A clever brand with no offer loses to a clear offer with no brand.",
-      "accounts": [
-        "markusreidgt"
-      ],
-      "permalink": "https://www.threads.com/@markusreidgt/post/Db_eBzRmi_F",
-      "metrics": {
-        "views": 152,
-        "likes": 2,
-        "replies": 0,
-        "reposts": 0,
-        "quotes": 0,
-        "shares": 0
-      },
-      "views": 152,
-      "engagement": 2,
-      "per_1k": 13.16,
-      "basis": "per_1k"
-    },
-    {
-      "at": "2026-08-10T17:05:31.909Z",
-      "pillar": "constraint",
-      "kind": "aphorism",
-      "isThread": false,
-      "parts": 1,
-      "text": "Growth is just retention with a smaller leak.",
-      "accounts": [
-        "markusreidgt"
-      ],
-      "permalink": "https://www.threads.com/@markusreidgt/post/Db3gnLboK1K",
-      "metrics": {
-        "views": 240,
-        "likes": 1,
-        "replies": 0,
-        "reposts": 1,
-        "quotes": 0,
-        "shares": 0
-      },
-      "views": 240,
-      "engagement": 2,
-      "per_1k": 8.33,
+      "rateReliable": true,
       "basis": "per_1k"
     },
     {
@@ -507,6 +183,7 @@
       "views": 575,
       "engagement": 4,
       "per_1k": 6.96,
+      "rateReliable": true,
       "basis": "per_1k"
     },
     {
@@ -531,6 +208,7 @@
       "views": 1007,
       "engagement": 4,
       "per_1k": 3.97,
+      "rateReliable": true,
       "basis": "per_1k"
     },
     {
@@ -555,6 +233,7 @@
       "views": 1021,
       "engagement": 4,
       "per_1k": 3.92,
+      "rateReliable": true,
       "basis": "per_1k"
     },
     {
@@ -579,6 +258,259 @@
       "views": 520,
       "engagement": 1,
       "per_1k": 1.92,
+      "rateReliable": true,
+      "basis": "per_1k"
+    }
+  ],
+  "posts": [
+    {
+      "at": "2026-08-13T17:08:51.833Z",
+      "pillar": "systems",
+      "kind": "thread",
+      "isThread": true,
+      "parts": 5,
+      "text": "The reason you feel busy and flat:\n\nyou’re moving ten metrics an inch instead of one metric a mile.\n\nThe one-metric week 👇",
+      "accounts": [
+        "markusreidgt"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/Db_PYMalMDn",
+      "metrics": {
+        "views": 40,
+        "likes": 0,
+        "replies": 4,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 40,
+      "engagement": 4,
+      "per_1k": 100,
+      "rateReliable": true,
+      "basis": "per_1k"
+    },
+    {
+      "at": "2026-08-13T13:40:32.623Z",
+      "pillar": "systems",
+      "kind": "thread",
+      "isThread": true,
+      "parts": 5,
+      "text": "Your content isn’t the problem.\n\nYour distribution is.\n\nWhy great posts die and average posts win 👇",
+      "accounts": [
+        "markusreidgt"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/Db-3ieJlwQR",
+      "metrics": {
+        "views": 43,
+        "likes": 0,
+        "replies": 4,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 43,
+      "engagement": 4,
+      "per_1k": 93.02,
+      "rateReliable": true,
+      "basis": "per_1k"
+    },
+    {
+      "at": "2026-08-11T17:09:28.041Z",
+      "pillar": "authority",
+      "kind": "thread",
+      "isThread": true,
+      "parts": 5,
+      "text": "I turned a dead account around by changing one thing.\n\nNot the topic. Not the frequency.\n\nThe first line 👇",
+      "accounts": [
+        "markusreidgt"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/Db6F27GFm3v",
+      "metrics": {
+        "views": 46,
+        "likes": 0,
+        "replies": 4,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 46,
+      "engagement": 4,
+      "per_1k": 86.96,
+      "rateReliable": true,
+      "basis": "per_1k"
+    },
+    {
+      "at": "2026-08-15T03:02:24.439Z",
+      "pillar": "playbook",
+      "kind": "thread",
+      "isThread": true,
+      "parts": 5,
+      "text": "You can learn more in five customer conversations than in five months of analytics.\n\nWhat to actually ask",
+      "accounts": [
+        "markusreidgt"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/DcC4GWRFQjZ",
+      "metrics": {
+        "views": 163,
+        "likes": 0,
+        "replies": 4,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 1
+      },
+      "views": 163,
+      "engagement": 5,
+      "per_1k": 30.67,
+      "rateReliable": true,
+      "basis": "per_1k"
+    },
+    {
+      "at": "2026-08-13T19:16:52.576Z",
+      "pillar": "constraint",
+      "kind": "aphorism",
+      "isThread": false,
+      "parts": 1,
+      "text": "A clever brand with no offer loses to a clear offer with no brand.",
+      "accounts": [
+        "markusreidgt"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/Db_eBzRmi_F",
+      "metrics": {
+        "views": 152,
+        "likes": 2,
+        "replies": 0,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 152,
+      "engagement": 2,
+      "per_1k": 13.16,
+      "rateReliable": true,
+      "basis": "per_1k"
+    },
+    {
+      "at": "2026-08-10T17:05:31.909Z",
+      "pillar": "constraint",
+      "kind": "aphorism",
+      "isThread": false,
+      "parts": 1,
+      "text": "Growth is just retention with a smaller leak.",
+      "accounts": [
+        "markusreidgt"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/Db3gnLboK1K",
+      "metrics": {
+        "views": 240,
+        "likes": 1,
+        "replies": 0,
+        "reposts": 1,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 240,
+      "engagement": 2,
+      "per_1k": 8.33,
+      "rateReliable": true,
+      "basis": "per_1k"
+    },
+    {
+      "at": "2026-08-11T15:14:14.171Z",
+      "pillar": "systems",
+      "kind": "thread",
+      "isThread": true,
+      "parts": 5,
+      "text": "Your content isn’t the problem.\n\nYour distribution is.\n\nWhy great posts die and average posts win 👇",
+      "accounts": [
+        "markusreidgt"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/Db54q4coL7o",
+      "metrics": {
+        "views": 575,
+        "likes": 0,
+        "replies": 4,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 575,
+      "engagement": 4,
+      "per_1k": 6.96,
+      "rateReliable": true,
+      "basis": "per_1k"
+    },
+    {
+      "at": "2026-08-11T02:23:45.905Z",
+      "pillar": "constraint",
+      "kind": "thread",
+      "isThread": true,
+      "parts": 5,
+      "text": "Stop trying to grow.\n\nStart trying to leak less.\n\nThe retention-first playbook 👇",
+      "accounts": [
+        "markusreidgt"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/Db4gf1JFX57",
+      "metrics": {
+        "views": 1007,
+        "likes": 0,
+        "replies": 4,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 1007,
+      "engagement": 4,
+      "per_1k": 3.97,
+      "rateReliable": true,
+      "basis": "per_1k"
+    },
+    {
+      "at": "2026-08-12T15:11:12.487Z",
+      "pillar": "systems",
+      "kind": "thread",
+      "isThread": true,
+      "parts": 5,
+      "text": "The reason you feel busy and flat:\n\nyou’re moving ten metrics an inch instead of one metric a mile.\n\nThe one-metric week 👇",
+      "accounts": [
+        "markusreidgt"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/Db8dHrVka51",
+      "metrics": {
+        "views": 1021,
+        "likes": 0,
+        "replies": 4,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 1021,
+      "engagement": 4,
+      "per_1k": 3.92,
+      "rateReliable": true,
+      "basis": "per_1k"
+    },
+    {
+      "at": "2026-08-05T23:57:39.705Z",
+      "pillar": "decision",
+      "kind": "hook",
+      "isThread": false,
+      "parts": 1,
+      "text": "Fastest way to waste a budget:\n\nScale before you diagnose.",
+      "accounts": [
+        "markusreidgt"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/DbrXzY7jo-Y",
+      "metrics": {
+        "views": 520,
+        "likes": 1,
+        "replies": 0,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 520,
+      "engagement": 1,
+      "per_1k": 1.92,
+      "rateReliable": true,
       "basis": "per_1k"
     },
     {
@@ -603,6 +535,7 @@
       "views": 557,
       "engagement": 1,
       "per_1k": 1.8,
+      "rateReliable": true,
       "basis": "per_1k"
     },
     {
@@ -627,798 +560,7 @@
       "views": 605,
       "engagement": 1,
       "per_1k": 1.65,
-      "basis": "per_1k"
-    },
-    {
-      "at": "2026-08-14T22:36:30.775Z",
-      "pillar": "constraint",
-      "kind": "pas",
-      "isThread": false,
-      "parts": 1,
-      "text": "“We need to post more.”\n\nNo — that’s the symptom.\n\nThe real problem is a hook problem. And more effort on the wrong lever just makes the drop steeper.\n\nFix it at the source: ten posts nobody stops for is still zero.",
-      "accounts": [
-        "markusreidgt"
-      ],
-      "permalink": "https://www.threads.com/@markusreidgt/post/DcCZq1VGj_B",
-      "metrics": {
-        "views": 4,
-        "likes": 0,
-        "replies": 0,
-        "reposts": 0,
-        "quotes": 0,
-        "shares": 0
-      },
-      "views": 4,
-      "engagement": 0,
-      "per_1k": 0,
-      "basis": "per_1k"
-    },
-    {
-      "at": "2026-08-14T20:41:49.840Z",
-      "pillar": "decision",
-      "kind": "price_it",
-      "isThread": false,
-      "parts": 1,
-      "text": "Put a number on the gap or nothing happens.\n\n\"We should improve follow-up\" is a shrug in a meeting.\n\n\"Follow-up costs us about $18k a month\" is a decision with a deadline.\n\nSame fact. Only one of them gets scheduled.",
-      "accounts": [
-        "markusreidgt"
-      ],
-      "permalink": "https://www.threads.com/@markusreidgt/post/DcCMi6WGsmZ",
-      "metrics": {
-        "views": 7,
-        "likes": 0,
-        "replies": 0,
-        "reposts": 0,
-        "quotes": 0,
-        "shares": 0
-      },
-      "views": 7,
-      "engagement": 0,
-      "per_1k": 0,
-      "basis": "per_1k"
-    },
-    {
-      "at": "2026-08-14T17:07:01.622Z",
-      "pillar": "systems",
-      "kind": "value_cta",
-      "isThread": false,
-      "parts": 1,
-      "text": "The one-metric week:\n\nPick the single metric your constraint lives in. Move only that for 7 days. Ignore the rest.\n\nMore of these on @markusreidgt.",
-      "accounts": [
-        "markusreidgt"
-      ],
-      "permalink": "https://www.threads.com/@markusreidgt/post/DcBz9pBoLnm",
-      "metrics": {
-        "views": 7,
-        "likes": 0,
-        "replies": 0,
-        "reposts": 0,
-        "quotes": 0,
-        "shares": 0
-      },
-      "views": 7,
-      "engagement": 0,
-      "per_1k": 0,
-      "basis": "per_1k"
-    },
-    {
-      "at": "2026-08-14T15:04:35.446Z",
-      "pillar": "systems",
-      "kind": "loop",
-      "isThread": false,
-      "parts": 1,
-      "text": "The whole operating system, three steps:\n\n1. Name the constraint.\n2. Move only that number.\n3. Verify it moved.\n\nStep three is the one everyone skips, which is why the same fix gets \"tried\" four times a year and nobody can say whether it wo",
-      "accounts": [
-        "markusreidgt"
-      ],
-      "permalink": "https://www.threads.com/@markusreidgt/post/DcBl85rIMUH",
-      "metrics": {
-        "views": 6,
-        "likes": 0,
-        "replies": 0,
-        "reposts": 0,
-        "quotes": 0,
-        "shares": 0
-      },
-      "views": 6,
-      "engagement": 0,
-      "per_1k": 0,
-      "basis": "per_1k"
-    },
-    {
-      "at": "2026-08-14T13:36:11.977Z",
-      "pillar": "systems",
-      "kind": "review",
-      "isThread": false,
-      "parts": 1,
-      "text": "A useful monthly review fits on one page:\n\n• the constraint\n• what we changed\n• what moved\n• next constraint\n\nIf it takes twelve slides, nobody reads it and no one is accountable to it. Length is how teams hide from the second bullet.",
-      "accounts": [
-        "markusreidgt"
-      ],
-      "permalink": "https://www.threads.com/@markusreidgt/post/DcBb1fUlue2",
-      "metrics": {
-        "views": 3,
-        "likes": 0,
-        "replies": 0,
-        "reposts": 0,
-        "quotes": 0,
-        "shares": 0
-      },
-      "views": 3,
-      "engagement": 0,
-      "per_1k": 0,
-      "basis": "per_1k"
-    },
-    {
-      "at": "2026-08-14T02:40:50.348Z",
-      "pillar": "solution",
-      "kind": "offer",
-      "isThread": false,
-      "parts": 1,
-      "text": "Most “growth” advice is a pile of tactics with no diagnosis.\n\n“We need to post more”? The real issue is a hook problem — and you can’t fix what you haven’t named.\n\nThe System names it, then fixes it. The Growth Hacking System runs this for ",
-      "accounts": [
-        "markusreidgt"
-      ],
-      "permalink": "https://www.threads.com/@markusreidgt/post/DcAQ1gOli3G",
-      "metrics": {
-        "views": 1,
-        "likes": 0,
-        "replies": 0,
-        "reposts": 0,
-        "quotes": 0,
-        "shares": 0
-      },
-      "views": 1,
-      "engagement": 0,
-      "per_1k": 0,
-      "basis": "per_1k"
-    },
-    {
-      "at": "2026-08-13T22:58:34.167Z",
-      "pillar": "bi",
-      "kind": "avoid",
-      "isThread": false,
-      "parts": 1,
-      "text": "The number you have not looked at in a month is your constraint.\n\nNot because avoidance is magic. Because you already know it is bad, and looking would mean owning it.\n\nOpen that one first. The discomfort is the signal.",
-      "accounts": [
-        "markusreidgt"
-      ],
-      "permalink": "https://www.threads.com/@markusreidgt/post/Db_3Zg-CVLM",
-      "metrics": {
-        "views": 25,
-        "likes": 0,
-        "replies": 0,
-        "reposts": 0,
-        "quotes": 0,
-        "shares": 0
-      },
-      "views": 25,
-      "engagement": 0,
-      "per_1k": 0,
-      "basis": "per_1k"
-    },
-    {
-      "at": "2026-08-13T15:11:32.869Z",
-      "pillar": "playbook",
-      "kind": "howto",
-      "isThread": false,
-      "parts": 1,
-      "text": "How to raise prices without losing customers:\n\n1. Add one outcome they actually want.\n2. Name it on the page.\n3. Charge for the outcome, not the hours.\n\nPeople pay for the result, not your time.",
-      "accounts": [
-        "markusreidgt"
-      ],
-      "permalink": "https://www.threads.com/@markusreidgt/post/Db_B8_Zlbe-",
-      "metrics": {
-        "views": 6,
-        "likes": 0,
-        "replies": 0,
-        "reposts": 0,
-        "quotes": 0,
-        "shares": 0
-      },
-      "views": 6,
-      "engagement": 0,
-      "per_1k": 0,
-      "basis": "per_1k"
-    },
-    {
-      "at": "2026-08-12T22:56:42.698Z",
-      "pillar": "decision",
-      "kind": "callout",
-      "isThread": false,
-      "parts": 1,
-      "text": "If your traffic is fine but sales aren’t, this is for you.\n\nThe problem usually isn’t effort. It’s aim.\n\n“We need to post more” feels like the issue. It’s a hook problem.\n\nPoint the same effort at the real constraint and it finally moves.",
-      "accounts": [
-        "markusreidgt"
-      ],
-      "permalink": "https://www.threads.com/@markusreidgt/post/Db9SZQOiNVL",
-      "metrics": {
-        "views": 5,
-        "likes": 0,
-        "replies": 0,
-        "reposts": 0,
-        "quotes": 0,
-        "shares": 0
-      },
-      "views": 5,
-      "engagement": 0,
-      "per_1k": 0,
-      "basis": "per_1k"
-    },
-    {
-      "at": "2026-08-12T19:16:36.482Z",
-      "pillar": "constraint",
-      "kind": "pas",
-      "isThread": false,
-      "parts": 1,
-      "text": "“We need a rebrand.”\n\nNo — that’s the symptom.\n\nThe real problem is a positioning problem. And more effort on the wrong lever just makes the drop steeper.\n\nFix it at the source: people don’t buy prettier, they buy clearer.",
-      "accounts": [
-        "markusreidgt"
-      ],
-      "permalink": "https://www.threads.com/@markusreidgt/post/Db85M-koGfn",
-      "metrics": {
-        "views": 3,
-        "likes": 0,
-        "replies": 0,
-        "reposts": 0,
-        "quotes": 0,
-        "shares": 0
-      },
-      "views": 3,
-      "engagement": 0,
-      "per_1k": 0,
-      "basis": "per_1k"
-    },
-    {
-      "at": "2026-08-12T17:08:54.747Z",
-      "pillar": "constraint",
-      "kind": "reframe",
-      "isThread": false,
-      "parts": 1,
-      "text": "“Churn is killing us” usually isn’t what it looks like.\n\nIt’s an onboarding problem.\n\nPeople don’t leave what they’ve actually activated.",
-      "accounts": [
-        "markusreidgt"
-      ],
-      "permalink": "https://www.threads.com/@markusreidgt/post/Db8qlrFFMBn",
-      "metrics": {
-        "views": 7,
-        "likes": 0,
-        "replies": 0,
-        "reposts": 0,
-        "quotes": 0,
-        "shares": 0
-      },
-      "views": 7,
-      "engagement": 0,
-      "per_1k": 0,
-      "basis": "per_1k"
-    },
-    {
-      "at": "2026-08-12T13:40:39.951Z",
-      "pillar": "decision",
-      "kind": "callout",
-      "isThread": false,
-      "parts": 1,
-      "text": "If your traffic is fine but sales aren’t, this is for you.\n\nThe problem usually isn’t effort. It’s aim.\n\n“Churn is killing us” feels like the issue. It’s an onboarding problem.\n\nPoint the same effort at the real constraint and it finally mo",
-      "accounts": [
-        "markusreidgt"
-      ],
-      "permalink": "https://www.threads.com/@markusreidgt/post/Db8Swc2m_ZU",
-      "metrics": {
-        "views": 1,
-        "likes": 0,
-        "replies": 0,
-        "reposts": 0,
-        "quotes": 0,
-        "shares": 0
-      },
-      "views": 1,
-      "engagement": 0,
-      "per_1k": 0,
-      "basis": "per_1k"
-    },
-    {
-      "at": "2026-08-12T02:40:26.674Z",
-      "pillar": "decision",
-      "kind": "bab",
-      "isThread": false,
-      "parts": 1,
-      "text": "Before: you post daily, refresh likes, feel busy, grow nothing.\n\nAfter: you post less, move one number a week, and it compounds.\n\nThe bridge is a diagnosis — stop guessing which lever, find the constraint, pull only that.",
-      "accounts": [
-        "markusreidgt"
-      ],
-      "permalink": "https://www.threads.com/@markusreidgt/post/Db7HM1sGx3M",
-      "metrics": {
-        "views": 3,
-        "likes": 0,
-        "replies": 0,
-        "reposts": 0,
-        "quotes": 0,
-        "shares": 0
-      },
-      "views": 3,
-      "engagement": 0,
-      "per_1k": 0,
-      "basis": "per_1k"
-    },
-    {
-      "at": "2026-08-11T21:00:14.090Z",
-      "pillar": "bi",
-      "kind": "myth",
-      "isThread": false,
-      "parts": 1,
-      "text": "“We need more traffic.”\n\nAlmost never true.\n\nMost businesses leak the traffic they already have. A 2% → 4% conversion bump doubles sales with zero new visitors. Find the leak before you buy the water.",
-      "accounts": [
-        "markusreidgt"
-      ],
-      "permalink": "https://www.threads.com/@markusreidgt/post/Db6gRENoPMk",
-      "metrics": {
-        "views": 4,
-        "likes": 0,
-        "replies": 0,
-        "reposts": 0,
-        "quotes": 0,
-        "shares": 0
-      },
-      "views": 4,
-      "engagement": 0,
-      "per_1k": 0,
-      "basis": "per_1k"
-    },
-    {
-      "at": "2026-08-11T19:16:37.793Z",
-      "pillar": "systems",
-      "kind": "playbook",
-      "isThread": false,
-      "parts": 1,
-      "text": "Turn a flat account around in 3 moves:\n\n1. Cut every first line that doesn’t stop the scroll.\n2. Post one idea three ways; keep the winner.\n3. Send all attention to ONE offer.\n\nFocus beats volume.",
-      "accounts": [
-        "markusreidgt"
-      ],
-      "permalink": "https://www.threads.com/@markusreidgt/post/Db6UaNkAdSQ",
-      "metrics": {
-        "views": 3,
-        "likes": 0,
-        "replies": 0,
-        "reposts": 0,
-        "quotes": 0,
-        "shares": 0
-      },
-      "views": 3,
-      "engagement": 0,
-      "per_1k": 0,
-      "basis": "per_1k"
-    },
-    {
-      "at": "2026-08-10T22:53:26.485Z",
-      "pillar": "bi",
-      "kind": "myth",
-      "isThread": false,
-      "parts": 1,
-      "text": "“Brand awareness will fix it.”\n\nRarely.\n\nPeople don’t buy because they’ve heard of you. They buy because the offer is clear and the timing is right. Clarity outsells awareness every time.",
-      "accounts": [
-        "markusreidgt"
-      ],
-      "permalink": "https://www.threads.com/@markusreidgt/post/Db4IbZbEQmv",
-      "metrics": {
-        "views": 17,
-        "likes": 0,
-        "replies": 0,
-        "reposts": 0,
-        "quotes": 0,
-        "shares": 0
-      },
-      "views": 17,
-      "engagement": 0,
-      "per_1k": 0,
-      "basis": "per_1k"
-    },
-    {
-      "at": "2026-08-10T20:57:53.271Z",
-      "pillar": "constraint",
-      "kind": "aphorism",
-      "isThread": false,
-      "parts": 1,
-      "text": "More content can’t out-run a weak offer.",
-      "accounts": [
-        "markusreidgt"
-      ],
-      "permalink": "https://www.threads.com/@markusreidgt/post/Db37NBdoC9v",
-      "metrics": {
-        "views": 316,
-        "likes": 0,
-        "replies": 0,
-        "reposts": 0,
-        "quotes": 0,
-        "shares": 0
-      },
-      "views": 316,
-      "engagement": 0,
-      "per_1k": 0,
-      "basis": "per_1k"
-    },
-    {
-      "at": "2026-08-10T15:13:34.636Z",
-      "pillar": "systems",
-      "kind": "framework",
-      "isThread": false,
-      "parts": 1,
-      "text": "The move most people skip: retention-first growth.\n\nPlug the leak before you scale the pour. Acquisition on top of churn is a bucket with holes.\n\nDo this before you touch anything else.",
-      "accounts": [
-        "markusreidgt"
-      ],
-      "permalink": "https://www.threads.com/@markusreidgt/post/Db3TzN5IIjg",
-      "metrics": {
-        "views": 13,
-        "likes": 0,
-        "replies": 0,
-        "reposts": 0,
-        "quotes": 0,
-        "shares": 0
-      },
-      "views": 13,
-      "engagement": 0,
-      "per_1k": 0,
-      "basis": "per_1k"
-    },
-    {
-      "at": "2026-08-09T23:28:09.592Z",
-      "pillar": "bi",
-      "kind": "list",
-      "isThread": false,
-      "parts": 1,
-      "text": "3 growth truths nobody posts:\n\n1. More content can’t fix a weak offer.\n2. Retention is cheaper than acquisition. Every time.\n3. The metric you avoid is usually the constraint.\n\nSave it.",
-      "accounts": [
-        "markusreidgt"
-      ],
-      "permalink": "https://www.threads.com/@markusreidgt/post/Db1nmwjid51",
-      "metrics": {
-        "views": 48,
-        "likes": 0,
-        "replies": 0,
-        "reposts": 0,
-        "quotes": 0,
-        "shares": 0
-      },
-      "views": 48,
-      "engagement": 0,
-      "per_1k": 0,
-      "basis": "per_1k"
-    },
-    {
-      "at": "2026-08-09T19:30:44.662Z",
-      "pillar": "systems",
-      "kind": "value_cta",
-      "isThread": false,
-      "parts": 1,
-      "text": "Offer before audience:\n\nA clear offer to 100 people beats a clever brand to 10,000. Nail what you sell before who sees it.\n\nSave this. Follow for the rest of the system.",
-      "accounts": [
-        "markusreidgt"
-      ],
-      "permalink": "https://www.threads.com/@markusreidgt/post/Db1Mb3wCWOY",
-      "metrics": {
-        "views": 22,
-        "likes": 0,
-        "replies": 0,
-        "reposts": 0,
-        "quotes": 0,
-        "shares": 0
-      },
-      "views": 22,
-      "engagement": 0,
-      "per_1k": 0,
-      "basis": "per_1k"
-    },
-    {
-      "at": "2026-08-09T15:27:55.931Z",
-      "pillar": "bi",
-      "kind": "myth",
-      "isThread": false,
-      "parts": 1,
-      "text": "“The answer is always more content.”\n\nWrong.\n\nMore of a post nobody stops for is just more zero. The lever isn’t volume — it’s the hook and the spread. Fix what makes people stop, then scale it.",
-      "accounts": [
-        "markusreidgt"
-      ],
-      "permalink": "https://www.threads.com/@markusreidgt/post/Db0wpeum9m0",
-      "metrics": {
-        "views": 14,
-        "likes": 0,
-        "replies": 0,
-        "reposts": 0,
-        "quotes": 0,
-        "shares": 0
-      },
-      "views": 14,
-      "engagement": 0,
-      "per_1k": 0,
-      "basis": "per_1k"
-    },
-    {
-      "at": "2026-08-08T19:26:15.654Z",
-      "pillar": "constraint",
-      "kind": "aphorism",
-      "isThread": false,
-      "parts": 1,
-      "text": "A rebrand is what companies do instead of fixing their positioning.",
-      "accounts": [
-        "markusreidgt"
-      ],
-      "permalink": "https://www.threads.com/@markusreidgt/post/DbynIL7F7d5",
-      "metrics": {
-        "views": 249,
-        "likes": 0,
-        "replies": 0,
-        "reposts": 0,
-        "quotes": 0,
-        "shares": 0
-      },
-      "views": 249,
-      "engagement": 0,
-      "per_1k": 0,
-      "basis": "per_1k"
-    },
-    {
-      "at": "2026-08-08T15:26:27.466Z",
-      "pillar": "decision",
-      "kind": "aida",
-      "isThread": false,
-      "parts": 1,
-      "text": "Your funnel has one weakest number. (Attention)\n\nEverything you’re doing to “grow” that isn’t moving it is noise. (Interest)\n\nFix that one number and the whole thing lifts — same traffic, same spend. (Desire)\n\nMap it today. Circle the lowes",
-      "accounts": [
-        "markusreidgt"
-      ],
-      "permalink": "https://www.threads.com/@markusreidgt/post/DbyLryxFtC0",
-      "metrics": {
-        "views": 6,
-        "likes": 0,
-        "replies": 0,
-        "reposts": 0,
-        "quotes": 0,
-        "shares": 0
-      },
-      "views": 6,
-      "engagement": 0,
-      "per_1k": 0,
-      "basis": "per_1k"
-    },
-    {
-      "at": "2026-08-07T23:30:52.483Z",
-      "pillar": "solution",
-      "kind": "offer",
-      "isThread": false,
-      "parts": 1,
-      "text": "Most “growth” advice is a pile of tactics with no diagnosis.\n\n“Sales are slow”? The real issue is an offer problem — and you can’t fix what you haven’t named.\n\nThe System names it, then fixes it. Want the 10-minute diagnosis as a done-for-y",
-      "accounts": [
-        "markusreidgt"
-      ],
-      "permalink": "https://www.threads.com/@markusreidgt/post/DbweU6fm12x",
-      "metrics": {
-        "views": 4,
-        "likes": 0,
-        "replies": 0,
-        "reposts": 0,
-        "quotes": 0,
-        "shares": 0
-      },
-      "views": 4,
-      "engagement": 0,
-      "per_1k": 0,
-      "basis": "per_1k"
-    },
-    {
-      "at": "2026-08-07T19:51:53.597Z",
-      "pillar": "playbook",
-      "kind": "howto",
-      "isThread": false,
-      "parts": 1,
-      "text": "How to grow without posting more:\n\n1. Find the funnel stage with the biggest drop.\n2. Fix only that.\n3. Watch the same traffic convert harder.\n\nMore reach can’t fix a leak.",
-      "accounts": [
-        "markusreidgt"
-      ],
-      "permalink": "https://www.threads.com/@markusreidgt/post/DbwFRCxCRrg",
-      "metrics": {
-        "views": 48,
-        "likes": 0,
-        "replies": 0,
-        "reposts": 0,
-        "quotes": 0,
-        "shares": 0
-      },
-      "views": 48,
-      "engagement": 0,
-      "per_1k": 0,
-      "basis": "per_1k"
-    },
-    {
-      "at": "2026-08-07T15:53:28.300Z",
-      "pillar": "systems",
-      "kind": "value_cta",
-      "isThread": false,
-      "parts": 1,
-      "text": "Retention-first growth:\n\nPlug the leak before you scale the pour. Acquisition on top of churn is a bucket with holes.\n\nI post the growth playbook in plain English. Follow along.",
-      "accounts": [
-        "markusreidgt"
-      ],
-      "permalink": "https://www.threads.com/@markusreidgt/post/Dbvp-xaFv4h",
-      "metrics": {
-        "views": 11,
-        "likes": 0,
-        "replies": 0,
-        "reposts": 0,
-        "quotes": 0,
-        "shares": 0
-      },
-      "views": 11,
-      "engagement": 0,
-      "per_1k": 0,
-      "basis": "per_1k"
-    },
-    {
-      "at": "2026-08-07T00:39:29.013Z",
-      "pillar": "systems",
-      "kind": "framework",
-      "isThread": false,
-      "parts": 1,
-      "text": "The move most people skip: funnel math.\n\nYou don’t have a traffic problem or a sales problem. You have one number that’s lowest. Move that number.\n\nDo this before you touch anything else.",
-      "accounts": [
-        "markusreidgt"
-      ],
-      "permalink": "https://www.threads.com/@markusreidgt/post/DbuBYf7FrTF",
-      "metrics": {
-        "views": 15,
-        "likes": 0,
-        "replies": 0,
-        "reposts": 0,
-        "quotes": 0,
-        "shares": 0
-      },
-      "views": 15,
-      "engagement": 0,
-      "per_1k": 0,
-      "basis": "per_1k"
-    },
-    {
-      "at": "2026-08-06T23:57:40.288Z",
-      "pillar": "solution",
-      "kind": "offer",
-      "isThread": false,
-      "parts": 1,
-      "text": "The 10-minute constraint diagnosis, in 3 steps:\n\n1. Map your funnel.\n2. Find the biggest drop.\n3. Fix only that this week.\n\nStop guessing. The System names your #1 constraint and fixes it → hustler95.gumroad.com/l/acxcvh",
-      "accounts": [
-        "markusreidgt"
-      ],
-      "permalink": "https://www.threads.com/@markusreidgt/post/Dbt8mTAlo0F",
-      "metrics": {
-        "views": 8,
-        "likes": 0,
-        "replies": 0,
-        "reposts": 0,
-        "quotes": 0,
-        "shares": 0
-      },
-      "views": 8,
-      "engagement": 0,
-      "per_1k": 0,
-      "basis": "per_1k"
-    },
-    {
-      "at": "2026-08-06T01:17:29.736Z",
-      "pillar": "constraint",
-      "kind": "playbook",
-      "isThread": false,
-      "parts": 1,
-      "text": "Pricing is the fastest lever you have.\n\nNo new leads. No new headcount.\nA 10% price increase drops almost straight to margin.\n\nMost businesses are underpriced, because they never actually tested it.",
-      "accounts": [
-        "markusreidgt"
-      ],
-      "permalink": "https://www.threads.com/@markusreidgt/post/Dbrg8B4mOaB",
-      "metrics": {
-        "views": 41,
-        "likes": 0,
-        "replies": 0,
-        "reposts": 0,
-        "quotes": 0,
-        "shares": 0
-      },
-      "views": 41,
-      "engagement": 0,
-      "per_1k": 0,
-      "basis": "per_1k"
-    },
-    {
-      "at": "2026-08-05T20:24:23.678Z",
-      "pillar": "constraint",
-      "kind": "aphorism",
-      "isThread": false,
-      "parts": 1,
-      "text": "Revenue problems are usually symptoms.\nConstraints are the disease.",
-      "accounts": [
-        "markusreidgt"
-      ],
-      "permalink": "https://www.threads.com/@markusreidgt/post/Dbq_ZV4GWwG",
-      "metrics": {
-        "views": 200,
-        "likes": 0,
-        "replies": 0,
-        "reposts": 0,
-        "quotes": 0,
-        "shares": 0
-      },
-      "views": 200,
-      "engagement": 0,
-      "per_1k": 0,
-      "basis": "per_1k"
-    },
-    {
-      "at": "2026-08-05T16:39:22.336Z",
-      "pillar": "constraint",
-      "kind": "systems",
-      "isThread": false,
-      "parts": 1,
-      "text": "Every company has one constraint that limits everything else.\n\nRight now it's usually one of:\n• Retention\n• Cash flow\n• Sales conversion\n• Delivery capacity\n\nFind that one first. Everything downstream gets easier.",
-      "accounts": [
-        "markusreidgt"
-      ],
-      "permalink": "https://www.threads.com/@markusreidgt/post/DbqlpNMGrf5",
-      "metrics": {
-        "views": 8,
-        "likes": 0,
-        "replies": 0,
-        "reposts": 0,
-        "quotes": 0,
-        "shares": 0
-      },
-      "views": 8,
-      "engagement": 0,
-      "per_1k": 0,
-      "basis": "per_1k"
-    },
-    {
-      "at": "2026-08-04T23:59:54.640Z",
-      "pillar": "constraint",
-      "kind": "systems",
-      "isThread": false,
-      "parts": 1,
-      "text": "Growth has an order of operations:\n\n1. Find the one constraint limiting everything else\n2. Fix it until it's no longer the limit\n3. Re-diagnose, the constraint has moved\n\nMost businesses skip step 1 and wonder why effort doesn't turn into g",
-      "accounts": [
-        "markusreidgt"
-      ],
-      "permalink": "https://www.threads.com/@markusreidgt/post/DbozQ8lDoe8",
-      "metrics": {
-        "views": 10,
-        "likes": 0,
-        "replies": 0,
-        "reposts": 0,
-        "quotes": 0,
-        "shares": 0
-      },
-      "views": 10,
-      "engagement": 0,
-      "per_1k": 0,
-      "basis": "per_1k"
-    },
-    {
-      "at": "2026-08-04T20:22:00.427Z",
-      "pillar": "mistake",
-      "kind": "aphorism",
-      "isThread": false,
-      "parts": 1,
-      "text": "Most owners think it's a lead problem.\nUsually it's a follow-up problem.\n\nThe symptom is where it hurts. The constraint is where you fix it.",
-      "accounts": [
-        "markusreidgt"
-      ],
-      "permalink": "https://www.threads.com/@markusreidgt/post/DboaU9hmGMB",
-      "metrics": {
-        "views": 33,
-        "likes": 0,
-        "replies": 0,
-        "reposts": 0,
-        "quotes": 0,
-        "shares": 0
-      },
-      "views": 33,
-      "engagement": 0,
-      "per_1k": 0,
+      "rateReliable": true,
       "basis": "per_1k"
     },
     {
@@ -1443,30 +585,982 @@
       "views": 29,
       "engagement": 0,
       "per_1k": 0,
+      "rateReliable": true,
       "basis": "per_1k"
     },
     {
-      "at": "2026-08-11T13:37:09.992Z",
-      "pillar": "constraint",
-      "kind": "pas",
+      "at": "2026-08-04T20:22:00.427Z",
+      "pillar": "mistake",
+      "kind": "aphorism",
       "isThread": false,
       "parts": 1,
-      "text": "“Our content isn’t working.”\n\nNo — that’s the symptom.\n\nThe real problem is a distribution problem. And more effort on the wrong lever just makes the drop steeper.\n\nFix it at the source: the post isn’t weak, the spread is.",
+      "text": "Most owners think it's a lead problem.\nUsually it's a follow-up problem.\n\nThe symptom is where it hurts. The constraint is where you fix it.",
       "accounts": [
         "markusreidgt"
       ],
-      "permalink": "https://www.threads.com/@markusreidgt/post/Db5tj9LlKCK",
+      "permalink": "https://www.threads.com/@markusreidgt/post/DboaU9hmGMB",
       "metrics": {
-        "views": 0,
+        "views": 33,
         "likes": 0,
         "replies": 0,
         "reposts": 0,
         "quotes": 0,
         "shares": 0
       },
-      "views": 0,
+      "views": 33,
       "engagement": 0,
-      "per_1k": null,
+      "per_1k": 0,
+      "rateReliable": true,
+      "basis": "per_1k"
+    },
+    {
+      "at": "2026-08-05T20:24:23.678Z",
+      "pillar": "constraint",
+      "kind": "aphorism",
+      "isThread": false,
+      "parts": 1,
+      "text": "Revenue problems are usually symptoms.\nConstraints are the disease.",
+      "accounts": [
+        "markusreidgt"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/Dbq_ZV4GWwG",
+      "metrics": {
+        "views": 200,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 200,
+      "engagement": 0,
+      "per_1k": 0,
+      "rateReliable": true,
+      "basis": "per_1k"
+    },
+    {
+      "at": "2026-08-06T01:17:29.736Z",
+      "pillar": "constraint",
+      "kind": "playbook",
+      "isThread": false,
+      "parts": 1,
+      "text": "Pricing is the fastest lever you have.\n\nNo new leads. No new headcount.\nA 10% price increase drops almost straight to margin.\n\nMost businesses are underpriced, because they never actually tested it.",
+      "accounts": [
+        "markusreidgt"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/Dbrg8B4mOaB",
+      "metrics": {
+        "views": 41,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 41,
+      "engagement": 0,
+      "per_1k": 0,
+      "rateReliable": true,
+      "basis": "per_1k"
+    },
+    {
+      "at": "2026-08-07T19:51:53.597Z",
+      "pillar": "playbook",
+      "kind": "howto",
+      "isThread": false,
+      "parts": 1,
+      "text": "How to grow without posting more:\n\n1. Find the funnel stage with the biggest drop.\n2. Fix only that.\n3. Watch the same traffic convert harder.\n\nMore reach can’t fix a leak.",
+      "accounts": [
+        "markusreidgt"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/DbwFRCxCRrg",
+      "metrics": {
+        "views": 48,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 48,
+      "engagement": 0,
+      "per_1k": 0,
+      "rateReliable": true,
+      "basis": "per_1k"
+    },
+    {
+      "at": "2026-08-08T19:26:15.654Z",
+      "pillar": "constraint",
+      "kind": "aphorism",
+      "isThread": false,
+      "parts": 1,
+      "text": "A rebrand is what companies do instead of fixing their positioning.",
+      "accounts": [
+        "markusreidgt"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/DbynIL7F7d5",
+      "metrics": {
+        "views": 249,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 249,
+      "engagement": 0,
+      "per_1k": 0,
+      "rateReliable": true,
+      "basis": "per_1k"
+    },
+    {
+      "at": "2026-08-09T23:28:09.592Z",
+      "pillar": "bi",
+      "kind": "list",
+      "isThread": false,
+      "parts": 1,
+      "text": "3 growth truths nobody posts:\n\n1. More content can’t fix a weak offer.\n2. Retention is cheaper than acquisition. Every time.\n3. The metric you avoid is usually the constraint.\n\nSave it.",
+      "accounts": [
+        "markusreidgt"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/Db1nmwjid51",
+      "metrics": {
+        "views": 48,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 48,
+      "engagement": 0,
+      "per_1k": 0,
+      "rateReliable": true,
+      "basis": "per_1k"
+    },
+    {
+      "at": "2026-08-10T20:57:53.271Z",
+      "pillar": "constraint",
+      "kind": "aphorism",
+      "isThread": false,
+      "parts": 1,
+      "text": "More content can’t out-run a weak offer.",
+      "accounts": [
+        "markusreidgt"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/Db37NBdoC9v",
+      "metrics": {
+        "views": 316,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 316,
+      "engagement": 0,
+      "per_1k": 0,
+      "rateReliable": true,
+      "basis": "per_1k"
+    },
+    {
+      "at": "2026-08-13T22:58:34.167Z",
+      "pillar": "bi",
+      "kind": "avoid",
+      "isThread": false,
+      "parts": 1,
+      "text": "The number you have not looked at in a month is your constraint.\n\nNot because avoidance is magic. Because you already know it is bad, and looking would mean owning it.\n\nOpen that one first. The discomfort is the signal.",
+      "accounts": [
+        "markusreidgt"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/Db_3Zg-CVLM",
+      "metrics": {
+        "views": 25,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 25,
+      "engagement": 0,
+      "per_1k": 0,
+      "rateReliable": true,
+      "basis": "per_1k"
+    },
+    {
+      "at": "2026-08-15T04:05:52.321Z",
+      "pillar": "early",
+      "kind": "real",
+      "isThread": false,
+      "parts": 1,
+      "text": "Something I wish someone had said earlier:\n\nyou don’t need a better idea. You need the same idea, in front of people, for longer than feels reasonable.",
+      "accounts": [
+        "markusreidgt"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/DcC_XLfjn5C",
+      "metrics": {
+        "views": 59,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 59,
+      "engagement": 0,
+      "per_1k": 0,
+      "rateReliable": true,
+      "basis": "per_1k"
+    },
+    {
+      "at": "2026-08-08T23:25:19.238Z",
+      "pillar": "systems",
+      "kind": "thread",
+      "isThread": true,
+      "parts": 5,
+      "text": "Your content isn’t the problem.\n\nYour distribution is.\n\nWhy great posts die and average posts win 👇",
+      "accounts": [
+        "markusreidgt"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/DbzCfFVH-Ph",
+      "metrics": {
+        "views": 15,
+        "likes": 0,
+        "replies": 4,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 15,
+      "engagement": 4,
+      "per_1k": 266.67,
+      "rateReliable": false,
+      "basis": "total"
+    },
+    {
+      "at": "2026-08-10T13:39:04.872Z",
+      "pillar": "authority",
+      "kind": "thread",
+      "isThread": true,
+      "parts": 5,
+      "text": "I turned a dead account around by changing one thing.\n\nNot the topic. Not the frequency.\n\nThe first line 👇",
+      "accounts": [
+        "markusreidgt"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/Db3I_MIEkod",
+      "metrics": {
+        "views": 3,
+        "likes": 0,
+        "replies": 4,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 3,
+      "engagement": 4,
+      "per_1k": 1333.33,
+      "rateReliable": false,
+      "basis": "total"
+    },
+    {
+      "at": "2026-08-11T22:58:51.199Z",
+      "pillar": "product",
+      "kind": "offer",
+      "isThread": false,
+      "parts": 1,
+      "text": "I built a system that finds your #1 growth constraint and hands you the fix.\n\nNot another dashboard of numbers — a diagnosis that tells you the one thing to work on.\n\nSo you stop guessing and move one metric a week. The Growth Hacking Syste",
+      "accounts": [
+        "markusreidgt"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/Db6t14_nHU0",
+      "metrics": {
+        "views": 13,
+        "likes": 2,
+        "replies": 0,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 13,
+      "engagement": 2,
+      "per_1k": 153.85,
+      "rateReliable": false,
+      "basis": "total"
+    },
+    {
+      "at": "2026-08-14T19:09:34.613Z",
+      "pillar": "mistakes",
+      "kind": "ops",
+      "isThread": false,
+      "parts": 1,
+      "text": "Most startups think they have a marketing problem.\n\nMost have an operations problem wearing a marketing costume.\n\nThe leads arrive. Nobody calls back for two days. The quote takes a week. The buyer moves on and it gets logged as \"the ads di",
+      "accounts": [
+        "markusreidgt"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/DcCB_M6Fgbo",
+      "metrics": {
+        "views": 9,
+        "likes": 1,
+        "replies": 0,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 9,
+      "engagement": 1,
+      "per_1k": 111.11,
+      "rateReliable": false,
+      "basis": "total"
+    },
+    {
+      "at": "2026-08-12T20:59:02.934Z",
+      "pillar": "decision",
+      "kind": "callout",
+      "isThread": false,
+      "parts": 1,
+      "text": "If you’re about to spend on ads, stop for 30 seconds.\n\nThe problem usually isn’t effort. It’s aim.\n\n“Our content isn’t working” feels like the issue. It’s a distribution problem.\n\nPoint the same effort at the real constraint and it finally ",
+      "accounts": [
+        "markusreidgt"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/Db9E7WcAYqz",
+      "metrics": {
+        "views": 6,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 1,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 6,
+      "engagement": 1,
+      "per_1k": 166.67,
+      "rateReliable": false,
+      "basis": "total"
+    },
+    {
+      "at": "2026-08-09T19:30:44.662Z",
+      "pillar": "systems",
+      "kind": "value_cta",
+      "isThread": false,
+      "parts": 1,
+      "text": "Offer before audience:\n\nA clear offer to 100 people beats a clever brand to 10,000. Nail what you sell before who sees it.\n\nSave this. Follow for the rest of the system.",
+      "accounts": [
+        "markusreidgt"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/Db1Mb3wCWOY",
+      "metrics": {
+        "views": 22,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 22,
+      "engagement": 0,
+      "per_1k": 0,
+      "rateReliable": false,
+      "basis": "total"
+    },
+    {
+      "at": "2026-08-10T22:53:26.485Z",
+      "pillar": "bi",
+      "kind": "myth",
+      "isThread": false,
+      "parts": 1,
+      "text": "“Brand awareness will fix it.”\n\nRarely.\n\nPeople don’t buy because they’ve heard of you. They buy because the offer is clear and the timing is right. Clarity outsells awareness every time.",
+      "accounts": [
+        "markusreidgt"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/Db4IbZbEQmv",
+      "metrics": {
+        "views": 17,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 17,
+      "engagement": 0,
+      "per_1k": 0,
+      "rateReliable": false,
+      "basis": "total"
+    },
+    {
+      "at": "2026-08-07T00:39:29.013Z",
+      "pillar": "systems",
+      "kind": "framework",
+      "isThread": false,
+      "parts": 1,
+      "text": "The move most people skip: funnel math.\n\nYou don’t have a traffic problem or a sales problem. You have one number that’s lowest. Move that number.\n\nDo this before you touch anything else.",
+      "accounts": [
+        "markusreidgt"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/DbuBYf7FrTF",
+      "metrics": {
+        "views": 15,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 15,
+      "engagement": 0,
+      "per_1k": 0,
+      "rateReliable": false,
+      "basis": "total"
+    },
+    {
+      "at": "2026-08-09T15:27:55.931Z",
+      "pillar": "bi",
+      "kind": "myth",
+      "isThread": false,
+      "parts": 1,
+      "text": "“The answer is always more content.”\n\nWrong.\n\nMore of a post nobody stops for is just more zero. The lever isn’t volume — it’s the hook and the spread. Fix what makes people stop, then scale it.",
+      "accounts": [
+        "markusreidgt"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/Db0wpeum9m0",
+      "metrics": {
+        "views": 14,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 14,
+      "engagement": 0,
+      "per_1k": 0,
+      "rateReliable": false,
+      "basis": "total"
+    },
+    {
+      "at": "2026-08-10T15:13:34.636Z",
+      "pillar": "systems",
+      "kind": "framework",
+      "isThread": false,
+      "parts": 1,
+      "text": "The move most people skip: retention-first growth.\n\nPlug the leak before you scale the pour. Acquisition on top of churn is a bucket with holes.\n\nDo this before you touch anything else.",
+      "accounts": [
+        "markusreidgt"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/Db3TzN5IIjg",
+      "metrics": {
+        "views": 13,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 13,
+      "engagement": 0,
+      "per_1k": 0,
+      "rateReliable": false,
+      "basis": "total"
+    },
+    {
+      "at": "2026-08-07T15:53:28.300Z",
+      "pillar": "systems",
+      "kind": "value_cta",
+      "isThread": false,
+      "parts": 1,
+      "text": "Retention-first growth:\n\nPlug the leak before you scale the pour. Acquisition on top of churn is a bucket with holes.\n\nI post the growth playbook in plain English. Follow along.",
+      "accounts": [
+        "markusreidgt"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/Dbvp-xaFv4h",
+      "metrics": {
+        "views": 11,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 11,
+      "engagement": 0,
+      "per_1k": 0,
+      "rateReliable": false,
+      "basis": "total"
+    },
+    {
+      "at": "2026-08-04T23:59:54.640Z",
+      "pillar": "constraint",
+      "kind": "systems",
+      "isThread": false,
+      "parts": 1,
+      "text": "Growth has an order of operations:\n\n1. Find the one constraint limiting everything else\n2. Fix it until it's no longer the limit\n3. Re-diagnose, the constraint has moved\n\nMost businesses skip step 1 and wonder why effort doesn't turn into g",
+      "accounts": [
+        "markusreidgt"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/DbozQ8lDoe8",
+      "metrics": {
+        "views": 10,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 10,
+      "engagement": 0,
+      "per_1k": 0,
+      "rateReliable": false,
+      "basis": "total"
+    },
+    {
+      "at": "2026-08-05T16:39:22.336Z",
+      "pillar": "constraint",
+      "kind": "systems",
+      "isThread": false,
+      "parts": 1,
+      "text": "Every company has one constraint that limits everything else.\n\nRight now it's usually one of:\n• Retention\n• Cash flow\n• Sales conversion\n• Delivery capacity\n\nFind that one first. Everything downstream gets easier.",
+      "accounts": [
+        "markusreidgt"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/DbqlpNMGrf5",
+      "metrics": {
+        "views": 8,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 8,
+      "engagement": 0,
+      "per_1k": 0,
+      "rateReliable": false,
+      "basis": "total"
+    },
+    {
+      "at": "2026-08-06T23:57:40.288Z",
+      "pillar": "solution",
+      "kind": "offer",
+      "isThread": false,
+      "parts": 1,
+      "text": "The 10-minute constraint diagnosis, in 3 steps:\n\n1. Map your funnel.\n2. Find the biggest drop.\n3. Fix only that this week.\n\nStop guessing. The System names your #1 constraint and fixes it → hustler95.gumroad.com/l/acxcvh",
+      "accounts": [
+        "markusreidgt"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/Dbt8mTAlo0F",
+      "metrics": {
+        "views": 8,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 8,
+      "engagement": 0,
+      "per_1k": 0,
+      "rateReliable": false,
+      "basis": "total"
+    },
+    {
+      "at": "2026-08-12T17:08:54.747Z",
+      "pillar": "constraint",
+      "kind": "reframe",
+      "isThread": false,
+      "parts": 1,
+      "text": "“Churn is killing us” usually isn’t what it looks like.\n\nIt’s an onboarding problem.\n\nPeople don’t leave what they’ve actually activated.",
+      "accounts": [
+        "markusreidgt"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/Db8qlrFFMBn",
+      "metrics": {
+        "views": 7,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 7,
+      "engagement": 0,
+      "per_1k": 0,
+      "rateReliable": false,
+      "basis": "total"
+    },
+    {
+      "at": "2026-08-14T17:07:01.622Z",
+      "pillar": "systems",
+      "kind": "value_cta",
+      "isThread": false,
+      "parts": 1,
+      "text": "The one-metric week:\n\nPick the single metric your constraint lives in. Move only that for 7 days. Ignore the rest.\n\nMore of these on @markusreidgt.",
+      "accounts": [
+        "markusreidgt"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/DcBz9pBoLnm",
+      "metrics": {
+        "views": 7,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 7,
+      "engagement": 0,
+      "per_1k": 0,
+      "rateReliable": false,
+      "basis": "total"
+    },
+    {
+      "at": "2026-08-14T20:41:49.840Z",
+      "pillar": "decision",
+      "kind": "price_it",
+      "isThread": false,
+      "parts": 1,
+      "text": "Put a number on the gap or nothing happens.\n\n\"We should improve follow-up\" is a shrug in a meeting.\n\n\"Follow-up costs us about $18k a month\" is a decision with a deadline.\n\nSame fact. Only one of them gets scheduled.",
+      "accounts": [
+        "markusreidgt"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/DcCMi6WGsmZ",
+      "metrics": {
+        "views": 7,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 7,
+      "engagement": 0,
+      "per_1k": 0,
+      "rateReliable": false,
+      "basis": "total"
+    },
+    {
+      "at": "2026-08-08T15:26:27.466Z",
+      "pillar": "decision",
+      "kind": "aida",
+      "isThread": false,
+      "parts": 1,
+      "text": "Your funnel has one weakest number. (Attention)\n\nEverything you’re doing to “grow” that isn’t moving it is noise. (Interest)\n\nFix that one number and the whole thing lifts — same traffic, same spend. (Desire)\n\nMap it today. Circle the lowes",
+      "accounts": [
+        "markusreidgt"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/DbyLryxFtC0",
+      "metrics": {
+        "views": 6,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 6,
+      "engagement": 0,
+      "per_1k": 0,
+      "rateReliable": false,
+      "basis": "total"
+    },
+    {
+      "at": "2026-08-13T15:11:32.869Z",
+      "pillar": "playbook",
+      "kind": "howto",
+      "isThread": false,
+      "parts": 1,
+      "text": "How to raise prices without losing customers:\n\n1. Add one outcome they actually want.\n2. Name it on the page.\n3. Charge for the outcome, not the hours.\n\nPeople pay for the result, not your time.",
+      "accounts": [
+        "markusreidgt"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/Db_B8_Zlbe-",
+      "metrics": {
+        "views": 6,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 6,
+      "engagement": 0,
+      "per_1k": 0,
+      "rateReliable": false,
+      "basis": "total"
+    },
+    {
+      "at": "2026-08-14T15:04:35.446Z",
+      "pillar": "systems",
+      "kind": "loop",
+      "isThread": false,
+      "parts": 1,
+      "text": "The whole operating system, three steps:\n\n1. Name the constraint.\n2. Move only that number.\n3. Verify it moved.\n\nStep three is the one everyone skips, which is why the same fix gets \"tried\" four times a year and nobody can say whether it wo",
+      "accounts": [
+        "markusreidgt"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/DcBl85rIMUH",
+      "metrics": {
+        "views": 6,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 6,
+      "engagement": 0,
+      "per_1k": 0,
+      "rateReliable": false,
+      "basis": "total"
+    },
+    {
+      "at": "2026-08-12T22:56:42.698Z",
+      "pillar": "decision",
+      "kind": "callout",
+      "isThread": false,
+      "parts": 1,
+      "text": "If your traffic is fine but sales aren’t, this is for you.\n\nThe problem usually isn’t effort. It’s aim.\n\n“We need to post more” feels like the issue. It’s a hook problem.\n\nPoint the same effort at the real constraint and it finally moves.",
+      "accounts": [
+        "markusreidgt"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/Db9SZQOiNVL",
+      "metrics": {
+        "views": 5,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 5,
+      "engagement": 0,
+      "per_1k": 0,
+      "rateReliable": false,
+      "basis": "total"
+    },
+    {
+      "at": "2026-08-07T23:30:52.483Z",
+      "pillar": "solution",
+      "kind": "offer",
+      "isThread": false,
+      "parts": 1,
+      "text": "Most “growth” advice is a pile of tactics with no diagnosis.\n\n“Sales are slow”? The real issue is an offer problem — and you can’t fix what you haven’t named.\n\nThe System names it, then fixes it. Want the 10-minute diagnosis as a done-for-y",
+      "accounts": [
+        "markusreidgt"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/DbweU6fm12x",
+      "metrics": {
+        "views": 4,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 4,
+      "engagement": 0,
+      "per_1k": 0,
+      "rateReliable": false,
+      "basis": "total"
+    },
+    {
+      "at": "2026-08-11T21:00:14.090Z",
+      "pillar": "bi",
+      "kind": "myth",
+      "isThread": false,
+      "parts": 1,
+      "text": "“We need more traffic.”\n\nAlmost never true.\n\nMost businesses leak the traffic they already have. A 2% → 4% conversion bump doubles sales with zero new visitors. Find the leak before you buy the water.",
+      "accounts": [
+        "markusreidgt"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/Db6gRENoPMk",
+      "metrics": {
+        "views": 4,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 4,
+      "engagement": 0,
+      "per_1k": 0,
+      "rateReliable": false,
+      "basis": "total"
+    },
+    {
+      "at": "2026-08-14T22:36:30.775Z",
+      "pillar": "constraint",
+      "kind": "pas",
+      "isThread": false,
+      "parts": 1,
+      "text": "“We need to post more.”\n\nNo — that’s the symptom.\n\nThe real problem is a hook problem. And more effort on the wrong lever just makes the drop steeper.\n\nFix it at the source: ten posts nobody stops for is still zero.",
+      "accounts": [
+        "markusreidgt"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/DcCZq1VGj_B",
+      "metrics": {
+        "views": 4,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 4,
+      "engagement": 0,
+      "per_1k": 0,
+      "rateReliable": false,
+      "basis": "total"
+    },
+    {
+      "at": "2026-08-11T19:16:37.793Z",
+      "pillar": "systems",
+      "kind": "playbook",
+      "isThread": false,
+      "parts": 1,
+      "text": "Turn a flat account around in 3 moves:\n\n1. Cut every first line that doesn’t stop the scroll.\n2. Post one idea three ways; keep the winner.\n3. Send all attention to ONE offer.\n\nFocus beats volume.",
+      "accounts": [
+        "markusreidgt"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/Db6UaNkAdSQ",
+      "metrics": {
+        "views": 3,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 3,
+      "engagement": 0,
+      "per_1k": 0,
+      "rateReliable": false,
+      "basis": "total"
+    },
+    {
+      "at": "2026-08-12T02:40:26.674Z",
+      "pillar": "decision",
+      "kind": "bab",
+      "isThread": false,
+      "parts": 1,
+      "text": "Before: you post daily, refresh likes, feel busy, grow nothing.\n\nAfter: you post less, move one number a week, and it compounds.\n\nThe bridge is a diagnosis — stop guessing which lever, find the constraint, pull only that.",
+      "accounts": [
+        "markusreidgt"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/Db7HM1sGx3M",
+      "metrics": {
+        "views": 3,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 3,
+      "engagement": 0,
+      "per_1k": 0,
+      "rateReliable": false,
+      "basis": "total"
+    },
+    {
+      "at": "2026-08-12T19:16:36.482Z",
+      "pillar": "constraint",
+      "kind": "pas",
+      "isThread": false,
+      "parts": 1,
+      "text": "“We need a rebrand.”\n\nNo — that’s the symptom.\n\nThe real problem is a positioning problem. And more effort on the wrong lever just makes the drop steeper.\n\nFix it at the source: people don’t buy prettier, they buy clearer.",
+      "accounts": [
+        "markusreidgt"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/Db85M-koGfn",
+      "metrics": {
+        "views": 3,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 3,
+      "engagement": 0,
+      "per_1k": 0,
+      "rateReliable": false,
+      "basis": "total"
+    },
+    {
+      "at": "2026-08-14T13:36:11.977Z",
+      "pillar": "systems",
+      "kind": "review",
+      "isThread": false,
+      "parts": 1,
+      "text": "A useful monthly review fits on one page:\n\n• the constraint\n• what we changed\n• what moved\n• next constraint\n\nIf it takes twelve slides, nobody reads it and no one is accountable to it. Length is how teams hide from the second bullet.",
+      "accounts": [
+        "markusreidgt"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/DcBb1fUlue2",
+      "metrics": {
+        "views": 3,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 3,
+      "engagement": 0,
+      "per_1k": 0,
+      "rateReliable": false,
+      "basis": "total"
+    },
+    {
+      "at": "2026-08-12T13:40:39.951Z",
+      "pillar": "decision",
+      "kind": "callout",
+      "isThread": false,
+      "parts": 1,
+      "text": "If your traffic is fine but sales aren’t, this is for you.\n\nThe problem usually isn’t effort. It’s aim.\n\n“Churn is killing us” feels like the issue. It’s an onboarding problem.\n\nPoint the same effort at the real constraint and it finally mo",
+      "accounts": [
+        "markusreidgt"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/Db8Swc2m_ZU",
+      "metrics": {
+        "views": 1,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 1,
+      "engagement": 0,
+      "per_1k": 0,
+      "rateReliable": false,
+      "basis": "total"
+    },
+    {
+      "at": "2026-08-14T02:40:50.348Z",
+      "pillar": "solution",
+      "kind": "offer",
+      "isThread": false,
+      "parts": 1,
+      "text": "Most “growth” advice is a pile of tactics with no diagnosis.\n\n“We need to post more”? The real issue is a hook problem — and you can’t fix what you haven’t named.\n\nThe System names it, then fixes it. The Growth Hacking System runs this for ",
+      "accounts": [
+        "markusreidgt"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/DcAQ1gOli3G",
+      "metrics": {
+        "views": 1,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 1,
+      "engagement": 0,
+      "per_1k": 0,
+      "rateReliable": false,
       "basis": "total"
     },
     {
@@ -1491,6 +1585,32 @@
       "views": 0,
       "engagement": 0,
       "per_1k": null,
+      "rateReliable": false,
+      "basis": "total"
+    },
+    {
+      "at": "2026-08-11T13:37:09.992Z",
+      "pillar": "constraint",
+      "kind": "pas",
+      "isThread": false,
+      "parts": 1,
+      "text": "“Our content isn’t working.”\n\nNo — that’s the symptom.\n\nThe real problem is a distribution problem. And more effort on the wrong lever just makes the drop steeper.\n\nFix it at the source: the post isn’t weak, the spread is.",
+      "accounts": [
+        "markusreidgt"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/Db5tj9LlKCK",
+      "metrics": {
+        "views": 0,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 0,
+      "engagement": 0,
+      "per_1k": null,
+      "rateReliable": false,
       "basis": "total"
     }
   ],
@@ -1500,48 +1620,40 @@
       "posts": 2,
       "engagement": 8,
       "avg_engagement": 4,
-      "views": 49,
-      "avg_per_1k": 710.14
-    },
-    {
-      "key": "product",
-      "posts": 2,
-      "engagement": 2,
-      "avg_engagement": 1,
-      "views": 13,
-      "avg_per_1k": 153.85
-    },
-    {
-      "key": "mistakes",
-      "posts": 1,
-      "engagement": 1,
-      "avg_engagement": 1,
-      "views": 9,
-      "avg_per_1k": 111.11
+      "views": 46,
+      "avg_per_1k": 86.96
     },
     {
       "key": "systems",
       "posts": 13,
       "engagement": 20,
       "avg_engagement": 1.54,
-      "views": 1774,
-      "avg_per_1k": 36.2
+      "views": 1679,
+      "avg_per_1k": 50.97
     },
     {
-      "key": "decision",
-      "posts": 7,
-      "engagement": 2,
-      "avg_engagement": 0.29,
-      "views": 548,
-      "avg_per_1k": 24.08
+      "key": "playbook",
+      "posts": 3,
+      "engagement": 5,
+      "avg_engagement": 1.67,
+      "views": 211,
+      "avg_per_1k": 15.34
     },
     {
       "key": "constraint",
       "posts": 15,
       "engagement": 10,
       "avg_engagement": 0.67,
-      "views": 3399,
-      "avg_per_1k": 2.07
+      "views": 3367,
+      "avg_per_1k": 3.21
+    },
+    {
+      "key": "decision",
+      "posts": 7,
+      "engagement": 2,
+      "avg_engagement": 0.29,
+      "views": 520,
+      "avg_per_1k": 1.92
     },
     {
       "key": "mistake",
@@ -1552,62 +1664,54 @@
       "avg_per_1k": 0
     },
     {
-      "key": "solution",
-      "posts": 3,
-      "engagement": 0,
-      "avg_engagement": 0,
-      "views": 13,
-      "avg_per_1k": 0
-    },
-    {
-      "key": "playbook",
-      "posts": 2,
-      "engagement": 0,
-      "avg_engagement": 0,
-      "views": 54,
-      "avg_per_1k": 0
-    },
-    {
       "key": "bi",
       "posts": 5,
       "engagement": 0,
       "avg_engagement": 0,
-      "views": 108,
+      "views": 73,
       "avg_per_1k": 0
+    },
+    {
+      "key": "early",
+      "posts": 1,
+      "engagement": 0,
+      "avg_engagement": 0,
+      "views": 59,
+      "avg_per_1k": 0
+    },
+    {
+      "key": "product",
+      "posts": 2,
+      "engagement": 2,
+      "avg_engagement": 1,
+      "views": 0,
+      "avg_per_1k": null
+    },
+    {
+      "key": "mistakes",
+      "posts": 1,
+      "engagement": 1,
+      "avg_engagement": 1,
+      "views": 0,
+      "avg_per_1k": null
+    },
+    {
+      "key": "solution",
+      "posts": 3,
+      "engagement": 0,
+      "avg_engagement": 0,
+      "views": 0,
+      "avg_per_1k": null
     }
   ],
   "by_kind": [
     {
       "key": "thread",
-      "posts": 8,
-      "engagement": 32,
-      "avg_engagement": 4,
-      "views": 2750,
-      "avg_per_1k": 236.85
-    },
-    {
-      "key": "ops",
-      "posts": 1,
-      "engagement": 1,
-      "avg_engagement": 1,
-      "views": 9,
-      "avg_per_1k": 111.11
-    },
-    {
-      "key": "callout",
-      "posts": 3,
-      "engagement": 1,
-      "avg_engagement": 0.33,
-      "views": 12,
-      "avg_per_1k": 55.56
-    },
-    {
-      "key": "offer",
-      "posts": 5,
-      "engagement": 2,
-      "avg_engagement": 0.4,
-      "views": 26,
-      "avg_per_1k": 38.46
+      "posts": 9,
+      "engagement": 37,
+      "avg_engagement": 4.11,
+      "views": 2895,
+      "avg_per_1k": 46.5
     },
     {
       "key": "aphorism",
@@ -1630,8 +1734,8 @@
       "posts": 2,
       "engagement": 1,
       "avg_engagement": 0.5,
-      "views": 564,
-      "avg_per_1k": 0.9
+      "views": 557,
+      "avg_per_1k": 1.8
     },
     {
       "key": "mistake",
@@ -1642,35 +1746,11 @@
       "avg_per_1k": 0
     },
     {
-      "key": "systems",
-      "posts": 2,
-      "engagement": 0,
-      "avg_engagement": 0,
-      "views": 18,
-      "avg_per_1k": 0
-    },
-    {
       "key": "playbook",
       "posts": 2,
       "engagement": 0,
       "avg_engagement": 0,
-      "views": 44,
-      "avg_per_1k": 0
-    },
-    {
-      "key": "framework",
-      "posts": 2,
-      "engagement": 0,
-      "avg_engagement": 0,
-      "views": 28,
-      "avg_per_1k": 0
-    },
-    {
-      "key": "value_cta",
-      "posts": 3,
-      "engagement": 0,
-      "avg_engagement": 0,
-      "views": 40,
+      "views": 41,
       "avg_per_1k": 0
     },
     {
@@ -1678,23 +1758,7 @@
       "posts": 2,
       "engagement": 0,
       "avg_engagement": 0,
-      "views": 54,
-      "avg_per_1k": 0
-    },
-    {
-      "key": "aida",
-      "posts": 1,
-      "engagement": 0,
-      "avg_engagement": 0,
-      "views": 6,
-      "avg_per_1k": 0
-    },
-    {
-      "key": "myth",
-      "posts": 3,
-      "engagement": 0,
-      "avg_engagement": 0,
-      "views": 35,
+      "views": 48,
       "avg_per_1k": 0
     },
     {
@@ -1706,22 +1770,6 @@
       "avg_per_1k": 0
     },
     {
-      "key": "pas",
-      "posts": 3,
-      "engagement": 0,
-      "avg_engagement": 0,
-      "views": 7,
-      "avg_per_1k": 0
-    },
-    {
-      "key": "bab",
-      "posts": 1,
-      "engagement": 0,
-      "avg_engagement": 0,
-      "views": 3,
-      "avg_per_1k": 0
-    },
-    {
       "key": "avoid",
       "posts": 1,
       "engagement": 0,
@@ -1730,51 +1778,139 @@
       "avg_per_1k": 0
     },
     {
+      "key": "real",
+      "posts": 1,
+      "engagement": 0,
+      "avg_engagement": 0,
+      "views": 59,
+      "avg_per_1k": 0
+    },
+    {
+      "key": "ops",
+      "posts": 1,
+      "engagement": 1,
+      "avg_engagement": 1,
+      "views": 0,
+      "avg_per_1k": null
+    },
+    {
+      "key": "offer",
+      "posts": 5,
+      "engagement": 2,
+      "avg_engagement": 0.4,
+      "views": 0,
+      "avg_per_1k": null
+    },
+    {
+      "key": "callout",
+      "posts": 3,
+      "engagement": 1,
+      "avg_engagement": 0.33,
+      "views": 0,
+      "avg_per_1k": null
+    },
+    {
+      "key": "systems",
+      "posts": 2,
+      "engagement": 0,
+      "avg_engagement": 0,
+      "views": 0,
+      "avg_per_1k": null
+    },
+    {
+      "key": "framework",
+      "posts": 2,
+      "engagement": 0,
+      "avg_engagement": 0,
+      "views": 0,
+      "avg_per_1k": null
+    },
+    {
+      "key": "value_cta",
+      "posts": 3,
+      "engagement": 0,
+      "avg_engagement": 0,
+      "views": 0,
+      "avg_per_1k": null
+    },
+    {
+      "key": "aida",
+      "posts": 1,
+      "engagement": 0,
+      "avg_engagement": 0,
+      "views": 0,
+      "avg_per_1k": null
+    },
+    {
+      "key": "myth",
+      "posts": 3,
+      "engagement": 0,
+      "avg_engagement": 0,
+      "views": 0,
+      "avg_per_1k": null
+    },
+    {
+      "key": "pas",
+      "posts": 3,
+      "engagement": 0,
+      "avg_engagement": 0,
+      "views": 0,
+      "avg_per_1k": null
+    },
+    {
+      "key": "bab",
+      "posts": 1,
+      "engagement": 0,
+      "avg_engagement": 0,
+      "views": 0,
+      "avg_per_1k": null
+    },
+    {
       "key": "review",
       "posts": 1,
       "engagement": 0,
       "avg_engagement": 0,
-      "views": 3,
-      "avg_per_1k": 0
+      "views": 0,
+      "avg_per_1k": null
     },
     {
       "key": "loop",
       "posts": 1,
       "engagement": 0,
       "avg_engagement": 0,
-      "views": 6,
-      "avg_per_1k": 0
+      "views": 0,
+      "avg_per_1k": null
     },
     {
       "key": "price_it",
       "posts": 1,
       "engagement": 0,
       "avg_engagement": 0,
-      "views": 7,
-      "avg_per_1k": 0
+      "views": 0,
+      "avg_per_1k": null
     }
   ],
   "by_shape": [
     {
       "key": "thread",
-      "posts": 8,
-      "engagement": 32,
-      "avg_engagement": 4,
-      "views": 2750,
-      "avg_per_1k": 236.85
+      "posts": 9,
+      "engagement": 37,
+      "avg_engagement": 4.11,
+      "views": 2895,
+      "avg_per_1k": 46.5
     },
     {
       "key": "single",
-      "posts": 44,
+      "posts": 45,
       "engagement": 11,
-      "avg_engagement": 0.25,
-      "views": 3279,
-      "avg_per_1k": 10.92
+      "avg_engagement": 0.24,
+      "views": 3122,
+      "avg_per_1k": 1.79
     }
   ],
   "collection": {
-    "attempted": 52,
-    "succeeded": 52,
+    "attempted": 54,
+    "succeeded": 54,
     "reduced_metric_set": 0,
     "errors": []
   }
