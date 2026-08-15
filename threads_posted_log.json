@@ -973,5 +973,22 @@
       "markusreidgt": "17981202507111147"
     },
     "errors": {}
+  },
+  {
+    "at": "2026-08-15T14:36:15.252Z",
+    "text": "Saw an account posting twice a day, going nowhere.\n\nThe posts were good. The first lines were wallpaper.\n\nWe rewrote only line one for a week. Same content — 3x the stops.\n\nThe hook is the whole game.",
+    "parts": [
+      "Saw an account posting twice a day, going nowhere.\n\nThe posts were good. The first lines were wallpaper.\n\nWe rewrote only line one for a week. Same content — 3x the stops.\n\nThe hook is the whole game."
+    ],
+    "isThread": false,
+    "pillar": "authority",
+    "kind": "story",
+    "accounts": [
+      "markusreidgt"
+    ],
+    "ids": {
+      "markusreidgt": "18121926512500409"
+    },
+    "errors": {}
   }
 ]
