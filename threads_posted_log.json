@@ -990,5 +990,26 @@
       "markusreidgt": "18121926512500409"
     },
     "errors": {}
+  },
+  {
+    "at": "2026-08-15T15:50:01.859Z",
+    "text": "If you’re building something and nobody’s engaging yet, read this before you quit posting",
+    "parts": [
+      "If you’re building something and nobody’s engaging yet, read this before you quit posting",
+      "Reach early is brutal. Most posts from a small account are seen by a couple of dozen people, and that has almost nothing to do with whether the post was good.",
+      "Which means judging your idea by early numbers is judging it on the wrong evidence. The signal at that stage is replies, not likes. One person saying \"this is exactly my situation\" is worth four hundred impressions.",
+      "So write for the one person, not the feed. Say the specific thing. The generic version reaches the same nobody and teaches you nothing.",
+      "And go and be useful in other people’s replies. That’s the actual distribution channel early on, and it works while your own posts are still finding their footing.\n\nWhat are you building? Say it below."
+    ],
+    "isThread": true,
+    "pillar": "community",
+    "kind": "thread",
+    "accounts": [
+      "markusreidgt"
+    ],
+    "ids": {
+      "markusreidgt": "18142249168560155"
+    },
+    "errors": {}
   }
 ]
