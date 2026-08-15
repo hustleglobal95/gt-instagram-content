@@ -1,6 +1,6 @@
 {
-  "updated": "2026-08-14T07:48:52.152Z",
-  "count": 46,
+  "updated": "2026-08-15T01:11:15.426Z",
+  "count": 52,
   "ranking_basis": "per_1k",
   "top": [
     {
@@ -97,6 +97,30 @@
       "views": 13,
       "engagement": 2,
       "per_1k": 153.85,
+      "basis": "per_1k"
+    },
+    {
+      "at": "2026-08-14T19:09:34.613Z",
+      "pillar": "mistakes",
+      "kind": "ops",
+      "isThread": false,
+      "parts": 1,
+      "text": "Most startups think they have a marketing problem.\n\nMost have an operations problem wearing a marketing costume.\n\nThe leads arrive. Nobody calls back for two days. The quote takes a week. The buyer moves on and it gets logged as \"the ads di",
+      "accounts": [
+        "markusreidgt"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/DcCB_M6Fgbo",
+      "metrics": {
+        "views": 9,
+        "likes": 1,
+        "replies": 0,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 9,
+      "engagement": 1,
+      "per_1k": 111.11,
       "basis": "per_1k"
     },
     {
@@ -218,30 +242,6 @@
       "engagement": 2,
       "per_1k": 8.33,
       "basis": "per_1k"
-    },
-    {
-      "at": "2026-08-11T15:14:14.171Z",
-      "pillar": "systems",
-      "kind": "thread",
-      "isThread": true,
-      "parts": 5,
-      "text": "Your content isn’t the problem.\n\nYour distribution is.\n\nWhy great posts die and average posts win 👇",
-      "accounts": [
-        "markusreidgt"
-      ],
-      "permalink": "https://www.threads.com/@markusreidgt/post/Db54q4coL7o",
-      "metrics": {
-        "views": 575,
-        "likes": 0,
-        "replies": 4,
-        "reposts": 0,
-        "quotes": 0,
-        "shares": 0
-      },
-      "views": 575,
-      "engagement": 4,
-      "per_1k": 6.96,
-      "basis": "per_1k"
     }
   ],
   "posts": [
@@ -339,6 +339,30 @@
       "views": 13,
       "engagement": 2,
       "per_1k": 153.85,
+      "basis": "per_1k"
+    },
+    {
+      "at": "2026-08-14T19:09:34.613Z",
+      "pillar": "mistakes",
+      "kind": "ops",
+      "isThread": false,
+      "parts": 1,
+      "text": "Most startups think they have a marketing problem.\n\nMost have an operations problem wearing a marketing costume.\n\nThe leads arrive. Nobody calls back for two days. The quote takes a week. The buyer moves on and it gets logged as \"the ads di",
+      "accounts": [
+        "markusreidgt"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/DcCB_M6Fgbo",
+      "metrics": {
+        "views": 9,
+        "likes": 1,
+        "replies": 0,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 9,
+      "engagement": 1,
+      "per_1k": 111.11,
       "basis": "per_1k"
     },
     {
@@ -593,16 +617,136 @@
       ],
       "permalink": "https://www.threads.com/@markusreidgt/post/Db9sNAijl_3",
       "metrics": {
-        "views": 604,
+        "views": 605,
         "likes": 1,
         "replies": 0,
         "reposts": 0,
         "quotes": 0,
         "shares": 0
       },
-      "views": 604,
+      "views": 605,
       "engagement": 1,
-      "per_1k": 1.66,
+      "per_1k": 1.65,
+      "basis": "per_1k"
+    },
+    {
+      "at": "2026-08-14T22:36:30.775Z",
+      "pillar": "constraint",
+      "kind": "pas",
+      "isThread": false,
+      "parts": 1,
+      "text": "“We need to post more.”\n\nNo — that’s the symptom.\n\nThe real problem is a hook problem. And more effort on the wrong lever just makes the drop steeper.\n\nFix it at the source: ten posts nobody stops for is still zero.",
+      "accounts": [
+        "markusreidgt"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/DcCZq1VGj_B",
+      "metrics": {
+        "views": 4,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 4,
+      "engagement": 0,
+      "per_1k": 0,
+      "basis": "per_1k"
+    },
+    {
+      "at": "2026-08-14T20:41:49.840Z",
+      "pillar": "decision",
+      "kind": "price_it",
+      "isThread": false,
+      "parts": 1,
+      "text": "Put a number on the gap or nothing happens.\n\n\"We should improve follow-up\" is a shrug in a meeting.\n\n\"Follow-up costs us about $18k a month\" is a decision with a deadline.\n\nSame fact. Only one of them gets scheduled.",
+      "accounts": [
+        "markusreidgt"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/DcCMi6WGsmZ",
+      "metrics": {
+        "views": 7,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 7,
+      "engagement": 0,
+      "per_1k": 0,
+      "basis": "per_1k"
+    },
+    {
+      "at": "2026-08-14T17:07:01.622Z",
+      "pillar": "systems",
+      "kind": "value_cta",
+      "isThread": false,
+      "parts": 1,
+      "text": "The one-metric week:\n\nPick the single metric your constraint lives in. Move only that for 7 days. Ignore the rest.\n\nMore of these on @markusreidgt.",
+      "accounts": [
+        "markusreidgt"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/DcBz9pBoLnm",
+      "metrics": {
+        "views": 7,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 7,
+      "engagement": 0,
+      "per_1k": 0,
+      "basis": "per_1k"
+    },
+    {
+      "at": "2026-08-14T15:04:35.446Z",
+      "pillar": "systems",
+      "kind": "loop",
+      "isThread": false,
+      "parts": 1,
+      "text": "The whole operating system, three steps:\n\n1. Name the constraint.\n2. Move only that number.\n3. Verify it moved.\n\nStep three is the one everyone skips, which is why the same fix gets \"tried\" four times a year and nobody can say whether it wo",
+      "accounts": [
+        "markusreidgt"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/DcBl85rIMUH",
+      "metrics": {
+        "views": 6,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 6,
+      "engagement": 0,
+      "per_1k": 0,
+      "basis": "per_1k"
+    },
+    {
+      "at": "2026-08-14T13:36:11.977Z",
+      "pillar": "systems",
+      "kind": "review",
+      "isThread": false,
+      "parts": 1,
+      "text": "A useful monthly review fits on one page:\n\n• the constraint\n• what we changed\n• what moved\n• next constraint\n\nIf it takes twelve slides, nobody reads it and no one is accountable to it. Length is how teams hide from the second bullet.",
+      "accounts": [
+        "markusreidgt"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/DcBb1fUlue2",
+      "metrics": {
+        "views": 3,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 3,
+      "engagement": 0,
+      "per_1k": 0,
       "basis": "per_1k"
     },
     {
@@ -1368,28 +1512,36 @@
       "avg_per_1k": 153.85
     },
     {
+      "key": "mistakes",
+      "posts": 1,
+      "engagement": 1,
+      "avg_engagement": 1,
+      "views": 9,
+      "avg_per_1k": 111.11
+    },
+    {
       "key": "systems",
-      "posts": 10,
+      "posts": 13,
       "engagement": 20,
-      "avg_engagement": 2,
-      "views": 1758,
-      "avg_per_1k": 47.06
+      "avg_engagement": 1.54,
+      "views": 1774,
+      "avg_per_1k": 36.2
     },
     {
       "key": "decision",
-      "posts": 6,
+      "posts": 7,
       "engagement": 2,
-      "avg_engagement": 0.33,
-      "views": 541,
-      "avg_per_1k": 28.1
+      "avg_engagement": 0.29,
+      "views": 548,
+      "avg_per_1k": 24.08
     },
     {
       "key": "constraint",
-      "posts": 14,
+      "posts": 15,
       "engagement": 10,
-      "avg_engagement": 0.71,
-      "views": 3394,
-      "avg_per_1k": 2.22
+      "avg_engagement": 0.67,
+      "views": 3399,
+      "avg_per_1k": 2.07
     },
     {
       "key": "mistake",
@@ -1434,6 +1586,14 @@
       "avg_per_1k": 236.85
     },
     {
+      "key": "ops",
+      "posts": 1,
+      "engagement": 1,
+      "avg_engagement": 1,
+      "views": 9,
+      "avg_per_1k": 111.11
+    },
+    {
       "key": "callout",
       "posts": 3,
       "engagement": 1,
@@ -1454,7 +1614,7 @@
       "posts": 7,
       "engagement": 5,
       "avg_engagement": 0.71,
-      "views": 1794,
+      "views": 1795,
       "avg_per_1k": 3.31
     },
     {
@@ -1507,10 +1667,10 @@
     },
     {
       "key": "value_cta",
-      "posts": 2,
+      "posts": 3,
       "engagement": 0,
       "avg_engagement": 0,
-      "views": 33,
+      "views": 40,
       "avg_per_1k": 0
     },
     {
@@ -1547,10 +1707,10 @@
     },
     {
       "key": "pas",
-      "posts": 2,
+      "posts": 3,
       "engagement": 0,
       "avg_engagement": 0,
-      "views": 3,
+      "views": 7,
       "avg_per_1k": 0
     },
     {
@@ -1568,6 +1728,30 @@
       "avg_engagement": 0,
       "views": 25,
       "avg_per_1k": 0
+    },
+    {
+      "key": "review",
+      "posts": 1,
+      "engagement": 0,
+      "avg_engagement": 0,
+      "views": 3,
+      "avg_per_1k": 0
+    },
+    {
+      "key": "loop",
+      "posts": 1,
+      "engagement": 0,
+      "avg_engagement": 0,
+      "views": 6,
+      "avg_per_1k": 0
+    },
+    {
+      "key": "price_it",
+      "posts": 1,
+      "engagement": 0,
+      "avg_engagement": 0,
+      "views": 7,
+      "avg_per_1k": 0
     }
   ],
   "by_shape": [
@@ -1581,16 +1765,16 @@
     },
     {
       "key": "single",
-      "posts": 38,
-      "engagement": 10,
-      "avg_engagement": 0.26,
-      "views": 3242,
-      "avg_per_1k": 9.65
+      "posts": 44,
+      "engagement": 11,
+      "avg_engagement": 0.25,
+      "views": 3279,
+      "avg_per_1k": 10.92
     }
   ],
   "collection": {
-    "attempted": 46,
-    "succeeded": 46,
+    "attempted": 52,
+    "succeeded": 52,
     "reduced_metric_set": 0,
     "errors": []
   }
