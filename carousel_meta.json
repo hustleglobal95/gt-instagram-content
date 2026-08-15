@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-08-14T16:00:40.997Z",
+  "generated_at": "2026-08-15T15:30:50.001Z",
   "kind": "carousel",
-  "layout": "carousel:verdict",
+  "layout": "carousel:plan",
   "media_files": [
-    "creatives/gt_car_20260814160039_1.jpg",
-    "creatives/gt_car_20260814160039_2.jpg",
-    "creatives/gt_car_20260814160039_3.jpg",
-    "creatives/gt_car_20260814160039_4.jpg",
-    "creatives/gt_car_20260814160039_5.jpg"
+    "creatives/gt_car_20260815153048_1.jpg",
+    "creatives/gt_car_20260815153048_2.jpg",
+    "creatives/gt_car_20260815153048_3.jpg",
+    "creatives/gt_car_20260815153048_4.jpg",
+    "creatives/gt_car_20260815153048_5.jpg"
   ],
-  "caption": "Most tools show you what agrees with them.\n\nGrowth Terminal names the constraint, lists the evidence for the call, then publishes the evidence against it and what would prove the diagnosis wrong.\n\nThen a 90 day plan with decision gates, and a grade against real revenue once the quarter plays out.",
-  "hashtags": "#growthterminal #foundertips #agencylife #saasgrowth",
-  "first_comment": "When did a tool last tell you why it might be wrong?",
-  "alt_text": "Most tools show you what agrees with them. Growth Terminal names the constraint, lists the evidence for the call, then p",
-  "sig": "car:verdict"
+  "caption": "A diagnosis without sequencing is just an opinion.\n\nEvery Growth Terminal run ends in a 90 day plan: six phases in order, three decision gates that tell you when to continue or change course, and five leading indicators that move before revenue does.\n\nBuilt from your numbers, not a template.",
+  "hashtags": "#growthterminal #revenueoperations #b2bsaas #consultingbusiness",
+  "first_comment": "Does your current plan have a gate that lets you stop early?",
+  "alt_text": "A diagnosis without sequencing is just an opinion. Every Growth Terminal run ends in a 90 day plan: six phases in order,",
+  "sig": "car:plan"
 }
