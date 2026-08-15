@@ -40,6 +40,14 @@ const POSTED_FILE = path.join(__dirname, 'threads_posted_log.json');
 const OUT_FILE = process.env.GT_THREADS_PERF_OUT || path.join(__dirname, 'threads_performance_log.json');
 const LOOKBACK = parseInt(process.env.GT_THREADS_LOOKBACK || '200', 10);
 
+/* Engagement per thousand views stops meaning anything when the views are in
+   single figures. The first real run proved it: a post with three views and
+   four interactions scored 1333 per 1k and topped the chart, which is a
+   division artifact, not a finding. Anything under this many views is still
+   counted in every total, but it is ranked on raw interactions and flagged, so
+   noise cannot outrank reach. */
+const MIN_VIEWS_FOR_RATE = parseInt(process.env.GT_THREADS_MIN_VIEWS || '25', 10);
+
 /* views and shares are marked "in development" in Meta's own docs, so a token
    can fail the whole call because of one of them. Ask for everything, and on
    failure drop back to the four that have always been stable. */
@@ -119,7 +127,7 @@ function group(posts, field) {
     by.get(k).push(p);
   }
   return [...by.entries()].map(([key, list]) => {
-    const withViews = list.filter((p) => typeof p.views === 'number' && p.views > 0);
+    const withViews = list.filter((p) => p.rateReliable);
     return {
       key,
       posts: list.length,
@@ -188,12 +196,20 @@ async function main() {
       /* engagement per thousand views: the only comparison that is fair
          between a post from last week and one from this morning. */
       per_1k: views && views > 0 ? +((engagement / views) * 1000).toFixed(2) : null,
-      basis: views && views > 0 ? 'per_1k' : 'total',
+      /* Enough views for the rate to be worth reading. */
+      rateReliable: typeof views === 'number' && views >= MIN_VIEWS_FOR_RATE,
+      basis: views && views >= MIN_VIEWS_FOR_RATE ? 'per_1k' : 'total',
     });
   }
 
-  const ranked = [...posts].sort((a, b) =>
-    (b.per_1k ?? -1) - (a.per_1k ?? -1) || b.engagement - a.engagement || String(b.at).localeCompare(String(a.at)));
+  /* Two tiers. Posts with enough views rank on rate, because that is the fair
+     comparison. Everything else falls below them and ranks on raw interactions,
+     because a rate computed on nine views is not a comparison at all. */
+  const ranked = [...posts].sort((a, b) => {
+    if (a.rateReliable !== b.rateReliable) return a.rateReliable ? -1 : 1;
+    if (a.rateReliable) return (b.per_1k ?? -1) - (a.per_1k ?? -1) || b.engagement - a.engagement;
+    return b.engagement - a.engagement || (b.views ?? 0) - (a.views ?? 0);
+  });
 
   const out = {
     updated: new Date().toISOString(),
@@ -202,6 +218,19 @@ async function main() {
        a raw total and therefore biased towards whatever has been up longest.
        The dashboard reads this flag and says so instead of pretending. */
     ranking_basis: posts.some((p) => p.basis === 'per_1k') ? 'per_1k' : 'total',
+    min_views_for_rate: MIN_VIEWS_FOR_RATE,
+    rate_eligible: posts.filter((p) => p.rateReliable).length,
+    /* Reach totals, which stay meaningful when the rates do not. */
+    reach: {
+      views: posts.reduce((n, p) => n + (p.views || 0), 0),
+      interactions: posts.reduce((n, p) => n + p.engagement, 0),
+      median_views: (() => {
+        const v = posts.map((p) => p.views || 0).sort((a, b) => a - b);
+        if (!v.length) return 0;
+        return v.length % 2 ? v[(v.length - 1) / 2] : (v[v.length / 2 - 1] + v[v.length / 2]) / 2;
+      })(),
+      zero_interaction_posts: posts.filter((p) => p.engagement === 0).length,
+    },
     top: ranked.slice(0, 10),
     posts: ranked,
     by_pillar: group(posts, 'pillar'),
@@ -212,7 +241,8 @@ async function main() {
 
   fs.writeFileSync(OUT_FILE, JSON.stringify(out, null, 2));
   console.log(`Threads insights: ${succeeded}/${attempted} media fetched across ${posts.length} posts.`);
-  console.log(`Ranking basis: ${out.ranking_basis}${out.ranking_basis === 'total' ? ' (no view counts returned, older posts will look better than they are)' : ''}`);
+  console.log(`Ranking basis: ${out.ranking_basis}. ${out.rate_eligible} of ${posts.length} posts cleared ${MIN_VIEWS_FOR_RATE} views and are ranked on rate.`);
+  console.log(`Reach: ${out.reach.views} views, ${out.reach.interactions} interactions, median ${out.reach.median_views} views per post.`);
   if (errors.length) console.log(`${errors.length} error(s), first: ${errors[0].message}`);
   for (const p of out.top.slice(0, 5)) {
     console.log(`  ${p.per_1k !== null ? p.per_1k + '/1k' : p.engagement + ' total'}  ${p.pillar}/${p.kind}  ${p.text.split('\n')[0].slice(0, 60)}`);

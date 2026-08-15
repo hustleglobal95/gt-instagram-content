@@ -669,4 +669,129 @@ const HUMAN_FORMATS_2 = [
 
 FORMATS.push(...HUMAN_FORMATS_2);
 
+
+// =============================================================================
+// MORE THREADS, August 2026
+// -----------------------------------------------------------------------------
+// The first real engagement pull settled an argument. Eight multi-part threads
+// produced 46% of all views and 74% of all interactions, out of 52 posts.
+// Median reach was 44.5 views against 9.5 for a single post. Nearly five times,
+// on the same account, in the same week, with the same ideas.
+//
+// The bank was 12% threads. That ratio was backwards, so this block takes it to
+// roughly a quarter.
+//
+// What the winning threads have in common, and what these copy: a hook short
+// enough to read in one glance and incomplete on its own, then four replies
+// that each land one idea, then a last line worth screenshotting. No reply
+// exists to set up the next one. If a part could be deleted without loss, it is
+// deleted here instead.
+// =============================================================================
+
+const MORE_THREADS = [
+  // ---------- early stage, human register ----------
+  { pillar: 'early', kind: 'thread', thread: () => [
+    clamp(`The first ten customers are the hardest you’ll ever get.\n\nNobody warns you why`),
+    clamp(`It isn’t the product. At ten customers your product is usually fine and definitely fixable.\n\nIt’s that you have no proof, so every sale is somebody taking a personal risk on you.`),
+    clamp(`Which means the early ones don’t come from marketing. They come from people who already trust you, or people you talk to directly, one at a time, in a way that does not scale and is not supposed to.`),
+    clamp(`This is the part most people try to skip, because it feels like it doesn’t count. It counts more than anything you’ll do later. Those ten tell you what you actually sell.`),
+    clamp(`It gets easier at around thirty. Not because you got better at asking. Because you stopped having to.\n\nIf you’re under ten right now, you’re not behind. You’re in the part that has no shortcut.`),
+  ] },
+
+  { pillar: 'early', kind: 'thread', thread: () => [
+    clamp(`You’ve been flat for three months and you’re starting to think it’s over.\n\nIt probably isn’t. Here’s what a plateau usually is`),
+    clamp(`Something that worked has quietly stopped working. One channel, one message, one referral source. The total looks flat because a rise somewhere is cancelling a fall somewhere else.`),
+    clamp(`So the flat line isn’t nothing happening. It’s two things happening that you can’t see separately yet.\n\nSplit the number. By source, by month, by segment. The story is in there.`),
+    clamp(`What most people do instead is change five things at once out of panic. Then it moves, and they have no idea which change did it, so they can’t do it again.`),
+    clamp(`Change one thing. Give it three weeks. Write down what you expect first.\n\nSlower, and it’s the only version where you learn something you can use twice.`),
+  ] },
+
+  { pillar: 'early', kind: 'thread', thread: () => [
+    clamp(`If I started again from zero tomorrow, I’d skip almost everything I did in year one.\n\nHere’s what I’d actually do`),
+    clamp(`Talk to twenty people with the problem before building anything. Not a survey. Actual conversations where they do most of the talking and I resist explaining my idea.`),
+    clamp(`Sell it before it exists. If nobody will pay for the description, they won’t pay for the thing. That’s not a failure, it’s three months saved.`),
+    clamp(`Pick one channel. Be boring about it for six months. Every founder I know who spread across five ended up invisible on all of them.`),
+    clamp(`And write down what I expected to happen, every time, before it happened.\n\nThat one habit is the difference between four years of experience and one year repeated four times.`),
+  ] },
+
+  // ---------- practical, the highest-value cheap moves ----------
+  { pillar: 'playbook', kind: 'thread', thread: () => [
+    clamp(`The most profitable thing in your business is a message you haven’t sent.\n\nThe follow-up nobody sends`),
+    clamp(`Go and find everyone who enquired in the last ninety days and didn’t buy. Most businesses have a list like this and treat it as dead.\n\nIt isn’t dead. It’s the warmest list you own.`),
+    clamp(`Send one message. Not a pitch. One line asking what stopped them, and meaning it.\n\nSome will tell you the price. Some will tell you the timing. Some will tell you something about your offer you genuinely did not know.`),
+    clamp(`A share of them will buy, right there, because the only thing standing in the way was that nobody followed up and they got busy.`),
+    clamp(`It costs nothing, takes an afternoon, and almost nobody does it, because it feels like admitting you need the sale.\n\nEvery business I’ve looked at has money sitting in that list.`),
+  ] },
+
+  { pillar: 'playbook', kind: 'thread', thread: () => [
+    clamp(`You can learn more in five customer conversations than in five months of analytics.\n\nWhat to actually ask`),
+    clamp(`One. What were you doing about this before you found us? Tells you who you’re really competing with, which is usually a spreadsheet or nothing.`),
+    clamp(`Two. What nearly stopped you buying? This is the objection your page should be answering and probably isn’t.`),
+    clamp(`Three. How would you describe us to someone like you? Their words are better than your positioning. Use them verbatim.`),
+    clamp(`Don’t defend anything. Don’t explain. Just write down what they say, in their language, and read it back a week later.\n\nHalf of what you find will be free money.`),
+  ] },
+
+  // ---------- pricing ----------
+  { pillar: 'decision', kind: 'thread', thread: () => [
+    clamp(`Your prices are probably too low, and not for the reason people usually say.\n\nThree ways to tell`),
+    clamp(`One. Nobody ever pushes back. If not a single prospect flinches, you are underneath the range the market expected, and you’re being read as the cheap option before anyone has looked at the work.`),
+    clamp(`Two. Your worst clients are your cheapest ones. Price is a filter. Lower it and you catch the people who were always going to be difficult, because they’re shopping on the only axis they understand.`),
+    clamp(`Three. You’re busy and it isn’t showing up in profit. That’s not a volume problem to solve with more volume.`),
+    clamp(`Raising a price takes an afternoon and no new customers.\n\nAlmost everything else you’re considering takes a quarter and a budget.`),
+  ] },
+
+  { pillar: 'decision', kind: 'thread', thread: () => [
+    clamp(`Before you spend anything on ads, answer four questions.\n\nIf you can’t, the ads will just make the leak more expensive`),
+    clamp(`What percentage of visitors buy today? If you don’t know, you cannot tell a traffic problem from a conversion one, and they need opposite fixes.`),
+    clamp(`What happens to a lead nobody calls back? In most businesses the honest answer is nothing, and that is where the money is going.`),
+    clamp(`Which stage loses the most people? Put a number between every step. The lowest one is not a mystery, it’s an address.`),
+    clamp(`What is a customer worth over a year? Without it, no cost per acquisition means anything and you’re guessing whether you can afford to win.\n\nFour answers. Then spend.`),
+  ] },
+
+  // ---------- the week / focus ----------
+  { pillar: 'systems', kind: 'thread', thread: () => [
+    clamp(`You were busy all week and the business didn’t move.\n\nHere’s what usually happened`),
+    clamp(`You did ten things at ten percent effort. All ten are now slightly better and none of them crossed the line where anyone outside would notice.`),
+    clamp(`Improvements aren’t linear. Most have a threshold, and under it you get nothing at all. Half a rewrite of a sales page performs exactly like no rewrite.`),
+    clamp(`So the choice isn’t how hard you work. It’s how few things you’re willing to let be bad this week.`),
+    clamp(`Pick one. Take it past the threshold. Let the other nine sit.\n\nNext week they’re still there, and you’ll have one thing that actually landed.`),
+  ] },
+
+  { pillar: 'systems', kind: 'thread', thread: () => [
+    clamp(`Nobody is accountable to a twelve-slide report.\n\nWhat a useful review looks like`),
+    clamp(`One page. What we said was limiting us. What we changed. What moved. What’s limiting us now.\n\nThat’s it. Four lines.`),
+    clamp(`The second line is where most reviews quietly fail. "What we changed" has to be specific enough that somebody could disagree with it.`),
+    clamp(`The third is the one people skip. If you never check whether it moved, you’re collecting stories, not evidence, and you’ll try the same fix again next year.`),
+    clamp(`Length is how teams hide from line three.\n\nIf the review doesn’t fit on a page, it isn’t a review, it’s a performance.`),
+  ] },
+
+  // ---------- content / reach, relevant to this very account ----------
+  { pillar: 'bi', kind: 'thread', thread: () => [
+    clamp(`You’re posting more and reaching fewer people.\n\nIt usually isn’t the algorithm`),
+    clamp(`Volume without a reason to stop is just more scroll. The feed doesn’t punish you for posting, it punishes you for posting things nobody stays on.`),
+    clamp(`So the first line is the whole job. Not the idea, not the length. Whether somebody’s thumb stops.`),
+    clamp(`And the format matters more than people think. The same idea, written as a chain instead of a single post, reliably travels further, because each part earns the next one a fresh impression.`),
+    clamp(`Test it on your own account for two weeks before you believe me.\n\nSame ideas, different shape. Watch what happens to reach.`),
+  ] },
+
+  { pillar: 'bi', kind: 'thread', thread: () => [
+    clamp(`The number you’ve been avoiding is your constraint.\n\nI’m fairly sure this is always true`),
+    clamp(`Not because avoidance is magic. Because you already half know it’s bad, and looking would mean owning it.`),
+    clamp(`Refund rate. Churn past month one. How many enquiries never got a reply. The gap between what you quoted and what you invoiced.\n\nOne of those just made you uncomfortable. That’s the one.`),
+    clamp(`The discomfort is the signal, and it’s the most reliable diagnostic tool you have, because it costs nothing and you already ran it.`),
+    clamp(`Open it today. It’s almost never as bad as the version you’ve been carrying around not looking at.`),
+  ] },
+
+  // ---------- community, meta, invites a reply ----------
+  { pillar: 'community', kind: 'thread', thread: () => [
+    clamp(`If you’re building something and nobody’s engaging yet, read this before you quit posting`),
+    clamp(`Reach early is brutal. Most posts from a small account are seen by a couple of dozen people, and that has almost nothing to do with whether the post was good.`),
+    clamp(`Which means judging your idea by early numbers is judging it on the wrong evidence. The signal at that stage is replies, not likes. One person saying "this is exactly my situation" is worth four hundred impressions.`),
+    clamp(`So write for the one person, not the feed. Say the specific thing. The generic version reaches the same nobody and teaches you nothing.`),
+    clamp(`And go and be useful in other people’s replies. That’s the actual distribution channel early on, and it works while your own posts are still finding their footing.\n\nWhat are you building? Say it below.`),
+  ] },
+];
+
+THREADS.push(...MORE_THREADS);
+
 module.exports = { FORMATS, THREADS, SYMPTOM_DISEASE, CEILINGS, SOFT_CTA };
