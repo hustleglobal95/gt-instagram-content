@@ -1028,5 +1028,22 @@
       "markusreidgt": "17901283713551066"
     },
     "errors": {}
+  },
+  {
+    "at": "2026-08-15T18:58:22.199Z",
+    "text": "You have done the obvious things. Growth flattened anyway.\n\nThat is normal. The obvious things move the metrics that were already fine.\n\nGrowth Terminal reads the whole business, names the one constraint holding the rest down, prices it, then checks the fix against real revenue.\n\nStart with the free diagnostic, no card → www.growthterminal.io/diagnostic",
+    "parts": [
+      "You have done the obvious things. Growth flattened anyway.\n\nThat is normal. The obvious things move the metrics that were already fine.\n\nGrowth Terminal reads the whole business, names the one constraint holding the rest down, prices it, then checks the fix against real revenue.\n\nStart with the free diagnostic, no card → www.growthterminal.io/diagnostic"
+    ],
+    "isThread": false,
+    "pillar": "product",
+    "kind": "offer",
+    "accounts": [
+      "markusreidgt"
+    ],
+    "ids": {
+      "markusreidgt": "18328452127260923"
+    },
+    "errors": {}
   }
 ]
