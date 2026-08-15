@@ -1,12 +1,14 @@
 {
-  "generated_at": "2026-08-14T21:01:04.328Z",
-  "media_file": "creatives/gt_reel_20260814_210104.jpg",
-  "video_file": "creatives/gt_reel_20260814_210104.mp4",
-  "is_reel": true,
-  "layout": "reel:card",
-  "caption": "This is what a Growth Terminal diagnosis looks like, one constraint, named, priced, and verified against real revenue. Here, retention was capping the business by $88K-$140K a year.\n\nYours is one run away.\n\nRun the free 60-second diagnostic, link in bio.",
-  "hashtags": "#growthterminal #fractionalcmo #uniteconomics #startupmetrics",
-  "first_comment": "What would you do differently if your #1 constraint came pre-priced?",
-  "alt_text": "#1 constraint: Retention",
-  "sig": "reelcard:Retention"
+  "generated_at": "2026-08-15T01:01:13.865Z",
+  "media_file": "creatives/gt_auto_20260815_010113.jpg",
+  "is_reel": false,
+  "layout": "prodclaim",
+  "editorial_bg": null,
+  "person": null,
+  "qa": null,
+  "caption": "Your funnel has one step leaking more than the rest. The Funnel & Conversion Tracker finds it, tells you what fixing it is worth in dollars, and lets you simulate the upside before you spend a cent.\n\n8 tabs, built in Google Sheets™. $79, instant download. Link in bio.\n\n→ growthterminal.io",
+  "hashtags": "#growthterminal #bootstrappedfounder #marketingops #googlesheetstips",
+  "first_comment": "Diagnosis before treatment, even in a spreadsheet.",
+  "alt_text": "Stop guessing which funnel step to fix .",
+  "sig": "prodclaim:funnel:Stop guessing which fu"
 }
