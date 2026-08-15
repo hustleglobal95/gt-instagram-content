@@ -1,0 +1,108 @@
+name: GT Ads (1x/day)
+
+# Fired the same way the organic autopost is: by cron-job.org hitting the
+# workflow_dispatch endpoint, plus the Run workflow button for a manual go.
+# Give it its own time of day, away from the organic slots, so the ad is an
+# extra post rather than competing with one.
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "1 = rehearse and publish nothing, 0 = publish for real"
+        required: false
+        default: "1"
+
+# The organic job and this one both push to the repo, so they must not run at
+# the same moment. Separate group from gt-autopost: they can queue behind each
+# other rather than cancel each other.
+concurrency:
+  group: gt-ads
+  cancel-in-progress: false
+
+jobs:
+  post-ad:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install ffmpeg
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install Python deps
+        run: pip install requests
+
+      # Exit 78 means the queue is empty. That is the normal state on any day
+      # nothing was uploaded, so it ends the run quietly instead of sending a
+      # failure email that trains everyone to ignore failure emails.
+      - name: Take the next ad out of the queue
+        id: pick
+        run: |
+          set +e
+          node ads_generate.js
+          code=$?
+          set -e
+          if [ "$code" = "78" ]; then
+            echo "nothing=1" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          exit $code
+
+      # The cover has to be on the CDN before Meta is asked to fetch it, and
+      # the video itself is already committed because you synced it. Committing
+      # the sweep here too keeps the queue honest.
+      - name: Commit the cover and the sweep
+        if: steps.pick.outputs.nothing != '1'
+        run: |
+          git config user.name  "gt-bot"
+          git config user.email "bot@growthterminal.io"
+          git add -A ads ads_meta.json ads_used_log.json
+          git diff --cached --quiet || git commit -m "ads: queue the next video [skip ci]"
+          git push
+
+      - name: Publish to Instagram and Facebook
+        if: steps.pick.outputs.nothing != '1'
+        env:
+          GT_IG_USER_ID: ${{ secrets.GT_IG_USER_ID }}
+          GT_IG_ACCESS_TOKEN: ${{ secrets.GT_IG_ACCESS_TOKEN }}
+          GT_FB_PAGE_ID: ${{ secrets.GT_FB_PAGE_ID }}
+          GT_FB_PAGE_ACCESS_TOKEN: ${{ secrets.GT_FB_PAGE_ACCESS_TOKEN }}
+          GT_API_BASE: https://graph.facebook.com/v21.0
+          GT_GITHUB_REPO: ${{ github.repository }}
+          GT_GITHUB_BRANCH: ${{ github.ref_name }}
+          # Defaults to a rehearsal. Publishing for real is a deliberate act:
+          # pass 0 from the Run workflow form, or from cron-job.org's payload.
+          GT_DRY_RUN: ${{ github.event.inputs.dry_run || '1' }}
+        run: python ads_post.py
+
+      - name: Commit the publish log
+        if: steps.pick.outputs.nothing != '1'
+        run: |
+          git config user.name  "gt-bot"
+          git config user.email "bot@growthterminal.io"
+          git pull --rebase --autostash || true
+          git add -A ads_posted_log.json
+          git diff --cached --quiet || git commit -m "ads: publish log [skip ci]"
+          git push
+
+      - name: What happened
+        if: always()
+        run: |
+          if [ "${{ steps.pick.outputs.nothing }}" = "1" ]; then
+            echo "Queue was empty. Nothing posted, nothing wrong."
+          else
+            echo "Ran against $(ls ads/queue 2>/dev/null | wc -l) file(s) still queued."
+          fi
