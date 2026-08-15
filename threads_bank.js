@@ -508,4 +508,165 @@ const VALUE_THREADS = [
 FORMATS.push(...PROMO_FORMATS, ...VALUE_FORMATS);
 THREADS.push(...VALUE_THREADS);
 
+
+// =============================================================================
+// THE HUMAN LAYER, August 2026
+// -----------------------------------------------------------------------------
+// Everything above this line is written like a consultant's report: no
+// contractions, balanced clauses, every post landing a clean conclusion. It
+// reads as authoritative and it also reads as generated, because real people
+// use contractions, trail off, admit they were wrong and ask things they do not
+// know the answer to.
+//
+// So this block is deliberately looser. Rules it follows that the block above
+// does not:
+//
+//   Contractions everywhere. "isn't", "you're", "I've". This is the single
+//   biggest tell, and the cheapest to fix.
+//
+//   Uneven lengths. Some of these are two lines. A feed where every post is
+//   the same shape looks scheduled, because it is.
+//
+//   Questions that actually want an answer. The bank above has none. You
+//   cannot build a community by broadcasting at it, and a reply is worth more
+//   to the algorithm and to the person than a like.
+//
+//   First person, including being wrong. "I used to think" earns more trust
+//   than another declarative sentence about what businesses should do.
+//
+// The encouragement entries are the risky ones. GT_THREADS_VOICE.md bans
+// motivational quotes, and it is right to: "believe in yourself" is filler.
+// These try to encourage by being specific and honest about how hard the early
+// part is, rather than by being warm about it. If one of them ever reads like
+// a poster in a dentist's office, cut it.
+// =============================================================================
+
+// Openers for reply-seeking posts. Kept short so the question does the work.
+const ASK_TAIL = [
+  'Curious what other people have found.',
+  'Tell me I’m wrong.',
+  'What’s your version of this?',
+  'Genuinely asking.',
+];
+
+const HUMAN_FORMATS = [
+  // ---------- early stage, honest rather than motivational ----------
+  { pillar: 'early', kind: 'real', render: () => pick([
+    clamp(`Nobody tells you the first ten customers are the hardest ones you’ll ever get.\n\nNot because the product is bad. Because you’ve got no proof yet, so every single one is a favour someone is doing you.\n\nIt does get easier. Not because you get better at asking, but because you stop having to.`),
+    clamp(`You’re comparing your month three to someone else’s year six.\n\nThey had the same months. They just didn’t post about them.`),
+    clamp(`The unglamorous work is the work.\n\nFollowing up. Fixing the checkout. Calling the person who went quiet. None of it makes a good post, and it’s most of what actually moves the number.`),
+    clamp(`Plateaus aren’t failure, they’re information.\n\nSomething that worked has stopped working, and the flat line is how you find out. Most people panic and change five things at once, which guarantees they never learn which one it was.`),
+  ]) },
+
+  { pillar: 'early', kind: 'real', render: () => pick([
+    clamp(`Charge more than feels comfortable.\n\nNot because you’re worth more than you think, though you probably are. Because the price you’re scared to say out loud is usually the one that filters out the clients who were going to be a nightmare anyway.`),
+    clamp(`Quitting something that isn’t working isn’t giving up.\n\nIt’s the same decision as starting, made with better information.`),
+    clamp(`Nobody is watching as closely as you think.\n\nThat post you agonised over, the pricing page you rewrote four times, the launch that flopped. People saw it for a second and moved on.\n\nThat’s freeing if you let it be.`),
+  ]) },
+
+  // ---------- I used to think ----------
+  { pillar: 'authority', kind: 'wrong', render: () => pick([
+    clamp(`I used to think the answer was always more.\n\nMore posts, more traffic, more offers. Took me a while to notice that the businesses growing fastest were usually doing less, but doing it at the one place it mattered.`),
+    clamp(`I was wrong about audience size for years.\n\nI thought you needed reach first and the offer would follow. It’s the other way round. A clear offer to two hundred people who trust you beats a clever one to twenty thousand who don’t.`),
+    clamp(`Changed my mind on this one recently.\n\nI used to tell people to fix retention before touching acquisition. Still mostly true. But if nobody’s arriving at all, retention is a rounding error and you’re just polishing an empty room.`),
+  ]) },
+
+  // ---------- questions that want a reply ----------
+  { pillar: 'community', kind: 'ask', render: () => pick([
+    clamp(`What’s the number in your business you’ve been avoiding looking at?\n\nNot a trick question. Mine was refund rate for most of a year.\n\n${pick(ASK_TAIL)}`),
+    clamp(`What’s a piece of business advice that everyone repeats and that turned out to be completely wrong for you?\n\n${pick(ASK_TAIL)}`),
+    clamp(`How many customers in did it start to feel real?\n\nFor some people it’s the first. For some it’s the hundredth and it still doesn’t.\n\n${pick(ASK_TAIL)}`),
+    clamp(`Honest question for anyone a year or two in:\n\nwhat would you go back and do differently in month one?\n\n${pick(ASK_TAIL)}`),
+  ]) },
+
+  { pillar: 'community', kind: 'ask', render: () => pick([
+    clamp(`What’s the task you keep pushing to next week?\n\nI’ve noticed the thing I avoid is almost always the thing with the biggest number attached to it. Not sure that’s a coincidence.`),
+    clamp(`Which do you actually find harder, getting the customer or keeping them?\n\nI think the answer says more about the business than most diagnostics do.\n\n${pick(ASK_TAIL)}`),
+  ]) },
+
+  // ---------- short, plain observations ----------
+  { pillar: 'bi', kind: 'note', render: () => pick([
+    'Most "we need a new strategy" conversations are really "nobody did the last one".',
+    'You can’t out-market a product people don’t come back to.',
+    'If you can’t explain what you sell in one sentence, that’s not a copy problem yet. It’s a decision you haven’t made.',
+    'Busy and productive feel identical from the inside. That’s the whole problem.',
+    'Every business has one number that would change everything. Most owners can name it in about four seconds if you ask them directly.',
+  ]) },
+
+  { pillar: 'systems', kind: 'note', render: () => pick([
+    clamp(`Small thing that works:\n\npick one number on Monday, write it on something you’ll see all week, and don’t chase anything that doesn’t move it.\n\nSounds too simple to matter. It’s the difference between a week you can point at and a week that just happened.`),
+    clamp(`If you do one thing this week, go and look at where people drop off.\n\nNot the whole funnel. Just find the biggest gap between one step and the next. That gap is your quarter.`),
+    clamp(`Write down what you think will happen before you try it.\n\nTakes thirty seconds and it’s the only way you ever find out whether you understand your own business or you’ve just been lucky.`),
+  ]) },
+
+  // ---------- relatable, the emotional reality ----------
+  { pillar: 'early', kind: 'real', render: () => pick([
+    clamp(`The hardest part of running something isn’t the work.\n\nIt’s making decisions all day with incomplete information and no one to check them against.\n\nIf that’s where you are right now, that’s not a sign you’re bad at this. That’s the job.`),
+    clamp(`Everyone’s first version was worse than you think.\n\nThe polished thing you’re comparing yourself to is version nine.`),
+    clamp(`Some weeks the only win is that you didn’t quit.\n\nThat’s a real one. Compounding needs you to still be here.`),
+  ]) },
+
+  // ---------- gentle authority, conversational register ----------
+  { pillar: 'constraint', kind: 'note', render: () => { const c = pick(CONSTRAINTS);
+    return clamp(`Someone said "${c.sym.toLowerCase()}" to me again this week.\n\nAlmost never is. Nine times out of ten it’s ${art(c.real)} ${c.real} wearing a costume.\n\nWorth checking before you spend anything.`); } },
+
+  { pillar: 'playbook', kind: 'note', render: () => pick([
+    clamp(`If you’re stuck, try this before anything clever:\n\nask five customers why they bought. Actually ask, don’t survey.\n\nHalf the time the answer isn’t what’s on your website, and that gap is free money.`),
+    clamp(`Cheapest growth experiment there is:\n\ngo back to everyone who asked about your thing in the last ninety days and never bought, and just ask what stopped them.\n\nCosts nothing. Most people never do it.`),
+  ]) },
+];
+
+FORMATS.push(...HUMAN_FORMATS);
+
+
+// A second pass on the human layer. Ten slots put roughly one human-voiced post
+// in every six, which is a change of accent rather than a change of voice.
+// These take it to about one in three, which is what "sound like a person wrote
+// it" actually requires when the other two thirds are consultancy prose.
+const HUMAN_FORMATS_2 = [
+  { pillar: 'early', kind: 'real', render: () => pick([
+    clamp(`Three years in and I still get the Sunday night thing.\n\nI don’t think it goes away. I think you just stop reading it as a warning sign.`),
+    clamp(`Your first hundred followers, first ten customers, first real month. All of it takes longer than anyone admits, and then it compounds faster than anyone expects.\n\nMost people quit in the gap between those two sentences.`),
+    clamp(`Something I wish someone had said earlier:\n\nyou don’t need a better idea. You need the same idea, in front of people, for longer than feels reasonable.`),
+  ]) },
+
+  { pillar: 'early', kind: 'real', render: () => pick([
+    clamp(`If you’re doing this alone, the loneliness is the part nobody warns you about.\n\nNot the money. Not the hours. Just having no one to check a decision against at 11pm.\n\nFind one person who’s a year ahead of you. It changes everything.`),
+    clamp(`The advice that helped me most was boring.\n\n"Talk to more customers." That’s it. Every clever thing I tried instead was a way of avoiding it.`),
+  ]) },
+
+  { pillar: 'community', kind: 'ask', render: () => pick([
+    clamp(`What’s something that worked for your business that you’d be slightly embarrassed to admit?\n\nMine: I got more replies from a badly formatted email than from anything I designed properly.`),
+    clamp(`Anyone else find the admin harder than the actual work?\n\nNot complaining. Just checking it isn’t only me.`),
+    clamp(`What did you spend money on early that you’d skip if you started again?\n\n${pick(ASK_TAIL)}`),
+  ]) },
+
+  { pillar: 'authority', kind: 'wrong', render: () => pick([
+    clamp(`Unpopular one:\n\nmost small businesses don’t have a marketing problem or an ops problem. They have a "nobody owns this" problem. The task isn’t hard, it just isn’t anyone’s.`),
+    clamp(`I don’t think most people need a growth strategy.\n\nThey need to do the four things they already know about, in order, without stopping halfway to research a fifth.`),
+  ]) },
+
+  { pillar: 'bi', kind: 'note', render: () => pick([
+    'The best businesses I’ve looked at are usually boring on the inside. Same few things, done every week, for years.',
+    'If a report takes twelve slides, nobody’s accountable to it.',
+    'You don’t have to be good at everything. You have to be honest about which one is currently costing you.',
+    'Half of what looks like a strategy problem is just something nobody has written down.',
+  ]) },
+
+  { pillar: 'systems', kind: 'note', render: () => pick([
+    clamp(`Try this if the week’s already away from you:\n\nwrite the three things that would make it a good week. Do them first. Let the rest slide.\n\nIt’s not a productivity system. It’s just a way of choosing before the day chooses for you.`),
+    clamp(`The follow-up you haven’t sent is worth more than the campaign you’re planning.\n\nAlmost always. And it takes four minutes.`),
+  ]) },
+
+  { pillar: 'early', kind: 'real', render: () => pick([
+    clamp(`Reminder that "overnight" businesses usually had two or three years of nothing first.\n\nYou’re probably in the nothing. It counts.`),
+    clamp(`Nobody has it figured out. The ones who look like they do are just further into the same confusion, with better lighting.`),
+  ]) },
+
+  { pillar: 'community', kind: 'ask', render: () => clamp(
+    `If you’re building something right now, what is it?\n\nDrop it below. I’ll actually look.`) },
+];
+
+FORMATS.push(...HUMAN_FORMATS_2);
+
 module.exports = { FORMATS, THREADS, SYMPTOM_DISEASE, CEILINGS, SOFT_CTA };
