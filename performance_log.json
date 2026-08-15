@@ -1,6 +1,6 @@
 {
-  "updated": "2026-08-14T06:54:02.955006Z",
-  "count": 76,
+  "updated": "2026-08-15T05:50:47.718621Z",
+  "count": 81,
   "posts": [
     {
       "sig": "reelfeat:We name the one constrai",
@@ -1385,6 +1385,101 @@
       },
       "engagement": 0,
       "_ig_attempted": true
+    },
+    {
+      "sig": "cons:Traffic",
+      "layout": "statement",
+      "file": "creatives/gt_auto_20260814_130139.jpg",
+      "is_reel": false,
+      "at": "2026-08-14T13:01:48.128919Z",
+      "caption": "Is traffic your #1 constraint right now?\n\nThe tell: the top of the funnel is thinner than the model needs. It's one of t",
+      "permalink": "",
+      "ig": null,
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 0,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "car:verdict",
+      "layout": "carousel:verdict",
+      "file": "creatives/gt_car_20260814160039_1.jpg",
+      "is_reel": false,
+      "at": "2026-08-14T16:00:46.233795Z",
+      "caption": "Most tools show you what agrees with them.\n\nGrowth Terminal names the constraint, lists the evidence for the call, then ",
+      "permalink": "",
+      "ig": null,
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 0,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "prodsoon:Unit Economics Cockpit",
+      "layout": "prodsoon",
+      "file": "creatives/gt_auto_20260814_170108.jpg",
+      "is_reel": false,
+      "at": "2026-08-14T17:01:15.139566Z",
+      "caption": "Coming soon to the Growth Terminal store: Unit Economics Cockpit.\n\nCAC, LTV and payback in one view, so you know if grow",
+      "permalink": "",
+      "ig": null,
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 0,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "reelcard:Retention",
+      "layout": "reel:card",
+      "file": "creatives/gt_reel_20260814_210104.jpg",
+      "is_reel": true,
+      "at": "2026-08-14T21:01:32.183841Z",
+      "caption": "This is what a Growth Terminal diagnosis looks like, one constraint, named, priced, and verified against real revenue. H",
+      "permalink": "",
+      "ig": null,
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 0,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "prodclaim:funnel:Stop guessing which fu",
+      "layout": "prodclaim",
+      "file": "creatives/gt_auto_20260815_010113.jpg",
+      "is_reel": false,
+      "at": "2026-08-15T01:01:20.251972Z",
+      "caption": "Your funnel has one step leaking more than the rest. The Funnel & Conversion Tracker finds it, tells you what fixing it ",
+      "permalink": "",
+      "ig": null,
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 0,
+      "_ig_attempted": true
     }
   ],
   "by_format": [
@@ -1453,14 +1548,6 @@
       "avg_engagement": 1.6
     },
     {
-      "layout": "prodclaim",
-      "posts": 4,
-      "engagement": 6,
-      "ig_engagement": 0,
-      "fb_engagement": 6,
-      "avg_engagement": 1.5
-    },
-    {
       "layout": "carousel:plan",
       "posts": 2,
       "engagement": 3,
@@ -1469,11 +1556,11 @@
       "avg_engagement": 1.5
     },
     {
-      "layout": "prodsoon",
-      "posts": 4,
-      "engagement": 5,
+      "layout": "prodclaim",
+      "posts": 5,
+      "engagement": 6,
       "ig_engagement": 0,
-      "fb_engagement": 5,
+      "fb_engagement": 6,
       "avg_engagement": 1.2
     },
     {
@@ -1509,12 +1596,20 @@
       "avg_engagement": 1.0
     },
     {
+      "layout": "prodsoon",
+      "posts": 5,
+      "engagement": 5,
+      "ig_engagement": 0,
+      "fb_engagement": 5,
+      "avg_engagement": 1.0
+    },
+    {
       "layout": "reel:card",
-      "posts": 8,
+      "posts": 9,
       "engagement": 6,
       "ig_engagement": 0,
       "fb_engagement": 6,
-      "avg_engagement": 0.8
+      "avg_engagement": 0.7
     },
     {
       "layout": "carousel:twelve",
@@ -1542,7 +1637,7 @@
     },
     {
       "layout": "statement",
-      "posts": 9,
+      "posts": 10,
       "engagement": 2,
       "ig_engagement": 0,
       "fb_engagement": 2,
@@ -1571,10 +1666,18 @@
       "ig_engagement": 0,
       "fb_engagement": 0,
       "avg_engagement": 0.0
+    },
+    {
+      "layout": "carousel:verdict",
+      "posts": 1,
+      "engagement": 0,
+      "ig_engagement": 0,
+      "fb_engagement": 0,
+      "avg_engagement": 0.0
     }
   ],
   "collection": {
-    "ig_attempted": 76,
+    "ig_attempted": 81,
     "ig_succeeded": 0,
     "ig_errors": [
       {
@@ -1658,7 +1761,7 @@
         "message": "Invalid OAuth access token - Cannot parse access token"
       }
     ],
-    "ig_error_count": 76,
-    "fb_succeeded": 66
+    "ig_error_count": 81,
+    "fb_succeeded": 71
   }
 }
