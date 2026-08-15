@@ -1,14 +1,12 @@
 {
-  "generated_at": "2026-08-15T01:01:13.865Z",
-  "media_file": "creatives/gt_auto_20260815_010113.jpg",
-  "is_reel": false,
-  "layout": "prodclaim",
-  "editorial_bg": null,
-  "person": null,
-  "qa": null,
-  "caption": "Your funnel has one step leaking more than the rest. The Funnel & Conversion Tracker finds it, tells you what fixing it is worth in dollars, and lets you simulate the upside before you spend a cent.\n\n8 tabs, built in Google Sheets™. $79, instant download. Link in bio.\n\n→ growthterminal.io",
-  "hashtags": "#growthterminal #bootstrappedfounder #marketingops #googlesheetstips",
-  "first_comment": "Diagnosis before treatment, even in a spreadsheet.",
-  "alt_text": "Stop guessing which funnel step to fix .",
-  "sig": "prodclaim:funnel:Stop guessing which fu"
+  "generated_at": "2026-08-15T13:01:20.700Z",
+  "media_file": "creatives/gt_reel_20260815_130120.jpg",
+  "video_file": "creatives/gt_reel_20260815_130120.mp4",
+  "is_reel": true,
+  "layout": "reel:feature",
+  "caption": "We find the one constraint capping your revenue, price the fix, and grade every call against real revenue. Diagnosis, not a dashboard. Run the free 60-second diagnostic.\n\nDiagnose your #1 constraint free. Link in bio.",
+  "hashtags": "#growthterminal #marketingops #foundertips #bootstrappedfounder",
+  "first_comment": "What do you think your #1 constraint is right now?",
+  "alt_text": "",
+  "sig": "reelfeat:We name the one constrai"
 }
