@@ -1291,5 +1291,22 @@
       "markusreidgt": "18024796187900792"
     },
     "errors": {}
+  },
+  {
+    "at": "2026-08-16T23:32:08.713Z",
+    "text": "Revenue is not random. It is a handful of leading indicators with a delay on them.\n\nStop staring at revenue. It already happened.\n\nWatch qualified conversations booked instead. That is the number you can still change this week, and it is the one that shows up in revenue next month.",
+    "parts": [
+      "Revenue is not random. It is a handful of leading indicators with a delay on them.\n\nStop staring at revenue. It already happened.\n\nWatch qualified conversations booked instead. That is the number you can still change this week, and it is the one that shows up in revenue next month."
+    ],
+    "isThread": false,
+    "pillar": "forecast",
+    "kind": "leading",
+    "accounts": [
+      "markusreidgt"
+    ],
+    "ids": {
+      "markusreidgt": "17986411326044510"
+    },
+    "errors": {}
   }
 ]
