@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-08-16T17:01:09.409Z",
-  "media_file": "creatives/gt_auto_20260816_170109.jpg",
+  "generated_at": "2026-08-16T21:01:08.027Z",
+  "media_file": "creatives/gt_auto_20260816_210108.jpg",
   "is_reel": false,
-  "layout": "contrast",
+  "layout": "trajectory",
   "editorial_bg": null,
   "person": null,
   "qa": null,
-  "caption": "The bottleneck is rarely where it hurts.\n\nChurn shows up at the end of the journey, but it usually starts at a weak activation moment weeks earlier. Growth Terminal traces the pain back to its cause so you fix the source, not the symptom.\n\n→ growthterminal.io",
-  "hashtags": "#growthterminal #saasfounder #consultingbusiness #marketingops",
-  "first_comment": "Where does it hurt, and are you sure that's where it starts?",
-  "alt_text": "THE PAIN AND THE CAUSE ARE NOT THE SAME PLACE.",
-  "sig": "con:THE PAIN AND THE CAUSE ARE NOT THE SAME "
+  "caption": "Everyone in growth makes confident calls. Almost no one checks them.\n\nGrowth Terminal logs every forecast and tracks it against your real revenue, verified or missed. You build trust in the calls that keep landing and catch the ones that don't. Accountability is the feature.\n\nDiagnose your #1 constraint free. Link in bio.",
+  "hashtags": "#growthterminal #revenueoperations #startupmetrics #googlesheetstips",
+  "first_comment": "When we're wrong, the tool says so. That's the point.",
+  "alt_text": "The forecast, checked against real revenue.",
+  "sig": "traj:224"
 }
