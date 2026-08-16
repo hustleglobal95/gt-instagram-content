@@ -1206,5 +1206,22 @@
       "markusreidgt": "18120550525850863"
     },
     "errors": {}
+  },
+  {
+    "at": "2026-08-16T15:50:07.924Z",
+    "text": "Revenue is not random. It is a handful of leading indicators with a delay on them.\n\nStop staring at churn. It already happened.\n\nWatch accounts that hit first value in week one instead. That is the number you can still change this week, and it is the one that shows up in churn next month.",
+    "parts": [
+      "Revenue is not random. It is a handful of leading indicators with a delay on them.\n\nStop staring at churn. It already happened.\n\nWatch accounts that hit first value in week one instead. That is the number you can still change this week, and it is the one that shows up in churn next month."
+    ],
+    "isThread": false,
+    "pillar": "forecast",
+    "kind": "leading",
+    "accounts": [
+      "markusreidgt"
+    ],
+    "ids": {
+      "markusreidgt": "18024441692896081"
+    },
+    "errors": {}
   }
 ]
