@@ -1151,5 +1151,22 @@
       "markusreidgt": "18075984569359600"
     },
     "errors": {}
+  },
+  {
+    "at": "2026-08-16T11:32:19.537Z",
+    "text": "People do not abandon what they have actually used.\n\nMost churn is not a product failure late. It is a first-week failure that took three months to show up on the invoice.\n\nMeasure how many reach real value in week one. That number predicts the renewal.",
+    "parts": [
+      "People do not abandon what they have actually used.\n\nMost churn is not a product failure late. It is a first-week failure that took three months to show up on the invoice.\n\nMeasure how many reach real value in week one. That number predicts the renewal."
+    ],
+    "isThread": false,
+    "pillar": "constraint",
+    "kind": "activation",
+    "accounts": [
+      "markusreidgt"
+    ],
+    "ids": {
+      "markusreidgt": "18131931904651628"
+    },
+    "errors": {}
   }
 ]
