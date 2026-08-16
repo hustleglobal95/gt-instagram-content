@@ -1168,5 +1168,22 @@
       "markusreidgt": "18131931904651628"
     },
     "errors": {}
+  },
+  {
+    "at": "2026-08-16T13:11:13.713Z",
+    "text": "How to write a hook without guessing:\n\n1. Name the exact person.\n2. Name the exact pain.\n3. Promise the exact outcome.\n\n“For founders flat after 90 days of posting: your problem isn’t reach.”",
+    "parts": [
+      "How to write a hook without guessing:\n\n1. Name the exact person.\n2. Name the exact pain.\n3. Promise the exact outcome.\n\n“For founders flat after 90 days of posting: your problem isn’t reach.”"
+    ],
+    "isThread": false,
+    "pillar": "playbook",
+    "kind": "howto",
+    "accounts": [
+      "markusreidgt"
+    ],
+    "ids": {
+      "markusreidgt": "17886854757673070"
+    },
+    "errors": {}
   }
 ]
