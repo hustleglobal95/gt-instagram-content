@@ -1308,5 +1308,26 @@
       "markusreidgt": "17986411326044510"
     },
     "errors": {}
+  },
+  {
+    "at": "2026-08-17T02:06:13.847Z",
+    "text": "Nobody is accountable to a twelve-slide report.\n\nWhat a useful review looks like",
+    "parts": [
+      "Nobody is accountable to a twelve-slide report.\n\nWhat a useful review looks like",
+      "One page. What we said was limiting us. What we changed. What moved. What’s limiting us now.\n\nThat’s it. Four lines.",
+      "The second line is where most reviews quietly fail. \"What we changed\" has to be specific enough that somebody could disagree with it.",
+      "The third is the one people skip. If you never check whether it moved, you’re collecting stories, not evidence, and you’ll try the same fix again next year.",
+      "Length is how teams hide from line three.\n\nIf the review doesn’t fit on a page, it isn’t a review, it’s a performance."
+    ],
+    "isThread": true,
+    "pillar": "systems",
+    "kind": "thread",
+    "accounts": [
+      "markusreidgt"
+    ],
+    "ids": {
+      "markusreidgt": "18090098963449847"
+    },
+    "errors": {}
   }
 ]
