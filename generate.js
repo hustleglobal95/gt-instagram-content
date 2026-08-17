@@ -1684,7 +1684,13 @@ if (require.main === module) (async () => {
   // ~1 in 3 posts is a store/product ad (rest is brand/value content). Product ads are static.
   const PRODUCT_RATE = parseFloat(process.env.GT_PRODUCT_RATE || '0.33');
   const wantProduct = rng(((now.getTime() >>> 0) ^ 0x50D0C7A) >>> 0)() < PRODUCT_RATE;
-  const REEL_RATE = parseFloat(process.env.GT_REEL_RATE || '0.4'); // ~40% of the rest are Reels
+  /* Raised from 0.4. Reels are the only surface Instagram gives an account with
+     no audience, since a static post reaches followers and an account with eight
+     of them reaches eight people. The measured share was 27 percent, not 40,
+     because product posts are chosen first and Reels take this share of what is
+     left. reel:feature is also the strongest format in the engagement data that
+     exists, thin as it is. Override with GT_REEL_RATE if this proves wrong. */
+  const REEL_RATE = parseFloat(process.env.GT_REEL_RATE || '0.6');
   // Only attempt a Reel if ffmpeg is available, otherwise fall back to a static post (never crash the run).
   const hasFfmpeg = ffmpegAvailable();
   if (!hasFfmpeg) console.log('note: ffmpeg not found, posting a static image this run');

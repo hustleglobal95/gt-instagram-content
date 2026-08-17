@@ -577,6 +577,190 @@ const EXTENSIONS = [
         sig: 'ba:' + b.leftValue + '>' + b.rightValue
       };
     }
+  },
+
+  /* ---------------------------------------------------------------------------
+     The two entries below were added by hand from concepts the owner brought in,
+     not by the inspiration loop. They are marked keep:true, which the cull in
+     ad_structure.js honours: a narrowing pass may retire any other format but
+     must leave these two in the rotation.
+
+     Both are read off the STRUCTURE of ads that work, never their content. No
+     copy, claim, mark or figure from the source ads appears here.
+     --------------------------------------------------------------------------- */
+  {
+    name: 'proofcards',
+    briefId: 'owner_proof_notifications',
+    ready: true,
+    keep: true,
+    note: 'A product window with outcome cards floating off its edges. Read off the '
+        + 'software landing page pattern where the interface carries the proof and the '
+        + 'cards say what came out of it. The cards here are product events the engine '
+        + 'genuinely emits, a constraint being named, a gate passing, a forecast being '
+        + 'graded. Deliberately NOT revenue notifications: this brand does not get to '
+        + 'post a payment figure it cannot show the working for.',
+
+    /* p: { eyebrow, headline, sub, window[], cards[{title,sub}], foot } */
+    render(p, ctx) {
+      const { ORANGE, INK, WHITE } = PALETTE;
+      const { logo, grain } = ctx;
+      const rows = (p.window || []).map((w, i) => `
+        <div style="display:flex;align-items:center;gap:14px;padding:15px 20px;
+          border-top:${i ? '1px solid rgba(23,19,15,.09)' : '0'}">
+          <span style="width:9px;height:9px;border-radius:50%;flex:none;
+            background:${i === 0 ? ORANGE : 'rgba(23,19,15,.22)'}"></span>
+          <span style="font-size:25px;font-weight:${i === 0 ? 700 : 500};
+            color:${i === 0 ? INK : 'rgba(23,19,15,.62)'}">${w}</span>
+        </div>`).join('');
+      const card = (c, top, left) => `
+        <div style="position:absolute;top:${top}px;left:${left}px;background:${WHITE};
+          border-radius:18px;padding:20px 24px;box-shadow:0 26px 54px -20px rgba(10,8,6,.46);
+          display:flex;align-items:center;gap:16px;width:330px">
+          <span style="width:44px;height:44px;border-radius:12px;background:${ORANGE};flex:none"></span>
+          <span>
+            <span style="display:block;font-size:26px;font-weight:750;color:${INK};letter-spacing:-.01em">${c.title}</span>
+            <span style="display:block;font-size:21px;font-weight:500;color:rgba(23,19,15,.55);margin-top:3px">${c.sub}</span>
+          </span>
+        </div>`;
+      const cards = (p.cards || []);
+      return `<div class="stage" style="background:${INK};color:${WHITE};padding:84px 74px;display:flex;flex-direction:column">
+        ${grain}
+        <div class="toplogo" style="position:relative;display:flex;justify-content:center">${logo(ORANGE, WHITE)}</div>
+        <div style="position:relative;margin-top:44px">
+          <div style="font-size:22px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+            color:${ORANGE}">${p.eyebrow}</div>
+          <div style="font-size:64px;font-weight:800;letter-spacing:-.028em;line-height:1.06;margin-top:16px">${p.headline}</div>
+          <div style="font-size:29px;font-weight:500;line-height:1.42;color:rgba(253,252,252,.66);margin-top:18px;max-width:23ch">${p.sub}</div>
+        </div>
+        <div style="position:relative;flex:1;margin-top:34px">
+          <div style="position:absolute;top:26px;left:236px;right:-44px;bottom:-84px;background:${WHITE};
+            border-radius:20px;overflow:hidden;box-shadow:0 36px 70px -24px rgba(10,8,6,.55);
+            display:flex;flex-direction:column">
+            <div style="display:flex;align-items:center;gap:9px;padding:16px 20px;background:#F3F1ED;
+              border-bottom:1px solid rgba(23,19,15,.08);flex:none">
+              <span style="width:13px;height:13px;border-radius:50%;background:#FF5F57"></span>
+              <span style="width:13px;height:13px;border-radius:50%;background:#FEBC2E"></span>
+              <span style="width:13px;height:13px;border-radius:50%;background:#28C840"></span>
+            </div>
+            <div style="display:flex;flex:1;min-height:0">
+              <!-- A dead strip on the window's left. The floating cards overlap this and
+                   never the rows, which is what stopped the second card sitting on top of
+                   the text the first time this was rendered. -->
+              <div style="width:104px;flex:none;background:#F7F5F1;border-right:1px solid rgba(23,19,15,.07)"></div>
+              <div style="flex:1;min-width:0;padding-top:4px">${rows}</div>
+            </div>
+          </div>
+          ${cards[0] ? card(cards[0], 6, -26) : ''}
+          ${cards[1] ? card(cards[1], 232, 0) : ''}
+        </div>
+        <div style="position:relative;text-align:center;font-size:27px;font-weight:600;
+          color:rgba(253,252,252,.84)">${p.foot}</div>
+      </div>`;
+    },
+
+    bank: [
+      { eyebrow: 'Inside the portal',
+        headline: 'One constraint,<br>named and priced.',
+        sub: 'It reads the numbers already in your sheet.',
+        window: ['Constraint named: conversion', 'Severity 7 of 10, medium confidence', 'Revenue impact priced', 'Root causes listed', 'Evidence for and against', 'What would prove this wrong', 'Ninety day plan built', 'Gates set for weeks 4, 8 and 12'],
+        cards: [{ title: 'Constraint named', sub: 'severity 7 of 10' },
+                { title: 'Plan built', sub: 'ninety days, three gates' }],
+        foot: 'growthterminal.io',
+        cap: 'One constraint, named and priced.\n\nGrowth Terminal reads the numbers your business already keeps and names the single thing capping revenue right now, then builds the ninety days of work against it. Nothing to upload and nothing to migrate.',
+        fc: 'If you had to name the one thing capping your revenue this quarter, what would you say?' },
+
+      { eyebrow: 'It grades itself',
+        headline: 'The plan tells you<br>when to stop.',
+        sub: 'Checkpoints at weeks four, eight and twelve.',
+        window: ['Gate 1, week 4: passed', 'Gate 2, week 8: question open', 'Gate 3, week 12: not due', 'Forecast logged for grading', 'Verdict recorded', 'Checked against real revenue', 'Miss ledger updated', 'Calibration recalculated'],
+        cards: [{ title: 'Gate passed', sub: 'week 4, plan continues' },
+                { title: 'Forecast logged', sub: 'graded on real revenue' }],
+        foot: 'growthterminal.io',
+        cap: 'The plan tells you when to stop.\n\nEvery ninety day plan carries checkpoints at weeks four, eight and twelve. Each one has a question attached, and if the answer is no the plan says stop and re-diagnose rather than keep spending. Most plans never admit they were wrong.',
+        fc: 'When did you last stop a plan that was not working, instead of giving it another month?' }
+    ],
+
+    pick(r, pick) {
+      const b = pick(this.bank, r);
+      return {
+        layout: this.name,
+        eyebrow: b.eyebrow, headline: b.headline, sub: b.sub,
+        window: b.window, cards: b.cards, foot: b.foot,
+        caption: b.cap, first_comment: b.fc,
+        sig: 'proof:' + String(b.headline).replace(/<[^>]+>/g, ' ').slice(0, 28)
+      };
+    }
+  },
+
+  {
+    name: 'bigquote',
+    briefId: 'owner_bigtype_attribution',
+    ready: true,
+    keep: true,
+    note: 'Wall of condensed type with a small attribution bubble pointing at it. The '
+        + 'structure is a quote plus who is qualified to say it, and the bubble is what '
+        + 'makes the quote land. IMPORTANT: every line in this bank is something Growth '
+        + 'Terminal itself says, attributed to Growth Terminal. Do not seed this with a '
+        + 'customer testimonial until there is a real, attributable one, because this '
+        + 'layout is built to make a claim look credible and that is exactly the wrong '
+        + 'thing to point at an invented quote.',
+
+    /* p: { quote, whoName, whoMeta, foot } */
+    render(p, ctx) {
+      const { ORANGE, INK, WHITE, CREAM } = PALETTE;
+      const { logo, grain } = ctx;
+      return `<div class="stage" style="background:${CREAM};color:${INK};padding:84px 70px;display:flex;flex-direction:column">
+        ${grain}
+        <div class="toplogo" style="position:relative;display:flex;justify-content:center">${logo(ORANGE, INK)}</div>
+        <div style="position:relative;flex:1;display:flex;flex-direction:column;justify-content:center">
+          <div style="position:relative;display:flex;justify-content:flex-end;margin-bottom:26px;padding-right:26px">
+            <span style="position:relative;background:${INK};color:${WHITE};border-radius:20px;
+              padding:18px 26px;max-width:460px">
+              <span style="display:block;font-size:30px;font-weight:750;letter-spacing:-.012em">${p.whoName}</span>
+              <span style="display:block;font-size:24px;font-weight:500;color:rgba(253,252,252,.6);margin-top:2px">${p.whoMeta}</span>
+              <span style="position:absolute;bottom:-13px;left:56px;width:0;height:0;
+                border-left:15px solid transparent;border-right:15px solid transparent;
+                border-top:15px solid ${INK}"></span>
+            </span>
+          </div>
+          <div style="font-size:${p.size || 108}px;font-weight:900;line-height:.95;letter-spacing:-.045em;
+            text-transform:uppercase;">${p.quote}</div>
+        </div>
+        <div style="position:relative;text-align:center;font-size:27px;font-weight:600;
+          color:rgba(23,19,15,.6)">${p.foot}</div>
+      </div>`;
+    },
+
+    bank: [
+      { quote: '&ldquo;We write down<br>every forecast<br>and grade it<br>later.&rdquo;',
+        whoName: 'Growth Terminal', whoMeta: 'the constraint engine', size: 104,
+        foot: 'growthterminal.io',
+        cap: 'We write down every forecast and grade it later.\n\nEvery call the engine makes is logged and checked against what actually happened. Most tools tell you what they think. This one keeps a record of when it was wrong.',
+        fc: 'Has any tool you pay for ever shown you its misses?' },
+
+      { quote: '&ldquo;The plan<br>tells you<br>when to<br>stop.&rdquo;',
+        whoName: 'Growth Terminal', whoMeta: 'the ninety day plan', size: 118,
+        foot: 'growthterminal.io',
+        cap: 'The plan tells you when to stop.\n\nCheckpoints at weeks four, eight and twelve, each with a question attached. If the answer is no, the plan says stop and re-diagnose instead of spending another month on it.',
+        fc: 'What would it take for you to call time on something that is not working?' },
+
+      { quote: '&ldquo;One<br>constraint.<br>Not a list<br>of ten.&rdquo;',
+        whoName: 'Growth Terminal', whoMeta: 'twelve categories, one verdict', size: 120,
+        foot: 'growthterminal.io',
+        cap: 'One constraint. Not a list of ten.\n\nThe engine scores twelve constraint categories against your numbers and names the single one capping revenue right now. A list of ten problems is a way of avoiding the decision.',
+        fc: 'How many growth priorities are on your list this quarter?' }
+    ],
+
+    pick(r, pick) {
+      const b = pick(this.bank, r);
+      return {
+        layout: this.name,
+        quote: b.quote, whoName: b.whoName, whoMeta: b.whoMeta, size: b.size,
+        foot: b.foot,
+        caption: b.cap, first_comment: b.fc,
+        sig: 'bq:' + String(b.quote).replace(/<[^>]+>/g, ' ').replace(/&[a-z]+;/g, '').trim().slice(0, 28)
+      };
+    }
   }
 ];
 
