@@ -615,7 +615,7 @@ const EXTENSIONS = [
       const card = (c, top, left) => `
         <div style="position:absolute;top:${top}px;left:${left}px;background:${WHITE};
           border-radius:18px;padding:20px 24px;box-shadow:0 26px 54px -20px rgba(10,8,6,.46);
-          display:flex;align-items:center;gap:16px;width:330px">
+          display:flex;align-items:center;gap:16px;width:366px">
           <span style="width:44px;height:44px;border-radius:12px;background:${ORANGE};flex:none"></span>
           <span>
             <span style="display:block;font-size:26px;font-weight:750;color:${INK};letter-spacing:-.01em">${c.title}</span>
@@ -650,8 +650,8 @@ const EXTENSIONS = [
               <div style="flex:1;min-width:0;padding-top:4px">${rows}</div>
             </div>
           </div>
-          ${cards[0] ? card(cards[0], 6, -26) : ''}
-          ${cards[1] ? card(cards[1], 232, 0) : ''}
+          ${cards[0] ? card(cards[0], 74, -30) : ''}
+          ${cards[1] ? card(cards[1], 286, -30) : ''}
         </div>
         <div style="position:relative;text-align:center;font-size:27px;font-weight:600;
           color:rgba(253,252,252,.84)">${p.foot}</div>
