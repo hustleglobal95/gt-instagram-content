@@ -1346,5 +1346,22 @@
       "markusreidgt": "18131525392653867"
     },
     "errors": {}
+  },
+  {
+    "at": "2026-08-17T04:21:18.072Z",
+    "text": "An average is a place to hide.\n\nA 3% conversion rate is often 8% from one source and almost nothing from the other three, and the blended number tells you to do more of everything.\n\nSplit it before you act. The constraint lives in a segment, never in the average.",
+    "parts": [
+      "An average is a place to hide.\n\nA 3% conversion rate is often 8% from one source and almost nothing from the other three, and the blended number tells you to do more of everything.\n\nSplit it before you act. The constraint lives in a segment, never in the average."
+    ],
+    "isThread": false,
+    "pillar": "bi",
+    "kind": "segment",
+    "accounts": [
+      "markusreidgt"
+    ],
+    "ids": {
+      "markusreidgt": "17950905861250010"
+    },
+    "errors": {}
   }
 ]
