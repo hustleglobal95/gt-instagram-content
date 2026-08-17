@@ -1683,7 +1683,18 @@ if (require.main === module) (async () => {
   const stampStr = stamp(now);
   // ~1 in 3 posts is a store/product ad (rest is brand/value content). Product ads are static.
   const PRODUCT_RATE = parseFloat(process.env.GT_PRODUCT_RATE || '0.33');
-  const wantProduct = rng(((now.getTime() >>> 0) ^ 0x50D0C7A) >>> 0)() < PRODUCT_RATE;
+  /* An explicit request beats the dice.
+   *
+   *  Running this workflow by hand used to mean "post something" and hope. There
+   *  was no way to ask for a Reel, so a run that produced a static image exited
+   *  zero and reported success, which is indistinguishable from a run that did
+   *  what you wanted. Asking for one thing and being told a different thing
+   *  succeeded is the worst shape a tool can have. */
+  const FORCE = String(process.env.GT_FORCE_MODE || 'auto').trim().toLowerCase();
+  if (FORCE !== 'auto') console.log('forced mode: ' + FORCE);
+  const wantProduct = FORCE === 'product' ? true
+    : FORCE !== 'auto' ? false
+    : rng(((now.getTime() >>> 0) ^ 0x50D0C7A) >>> 0)() < PRODUCT_RATE;
   /* Raised from 0.4. Reels are the only surface Instagram gives an account with
      no audience, since a static post reaches followers and an account with eight
      of them reaches eight people. The measured share was 27 percent, not 40,
@@ -1693,8 +1704,16 @@ if (require.main === module) (async () => {
   const REEL_RATE = parseFloat(process.env.GT_REEL_RATE || '0.6');
   // Only attempt a Reel if ffmpeg is available, otherwise fall back to a static post (never crash the run).
   const hasFfmpeg = ffmpegAvailable();
+  /* If a Reel was asked for and the machine cannot make one, stop. Falling back
+     to a static here is how a run reports success for something it did not do. */
+  if (FORCE === 'reel' && !hasFfmpeg) {
+    console.error('A Reel was requested but ffmpeg is not available on this runner. Refusing to post a static image and call it a Reel.');
+    process.exit(1);
+  }
   if (!hasFfmpeg) console.log('note: ffmpeg not found, posting a static image this run');
-  const wantReel = !wantProduct && hasFfmpeg && rng(((now.getTime() >>> 0) ^ 0xA5A5A5A5) >>> 0)() < REEL_RATE;
+  const wantReel = FORCE === 'reel' ? true
+    : FORCE !== 'auto' ? false
+    : (!wantProduct && hasFfmpeg && rng(((now.getTime() >>> 0) ^ 0xA5A5A5A5) >>> 0)() < REEL_RATE);
   // Feature ad (portrait + full pitch). Only when ./people has faces; disable with GT_FEATURE_RATE=0.
   const FEATURE_RATE = parseFloat(process.env.GT_FEATURE_RATE || '0.18');
   const wantFeature = !wantProduct && !wantReel && listPeople().length > 0 &&
