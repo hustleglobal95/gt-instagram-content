@@ -5,6 +5,13 @@ name: GT Auto-Post (4x/day)
 # GitHub API. No internal schedule — cron-job.org is the sole trigger.
 on:
   workflow_dispatch:        # fired by cron-job.org (and lets you run it by hand)
+    inputs:
+      mode:
+        description: "What to post. auto keeps the normal dice roll."
+        required: false
+        default: auto
+        type: choice
+        options: [auto, reel, static, product]
 
 # Don't let two runs overlap (they both push to the repo).
 concurrency:
@@ -78,6 +85,7 @@ jobs:
           GT_GITHUB_REPO:         ${{ secrets.GT_GITHUB_REPO }}
           GT_GITHUB_BRANCH:       ${{ github.ref_name }}
           GT_API_BASE:            ${{ secrets.GT_API_BASE }}
+          GT_FORCE_MODE:          ${{ inputs.mode }}
           GT_DRY_RUN:             ${{ secrets.GT_DRY_RUN }}
           # Facebook Page (leave unset to skip FB posting)
           GT_FB_PAGE_ID:          ${{ secrets.GT_FB_PAGE_ID }}
