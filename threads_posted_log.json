@@ -1384,5 +1384,22 @@
       "markusreidgt": "18105662429599191"
     },
     "errors": {}
+  },
+  {
+    "at": "2026-08-17T13:23:01.317Z",
+    "text": "“Churn is killing us.”\n\nNo — that’s the symptom.\n\nThe real problem is an onboarding problem. And more effort on the wrong lever just makes the drop steeper.\n\nFix it at the source: people don’t leave what they’ve actually activated.",
+    "parts": [
+      "“Churn is killing us.”\n\nNo — that’s the symptom.\n\nThe real problem is an onboarding problem. And more effort on the wrong lever just makes the drop steeper.\n\nFix it at the source: people don’t leave what they’ve actually activated."
+    ],
+    "isThread": false,
+    "pillar": "constraint",
+    "kind": "pas",
+    "accounts": [
+      "markusreidgt"
+    ],
+    "ids": {
+      "markusreidgt": "18402449287084800"
+    },
+    "errors": {}
   }
 ]
