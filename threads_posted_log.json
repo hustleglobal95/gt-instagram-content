@@ -1490,5 +1490,22 @@
       "markusreidgt": "18087374099664542"
     },
     "errors": {}
+  },
+  {
+    "at": "2026-08-17T21:52:57.536Z",
+    "text": "“We need more traffic.”\n\nNo — that’s the symptom.\n\nThe real problem is a conversion problem. And more effort on the wrong lever just makes the drop steeper.\n\nFix it at the source: pouring more water into a leaking bucket just wastes more water.",
+    "parts": [
+      "“We need more traffic.”\n\nNo — that’s the symptom.\n\nThe real problem is a conversion problem. And more effort on the wrong lever just makes the drop steeper.\n\nFix it at the source: pouring more water into a leaking bucket just wastes more water."
+    ],
+    "isThread": false,
+    "pillar": "constraint",
+    "kind": "pas",
+    "accounts": [
+      "markusreidgt"
+    ],
+    "ids": {
+      "markusreidgt": "18075398537398485"
+    },
+    "errors": {}
   }
 ]
