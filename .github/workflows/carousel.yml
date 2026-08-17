@@ -1,5 +1,13 @@
 name: GT Carousel (1x/day)
 
+# The run title carries the dry run state. The checkbox on the Run workflow form
+# defaults to ticked, which is a deliberate guard, but once the run finishes a
+# dry run and a real one looked identical in the Actions list: both green, both
+# "completed". Somebody fired this by hand, watched it succeed, and reasonably
+# concluded the carousel had posted. It had been built and never published.
+run-name: >-
+  GT Carousel${{ inputs.dry_run && ' — DRY RUN, nothing was published' || '' }}
+
 # One carousel a day, separate from the 4x/day single-image poster.
 #
 # WHY IT IS ITS OWN WORKFLOW
@@ -23,7 +31,7 @@ on:
   workflow_dispatch:
     inputs:
       dry_run:
-        description: 'Build and check everything, publish nothing'
+        description: 'DRY RUN. Leave ticked to build and check only. UNTICK THIS TO ACTUALLY POST.'
         type: boolean
         default: true
 
@@ -100,6 +108,19 @@ jobs:
           GT_FB_PAGE_ID:          ${{ secrets.GT_FB_PAGE_ID }}
           GT_FB_PAGE_ACCESS_TOKEN: ${{ secrets.GT_FB_PAGE_ACCESS_TOKEN }}
         run: python carousel_post.py
+
+      - name: Say plainly whether anything was published
+        if: always()
+        run: |
+          if [ "${{ inputs.dry_run }}" = "true" ]; then
+            echo "### Dry run. Nothing was published." >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "The carousel was built, screened and committed, and the panels are in the repo. No Instagram or Facebook post was created. Untick **DRY RUN** on the Run workflow form to publish." >> $GITHUB_STEP_SUMMARY
+          else
+            echo "### Live run. Publishing was attempted." >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "Check posted_log.json for the media id. A carousel that published has one; a carousel that did not is absent from that file." >> $GITHUB_STEP_SUMMARY
+          fi
 
       - name: Commit the posting record
         if: always()
