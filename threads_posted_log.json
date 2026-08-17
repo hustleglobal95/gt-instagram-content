@@ -1435,5 +1435,22 @@
       "markusreidgt": "18100337666349062"
     },
     "errors": {}
+  },
+  {
+    "at": "2026-08-17T17:41:38.745Z",
+    "text": "Most \"we need a new strategy\" conversations are really \"nobody did the last one\".",
+    "parts": [
+      "Most \"we need a new strategy\" conversations are really \"nobody did the last one\"."
+    ],
+    "isThread": false,
+    "pillar": "bi",
+    "kind": "note",
+    "accounts": [
+      "markusreidgt"
+    ],
+    "ids": {
+      "markusreidgt": "17897065197592600"
+    },
+    "errors": {}
   }
 ]
