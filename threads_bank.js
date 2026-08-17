@@ -26,6 +26,10 @@ const clamp = (s) => { // safety net so nothing ever exceeds the 500-char Thread
 // ---------- content pools (the growth-marketing substance) ----------
 
 // symptom → the real constraint → the one-line fix. Powers PAS / callout / reframe / diagnosis.
+/* The person behind the account. See threads_voice.js for who he is and, more
+   importantly, for what he is not allowed to claim. */
+const { I_OPENERS, ADMISSIONS, CLOSES_TRY, CLOSES_NOTE, BELIEFS } = require('./threads_voice');
+
 const CONSTRAINTS = [
   { sym: 'We need more traffic', real: 'conversion problem', fix: "pouring more water into a leaking bucket just wastes more water" },
   { sym: 'Our content isn\u2019t working', real: 'distribution problem', fix: "the post isn\u2019t weak, the spread is" },
@@ -168,6 +172,36 @@ const FORMATS = [
 // A high-retention Threads structure. Anatomy of each post:
 //   "N. THE X RULE"  ->  2-sentence body  ->  standalone kicker  ->  (n/7) counter
 // Five rules are drawn fresh from the pool per run, so the chain never repeats.
+/* ---------------------------------------------------------------------------
+   VOICE FORMATS. First person, with a stake in it.
+
+   These exist because @markusreidgt is a person's handle and the rest of this
+   bank is written by a company. Each one commits to something before it
+   teaches anything: an admission, a change of mind, a number of his own.
+
+   None of them may claim a client, a revenue figure, or an accuracy
+   percentage. The credibility here is built out of saying the small numbers
+   out loud, which is the same trade the product makes with its forecasts.
+   --------------------------------------------------------------------------- */
+FORMATS.push(
+  { pillar: 'authority', kind: 'admission', voice: 'markus', render: () => {
+    const c = pick(CONSTRAINTS);
+    return clamp(`${pick(I_OPENERS)}\n\nI kept treating "${c.sym}" as the thing to fix. It was the symptom. The actual constraint was ${art(c.real)} ${c.real}.\n\nMonths of effort at the wrong lever.\n\n${pick(CLOSES_NOTE)}`); } },
+
+  { pillar: 'authority', kind: 'belief', voice: 'markus', render: () =>
+    clamp(`${pick(BELIEFS)}\n\n${pick(ADMISSIONS)}\n\nThat is why I write the forecast down before I know whether it makes me look good.`) },
+
+  { pillar: 'community', kind: 'smallnumbers', voice: 'markus', render: () =>
+    clamp(`Everyone posting growth advice has a big account.\n\nI do not, yet.\n\nSo here is the trade: I will show you the method and the numbers it produces, including the flat weeks. You can decide if the method is worth anything before the numbers get impressive.\n\n${pick(CLOSES_NOTE)}`) },
+
+  { pillar: 'authority', kind: 'changedmind', voice: 'markus', render: () =>
+    clamp(`${pick(I_OPENERS)}\n\nI thought posting more was the lever. It is not. More of a post nobody stops for is more zero.\n\nWhat actually moved: fewer posts, one idea, and checking which ones earned a reply instead of which ones I liked.\n\n${pick(CLOSES_TRY)}`) },
+
+  { pillar: 'systems', kind: 'workingnote', voice: 'markus', render: () => {
+    const c = pick(CONSTRAINTS);
+    return clamp(`Working note.\n\nSomeone told me "${c.sym}" this week.\n\nNine times out of ten that is ${art(c.real)} ${c.real} wearing a different coat. ${cap(c.fix)}.\n\n${pick(ADMISSIONS)}`); } },
+);
+
 const RULES = [
   { n: 'THE DIAGNOSIS RULE',
     b: 'Name the constraint before you touch a tactic. Effort aimed at the wrong stage doesn’t just waste the money, it hides the real leak for another quarter.',
@@ -791,6 +825,18 @@ const MORE_THREADS = [
     clamp(`And go and be useful in other people’s replies. That’s the actual distribution channel early on, and it works while your own posts are still finding their footing.\n\nWhat are you building? Say it below.`),
   ] },
 ];
+
+/* A thread in his voice. The hook is an admission rather than a promise,
+   which is the shape of the two best performing threads in the log. */
+THREADS.push(
+  { pillar: 'authority', kind: 'thread', voice: 'markus', thread: () => [
+    clamp(`I have been posting daily for two weeks to a very small account.\n\nHere is what the numbers actually said, including the part that stung \u{1F447}`),
+    clamp(`First: most of my posts got zero engagement. Not low. Zero. I know because I collect the number every morning instead of looking at the ones that felt good.`),
+    clamp(`Second: the posts that did land were all the same shape. Longer, multi part, and they opened with something I got wrong rather than something I knew.`),
+    clamp(`Third: volume did nothing. Five posts a day into a small account is five posts nobody sees. That was the expensive lesson.`),
+    clamp(`So I cut the volume, kept the shape that worked, and I am logging it again from here.\n\n${pick(CLOSES_TRY)}`),
+  ] },
+);
 
 THREADS.push(...MORE_THREADS);
 
