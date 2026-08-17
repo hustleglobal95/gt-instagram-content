@@ -34,7 +34,15 @@ jobs:
       - name: Collect engagement
         env:
           GT_IG_ACCESS_TOKEN: ${{ secrets.GT_IG_ACCESS_TOKEN }}
-          GT_API_BASE: ${{ vars.GT_API_BASE }}
+          # secrets, not vars. autopost.yml and carousel.yml both read this
+          # from secrets, and posting works, so the value lives there. Reading
+          # it from vars resolved to empty here, collect_insights.py fell back
+          # to its default of graph.instagram.com, and a Facebook Graph token
+          # sent to the Instagram host cannot be parsed. That is the whole
+          # reason every Instagram lookup returned "Invalid OAuth access token
+          # - Cannot parse access token" while Facebook collection succeeded
+          # on the very same run: FB has a working default, IG does not.
+          GT_API_BASE: ${{ secrets.GT_API_BASE }}
           GT_FB_PAGE_ACCESS_TOKEN: ${{ secrets.GT_FB_PAGE_ACCESS_TOKEN }}
           GT_FB_API_BASE: ${{ vars.GT_FB_API_BASE }}
           GT_INSIGHTS_LOOKBACK: ${{ vars.GT_INSIGHTS_LOOKBACK }}
