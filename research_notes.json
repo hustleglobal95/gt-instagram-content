@@ -2,6 +2,39 @@
   "about": "Deep research knowledge base. Newest run first.",
   "runs": [
     {
+      "at": "2026-08-17T14:59:30.290Z",
+      "provider": "openai",
+      "articles": [
+        {
+          "title": "Does Your Website Still Matter in the Zero-Click Era?",
+          "url": "https://sparktoro.com/blog/does-your-website-still-matter-in-the-zero-click-era/"
+        }
+      ],
+      "findings": [
+        {
+          "id": "dr_20260817_1",
+          "name": "website as a central hub",
+          "device": "the website must be positioned as the primary source of truth for your brand",
+          "evidence": "SparkToro invested months and a budget to rebuild their website from scratch, indicating its importance as a content hub.",
+          "angle": "Create an ad campaign showcasing the website as the ultimate source for brand information and customer engagement.",
+          "url": "https://sparktoro.com/blog/does-your-website-still-matter-in-the-zero-click-era/"
+        }
+      ],
+      "log": [
+        "DEEP RESEARCH RUN 2026-08-17T14:59:30.290Z",
+        "feed ok: https://copyhackers.com/feed/ (14 items)",
+        "feed ok: https://adespresso.com/feed/ (10 items)",
+        "  junk title skipped: 15 Fresh Facebook Ad Examples to Inspire Your Next Campaign ",
+        "feed ok: https://sparktoro.com/blog/feed/ (10 items)",
+        "feed FAILED: https://www.marketingweek.com/feed/ (HTTP 403)",
+        "feed FAILED: https://www.growthunhinged.com/feed (HTTP 404)",
+        "feed FAILED: https://ariyh.com/feed (HTTP 404)",
+        "1 fresh articles collected",
+        "distilling with openai",
+        "  STRONG finding: website as a central hub"
+      ]
+    },
+    {
       "at": "2026-08-10T15:36:35.703Z",
       "provider": "openai",
       "articles": [],

@@ -1008,5 +1008,228 @@
     "note": "headline pattern from https://www.marketingdive.com/feeds/news/",
     "gtAngle": "",
     "status": "new"
+  },
+  {
+    "id": "rs_t9np9k",
+    "source": "rss",
+    "url": "https://www.marketingdive.com/news/why-starkist-chose-to-consolidate-its-marketing-at-one-agency/827873/",
+    "capturedAt": "2026-08-17T14:59:29.928Z",
+    "structure": {
+      "wordCount": 10,
+      "lineCount": 1,
+      "avgWordsPerLine": 10,
+      "hookLength": 10,
+      "signals": [],
+      "hasImage": false,
+      "hasVideo": false,
+      "platforms": []
+    },
+    "nearestExistingLayout": null,
+    "novelty": "no close match in the bank",
+    "note": "headline pattern from https://www.marketingdive.com/feeds/news/",
+    "gtAngle": "",
+    "status": "new"
+  },
+  {
+    "id": "rs_1rahsxv",
+    "source": "rss",
+    "url": "https://www.marketingdive.com/news/amazon-nike-reign-supreme-with-gen-alpha-teens-report/827946/",
+    "capturedAt": "2026-08-17T14:59:29.929Z",
+    "structure": {
+      "wordCount": 9,
+      "lineCount": 1,
+      "avgWordsPerLine": 9,
+      "hookLength": 9,
+      "signals": [],
+      "hasImage": false,
+      "hasVideo": false,
+      "platforms": []
+    },
+    "nearestExistingLayout": null,
+    "novelty": "no close match in the bank",
+    "note": "headline pattern from https://www.marketingdive.com/feeds/news/",
+    "gtAngle": "",
+    "status": "new"
+  },
+  {
+    "id": "rs_19fsumt",
+    "source": "rss",
+    "url": "https://www.marketingdive.com/news/jcpenney-parodies-off-price-retailers-with-wellness-themed-campaign/827878/",
+    "capturedAt": "2026-08-17T14:59:29.929Z",
+    "structure": {
+      "wordCount": 7,
+      "lineCount": 1,
+      "avgWordsPerLine": 7,
+      "hookLength": 7,
+      "signals": [],
+      "hasImage": false,
+      "hasVideo": false,
+      "platforms": []
+    },
+    "nearestExistingLayout": null,
+    "novelty": "no close match in the bank",
+    "note": "headline pattern from https://www.marketingdive.com/feeds/news/",
+    "gtAngle": "",
+    "status": "new"
+  },
+  {
+    "id": "rs_16k08q9",
+    "source": "rss",
+    "url": "https://www.marketingdive.com/news/crocs-hatches-new-mascot-niles-to-enrich-brand-storytelling/827895/",
+    "capturedAt": "2026-08-17T14:59:29.929Z",
+    "structure": {
+      "wordCount": 9,
+      "lineCount": 1,
+      "avgWordsPerLine": 9,
+      "hookLength": 9,
+      "signals": [],
+      "hasImage": false,
+      "hasVideo": false,
+      "platforms": []
+    },
+    "nearestExistingLayout": null,
+    "novelty": "no close match in the bank",
+    "note": "headline pattern from https://www.marketingdive.com/feeds/news/",
+    "gtAngle": "",
+    "status": "new"
+  },
+  {
+    "id": "rs_133kb4n",
+    "source": "rss",
+    "url": "https://www.marketingdive.com/news/campaign-trail-shinola-succession-star-set-the-pace-in-anxious-ad/827645/",
+    "capturedAt": "2026-08-17T14:59:29.929Z",
+    "structure": {
+      "wordCount": 12,
+      "lineCount": 1,
+      "avgWordsPerLine": 12,
+      "hookLength": 12,
+      "signals": [],
+      "hasImage": false,
+      "hasVideo": false,
+      "platforms": []
+    },
+    "nearestExistingLayout": null,
+    "novelty": "no close match in the bank",
+    "note": "headline pattern from https://www.marketingdive.com/feeds/news/",
+    "gtAngle": "",
+    "status": "new"
+  },
+  {
+    "id": "rs_64cpfn",
+    "source": "rss",
+    "url": "https://www.marketingdive.com/news/sociable-pinterest-partners-with-zillow-for-ad-targeting/827812/",
+    "capturedAt": "2026-08-17T14:59:29.929Z",
+    "structure": {
+      "wordCount": 8,
+      "lineCount": 1,
+      "avgWordsPerLine": 8,
+      "hookLength": 8,
+      "signals": [],
+      "hasImage": false,
+      "hasVideo": false,
+      "platforms": []
+    },
+    "nearestExistingLayout": null,
+    "novelty": "no close match in the bank",
+    "note": "headline pattern from https://www.marketingdive.com/feeds/news/",
+    "gtAngle": "",
+    "status": "new"
+  },
+  {
+    "id": "rs_1txuvd1",
+    "source": "rss",
+    "url": "https://www.marketingdive.com/news/smartphone-school-ban-could-imperil-billions-in-social-media-ad-revenue/827739/",
+    "capturedAt": "2026-08-17T14:59:29.929Z",
+    "structure": {
+      "wordCount": 11,
+      "lineCount": 1,
+      "avgWordsPerLine": 11,
+      "hookLength": 11,
+      "signals": [],
+      "hasImage": false,
+      "hasVideo": false,
+      "platforms": []
+    },
+    "nearestExistingLayout": null,
+    "novelty": "no close match in the bank",
+    "note": "headline pattern from https://www.marketingdive.com/feeds/news/",
+    "gtAngle": "",
+    "status": "new"
+  },
+  {
+    "id": "rs_r4r3iv",
+    "source": "rss",
+    "url": "https://www.marketingdive.com/news/shoe-station-names-chief-marketing-officer/827996/",
+    "capturedAt": "2026-08-17T14:59:29.929Z",
+    "structure": {
+      "wordCount": 6,
+      "lineCount": 1,
+      "avgWordsPerLine": 6,
+      "hookLength": 6,
+      "signals": [],
+      "hasImage": false,
+      "hasVideo": false,
+      "platforms": []
+    },
+    "nearestExistingLayout": null,
+    "novelty": "no close match in the bank",
+    "note": "headline pattern from https://www.marketingdive.com/feeds/news/",
+    "gtAngle": "",
+    "status": "new"
+  },
+  {
+    "id": "rs_1w2qc8b",
+    "source": "rss",
+    "url": "https://www.marketingdive.com/news/cuisinart-caters-to-thumb-scrolling-consumers-with-short-form-series/827792/",
+    "capturedAt": "2026-08-17T14:59:29.929Z",
+    "structure": {
+      "wordCount": 8,
+      "lineCount": 1,
+      "avgWordsPerLine": 8,
+      "hookLength": 8,
+      "signals": [],
+      "hasImage": false,
+      "hasVideo": false,
+      "platforms": []
+    },
+    "nearestExistingLayout": null,
+    "novelty": "no close match in the bank",
+    "note": "headline pattern from https://www.marketingdive.com/feeds/news/",
+    "gtAngle": "",
+    "status": "new"
+  },
+  {
+    "id": "rs_qe1c5t",
+    "source": "rss",
+    "url": "https://www.marketingdive.com/news/how-brands-can-navigate-the-paramount-wbd-merger-chaos/827386/",
+    "capturedAt": "2026-08-17T14:59:29.929Z",
+    "structure": {
+      "wordCount": 8,
+      "lineCount": 1,
+      "avgWordsPerLine": 8,
+      "hookLength": 8,
+      "signals": [],
+      "hasImage": false,
+      "hasVideo": false,
+      "platforms": []
+    },
+    "nearestExistingLayout": null,
+    "novelty": "no close match in the bank",
+    "note": "headline pattern from https://www.marketingdive.com/feeds/news/",
+    "gtAngle": "",
+    "status": "new"
+  },
+  {
+    "id": "dr_20260817_1",
+    "source": "deep_research",
+    "name": "website as a central hub",
+    "status": "new",
+    "addedAt": "2026-08-17T14:59:30.290Z",
+    "structure": {
+      "anatomy": "the website must be positioned as the primary source of truth for your brand"
+    },
+    "whyItWorks": "The article emphasizes that a website serves as a permanent home for content, which is essential for brand control and accurate information dissemination. Evidence: SparkToro invested months and a budget to rebuild their website from scratch, indicating its importance as a content hub.",
+    "gtAngle": "Create an ad campaign showcasing the website as the ultimate source for brand information and customer engagement.",
+    "url": "https://sparktoro.com/blog/does-your-website-still-matter-in-the-zero-click-era/"
   }
 ]
