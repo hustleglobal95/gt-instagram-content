@@ -229,6 +229,30 @@ FORMATS.push(
     clamp(`The honest cost of building alone this week: ${pick(SHARED_STRUGGLES)}.\n\nI am not going to dress that up. Anyone selling you a version of this without that part is selling you something.\n\n${pick(PEER_QUESTIONS)}`) },
 );
 
+/* ---------------------------------------------------------------------------
+   RESEARCHED SHAPE. Hook, context, position, invitation.
+
+   Threads truncates before the more link, so line one has to survive alone.
+   Then a reason to keep reading, then something the account actually thinks,
+   then a door left open. The invitation is not a call to action: replies are
+   the strongest ranking signal on this platform, so the last line's only job
+   is to be answerable by someone who read the first.
+   --------------------------------------------------------------------------- */
+FORMATS.push(
+  { pillar: 'community', kind: 'hookthread', voice: 'markus', render: () => {
+    const c = pick(CONSTRAINTS);
+    return clamp(`Most advice you are following was written for a bigger account than yours.\n\n"${c.sym}" gets the same answer whether you have 80 customers or 8. It should not.\n\nAt your size the constraint is usually ${art(c.real)} ${c.real}, and the fix is smaller than the advice suggests.\n\n${pick(PEER_QUESTIONS)}`); } },
+
+  { pillar: 'authority', kind: 'position', voice: 'markus', render: () =>
+    clamp(`${pick(BELIEFS)}\n\nI know that is not the popular read. Most of what gets posted here rewards sounding certain, and certainty is cheap when nobody checks later.\n\nI would rather be the account that writes the number down first.\n\n${pick(PEER_QUESTIONS)}`) },
+
+  { pillar: 'community', kind: 'openinvite', voice: 'markus', render: () =>
+    clamp(`${cap(pick(SHARED_STRUGGLES))}.\n\nThat is where I am this week. Not a lesson, just where I am.\n\nIf you are somewhere similar, say so. Half of what makes this bearable is finding out the number of people quietly in the same spot.\n\n${pick(PEER_QUESTIONS)}`) },
+
+  { pillar: 'systems', kind: 'smallweek', voice: 'markus', render: () =>
+    clamp(`A smaller week beats a busier one.\n\nOne number, one thing you believe will move it, and the prediction written down before you find out.\n\nThe prediction is the part everyone skips, and it is the only part that turns a week into evidence.\n\n${pick(PEER_QUESTIONS)}`) },
+);
+
 const RULES = [
   { n: 'THE DIAGNOSIS RULE',
     b: 'Name the constraint before you touch a tactic. Effort aimed at the wrong stage doesn’t just waste the money, it hides the real leak for another quarter.',

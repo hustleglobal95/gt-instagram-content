@@ -50,6 +50,9 @@ const I_OPENERS = [
   'I used to believe the opposite.',
   'Nobody asked, but I keep seeing this and it costs people money.',
   'This one cost me time before it cost me anything else.',
+  'Two weeks of data later and I owe someone an apology.',
+  'I want to write this down before it stops being uncomfortable.',
+  'I got told this a year ago and ignored it.',
 ];
 
 /* Admissions. The account's credibility comes from these, not from wins.
@@ -97,6 +100,49 @@ const CLOSES_NOTE = [
    different rule.
    --------------------------------------------------------------------------- */
 
+/* ---------------------------------------------------------------------------
+   WHAT ACTUALLY DISTRIBUTES ON THREADS.
+
+   Researched rather than assumed, and the sources agree with each other more
+   than marketing posts usually do. Written down here because half of it is
+   implementable in this bank and half of it is not, and the half that is not
+   is the more important half.
+
+   MECHANICAL, and now built into the formats below:
+
+   1. Replies outrank likes. Reply driven engagement is reported as the
+      strongest single ranking signal, so every post should end somewhere a
+      person can answer from. Not a call to action, an opening.
+   2. Velocity beats volume. 20 replies in 30 minutes outranks 50 replies over
+      24 hours, and a post 30 minutes old is recommended far more than one
+      three hours old. Fewer posts, each given a chance to catch, beats five a
+      day landing on nobody.
+   3. The first two or three lines are the whole post. Threads truncates
+      before the more link, so the hook has to stand alone and the shape that
+      works is hook, then context, then position, then invitation.
+   4. Multi part posts win here, which the account's own log already said:
+      11 threads carried 46 of 57 interactions and not one of them landed
+      silent, against 47 of 55 single posts that did.
+   5. Topic consistency is rewarded. A narrow account is classified and
+      matched more reliably than a broad one.
+   6. Selling early suppresses reach. The offer CTAs in this bank should stay
+      rare, and never in a post whose job is to start a conversation.
+
+   HUMAN, and impossible from this repo:
+
+   7. The largest lever in every source is replying to other people, 10 to 15
+      thoughtful replies a day, because a reply puts the profile in front of
+      an audience that has never seen it. An autoposter cannot do this and
+      should not fake it: automated replies are named in the research as
+      actively credibility destroying. This is a person's job, and it is worth
+      more than anything in this file.
+   8. Replying to the replies on your own post, quickly, counts toward the
+      same signal. Also a person's job.
+
+   So the honest position: this bank can make the posts worth replying to. It
+   cannot do the replying, and the replying is where the growth is.
+   --------------------------------------------------------------------------- */
+
 /* The parts of building alone that people feel and do not post about. Every
    one of these has to be something actually endured, not observed. */
 const SHARED_STRUGGLES = [
@@ -106,6 +152,10 @@ const SHARED_STRUGGLES = [
   'the hour you lose deciding what to work on instead of working',
   'explaining what you are building to someone whose eyes go flat',
   'the quiet maths of how long the runway actually is',
+  'watching someone with a worse product get all the attention',
+  'the second week of a habit, when the novelty is gone and nothing has changed yet',
+  'having a good day and being unable to tell anyone who would care',
+  'rewriting the same paragraph because the real problem is you do not know the answer',
 ];
 
 /* Real questions, asked because he wants the answer. Not engagement bait
@@ -117,6 +167,11 @@ const PEER_QUESTIONS = [
   'What are you measuring that you suspect does not matter?',
   'What would you stop doing if you were sure it was not working?',
   'How long did it take before your first stranger showed up?',
+  'What is the smallest thing that would make this week feel worth it?',
+  'What advice did you follow for months before realising it did not apply to you?',
+  'What are you avoiding because it would give you a real answer?',
+  'Who else is building alone right now? I would like to know who is out there.',
+  'What is the one number you check first in the morning?',
 ];
 
 /* Small, unglamorous wins. The point is that they are small. An account that
@@ -126,6 +181,9 @@ const SMALL_WINS = [
   'I cut four things off the list and the week got easier, not worse.',
   'A number I have watched for a month finally moved, slightly.',
   'I found the bug that had been quietly wasting the whole exercise.',
+  'I said no to something that would have eaten the week.',
+  'Someone I respect asked a question about it. Just a question. It mattered.',
+  'I finished the boring piece I had been walking past for a fortnight.',
 ];
 
 /* Things he believes, stated flatly. These are the spine of the persona and

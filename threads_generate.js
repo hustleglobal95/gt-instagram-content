@@ -13,7 +13,24 @@ const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
 const { FORMATS, THREADS } = require('./threads_bank');
-const POOL = [...FORMATS, ...(THREADS || [])]; // single posts + reply-chain deep-dives
+
+/* The pool is weighted, not uniform.
+ *
+ * @markusreidgt is a person's handle, and the room it posts into is full of
+ * people building alone looking for each other. A rotation where the company
+ * voice outnumbers the person seven to one gets that backwards, so the voice
+ * entries are repeated until they are about half of every draw.
+ *
+ * Weighting rather than deleting, for two reasons. The brand formats are not
+ * wrong, they are just outnumbered in the wrong direction, and nothing here
+ * has enough measured evidence yet to justify destroying work. When the
+ * Threads log can support a ranking, this is the line that should be replaced
+ * by one that reads it. */
+const ALL = [...FORMATS, ...(THREADS || [])];
+const VOICE = ALL.filter((f) => f.voice === 'markus');
+const REST = ALL.filter((f) => f.voice !== 'markus');
+const REPS = VOICE.length ? Math.max(1, Math.round(REST.length / VOICE.length)) : 1;
+const POOL = REST.concat(...Array.from({ length: REPS }, () => VOICE));
 
 const MAX_CHARS = 500;
 const LOG = path.join(__dirname, 'threads_used_log.json'); // namespaced: won't clash with image autoposter's used_log.json
