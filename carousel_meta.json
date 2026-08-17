@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-08-17T15:33:59.460Z",
+  "generated_at": "2026-08-17T20:37:44.929Z",
   "kind": "carousel",
   "layout": "carousel:verdict",
   "media_files": [
-    "creatives/gt_car_20260817153358_1.jpg",
-    "creatives/gt_car_20260817153358_2.jpg",
-    "creatives/gt_car_20260817153358_3.jpg",
-    "creatives/gt_car_20260817153358_4.jpg",
-    "creatives/gt_car_20260817153358_5.jpg"
+    "creatives/gt_car_20260817203743_1.jpg",
+    "creatives/gt_car_20260817203743_2.jpg",
+    "creatives/gt_car_20260817203743_3.jpg",
+    "creatives/gt_car_20260817203743_4.jpg",
+    "creatives/gt_car_20260817203743_5.jpg"
   ],
   "caption": "Most tools show you what agrees with them.\n\nGrowth Terminal names the constraint, lists the evidence for the call, then publishes the evidence against it and what would prove the diagnosis wrong.\n\nThen a 90 day plan with decision gates, and a grade against real revenue once the quarter plays out.",
-  "hashtags": "#growthterminal #uniteconomics #revenueoperations #b2bmarketing",
+  "hashtags": "#growthterminal #marketingops #uniteconomics #saasfounder",
   "first_comment": "When did a tool last tell you why it might be wrong?",
   "alt_text": "Most tools show you what agrees with them. Growth Terminal names the constraint, lists the evidence for the call, then p",
   "sig": "car:verdict"
