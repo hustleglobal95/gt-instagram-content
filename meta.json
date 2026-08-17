@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-08-17T01:01:47.672Z",
-  "media_file": "creatives/gt_auto_20260817_010147.jpg",
+  "generated_at": "2026-08-17T13:01:18.619Z",
+  "media_file": "creatives/gt_auto_20260817_130118.jpg",
   "is_reel": false,
-  "layout": "feature",
+  "layout": "edmanifesto",
   "editorial_bg": null,
-  "person": "gt_face_06.png",
+  "person": null,
   "qa": null,
-  "caption": "The one move worth more than the other ten.\n\nPerfect execution on the wrong constraint still loses the quarter. Growth Terminal finds the one that is actually capping you, prices it, and gives you the plan.\n\n→ growthterminal.io",
-  "hashtags": "#growthterminal #startupmetrics #bootstrappedfounder #agencylife",
-  "first_comment": "What lever are you pulling right now, and are you sure it is the stuck one?",
-  "alt_text": "The one fix worth more than the other ten.",
-  "sig": "feat:The one fix worth more than the other te:gt_face_06.png"
+  "caption": "Everyone makes confident growth calls. Almost no one checks them.\n\nWe do. Every forecast Growth Terminal makes is logged and graded against your real revenue, so you trust the calls that keep landing and catch the ones that do not.\n\nRun the free 60-second diagnostic, link in bio.",
+  "hashtags": "#growthterminal #consultingbusiness #b2bmarketing #bootstrappedfounder",
+  "first_comment": "When did a growth prediction last get graded against reality?",
+  "alt_text": "",
+  "sig": "edm:We do.Every forecast, graded against"
 }
