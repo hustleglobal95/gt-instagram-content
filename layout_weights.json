@@ -1,14 +1,14 @@
 {
   "active": false,
   "diagnostics": {
-    "totalPosts": 86,
+    "totalPosts": 91,
     "totalEngagement": 84,
     "igEngagement": 0,
     "fbEngagement": 84,
-    "formats": 25,
+    "formats": 27,
     "formatsWithAnyEngagement": 20,
     "collectionHealth": {
-      "ig_attempted": 86,
+      "ig_attempted": 91,
       "ig_succeeded": 0,
       "ig_errors": [
         {
@@ -92,12 +92,12 @@
           "message": "Invalid OAuth access token - Cannot parse access token"
         }
       ],
-      "ig_error_count": 86,
-      "fb_succeeded": 76
+      "ig_error_count": 91,
+      "fb_succeeded": 81
     }
   },
-  "reason": "Instagram collection is failing. 86 lookups errored and none succeeded, so every Instagram format reads as zero. Fix collection before any weighting decision is made.",
-  "evaluatedAt": "2026-08-16T05:53:51.184Z",
+  "reason": "Instagram collection is failing. 91 lookups errored and none succeeded, so every Instagram format reads as zero. Fix collection before any weighting decision is made.",
+  "evaluatedAt": "2026-08-17T06:00:48.728Z",
   "gates": {
     "MIN_TOTAL_ENGAGEMENT": 100,
     "MIN_POSTS_PER_FORMAT": 8,
