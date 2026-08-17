@@ -28,7 +28,10 @@ const clamp = (s) => { // safety net so nothing ever exceeds the 500-char Thread
 // symptom → the real constraint → the one-line fix. Powers PAS / callout / reframe / diagnosis.
 /* The person behind the account. See threads_voice.js for who he is and, more
    importantly, for what he is not allowed to claim. */
-const { I_OPENERS, ADMISSIONS, CLOSES_TRY, CLOSES_NOTE, BELIEFS } = require('./threads_voice');
+const {
+  I_OPENERS, ADMISSIONS, CLOSES_TRY, CLOSES_NOTE, BELIEFS,
+  SHARED_STRUGGLES, PEER_QUESTIONS, SMALL_WINS,
+} = require('./threads_voice');
 
 const CONSTRAINTS = [
   { sym: 'We need more traffic', real: 'conversion problem', fix: "pouring more water into a leaking bucket just wastes more water" },
@@ -200,6 +203,30 @@ FORMATS.push(
   { pillar: 'systems', kind: 'workingnote', voice: 'markus', render: () => {
     const c = pick(CONSTRAINTS);
     return clamp(`Working note.\n\nSomeone told me "${c.sym}" this week.\n\nNine times out of ten that is ${art(c.real)} ${c.real} wearing a different coat. ${cap(c.fix)}.\n\n${pick(ADMISSIONS)}`); } },
+);
+
+
+/* ---------------------------------------------------------------------------
+   PEER FORMATS. Written for the room the account is actually in: people
+   building alone, looking for each other. These are not lessons. Several of
+   them end in a real question, because on Threads a reply is the distribution
+   and for an account this size it is the only lever that starts one.
+   --------------------------------------------------------------------------- */
+FORMATS.push(
+  { pillar: 'community', kind: 'sharedstruggle', voice: 'markus', render: () =>
+    clamp(`Nobody warns you about ${pick(SHARED_STRUGGLES)}.\n\nIt is not a sign you picked wrong. It is just the unglamorous middle that never makes it into anyone's highlight reel.\n\n${pick(PEER_QUESTIONS)}`) },
+
+  { pillar: 'community', kind: 'smallwin', voice: 'markus', render: () =>
+    clamp(`Small win, posting it because the small ones never get posted.\n\n${pick(SMALL_WINS)}\n\nIf you only ever see other people's breakthroughs you start thinking your own week is a failure. It is not. Most weeks look like this.\n\n${pick(PEER_QUESTIONS)}`) },
+
+  { pillar: 'community', kind: 'question', voice: 'markus', render: () =>
+    clamp(`Genuine question for anyone building solo.\n\n${pick(PEER_QUESTIONS)}\n\nI am asking because I keep getting it wrong and I would rather learn it from you than from another month of guessing.`) },
+
+  { pillar: 'community', kind: 'permission', voice: 'markus', render: () =>
+    clamp(`If you are building something and nobody is engaging yet:\n\nthat is the normal part. It is not evidence about you or about the thing.\n\nThe people who make it are mostly just the ones still there in month six.\n\n${pick(PEER_QUESTIONS)}`) },
+
+  { pillar: 'community', kind: 'cost', voice: 'markus', render: () =>
+    clamp(`The honest cost of building alone this week: ${pick(SHARED_STRUGGLES)}.\n\nI am not going to dress that up. Anyone selling you a version of this without that part is selling you something.\n\n${pick(PEER_QUESTIONS)}`) },
 );
 
 const RULES = [
@@ -835,6 +862,17 @@ THREADS.push(
     clamp(`Second: the posts that did land were all the same shape. Longer, multi part, and they opened with something I got wrong rather than something I knew.`),
     clamp(`Third: volume did nothing. Five posts a day into a small account is five posts nobody sees. That was the expensive lesson.`),
     clamp(`So I cut the volume, kept the shape that worked, and I am logging it again from here.\n\n${pick(CLOSES_TRY)}`),
+  ] },
+);
+
+/* A peer thread. No lesson, just the shape of the week, ending on a question. */
+THREADS.push(
+  { pillar: 'community', kind: 'thread', voice: 'markus', thread: () => [
+    clamp(`If you are building solo and this week felt flat, this thread is for you rather than at you \u{1F447}`),
+    clamp(`${cap(pick(SHARED_STRUGGLES))}. That is most weeks. The posts you see from people further along skip straight past it, which is why yours feels abnormal when it is not.`),
+    clamp(`What actually helps: make the week smaller. One number, one thing that moves it, and a note of what you expected to happen before you find out.`),
+    clamp(`Writing the expectation down first is the whole trick. Otherwise you will remember having predicted whatever happened, and you will learn nothing from a month of work.`),
+    clamp(`${pick(PEER_QUESTIONS)}\n\nI read every reply. That is not a growth tactic, I am just also doing this alone.`),
   ] },
 );
 

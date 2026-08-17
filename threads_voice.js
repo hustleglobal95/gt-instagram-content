@@ -76,6 +76,58 @@ const CLOSES_NOTE = [
   'Filing it here so I cannot quietly forget I said it.',
 ];
 
+/* ---------------------------------------------------------------------------
+   THE PEER DIMENSION.
+
+   Threads is full of people building alone and trying to find each other. That
+   is the room this account is actually standing in, and it changes what
+   authority means here: not "I know more than you" but "I am a few steps into
+   the same thing and I will tell you what it actually costs".
+
+   The log agrees, for what little it is worth. The two best posts in
+   threads_performance_log.json are both peer to peer, and the single best
+   opens "If you're building something and nobody's engaging yet, read this
+   before you quit posting". Nothing instructional beat them.
+
+   A note on questions. The image engine learned that question captions
+   underperform statements three to one, and that learning must not be carried
+   over here. On Instagram a caption is a label under a picture. On Threads a
+   reply is the entire distribution mechanic, and for an account this size a
+   genuine question is the only lever that reliably starts one. Different room,
+   different rule.
+   --------------------------------------------------------------------------- */
+
+/* The parts of building alone that people feel and do not post about. Every
+   one of these has to be something actually endured, not observed. */
+const SHARED_STRUGGLES = [
+  'the week where you do everything right and the number does not move',
+  'posting into what feels like an empty room',
+  'shipping something you were proud of to complete silence',
+  'the hour you lose deciding what to work on instead of working',
+  'explaining what you are building to someone whose eyes go flat',
+  'the quiet maths of how long the runway actually is',
+];
+
+/* Real questions, asked because he wants the answer. Not engagement bait
+   dressed as curiosity. The test: would he read every reply. */
+const PEER_QUESTIONS = [
+  'What is the thing you keep re-deciding instead of just deciding?',
+  'What did you ship this week that nobody noticed?',
+  'Who is the one person whose reply would make your week?',
+  'What are you measuring that you suspect does not matter?',
+  'What would you stop doing if you were sure it was not working?',
+  'How long did it take before your first stranger showed up?',
+];
+
+/* Small, unglamorous wins. The point is that they are small. An account that
+   only posts breakthroughs teaches people that their own week is a failure. */
+const SMALL_WINS = [
+  'One person replied who I did not know. That is new.',
+  'I cut four things off the list and the week got easier, not worse.',
+  'A number I have watched for a month finally moved, slightly.',
+  'I found the bug that had been quietly wasting the whole exercise.',
+];
+
 /* Things he believes, stated flatly. These are the spine of the persona and
    every one of them is a position Growth Terminal actually holds. */
 const BELIEFS = [
@@ -86,4 +138,7 @@ const BELIEFS = [
   'Volume is what people reach for when they do not know what to fix.',
 ];
 
-module.exports = { I_OPENERS, ADMISSIONS, CLOSES_TRY, CLOSES_NOTE, BELIEFS };
+module.exports = {
+  I_OPENERS, ADMISSIONS, CLOSES_TRY, CLOSES_NOTE, BELIEFS,
+  SHARED_STRUGGLES, PEER_QUESTIONS, SMALL_WINS,
+};
