@@ -1363,5 +1363,26 @@
       "markusreidgt": "17950905861250010"
     },
     "errors": {}
+  },
+  {
+    "at": "2026-08-17T11:36:48.596Z",
+    "text": "You were busy all week and the business didn’t move.\n\nHere’s what usually happened",
+    "parts": [
+      "You were busy all week and the business didn’t move.\n\nHere’s what usually happened",
+      "You did ten things at ten percent effort. All ten are now slightly better and none of them crossed the line where anyone outside would notice.",
+      "Improvements aren’t linear. Most have a threshold, and under it you get nothing at all. Half a rewrite of a sales page performs exactly like no rewrite.",
+      "So the choice isn’t how hard you work. It’s how few things you’re willing to let be bad this week.",
+      "Pick one. Take it past the threshold. Let the other nine sit.\n\nNext week they’re still there, and you’ll have one thing that actually landed."
+    ],
+    "isThread": true,
+    "pillar": "systems",
+    "kind": "thread",
+    "accounts": [
+      "markusreidgt"
+    ],
+    "ids": {
+      "markusreidgt": "18105662429599191"
+    },
+    "errors": {}
   }
 ]
