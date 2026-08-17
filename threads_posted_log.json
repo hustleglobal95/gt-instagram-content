@@ -1418,5 +1418,22 @@
       "markusreidgt": "17965218219155029"
     },
     "errors": {}
+  },
+  {
+    "at": "2026-08-17T15:52:50.369Z",
+    "text": "Sort every decision into two piles: reversible and not.\n\nReversible ones deserve a day, not a committee. Make them fast and be wrong cheaply.\n\nThe other pile deserves the week you keep spending on the first one.\n\nMost teams have this exactly backwards.",
+    "parts": [
+      "Sort every decision into two piles: reversible and not.\n\nReversible ones deserve a day, not a committee. Make them fast and be wrong cheaply.\n\nThe other pile deserves the week you keep spending on the first one.\n\nMost teams have this exactly backwards."
+    ],
+    "isThread": false,
+    "pillar": "decision",
+    "kind": "reversible",
+    "accounts": [
+      "markusreidgt"
+    ],
+    "ids": {
+      "markusreidgt": "18100337666349062"
+    },
+    "errors": {}
   }
 ]
