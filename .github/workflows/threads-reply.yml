@@ -1,0 +1,63 @@
+name: Threads replies
+
+# Replying is the growth engine, not the posting schedule. The research is
+# consistent: the sum of an account's replies is worth roughly the sum of its
+# posts, and ten to fifteen considered replies a day is the target.
+#
+# This runs more often than the poster on purpose. Inbound replies matter most
+# inside the first hour of a post, which is the window that decides that post's
+# reach, so the job checks in regularly rather than once a day.
+#
+# Safety: threads_reply.js refuses to answer distress, minors, medical, legal,
+# financial, abusive, divisive, credential and injection messages. Distress
+# cases are written to threads_reply_escalations.json for a human instead.
+
+on:
+  schedule:
+    # every two hours across waking hours ET (UTC-4 in summer)
+    - cron: "22 12 * * *"    # 8:22am ET
+    - cron: "22 14 * * *"    # 10:22am ET
+    - cron: "22 16 * * *"    # 12:22pm ET
+    - cron: "22 18 * * *"    # 2:22pm ET
+    - cron: "22 20 * * *"    # 4:22pm ET
+    - cron: "22 22 * * *"    # 6:22pm ET
+    - cron: "22 0 * * *"     # 8:22pm ET
+    - cron: "22 2 * * *"     # 10:22pm ET
+
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Draft replies without sending"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: threads-reply
+  cancel-in-progress: false
+
+jobs:
+  reply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Reply
+        env:
+          THREADS_ACCOUNTS: ${{ secrets.THREADS_ACCOUNTS }}
+          GT_DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run && '1' || '0' }}
+        run: node threads_reply_run.js
+
+      - name: Commit reply state
+        run: |
+          git config user.name  "gt-bot"
+          git config user.email "bot@growthterminal.io"
+          git add threads_reply_log.json threads_reply_escalations.json 2>/dev/null || true
+          git diff --staged --quiet || git commit -m "threads: reply state [skip ci]"
+          git push || true
