@@ -1,12 +1,14 @@
 {
-  "generated_at": "2026-08-18T13:01:11.753Z",
-  "media_file": "creatives/gt_reel_20260818_130111.jpg",
-  "video_file": "creatives/gt_reel_20260818_130111.mp4",
-  "is_reel": true,
-  "layout": "reel:card",
-  "caption": "This is what a Growth Terminal diagnosis looks like, one constraint, named, priced, and verified against real revenue. Here, activation was capping the business by $60K-$110K a year.\n\nYours is one run away.\n\n→ growthterminal.io",
-  "hashtags": "#growthterminal #marketingops #b2bsaas #saasfounder",
-  "first_comment": "What would you do differently if your #1 constraint came pre-priced?",
-  "alt_text": "#1 constraint: Activation",
-  "sig": "reelcard:Activation"
+  "generated_at": "2026-08-18T21:41:22.423Z",
+  "media_file": "creatives/gt_auto_20260818_214122.jpg",
+  "is_reel": false,
+  "layout": "contrast",
+  "editorial_bg": null,
+  "person": null,
+  "qa": null,
+  "caption": "Advice is cheap. Being right is not.\n\nEveryone has a take on your growth. Growth Terminal is the only one that grades its own, every forecast tracked against your real revenue, marked verified or missed. Opinions are free; a track record isn't.\n\nRun the free 60-second diagnostic, link in bio.",
+  "hashtags": "#growthterminal #consultingbusiness #uniteconomics #saasgrowth",
+  "first_comment": "Whose growth advice has ever been scored against reality? Ours is.",
+  "alt_text": "EVERYONE HAS A TAKE . WE HAVE A SCORE.",
+  "sig": "con:EVERYONE HAS A TAKE . WE HAVE A SCORE."
 }
