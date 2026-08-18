@@ -1231,15 +1231,15 @@ function gen_edmanifesto(r) {
 
 // ================= SERVICES CONTENT (the bigger brand) =================
 // Ads reflecting the full Growth Terminal offer: AI voice agents, custom AI
-// assistants, the content engine, done-for-you Business Solutions, templates,
+// assistants, the content engine, guides and sheets, and the one-system
 // and the "one system, many ways in" positioning. Rendered through the editorial
 // layouts (edserif, edmanifesto). Drawn from the master brand file.
 
-function gen_svc_serif(r) {
+function gen_svc_serif(r, opts) {
   const bank = [
     { tag:'AI SOLUTIONS', kicker:'AI VOICE AGENTS', head:'A voice agent that answers', emph:'every call, day or night.', size:96,
       sub:'It picks up in your brand voice, qualifies the caller, and books the meeting straight to your calendar. No lead waits, no call lost.',
-      cap:'Your growth leaks at the first missed call. Growth Terminal builds you an AI voice agent that answers 24/7 in your brand voice, qualifies the caller, and books the meeting. One of the AI Solutions inside Business Solutions.',
+      cap:'Your growth leaks at the first missed call. A Growth Terminal voice agent answers 24/7 in your brand voice, qualifies the caller, and books the meeting. It runs in the background once you have set it up.',
       fc:'How many calls go to voicemail in a week? That is pipeline walking out.' },
     { tag:'AI SOLUTIONS', kicker:'CUSTOM AI ASSISTANTS', head:'An assistant trained on', emph:'your business, not everyone.', size:96,
       sub:'It drafts replies in your voice, holds your price, works objections, and updates your pipeline. A trained teammate, not a generic chatbot.',
@@ -1249,14 +1249,14 @@ function gen_svc_serif(r) {
       sub:'It builds posts from your creative bank and publishes across Instagram, Facebook, Threads, and TikTok, then tracks what performs.',
       cap:'Consistent content, zero manual work. The Growth Terminal content engine posts on-brand creatives daily across every platform and sharpens on what performs.',
       fc:'How many days did your content go dark last month? Autopilot fixes that.' },
-    { tag:'BUSINESS SOLUTIONS', kicker:'DONE FOR YOU', head:'We build the machine,', emph:'and keep it running.', size:100,
-      sub:'Our team runs the diagnosis, builds the 90-day plan, and verifies the outcome against real revenue. Fully managed.',
-      cap:'Not enough hours to fix the constraint yourself? Business Solutions runs the diagnosis, builds the plan, and verifies it against real revenue. Fully managed by our team.',
-      fc:'Would you rather run the fix, or have it run for you?' },
+    { tag:'GROWTH TERMINAL', kicker:'SHEETS ADD-ON', head:'The analysis runs', emph:'on your own sheet.', size:96,
+      sub:'Install the add-on, run it against your numbers, and read the result in the portal. Your data stays in your spreadsheet.',
+      cap:'Growth Terminal runs on your own numbers, in your own spreadsheet. Install the add-on, run the analysis whenever you want, and read every run in the portal.',
+      fc:'What is the number you check first in the morning?' },
     { tag:'ONE SYSTEM', kicker:'ONE SYSTEM', head:'One system.', emph:'Every way in.', size:112,
-      sub:'Diagnose it yourself in a spreadsheet, grab a template, add AI voice, assistants, and content, or have our team run the whole thing.',
-      cap:'Growth Terminal is one system. Diagnose it yourself in Google Sheets™, grab a template, add AI voice agents and assistants, or have us build and run it. One diagnosis-first system, several ways in.',
-      fc:'Which way in fits you: do it yourself, a template, or done for you?' },
+      sub:'Run the analysis on your own sheets, put the content engine on your brand, program an assistant, or start with a ready-made guide.',
+      cap:'Growth Terminal is one system with several ways in. Run the analysis yourself through the Google Sheets™ add-on and read it in the portal, put the content engine on your brand, program an assistant for the repetitive work, or start with a ready-made guide.',
+      fc:'Which way in fits you best?' },
     { tag:'GT TEMPLATES', kicker:'READY-MADE TEMPLATES', head:'Answers today,', emph:'from $79.', size:104,
       sub:'Ready-made Google Sheets templates for pricing, retention, and forecasting. Copy in your numbers, get answers, keep them forever.',
       cap:'Not ready for the full engine? Grab a GT template. Ready-made Google Sheets™ for pricing, retention, and forecasting. Copy, paste your numbers, get answers today. From $79.',
@@ -1308,26 +1308,36 @@ function gen_svc_serif(r) {
       cap:'Posting daily is the easy half. The Growth Terminal content engine scores every post against real engagement and gives the formats that earn attention more of the rotation.',
       fc:'Do you know which of your posts actually worked, or just which felt good?' },
 
-    // BUSINESS SOLUTIONS, DONE FOR YOU
-    { tag:'BUSINESS SOLUTIONS', kicker:'DONE FOR YOU', head:'Most plans die', emph:'at execution.', size:104,
-      sub:'The diagnosis is the easy part. Our team builds the 90-day plan and runs it, then checks it against revenue.',
-      cap:'Growth plans rarely fail at the diagnosis. They fail because nobody had the hours to run them. Business Solutions builds the 90-day plan and runs it, verified against real revenue.',
+    // THE ANALYSIS, via the Sheets add-on and portal
+    { tag:'GROWTH TERMINAL', kicker:'SHEETS ADD-ON', head:'Most plans die', emph:'at execution.', size:104,
+      sub:'The diagnosis is the easy part. Growth Terminal names one constraint, scores it, and says what would prove it wrong.',
+      cap:'Growth plans rarely fail at the diagnosis. They fail because the finding was too vague to act on. Growth Terminal names one constraint, scores it for severity and confidence, and states what would prove it wrong.',
       fc:'Where did your last growth plan stall: deciding, or doing?' },
-    { tag:'BUSINESS SOLUTIONS', kicker:'DONE FOR YOU', head:'One team.', emph:'Not five vendors.', size:108,
-      sub:'Strategy, content, and AI under one roof, accountable to one number instead of five separate invoices.',
-      cap:'Five vendors means five roadmaps and nobody accountable to your number. Business Solutions runs strategy, content and AI as one team, measured against real revenue.',
-      fc:'How many vendors are you stitching together right now?' },
-    { tag:'BUSINESS SOLUTIONS', kicker:'DONE FOR YOU', head:'Verified against', emph:'real revenue.', size:104,
-      sub:'Not impressions, not reach. The constraint gets named, priced, fixed, and then checked against the money.',
-      cap:'A fix you cannot verify is a story. Business Solutions names the constraint, prices it, runs the fix, and checks the result against real revenue rather than reach.',
-      fc:'What number would prove your last marketing spend worked?' },
+    { tag:'GROWTH TERMINAL', kicker:'ONE SYSTEM', head:'One system.', emph:'Not five tools.', size:108,
+      sub:'The analysis, the content engine, the assistants and the sheets all sit in one place, working off the same brand.',
+      cap:'Five tools means five logins and nothing that shares context. In Growth Terminal the analysis, the content engine, the assistants and the sheets all work off the same brand and the same numbers.',
+      fc:'How many tools are you stitching together right now?' },
+    { tag:'GROWTH TERMINAL', kicker:'SHEETS ADD-ON', head:'It tells you what would', emph:'prove it wrong.', size:96,
+      sub:'Every finding comes with its own falsifier, so you can check it rather than take it on faith.',
+      cap:'A finding you cannot check is a story. Every Growth Terminal analysis states what would prove it wrong, so you can test it against your own numbers instead of trusting it.',
+      fc:'What would prove your current growth theory wrong?' },
 
   ];
   const b = pick(bank, r);
-  const SVC_CTA = { 'AI SOLUTIONS':'SEE AI SOLUTIONS', 'BUSINESS SOLUTIONS':'BOOK A CALL',
+  /* This generator is shared: it sits in GENERATORS for the main account and in
+   * SERVICE_GENERATORS for the brand account. The brand account exists to drive
+   * portal sign-ups, so its calls to action point at the two real entry
+   * actions. The main account keeps the CTAs it already had. Without the split
+   * a change made for one account silently rewrites the other. */
+  const BRAND_CTA = { 'AI SOLUTIONS':'ENTER THE PORTAL', 'GROWTH TERMINAL':'RUN THE FREE DIAGNOSTIC',
+    'BUSINESS SOLUTIONS':'RUN THE FREE DIAGNOSTIC',
+    'ONE SYSTEM':'ENTER THE PORTAL', 'GT TEMPLATES':'SEE GUIDES & SHEETS' };
+  const MAIN_CTA = { 'AI SOLUTIONS':'SEE AI SOLUTIONS', 'BUSINESS SOLUTIONS':'RUN YOUR ANALYSIS',
     'ONE SYSTEM':'SEE EVERY WAY IN', 'GT TEMPLATES':'BROWSE TEMPLATES' };
+  const brand = !!(opts && opts.servicesOnly);
+  const SVC_CTA = brand ? BRAND_CTA : MAIN_CTA;
   return { layout:'edserif', serif:r()<0.35, tag:b.tag, kicker:b.kicker, head:b.head, emph:b.emph, sub:b.sub, size:b.size,
-    cta_label:SVC_CTA[b.tag] || 'RUN YOUR ANALYSIS',
+    cta_label:SVC_CTA[b.tag] || (brand ? 'ENTER THE PORTAL' : 'RUN YOUR ANALYSIS'),
         /* The signature is what the recent-repeat filter compares on, so it has to
      * distinguish variants, not just services. Keyed on kicker alone, the four
      * AI voice agent variants all produced the identical signature and the
@@ -1335,14 +1345,294 @@ function gen_svc_serif(r) {
     caption:b.cap, first_comment:b.fc, sig:'svcs:'+stripHtml(b.kicker+'|'+b.head).slice(0,48) };
 }
 
-function gen_svc_manifesto(r) {
+/* Feature-forward product ads, rebuilt against the copy research.
+ *
+ * Four findings drove the rewrite.
+ *
+ * HEADINGS MUST CARRY THE ARGUMENT ALONE. B2B guidance is that a reader who
+ * skims only the headings should still receive the whole case. The previous
+ * version led each row with a product name, so skimming taught you three names
+ * and nothing about what they do. Every row now leads with the claim.
+ *
+ * SPECIFIC BEATS VAGUE, AND PRECISE BEATS ROUND. Hopkins in 1923: platitudes
+ * roll off, actual figures are not discounted. Tested examples still show
+ * "cut Friday reporting from 3 hours to 20 minutes" beating "save time on
+ * reporting". Numbers go in the heading wherever a real one exists.
+ *
+ * CONCRETE CLAIMS ARE CHECKABLE AND THEREFORE CREDIBLE. Superlatives are
+ * neither, which is why seamless, robust, powerful, leading and best-in-class
+ * are banned here. They are also what every competitor says.
+ *
+ * NO NARRATIVE TRANSPORTATION. The research is clear that immersive storytelling
+ * works partly by disengaging critical evaluation. This is a product that
+ * publishes what would prove its own findings wrong, so disarming scrutiny would
+ * contradict the thing being sold. Tension and turn, yes; immersion, no.
+ *
+ * Row shape: [claim, supporting detail, product label]. */
+function gen_svc_feature(r) {
+  const bank = [
+    { tag:'GROWTH TERMINAL', kicker:'SHEETS ADD-ON', head:'Your numbers,', emph:'diagnosed.', size:86,
+      cta:'ENTER THE PORTAL',
+      visual:{ kind:'meter', value:8, max:10, label:'SEVERITY', caption:'8 of 10, high confidence' },
+      feats:[
+        ['The analysis runs on your own sheet', 'Install the add-on and run it whenever you want. Nothing is exported.', 'GROWTH TERMINAL ADD-ON'],
+        ['One constraint, scored for severity and confidence', 'Not ten recommendations. The single thing capping revenue this quarter.', 'THE DIAGNOSIS'],
+        ['Every run states what would prove it wrong', 'A finding you can check, rather than one you have to trust.', 'THE PORTAL'],
+      ],
+      cap:'Growth Terminal analyses your own numbers, in your own spreadsheet. Install the add-on, run the analysis, and read the result in the portal: one constraint, scored for severity and confidence, with what would prove it wrong written out in advance.',
+      fc:'If you had to name the one thing capping your growth, what would it be?' },
+
+    { tag:'GROWTH TERMINAL', kicker:'AI ASSISTANTS', head:'Three assistants,', emph:'trained on your business.', size:78,
+      cta:'ENTER THE PORTAL',
+      visual:{ kind:'stat', value:'90', unit:'sec', caption:'The window a new lead gets answered in, day or night.' },
+      feats:[
+        ['Answers a new lead in under 90 seconds', 'Day or night, so the first reply they get is yours and not a competitor\u2019s.', 'LEAD RESPONSE'],
+        ['Keeps the pipeline moving without a reminder', 'Follow-ups go out on their own instead of waiting for someone to remember.', 'FOLLOW-UP SEQUENCE'],
+        ['Names your main constraint every week', 'Not once a year in a planning session. Every week, from your own numbers.', 'GROWTH INTELLIGENCE'],
+      ],
+      cap:'Three assistants trained on your business, running in the background. Lead Response answers a new enquiry in under 90 seconds. Follow-Up Sequence keeps the pipeline moving. Growth Intelligence names your main constraint every week.',
+      fc:'How long does a new enquiry wait before someone answers it?' },
+
+    { tag:'GROWTH TERMINAL', kicker:'AI ASSISTANTS', head:'It works the objection.', emph:'It does not discount.', size:80,
+      cta:'ENTER THE PORTAL',
+      feats:[
+        ['Holds the price you set', 'Answers the hard question instead of dropping ten percent to save the sale.', 'TRAINED ON YOUR TERMS'],
+        ['Knows what you sell and what you will not do', 'Your offers, your terms, and the point where a human should take over.', 'TRAINED ON YOUR BUSINESS'],
+        ['Runs without anyone triggering it', 'No one has to remember it exists for it to do the work.', 'IN THE BACKGROUND'],
+      ],
+      cap:'A generic model discounts to avoid a hard question. An assistant trained on your business works the objection and keeps the margin, and it runs in the background rather than waiting for someone to remember it.',
+      fc:'What is the objection your team discounts to avoid?' },
+
+    { tag:'GROWTH TERMINAL', kicker:'CONTENT ENGINE', head:'Set your brand once.', emph:'It writes from there.', size:80,
+      cta:'ENTER THE PORTAL',
+      visual:{ kind:'bars', values:[38,52,61,79,104], caption:'It writes more of whatever earned attention last.' },
+      feats:[
+        ['You give it your brand one time', 'Everything after that is on brand by default, with nothing to re-brief.', 'AT SETUP'],
+        ['It reads what actually earned engagement', 'Performance of real posts, not a style guide describing an ideal.', 'IT STUDIES'],
+        ['It writes new posts from what worked', 'New content built on evidence, not a queue you keep refilling.', 'IT CREATES'],
+      ],
+      cap:'The Content Engine takes your brand once at setup and learns it. From there it studies what actually earned engagement and creates new content on that basis. Not a scheduler you refill, and not a template pack.',
+      fc:'How many days did your feed go dark last month?' },
+
+    /* Teams lives inside the Portal, described on growthterminal.io/portal-how-it-works
+     * under "Businesses & Teams". Everything on this card is from that page:
+     * the four ticket states, the four roles, the approval gate and the today
+     * view. An earlier version had tickets moving through "Diagnosis, Execution
+     * and Verification". Those are stages of the analysis, not of a ticket, and
+     * I invented the pairing. There is no /teams URL, so the call to action
+     * points at the Portal rather than at a page that does not exist. */
+    { tag:'GROWTH TERMINAL', kicker:'TEAMS', head:'A plan nobody owns', emph:'is not a plan.', size:88,
+      cta:'ENTER THE PORTAL',
+      visual:{ kind:'track', steps:['New','In Progress','Client Review','Closed'], active:2 },
+      feats:[
+        ['Every ticket has a name against it', 'Assignment, not intention. Nothing counts as started until someone owns it.', 'TICKETS AND OWNERS'],
+        ['Nothing goes out until someone signs it off', 'Work waits in client review instead of landing somewhere unapproved.', 'APPROVALS'],
+        ['Open, overdue and awaiting approval, in one place', 'One view of what is moving and what has quietly stopped, updated as it changes.', 'THE TODAY VIEW'],
+      ],
+      cap:'Teams is where a plan becomes tickets with names on them. Every ticket moves through New, In Progress, Client Review and Closed. Roles are separated into Owner, Analyst, Consultant and Viewer, and nothing reaches a client until someone signs it off. The today view shows what is open, overdue, awaiting approval and closed this week. It is how one business keeps track of what is moving and what has quietly stopped.',
+      fc:'What is sitting in your team right now that nobody has picked up?' },
+
+    /* The three products named here are the three that are actually on sale at
+     * growthterminal.io/products. An earlier version of this card advertised a
+     * "Constraint Diagnosis Framework", a "90-Day Revenue Playbook" and a
+     * "Forecast Calibration Guide". None of those exist. Twelve further items
+     * are listed on the site as coming soon and are deliberately left out: an
+     * ad should not sell something a reader cannot buy when they arrive.
+     * Prices are the site's own. Anything added to this card has to be checked
+     * against that page first. */
+    { tag:'GROWTH TERMINAL', kicker:'GUIDES & SHEETS', head:'Templates and tools,', emph:'ready to work.', size:82,
+      cta:'SEE GUIDES & SHEETS',
+      feats:[
+        ['See which funnel stage is leaking, and what it costs', 'Drop-off and conversion by stage, with a flag on your biggest revenue leak.', 'FUNNEL & CONVERSION TRACKER \u00b7 GOOGLE SHEET \u00b7 $79'],
+        ['Build demand before anyone is ready to buy', 'A field guide to being found instead of chasing, with a 30-day plan.', 'ATTRACT, DON\u2019T SELL \u00b7 PDF GUIDE \u00b7 $55'],
+        ['Better answers from AI, with no technical trick', 'Principles, a five-question context framework, and one reusable template.', 'THE HUMAN GUIDE TO TALKING WITH AI \u00b7 PDF \u00b7 $55'],
+      ],
+      cap:'Guides and sheets are separate from the add-on: templates and tools you work through yourself, with nothing to install. Three are available now. The Funnel & Conversion Tracker maps drop-off and conversion by stage and flags the biggest leak. Attract, Don\u2019t Sell is a field guide to building demand. The Human Guide to Talking With AI is how to get sharper answers from any model.',
+      fc:'Which one would change your week first: the funnel, the demand, or the AI you already use?' },
+
+    { tag:'GROWTH TERMINAL', kicker:'ONE SYSTEM', head:'One system.', emph:'Several ways in.', size:88,
+      cta:'ENTER THE PORTAL',
+      feats:[
+        ['Run the analysis on your own sheets', 'The add-on does the work and the portal holds every run.', 'ADD-ON AND PORTAL'],
+        ['Put the engine and the assistants on your brand', 'Content that learns from performance, assistants that hold your price.', 'CONTENT ENGINE AND ASSISTANTS'],
+        ['Track who owns what, or just take a template', 'Teams in the portal for the work in flight, guides and sheets to start today.', 'TEAMS, GUIDES & SHEETS'],
+      ],
+      cap:'Growth Terminal brings your data, intelligence, content, assistants and growth resources into one connected system. Run the analysis through the Sheets add-on, read it in the portal, put the content engine on your brand, program an assistant, track the work in Teams, or start with a ready-made guide.',
+      fc:'Which of these would change your week the most?' },
+  ];
+  const b = pick(bank, r);
+  /* Surface. A feed of nothing but white cards reads as one long document, so
+   * the same card also renders on ink and on solid amber. Paper leads, ink is
+   * the regular break, signal is loud and stays rare. The skin is part of the
+   * signature: without it the same card in three surfaces would collide as one
+   * used entry and two of the three would never post. */
+  const skin = pick(['paper','paper','paper','ink','ink','signal'], r);
+  // b.visual must be forwarded. It was omitted here, so every card rendered
+  // without its device and the layout silently looked unchanged.
+  return { layout:'svcfeat', skin, tag:b.tag, kicker:b.kicker, head:b.head, emph:b.emph, size:b.size, feats:b.feats,
+    visual:b.visual || null,
+    cta_label:b.cta, caption:b.cap, first_comment:b.fc,
+    sig:(b.kicker === 'GUIDES & SHEETS' ? PRODUCTS_SIG_PREFIX : '')+'svcfeat:'+skin+':'+stripHtml(b.kicker+'|'+b.head).slice(0,40) };
+}
+
+/* Calibration. Every number here is read off growthterminal.io/portal-how-it-works,
+ * which states "8 of 67 forecasts graded so far, no coverage percentage until
+ * there are twenty". Publishing an incomplete scorecard is the one claim a
+ * competitor cannot copy without lying, which is why it survives the
+ * replacement test in section 15. If the live figure changes, change it here. */
+function gen_svccal(r) {
+  const bank = [
+    { head:'We publish the scorecard before it flatters us.', size:70,
+      sub:'Eight of sixty-seven forecasts graded against real revenue so far. No coverage percentage until there are twenty, because a rate built on eight results is not a rate.',
+      cta:'ENTER THE PORTAL',
+      cap:'Growth Terminal logs every forecast and grades it against real revenue once the outcome is known. Eight of sixty-seven are graded so far. We are not publishing a coverage percentage until there are twenty, because a rate built on eight results tells you nothing. You can watch the number move.',
+      fc:'Would you publish your own miss rate, or only the wins?' },
+    { head:'A forecast nobody checks is just a nicer opinion.', size:70,
+      sub:'Every forecast is logged and graded against real revenue once the outcome is known. Eight of sixty-seven so far.',
+      cta:'ENTER THE PORTAL',
+      cap:'Most growth advice is never scored. Growth Terminal logs each forecast and grades it against real revenue once the outcome is known, so the track record is something you can audit rather than something you are told about.',
+      fc:'When did you last check a prediction against what actually happened?' },
+  ];
+  const b = pick(bank, r);
+  const skin = pick(['ink','ink','paper'], r);
+  return { layout:'svccal', skin, done:8, total:67, head:b.head, sub:b.sub, size:b.size,
+    cta_label:b.cta, caption:b.cap, first_comment:b.fc,
+    sig:'svccal:'+skin+':'+stripHtml(b.head).slice(0,40) };
+}
+
+/* The falsifier. Verified: the portal states every analysis writes out what
+ * would prove it wrong, and the 90-day plan carries decision gates at weeks 4,
+ * 8 and 12 with pass and miss written for each. The finding shown is sample
+ * data in the product's own vocabulary, never presented as a customer result. */
+function gen_svcfals(r) {
+  const bank = [
+    { kicker:'THE DIAGNOSIS', head:'Every finding arrives with', emph:'the thing that would kill it.', size:74,
+      finding:'Lead conversion is the constraint', finding_note:'Scored for severity and confidence, not ranked against nine other suggestions.',
+      falsifier:'Conversion holds after the next forty qualified leads', falsifier_note:'Written before the work starts, so the test is not chosen after the result.',
+      cta:'RUN THE FREE DIAGNOSTIC',
+      cap:'A finding you cannot check is a story. Every Growth Terminal analysis names one constraint, scores it for severity and confidence, and writes out what would prove it wrong before the work begins. You can test it against your own numbers instead of taking it on faith.',
+      fc:'What would have to be true for your current growth plan to be wrong?' },
+    { kicker:'THE 90-DAY PLAN', head:'Every gate says what', emph:'stops the spending.', size:76,
+      finding:'Week 4 gate: does this keep its funding?', finding_note:'Pass and miss are both written down in advance, with what each one means.',
+      falsifier:'Miss means stop and re-diagnose, not push harder', falsifier_note:'A failing initiative gets killed in week four rather than defended until week twelve.',
+      cta:'RUN THE FREE DIAGNOSTIC',
+      cap:'The part nobody else gives you is permission to stop. The Growth Terminal 90-day plan carries decision gates at weeks 4, 8 and 12, each with a question and both answers written in advance, so a failing initiative ends early instead of being defended to the end of the quarter.',
+      fc:'What is still running in your plan that should have been killed in week four?' },
+
+    /* Content Engine. Verified at growthterminal.io/content-engine: the IMPROVE
+     * stage "retires low performers after two weeks of poor signal". That is
+     * the differentiator worth advertising, because every other content tool
+     * only adds. The +239% chart on that page is mock interface data and is
+     * deliberately not used here. */
+    { kicker:'CONTENT ENGINE', head:'Most content tools only add.', emph:'This one also retires.', size:76,
+      label_a:'WHAT IT KEEPS', label_b:'WHAT IT RETIRES',
+      finding:'Posts that earned saves, shares and reach', finding_note:'Winning angles get expanded into new threads instead of being posted once and forgotten.',
+      falsifier:'Low performers, after two weeks of poor signal', falsifier_note:'A queue that only grows is not learning. Something has to come out.',
+      cta:'ENTER THE PORTAL',
+      cap:'The Content Engine reads your past posts and voice to build a model, publishes daily across Instagram, LinkedIn, Threads, Facebook and TikTok, then feeds engagement back in. High performers shape the next batch. Low performers are retired after two weeks of poor signal. Most tools only ever add.',
+      fc:'What is still in your content rotation that stopped working months ago?' },
+
+    /* The free diagnostic, verified at growthterminal.io/diagnostic. It is
+     * labelled NO SIGNUP and states that the numbers stay in the browser and
+     * nothing is sent or stored. That makes it a demonstration rather than a
+     * lead capture, and the contrast with every other gated "free diagnostic"
+     * is the strongest cold-audience asset on the site. Every claim below is
+     * lifted from that page. */
+    { kicker:'FREE DIAGNOSTIC', head:'Five numbers. Sixty seconds.', emph:'No signup.', size:76,
+      label_a:'WHAT THE OTHERS ASK FOR FIRST', label_b:'WHAT THIS ASKS FOR',
+      finding:'Your email and your phone number', finding_note:'Handed over before you are shown anything at all.',
+      falsifier:'Five numbers, checked against benchmarks', falsifier_note:'They stay in your browser. Nothing is sent and nothing is stored.',
+      cta:'RUN THE FREE DIAGNOSTIC',
+      cap:'Five inputs, sixty seconds, one answer. Each number is checked against industry benchmarks before you move on, and the whole thing runs in your browser: nothing is sent and nothing is stored. Most free diagnostics take your email before they show you anything. This one just answers, and then you can decide whether the whole spreadsheet is worth pointing at.',
+      fc:'What would five numbers say about your business right now?' },
+
+    /* Guides and sheets are a separate product line, not a fifth pillar. Their
+     * commercial job is to be the cheapest door into the portal: a purchase
+     * lands in the customer portal rather than as an email attachment, so a $55
+     * buyer already has an account. Stated by the owner. Note that none of the
+     * three product pages currently mention portal delivery, so an ad that
+     * leads on it is ahead of the landing page. */
+    /* The delivery mechanic, corrected. The file downloads automatically at
+     * checkout and the buyer never has to visit the portal to receive it. The
+     * portal separately recognises the purchase and keeps it unlocked. An
+     * earlier version said the purchase lands in the portal, which implied a
+     * trip the buyer does not have to make. Both halves are the point: no
+     * friction now, nothing lost later. */
+    { kicker:'GUIDES & SHEETS', head:'It downloads immediately.', emph:'It also unlocks in the portal.', size:70,
+      label_a:'AT CHECKOUT', label_b:'AND FROM THEN ON',
+      finding:'The file downloads on its own', finding_note:'No portal to visit, no account to make first, no link to wait for.',
+      falsifier:'The portal knows you bought it', falsifier_note:'It stays unlocked there, so losing the download costs you nothing.',
+      cta:'SEE GUIDES & SHEETS',
+      cap:'Guides and sheets are a separate line from the add-on: templates and tools you work through yourself. Buy one and the file downloads straight away, with no portal trip required. The portal also recognises the purchase and keeps it unlocked, so if the download ever goes missing it is still there. A sheet is $79 and a guide is $55.',
+      fc:'How many things have you bought once and then had to buy again?' },
+
+    /* AI Assistants. Verified at growthterminal.io/ai-assistants: each assistant
+     * is initialised with Portal data, specifically the constraint diagnosis,
+     * revenue numbers, communication style and deal parameters. The dollar
+     * figures and response times shown on that page are sample interface data
+     * and are not used as claims. */
+    { kicker:'AI ASSISTANTS', head:'Most AI starts with a prompt.', emph:'Yours starts with your business.', size:74,
+      label_a:'WHAT A GENERIC MODEL KNOWS', label_b:'WHAT YOURS KNOWS',
+      finding:'Whatever you remembered to type', finding_note:'Context ends when the window closes, so it starts from nothing every time.',
+      falsifier:'Your constraint diagnosis, revenue, deal terms and voice', falsifier_note:'Loaded from the Portal at setup and updated as your data changes.',
+      cta:'ENTER THE PORTAL',
+      cap:'Every Growth Terminal assistant is initialised with your Portal data: your constraint diagnosis, your revenue numbers, your deal parameters and your communication style. It knows the business before it sends a single message, and it updates as the Portal does.',
+      fc:'How much context do you retype every time you open a chat window?' },
+  ];
+  const b = pick(bank, r);
+  const skin = pick(['paper','paper','ink'], r);
+  return { layout:'svcfals', skin, kicker:b.kicker, head:b.head, emph:b.emph, size:b.size,
+    label_a:b.label_a, label_b:b.label_b,
+    finding:b.finding, finding_note:b.finding_note, falsifier:b.falsifier, falsifier_note:b.falsifier_note,
+    cta_label:b.cta, caption:b.cap, first_comment:b.fc,
+    sig:(b.kicker === 'GUIDES & SHEETS' ? PRODUCTS_SIG_PREFIX : '')+'svcfals:'+skin+':'+stripHtml(b.kicker+'|'+b.head).slice(0,40) };
+}
+
+/* Typographic interruption, section 12J. Deliberately plain: the long-running
+ * ads reaching this audience on Meta are near-undesigned, and this runs as the
+ * challenger against the designed spec cards rather than replacing them.
+ * No invented statistics. These are observations, not measurements. */
+function gen_svcline(r) {
+  const bank = [
+    { head:'You get one meeting to sound like you understand their business. ', emph:'The data was already there.', tail:' The diagnosis was not.', size:74,
+      cta:'RUN THE FREE DIAGNOSTIC',
+      cap:'The first meeting decides whether you are a strategist or a supplier. The numbers were always sitting in the spreadsheet. What was missing was a diagnosis you could defend.',
+      fc:'How long does it take you to understand a new client\u2019s numbers?' },
+    { head:'A dashboard tells you what happened. ', emph:'It will not tell you what to do on Monday.', tail:'', size:78,
+      cta:'RUN THE FREE DIAGNOSTIC',
+      cap:'Reporting describes the past. A diagnosis commits to one constraint, scores it, and states what would prove it wrong. Those are different jobs and most tools only do the first.',
+      fc:'What does your reporting actually decide?' },
+    { head:'Thirty priorities ', emph:'is a way of having none.', tail:'', size:96,
+      cta:'RUN THE FREE DIAGNOSTIC',
+      cap:'Every department arrives with an urgent priority and all of them are real. Growth Terminal names the one constraint capping revenue, scores it for severity and confidence, and puts the rest in order behind it.',
+      fc:'If you had to fund only one initiative this quarter, which one?' },
+    /* Teams framed from inside one business rather than from an agency looking
+     * across a roster. Work stalling quietly is the same today view feature,
+     * read from the operator's seat instead of the account manager's. */
+    { head:'Work does not stall loudly. ', emph:'It stalls quietly.', tail:'', size:84,
+      cta:'RUN THE FREE DIAGNOSTIC',
+      cap:'Every item in Teams carries an owner and moves through New, In Progress, Client Review and Closed. The today view shows what is open, what is overdue and what is sitting on an approval, so a stalled task surfaces while there is still time to do something about it.',
+      fc:'What is sitting in your business right now that nobody has picked up?' },
+    { head:'Automation can scale output. ', emph:'Without evaluation it also scales mistakes.', tail:'', size:74,
+      cta:'RUN THE FREE DIAGNOSTIC',
+      cap:'More output is not the win. Growth Terminal assistants work from your business context, and their results get evaluated rather than assumed, so the work that compounds is the work that was actually right.',
+      fc:'How would you know if your automation had been wrong all quarter?' },
+  ];
+  const b = pick(bank, r);
+  const skin = pick(['paper','signal','ink'], r);
+  return { layout:'svcline', skin, head:b.head, emph:b.emph, tail:b.tail, size:b.size,
+    cta_label:b.cta, caption:b.cap, first_comment:b.fc,
+    sig:'svcline:'+skin+':'+stripHtml(b.emph).slice(0,40) };
+}
+
+function gen_svc_manifesto(r, opts) {
   const I = s => '<span class="fri" style="font-weight:500;color:'+WHITE+'">'+s+'</span>';
   const bank = [
-    { body:'You do not need ten vendors. You need one system that '+I('diagnoses')+', then '+I('builds')+' it.', punch:'That is Growth Terminal.', foot:'Diagnosis, templates, AI, and done-for-you, all Growth Terminal.', size:82,
-      cap:'You do not need ten vendors. You need one system that diagnoses the constraint, then builds and runs the fix. Diagnosis, templates, AI voice and assistants, content, and done-for-you, all Growth Terminal.',
+    { body:'You do not need ten tools. You need one system that '+I('names')+' the constraint.', punch:'That is Growth Terminal.', foot:'The analysis, the content engine, assistants, and ready-made sheets.', size:82,
+      cap:'You do not need ten tools. You need one system that names the constraint holding the business. Growth Terminal runs the analysis on your own sheets, and the content engine, assistants and guides all work off the same brand.',
       fc:'How many tools are you stitching together right now?' },
-    { body:'A diagnosis is step one. Then someone has to '+I('build')+' it and '+I('run')+' it.', punch:'We do both.', foot:'Done-for-you strategy, content, and AI, managed by our team.', size:82,
-      cap:'A diagnosis is step one. Then someone has to build the plan and run it. Growth Terminal Business Solutions does both: strategy, content, and AI, fully managed.',
+    { body:'A finding you cannot '+I('check')+' is just a '+I('story')+'.', punch:'So we show the falsifier.', foot:'Every analysis states what would prove it wrong.', size:82,
+      cap:'A finding you cannot check is a story. Every Growth Terminal analysis states what would prove it wrong, so you can test it against your own numbers rather than take it on faith.',
       fc:'Where do most growth plans die: the diagnosis, or the execution?' },
     { body:'Your AI should '+I('hold')+' your price, not '+I('discount')+' to close.', punch:'Ours does.', foot:'Custom AI assistants trained on your business.', size:84,
       cap:'Your AI should hold your price, not discount to close. Growth Terminal builds custom AI assistants trained on your business that work the objection and keep your margin.',
@@ -1355,8 +1645,8 @@ function gen_svc_manifesto(r) {
     { body:'Consistency is a '+I('system')+', not a '+I('personality')+' trait.', punch:'So we automated it.', foot:'The content engine posts daily, on brand, everywhere.', size:80,
       cap:'Consistency is a system, not a personality trait. The Growth Terminal content engine builds on-brand creatives and publishes them daily across Instagram, Facebook, Threads and TikTok.',
       fc:'What usually breaks your posting streak first?' },
-    { body:'Nobody fails at the '+I('diagnosis')+'. They fail at the '+I('hours')+'.', punch:'So we run it.', foot:'Business Solutions, fully managed by our team.', size:82,
-      cap:'Almost nobody fails at working out what is wrong. They fail because there were never enough hours to fix it. Business Solutions builds the 90-day plan and runs it, verified against real revenue.',
+    { body:'Nobody fails at the '+I('diagnosis')+'. They fail at the '+I('hours')+'.', punch:'So automate the repetition.', foot:'Assistants for the work your team repeats every week.', size:82,
+      cap:'Almost nobody fails at working out what is wrong. They fail because there were never enough hours. Program a Growth Terminal assistant for the task your team repeats forty times a week and get the hours back.',
       fc:'Where did your last plan stall: deciding, or doing?' },
     { body:'A '+I('chatbot')+' answers. An '+I('assistant')+' closes.', punch:'Ours is trained on you.', foot:'Custom AI assistants built on your offers and pricing.', size:84,
       cap:'A chatbot answers questions. An assistant trained on your offers, pricing and objections moves the deal forward and logs it. Growth Terminal builds the second one.',
@@ -1364,11 +1654,11 @@ function gen_svc_manifesto(r) {
     { body:'The call you '+I('missed')+' was the deal you '+I('lost')+'.', punch:'We pick up.', foot:'AI voice agents that qualify and book, day or night.', size:84,
       cap:'Most buyers call once. If nobody answers they call the next name, and that loss never appears in any report. Growth Terminal builds AI voice agents that answer, qualify, and book.',
       fc:'When did you last check what happens to a call after 6pm?' },
-    { body:'You do not need more '+I('reach')+'. You need the '+I('constraint')+' named.', punch:'That is where we start.', foot:'Diagnosis first, then templates, AI, or done-for-you.', size:82,
+    { body:'You do not need more '+I('reach')+'. You need the '+I('constraint')+' named.', punch:'That is where it starts.', foot:'Run the analysis first, then the engine, assistants, or sheets.', size:82,
       cap:'More reach on a broken funnel just costs more. Growth Terminal names the one constraint holding the business, prices it, and then fixes it with templates, AI, or our team.',
       fc:'If you had to name your single biggest constraint right now, what is it?' },
-    { body:'Four ways in. '+I('One')+' system underneath.', punch:'Start anywhere.', foot:'Voice agents, assistants, content engine, done-for-you.', size:84,
-      cap:'AI voice agents, custom assistants, the automated content engine, and fully managed Business Solutions. Four ways in, one diagnosis-first system underneath. Start wherever the pain is.',
+    { body:'Four ways in. '+I('One')+' system underneath.', punch:'Start anywhere.', foot:'The analysis, the content engine, assistants, guides and sheets.', size:84,
+      cap:'The analysis on your own sheets, the content engine, AI assistants, and ready-made guides and sheets. Four ways in, one system underneath. Start wherever the pain is.',
       fc:'Which of the four would change your week the most?' },
     { body:'Your AI should '+I('know')+' your business, not the '+I('internet')+'.', punch:'Ours is trained on yours.', foot:'Custom AI assistants, built on your real replies.', size:82,
       cap:'A generic model knows the internet. A custom assistant knows your offers, your pricing, your objections and your handoffs. Growth Terminal trains it on your business.',
@@ -1378,7 +1668,13 @@ function gen_svc_manifesto(r) {
       fc:'Do you know which of your posts worked, or only which ones felt good?' },
   ];
   const b = pick(bank, r);
+  /* The manifesto format shipped with no call to action, so roughly one brand
+   * post in seven asked the reader to do nothing. On an account whose whole job
+   * is sign-ups that was the most expensive gap in the rotation. Only the brand
+   * account's copy is changed here; gen_edmanifesto belongs to the main account
+   * and keeps its own behaviour. */
   return { layout:'edmanifesto', serif:r()<0.4, body:b.body, punch:b.punch, foot:b.foot, size:b.size,
+    cta_label:(opts && opts.servicesOnly) ? 'RUN THE FREE DIAGNOSTIC' : undefined,
     caption:b.cap, first_comment:b.fc, sig:'svcm:'+stripHtml(b.punch+b.foot).slice(0,32) };
 }
 
@@ -1449,14 +1745,33 @@ const LEARNED = (() => {
  * Growth Terminal actually sells. Kept as its own list rather than a filter on
  * GENERATORS so that adding a new general layout upstream cannot silently leak
  * into the brand account. */
-const SERVICE_GENERATORS = [gen_svc_serif, gen_svc_manifesto];
+const SERVICE_GENERATORS = [gen_svc_feature, gen_svc_feature, gen_svc_serif, gen_svc_manifesto, gen_svccal, gen_svcfals, gen_svcline];
+
+/* The brand account runs two commercial lines and they are not the same
+ * business. The portal is the objective: the account exists to drive sign-ups.
+ * Guides and sheets at growthterminal.io/products are separate cashflow, so
+ * they are capped rather than left to drift, and tagged so the two can be told
+ * apart in the posting record afterwards. A products post is identified by its
+ * signature prefix, which means the cap works off the existing recent-sig
+ * history with no change to the state file format. */
+const PRODUCTS_SIG_PREFIX = 'gs:';
+const PRODUCTS_MAX_IN_LAST = 1;   // at most one products post
+const PRODUCTS_WINDOW = 9;        // in any nine posts, so roughly 11 percent
+
+function isProductsPost(sig) {
+  return String(sig || '').startsWith(PRODUCTS_SIG_PREFIX);
+}
 
 function buildPost(seed, recent, opts = {}) {
   const r = rng(seed);
   const poolAll = opts.servicesOnly ? SERVICE_GENERATORS : GENERATORS;
+  const recentProducts = recent.slice(-PRODUCTS_WINDOW).filter(isProductsPost).length;
   for (let attempt = 0; attempt < 40; attempt++) {
     const gen = pick(poolAll, r);
-    const post = gen(r);
+    const post = gen(r, opts);
+    // Hold the products line to its cap. Late attempts stop enforcing it so a
+    // run can still produce a post if the core banks are all recently used.
+    if (attempt < 30 && isProductsPost(post.sig) && recentProducts >= PRODUCTS_MAX_IN_LAST) continue;
     // Weighted acceptance. A layout weighted 4 is taken every time, a layout
     // weighted 1 is taken a quarter of the time. Late attempts accept anything
     // so a run can never fail to produce a post.
