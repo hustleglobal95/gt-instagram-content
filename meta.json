@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-08-18T01:01:16.546Z",
-  "media_file": "creatives/gt_reel_20260818_010116.jpg",
-  "video_file": "creatives/gt_reel_20260818_010116.mp4",
+  "generated_at": "2026-08-18T13:01:11.753Z",
+  "media_file": "creatives/gt_reel_20260818_130111.jpg",
+  "video_file": "creatives/gt_reel_20260818_130111.mp4",
   "is_reel": true,
-  "layout": "reel:countup",
-  "caption": "60 seconds from spreadsheet to diagnosis. Add the add-on to Google Sheets™, point it at the report you already have, and get your #1 constraint ranked and priced before your coffee's cold.\n\nRun the free 60-second diagnostic, link in bio.",
-  "hashtags": "#growthterminal #agencylife #saasfounder #revenueoperations",
-  "first_comment": "Genuinely ~60 seconds. It reads the sheet you already have open.",
-  "alt_text": "60 sec",
-  "sig": "reelnum:60"
+  "layout": "reel:card",
+  "caption": "This is what a Growth Terminal diagnosis looks like, one constraint, named, priced, and verified against real revenue. Here, activation was capping the business by $60K-$110K a year.\n\nYours is one run away.\n\n→ growthterminal.io",
+  "hashtags": "#growthterminal #marketingops #b2bsaas #saasfounder",
+  "first_comment": "What would you do differently if your #1 constraint came pre-priced?",
+  "alt_text": "#1 constraint: Activation",
+  "sig": "reelcard:Activation"
 }
