@@ -1609,5 +1609,22 @@
       "markusreidgt": "18059376194598156"
     },
     "errors": {}
+  },
+  {
+    "at": "2026-08-18T14:49:19.259Z",
+    "text": "You don’t have a traffic problem. You have a “lowest number in the funnel” problem.",
+    "parts": [
+      "You don’t have a traffic problem. You have a “lowest number in the funnel” problem."
+    ],
+    "isThread": false,
+    "pillar": "constraint",
+    "kind": "aphorism",
+    "accounts": [
+      "markusreidgt"
+    ],
+    "ids": {
+      "markusreidgt": "18154901002495439"
+    },
+    "errors": {}
   }
 ]
