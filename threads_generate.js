@@ -15,6 +15,9 @@ const crypto = require('crypto');
 const { FORMATS, THREADS } = require('./threads_bank');
 const COMMUNITY = require('./threads_community');
 const { guardThread } = require('./threads_guard');
+const COMPOSE = require('./threads_compose');
+const LEARN = require('./threads_learn');
+const { AUDIENCES, OFFER_POLICY } = require('./threads_kb');
 
 /* The pool is weighted, not uniform, and the weights come from the account's
  * own log rather than from taste.
@@ -65,18 +68,90 @@ const rep = (arr, n) => [].concat(...Array.from({ length: n }, () => arr));
 
 const byKind = (k) => COMM_SINGLES.filter((f) => f.kind === k);
 
-const POOL = [
-  ...rep(byKind('founders'), 10),      // new start up founders
-  ...rep(byKind('building'), 10),      // people building something
-  ...rep(byKind('tampa'), 10),         // business owners in Tampa Bay
-  ...rep(byKind('ai'), 10),            // new AI companies
-  ...rep(byKind('sell_online'), 10),   // people wanting to sell online
-  ...rep(byKind('ladder'), 6),         // value post that ladders into a guide
-  ...rep(byKind('offer'), 6),          // straight offer
-  ...rep(COMM_THREADS, 3),
+/* ---------------------------------------------------------------------------
+   THE POOL
+
+   Three sources now, in descending share:
+
+   1. COMPOSED. threads_compose.js assembles posts from knowledge base atoms,
+      so it does not run out. 5,265 distinct posts against the 89 hand written
+      ones, and it is the only source that scales.
+   2. The hand written community bank. Still the best individual copy in the
+      repo, kept at real weight.
+   3. The old direct response bank, at the back, mostly for its threads.
+
+   Offers are capped by OFFER_POLICY rather than by feel, and the cap is
+   asserted in the CLI below so it cannot drift.
+   --------------------------------------------------------------------------- */
+
+const AUD_KEYS = Object.keys(AUDIENCES);
+
+/* A composer entry looks like a bank format to the rest of the file: it has a
+ * pillar, a kind, and a render() or thread(). The difference is that it makes
+ * a new post each call instead of returning a stored one. */
+const composedSingle = (aud, offer) => ({
+  pillar: AUDIENCES[aud].pillar,
+  kind: offer ? 'offer' : aud,
+  voice: 'markus',
+  composed: true,
+  render: () => COMPOSE.composeSingle(aud, { offer }).text,
+});
+
+const composedThread = (aud, offer) => ({
+  pillar: AUDIENCES[aud].pillar,
+  kind: 'thread',
+  voice: 'markus',
+  composed: true,
+  thread: () => COMPOSE.composeThread(aud, { offer }).parts,
+});
+
+const COMPOSED = [
+  ...rep(AUD_KEYS.map((a) => composedSingle(a, false)), 7),
+  ...rep(AUD_KEYS.map((a) => composedThread(a, false)), 3),
+  ...rep(AUD_KEYS.map((a) => composedSingle(a, true)), 4),
+  ...AUD_KEYS.map((a) => composedThread(a, true)),
+];
+
+const BASE_POOL = [
+  ...COMPOSED,
+  ...rep(byKind('founders'), 3),
+  ...rep(byKind('building'), 3),
+  ...rep(byKind('tampa'), 3),
+  ...rep(byKind('ai'), 3),
+  ...rep(byKind('sell_online'), 3),
+  ...rep(byKind('ladder'), 2),
+  ...rep(byKind('offer'), 2),
+  ...COMM_THREADS,
   ...BRAND_THREADS,
   ...FORMATS.filter((f) => f.voice === 'markus' && !f.thread),
 ];
+
+/* Apply what the account has actually measured. Inactive until there is enough
+ * data, in which case this is the identity function and the hand set weights
+ * above stand. Never silently: the reason is exposed on POOL_INFO. */
+function applyLearning(base) {
+  const w = LEARN.weights();
+  if (!w.active) return { pool: base, learning: w };
+  const out = [];
+  for (const f of base) {
+    const km = w.byKind[f.kind] ?? 1;
+    const sm = w.byShape[f.thread ? 'thread' : 'single'] ?? 1;
+    const copies = Math.max(1, Math.round(km * sm));
+    for (let i = 0; i < copies; i++) out.push(f);
+  }
+  return { pool: out, learning: w };
+}
+
+const { pool: POOL, learning: LEARNING } = applyLearning(BASE_POOL);
+
+const POOL_INFO = {
+  size: POOL.length,
+  composedShare: +(POOL.filter((f) => f.composed).length / POOL.length).toFixed(3),
+  threadShare: +(POOL.filter((f) => f.thread).length / POOL.length).toFixed(3),
+  offerShare: +(POOL.filter((f) => f.kind === 'offer').length / POOL.length).toFixed(3),
+  learningActive: LEARNING.active,
+  learningReason: LEARNING.reason || null,
+};
 
 const MAX_CHARS = 500;
 const LOG = path.join(__dirname, 'threads_used_log.json'); // namespaced: won't clash with image autoposter's used_log.json
@@ -151,7 +226,7 @@ function generate(n = 1) {
   return posts;
 }
 
-module.exports = { generate };
+module.exports = { generate, POOL_INFO, LEARNING };
 
 // -------- CLI --------
 if (require.main === module) {

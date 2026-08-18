@@ -131,7 +131,10 @@ function check(text, opts = {}) {
   // Threads truncates after the first few lines, so the opening line carries the
   // whole post. This only applies to what a scroller sees first: a standalone
   // post, or part one of a thread. Replies are already past the hook.
-  const isReply = Boolean(opts.isThread) && (opts.partIndex || 0) > 0;
+  /* A reply is either a later part of our own chain, or an explicit reply to
+   * somebody else's post. Both are read in context rather than in the feed, so
+   * the opening-hook rule does not apply to them. */
+  const isReply = Boolean(opts.isReply) || (Boolean(opts.isThread) && (opts.partIndex || 0) > 0);
   const firstLine = t.split('\n')[0] || '';
   if (!isReply && firstLine.length > 200) {
     failures.push({ id: 'no-hook', why: 'A 200 character opening line has no hook in it, and Threads truncates before the reader reaches the point.', matched: firstLine.slice(0, 50) });
@@ -154,11 +157,11 @@ function guard(input, opts = {}) {
  * Guard a whole thread. Every part is checked; if any part fails the whole
  * thread is dropped, because a half-published chain reads worse than nothing.
  */
-function guardThread(parts) {
+function guardThread(parts, opts = {}) {
   const out = [];
   const failures = [];
   parts.forEach((p, i) => {
-    const r = guard(p, { isThread: true, partIndex: i });
+    const r = guard(p, { isThread: true, partIndex: i, ...opts });
     out.push(r.text);
     r.failures.forEach((f) => failures.push({ ...f, part: i + 1 }));
   });
