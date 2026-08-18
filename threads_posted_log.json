@@ -1524,5 +1524,22 @@
       "markusreidgt": "18229897483318393"
     },
     "errors": {}
+  },
+  {
+    "at": "2026-08-18T02:01:40.482Z",
+    "text": "“Ads are too expensive.”\n\nNo — that’s the symptom.\n\nThe real problem is a message-market-match problem. And more effort on the wrong lever just makes the drop steeper.\n\nFix it at the source: you’re not overpaying for clicks, you’re underpaying attention.",
+    "parts": [
+      "“Ads are too expensive.”\n\nNo — that’s the symptom.\n\nThe real problem is a message-market-match problem. And more effort on the wrong lever just makes the drop steeper.\n\nFix it at the source: you’re not overpaying for clicks, you’re underpaying attention."
+    ],
+    "isThread": false,
+    "pillar": "constraint",
+    "kind": "pas",
+    "accounts": [
+      "markusreidgt"
+    ],
+    "ids": {
+      "markusreidgt": "17950034109253085"
+    },
+    "errors": {}
   }
 ]
