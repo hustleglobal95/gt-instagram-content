@@ -50,6 +50,12 @@ jobs:
         run: pip install requests
 
       - name: Generate a fresh creative
+        # GT_FORCE_MODE belongs here: generate.js is what reads it. It used to be
+        # set only on the publish step below, where post_now.py never looks at it,
+        # so choosing "reel" or "product" from the run dialog silently did nothing
+        # and the run still reported success.
+        env:
+          GT_FORCE_MODE: ${{ inputs.mode }}
         run: node generate.js
 
       - name: Screen creative for AI slop
@@ -85,7 +91,6 @@ jobs:
           GT_GITHUB_REPO:         ${{ secrets.GT_GITHUB_REPO }}
           GT_GITHUB_BRANCH:       ${{ github.ref_name }}
           GT_API_BASE:            ${{ secrets.GT_API_BASE }}
-          GT_FORCE_MODE:          ${{ inputs.mode }}
           GT_DRY_RUN:             ${{ secrets.GT_DRY_RUN }}
           # Facebook Page (leave unset to skip FB posting)
           GT_FB_PAGE_ID:          ${{ secrets.GT_FB_PAGE_ID }}

@@ -1,0 +1,117 @@
+name: GT Brand Auto-Post (services)
+
+# The @growthterminal.io account. Posts only about the four services:
+# AI voice agents, custom AI assistants, the automated content engine, and
+# done-for-you Business Solutions.
+#
+# This is a SEPARATE account from the main autoposter and shares none of its
+# state. GT_STATE_SUFFIX=brand puts this run on meta_brand.json,
+# used_log_brand.json and posted_log_brand.json, so the two accounts cannot
+# clobber each other's handoff file or collide when they commit.
+#
+# GT_FORCE_MODE=services is set on the GENERATE step, which is the step that
+# reads it. Worth noting because autopost.yml sets it on the publish step
+# instead, where generate.js never sees it, so its mode input does nothing.
+#
+# Required repo secrets, none of which are shared with the main account:
+#   GT_IG_USER_ID_BRAND       Instagram Business Account ID for @growthterminal.io
+#   GT_IG_ACCESS_TOKEN_BRAND  long-lived access token for that account
+# Optional:
+#   GT_FB_PAGE_ID_BRAND, GT_FB_PAGE_ACCESS_TOKEN_BRAND   to cross-post to a Page
+#
+# Until those secrets exist, post_now.py exits with a missing-credentials error
+# and nothing is published. That is the intended safe default.
+
+on:
+  schedule:
+    # Once a day, offset well away from the main account's slots so the two
+    # brand surfaces are not posting in the same minute.
+    - cron: "27 15 * * *"    # 11:27am ET
+
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Build the creative but do not publish"
+        type: boolean
+        default: true
+
+concurrency:
+  group: gt-autopost-brand      # separate from gt-autopost; the two may run together
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Playwright + Chromium
+        run: |
+          npm install
+          npx playwright install --with-deps chromium
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Python deps
+        run: pip install requests
+
+      - name: Generate a services creative
+        env:
+          GT_FORCE_MODE:   services
+          GT_STATE_SUFFIX: brand
+        run: node generate.js
+
+      - name: Screen creative for AI slop
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          IMG=$(ls -t creatives/*.jpg creatives/*.jpeg creatives/*.png creatives/*.webp 2>/dev/null | head -1)
+          if [ -z "$IMG" ]; then echo "No image creative to screen; skipping."; exit 0; fi
+          if [ -z "$(find "$IMG" -mmin -10)" ]; then echo "Newest image isn't fresh; skipping."; exit 0; fi
+          echo "Screening $IMG for AI slop..."
+          node slop-guard.js "$IMG"
+
+      - name: Commit the new creative (so its image URL is public)
+        run: |
+          git config user.name  "gt-autopost[bot]"
+          git config user.email "gt-autopost@users.noreply.github.com"
+          git add creatives meta_brand.json used_log_brand.json
+          git commit -m "auto(brand): new creative $(date -u +%Y-%m-%dT%H:%MZ)" || echo "nothing to commit"
+          git pull --rebase origin ${{ github.ref_name }} || true
+          git push
+
+      - name: Publish to Instagram
+        env:
+          GT_IG_USER_ID:          ${{ secrets.GT_IG_USER_ID_BRAND }}
+          GT_IG_ACCESS_TOKEN:     ${{ secrets.GT_IG_ACCESS_TOKEN_BRAND }}
+          GT_GITHUB_REPO:         ${{ secrets.GT_GITHUB_REPO }}
+          GT_GITHUB_BRANCH:       ${{ github.ref_name }}
+          GT_API_BASE:            ${{ secrets.GT_API_BASE }}
+          GT_STATE_SUFFIX:        brand
+          GT_DRY_RUN:             ${{ (github.event_name == 'workflow_dispatch' && inputs.dry_run) && '1' || '0' }}
+          GT_FB_PAGE_ID:          ${{ secrets.GT_FB_PAGE_ID_BRAND }}
+          GT_FB_PAGE_ACCESS_TOKEN: ${{ secrets.GT_FB_PAGE_ACCESS_TOKEN_BRAND }}
+        run: python post_now.py
+
+      - name: Commit the posting record
+        if: always()
+        run: |
+          git config user.name  "gt-autopost[bot]"
+          git config user.email "gt-autopost@users.noreply.github.com"
+          git add posted_log_brand.json || true
+          git commit -m "auto(brand): posted record $(date -u +%Y-%m-%dT%H:%MZ)" || echo "nothing to commit"
+          git pull --rebase origin ${{ github.ref_name }} || true
+          git push || true
