@@ -13,24 +13,46 @@ const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
 const { FORMATS, THREADS } = require('./threads_bank');
+const COMMUNITY = require('./threads_community');
+const { guardThread } = require('./threads_guard');
 
-/* The pool is weighted, not uniform.
+/* The pool is weighted, not uniform, and the weights come from the account's
+ * own log rather than from taste.
  *
- * @markusreidgt is a person's handle, and the room it posts into is full of
- * people building alone looking for each other. A rotation where the company
- * voice outnumbers the person seven to one gets that backwards, so the voice
- * entries are repeated until they are about half of every draw.
+ * Two findings drive this.
  *
- * Weighting rather than deleting, for two reasons. The brand formats are not
- * wrong, they are just outnumbered in the wrong direction, and nothing here
- * has enough measured evidence yet to justify destroying work. When the
- * Threads log can support a ranking, this is the line that should be replaced
- * by one that reads it. */
-const ALL = [...FORMATS, ...(THREADS || [])];
-const VOICE = ALL.filter((f) => f.voice === 'markus');
-const REST = ALL.filter((f) => f.voice !== 'markus');
-const REPS = VOICE.length ? Math.max(1, Math.round(REST.length / VOICE.length)) : 1;
-const POOL = REST.concat(...Array.from({ length: REPS }, () => VOICE));
+ * MULTI-PART THREADS PULL 5.7x THE REACH OF SINGLES HERE. Across 78 posts the
+ * median for a thread is 63 views and the median for a single post is 11. The
+ * old rotation had singles outnumbering threads five to one, which is exactly
+ * backwards. Threads are now weighted to roughly a third of every draw, so at
+ * three posts a day at least one is a thread most days.
+ *
+ * THE COMMUNITY BANK OUTRANKS THE DIRECT RESPONSE BANK. threads_bank.js was
+ * built on ad structures. They do not start conversations and Threads throttles
+ * the combative ones. threads_community.js is built for replies and saves, so
+ * it carries the majority of the rotation. The old bank is kept, not deleted:
+ * some of it is genuinely useful and nothing here has enough measured evidence
+ * yet to justify destroying work.
+ *
+ * When the reply data can support a ranking, this block is the one to replace
+ * with something that reads threads_performance_log.json. */
+
+const BRAND_SINGLES = FORMATS.filter((f) => !f.thread);
+const BRAND_THREADS = THREADS || [];
+const COMM_SINGLES = COMMUNITY.FORMATS.filter((f) => !f.thread);
+const COMM_THREADS = COMMUNITY.THREADS || [];
+
+const rep = (arr, n) => [].concat(...Array.from({ length: n }, () => arr));
+
+/* Target mix per draw, roughly:
+ *   35% community singles, 30% any thread, 20% brand voice singles, 15% brand DR. */
+const POOL = [
+  ...rep(COMM_SINGLES, 4),
+  ...rep(COMM_THREADS, 5),
+  ...rep(BRAND_THREADS, 2),
+  ...rep(FORMATS.filter((f) => f.voice === 'markus'), 2),
+  ...BRAND_SINGLES,
+];
 
 const MAX_CHARS = 500;
 const LOG = path.join(__dirname, 'threads_used_log.json'); // namespaced: won't clash with image autoposter's used_log.json
@@ -50,7 +72,23 @@ function nextPost(used, sessionSeen) {
   for (const fmt of order) {
     for (let attempt = 0; attempt < 6; attempt++) {
       // single-post formats expose render(); thread formats expose thread() -> [hook, ...replies]
-      const parts = (fmt.thread ? fmt.thread() : [fmt.render()]).map((s) => s.trim());
+      const raw = (fmt.thread ? fmt.thread() : [fmt.render()]).map((s) => s.trim());
+
+      /* The text gate. Nothing reached this file before it, which is how em
+       * dashes, a down arrow and a "Save this. Follow for the rest" CTA all
+       * shipped to a live account. guardThread() silently normalises what is
+       * safe to fix and refuses anything that needs a judgement call. A refusal
+       * is not an error: the loop simply draws again. */
+      const gate = guardThread(raw);
+      if (!gate.ok) {
+        if (process.env.THREADS_GUARD_VERBOSE === '1') {
+          process.stderr.write(`guard skipped ${fmt.pillar}/${fmt.kind || 'thread'}: ` +
+            gate.failures.map((f) => `${f.id}("${f.matched}")`).join(', ') + '\n');
+        }
+        continue;
+      }
+      const parts = gate.parts;
+
       if (parts.some((p) => p.length === 0 || p.length > MAX_CHARS)) continue; // every part must fit
       const h = hash(parts.join('\n\n'));
       if (used.has(h) || sessionSeen.has(h)) continue;

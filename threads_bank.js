@@ -1,6 +1,6 @@
-// threads_bank.js — Growth Terminal / Markus Reid (@markusreidgt)
+// threads_bank.js, Growth Terminal / Markus Reid (@markusreidgt)
 // COPYWRITING ENGINE. Every entry is built on a proven direct-response structure
-// (PAS, AIDA, BAB, myth-bust, callout, how-to-without, framework-drop, story→lesson,
+// (PAS, AIDA, BAB, myth-bust, callout, how-to-without, framework-drop, story lesson,
 // FAB, listicle, sticky one-liner). Teach-first, soft funnel (~80% value / ~20% offer).
 //
 // Contract (unchanged, drop-in): exports { FORMATS, THREADS, SYMPTOM_DISEASE, CEILINGS, SOFT_CTA }.
@@ -25,7 +25,7 @@ const clamp = (s) => { // safety net so nothing ever exceeds the 500-char Thread
 
 // ---------- content pools (the growth-marketing substance) ----------
 
-// symptom → the real constraint → the one-line fix. Powers PAS / callout / reframe / diagnosis.
+// symptom the real constraint the one-line fix. Powers PAS / callout / reframe / diagnosis.
 /* The person behind the account. See threads_voice.js for who he is and, more
    importantly, for what he is not allowed to claim. */
 const {
@@ -37,14 +37,14 @@ const CONSTRAINTS = [
   { sym: 'We need more traffic', real: 'conversion problem', fix: "pouring more water into a leaking bucket just wastes more water" },
   { sym: 'Our content isn\u2019t working', real: 'distribution problem', fix: "the post isn\u2019t weak, the spread is" },
   { sym: 'We need a rebrand', real: 'positioning problem', fix: "people don\u2019t buy prettier, they buy clearer" },
-  { sym: 'Sales are slow', real: 'offer problem', fix: "a weak offer to the right list still loses \u2014 fix what you sell first" },
+  { sym: 'Sales are slow', real: 'offer problem', fix: "a weak offer to the right list still loses, fix what you sell first" },
   { sym: 'Churn is killing us', real: 'onboarding problem', fix: "people don\u2019t leave what they\u2019ve actually activated" },
   { sym: 'We need to post more', real: 'hook problem', fix: "ten posts nobody stops for is still zero" },
-  { sym: 'Ads are too expensive', real: 'message-market-match problem', fix: "you\u2019re not overpaying for clicks, you\u2019re underpaying attention" },
+  { sym: 'Ads are too expensive', real: 'message-market-match problem', fix: "the click is not too expensive, the message is not earning it" },
   { sym: 'We\u2019re just not growing', real: 'retention problem', fix: "growth is retention with a smaller leak" },
 ];
 
-// named mechanisms Markus "owns" — the vocabulary of an authority.
+// named mechanisms Markus "owns", the vocabulary of an authority.
 const MECHANISMS = [
   { name: 'the 10-minute constraint diagnosis', line: "Map your funnel. Find the biggest drop. Fix only that. Everything else is a distraction this week." },
   { name: 'funnel math', line: "You don\u2019t have a traffic problem or a sales problem. You have one number that\u2019s lowest. Move that number." },
@@ -61,33 +61,33 @@ const APHORISMS = [
   "Distribution beats creation. The best post nobody sees loses to the average post everyone does.",
   "A rebrand is what companies do instead of fixing their positioning.",
   "A clever brand with no offer loses to a clear offer with no brand.",
-  "You\u2019re not overpaying for clicks. You\u2019re underpaying attention.",
+  "The metric you have not looked at this month is the one worth looking at.",
   "More content can\u2019t out-run a weak offer.",
   "The metric you avoid looking at is usually your constraint.",
 ];
 
 // hook openers (line 1 stops the scroll).
 const CALLOUTS = [
-  "If you\u2019re posting every day and still flat, read this.",
-  "If your traffic is fine but sales aren\u2019t, this is for you.",
-  "Founders who \u201cneed more reach\u201d almost never do. Here\u2019s why.",
-  "If you\u2019re about to spend on ads, stop for 30 seconds.",
+  "Posting every day and still flat is a specific problem, not a general one.",
+  "Traffic that is fine while sales are not is the most misread situation there is.",
+  "The businesses that say they need more reach almost never do.",
+  "The thirty seconds before you turn ads on is worth more than the first week of spend.",
 ];
 
 // soft, non-salesy follow CTAs (value posts). Funnel = attention.
 const SOFT_CTA = [
-  "Follow @markusreidgt for the growth stuff nobody spells out.",
-  "I post the growth playbook in plain English. Follow along.",
+  "Writing these down as I go. More on @markusreidgt.",
   "More of these on @markusreidgt.",
-  "Save this. Follow for the rest of the system.",
+  "",
+  "",
 ];
 
-// soft OFFER CTAs (~20% of posts) — funnel to the System / diagnosis.
+// soft OFFER CTAs (~20% of posts), funnel to the System / diagnosis.
 const OFFER_CTA = [
-  "The full System \u2014 playbook + tracker \u2014 is here \u2192 www.growthterminal.io/system",
-  "Want the 10-minute diagnosis as a done-for-you system? \u2192 www.growthterminal.io/system",
-  "The Growth Hacking System runs this for you, step by step \u2192 www.growthterminal.io/system",
-  "Stop guessing. The System names your #1 constraint and fixes it \u2192 www.growthterminal.io/system",
+  "Wrote the long version down. What To Sell, 29 dollars growthterminal.io/what-to-sell",
+  "The full method is in a guide if it is useful. 29 dollars growthterminal.io/what-to-sell",
+  "Attract, Don't Sell covers this properly. 50 dollars growthterminal.io/attract",
+  "There is a guide for this. Posts stay free either way growthterminal.io/what-to-sell",
 ];
 
 // kept for compatibility / dashboard use
@@ -96,19 +96,19 @@ const CEILINGS = ['traffic', 'conversion', 'retention', 'pricing', 'positioning'
 
 // ---------- FORMATS (single posts, each = a copywriting framework) ----------
 const FORMATS = [
-  // PAS — Problem, Agitate, Solution
+  // PAS, Problem, Agitate, Solution
   { pillar: 'constraint', kind: 'pas', render: () => { const c = pick(CONSTRAINTS);
-    return clamp(`\u201c${c.sym}.\u201d\n\nNo \u2014 that\u2019s the symptom.\n\nThe real problem is ${art(c.real)} ${c.real}. And more effort on the wrong lever just makes the drop steeper.\n\nFix it at the source: ${c.fix}.`); } },
+    return clamp(`Almost everyone who says ${c.sym.toLowerCase()} has already decided what the problem is.\n\nUsually it is ${art(c.real)} ${c.real} instead. Effort aimed at the wrong stage does not just waste the money, it hides the real leak for another quarter.\n\n${cap(c.fix)}.`); } },
 
-  // Callout — name the reader, name the pain, redirect
+  // Callout, name the reader, name the pain, redirect
   { pillar: 'decision', kind: 'callout', render: () => { const c = pick(CONSTRAINTS);
     return clamp(`${pick(CALLOUTS)}\n\nThe problem usually isn\u2019t effort. It\u2019s aim.\n\n\u201c${c.sym}\u201d feels like the issue. It\u2019s ${art(c.real)} ${c.real}.\n\nPoint the same effort at the real constraint and it finally moves.`); } },
 
   // Myth-bust
   { pillar: 'bi', kind: 'myth', render: () => pick([
-    clamp(`\u201cThe answer is always more content.\u201d\n\nWrong.\n\nMore of a post nobody stops for is just more zero. The lever isn\u2019t volume \u2014 it\u2019s the hook and the spread. Fix what makes people stop, then scale it.`),
-    clamp(`\u201cWe need more traffic.\u201d\n\nAlmost never true.\n\nMost businesses leak the traffic they already have. A 2% \u2192 4% conversion bump doubles sales with zero new visitors. Find the leak before you buy the water.`),
-    clamp(`\u201cBrand awareness will fix it.\u201d\n\nRarely.\n\nPeople don\u2019t buy because they\u2019ve heard of you. They buy because the offer is clear and the timing is right. Clarity outsells awareness every time.`),
+    clamp(`More content is the most common answer to a flat month and the least often the right one.\n\nMore of a post nobody stops for is just more zero. The lever is the hook and the spread, not the volume.`),
+    clamp(`More traffic is rarely the thing in the way.\n\nMost businesses leak the traffic they already have. A two to four point conversion bump doubles sales with no new visitors. Worth finding the leak before buying more water.`),
+    clamp(`Brand awareness gets blamed for a lot of things it cannot fix.\n\nPeople do not buy because they have heard of you. They buy because the offer is clear and the timing is right.`),
   ]) },
 
   // Sticky one-liner (aphorism)
@@ -121,39 +121,40 @@ const FORMATS = [
     clamp(`How to raise prices without losing customers:\n\n1. Add one outcome they actually want.\n2. Name it on the page.\n3. Charge for the outcome, not the hours.\n\nPeople pay for the result, not your time.`),
   ]) },
 
-  // Framework-drop — name the mechanism, make it his
+  // Framework-drop, name the mechanism, make it his
   { pillar: 'systems', kind: 'framework', render: () => { const m = pick(MECHANISMS);
     return clamp(`The move most people skip: ${m.name}.\n\n${m.line}\n\nDo this before you touch anything else.`); } },
 
   // Numbered playbook
   { pillar: 'systems', kind: 'playbook', render: () => pick([
-    clamp(`Find your #1 growth constraint in 10 minutes:\n\n1. List your funnel: reach \u2192 clicks \u2192 leads \u2192 sales.\n2. Put the % next to each stage.\n3. Circle the lowest.\n\nThat\u2019s your constraint. Work only there this week.`),
+    clamp(`Find your #1 growth constraint in 10 minutes:\n\n1. List your funnel: reach clicks leads sales.\n2. Put the % next to each stage.\n3. Circle the lowest.\n\nThat\u2019s your constraint. Work only there this week.`),
     clamp(`Turn a flat account around in 3 moves:\n\n1. Cut every first line that doesn\u2019t stop the scroll.\n2. Post one idea three ways; keep the winner.\n3. Send all attention to ONE offer.\n\nFocus beats volume.`),
   ]) },
 
-  // BAB — Before, After, Bridge
+  // BAB, Before, After, Bridge
   { pillar: 'decision', kind: 'bab', render: () => clamp(
-    `Before: you post daily, refresh likes, feel busy, grow nothing.\n\nAfter: you post less, move one number a week, and it compounds.\n\nThe bridge is a diagnosis \u2014 stop guessing which lever, find the constraint, pull only that.`) },
+    `Before: you post daily, refresh likes, feel busy, grow nothing.\n\nAfter: you post less, move one number a week, and it compounds.\n\nThe bridge is a diagnosis, stop guessing which lever, find the constraint, pull only that.`) },
 
-  // Story → lesson (operator voice)
+  // Story lesson (operator voice)
   { pillar: 'authority', kind: 'story', render: () => pick([
-    clamp(`A founder swore he needed more traffic.\n\nWe looked. Traffic was fine \u2014 4% of visitors bought, and the buy button sat below the fold on mobile.\n\nMoved the button. Same traffic. Sales up.\n\nLesson: measure before you spend.`),
-    clamp(`Saw an account posting twice a day, going nowhere.\n\nThe posts were good. The first lines were wallpaper.\n\nWe rewrote only line one for a week. Same content \u2014 3x the stops.\n\nThe hook is the whole game.`),
-  ]) },
+    clamp(`The thing I keep relearning: look at the number before you spend against it.
 
-  // Reframe (symptom → disease)
+Twice now I have been sure the problem was traffic, and twice the traffic was fine.`),
+    ]) },
+
+  // Reframe (symptom disease)
   { pillar: 'constraint', kind: 'reframe', render: () => { const c = pick(CONSTRAINTS);
     return clamp(`\u201c${c.sym}\u201d usually isn\u2019t what it looks like.\n\nIt\u2019s ${art(c.real)} ${c.real}.\n\n${cap(c.fix)}.`); } },
 
   // Listicle
   { pillar: 'bi', kind: 'list', render: () => pick([
     clamp(`3 growth truths nobody posts:\n\n1. More content can\u2019t fix a weak offer.\n2. Retention is cheaper than acquisition. Every time.\n3. The metric you avoid is usually the constraint.\n\nSave it.`),
-    clamp(`4 things that look like marketing problems but aren\u2019t:\n\n\u2022 \u201cNeed traffic\u201d \u2192 conversion\n\u2022 \u201cNeed a rebrand\u201d \u2192 positioning\n\u2022 \u201cPost more\u201d \u2192 hooks\n\u2022 \u201cSales slow\u201d \u2192 the offer\n\nDiagnose before you spend.`),
+    clamp(`4 things that look like marketing problems but aren\u2019t:\n\n\u2022 \u201cNeed traffic\u201d conversion\n\u2022 \u201cNeed a rebrand\u201d positioning\n\u2022 \u201cPost more\u201d hooks\n\u2022 \u201cSales slow\u201d the offer\n\nDiagnose before you spend.`),
   ]) },
 
-  // AIDA — compact
-  { pillar: 'decision', kind: 'aida', render: () => clamp(
-    `Your funnel has one weakest number. (Attention)\n\nEverything you\u2019re doing to \u201cgrow\u201d that isn\u2019t moving it is noise. (Interest)\n\nFix that one number and the whole thing lifts \u2014 same traffic, same spend. (Desire)\n\nMap it today. Circle the lowest %. Start there. (Action)`) },
+  // AIDA, compact
+  { pillar: 'decision', kind: 'aida', render: () =>
+    clamp(`Your funnel has one weakest number.\n\nEverything you are doing to grow that is not moving it is noise, however good it is.\n\nFix that one number and the whole thing lifts on the same traffic and the same spend.\n\nMap it today, circle the lowest percentage, start there.`) },
 
   // Value + soft follow (still teaching; funnel = attention)
   { pillar: 'systems', kind: 'value_cta', render: () => { const m = pick(MECHANISMS);
@@ -164,10 +165,10 @@ const FORMATS = [
     `The 10-minute constraint diagnosis, in 3 steps:\n\n1. Map your funnel.\n2. Find the biggest drop.\n3. Fix only that this week.\n\n${pick(OFFER_CTA)}`) },
 
   { pillar: 'product', kind: 'offer', render: () => clamp(
-    `I built a system that finds your #1 growth constraint and hands you the fix.\n\nNot another dashboard of numbers \u2014 a diagnosis that tells you the one thing to work on.\n\nSo you stop guessing and move one metric a week. ${pick(OFFER_CTA)}`) },
+    `I built a system that finds your #1 growth constraint and hands you the fix.\n\nNot another dashboard of numbers, a diagnosis that tells you the one thing to work on.\n\nSo you stop guessing and move one metric a week. ${pick(OFFER_CTA)}`) },
 
   { pillar: 'solution', kind: 'offer', render: () => { const c = pick(CONSTRAINTS);
-    return clamp(`Most \u201cgrowth\u201d advice is a pile of tactics with no diagnosis.\n\n\u201c${c.sym}\u201d? The real issue is ${art(c.real)} ${c.real} \u2014 and you can\u2019t fix what you haven\u2019t named.\n\nThe System names it, then fixes it. ${pick(OFFER_CTA)}`); } },
+    return clamp(`Most \u201cgrowth\u201d advice is a pile of tactics with no diagnosis.\n\n\u201c${c.sym}\u201d? The real issue is ${art(c.real)} ${c.real}, and you can\u2019t fix what you haven\u2019t named.\n\nThe System names it, then fixes it. ${pick(OFFER_CTA)}`); } },
 ];
 
 // ---------- THREADS (reply-chain deep-dives; framework-driven) ----------
@@ -305,16 +306,16 @@ const RULES = [
 ];
 
 const RULE_HOOKS = [
-  () => `Everyone thinks they have a traffic problem.\n\nAlmost nobody does.\n\n5 rules for finding what’s actually capping your growth 👇`,
-  () => `Most growth advice is a pile of tactics with no diagnosis.\n\n5 rules that fix that 👇`,
-  () => `You don’t have a growth problem.\n\nYou have a diagnosis problem.\n\n5 rules I’d give any founder who feels stuck 👇`,
-  () => `Ten scattered tactics cancel out.\n\nOne named constraint compounds.\n\n5 rules for telling the difference 👇`,
+  () => `Everyone thinks they have a traffic problem.\n\nAlmost nobody does.\n\n5 rules for finding what’s actually capping your growth`,
+  () => `Most growth advice is a pile of tactics with no diagnosis.\n\n5 rules that fix that`,
+  () => `You don’t have a growth problem.\n\nYou have a diagnosis problem.\n\n5 rules I’d give any founder who feels stuck`,
+  () => `Ten scattered tactics cancel out.\n\nOne named constraint compounds.\n\n5 rules for telling the difference`,
 ];
 
 const RULE_CLOSES = [
   () => `Five rules, one idea:\n\nFind the one thing capping you. Fix only that. Then prove it moved.\n\nThat’s the whole system. (7/7)`,
   () => `If you keep one line from this:\n\nthe complaint is never the constraint.\n\nDiagnose before you spend. (7/7)`,
-  () => `That’s the loop:\n\ndiagnose → fix one thing → check whether it moved.\n\nRun it weekly and it compounds. (7/7)`,
+  () => `That’s the loop:\n\ndiagnose fix one thing check whether it moved.\n\nRun it weekly and it compounds. (7/7)`,
   () => `Run the loop weekly and the gains stack instead of cancel.\n\n${pick(OFFER_CTA)} (7/7)`,
 ];
 
@@ -327,15 +328,15 @@ const rulesThread = () => {
 };
 
 const THREADS = [
-  // Numbered-rules chain — scannable, high-retention (hook + 5 named rules + close)
+  // Numbered-rules chain, scannable, high-retention (hook + 5 named rules + close)
   { pillar: 'playbook', kind: 'thread', thread: rulesThread },
 
   // PAS deep-dive: the traffic myth
   { pillar: 'constraint', kind: 'thread', thread: () => [
-    clamp(`Everyone thinks they have a traffic problem.\n\nAlmost nobody does.\n\nA short thread on finding the real constraint \u2014 and growing without spending a cent more \ud83d\udc47`),
+    clamp(`Everyone thinks they have a traffic problem.\n\nAlmost nobody does.\n\nA short thread on finding the real constraint, and growing without spending a cent more \ud83d\udc47`),
     clamp(`Symptom: \u201cwe need more people.\u201d\n\nReality: you\u2019re leaking the people you already have. More water into a bucket with holes just wastes more water.`),
-    clamp(`Do this: list your funnel \u2014 reach \u2192 clicks \u2192 leads \u2192 sales. Put the % conversion next to each stage.`),
-    clamp(`The lowest % is your constraint. Not your opinion \u2014 the number. That\u2019s where every hour should go this week.`),
+    clamp(`Do this: list your funnel, reach clicks leads sales. Put the % conversion next to each stage.`),
+    clamp(`The lowest % is your constraint. Not your opinion, the number. That\u2019s where every hour should go this week.`),
     clamp(`Fix that one stage and the same traffic converts harder. That\u2019s growth with zero new spend.\n\n${pick(OFFER_CTA)}`),
   ] },
 
@@ -348,28 +349,28 @@ const THREADS = [
     clamp(`Creation gets you a post. Distribution gets you a business. Build the second one.\n\n${pick(SOFT_CTA)}`),
   ] },
 
-  // Story → lesson: the hook rewrite
+  // Story lesson: the hook rewrite
   { pillar: 'authority', kind: 'thread', thread: () => [
-    clamp(`I turned a dead account around by changing one thing.\n\nNot the topic. Not the frequency.\n\nThe first line \ud83d\udc47`),
-    clamp(`The posts were genuinely good. But every one opened with wallpaper \u2014 \u201cToday I want to talk about\u2026\u201d\n\nNobody stops for a warm-up.`),
-    clamp(`We rewrote only line one for a week:\n\n\u2022 name the person\n\u2022 name the pain\n\u2022 promise the outcome\n\nSame body copy underneath.`),
-    clamp(`Stops tripled. Same content. The hook was the entire bottleneck.\n\nYour best idea with a weak first line is a tree falling in an empty forest.`),
-    clamp(`Rule: spend as long on line one as you spend on the other ten.\n\n${pick(SOFT_CTA)}`),
+    clamp(`The first line is doing more work than the rest of the post, and it is usually the line people spend the least time on.`),
+    clamp(`Most posts that go nowhere are not badly written. They open with a warm-up.\n\n"Today I want to talk about" is a warm-up. Nobody stops for one.`),
+    clamp(`What seems to work instead, at least from what I can see in other people's posts:\n\nname the person, name the problem, say what they get if they keep reading. All in the first two lines, because that is where the platform cuts you off.`),
+    clamp(`The uncomfortable version of this: your best idea with a weak opening line performs identically to no idea at all. The reader never got far enough to know the difference.`),
+    clamp(`So the rule I am trying to hold myself to is spending as long on line one as on the other ten.\n\nI am early and my numbers are small, so treat this as what I am testing rather than what I have proven.`),
   ] },
 
   // Retention-first
   { pillar: 'constraint', kind: 'thread', thread: () => [
     clamp(`Stop trying to grow.\n\nStart trying to leak less.\n\nThe retention-first playbook \ud83d\udc47`),
     clamp(`Acquisition on top of churn is a bucket with holes. You pour faster, it drains faster, you burn cash feeling busy.`),
-    clamp(`Find your leak: where do people go quiet? Signup \u2192 first use? First use \u2192 habit? Habit \u2192 renewal? One of those is bleeding.`),
+    clamp(`Find your leak: where do people go quiet? Signup first use? First use habit? Habit renewal? One of those is bleeding.`),
     clamp(`Fix onboarding first. People don\u2019t abandon what they\u2019ve actually activated. Get them to the \u201caha\u201d fast and churn drops on its own.`),
-    clamp(`Then \u2014 and only then \u2014 scale acquisition. Growth is retention with a smaller leak.\n\n${pick(OFFER_CTA)}`),
+    clamp(`Then, and only then, scale acquisition. Growth is retention with a smaller leak.\n\n${pick(OFFER_CTA)}`),
   ] },
 
   // The one-metric week
   { pillar: 'systems', kind: 'thread', thread: () => [
     clamp(`The reason you feel busy and flat:\n\nyou\u2019re moving ten metrics an inch instead of one metric a mile.\n\nThe one-metric week \ud83d\udc47`),
-    clamp(`Pick the single number your constraint lives in. Just one. Conversion, or reply rate, or activation \u2014 whatever\u2019s lowest.`),
+    clamp(`Pick the single number your constraint lives in. Just one. Conversion, or reply rate, or activation, whatever\u2019s lowest.`),
     clamp(`For 7 days, every action has to move THAT number. If a task doesn\u2019t touch it, it waits.`),
     clamp(`This kills the real enemy: shallow effort spread across everything. Depth on one lever beats a thin layer on ten.`),
     clamp(`Next week, new constraint, new metric. That\u2019s a system, not a scramble.\n\n${pick(SOFT_CTA)}`),
@@ -400,21 +401,21 @@ const THREADS = [
 
 // ---------- CTAs for the new destinations ----------
 const GUIDE_CTA = [
-  'Attract, Don’t Sell, the field guide → www.growthterminal.io/products/?p=attract-don-t-sell',
-  'I wrote the whole method down → www.growthterminal.io/products/?p=attract-don-t-sell',
-  'The 30-day attraction plan is in the guide → www.growthterminal.io/products/?p=attract-don-t-sell',
+  'Attract, Don’t Sell, the field guide www.growthterminal.io/products/?p=attract-don-t-sell',
+  'I wrote the whole method down www.growthterminal.io/products/?p=attract-don-t-sell',
+  'The 30-day attraction plan is in the guide www.growthterminal.io/products/?p=attract-don-t-sell',
 ];
 
 const SOLUTIONS_CTA = [
-  'We build these for operators → www.growthterminal.io/ai-solutions',
-  'Content, assistants, voice agents → www.growthterminal.io/ai-solutions',
-  'The AI solutions that run this for you → www.growthterminal.io/ai-solutions',
+  'We build these for operators www.growthterminal.io/ai-solutions',
+  'Content, assistants, voice agents www.growthterminal.io/ai-solutions',
+  'The AI solutions that run this for you www.growthterminal.io/ai-solutions',
 ];
 
 const PLATFORM_CTA = [
-  'Run the free diagnostic → www.growthterminal.io/diagnostic',
-  'See how the engine reads a business → www.growthterminal.io/how-it-works',
-  'Start with the free diagnostic, no card → www.growthterminal.io/diagnostic',
+  'Run the free diagnostic www.growthterminal.io/diagnostic',
+  'See how the engine reads a business www.growthterminal.io/how-it-works',
+  'Start with the free diagnostic, no card www.growthterminal.io/diagnostic',
 ];
 
 // ---------- pools for the teaching side ----------
@@ -443,9 +444,9 @@ const PROMO_FORMATS = [
 
   // 2. The guide, direct. Price named here, and only here.
   { pillar: 'product', kind: 'offer', render: () => pick([
-    clamp(`New: Attract, Don’t Sell.\n\nHow to build trust, create demand, and make your business the obvious choice.\n\nInside:\n• why pushing lowers trust\n• the content framework\n• demand before intent\n• a 30-day plan\n\nPDF guide, $55 one-time, 30-day guarantee → www.growthterminal.io/products/?p=attract-don-t-sell`),
-    clamp(`If you are tired of chasing leads, I wrote the alternative down.\n\nAttract, Don’t Sell is a field guide for founders who want to be found instead: the trust framework, how to create demand before anyone is ready, and a 30-day plan you can start this week.\n\n$55 one-time → www.growthterminal.io/products/?p=attract-don-t-sell`),
-    clamp(`Most guides tell you to post more.\n\nThis one tells you what to post, in what order, so buyers arrive already convinced.\n\nAttract, Don’t Sell. Positioning, demand creation, and a 30-day attraction plan.\n\n$55, one-time, 30-day guarantee → www.growthterminal.io/products/?p=attract-don-t-sell`),
+    clamp(`New: Attract, Don’t Sell.\n\nHow to build trust, create demand, and make your business the obvious choice.\n\nInside:\n• why pushing lowers trust\n• the content framework\n• demand before intent\n• a 30-day plan\n\nPDF guide, $55 one-time, 30-day guarantee www.growthterminal.io/products/?p=attract-don-t-sell`),
+    clamp(`If you are tired of chasing leads, I wrote the alternative down.\n\nAttract, Don’t Sell is a field guide for founders who want to be found instead: the trust framework, how to create demand before anyone is ready, and a 30-day plan you can start this week.\n\n$55 one-time www.growthterminal.io/products/?p=attract-don-t-sell`),
+    clamp(`Most guides tell you to post more.\n\nThis one tells you what to post, in what order, so buyers arrive already convinced.\n\nAttract, Don’t Sell. Positioning, demand creation, and a 30-day attraction plan.\n\n$55, one-time, 30-day guarantee www.growthterminal.io/products/?p=attract-don-t-sell`),
   ]) },
 
   // 3. The AI solutions. Named plainly, because vagueness is what kills this pitch.
@@ -520,7 +521,7 @@ const VALUE_FORMATS = [
 
   // Decision: reversible vs not
   { pillar: 'decision', kind: 'reversible', render: () => clamp(
-    `Sort every decision into two piles: reversible and not.\n\nReversible ones deserve a day, not a committee. Make them fast and be wrong cheaply.\n\nThe other pile deserves the week you keep spending on the first one.\n\nMost teams have this exactly backwards.`) },
+    `Sort every decision into two piles: reversible and not.\n\nReversible ones deserve a day, not a committee. Make them fast and be wrong cheaply.\n\nThe other pile deserves the week you keep spending on the first one.\n\nI had those two piles the wrong way round for a long time.`) },
 
   // Mistakes: marketing vs operations
   { pillar: 'mistakes', kind: 'ops', render: () => clamp(
@@ -661,7 +662,7 @@ const HUMAN_FORMATS = [
     clamp(`What’s the number in your business you’ve been avoiding looking at?\n\nNot a trick question. Mine was refund rate for most of a year.\n\n${pick(ASK_TAIL)}`),
     clamp(`What’s a piece of business advice that everyone repeats and that turned out to be completely wrong for you?\n\n${pick(ASK_TAIL)}`),
     clamp(`How many customers in did it start to feel real?\n\nFor some people it’s the first. For some it’s the hundredth and it still doesn’t.\n\n${pick(ASK_TAIL)}`),
-    clamp(`Honest question for anyone a year or two in:\n\nwhat would you go back and do differently in month one?\n\n${pick(ASK_TAIL)}`),
+    clamp(`For anyone a year or two further in than me:\n\nwhat would you go back and do differently in month one?\n\n${pick(ASK_TAIL)}`),
   ]) },
 
   { pillar: 'community', kind: 'ask', render: () => pick([
@@ -710,7 +711,9 @@ FORMATS.push(...HUMAN_FORMATS);
 // it" actually requires when the other two thirds are consultancy prose.
 const HUMAN_FORMATS_2 = [
   { pillar: 'early', kind: 'real', render: () => pick([
-    clamp(`Three years in and I still get the Sunday night thing.\n\nI don’t think it goes away. I think you just stop reading it as a warning sign.`),
+    clamp(`The Sunday night thing has not gone away yet.
+
+I am told you stop reading it as a warning sign eventually. Not there.`),
     clamp(`Your first hundred followers, first ten customers, first real month. All of it takes longer than anyone admits, and then it compounds faster than anyone expects.\n\nMost people quit in the gap between those two sentences.`),
     clamp(`Something I wish someone had said earlier:\n\nyou don’t need a better idea. You need the same idea, in front of people, for longer than feels reasonable.`),
   ]) },
@@ -727,7 +730,7 @@ const HUMAN_FORMATS_2 = [
   ]) },
 
   { pillar: 'authority', kind: 'wrong', render: () => pick([
-    clamp(`Unpopular one:\n\nmost small businesses don’t have a marketing problem or an ops problem. They have a "nobody owns this" problem. The task isn’t hard, it just isn’t anyone’s.`),
+    clamp(`Something I keep noticing:\n\nmost small businesses don’t have a marketing problem or an ops problem. They have a "nobody owns this" problem. The task isn’t hard, it just isn’t anyone’s.`),
     clamp(`I don’t think most people need a growth strategy.\n\nThey need to do the four things they already know about, in order, without stopping halfway to research a fifth.`),
   ]) },
 
