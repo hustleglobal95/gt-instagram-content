@@ -16,16 +16,46 @@ const MUTED = '#6f665c', GOOD = '#37d67a', CARDBG = '#211b15';
 const F = (n, w, s = 'normal') => ({ name: n, data: fs.readFileSync(path.join(FONT_DIR, `${n}-${w}${s === 'italic' ? 'i' : ''}.ttf`)), weight: w, style: s });
 const FONTS = [F('ITight', 600), F('ITight', 700), F('ITight', 800), F('JBM', 500), F('JBM', 700), F('Fraunces', 400), F('Fraunces', 600), F('Fraunces', 900), F('Fraunces', 400, 'italic'), F('Fraunces', 500, 'italic')];
 
-// logos -> png data uris (recolored variants)
-function logoDataUri(recolorInk, w = 600) {
-  let svg = fs.readFileSync(path.join(ADKIT, 'logo_light.svg'), 'utf8'); // orange + #1D1815
-  if (recolorInk) svg = svg.split('#1D1815').join(recolorInk);
-  const png = new Resvg(svg, { fitTo: { mode: 'width', value: w } }).render().asPng();
+/* Logos.
+ *
+ * Built from logo_parts.json, which is the same two-group geometry the Brand
+ * Kit holds: one group carrying the amber, one carrying the ink. Nothing here
+ * redraws or reconstructs the mark, it recolours the supplied groups and crops
+ * to the supplied viewBoxes, so every variant traces back to one asset.
+ *
+ * crop: 'full' the horizontal lockup, 'icon' the GT monogram, 'word' the
+ * wordmark alone. icon and word ship in the repo and had never been used.
+ */
+const LP = JSON.parse(fs.readFileSync(path.join(ADKIT, 'logo_parts.json'), 'utf8'));
+const LOGO_ASPECT = { full: 0.199, icon: 372 / LP.icon_wh[0], word: 372 / LP.word_wh[0] };
+
+function logoUri(opts = {}) {
+  const crop = opts.crop || 'full';
+  const accent = opts.accent || ORANGE;          // the amber group
+  const ink = opts.ink || PAPERINK;              // the ink group
+  const svg = `<svg viewBox="${LP[crop]}" xmlns="http://www.w3.org/2000/svg">`
+    + `<g fill="${accent}" ${LP.tf}>${LP.orange}</g>`
+    + `<g fill="${ink}" ${LP.tf}>${LP.white}</g></svg>`;
+  // height fit is kept as an option because the tweet avatar was sized by
+  // height before this refactor and switching it to width changed the mark's
+  // scale on the main account's tweet layout.
+  const fit = opts.h ? { mode: 'height', value: opts.h } : { mode: 'width', value: opts.w || 600 };
+  const png = new Resvg(svg, { fitTo: fit }).render().asPng();
   return 'data:image/png;base64,' + png.toString('base64');
 }
-const LOGO_WHITE = logoDataUri(WHITE);     // for dark bg
-const LOGO_INK = logoDataUri(PAPERINK);    // for cream bg
-const LOGO_CREAM = logoDataUri(CREAM);     // cream wordmark for dark editorial bg
+
+const LOGO_WHITE = logoUri({ ink: WHITE });   // for dark bg
+const LOGO_INK   = logoUri({ ink: PAPERINK }); // for cream and paper bg
+const LOGO_CREAM = logoUri({ ink: CREAM });    // cream wordmark for dark editorial bg
+/* On a solid amber field the amber group disappears into the background and the
+ * lockup reads "G ROWTH". Recolouring BOTH groups to one brand colour is the
+ * same operation as the cream and white variants above, so the mark stays a
+ * recolour rather than a redraw. */
+const LOGO_ON_AMBER = logoUri({ accent: WHITE, ink: WHITE });
+const LOGO_MONO_INK = logoUri({ accent: PAPERINK, ink: PAPERINK }); // all-ink alternative for the amber field
+const LOGO_ICON_INK   = logoUri({ crop: 'icon', ink: PAPERINK, w: 200 });
+const LOGO_ICON_CREAM = logoUri({ crop: 'icon', ink: CREAM, w: 200 });
+const LOGO_ICON_AMBER = logoUri({ crop: 'icon', accent: WHITE, ink: WHITE, w: 200 });
 
 // ---------- element helpers ----------
 const el = (style, children) => ({ type: 'div', props: { style: { display: 'flex', flexDirection: 'column', ...style }, children } });
@@ -201,11 +231,7 @@ async function L_feature(p) {
 // GT-mark avatar (icon-only crop of the logo) for the tweet layout
 let _avatar = null;
 function avatarUri() {
-  if (_avatar) return _avatar;
-  const P = JSON.parse(fs.readFileSync(path.join(ADKIT, 'logo_parts.json'), 'utf8'));
-  const svg = `<svg viewBox="${P.icon}" xmlns="http://www.w3.org/2000/svg"><g fill="${ORANGE}" ${P.tf}>${P.orange}</g><g fill="${WHITE}" ${P.tf}>${P.white}</g></svg>`;
-  const png = new Resvg(svg, { fitTo: { mode: 'height', value: 120 } }).render().asPng();
-  _avatar = 'data:image/png;base64,' + png.toString('base64');
+  if (!_avatar) _avatar = logoUri({ crop: 'icon', ink: WHITE, h: 120 });
   return _avatar;
 }
 const clean = s => decodeEntities(String(s == null ? '' : s).replace(/<[^>]+>/g, ''));
@@ -326,6 +352,366 @@ function L_edserif(p) {
     ]),
   ]);
 }
+/* ===========================================================================
+   L_svcfeat — the services layout for the brand account.
+
+   The previous services creative was a headline plus one supporting sentence,
+   which states a benefit but never shows what the thing actually does. For an
+   account whose whole job is selling four services, that is the wrong shape:
+   somebody scrolling learns there is a product but not what is in it.
+
+   This puts three concrete capabilities on the card as numbered rows, so the
+   feature set is the visual, not an afterthought. White ground rather than the
+   cream used elsewhere, per brand direction for this account.
+   =========================================================================== */
+const PURE_WHITE = '#FFFFFF';
+
+/* Row order is deliberate and comes from the research.
+ *
+ * B2B copy guidance is that headings must carry the argument on their own,
+ * because a reader who skims only the headings should still receive the whole
+ * case. The earlier version put the product name in the big type ("Lead
+ * Response") and the actual claim in the small grey line underneath, so anyone
+ * skimming learned three names and nothing about what they do.
+ *
+ * Now the claim is the heading and the product name drops to a small label
+ * above it. Skim the bold lines and you get the argument; read on and you learn
+ * what each piece is called. */
+/* dense (not "compact"): when a visual device sits above the rows there is less
+ * vertical room, so the rows tighten. An earlier version hid the detail line
+ * entirely in that case, which stripped out the sentence doing the persuading
+ * and left a bare list. The detail always renders now. */
+/* One row of the spec table.
+ *
+ * The row is a real two column record, not an indented list item: a fixed
+ * number gutter with a vertical rule on its right edge, then the content cell.
+ * The gutter rule and the horizontal divider between rows meet, so the three
+ * rows read as one ruled table rather than three floating paragraphs. That is
+ * the whole point of the rebuild: the previous version was a flat stack with
+ * whatever space was left over falling to the bottom of the frame.
+ */
+function specRow(n, title, detail, last, label, dense, k) {
+  const padV = dense ? 20 : 26;
+  const tSize = dense ? 34 : 38;
+  const dSize = dense ? 23 : 25;
+  /* flexGrow on the row, centred content inside it. The panel is taller than
+   * its three rows need, and the surplus has to go somewhere: split evenly
+   * across the rows it becomes row height, which is what a ruled table looks
+   * like. Left at the end of the stack it was just a hole above the footer. */
+  return el({ flexGrow: 1, borderBottomWidth: last ? 0 : 1, borderBottomColor: k.grid, borderBottomStyle: 'solid' }, [
+    el({ flexGrow: 1, flexDirection: 'row', alignItems: 'stretch' }, [
+      el({ width: 78, flexShrink: 0, justifyContent: 'center', paddingTop: padV, paddingBottom: padV,
+        borderRightWidth: 1, borderRightColor: k.grid, borderRightStyle: 'solid' }, [
+        txt(String(n).padStart(2, '0'), { fontFamily: 'JBM', fontWeight: 700, fontSize: 23, color: k.num, letterSpacing: 23 * 0.04 }),
+      ]),
+      el({ flexGrow: 1, justifyContent: 'center', paddingLeft: 30, paddingTop: padV, paddingBottom: padV, paddingRight: 8 }, [
+        label ? txt(clean(label), { fontFamily: 'JBM', fontWeight: 700, fontSize: dense ? 15 : 16, letterSpacing: (dense ? 15 : 16) * 0.2, color: k.label, marginBottom: 7 }) : el({}, []),
+        txt(clean(title), { fontFamily: 'ITight', fontWeight: 800, fontSize: tSize, lineHeight: 1.13, color: k.title, maxWidth: 700 }),
+        detail ? txt(clean(detail), { fontFamily: 'ITight', fontWeight: 600, fontSize: dSize, lineHeight: 1.3, color: k.detail, marginTop: 7, maxWidth: 690 }) : el({}, []),
+      ]),
+    ]),
+  ]);
+}
+
+/* ---------------------------------------------------------------------------
+   Skins.
+
+   Same card, three surfaces. A feed of nothing but white cards reads as one
+   long document; the ink and signal skins break the run so the grid has a
+   rhythm. Colour is the only thing that changes. Structure, type sizes and
+   copy are identical across all three, so nothing can drift between them.
+   --------------------------------------------------------------------------- */
+const SKINS = {
+  paper: {
+    bg: PURE_WHITE, logo: 'ink', tag: '#8a8073', hair: PAPERINK, hairOp: 0.9,
+    kicker: ORANGE, head: PAPERINK, emph: ORANGE,
+    num: ORANGE, label: '#a39a8e', title: PAPERINK, detail: '#6b6156', rule: '#e6e1d9',
+    devOn: ORANGE, devOff: '#ece7df', devInk: PAPERINK, devMute: '#6b6156', devDim: '#d8d2c8',
+    panelBg: '#FAF7F2', panelEdge: '#E4DED4', grid: '#E4DED4',
+    cta: ORANGE, ctaRule: ORANGE, url: '#8a8073',
+  },
+  ink: {
+    bg: '#14100D', logo: 'cream', tag: '#8a8073', hair: CREAM, hairOp: 0.55,
+    kicker: ORANGE, head: CREAM, emph: ORANGE,
+    num: ORANGE, label: '#8a8073', title: CREAM, detail: '#a49a8d', rule: '#2c251d',
+    devOn: ORANGE, devOff: '#39312A', devInk: CREAM, devMute: '#a49a8d', devDim: '#453B32',
+    panelBg: '#1A1511', panelEdge: '#2E2720', grid: '#2E2720',
+    cta: ORANGE, ctaRule: ORANGE, url: '#8a8073',
+  },
+  signal: {
+    bg: ORANGE, logo: 'mono', tag: 'rgba(23,19,15,0.60)', hair: PAPERINK, hairOp: 0.85,
+    kicker: '#FFFFFF', head: PAPERINK, emph: '#FFFFFF',
+    num: '#FFFFFF', label: 'rgba(23,19,15,0.55)', title: PAPERINK, detail: 'rgba(23,19,15,0.74)', rule: 'rgba(23,19,15,0.20)',
+    devOn: PAPERINK, devOff: 'rgba(23,19,15,0.16)', devInk: PAPERINK, devMute: 'rgba(23,19,15,0.74)', devDim: 'rgba(23,19,15,0.28)',
+    panelBg: 'rgba(255,255,255,0.11)', panelEdge: 'rgba(23,19,15,0.24)', grid: 'rgba(23,19,15,0.20)',
+    cta: PAPERINK, ctaRule: PAPERINK, url: 'rgba(23,19,15,0.60)',
+  },
+};
+
+/* ---------------------------------------------------------------------------
+   Visual devices.
+
+   The card was all type, which made every service look identical at a glance.
+   These give each one a shape. They are drawn from the product's own vocabulary
+   rather than invented decoration: severity scores, phases, runs, performance.
+   Amber marks one thing per card, per the portal design rules.
+   --------------------------------------------------------------------------- */
+
+// a severity readout: filled segments out of ten
+function devMeter(value, max, label, caption, k) {
+  const cells = [];
+  for (let i = 0; i < max; i++) {
+    // flexGrow, not a fixed 82px width: ten fixed cells plus their gaps came to
+    // 892px and overflowed the panel's 850px inner width on the right edge.
+    cells.push(el({ flexGrow: 1, flexBasis: 0, height: 20, borderRadius: 4, marginRight: i === max - 1 ? 0 : 8,
+      backgroundColor: i < value ? k.devOn : k.devOff }, []));
+  }
+  return el({}, [
+    el({ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: 13 }, [
+      txt(clean(label), { fontFamily: 'JBM', fontWeight: 700, fontSize: 17, letterSpacing: 17 * 0.18, color: k.label }),
+      txt(clean(caption), { fontFamily: 'ITight', fontWeight: 700, fontSize: 25, color: k.devInk }),
+    ]),
+    el({ flexDirection: 'row' }, cells),
+  ]);
+}
+
+// one oversized figure, for cards whose argument rests on a number.
+// The figure and its caption sit on one line: stacked, the 150px numeral alone
+// cost more height than a whole feature row.
+function devStat(value, unit, caption, k) {
+  return el({ flexDirection: 'row', alignItems: 'center' }, [
+    el({ flexDirection: 'row', alignItems: 'flex-end', flexShrink: 0 }, [
+      txt(clean(value), { fontFamily: 'ITight', fontWeight: 800, fontSize: 116, lineHeight: 1, letterSpacing: -5, color: k.devOn }),
+      txt(clean(unit), { fontFamily: 'ITight', fontWeight: 800, fontSize: 40, lineHeight: 1, color: k.devOn, marginLeft: 8, marginBottom: 12 }),
+    ]),
+    txt(clean(caption), { fontFamily: 'ITight', fontWeight: 600, fontSize: 26, lineHeight: 1.28, color: k.devMute, marginLeft: 34, maxWidth: 500 }),
+  ]);
+}
+
+// a three phase track, for work that moves through stages
+function devTrack(steps, k, active) {
+  // `active` marks which step is lit. It used to be hardcoded to the first one,
+  // which is wrong for a ticket flow: the interesting state is the gate, not
+  // the inbox.
+  const on = typeof active === 'number' ? active : 0;
+  const row = [];
+  steps.forEach((st, i) => {
+    row.push(el({ flexGrow: 1, flexBasis: 0 }, [
+      el({ flexDirection: 'row', alignItems: 'center', marginBottom: 11 }, [
+        el({ width: 15, height: 15, borderRadius: 8, flexShrink: 0, backgroundColor: i === on ? k.devOn : k.devDim }, []),
+        // The last step gets no connector at all. Painting it in the page colour
+        // left a visible stub once the device moved onto the panel fill.
+        i === steps.length - 1 ? el({ flexGrow: 1 }, []) : el({ flexGrow: 1, height: 2, backgroundColor: k.devDim }, []),
+      ]),
+      txt(clean(st), { fontFamily: 'ITight', fontWeight: 700, fontSize: steps.length > 3 ? 22 : 24, color: i === on ? k.devInk : k.label }),
+    ]));
+  });
+  return el({ flexDirection: 'row' }, row);
+}
+
+// a rising series, for anything that improves with feedback.
+// The baseline rule matters: without it the bars float and stop reading as a chart.
+function devBars(vals, caption, k) {
+  const top = Math.max.apply(null, vals);
+  const bars = vals.map((v, i) => el({ width: 70, marginRight: i === vals.length - 1 ? 0 : 11, justifyContent: 'flex-end', height: 104 }, [
+    el({ height: Math.max(8, Math.round(v / top * 104)), borderTopLeftRadius: 4, borderTopRightRadius: 4,
+      backgroundColor: i === vals.length - 1 ? k.devOn : k.devOff }, []),
+  ]));
+  return el({}, [
+    el({ flexDirection: 'row', alignItems: 'flex-end' }, bars),
+    el({ height: 1, width: 70 * vals.length + 11 * (vals.length - 1), backgroundColor: k.devDim }, []),
+    txt(clean(caption), { fontFamily: 'ITight', fontWeight: 600, fontSize: 25, color: k.devMute, marginTop: 14 }),
+  ]);
+}
+
+function device(v, k) {
+  if (!v) return el({}, []);
+  if (v.kind === 'meter') return devMeter(v.value, v.max || 10, v.label, v.caption, k);
+  if (v.kind === 'stat')  return devStat(v.value, v.unit, v.caption, k);
+  if (v.kind === 'track') return devTrack(v.steps || [], k, v.active);
+  if (v.kind === 'bars')  return devBars(v.values || [], v.caption, k);
+  return el({}, []);
+}
+
+function L_svcfeat(p) {
+  const k = SKINS[p.skin] || SKINS.paper;
+  const size = p.size || 82;
+  const head = richWrap(
+    [{ t: clean(p.head), em: false }, { t: clean(p.emph), em: true }],
+    { size, lineHeight: 1.0, ls: -0.03, maxWidth: 900,
+      base: { family: 'ITight', weight: 800, color: k.head },
+      em: { family: 'ITight', weight: 800, color: k.emph } });
+  const feats = (p.feats || []).slice(0, 3);
+  const dense = !!p.visual;
+
+  /* The body sits in a bordered well that grows to meet the footer.
+   *
+   * Before this, the rows were a bare stack and roughly 150px of unallocated
+   * slack collected above the footer on every card. Space that is left over
+   * reads as a mistake; the same space inside a panel reads as padding. The
+   * well also gives the visual device somewhere to live: its own band at the
+   * top of the panel, divided from the rows, instead of floating in a gap. */
+  const panel = el({ flexGrow: 1, marginTop: 34, backgroundColor: k.panelBg, paddingLeft: 24, paddingRight: 24,
+    borderWidth: 1, borderColor: k.panelEdge, borderStyle: 'solid', borderRadius: 4 }, [
+    /* Horizontal padding lives on the panel and nowhere else, so the device
+     * band's divider and the row dividers inset by exactly the same amount.
+     * With the padding split between the band and the row container they were
+     * offset by 8px and the rules did not line up. */
+    p.visual ? el({ paddingTop: 26, paddingBottom: 26,
+      borderBottomWidth: 1, borderBottomColor: k.grid, borderBottomStyle: 'solid' }, [device(p.visual, k)]) : el({}, []),
+    el({ flexGrow: 1 }, feats.map((f, i) =>
+      specRow(i + 1, f[0], f[1], i === feats.length - 1, f[2], dense, k))),
+  ]);
+
+  return el({ width: 1080, height: 1350, backgroundColor: k.bg, paddingTop: 92, paddingBottom: 92, paddingLeft: 90, paddingRight: 90 }, [
+    el({ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }, [
+      logoImg(k.logo === 'cream' ? LOGO_CREAM : k.logo === 'mono' ? LOGO_ON_AMBER : LOGO_INK, 210),
+      txt(clean(p.tag || 'GROWTH TERMINAL'), { fontFamily: 'JBM', fontWeight: 500, fontSize: 19, letterSpacing: 19 * 0.18, color: k.tag }),
+    ]),
+    el({ height: 2, backgroundColor: k.hair, opacity: k.hairOp, marginTop: 22 }, []),
+    el({ marginTop: 46 }, [
+      txt(clean(p.kicker), { fontFamily: 'JBM', fontWeight: 700, fontSize: 22, letterSpacing: 22 * 0.24, color: k.kicker, marginBottom: 24 }),
+      head,
+    ]),
+    panel,
+    el({ marginTop: 34, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-end' }, [
+      el({}, [
+        txt(clean(p.cta_label || 'RUN YOUR ANALYSIS'), { fontFamily: 'JBM', fontWeight: 700, fontSize: 25, letterSpacing: 25 * 0.12, color: k.cta }),
+        el({ height: 2, width: 330, backgroundColor: k.ctaRule, marginTop: 11 }, []),
+      ]),
+      txt('growthterminal.io', { fontFamily: 'JBM', fontWeight: 500, fontSize: 22, letterSpacing: 22 * 0.06, color: k.url }),
+    ]),
+  ]);
+}
+
+/* ---------------------------------------------------------------------------
+   Three new brand-account layouts.
+
+   svccal   the calibration scorecard. Growth Terminal grades its own forecasts
+            against real revenue and publishes the count before it is
+            flattering. No competitor found in the Meta Ad Library has anything
+            comparable, which is what makes it survive the replacement test.
+   svcfals  the falsifier. Every finding ships with what would disprove it.
+   svcline  typographic interruption. Deliberately plain, to sit against the
+            designed cards as a challenger rather than replace them.
+   All three reuse the SKINS palette so they inherit paper, ink and signal.
+   --------------------------------------------------------------------------- */
+
+// 67 cells, 8 lit. The count is the picture.
+function gradedGrid(total, done, k) {
+  const perRow = 17, rows = [];
+  for (let r = 0; r * perRow < total; r++) {
+    const cells = [];
+    for (let i = r * perRow; i < Math.min(total, (r + 1) * perRow); i++) {
+      cells.push(el({ flexGrow: 1, flexBasis: 0, height: 44, borderRadius: 4,
+        marginRight: i === Math.min(total, (r + 1) * perRow) - 1 ? 0 : 7,
+        backgroundColor: i < done ? k.devOn : k.devOff }, []));
+    }
+    rows.push(el({ flexDirection: 'row', marginBottom: 10 }, cells));
+  }
+  return el({}, rows);
+}
+
+function L_svccal(p) {
+  const k = SKINS[p.skin] || SKINS.ink;
+  /* Claim first, evidence under it. The first cut put the figure and grid at
+   * the top and the headline at the bottom, which left a hole through the
+   * middle and read as two unrelated cards stacked in one frame. */
+  return el({ width: 1080, height: 1350, backgroundColor: k.bg, paddingTop: 92, paddingBottom: 92, paddingLeft: 90, paddingRight: 90 }, [
+    el({ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }, [
+      logoImg(k.logo === 'cream' ? LOGO_CREAM : k.logo === 'mono' ? LOGO_ON_AMBER : LOGO_INK, 210),
+      txt('GROWTH TERMINAL', { fontFamily: 'JBM', fontWeight: 500, fontSize: 19, letterSpacing: 19 * 0.18, color: k.tag }),
+    ]),
+    el({ height: 2, backgroundColor: k.hair, opacity: k.hairOp, marginTop: 22 }, []),
+    el({ marginTop: 46 }, [
+      txt('CALIBRATION', { fontFamily: 'JBM', fontWeight: 700, fontSize: 22, letterSpacing: 22 * 0.24, color: k.kicker, marginBottom: 24 }),
+      txt(clean(p.head), { fontFamily: 'ITight', fontWeight: 800, fontSize: p.size || 72, lineHeight: 1.04, letterSpacing: -2, color: k.head, maxWidth: 900 }),
+      txt(clean(p.sub), { fontFamily: 'ITight', fontWeight: 600, fontSize: 28, lineHeight: 1.34, color: k.detail, marginTop: 24, maxWidth: 850 }),
+    ]),
+    /* The panel sits snug to its content and the single remaining gap falls
+     * between the argument and the evidence, which is ordinary editorial
+     * spacing. Growing the panel instead left the readout floating inside a
+     * mostly empty box, which looked like a rendering fault. */
+    el({ marginTop: 'auto', backgroundColor: k.panelBg, paddingLeft: 30, paddingRight: 30, paddingTop: 30, paddingBottom: 30,
+      borderWidth: 1, borderColor: k.panelEdge, borderStyle: 'solid', borderRadius: 4 }, [
+      el({ flexDirection: 'row', alignItems: 'flex-end', marginBottom: 24 }, [
+        txt(clean(p.done), { fontFamily: 'ITight', fontWeight: 800, fontSize: 142, lineHeight: 0.88, letterSpacing: -6, color: k.emph }),
+        txt('of ' + clean(p.total), { fontFamily: 'ITight', fontWeight: 800, fontSize: 54, lineHeight: 1, color: k.title, marginLeft: 18, marginBottom: 12 }),
+        txt('forecasts graded against real revenue', { fontFamily: 'ITight', fontWeight: 600, fontSize: 26, lineHeight: 1.25, color: k.detail, marginLeft: 30, marginBottom: 14, maxWidth: 470 }),
+      ]),
+      gradedGrid(p.total, p.done, k),
+    ]),
+    el({ marginTop: 36, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-end' }, [
+      el({}, [
+        txt(clean(p.cta_label), { fontFamily: 'JBM', fontWeight: 700, fontSize: 25, letterSpacing: 25 * 0.12, color: k.cta }),
+        el({ height: 2, width: 330, backgroundColor: k.ctaRule, marginTop: 11 }, []),
+      ]),
+      txt('growthterminal.io', { fontFamily: 'JBM', fontWeight: 500, fontSize: 22, letterSpacing: 22 * 0.06, color: k.url }),
+    ]),
+  ]);
+}
+
+// the finding, then the thing that would kill it
+function L_svcfals(p) {
+  const k = SKINS[p.skin] || SKINS.paper;
+  const head = richWrap([{ t: clean(p.head), em: false }, { t: clean(p.emph), em: true }],
+    { size: p.size || 74, lineHeight: 1.02, ls: -0.03, maxWidth: 900,
+      base: { family: 'ITight', weight: 800, color: k.head },
+      em: { family: 'ITight', weight: 800, color: k.emph } });
+  const panel = (label, value, note, lit) => el({ backgroundColor: k.panelBg, paddingLeft: 30, paddingRight: 30, paddingTop: 28, paddingBottom: 28,
+    borderWidth: 1, borderColor: k.panelEdge, borderStyle: 'solid', borderRadius: 4 }, [
+    txt(clean(label), { fontFamily: 'JBM', fontWeight: 700, fontSize: 17, letterSpacing: 17 * 0.2, color: lit ? k.emph : k.label, marginBottom: 12 }),
+    txt(clean(value), { fontFamily: 'ITight', fontWeight: 800, fontSize: 44, lineHeight: 1.1, color: k.title, maxWidth: 830 }),
+    note ? txt(clean(note), { fontFamily: 'ITight', fontWeight: 600, fontSize: 25, lineHeight: 1.3, color: k.detail, marginTop: 12, maxWidth: 810 }) : el({}, []),
+  ]);
+  return el({ width: 1080, height: 1350, backgroundColor: k.bg, paddingTop: 92, paddingBottom: 92, paddingLeft: 90, paddingRight: 90 }, [
+    el({ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }, [
+      logoImg(k.logo === 'cream' ? LOGO_CREAM : k.logo === 'mono' ? LOGO_ON_AMBER : LOGO_INK, 210),
+      txt('GROWTH TERMINAL', { fontFamily: 'JBM', fontWeight: 500, fontSize: 19, letterSpacing: 19 * 0.18, color: k.tag }),
+    ]),
+    el({ height: 2, backgroundColor: k.hair, opacity: k.hairOp, marginTop: 22 }, []),
+    el({ marginTop: 46 }, [
+      txt(clean(p.kicker), { fontFamily: 'JBM', fontWeight: 700, fontSize: 22, letterSpacing: 22 * 0.24, color: k.kicker, marginBottom: 24 }),
+      head,
+    ]),
+    /* The two panel labels are parameters, not fixed strings. The layout is a
+     * claim set against the thing that tests it, and that shape carries the
+     * falsifier, the approval gate and the generic-versus-trained contrast
+     * equally well. Hardcoding "THE FINDING" would have forced a second
+     * near-identical layout for every service. */
+    el({ flexGrow: 1, justifyContent: 'center', marginTop: 34 }, [
+      panel(p.label_a || 'THE FINDING', p.finding, p.finding_note, true),
+      el({ height: 30 }, []),
+      panel(p.label_b || 'WHAT WOULD PROVE THIS WRONG', p.falsifier, p.falsifier_note, false),
+    ]),
+    el({ marginTop: 34, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-end' }, [
+      el({}, [
+        txt(clean(p.cta_label), { fontFamily: 'JBM', fontWeight: 700, fontSize: 25, letterSpacing: 25 * 0.12, color: k.cta }),
+        el({ height: 2, width: 330, backgroundColor: k.ctaRule, marginTop: 11 }, []),
+      ]),
+      txt('growthterminal.io', { fontFamily: 'JBM', fontWeight: 500, fontSize: 22, letterSpacing: 22 * 0.06, color: k.url }),
+    ]),
+  ]);
+}
+
+// typographic interruption: the line is the whole picture
+function L_svcline(p) {
+  const k = SKINS[p.skin] || SKINS.paper;
+  const body = richWrap([{ t: clean(p.head), em: false }, { t: clean(p.emph), em: true }, { t: clean(p.tail || ''), em: false }],
+    { size: p.size || 78, lineHeight: 1.1, ls: -0.025, maxWidth: 900,
+      base: { family: 'ITight', weight: 800, color: k.head },
+      em: { family: 'ITight', weight: 800, color: k.emph } });
+  return el({ width: 1080, height: 1350, backgroundColor: k.bg, paddingTop: 96, paddingBottom: 96, paddingLeft: 90, paddingRight: 90 }, [
+    logoImg(k.logo === 'cream' ? LOGO_CREAM : k.logo === 'mono' ? LOGO_ON_AMBER : LOGO_INK, 186),
+    el({ flexGrow: 1, justifyContent: 'center' }, [body]),
+    el({ height: 1, backgroundColor: k.grid, marginBottom: 30 }, []),
+    el({ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-end' }, [
+      txt(clean(p.cta_label), { fontFamily: 'JBM', fontWeight: 700, fontSize: 24, letterSpacing: 24 * 0.12, color: k.cta }),
+      txt('growthterminal.io', { fontFamily: 'JBM', fontWeight: 500, fontSize: 22, letterSpacing: 22 * 0.06, color: k.url }),
+    ]),
+  ]);
+}
+
 function edCol(label, value) {
   return el({}, [txt(label, { fontFamily: 'JBM', fontWeight: 500, fontSize: 17, letterSpacing: 17 * 0.1, color: '#8a8074' }), txt(value, { fontFamily: 'ITight', fontWeight: 700, fontSize: 29, color: WHITE, marginTop: 4 })]);
 }
@@ -367,6 +753,11 @@ function L_edmanifesto(p) {
     logoImg(LOGO_CREAM, 210),
     el({}, [body, punch]),
     el({}, [
+      /* The call to action renders only when a caller supplies one. This layout
+       * is shared with the main account's gen_edmanifesto, which does not set
+       * cta_label, so adding it here cannot leak a brand-account CTA onto the
+       * other account's posts. */
+      p.cta_label ? txt(clean(p.cta_label), { fontFamily: 'JBM', fontWeight: 700, fontSize: 24, letterSpacing: 24 * 0.12, color: ORANGE, marginBottom: 22 }) : el({}, []),
       el({ height: 1, backgroundColor: 'rgba(255,255,255,0.12)', marginBottom: 26 }, []),
       el({ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }, [
         txt(clean(p.foot), { fontFamily: 'ITight', fontWeight: 700, fontSize: 29, maxWidth: 720, color: WHITE }),
@@ -591,8 +982,8 @@ function L_prodsoon(p) {
   ]);
 }
 
-const SATORI_LAYOUTS = new Set(['statement', 'stat', 'feature', 'contrast', 'card', 'quote', 'tweet', 'ranked', 'edserif', 'edterminal', 'edmanifesto', 'vs', 'carousel', 'funnel', 'trajectory', 'annotated', 'editorial', 'prodshot', 'prodclaim', 'prodsoon']);
-const BUILDERS = { statement: L_statement, stat: L_stat, feature: L_feature, contrast: L_contrast, card: L_card, quote: L_quote, tweet: L_tweet, ranked: L_ranked, edserif: L_edserif, edterminal: L_edterminal, edmanifesto: L_edmanifesto, vs: L_vs, carousel: L_carousel, funnel: L_funnel, trajectory: L_trajectory, annotated: L_annotated, editorial: L_editorial, prodshot: L_prodshot, prodclaim: L_prodclaim, prodsoon: L_prodsoon };
+const SATORI_LAYOUTS = new Set(['statement', 'stat', 'feature', 'contrast', 'card', 'quote', 'tweet', 'ranked', 'edserif', 'edterminal', 'edmanifesto', 'vs', 'carousel', 'funnel', 'trajectory', 'annotated', 'editorial', 'prodshot', 'prodclaim', 'prodsoon', 'svcfeat', 'svccal', 'svcfals', 'svcline']);
+const BUILDERS = { statement: L_statement, stat: L_stat, feature: L_feature, contrast: L_contrast, card: L_card, quote: L_quote, tweet: L_tweet, ranked: L_ranked, edserif: L_edserif, edterminal: L_edterminal, edmanifesto: L_edmanifesto, vs: L_vs, carousel: L_carousel, funnel: L_funnel, trajectory: L_trajectory, annotated: L_annotated, editorial: L_editorial, prodshot: L_prodshot, prodclaim: L_prodclaim, prodsoon: L_prodsoon, svcfeat: L_svcfeat, svccal: L_svccal, svcfals: L_svcfals, svcline: L_svcline };
 
 async function renderPostSatori(post, outBase) {
   const node = await BUILDERS[post.layout](post);
