@@ -23,7 +23,7 @@ Secrets it reads (all prefixed GT_ so they never collide with other projects):
   GT_HASHTAGS_AS_COMMENT - default 0: 1 = post hashtags as the first comment
   GT_DRY_RUN          - default 1: keep 1 to test, set 0 to publish for real
 """
-import os, sys, json, time, datetime
+import os, re, sys, json, time, datetime
 import requests
 
 
@@ -49,7 +49,18 @@ FB_INCLUDE_HASHTAGS = gv("FB_HASHTAGS", "0") == "1"   # default: no hashtag wall
 FB_ENABLED  = gv("FB_ENABLED", "1") != "0" and bool(FB_PAGE_ID and FB_TOKEN)
 
 RAW = f"https://raw.githubusercontent.com/{REPO}/{BRANCH}"
-STATE_FILE = "posted_log.json"
+# Per account state. A second Instagram account running this same pipeline would
+# otherwise share meta.json and posted_log.json with the first: meta.json is the
+# handoff from generate.js, so two concurrent runs race on it, and posted_log.json
+# is committed by the workflow, so they conflict on push. GT_STATE_SUFFIX gives
+# each account its own files. Unset keeps the original names, so the existing
+# account is unaffected.
+_SUFFIX = re.sub(r"[^A-Za-z0-9_-]", "", os.environ.get("GT_STATE_SUFFIX", ""))
+def _state(base, ext):
+    return f"{base}_{_SUFFIX}.{ext}" if _SUFFIX else f"{base}.{ext}"
+
+STATE_FILE = _state("posted_log", "json")
+META_FILE = _state("meta", "json")
 
 
 def raw_url(path):
@@ -176,10 +187,10 @@ def main():
         sys.exit(1)
 
     try:
-        with open("meta.json") as f:
+        with open(META_FILE) as f:
             meta = json.load(f)
     except Exception as e:
-        print(f"✗ Could not read meta.json (did generate.js run?): {e}")
+        print(f"✗ Could not read {META_FILE} (did generate.js run?): {e}")
         sys.exit(1)
 
     caption = build_caption(meta)                       # Instagram: caption + hashtags

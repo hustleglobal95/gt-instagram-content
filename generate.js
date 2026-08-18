@@ -1229,8 +1229,8 @@ function gen_edmanifesto(r) {
     caption:b.cap, first_comment:b.fc, sig:'edm:'+stripHtml(b.punch+b.foot).slice(0,36) };
 }
 
-// ================= SERVICES / HUB CONTENT (the bigger brand) =================
-// Ads reflecting the full Growth Terminal hub: AI voice agents, custom AI
+// ================= SERVICES CONTENT (the bigger brand) =================
+// Ads reflecting the full Growth Terminal offer: AI voice agents, custom AI
 // assistants, the content engine, done-for-you Business Solutions, templates,
 // and the "one system, many ways in" positioning. Rendered through the editorial
 // layouts (edserif, edmanifesto). Drawn from the master brand file.
@@ -1261,13 +1261,78 @@ function gen_svc_serif(r) {
       sub:'Ready-made Google Sheets templates for pricing, retention, and forecasting. Copy in your numbers, get answers, keep them forever.',
       cap:'Not ready for the full engine? Grab a GT template. Ready-made Google Sheets™ for pricing, retention, and forecasting. Copy, paste your numbers, get answers today. From $79.',
       fc:'Which would move your number most: pricing, retention, or forecasting?' },
+
+    /* Added for the brand account, which posts only services content and needs
+     * more than one variant per service to run daily without repeating. Three
+     * more per service, balanced so no one service dominates the rotation. */
+
+    // AI VOICE AGENTS
+    { tag:'AI SOLUTIONS', kicker:'AI VOICE AGENTS', head:'The call you missed', emph:'was the deal you lost.', size:98,
+      sub:'Most buyers call once. If nobody answers, they call the next name on the list and you never learn it happened.',
+      cap:'Most buyers call once. If nobody picks up, they call the next name on the list, and that loss never shows up in any report. Growth Terminal builds AI voice agents that answer 24/7, qualify the caller, and book the meeting.',
+      fc:'When did you last check what happens to a call after 6pm?' },
+    { tag:'AI SOLUTIONS', kicker:'AI VOICE AGENTS', head:'It books the meeting', emph:'while you sleep.', size:100,
+      sub:'Answers in your brand voice, asks your qualifying questions, and writes the meeting straight to your calendar.',
+      cap:'An AI voice agent that answers in your brand voice, asks the questions you would ask, and books straight to your calendar. Nights, weekends, and the middle of a job you cannot stop.',
+      fc:'What time of day do you lose the most calls?' },
+    { tag:'AI SOLUTIONS', kicker:'AI VOICE AGENTS', head:'Voicemail is not', emph:'a sales process.', size:104,
+      sub:'A recorded greeting asks the buyer to do the work. Most of them will not, and you will never know which ones.',
+      cap:'Voicemail asks the buyer to do the work of reaching you twice. Most will not. Growth Terminal replaces it with an AI voice agent that answers, qualifies, and books.',
+      fc:'How many voicemails from last week turned into a booked call?' },
+
+    // CUSTOM AI ASSISTANTS
+    { tag:'AI SOLUTIONS', kicker:'CUSTOM AI ASSISTANTS', head:'It knows your pricing.', emph:'It holds it.', size:100,
+      sub:'Trained on your offers, your objections, and your margins. It works the objection instead of discounting past it.',
+      cap:'A generic chatbot discounts to avoid a hard question. A custom assistant trained on your business works the objection and keeps the margin. Growth Terminal builds it on your offers, your pricing, and your real replies.',
+      fc:'What is the objection your team hears most, and who answers it best?' },
+    { tag:'AI SOLUTIONS', kicker:'CUSTOM AI ASSISTANTS', head:'The reply you rewrite', emph:'every single week.', size:96,
+      sub:'It drafts in your voice, logs the deal, and schedules the follow-up nobody remembers to send.',
+      cap:'Every team has the reply it rewrites every week. A custom AI assistant drafts it in your voice, logs the deal, and books the follow-up that usually gets forgotten. Trained on your business, not everyone else\'s.',
+      fc:'Which message does your team retype the most?' },
+    { tag:'AI SOLUTIONS', kicker:'CUSTOM AI ASSISTANTS', head:'A teammate,', emph:'not a chatbot.', size:108,
+      sub:'It carries your context: what you sell, what you charge, what you will not do, and who to hand it to.',
+      cap:'The difference between a chatbot and an assistant is context. Ours carries what you sell, what you charge, what you refuse to do, and who the handoff goes to. Trained on your business.',
+      fc:'What would you need it to know before you trusted it with a lead?' },
+
+    // AUTOMATED CONTENT ENGINE
+    { tag:'AI SOLUTIONS', kicker:'AUTOMATED CONTENT ENGINE', head:'The account that', emph:'never goes quiet.', size:100,
+      sub:'On-brand posts built from your creative bank and published daily, then scored on what actually performed.',
+      cap:'Going quiet is what costs most accounts their reach. The Growth Terminal content engine publishes on-brand creatives daily across Instagram, Facebook, Threads and TikTok, then sharpens on what performed.',
+      fc:'How many days did your feed go dark last month?' },
+    { tag:'AI SOLUTIONS', kicker:'AUTOMATED CONTENT ENGINE', head:'Consistency is a system,', emph:'not a personality trait.', size:92,
+      sub:'Nobody stays consistent on willpower. The engine posts whether or not this week went to plan.',
+      cap:'Nobody posts consistently on willpower. The Growth Terminal content engine builds on-brand creatives from your bank and publishes them daily, in the weeks that go to plan and the weeks that do not.',
+      fc:'What usually breaks your posting streak first?' },
+    { tag:'AI SOLUTIONS', kicker:'AUTOMATED CONTENT ENGINE', head:'It learns which posts', emph:'were worth making.', size:96,
+      sub:'Every post is scored against real engagement, and the formats that earn attention get more of the rotation.',
+      cap:'Posting daily is the easy half. The Growth Terminal content engine scores every post against real engagement and gives the formats that earn attention more of the rotation.',
+      fc:'Do you know which of your posts actually worked, or just which felt good?' },
+
+    // BUSINESS SOLUTIONS, DONE FOR YOU
+    { tag:'BUSINESS SOLUTIONS', kicker:'DONE FOR YOU', head:'Most plans die', emph:'at execution.', size:104,
+      sub:'The diagnosis is the easy part. Our team builds the 90-day plan and runs it, then checks it against revenue.',
+      cap:'Growth plans rarely fail at the diagnosis. They fail because nobody had the hours to run them. Business Solutions builds the 90-day plan and runs it, verified against real revenue.',
+      fc:'Where did your last growth plan stall: deciding, or doing?' },
+    { tag:'BUSINESS SOLUTIONS', kicker:'DONE FOR YOU', head:'One team.', emph:'Not five vendors.', size:108,
+      sub:'Strategy, content, and AI under one roof, accountable to one number instead of five separate invoices.',
+      cap:'Five vendors means five roadmaps and nobody accountable to your number. Business Solutions runs strategy, content and AI as one team, measured against real revenue.',
+      fc:'How many vendors are you stitching together right now?' },
+    { tag:'BUSINESS SOLUTIONS', kicker:'DONE FOR YOU', head:'Verified against', emph:'real revenue.', size:104,
+      sub:'Not impressions, not reach. The constraint gets named, priced, fixed, and then checked against the money.',
+      cap:'A fix you cannot verify is a story. Business Solutions names the constraint, prices it, runs the fix, and checks the result against real revenue rather than reach.',
+      fc:'What number would prove your last marketing spend worked?' },
+
   ];
   const b = pick(bank, r);
   const SVC_CTA = { 'AI SOLUTIONS':'SEE AI SOLUTIONS', 'BUSINESS SOLUTIONS':'BOOK A CALL',
     'ONE SYSTEM':'SEE EVERY WAY IN', 'GT TEMPLATES':'BROWSE TEMPLATES' };
   return { layout:'edserif', serif:r()<0.35, tag:b.tag, kicker:b.kicker, head:b.head, emph:b.emph, sub:b.sub, size:b.size,
     cta_label:SVC_CTA[b.tag] || 'RUN YOUR ANALYSIS',
-    caption:b.cap, first_comment:b.fc, sig:'svcs:'+stripHtml(b.kicker).slice(0,32) };
+        /* The signature is what the recent-repeat filter compares on, so it has to
+     * distinguish variants, not just services. Keyed on kicker alone, the four
+     * AI voice agent variants all produced the identical signature and the
+     * dedupe treated them as one post. Include the headline. */
+    caption:b.cap, first_comment:b.fc, sig:'svcs:'+stripHtml(b.kicker+'|'+b.head).slice(0,48) };
 }
 
 function gen_svc_manifesto(r) {
@@ -1285,6 +1350,32 @@ function gen_svc_manifesto(r) {
     { body:'Every missed call is '+I('pipeline')+' walking out the door.', punch:'So we answer them.', foot:'AI voice agents, 24/7, in your brand voice.', size:86,
       cap:'Every missed call is pipeline walking out the door. Growth Terminal builds AI voice agents that answer 24/7 in your brand voice, qualify the caller, and book the meeting.',
       fc:'What does one missed call cost you? Now multiply by a month.' },
+
+    /* Added for the brand account. Same four services, manifesto register. */
+    { body:'Consistency is a '+I('system')+', not a '+I('personality')+' trait.', punch:'So we automated it.', foot:'The content engine posts daily, on brand, everywhere.', size:80,
+      cap:'Consistency is a system, not a personality trait. The Growth Terminal content engine builds on-brand creatives and publishes them daily across Instagram, Facebook, Threads and TikTok.',
+      fc:'What usually breaks your posting streak first?' },
+    { body:'Nobody fails at the '+I('diagnosis')+'. They fail at the '+I('hours')+'.', punch:'So we run it.', foot:'Business Solutions, fully managed by our team.', size:82,
+      cap:'Almost nobody fails at working out what is wrong. They fail because there were never enough hours to fix it. Business Solutions builds the 90-day plan and runs it, verified against real revenue.',
+      fc:'Where did your last plan stall: deciding, or doing?' },
+    { body:'A '+I('chatbot')+' answers. An '+I('assistant')+' closes.', punch:'Ours is trained on you.', foot:'Custom AI assistants built on your offers and pricing.', size:84,
+      cap:'A chatbot answers questions. An assistant trained on your offers, pricing and objections moves the deal forward and logs it. Growth Terminal builds the second one.',
+      fc:'What would yours need to know before you trusted it with a lead?' },
+    { body:'The call you '+I('missed')+' was the deal you '+I('lost')+'.', punch:'We pick up.', foot:'AI voice agents that qualify and book, day or night.', size:84,
+      cap:'Most buyers call once. If nobody answers they call the next name, and that loss never appears in any report. Growth Terminal builds AI voice agents that answer, qualify, and book.',
+      fc:'When did you last check what happens to a call after 6pm?' },
+    { body:'You do not need more '+I('reach')+'. You need the '+I('constraint')+' named.', punch:'That is where we start.', foot:'Diagnosis first, then templates, AI, or done-for-you.', size:82,
+      cap:'More reach on a broken funnel just costs more. Growth Terminal names the one constraint holding the business, prices it, and then fixes it with templates, AI, or our team.',
+      fc:'If you had to name your single biggest constraint right now, what is it?' },
+    { body:'Four ways in. '+I('One')+' system underneath.', punch:'Start anywhere.', foot:'Voice agents, assistants, content engine, done-for-you.', size:84,
+      cap:'AI voice agents, custom assistants, the automated content engine, and fully managed Business Solutions. Four ways in, one diagnosis-first system underneath. Start wherever the pain is.',
+      fc:'Which of the four would change your week the most?' },
+    { body:'Your AI should '+I('know')+' your business, not the '+I('internet')+'.', punch:'Ours is trained on yours.', foot:'Custom AI assistants, built on your real replies.', size:82,
+      cap:'A generic model knows the internet. A custom assistant knows your offers, your pricing, your objections and your handoffs. Growth Terminal trains it on your business.',
+      fc:'What does your team explain over and over that a trained assistant could?' },
+    { body:'Posting daily is the '+I('easy')+' half. Knowing what '+I('worked')+' is the other.', punch:'The engine does both.', foot:'On-brand content, published and scored, every day.', size:78,
+      cap:'Publishing daily is the easy half. The Growth Terminal content engine also scores every post against real engagement and gives the formats that earn attention more of the rotation.',
+      fc:'Do you know which of your posts worked, or only which ones felt good?' },
   ];
   const b = pick(bank, r);
   return { layout:'edmanifesto', serif:r()<0.4, body:b.body, punch:b.punch, foot:b.foot, size:b.size,
@@ -1325,7 +1416,15 @@ const GENERATORS = [
 ].concat(EXT_GENERATORS, EXT_GENERATORS);
 
 // ---------- pick a fresh post (avoid recent repeats) ----------
-const USED_LOG = path.join(__dirname, 'used_log.json');
+/* Per account state. A second Instagram account running this same pipeline
+ * would otherwise clobber the first: meta.json is a single handoff file between
+ * this script and post_now.py, and used_log.json plus posted_log.json are both
+ * committed by the workflow. Two runs sharing them race on the handoff and
+ * conflict on the commit. GT_STATE_SUFFIX keeps each account on its own files.
+ * Unset means the original filenames, so the existing account is untouched. */
+const STATE_SUFFIX = (process.env.GT_STATE_SUFFIX || '').replace(/[^a-z0-9_-]/gi, '');
+const stateFile = (base, ext) => path.join(__dirname, STATE_SUFFIX ? `${base}_${STATE_SUFFIX}.${ext}` : `${base}.${ext}`);
+const USED_LOG = stateFile('used_log', 'json');
 const RECENT_WINDOW = 24; // don't repeat a signature within the last N posts
 
 function loadUsed() { try { return JSON.parse(fs.readFileSync(USED_LOG, 'utf8')); } catch { return []; } }
@@ -1346,10 +1445,17 @@ const LEARNED = (() => {
   return null;
 })();
 
-function buildPost(seed, recent) {
+/* The brand account's rotation. Only the generators that talk about what
+ * Growth Terminal actually sells. Kept as its own list rather than a filter on
+ * GENERATORS so that adding a new general layout upstream cannot silently leak
+ * into the brand account. */
+const SERVICE_GENERATORS = [gen_svc_serif, gen_svc_manifesto];
+
+function buildPost(seed, recent, opts = {}) {
   const r = rng(seed);
+  const poolAll = opts.servicesOnly ? SERVICE_GENERATORS : GENERATORS;
   for (let attempt = 0; attempt < 40; attempt++) {
-    const gen = pick(GENERATORS, r);
+    const gen = pick(poolAll, r);
     const post = gen(r);
     // Weighted acceptance. A layout weighted 4 is taken every time, a layout
     // weighted 1 is taken a quarter of the time. Late attempts accept anything
@@ -1621,6 +1727,13 @@ if (require.main === module) (async () => {
   const previewIdx = args.indexOf('--preview');
   const previewN = previewIdx >= 0 ? parseInt(args[previewIdx + 1] || '6', 10) : 0;
 
+  /* Mode flags are read here rather than further down so that QA preview obeys
+   * them too. Without this you could not look at a brand-account creative
+   * before it posted, which defeats the point of having a preview mode. */
+  const FORCE = String(process.env.GT_FORCE_MODE || 'auto').trim().toLowerCase();
+  if (FORCE !== 'auto') console.log('forced mode: ' + FORCE);
+  const SERVICES_ONLY = FORCE === 'services';
+
   if (!fs.existsSync(path.join(__dirname, 'creatives'))) fs.mkdirSync(path.join(__dirname, 'creatives'));
   // Local sandbox has chromium at a fixed path; on GitHub Actions let Playwright use its own install.
   const launchOpts = {};
@@ -1662,12 +1775,12 @@ if (require.main === module) (async () => {
       if (wanted.length) {
         const want = wanted[i % wanted.length];
         for (let t = 0; t < 500 && !pinned; t++) {
-          const cand = buildPost(seed + t * 131, recent);
+          const cand = buildPost(seed + t * 131, recent, { servicesOnly: SERVICES_ONLY });
           if (cand && cand.layout === want) pinned = cand;
         }
       }
       // Every 3rd preview is a feature ad when the people folder has faces, so the QA batch shows them.
-      const post = pinned || (havePeople && i % 3 === 2 && buildFeaturePost(seed, recent)) || buildPost(seed, recent);
+      const post = pinned || (!SERVICES_ONLY && havePeople && i % 3 === 2 && buildFeaturePost(seed, recent)) || buildPost(seed, recent, { servicesOnly: SERVICES_ONLY });
       recent.push(post.sig);
       const base = path.join(__dirname, 'creatives', `preview_${String(i + 1).padStart(2, '0')}_${post.layout}`);
       await renderPost(page, post, base);
@@ -1690,8 +1803,6 @@ if (require.main === module) (async () => {
    *  zero and reported success, which is indistinguishable from a run that did
    *  what you wanted. Asking for one thing and being told a different thing
    *  succeeded is the worst shape a tool can have. */
-  const FORCE = String(process.env.GT_FORCE_MODE || 'auto').trim().toLowerCase();
-  if (FORCE !== 'auto') console.log('forced mode: ' + FORCE);
   const wantProduct = FORCE === 'product' ? true
     : FORCE !== 'auto' ? false
     : rng(((now.getTime() >>> 0) ^ 0x50D0C7A) >>> 0)() < PRODUCT_RATE;
@@ -1701,7 +1812,7 @@ if (require.main === module) (async () => {
      because product posts are chosen first and Reels take this share of what is
      left. reel:feature is also the strongest format in the engagement data that
      exists, thin as it is. Override with GT_REEL_RATE if this proves wrong. */
-  const REEL_RATE = parseFloat(process.env.GT_REEL_RATE || '0.6');
+  const REEL_RATE = SERVICES_ONLY ? 0 : parseFloat(process.env.GT_REEL_RATE || '0.6');
   // Only attempt a Reel if ffmpeg is available, otherwise fall back to a static post (never crash the run).
   const hasFfmpeg = ffmpegAvailable();
   /* If a Reel was asked for and the machine cannot make one, stop. Falling back
@@ -1740,9 +1851,11 @@ if (require.main === module) (async () => {
     console.log(`generated REEL [${post.rlayout}] -> ${meta.video_file}`);
   } else {
     // Product ad (~1 in 3) or brand/value post; product falls back to brand if none is fresh.
-    const post = (wantFeature ? buildFeaturePost((now.getTime() >>> 0), recent) : null)
-      || (wantProduct ? buildProductPost((now.getTime() >>> 0), recent) : null)
-      || buildPost((now.getTime() >>> 0), recent);
+    /* In services mode the feature and product paths are skipped entirely: the
+     * brand account posts about the four services and nothing else. */
+    const post = (!SERVICES_ONLY && wantFeature ? buildFeaturePost((now.getTime() >>> 0), recent) : null)
+      || (!SERVICES_ONLY && wantProduct ? buildProductPost((now.getTime() >>> 0), recent) : null)
+      || buildPost((now.getTime() >>> 0), recent, { servicesOnly: SERVICES_ONLY });
     // Editorial posts try a photographic ground; the contrast gate decides. If no photo
     // passes, we render the safe gradient editorial instead; a bad creative never ships.
     if (post.layout === 'editorial' && listEditorialBgs().length) {
@@ -1773,7 +1886,7 @@ if (require.main === module) (async () => {
     recent.push(post.sig);
     console.log(`generated [${post.layout}${post.bgImage ? ':photo' : ''}] -> ${meta.media_file}`);
   }
-  fs.writeFileSync(path.join(__dirname, 'meta.json'), JSON.stringify(meta, null, 2));
+  fs.writeFileSync(stateFile('meta', 'json'), JSON.stringify(meta, null, 2));
   saveUsed(recent);
   console.log(`caption: ${(meta.caption || '').slice(0, 90).replace(/\n/g, ' ')}…`);
 })().catch(e => { console.error('FATAL', e); process.exit(1); });
