@@ -1626,5 +1626,27 @@
       "markusreidgt": "18154901002495439"
     },
     "errors": {}
+  },
+  {
+    "at": "2026-08-18T18:51:10.543Z",
+    "text": "A lot of AI products launch with the same shape: impressive demo, unclear job.",
+    "parts": [
+      "A lot of AI products launch with the same shape: impressive demo, unclear job.",
+      "People can see that it works. They cannot see what it is for.",
+      "A demo proves capability. Buyers are shopping for reliability, and those are almost unrelated.",
+      "\"It hallucinates sometimes\" is a scope question, not a bug report. Build for the tasks that tolerate a wrong answer.",
+      "Lead with what changes on Tuesday, not with the architecture.",
+      "What is the job your product actually does, in one sentence, no architecture?"
+    ],
+    "isThread": true,
+    "pillar": "systems",
+    "kind": "thread",
+    "accounts": [
+      "markusreidgt"
+    ],
+    "ids": {
+      "markusreidgt": "17863616895658690"
+    },
+    "errors": {}
   }
 ]
