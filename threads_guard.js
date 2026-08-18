@@ -74,7 +74,7 @@ const BLOCKS = [
     why: 'Reads as farming. The research in threads_voice.js says replies come from a real question, not a prompt to reply.',
     // Deliberately narrow. "What advice did you follow for months" is a real
     // question and must pass; "follow for the rest" is a call to action and must not.
-    test: /(?:^|\W)(?:save this|follow (?:me |us |@\w+ )?for (?:the rest|more|part|daily|weekly)|follow @\w+ for|drop a comment|comment below|link in bio|share if you|who'?s with me|am i wrong\?|thoughts\?|hot take|unpopular opinion|honest question)/i,
+    test: /(?:^|\W)(?:save this|follow (?:me |us |@\w+ )?for (?:the rest|more|part|daily|weekly)|follow @\w+ for|drop a comment|comment below|(?:say|tell me|let me know|drop|share) (?:it |that |them |yours )?below|link in bio|share if you|who'?s with me|am i wrong\?|thoughts\?|hot take|unpopular opinion|honest question)/i,
   },
   {
     id: 'guru-closer',
