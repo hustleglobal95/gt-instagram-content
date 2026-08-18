@@ -1,103 +1,27 @@
 {
-  "active": false,
+  "active": true,
   "diagnostics": {
-    "totalPosts": 91,
-    "totalEngagement": 84,
-    "igEngagement": 0,
-    "fbEngagement": 84,
+    "totalPosts": 95,
+    "totalEngagement": 198,
+    "igEngagement": 113,
+    "fbEngagement": 85,
     "formats": 27,
-    "formatsWithAnyEngagement": 20,
+    "formatsWithAnyEngagement": 27,
     "collectionHealth": {
-      "ig_attempted": 91,
-      "ig_succeeded": 0,
-      "ig_errors": [
-        {
-          "media_id": "18481929595099633",
-          "message": "Invalid OAuth access token - Cannot parse access token"
-        },
-        {
-          "media_id": "18125520325664850",
-          "message": "Invalid OAuth access token - Cannot parse access token"
-        },
-        {
-          "media_id": "17984490015041376",
-          "message": "Invalid OAuth access token - Cannot parse access token"
-        },
-        {
-          "media_id": "18119783353852552",
-          "message": "Invalid OAuth access token - Cannot parse access token"
-        },
-        {
-          "media_id": "18132885907619498",
-          "message": "Invalid OAuth access token - Cannot parse access token"
-        },
-        {
-          "media_id": "18116406731297318",
-          "message": "Invalid OAuth access token - Cannot parse access token"
-        },
-        {
-          "media_id": "18112561831949273",
-          "message": "Invalid OAuth access token - Cannot parse access token"
-        },
-        {
-          "media_id": "17891751243664816",
-          "message": "Invalid OAuth access token - Cannot parse access token"
-        },
-        {
-          "media_id": "18377087227233622",
-          "message": "Invalid OAuth access token - Cannot parse access token"
-        },
-        {
-          "media_id": "17959213338076883",
-          "message": "Invalid OAuth access token - Cannot parse access token"
-        },
-        {
-          "media_id": "18118286693509792",
-          "message": "Invalid OAuth access token - Cannot parse access token"
-        },
-        {
-          "media_id": "18349726909223396",
-          "message": "Invalid OAuth access token - Cannot parse access token"
-        },
-        {
-          "media_id": "18090322304118138",
-          "message": "Invalid OAuth access token - Cannot parse access token"
-        },
-        {
-          "media_id": "17900210535483655",
-          "message": "Invalid OAuth access token - Cannot parse access token"
-        },
-        {
-          "media_id": "17906986956287111",
-          "message": "Invalid OAuth access token - Cannot parse access token"
-        },
-        {
-          "media_id": "18606818419058450",
-          "message": "Invalid OAuth access token - Cannot parse access token"
-        },
-        {
-          "media_id": "18099466148213655",
-          "message": "Invalid OAuth access token - Cannot parse access token"
-        },
-        {
-          "media_id": "18190147012388410",
-          "message": "Invalid OAuth access token - Cannot parse access token"
-        },
-        {
-          "media_id": "18101807432211494",
-          "message": "Invalid OAuth access token - Cannot parse access token"
-        },
-        {
-          "media_id": "17868589908586917",
-          "message": "Invalid OAuth access token - Cannot parse access token"
-        }
-      ],
-      "ig_error_count": 91,
-      "fb_succeeded": 81
+      "ig_attempted": 95,
+      "ig_succeeded": 95,
+      "ig_errors": [],
+      "ig_error_count": 0,
+      "fb_succeeded": 85
     }
   },
-  "reason": "Instagram collection is failing. 91 lookups errored and none succeeded, so every Instagram format reads as zero. Fix collection before any weighting decision is made.",
-  "evaluatedAt": "2026-08-17T06:00:48.728Z",
+  "weights": {
+    "reel:countup": 3,
+    "reel:card": 2,
+    "statement": 1
+  },
+  "reason": "Ranked 3 formats with at least 8 posts each, against 198 total interactions.",
+  "evaluatedAt": "2026-08-18T05:56:21.241Z",
   "gates": {
     "MIN_TOTAL_ENGAGEMENT": 100,
     "MIN_POSTS_PER_FORMAT": 8,

@@ -1,7 +1,34 @@
 {
-  "updated": "2026-08-17T06:00:44.325815Z",
-  "count": 91,
+  "updated": "2026-08-18T05:56:16.767135Z",
+  "count": 95,
   "posts": [
+    {
+      "sig": "reelcard:Activation",
+      "layout": "reel:card",
+      "file": "creatives/gt_reel_20260803_040422.jpg",
+      "is_reel": true,
+      "at": "2026-08-03T04:04:48.081079Z",
+      "caption": "This is what a Growth Terminal diagnosis looks like, one constraint, named, priced, and verified against real revenue. H",
+      "permalink": "https://www.instagram.com/reel/DbkFtJnDkVb/",
+      "ig": {
+        "likes": 1,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/reel/DbkFtJnDkVb/",
+        "engagement": 2
+      },
+      "fb": {
+        "reactions": 2,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 2
+      },
+      "engagement": 4,
+      "_ig_attempted": true
+    },
     {
       "sig": "reelfeat:We name the one constrai",
       "layout": "reel:feature",
@@ -9,8 +36,16 @@
       "is_reel": true,
       "at": "2026-08-06T00:13:35.582903Z",
       "caption": "We find the one constraint capping your revenue, price the fix, and grade every call against real revenue. Diagnosis, no",
-      "permalink": "",
-      "ig": null,
+      "permalink": "https://www.instagram.com/reel/DbrZoYegcMO/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/reel/DbrZoYegcMO/",
+        "engagement": 1
+      },
       "fb": {
         "reactions": 3,
         "comments": 0,
@@ -18,7 +53,7 @@
         "reach": 0,
         "engagement": 3
       },
-      "engagement": 3,
+      "engagement": 4,
       "_ig_attempted": true
     },
     {
@@ -28,8 +63,16 @@
       "is_reel": false,
       "at": "2026-08-08T01:01:15.699230Z",
       "caption": "Most trackers show you conversion rates. This one tells you what to do with them: which step is costing you the most, ho",
-      "permalink": "",
-      "ig": null,
+      "permalink": "https://www.instagram.com/p/Dbwoq94DSzT/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/Dbwoq94DSzT/",
+        "engagement": 1
+      },
       "fb": {
         "reactions": 3,
         "comments": 0,
@@ -37,7 +80,7 @@
         "reach": 0,
         "engagement": 3
       },
-      "engagement": 3,
+      "engagement": 4,
       "_ig_attempted": true
     },
     {
@@ -47,8 +90,16 @@
       "is_reel": false,
       "at": "2026-08-08T13:01:32.563626Z",
       "caption": "Most trackers show you conversion rates. This one tells you what to do with them: which step is costing you the most, ho",
-      "permalink": "",
-      "ig": null,
+      "permalink": "https://www.instagram.com/p/Dbx7Go7n86A/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/Dbx7Go7n86A/",
+        "engagement": 1
+      },
       "fb": {
         "reactions": 3,
         "comments": 0,
@@ -56,7 +107,7 @@
         "reach": 0,
         "engagement": 3
       },
-      "engagement": 3,
+      "engagement": 4,
       "_ig_attempted": true
     },
     {
@@ -66,14 +117,103 @@
       "is_reel": true,
       "at": "2026-08-08T17:01:42.344463Z",
       "caption": "Every diagnosis ends with a dollar range, not a vibe. A real number on a real constraint, so you decide with a figure in",
-      "permalink": "",
-      "ig": null,
+      "permalink": "https://www.instagram.com/reel/DbyWmCIjnvc/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/reel/DbyWmCIjnvc/",
+        "engagement": 1
+      },
       "fb": {
         "reactions": 3,
         "comments": 0,
         "shares": 0,
         "reach": 0,
         "engagement": 3
+      },
+      "engagement": 4,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "reelnum:12",
+      "layout": "reel:countup",
+      "file": "creatives/gt_reel_20260812_210142.jpg",
+      "is_reel": true,
+      "at": "2026-08-12T21:02:07.372195Z",
+      "caption": "Growth only gets stuck in twelve places. The hard part is knowing which one is YOUR #1 right now, with a dollar range at",
+      "permalink": "https://www.instagram.com/reel/Db9FSLHDeak/",
+      "ig": {
+        "likes": 3,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/reel/Db9FSLHDeak/",
+        "engagement": 4
+      },
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 4,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "reelnum:12",
+      "layout": "reel:countup",
+      "file": "creatives/gt_reel_20260817_170103.jpg",
+      "is_reel": true,
+      "at": "2026-08-17T17:01:31.584511Z",
+      "caption": "Growth only gets stuck in twelve places. The hard part is knowing which one is YOUR #1 right now, with a dollar range at",
+      "permalink": "https://www.instagram.com/reel/DcJhuWfgef4/",
+      "ig": {
+        "likes": 2,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/reel/DcJhuWfgef4/",
+        "engagement": 3
+      },
+      "fb": {
+        "reactions": 1,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 1
+      },
+      "engagement": 4,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "card:Activation",
+      "layout": "card",
+      "file": "creatives/gt_auto_20260801_210110.jpg",
+      "is_reel": false,
+      "at": "2026-08-01T21:01:13.344125Z",
+      "caption": "This is what a Growth Terminal diagnosis looks like.\n\nNot 40 metrics to interpret \u2014 one constraint, named, with the doll",
+      "permalink": "https://www.instagram.com/p/Dbgwbl6nX09/",
+      "ig": {
+        "likes": 1,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/Dbgwbl6nX09/",
+        "engagement": 2
+      },
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 1,
+        "reach": 0,
+        "engagement": 1
       },
       "engagement": 3,
       "_ig_attempted": true
@@ -85,8 +225,16 @@
       "is_reel": false,
       "at": "2026-08-03T02:21:18.740194Z",
       "caption": "Track where growth is actually driving results, and where it isn't.\n\nGrowth Terminal ranks the twelve places growth gets",
-      "permalink": "",
-      "ig": null,
+      "permalink": "https://www.instagram.com/p/Dbj5241lnxJ/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/Dbj5241lnxJ/",
+        "engagement": 1
+      },
       "fb": {
         "reactions": 2,
         "comments": 0,
@@ -94,7 +242,7 @@
         "reach": 0,
         "engagement": 2
       },
-      "engagement": 2,
+      "engagement": 3,
       "_ig_attempted": true
     },
     {
@@ -104,8 +252,16 @@
       "is_reel": false,
       "at": "2026-08-03T03:14:25.569479Z",
       "caption": "Is offer your #1 constraint right now?\n\nThe tell: what you sell is close, but not quite worth the price. It's one of the",
-      "permalink": "",
-      "ig": null,
+      "permalink": "https://www.instagram.com/p/Dbj_8dqCrOr/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/Dbj_8dqCrOr/",
+        "engagement": 1
+      },
       "fb": {
         "reactions": 2,
         "comments": 0,
@@ -113,7 +269,7 @@
         "reach": 0,
         "engagement": 2
       },
-      "engagement": 2,
+      "engagement": 3,
       "_ig_attempted": true
     },
     {
@@ -123,8 +279,16 @@
       "is_reel": false,
       "at": "2026-08-03T03:42:31.137852Z",
       "caption": "BI tools show everything and decide nothing. Gut feel is fast but unaccountable. Spreadsheets hold the data but never ra",
-      "permalink": "",
-      "ig": null,
+      "permalink": "https://www.instagram.com/p/DbkDJuUkR2g/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/DbkDJuUkR2g/",
+        "engagement": 1
+      },
       "fb": {
         "reactions": 2,
         "comments": 0,
@@ -132,26 +296,7 @@
         "reach": 0,
         "engagement": 2
       },
-      "engagement": 2,
-      "_ig_attempted": true
-    },
-    {
-      "sig": "reelcard:Activation",
-      "layout": "reel:card",
-      "file": "creatives/gt_reel_20260803_040422.jpg",
-      "is_reel": true,
-      "at": "2026-08-03T04:04:48.081079Z",
-      "caption": "This is what a Growth Terminal diagnosis looks like, one constraint, named, priced, and verified against real revenue. H",
-      "permalink": "",
-      "ig": null,
-      "fb": {
-        "reactions": 2,
-        "comments": 0,
-        "shares": 0,
-        "reach": 0,
-        "engagement": 2
-      },
-      "engagement": 2,
+      "engagement": 3,
       "_ig_attempted": true
     },
     {
@@ -161,8 +306,16 @@
       "is_reel": false,
       "at": "2026-08-03T17:01:48.403280Z",
       "caption": "Coming soon to the Growth Terminal store: Pricing & Offer Analyzer.\n\nFind the margin you're leaving on the table on ever",
-      "permalink": "",
-      "ig": null,
+      "permalink": "https://www.instagram.com/p/Dblen3XlewA/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/Dblen3XlewA/",
+        "engagement": 1
+      },
       "fb": {
         "reactions": 2,
         "comments": 0,
@@ -170,7 +323,7 @@
         "reach": 0,
         "engagement": 2
       },
-      "engagement": 2,
+      "engagement": 3,
       "_ig_attempted": true
     },
     {
@@ -180,8 +333,16 @@
       "is_reel": false,
       "at": "2026-08-03T21:01:09.944847Z",
       "caption": "Growth only gets stuck in twelve places. Save this. \ud83d\udc47\n\nAcquisition \u00b7 Activation \u00b7 Retention \u00b7 Conversion \u00b7 Traffic \u00b7 Off",
-      "permalink": "",
-      "ig": null,
+      "permalink": "https://www.instagram.com/p/Dbl6A7Ikn56/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/Dbl6A7Ikn56/",
+        "engagement": 1
+      },
       "fb": {
         "reactions": 2,
         "comments": 0,
@@ -189,7 +350,7 @@
         "reach": 0,
         "engagement": 2
       },
-      "engagement": 2,
+      "engagement": 3,
       "_ig_attempted": true
     },
     {
@@ -199,8 +360,16 @@
       "is_reel": false,
       "at": "2026-08-04T01:01:23.483940Z",
       "caption": "You don't get a dashboard. You get a verdict.\n\nDashboards show 40 numbers and let you pick the story. We name the one co",
-      "permalink": "",
-      "ig": null,
+      "permalink": "https://www.instagram.com/p/DbmVge4DcY5/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/DbmVge4DcY5/",
+        "engagement": 1
+      },
       "fb": {
         "reactions": 2,
         "comments": 0,
@@ -208,7 +377,7 @@
         "reach": 0,
         "engagement": 2
       },
-      "engagement": 2,
+      "engagement": 3,
       "_ig_attempted": true
     },
     {
@@ -218,8 +387,16 @@
       "is_reel": false,
       "at": "2026-08-04T13:01:17.187566Z",
       "caption": "Most trackers show you conversion rates. This one tells you what to do with them: which step is costing you the most, ho",
-      "permalink": "",
-      "ig": null,
+      "permalink": "https://www.instagram.com/p/Dbnn5NGlv43/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/Dbnn5NGlv43/",
+        "engagement": 1
+      },
       "fb": {
         "reactions": 2,
         "comments": 0,
@@ -227,7 +404,7 @@
         "reach": 0,
         "engagement": 2
       },
-      "engagement": 2,
+      "engagement": 3,
       "_ig_attempted": true
     },
     {
@@ -237,8 +414,16 @@
       "is_reel": false,
       "at": "2026-08-04T17:01:47.921013Z",
       "caption": "Your funnel has one step leaking more than the rest. The Funnel & Conversion Tracker finds it, tells you what fixing it ",
-      "permalink": "",
-      "ig": null,
+      "permalink": "https://www.instagram.com/p/DboDar_Dln-/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/DboDar_Dln-/",
+        "engagement": 1
+      },
       "fb": {
         "reactions": 2,
         "comments": 0,
@@ -246,7 +431,7 @@
         "reach": 0,
         "engagement": 2
       },
-      "engagement": 2,
+      "engagement": 3,
       "_ig_attempted": true
     },
     {
@@ -256,8 +441,16 @@
       "is_reel": true,
       "at": "2026-08-04T21:01:48.053833Z",
       "caption": "This is what a Growth Terminal diagnosis looks like, one constraint, named, priced, and verified against real revenue. H",
-      "permalink": "",
-      "ig": null,
+      "permalink": "https://www.instagram.com/reel/Dboe4zyETN_/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/reel/Dboe4zyETN_/",
+        "engagement": 1
+      },
       "fb": {
         "reactions": 2,
         "comments": 0,
@@ -265,7 +458,7 @@
         "reach": 0,
         "engagement": 2
       },
-      "engagement": 2,
+      "engagement": 3,
       "_ig_attempted": true
     },
     {
@@ -275,8 +468,16 @@
       "is_reel": true,
       "at": "2026-08-05T01:01:32.507036Z",
       "caption": "60 seconds from spreadsheet to diagnosis. Add the add-on to Google Sheets\u2122, point it at the report you already have, and",
-      "permalink": "",
-      "ig": null,
+      "permalink": "https://www.instagram.com/reel/Dbo6VKqDODE/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/reel/Dbo6VKqDODE/",
+        "engagement": 1
+      },
       "fb": {
         "reactions": 2,
         "comments": 0,
@@ -284,7 +485,7 @@
         "reach": 0,
         "engagement": 2
       },
-      "engagement": 2,
+      "engagement": 3,
       "_ig_attempted": true
     },
     {
@@ -294,8 +495,16 @@
       "is_reel": false,
       "at": "2026-08-05T13:01:09.074200Z",
       "caption": "You can find ten things to fix. You can only afford to fix one well.\n\nWe rank them. Growth Terminal ranks the twelve pla",
-      "permalink": "",
-      "ig": null,
+      "permalink": "https://www.instagram.com/p/DbqMq_4muB7/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/DbqMq_4muB7/",
+        "engagement": 1
+      },
       "fb": {
         "reactions": 2,
         "comments": 0,
@@ -303,7 +512,7 @@
         "reach": 0,
         "engagement": 2
       },
-      "engagement": 2,
+      "engagement": 3,
       "_ig_attempted": true
     },
     {
@@ -313,8 +522,16 @@
       "is_reel": true,
       "at": "2026-08-05T17:01:38.626633Z",
       "caption": "Every diagnosis ends with a dollar range, not a vibe. A real number on a real constraint, so you decide with a figure in",
-      "permalink": "",
-      "ig": null,
+      "permalink": "https://www.instagram.com/reel/DbqoMsIj3ME/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/reel/DbqoMsIj3ME/",
+        "engagement": 1
+      },
       "fb": {
         "reactions": 2,
         "comments": 0,
@@ -322,7 +539,7 @@
         "reach": 0,
         "engagement": 2
       },
-      "engagement": 2,
+      "engagement": 3,
       "_ig_attempted": true
     },
     {
@@ -332,8 +549,16 @@
       "is_reel": false,
       "at": "2026-08-05T20:53:58.406284Z",
       "caption": "You do not need ten vendors. You need one system that diagnoses the constraint, then builds and runs the fix. Diagnosis,",
-      "permalink": "",
-      "ig": null,
+      "permalink": "https://www.instagram.com/p/DbrCyKbF2V-/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/DbrCyKbF2V-/",
+        "engagement": 1
+      },
       "fb": {
         "reactions": 2,
         "comments": 0,
@@ -341,7 +566,7 @@
         "reach": 0,
         "engagement": 2
       },
-      "engagement": 2,
+      "engagement": 3,
       "_ig_attempted": true
     },
     {
@@ -351,8 +576,16 @@
       "is_reel": false,
       "at": "2026-08-05T21:01:18.475550Z",
       "caption": "Stop guessing which lever to pull.\n\nYou already have the data, you are missing the diagnosis. Growth Terminal reads what",
-      "permalink": "",
-      "ig": null,
+      "permalink": "https://www.instagram.com/p/DbrDnzQGX2I/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/DbrDnzQGX2I/",
+        "engagement": 1
+      },
       "fb": {
         "reactions": 2,
         "comments": 0,
@@ -360,7 +593,7 @@
         "reach": 0,
         "engagement": 2
       },
-      "engagement": 2,
+      "engagement": 3,
       "_ig_attempted": true
     },
     {
@@ -370,8 +603,16 @@
       "is_reel": false,
       "at": "2026-08-06T01:01:27.201543Z",
       "caption": "Every missed call is pipeline walking out the door. Growth Terminal builds AI voice agents that answer 24/7 in your bran",
-      "permalink": "",
-      "ig": null,
+      "permalink": "https://www.instagram.com/p/DbrfGnbFh1l/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/DbrfGnbFh1l/",
+        "engagement": 1
+      },
       "fb": {
         "reactions": 2,
         "comments": 0,
@@ -379,7 +620,7 @@
         "reach": 0,
         "engagement": 2
       },
-      "engagement": 2,
+      "engagement": 3,
       "_ig_attempted": true
     },
     {
@@ -389,8 +630,16 @@
       "is_reel": false,
       "at": "2026-08-06T13:01:36.074170Z",
       "caption": "More leads into a leaky funnel just costs more.\n\nWhen retention is the constraint, every new lead is a bucket with a hol",
-      "permalink": "",
-      "ig": null,
+      "permalink": "https://www.instagram.com/p/DbsxhJ4gbcM/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/DbsxhJ4gbcM/",
+        "engagement": 1
+      },
       "fb": {
         "reactions": 2,
         "comments": 0,
@@ -398,7 +647,7 @@
         "reach": 0,
         "engagement": 2
       },
-      "engagement": 2,
+      "engagement": 3,
       "_ig_attempted": true
     },
     {
@@ -408,8 +657,16 @@
       "is_reel": false,
       "at": "2026-08-06T21:01:22.869753Z",
       "caption": "Most trackers show you conversion rates. This one tells you what to do with them: which step is costing you the most, ho",
-      "permalink": "",
-      "ig": null,
+      "permalink": "https://www.instagram.com/p/DbtobMyGFFo/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/DbtobMyGFFo/",
+        "engagement": 1
+      },
       "fb": {
         "reactions": 2,
         "comments": 0,
@@ -417,7 +674,7 @@
         "reach": 0,
         "engagement": 2
       },
-      "engagement": 2,
+      "engagement": 3,
       "_ig_attempted": true
     },
     {
@@ -427,8 +684,16 @@
       "is_reel": true,
       "at": "2026-08-07T01:03:05.558393Z",
       "caption": "We find the one constraint capping your revenue, price the fix, and grade every call against real revenue. Diagnosis, no",
-      "permalink": "",
-      "ig": null,
+      "permalink": "https://www.instagram.com/reel/DbuEF9Lji7u/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/reel/DbuEF9Lji7u/",
+        "engagement": 1
+      },
       "fb": {
         "reactions": 2,
         "comments": 0,
@@ -436,7 +701,7 @@
         "reach": 0,
         "engagement": 2
       },
-      "engagement": 2,
+      "engagement": 3,
       "_ig_attempted": true
     },
     {
@@ -446,8 +711,16 @@
       "is_reel": true,
       "at": "2026-08-07T13:02:53.472049Z",
       "caption": "We find the one constraint capping your revenue, price the fix, and grade every call against real revenue. Diagnosis, no",
-      "permalink": "",
-      "ig": null,
+      "permalink": "https://www.instagram.com/reel/DbvWd5xj4GW/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/reel/DbvWd5xj4GW/",
+        "engagement": 1
+      },
       "fb": {
         "reactions": 2,
         "comments": 0,
@@ -455,7 +728,7 @@
         "reach": 0,
         "engagement": 2
       },
-      "engagement": 2,
+      "engagement": 3,
       "_ig_attempted": true
     },
     {
@@ -465,8 +738,16 @@
       "is_reel": false,
       "at": "2026-08-07T17:01:33.715824Z",
       "caption": "Find the one constraint capping your revenue.\n\nMost growth advice hands you ten things to fix. Growth Terminal names the",
-      "permalink": "",
-      "ig": null,
+      "permalink": "https://www.instagram.com/p/DbvxxlFGkRl/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/DbvxxlFGkRl/",
+        "engagement": 1
+      },
       "fb": {
         "reactions": 2,
         "comments": 0,
@@ -474,7 +755,7 @@
         "reach": 0,
         "engagement": 2
       },
-      "engagement": 2,
+      "engagement": 3,
       "_ig_attempted": true
     },
     {
@@ -484,8 +765,16 @@
       "is_reel": true,
       "at": "2026-08-07T21:02:46.855993Z",
       "caption": "We find the one constraint capping your revenue, price the fix, and grade every call against real revenue. Diagnosis, no",
-      "permalink": "",
-      "ig": null,
+      "permalink": "https://www.instagram.com/reel/DbwNZLiky4n/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/reel/DbwNZLiky4n/",
+        "engagement": 1
+      },
       "fb": {
         "reactions": 2,
         "comments": 0,
@@ -493,7 +782,7 @@
         "reach": 0,
         "engagement": 2
       },
-      "engagement": 2,
+      "engagement": 3,
       "_ig_attempted": true
     },
     {
@@ -503,8 +792,16 @@
       "is_reel": false,
       "at": "2026-08-08T21:01:10.349469Z",
       "caption": "Find the one constraint holding your growth back.\n\nGrowth Terminal reads the report you already run, names the single co",
-      "permalink": "",
-      "ig": null,
+      "permalink": "https://www.instagram.com/p/Dbyx_YVnQ4C/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/Dbyx_YVnQ4C/",
+        "engagement": 1
+      },
       "fb": {
         "reactions": 2,
         "comments": 0,
@@ -512,7 +809,7 @@
         "reach": 0,
         "engagement": 2
       },
-      "engagement": 2,
+      "engagement": 3,
       "_ig_attempted": true
     },
     {
@@ -522,8 +819,16 @@
       "is_reel": true,
       "at": "2026-08-09T01:02:38.235758Z",
       "caption": "We find the one constraint capping your revenue, price the fix, and grade every call against real revenue. Diagnosis, no",
-      "permalink": "",
-      "ig": null,
+      "permalink": "https://www.instagram.com/reel/DbzNoWVCXxX/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/reel/DbzNoWVCXxX/",
+        "engagement": 1
+      },
       "fb": {
         "reactions": 2,
         "comments": 0,
@@ -531,7 +836,7 @@
         "reach": 0,
         "engagement": 2
       },
-      "engagement": 2,
+      "engagement": 3,
       "_ig_attempted": true
     },
     {
@@ -541,8 +846,16 @@
       "is_reel": false,
       "at": "2026-08-09T13:01:25.235228Z",
       "caption": "Your AI should hold your price, not discount to close. Growth Terminal builds custom AI assistants trained on your busin",
-      "permalink": "",
-      "ig": null,
+      "permalink": "https://www.instagram.com/p/Db0f4gUG9C6/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/Db0f4gUG9C6/",
+        "engagement": 1
+      },
       "fb": {
         "reactions": 2,
         "comments": 0,
@@ -550,7 +863,7 @@
         "reach": 0,
         "engagement": 2
       },
-      "engagement": 2,
+      "engagement": 3,
       "_ig_attempted": true
     },
     {
@@ -560,8 +873,16 @@
       "is_reel": false,
       "at": "2026-08-09T17:01:48.345900Z",
       "caption": "Most teams are drowning in dashboards and starving for a decision. Growth Terminal reads the data you already have and m",
-      "permalink": "",
-      "ig": null,
+      "permalink": "https://www.instagram.com/p/Db07ZHSgTGY/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/Db07ZHSgTGY/",
+        "engagement": 1
+      },
       "fb": {
         "reactions": 2,
         "comments": 0,
@@ -569,7 +890,7 @@
         "reach": 0,
         "engagement": 2
       },
-      "engagement": 2,
+      "engagement": 3,
       "_ig_attempted": true
     },
     {
@@ -579,8 +900,16 @@
       "is_reel": false,
       "at": "2026-08-09T21:01:19.663557Z",
       "caption": "The one move worth more than the other ten.\n\nPerfect execution on the wrong constraint still loses the quarter. Growth T",
-      "permalink": "",
-      "ig": null,
+      "permalink": "https://www.instagram.com/p/Db1WzVvEw1e/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/Db1WzVvEw1e/",
+        "engagement": 1
+      },
       "fb": {
         "reactions": 2,
         "comments": 0,
@@ -588,7 +917,7 @@
         "reach": 0,
         "engagement": 2
       },
-      "engagement": 2,
+      "engagement": 3,
       "_ig_attempted": true
     },
     {
@@ -598,8 +927,16 @@
       "is_reel": false,
       "at": "2026-08-10T16:07:11.052047Z",
       "caption": "A diagnosis without sequencing is just an opinion.\n\nEvery Growth Terminal run ends in a 90 day plan: six phases in order",
-      "permalink": "",
-      "ig": null,
+      "permalink": "https://www.instagram.com/p/Db3Z_3sm49i/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/Db3Z_3sm49i/",
+        "engagement": 1
+      },
       "fb": {
         "reactions": 1,
         "comments": 0,
@@ -607,7 +944,7 @@
         "reach": 0,
         "engagement": 2
       },
-      "engagement": 2,
+      "engagement": 3,
       "_ig_attempted": true
     },
     {
@@ -617,8 +954,16 @@
       "is_reel": false,
       "at": "2026-08-10T17:01:17.737922Z",
       "caption": "Coming soon to the Growth Terminal store: Unit Economics Cockpit.\n\nCAC, LTV and payback in one view, so you know if grow",
-      "permalink": "",
-      "ig": null,
+      "permalink": "https://www.instagram.com/p/Db3gIPKE1Ry/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/Db3gIPKE1Ry/",
+        "engagement": 1
+      },
       "fb": {
         "reactions": 2,
         "comments": 0,
@@ -626,178 +971,7 @@
         "reach": 0,
         "engagement": 2
       },
-      "engagement": 2,
-      "_ig_attempted": true
-    },
-    {
-      "sig": "card:Activation",
-      "layout": "card",
-      "file": "creatives/gt_auto_20260801_210110.jpg",
-      "is_reel": false,
-      "at": "2026-08-01T21:01:13.344125Z",
-      "caption": "This is what a Growth Terminal diagnosis looks like.\n\nNot 40 metrics to interpret \u2014 one constraint, named, with the doll",
-      "permalink": "",
-      "ig": null,
-      "fb": {
-        "reactions": 0,
-        "comments": 0,
-        "shares": 1,
-        "reach": 0,
-        "engagement": 1
-      },
-      "engagement": 1,
-      "_ig_attempted": true
-    },
-    {
-      "sig": "reelnum:60",
-      "layout": "reel:countup",
-      "file": "creatives/gt_reel_20260802_170121.jpg",
-      "is_reel": true,
-      "at": "2026-08-02T17:01:40.289653Z",
-      "caption": "60 seconds from spreadsheet to diagnosis. Add the add-on to Google Sheets, point it at the report you already have, and ",
-      "permalink": "",
-      "ig": null,
-      "fb": {
-        "reactions": 1,
-        "comments": 0,
-        "shares": 0,
-        "reach": 0,
-        "engagement": 1
-      },
-      "engagement": 1,
-      "_ig_attempted": true
-    },
-    {
-      "sig": "reelnum:140",
-      "layout": "reel:countup",
-      "file": "creatives/gt_reel_20260803_010105.jpg",
-      "is_reel": true,
-      "at": "2026-08-03T01:01:30.258938Z",
-      "caption": "Every diagnosis ends with a dollar range, not a vibe. A real number on a real constraint \u2014 so you decide with a figure i",
-      "permalink": "",
-      "ig": null,
-      "fb": {
-        "reactions": 1,
-        "comments": 0,
-        "shares": 0,
-        "reach": 0,
-        "engagement": 1
-      },
-      "engagement": 1,
-      "_ig_attempted": true
-    },
-    {
-      "sig": "reelcard:Pricing",
-      "layout": "reel:card",
-      "file": "creatives/gt_reel_20260803_130120.jpg",
-      "is_reel": true,
-      "at": "2026-08-03T13:01:44.997992Z",
-      "caption": "This is what a Growth Terminal diagnosis looks like, one constraint, named, priced, and verified against real revenue. H",
-      "permalink": "",
-      "ig": null,
-      "fb": {
-        "reactions": 1,
-        "comments": 0,
-        "shares": 0,
-        "reach": 0,
-        "engagement": 1
-      },
-      "engagement": 1,
-      "_ig_attempted": true
-    },
-    {
-      "sig": "feat:Your #1 growth constraint, named and pri:gt_scene_01.png",
-      "layout": "feature",
-      "file": "creatives/gt_auto_20260810_010152.jpg",
-      "is_reel": false,
-      "at": "2026-08-10T01:01:58.611483Z",
-      "caption": "Your #1 growth constraint, named and priced, in about a minute.\n\nPoint the add-on at the spreadsheet you already have op",
-      "permalink": "",
-      "ig": null,
-      "fb": {
-        "reactions": 1,
-        "comments": 0,
-        "shares": 0,
-        "reach": 0,
-        "engagement": 1
-      },
-      "engagement": 1,
-      "_ig_attempted": true
-    },
-    {
-      "sig": "car:twelve",
-      "layout": "carousel:twelve",
-      "file": "creatives/gt_car_20260810010331_1.jpg",
-      "is_reel": false,
-      "at": "2026-08-10T01:03:38.567959Z",
-      "caption": "Growth gets stuck in twelve places. Only one of them is yours this quarter.\n\nDemand side: acquisition, traffic, conversi",
-      "permalink": "",
-      "ig": null,
-      "fb": {
-        "reactions": 1,
-        "comments": 0,
-        "shares": 0,
-        "reach": 0,
-        "engagement": 1
-      },
-      "engagement": 1,
-      "_ig_attempted": true
-    },
-    {
-      "sig": "prodclaim:funnel:Find the one step your",
-      "layout": "prodclaim",
-      "file": "creatives/gt_auto_20260810_210118.jpg",
-      "is_reel": false,
-      "at": "2026-08-10T21:01:23.755280Z",
-      "caption": "Your funnel has one step leaking more than the rest. The Funnel & Conversion Tracker finds it, tells you what fixing it ",
-      "permalink": "",
-      "ig": null,
-      "fb": {
-        "reactions": 1,
-        "comments": 0,
-        "shares": 0,
-        "reach": 0,
-        "engagement": 1
-      },
-      "engagement": 1,
-      "_ig_attempted": true
-    },
-    {
-      "sig": "tz:What is the wrong fix costing ",
-      "layout": "twozone",
-      "file": "creatives/gt_auto_20260811_130114.jpg",
-      "is_reel": false,
-      "at": "2026-08-11T13:01:20.952307Z",
-      "caption": "What is the wrong fix costing you?\n\nEvery quarter spent on the wrong constraint has a price, it is just invisible until ",
-      "permalink": "",
-      "ig": null,
-      "fb": {
-        "reactions": 1,
-        "comments": 0,
-        "shares": 0,
-        "reach": 0,
-        "engagement": 1
-      },
-      "engagement": 1,
-      "_ig_attempted": true
-    },
-    {
-      "sig": "car:plan",
-      "layout": "carousel:plan",
-      "file": "creatives/gt_car_20260811160808_1.jpg",
-      "is_reel": false,
-      "at": "2026-08-11T16:08:14.136774Z",
-      "caption": "A diagnosis without sequencing is just an opinion.\n\nEvery Growth Terminal run ends in a 90 day plan: six phases in order",
-      "permalink": "",
-      "ig": null,
-      "fb": {
-        "reactions": 1,
-        "comments": 0,
-        "shares": 0,
-        "reach": 0,
-        "engagement": 1
-      },
-      "engagement": 1,
+      "engagement": 3,
       "_ig_attempted": true
     },
     {
@@ -807,8 +981,16 @@
       "is_reel": false,
       "at": "2026-08-11T17:01:53.596205Z",
       "caption": "Coming soon to the Growth Terminal store: Retention & Churn Tracker.\n\nSee exactly where revenue leaks after the sale.\n\nW",
-      "permalink": "",
-      "ig": null,
+      "permalink": "https://www.instagram.com/p/Db6E_jdkSzP/",
+      "ig": {
+        "likes": 1,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/Db6E_jdkSzP/",
+        "engagement": 2
+      },
       "fb": {
         "reactions": 1,
         "comments": 0,
@@ -816,288 +998,7 @@
         "reach": 0,
         "engagement": 1
       },
-      "engagement": 1,
-      "_ig_attempted": true
-    },
-    {
-      "sig": "reelcard:Activation",
-      "layout": "reel:card",
-      "file": "creatives/gt_reel_20260812_010213.jpg",
-      "is_reel": true,
-      "at": "2026-08-12T01:02:39.160334Z",
-      "caption": "This is what a Growth Terminal diagnosis looks like, one constraint, named, priced, and verified against real revenue. H",
-      "permalink": "",
-      "ig": null,
-      "fb": {
-        "reactions": 1,
-        "comments": 0,
-        "shares": 0,
-        "reach": 0,
-        "engagement": 1
-      },
-      "engagement": 1,
-      "_ig_attempted": true
-    },
-    {
-      "sig": "car:twelve",
-      "layout": "carousel:twelve",
-      "file": "creatives/gt_car_20260812160556_1.jpg",
-      "is_reel": false,
-      "at": "2026-08-12T16:06:03.936846Z",
-      "caption": "Growth gets stuck in twelve places. Only one of them is yours this quarter.\n\nDemand side: acquisition, traffic, conversi",
-      "permalink": "",
-      "ig": null,
-      "fb": {
-        "reactions": 1,
-        "comments": 0,
-        "shares": 0,
-        "reach": 0,
-        "engagement": 1
-      },
-      "engagement": 1,
-      "_ig_attempted": true
-    },
-    {
-      "sig": "prodshot:funnel:Your funnel has one we",
-      "layout": "prodshot",
-      "file": "creatives/gt_auto_20260813_010121.jpg",
-      "is_reel": false,
-      "at": "2026-08-13T01:01:27.133459Z",
-      "caption": "Most trackers show you conversion rates. This one tells you what to do with them: which step is costing you the most, ho",
-      "permalink": "",
-      "ig": null,
-      "fb": {
-        "reactions": 1,
-        "comments": 0,
-        "shares": 0,
-        "reach": 0,
-        "engagement": 1
-      },
-      "engagement": 1,
-      "_ig_attempted": true
-    },
-    {
-      "sig": "car:plan",
-      "layout": "carousel:plan",
-      "file": "creatives/gt_car_20260815153048_1.jpg",
-      "is_reel": false,
-      "at": "2026-08-15T15:30:55.341267Z",
-      "caption": "A diagnosis without sequencing is just an opinion.\n\nEvery Growth Terminal run ends in a 90 day plan: six phases in order",
-      "permalink": "",
-      "ig": null,
-      "fb": {
-        "reactions": 1,
-        "comments": 0,
-        "shares": 0,
-        "reach": 0,
-        "engagement": 1
-      },
-      "engagement": 1,
-      "_ig_attempted": true
-    },
-    {
-      "sig": "stat:$0The cost to find out what's really stu",
-      "layout": "stat",
-      "file": "creatives/gt_auto_20260731_024003.jpg",
-      "is_reel": false,
-      "at": "2026-07-31T02:40:05.892133Z",
-      "caption": "",
-      "permalink": "",
-      "ig": null,
-      "fb": null,
-      "engagement": 0,
-      "_ig_attempted": true
-    },
-    {
-      "sig": "cons:Acquisition",
-      "layout": "statement",
-      "file": "creatives/gt_auto_20260731_151337.jpg",
-      "is_reel": false,
-      "at": "2026-07-31T15:13:41.033183Z",
-      "caption": "",
-      "permalink": "",
-      "ig": null,
-      "fb": null,
-      "engagement": 0,
-      "_ig_attempted": true
-    },
-    {
-      "sig": "stmt:Stop guessing which lever to pull .",
-      "layout": "statement",
-      "file": "creatives/gt_auto_20260731_171731.jpg",
-      "is_reel": false,
-      "at": "2026-07-31T17:17:33.270846Z",
-      "caption": "Stop guessing which lever to pull.\n\nYou already have the data \u2014 you're missing the diagnosis. Growth Terminal reads what",
-      "permalink": "",
-      "ig": null,
-      "fb": null,
-      "engagement": 0,
-      "_ig_attempted": true
-    },
-    {
-      "sig": "stmt:A second opinion for your growth .",
-      "layout": "statement",
-      "file": "creatives/gt_auto_20260731_174747.jpg",
-      "is_reel": false,
-      "at": "2026-07-31T17:47:49.645854Z",
-      "caption": "Think of it as a second opinion for your growth.\n\nThe kind you'd get from an operator who has seen this exact pattern a ",
-      "permalink": "",
-      "ig": null,
-      "fb": null,
-      "engagement": 0,
-      "_ig_attempted": true
-    },
-    {
-      "sig": "stmt:Point it at the sheet you already have o",
-      "layout": "statement",
-      "file": "creatives/gt_auto_20260731_181924.jpg",
-      "is_reel": false,
-      "at": "2026-07-31T18:19:26.780334Z",
-      "caption": "No new platform. No migration. No export.\n\nGrowth Terminal is a Google Sheets add-on. Point it at the report you already",
-      "permalink": "",
-      "ig": null,
-      "fb": null,
-      "engagement": 0,
-      "_ig_attempted": true
-    },
-    {
-      "sig": "stat:$88K\u2013$140KThe constraint you couldn't se",
-      "layout": "stat",
-      "file": "creatives/gt_auto_20260731_184052.jpg",
-      "is_reel": false,
-      "at": "2026-07-31T18:40:54.687999Z",
-      "caption": "\"$88K\u2013$140K / yr.\"\n\nThat's a real range from a real diagnosis \u2014 the annual value of one unfixed constraint. Growth Termi",
-      "permalink": "",
-      "ig": null,
-      "fb": null,
-      "engagement": 0,
-      "_ig_attempted": true
-    },
-    {
-      "sig": "cons:Churn",
-      "layout": "statement",
-      "file": "creatives/gt_auto_20260731_184214.jpg",
-      "is_reel": false,
-      "at": "2026-07-31T18:42:18.491193Z",
-      "caption": "Is churn your #1 constraint right now?\n\nThe tell: you refill a leaking bucket every single month. It's one of the twelve",
-      "permalink": "",
-      "ig": null,
-      "fb": null,
-      "engagement": 0,
-      "_ig_attempted": true
-    },
-    {
-      "sig": "cons:Capacity",
-      "layout": "statement",
-      "file": "creatives/gt_auto_20260731_194227.jpg",
-      "is_reel": false,
-      "at": "2026-07-31T19:42:29.497263Z",
-      "caption": "Is capacity your #1 constraint right now?\n\nThe tell: demand is there and you physically cannot serve it. It's one of the",
-      "permalink": "",
-      "ig": null,
-      "fb": {
-        "reactions": 0,
-        "comments": 0,
-        "shares": 0,
-        "reach": 0,
-        "engagement": 0
-      },
-      "engagement": 0,
-      "_ig_attempted": true
-    },
-    {
-      "sig": "ranked:Retention",
-      "layout": "ranked",
-      "file": "creatives/gt_auto_20260731_201721.jpg",
-      "is_reel": false,
-      "at": "2026-07-31T20:17:23.665282Z",
-      "caption": "Twelve places growth gets stuck. We score all of them against your data and rank them.\n\nThe point isn't the list \u2014 it's ",
-      "permalink": "",
-      "ig": null,
-      "fb": {
-        "reactions": 0,
-        "comments": 0,
-        "shares": 0,
-        "reach": 0,
-        "engagement": 0
-      },
-      "engagement": 0,
-      "_ig_attempted": true
-    },
-    {
-      "sig": "reelcard:Retention",
-      "layout": "reel:card",
-      "file": "creatives/gt_reel_20260731_214453.jpg",
-      "is_reel": true,
-      "at": "2026-07-31T21:45:13.118562Z",
-      "caption": "This is what a Growth Terminal diagnosis looks like \u2014 one constraint, named, priced, and verified against real revenue. ",
-      "permalink": "",
-      "ig": null,
-      "fb": {
-        "reactions": 0,
-        "comments": 0,
-        "shares": 0,
-        "reach": 0,
-        "engagement": 0
-      },
-      "engagement": 0,
-      "_ig_attempted": true
-    },
-    {
-      "sig": "stmt:Ten problems. One that matters this quar",
-      "layout": "statement",
-      "file": "creatives/gt_auto_20260731_221325.jpg",
-      "is_reel": false,
-      "at": "2026-07-31T22:13:28.653994Z",
-      "caption": "You can always find ten things to fix. You can only afford to fix one well this quarter.\n\nGrowth Terminal ranks all twel",
-      "permalink": "",
-      "ig": null,
-      "fb": {
-        "reactions": 0,
-        "comments": 0,
-        "shares": 0,
-        "reach": 0,
-        "engagement": 0
-      },
-      "engagement": 0,
-      "_ig_attempted": true
-    },
-    {
-      "sig": "card:Retention",
-      "layout": "card",
-      "file": "creatives/gt_auto_20260731_223435.jpg",
-      "is_reel": false,
-      "at": "2026-07-31T22:34:38.132206Z",
-      "caption": "This is what a Growth Terminal diagnosis looks like.\n\nNot 40 metrics to interpret \u2014 one constraint, named, with the doll",
-      "permalink": "",
-      "ig": null,
-      "fb": {
-        "reactions": 0,
-        "comments": 0,
-        "shares": 0,
-        "reach": 0,
-        "engagement": 0
-      },
-      "engagement": 0,
-      "_ig_attempted": true
-    },
-    {
-      "sig": "quote:Diagnosis before treatment. Always.",
-      "layout": "quote",
-      "file": "creatives/gt_auto_20260731_224247.jpg",
-      "is_reel": false,
-      "at": "2026-07-31T22:42:49.691534Z",
-      "caption": "Diagnosis before treatment. Always.\n\nMost growth mistakes aren't strategy failures \u2014 they're diagnosis failures. Get the",
-      "permalink": "",
-      "ig": null,
-      "fb": {
-        "reactions": 0,
-        "comments": 0,
-        "shares": 0,
-        "reach": 0,
-        "engagement": 0
-      },
-      "engagement": 0,
+      "engagement": 3,
       "_ig_attempted": true
     },
     {
@@ -1107,10 +1008,18 @@
       "is_reel": true,
       "at": "2026-08-01T01:01:32.292803Z",
       "caption": "This is what a Growth Terminal diagnosis looks like \u2014 one constraint, named, priced, and verified against real revenue. ",
-      "permalink": "",
-      "ig": null,
+      "permalink": "https://www.instagram.com/reel/DbenJt9Ah8L/",
+      "ig": {
+        "likes": 1,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/reel/DbenJt9Ah8L/",
+        "engagement": 2
+      },
       "fb": null,
-      "engagement": 0,
+      "engagement": 2,
       "_ig_attempted": true
     },
     {
@@ -1120,8 +1029,16 @@
       "is_reel": false,
       "at": "2026-08-01T13:01:10.218863Z",
       "caption": "Most growth doesn't die at the top of the funnel. It leaks in the middle.\n\nHere, activation is the drop that's costing t",
-      "permalink": "",
-      "ig": null,
+      "permalink": "https://www.instagram.com/p/Dbf5fneFfhy/",
+      "ig": {
+        "likes": 1,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/Dbf5fneFfhy/",
+        "engagement": 2
+      },
       "fb": {
         "reactions": 0,
         "comments": 0,
@@ -1129,7 +1046,7 @@
         "reach": 0,
         "engagement": 0
       },
-      "engagement": 0,
+      "engagement": 2,
       "_ig_attempted": true
     },
     {
@@ -1139,8 +1056,16 @@
       "is_reel": true,
       "at": "2026-08-01T17:02:02.293319Z",
       "caption": "Growth only gets stuck in twelve places. The hard part is knowing which one is YOUR #1 right now \u2014 with a dollar range a",
-      "permalink": "",
-      "ig": null,
+      "permalink": "https://www.instagram.com/reel/DbgVFoEgKDZ/",
+      "ig": {
+        "likes": 1,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/reel/DbgVFoEgKDZ/",
+        "engagement": 2
+      },
       "fb": {
         "reactions": 0,
         "comments": 0,
@@ -1148,109 +1073,250 @@
         "reach": 0,
         "engagement": 0
       },
-      "engagement": 0,
+      "engagement": 2,
       "_ig_attempted": true
     },
     {
-      "sig": "reelcard:Activation",
-      "layout": "reel:card",
-      "file": "creatives/gt_reel_20260802_010122.jpg",
+      "sig": "reelnum:60",
+      "layout": "reel:countup",
+      "file": "creatives/gt_reel_20260802_170121.jpg",
       "is_reel": true,
-      "at": "2026-08-02T01:01:47.619330Z",
-      "caption": "This is what a Growth Terminal diagnosis looks like \u2014 one constraint, named, priced, and verified against real revenue. ",
-      "permalink": "",
-      "ig": null,
+      "at": "2026-08-02T17:01:40.289653Z",
+      "caption": "60 seconds from spreadsheet to diagnosis. Add the add-on to Google Sheets, point it at the report you already have, and ",
+      "permalink": "https://www.instagram.com/reel/Dbi50e1CuOS/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/reel/Dbi50e1CuOS/",
+        "engagement": 1
+      },
       "fb": {
-        "reactions": 0,
+        "reactions": 1,
         "comments": 0,
         "shares": 0,
         "reach": 0,
-        "engagement": 0
+        "engagement": 1
       },
-      "engagement": 0,
+      "engagement": 2,
       "_ig_attempted": true
     },
     {
-      "sig": "cons:Pricing",
-      "layout": "statement",
-      "file": "creatives/gt_auto_20260802_130107.jpg",
-      "is_reel": false,
-      "at": "2026-08-02T13:01:09.938270Z",
-      "caption": "Is pricing your #1 constraint right now?\n\nThe tell: you are leaving margin on the table on every deal. It's one of the t",
-      "permalink": "",
-      "ig": null,
+      "sig": "reelnum:140",
+      "layout": "reel:countup",
+      "file": "creatives/gt_reel_20260803_010105.jpg",
+      "is_reel": true,
+      "at": "2026-08-03T01:01:30.258938Z",
+      "caption": "Every diagnosis ends with a dollar range, not a vibe. A real number on a real constraint \u2014 so you decide with a figure i",
+      "permalink": "https://www.instagram.com/reel/Dbjw1tBDQZz/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/reel/Dbjw1tBDQZz/",
+        "engagement": 1
+      },
       "fb": {
-        "reactions": 0,
+        "reactions": 1,
         "comments": 0,
         "shares": 0,
         "reach": 0,
-        "engagement": 0
+        "engagement": 1
       },
-      "engagement": 0,
-      "_ig_attempted": true
-    },
-    {
-      "sig": "stat:90 daysFrom diagnosis to a plan you can ",
-      "layout": "stat",
-      "file": "creatives/gt_auto_20260802_210116.jpg",
-      "is_reel": false,
-      "at": "2026-08-02T21:01:19.286543Z",
-      "caption": "A diagnosis without a plan is just a nice chart.\n\nEvery Growth Terminal verdict ships with a concrete 90-day plan for th",
-      "permalink": "",
-      "ig": null,
-      "fb": null,
-      "engagement": 0,
-      "_ig_attempted": true
-    },
-    {
-      "sig": "tz:It tells you why it might be w",
-      "layout": "twozone",
-      "file": "creatives/gt_auto_20260810_130111.jpg",
-      "is_reel": false,
-      "at": "2026-08-10T13:01:18.849250Z",
-      "caption": "It tells you why it might be wrong.\n\nEvery diagnosis ships with the evidence against it and the specific thing that woul",
-      "permalink": "",
-      "ig": null,
-      "fb": {
-        "reactions": 0,
-        "comments": 0,
-        "shares": 0,
-        "reach": 0,
-        "engagement": 0
-      },
-      "engagement": 0,
-      "_ig_attempted": true
-    },
-    {
-      "sig": "prodsoon:Retention & Churn Tracke",
-      "layout": "prodsoon",
-      "file": "creatives/gt_auto_20260811_010125.jpg",
-      "is_reel": false,
-      "at": "2026-08-11T01:01:30.250388Z",
-      "caption": "Coming soon to the Growth Terminal store: Retention & Churn Tracker.\n\nSee exactly where revenue leaks after the sale.\n\nW",
-      "permalink": "",
-      "ig": null,
-      "fb": {
-        "reactions": 0,
-        "comments": 0,
-        "shares": 0,
-        "reach": 0,
-        "engagement": 0
-      },
-      "engagement": 0,
+      "engagement": 2,
       "_ig_attempted": true
     },
     {
       "sig": "reelcard:Pricing",
       "layout": "reel:card",
-      "file": "creatives/gt_reel_20260811_210118.jpg",
+      "file": "creatives/gt_reel_20260803_130120.jpg",
       "is_reel": true,
-      "at": "2026-08-11T21:01:50.401357Z",
+      "at": "2026-08-03T13:01:44.997992Z",
       "caption": "This is what a Growth Terminal diagnosis looks like, one constraint, named, priced, and verified against real revenue. H",
-      "permalink": "",
-      "ig": null,
-      "fb": null,
-      "engagement": 0,
+      "permalink": "https://www.instagram.com/reel/DblDKaUGY3E/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/reel/DblDKaUGY3E/",
+        "engagement": 1
+      },
+      "fb": {
+        "reactions": 1,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 1
+      },
+      "engagement": 2,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "feat:Your #1 growth constraint, named and pri:gt_scene_01.png",
+      "layout": "feature",
+      "file": "creatives/gt_auto_20260810_010152.jpg",
+      "is_reel": false,
+      "at": "2026-08-10T01:01:58.611483Z",
+      "caption": "Your #1 growth constraint, named and priced, in about a minute.\n\nPoint the add-on at the spreadsheet you already have op",
+      "permalink": "https://www.instagram.com/p/Db1yWAGDB4g/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/Db1yWAGDB4g/",
+        "engagement": 1
+      },
+      "fb": {
+        "reactions": 1,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 1
+      },
+      "engagement": 2,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "car:twelve",
+      "layout": "carousel:twelve",
+      "file": "creatives/gt_car_20260810010331_1.jpg",
+      "is_reel": false,
+      "at": "2026-08-10T01:03:38.567959Z",
+      "caption": "Growth gets stuck in twelve places. Only one of them is yours this quarter.\n\nDemand side: acquisition, traffic, conversi",
+      "permalink": "https://www.instagram.com/p/Db1yljDGl94/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/Db1yljDGl94/",
+        "engagement": 1
+      },
+      "fb": {
+        "reactions": 1,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 1
+      },
+      "engagement": 2,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "prodclaim:funnel:Find the one step your",
+      "layout": "prodclaim",
+      "file": "creatives/gt_auto_20260810_210118.jpg",
+      "is_reel": false,
+      "at": "2026-08-10T21:01:23.755280Z",
+      "caption": "Your funnel has one step leaking more than the rest. The Funnel & Conversion Tracker finds it, tells you what fixing it ",
+      "permalink": "https://www.instagram.com/p/Db37mysFLdJ/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/Db37mysFLdJ/",
+        "engagement": 1
+      },
+      "fb": {
+        "reactions": 1,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 1
+      },
+      "engagement": 2,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "tz:What is the wrong fix costing ",
+      "layout": "twozone",
+      "file": "creatives/gt_auto_20260811_130114.jpg",
+      "is_reel": false,
+      "at": "2026-08-11T13:01:20.952307Z",
+      "caption": "What is the wrong fix costing you?\n\nEvery quarter spent on the wrong constraint has a price, it is just invisible until ",
+      "permalink": "https://www.instagram.com/p/Db5pd0DH3Of/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/Db5pd0DH3Of/",
+        "engagement": 1
+      },
+      "fb": {
+        "reactions": 1,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 1
+      },
+      "engagement": 2,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "car:plan",
+      "layout": "carousel:plan",
+      "file": "creatives/gt_car_20260811160808_1.jpg",
+      "is_reel": false,
+      "at": "2026-08-11T16:08:14.136774Z",
+      "caption": "A diagnosis without sequencing is just an opinion.\n\nEvery Growth Terminal run ends in a 90 day plan: six phases in order",
+      "permalink": "https://www.instagram.com/p/Db5-5_nlf91/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/Db5-5_nlf91/",
+        "engagement": 1
+      },
+      "fb": {
+        "reactions": 1,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 1
+      },
+      "engagement": 2,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "reelcard:Activation",
+      "layout": "reel:card",
+      "file": "creatives/gt_reel_20260812_010213.jpg",
+      "is_reel": true,
+      "at": "2026-08-12T01:02:39.160334Z",
+      "caption": "This is what a Growth Terminal diagnosis looks like, one constraint, named, priced, and verified against real revenue. H",
+      "permalink": "https://www.instagram.com/reel/Db68BFgDCVh/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/reel/Db68BFgDCVh/",
+        "engagement": 1
+      },
+      "fb": {
+        "reactions": 1,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 1
+      },
+      "engagement": 2,
       "_ig_attempted": true
     },
     {
@@ -1260,8 +1326,16 @@
       "is_reel": true,
       "at": "2026-08-12T13:01:41.163884Z",
       "caption": "Growth only gets stuck in twelve places. The hard part is knowing which one is YOUR #1 right now, with a dollar range at",
-      "permalink": "",
-      "ig": null,
+      "permalink": "https://www.instagram.com/reel/Db8OU3aE7A8/",
+      "ig": {
+        "likes": 1,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/reel/Db8OU3aE7A8/",
+        "engagement": 2
+      },
       "fb": {
         "reactions": 0,
         "comments": 0,
@@ -1269,64 +1343,61 @@
         "reach": 0,
         "engagement": 0
       },
-      "engagement": 0,
+      "engagement": 2,
       "_ig_attempted": true
     },
     {
-      "sig": "prodclaim:funnel:Stop guessing which fu",
-      "layout": "prodclaim",
-      "file": "creatives/gt_auto_20260812_170159.jpg",
+      "sig": "car:twelve",
+      "layout": "carousel:twelve",
+      "file": "creatives/gt_car_20260812160556_1.jpg",
       "is_reel": false,
-      "at": "2026-08-12T17:02:03.626385Z",
+      "at": "2026-08-12T16:06:03.936846Z",
+      "caption": "Growth gets stuck in twelve places. Only one of them is yours this quarter.\n\nDemand side: acquisition, traffic, conversi",
+      "permalink": "https://www.instagram.com/p/Db8jdW0G5Ft/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/Db8jdW0G5Ft/",
+        "engagement": 1
+      },
+      "fb": {
+        "reactions": 1,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 1
+      },
+      "engagement": 2,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "prodshot:funnel:Your funnel has one we",
+      "layout": "prodshot",
+      "file": "creatives/gt_auto_20260813_010121.jpg",
+      "is_reel": false,
+      "at": "2026-08-13T01:01:27.133459Z",
       "caption": "Most trackers show you conversion rates. This one tells you what to do with them: which step is costing you the most, ho",
-      "permalink": "",
-      "ig": null,
+      "permalink": "https://www.instagram.com/p/Db9gqwajb2k/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/Db9gqwajb2k/",
+        "engagement": 1
+      },
       "fb": {
-        "reactions": 0,
+        "reactions": 1,
         "comments": 0,
         "shares": 0,
         "reach": 0,
-        "engagement": 0
+        "engagement": 1
       },
-      "engagement": 0,
-      "_ig_attempted": true
-    },
-    {
-      "sig": "reelnum:12",
-      "layout": "reel:countup",
-      "file": "creatives/gt_reel_20260812_210142.jpg",
-      "is_reel": true,
-      "at": "2026-08-12T21:02:07.372195Z",
-      "caption": "Growth only gets stuck in twelve places. The hard part is knowing which one is YOUR #1 right now, with a dollar range at",
-      "permalink": "",
-      "ig": null,
-      "fb": {
-        "reactions": 0,
-        "comments": 0,
-        "shares": 0,
-        "reach": 0,
-        "engagement": 0
-      },
-      "engagement": 0,
-      "_ig_attempted": true
-    },
-    {
-      "sig": "tz:Why plan a quarter on a hunch?",
-      "layout": "twozone",
-      "file": "creatives/gt_auto_20260813_130127.jpg",
-      "is_reel": false,
-      "at": "2026-08-13T13:01:34.239583Z",
-      "caption": "Why plan a quarter on a hunch?\n\nMost quarterly plans start from a feeling about what is broken. Growth Terminal reads th",
-      "permalink": "",
-      "ig": null,
-      "fb": {
-        "reactions": 0,
-        "comments": 0,
-        "shares": 0,
-        "reach": 0,
-        "engagement": 0
-      },
-      "engagement": 0,
+      "engagement": 2,
       "_ig_attempted": true
     },
     {
@@ -1336,8 +1407,16 @@
       "is_reel": false,
       "at": "2026-08-13T16:05:48.186756Z",
       "caption": "Growth gets stuck in twelve places. Only one of them is yours this quarter.\n\nDemand side: acquisition, traffic, conversi",
-      "permalink": "",
-      "ig": null,
+      "permalink": "https://www.instagram.com/p/Db_IOAMlj-h/",
+      "ig": {
+        "likes": 1,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/Db_IOAMlj-h/",
+        "engagement": 2
+      },
       "fb": {
         "reactions": 0,
         "comments": 0,
@@ -1345,83 +1424,7 @@
         "reach": 0,
         "engagement": 0
       },
-      "engagement": 0,
-      "_ig_attempted": true
-    },
-    {
-      "sig": "feat:Find the one constraint holding your gro:gt_face_01.png",
-      "layout": "feature",
-      "file": "creatives/gt_auto_20260813_170139.jpg",
-      "is_reel": false,
-      "at": "2026-08-13T17:01:45.071879Z",
-      "caption": "Find the one constraint holding your growth back.\n\nGrowth Terminal reads the report you already run, names the single co",
-      "permalink": "",
-      "ig": null,
-      "fb": {
-        "reactions": 0,
-        "comments": 0,
-        "shares": 0,
-        "reach": 0,
-        "engagement": 0
-      },
-      "engagement": 0,
-      "_ig_attempted": true
-    },
-    {
-      "sig": "prodshot:funnel:Find the one step your",
-      "layout": "prodshot",
-      "file": "creatives/gt_auto_20260813_210121.jpg",
-      "is_reel": false,
-      "at": "2026-08-13T21:01:27.724301Z",
-      "caption": "Your funnel has one step leaking more than the rest. The Funnel & Conversion Tracker finds it, tells you what fixing it ",
-      "permalink": "",
-      "ig": null,
-      "fb": {
-        "reactions": 0,
-        "comments": 0,
-        "shares": 0,
-        "reach": 0,
-        "engagement": 0
-      },
-      "engagement": 0,
-      "_ig_attempted": true
-    },
-    {
-      "sig": "beha:You check it every morning any",
-      "layout": "behaviourcall",
-      "file": "creatives/gt_auto_20260814_010111.jpg",
-      "is_reel": false,
-      "at": "2026-08-14T01:01:17.046874Z",
-      "caption": "You check it every morning anyway.\n\nThe report you open with your coffee already contains the answer, it just does not r",
-      "permalink": "",
-      "ig": null,
-      "fb": {
-        "reactions": 0,
-        "comments": 0,
-        "shares": 0,
-        "reach": 0,
-        "engagement": 0
-      },
-      "engagement": 0,
-      "_ig_attempted": true
-    },
-    {
-      "sig": "cons:Traffic",
-      "layout": "statement",
-      "file": "creatives/gt_auto_20260814_130139.jpg",
-      "is_reel": false,
-      "at": "2026-08-14T13:01:48.128919Z",
-      "caption": "Is traffic your #1 constraint right now?\n\nThe tell: the top of the funnel is thinner than the model needs. It's one of t",
-      "permalink": "",
-      "ig": null,
-      "fb": {
-        "reactions": 0,
-        "comments": 0,
-        "shares": 0,
-        "reach": 0,
-        "engagement": 0
-      },
-      "engagement": 0,
+      "engagement": 2,
       "_ig_attempted": true
     },
     {
@@ -1431,8 +1434,16 @@
       "is_reel": false,
       "at": "2026-08-14T16:00:46.233795Z",
       "caption": "Most tools show you what agrees with them.\n\nGrowth Terminal names the constraint, lists the evidence for the call, then ",
-      "permalink": "",
-      "ig": null,
+      "permalink": "https://www.instagram.com/p/DcBscjon_jh/",
+      "ig": {
+        "likes": 1,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/DcBscjon_jh/",
+        "engagement": 2
+      },
       "fb": {
         "reactions": 0,
         "comments": 0,
@@ -1440,7 +1451,7 @@
         "reach": 0,
         "engagement": 0
       },
-      "engagement": 0,
+      "engagement": 2,
       "_ig_attempted": true
     },
     {
@@ -1450,8 +1461,16 @@
       "is_reel": false,
       "at": "2026-08-14T17:01:15.139566Z",
       "caption": "Coming soon to the Growth Terminal store: Unit Economics Cockpit.\n\nCAC, LTV and payback in one view, so you know if grow",
-      "permalink": "",
-      "ig": null,
+      "permalink": "https://www.instagram.com/p/DcBzTaRDaPt/",
+      "ig": {
+        "likes": 1,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/DcBzTaRDaPt/",
+        "engagement": 2
+      },
       "fb": {
         "reactions": 0,
         "comments": 0,
@@ -1459,140 +1478,34 @@
         "reach": 0,
         "engagement": 0
       },
-      "engagement": 0,
+      "engagement": 2,
       "_ig_attempted": true
     },
     {
-      "sig": "reelcard:Retention",
-      "layout": "reel:card",
-      "file": "creatives/gt_reel_20260814_210104.jpg",
-      "is_reel": true,
-      "at": "2026-08-14T21:01:32.183841Z",
-      "caption": "This is what a Growth Terminal diagnosis looks like, one constraint, named, priced, and verified against real revenue. H",
-      "permalink": "",
-      "ig": null,
-      "fb": {
-        "reactions": 0,
-        "comments": 0,
-        "shares": 0,
-        "reach": 0,
-        "engagement": 0
-      },
-      "engagement": 0,
-      "_ig_attempted": true
-    },
-    {
-      "sig": "prodclaim:funnel:Stop guessing which fu",
-      "layout": "prodclaim",
-      "file": "creatives/gt_auto_20260815_010113.jpg",
+      "sig": "car:plan",
+      "layout": "carousel:plan",
+      "file": "creatives/gt_car_20260815153048_1.jpg",
       "is_reel": false,
-      "at": "2026-08-15T01:01:20.251972Z",
-      "caption": "Your funnel has one step leaking more than the rest. The Funnel & Conversion Tracker finds it, tells you what fixing it ",
-      "permalink": "",
-      "ig": null,
+      "at": "2026-08-15T15:30:55.341267Z",
+      "caption": "A diagnosis without sequencing is just an opinion.\n\nEvery Growth Terminal run ends in a 90 day plan: six phases in order",
+      "permalink": "https://www.instagram.com/p/DcEN0yDH6VH/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/DcEN0yDH6VH/",
+        "engagement": 1
+      },
       "fb": {
-        "reactions": 0,
+        "reactions": 1,
         "comments": 0,
         "shares": 0,
         "reach": 0,
-        "engagement": 0
+        "engagement": 1
       },
-      "engagement": 0,
-      "_ig_attempted": true
-    },
-    {
-      "sig": "reelfeat:We name the one constrai",
-      "layout": "reel:feature",
-      "file": "creatives/gt_reel_20260815_130120.jpg",
-      "is_reel": true,
-      "at": "2026-08-15T13:03:05.112865Z",
-      "caption": "We find the one constraint capping your revenue, price the fix, and grade every call against real revenue. Diagnosis, no",
-      "permalink": "",
-      "ig": null,
-      "fb": {
-        "reactions": 0,
-        "comments": 0,
-        "shares": 0,
-        "reach": 0,
-        "engagement": 0
-      },
-      "engagement": 0,
-      "_ig_attempted": true
-    },
-    {
-      "sig": "reelnum:140",
-      "layout": "reel:countup",
-      "file": "creatives/gt_reel_20260815_170114.jpg",
-      "is_reel": true,
-      "at": "2026-08-15T17:01:44.039061Z",
-      "caption": "Every diagnosis ends with a dollar range, not a vibe. A real number on a real constraint, so you decide with a figure in",
-      "permalink": "",
-      "ig": null,
-      "fb": {
-        "reactions": 0,
-        "comments": 0,
-        "shares": 0,
-        "reach": 0,
-        "engagement": 0
-      },
-      "engagement": 0,
-      "_ig_attempted": true
-    },
-    {
-      "sig": "prodshot:funnel:Stop guessing which fu",
-      "layout": "prodshot",
-      "file": "creatives/gt_auto_20260815_210618.jpg",
-      "is_reel": false,
-      "at": "2026-08-15T21:06:24.196580Z",
-      "caption": "Most trackers show you conversion rates. This one tells you what to do with them: which step is costing you the most, ho",
-      "permalink": "",
-      "ig": null,
-      "fb": {
-        "reactions": 0,
-        "comments": 0,
-        "shares": 0,
-        "reach": 0,
-        "engagement": 0
-      },
-      "engagement": 0,
-      "_ig_attempted": true
-    },
-    {
-      "sig": "chk:Same decision. Less theatre.",
-      "layout": "checklist",
-      "file": "creatives/gt_auto_20260816_010121.jpg",
-      "is_reel": false,
-      "at": "2026-08-16T01:01:27.090908Z",
-      "caption": "Same decision. Less theatre.\n\nA dashboard hands you forty numbers and lets whoever presents it choose the story. Growth ",
-      "permalink": "",
-      "ig": null,
-      "fb": {
-        "reactions": 0,
-        "comments": 0,
-        "shares": 0,
-        "reach": 0,
-        "engagement": 0
-      },
-      "engagement": 0,
-      "_ig_attempted": true
-    },
-    {
-      "sig": "prodsoon:Unit Economics Cockpit",
-      "layout": "prodsoon",
-      "file": "creatives/gt_auto_20260816_130121.jpg",
-      "is_reel": false,
-      "at": "2026-08-16T13:01:27.542854Z",
-      "caption": "Coming soon to the Growth Terminal store: Unit Economics Cockpit.\n\nCAC, LTV and payback in one view, so you know if grow",
-      "permalink": "",
-      "ig": null,
-      "fb": {
-        "reactions": 0,
-        "comments": 0,
-        "shares": 0,
-        "reach": 0,
-        "engagement": 0
-      },
-      "engagement": 0,
+      "engagement": 2,
       "_ig_attempted": true
     },
     {
@@ -1602,8 +1515,16 @@
       "is_reel": false,
       "at": "2026-08-16T15:31:38.415947Z",
       "caption": "A diagnosis without sequencing is just an opinion.\n\nEvery Growth Terminal run ends in a 90 day plan: six phases in order",
-      "permalink": "",
-      "ig": null,
+      "permalink": "https://www.instagram.com/p/DcGysz7llgj/",
+      "ig": {
+        "likes": 1,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/DcGysz7llgj/",
+        "engagement": 2
+      },
       "fb": {
         "reactions": 0,
         "comments": 0,
@@ -1611,7 +1532,7 @@
         "reach": 0,
         "engagement": 0
       },
-      "engagement": 0,
+      "engagement": 2,
       "_ig_attempted": true
     },
     {
@@ -1621,8 +1542,16 @@
       "is_reel": false,
       "at": "2026-08-16T17:01:15.390914Z",
       "caption": "The bottleneck is rarely where it hurts.\n\nChurn shows up at the end of the journey, but it usually starts at a weak acti",
-      "permalink": "",
-      "ig": null,
+      "permalink": "https://www.instagram.com/p/DcG85Q0GuLC/",
+      "ig": {
+        "likes": 1,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/DcG85Q0GuLC/",
+        "engagement": 2
+      },
       "fb": {
         "reactions": 0,
         "comments": 0,
@@ -1630,7 +1559,844 @@
         "reach": 0,
         "engagement": 0
       },
-      "engagement": 0,
+      "engagement": 2,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "edm:We do.Every forecast, graded against",
+      "layout": "edmanifesto",
+      "file": "creatives/gt_auto_20260817_130118.jpg",
+      "is_reel": false,
+      "at": "2026-08-17T13:01:24.111731Z",
+      "caption": "Everyone makes confident growth calls. Almost no one checks them.\n\nWe do. Every forecast Growth Terminal makes is logged",
+      "permalink": "https://www.instagram.com/p/DcJGPYQjrTh/",
+      "ig": {
+        "likes": 1,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/DcJGPYQjrTh/",
+        "engagement": 2
+      },
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 2,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "stat:$0The cost to find out what's really stu",
+      "layout": "stat",
+      "file": "creatives/gt_auto_20260731_024003.jpg",
+      "is_reel": false,
+      "at": "2026-07-31T02:40:05.892133Z",
+      "caption": "",
+      "permalink": "https://www.instagram.com/p/DbcNn8YjWmE/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/DbcNn8YjWmE/",
+        "engagement": 1
+      },
+      "fb": null,
+      "engagement": 1,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "cons:Acquisition",
+      "layout": "statement",
+      "file": "creatives/gt_auto_20260731_151337.jpg",
+      "is_reel": false,
+      "at": "2026-07-31T15:13:41.033183Z",
+      "caption": "",
+      "permalink": "https://www.instagram.com/p/Dbdj3Q1HbCv/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/Dbdj3Q1HbCv/",
+        "engagement": 1
+      },
+      "fb": null,
+      "engagement": 1,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "stmt:Stop guessing which lever to pull .",
+      "layout": "statement",
+      "file": "creatives/gt_auto_20260731_171731.jpg",
+      "is_reel": false,
+      "at": "2026-07-31T17:17:33.270846Z",
+      "caption": "Stop guessing which lever to pull.\n\nYou already have the data \u2014 you're missing the diagnosis. Growth Terminal reads what",
+      "permalink": "https://www.instagram.com/p/DbdyChKkqYV/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/DbdyChKkqYV/",
+        "engagement": 1
+      },
+      "fb": null,
+      "engagement": 1,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "stmt:A second opinion for your growth .",
+      "layout": "statement",
+      "file": "creatives/gt_auto_20260731_174747.jpg",
+      "is_reel": false,
+      "at": "2026-07-31T17:47:49.645854Z",
+      "caption": "Think of it as a second opinion for your growth.\n\nThe kind you'd get from an operator who has seen this exact pattern a ",
+      "permalink": "https://www.instagram.com/p/Dbd1gQGjzh-/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/Dbd1gQGjzh-/",
+        "engagement": 1
+      },
+      "fb": null,
+      "engagement": 1,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "stmt:Point it at the sheet you already have o",
+      "layout": "statement",
+      "file": "creatives/gt_auto_20260731_181924.jpg",
+      "is_reel": false,
+      "at": "2026-07-31T18:19:26.780334Z",
+      "caption": "No new platform. No migration. No export.\n\nGrowth Terminal is a Google Sheets add-on. Point it at the report you already",
+      "permalink": "https://www.instagram.com/p/Dbd5H6nAYo9/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/Dbd5H6nAYo9/",
+        "engagement": 1
+      },
+      "fb": null,
+      "engagement": 1,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "stat:$88K\u2013$140KThe constraint you couldn't se",
+      "layout": "stat",
+      "file": "creatives/gt_auto_20260731_184052.jpg",
+      "is_reel": false,
+      "at": "2026-07-31T18:40:54.687999Z",
+      "caption": "\"$88K\u2013$140K / yr.\"\n\nThat's a real range from a real diagnosis \u2014 the annual value of one unfixed constraint. Growth Termi",
+      "permalink": "https://www.instagram.com/p/Dbd7lJrk7rt/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/Dbd7lJrk7rt/",
+        "engagement": 1
+      },
+      "fb": null,
+      "engagement": 1,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "cons:Churn",
+      "layout": "statement",
+      "file": "creatives/gt_auto_20260731_184214.jpg",
+      "is_reel": false,
+      "at": "2026-07-31T18:42:18.491193Z",
+      "caption": "Is churn your #1 constraint right now?\n\nThe tell: you refill a leaking bucket every single month. It's one of the twelve",
+      "permalink": "https://www.instagram.com/p/Dbd7vRyk6mn/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/Dbd7vRyk6mn/",
+        "engagement": 1
+      },
+      "fb": null,
+      "engagement": 1,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "cons:Capacity",
+      "layout": "statement",
+      "file": "creatives/gt_auto_20260731_194227.jpg",
+      "is_reel": false,
+      "at": "2026-07-31T19:42:29.497263Z",
+      "caption": "Is capacity your #1 constraint right now?\n\nThe tell: demand is there and you physically cannot serve it. It's one of the",
+      "permalink": "https://www.instagram.com/p/DbeCoLUH3I3/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/DbeCoLUH3I3/",
+        "engagement": 1
+      },
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 1,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "ranked:Retention",
+      "layout": "ranked",
+      "file": "creatives/gt_auto_20260731_201721.jpg",
+      "is_reel": false,
+      "at": "2026-07-31T20:17:23.665282Z",
+      "caption": "Twelve places growth gets stuck. We score all of them against your data and rank them.\n\nThe point isn't the list \u2014 it's ",
+      "permalink": "https://www.instagram.com/p/DbeGn1Uk4yA/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/DbeGn1Uk4yA/",
+        "engagement": 1
+      },
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 1,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "reelcard:Retention",
+      "layout": "reel:card",
+      "file": "creatives/gt_reel_20260731_214453.jpg",
+      "is_reel": true,
+      "at": "2026-07-31T21:45:13.118562Z",
+      "caption": "This is what a Growth Terminal diagnosis looks like \u2014 one constraint, named, priced, and verified against real revenue. ",
+      "permalink": "https://www.instagram.com/reel/DbeQrRsj6YS/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/reel/DbeQrRsj6YS/",
+        "engagement": 1
+      },
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 1,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "stmt:Ten problems. One that matters this quar",
+      "layout": "statement",
+      "file": "creatives/gt_auto_20260731_221325.jpg",
+      "is_reel": false,
+      "at": "2026-07-31T22:13:28.653994Z",
+      "caption": "You can always find ten things to fix. You can only afford to fix one well this quarter.\n\nGrowth Terminal ranks all twel",
+      "permalink": "https://www.instagram.com/p/DbeT58mj-CK/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/DbeT58mj-CK/",
+        "engagement": 1
+      },
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 1,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "card:Retention",
+      "layout": "card",
+      "file": "creatives/gt_auto_20260731_223435.jpg",
+      "is_reel": false,
+      "at": "2026-07-31T22:34:38.132206Z",
+      "caption": "This is what a Growth Terminal diagnosis looks like.\n\nNot 40 metrics to interpret \u2014 one constraint, named, with the doll",
+      "permalink": "https://www.instagram.com/p/DbeWU5xmOtG/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/DbeWU5xmOtG/",
+        "engagement": 1
+      },
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 1,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "quote:Diagnosis before treatment. Always.",
+      "layout": "quote",
+      "file": "creatives/gt_auto_20260731_224247.jpg",
+      "is_reel": false,
+      "at": "2026-07-31T22:42:49.691534Z",
+      "caption": "Diagnosis before treatment. Always.\n\nMost growth mistakes aren't strategy failures \u2014 they're diagnosis failures. Get the",
+      "permalink": "https://www.instagram.com/p/DbeXQ53ElM8/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/DbeXQ53ElM8/",
+        "engagement": 1
+      },
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 1,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "reelcard:Activation",
+      "layout": "reel:card",
+      "file": "creatives/gt_reel_20260802_010122.jpg",
+      "is_reel": true,
+      "at": "2026-08-02T01:01:47.619330Z",
+      "caption": "This is what a Growth Terminal diagnosis looks like \u2014 one constraint, named, priced, and verified against real revenue. ",
+      "permalink": "https://www.instagram.com/reel/DbhL-GYlGEF/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/reel/DbhL-GYlGEF/",
+        "engagement": 1
+      },
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 1,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "cons:Pricing",
+      "layout": "statement",
+      "file": "creatives/gt_auto_20260802_130107.jpg",
+      "is_reel": false,
+      "at": "2026-08-02T13:01:09.938270Z",
+      "caption": "Is pricing your #1 constraint right now?\n\nThe tell: you are leaving margin on the table on every deal. It's one of the t",
+      "permalink": "https://www.instagram.com/p/DbieSoVFhpK/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/DbieSoVFhpK/",
+        "engagement": 1
+      },
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 1,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "stat:90 daysFrom diagnosis to a plan you can ",
+      "layout": "stat",
+      "file": "creatives/gt_auto_20260802_210116.jpg",
+      "is_reel": false,
+      "at": "2026-08-02T21:01:19.286543Z",
+      "caption": "A diagnosis without a plan is just a nice chart.\n\nEvery Growth Terminal verdict ships with a concrete 90-day plan for th",
+      "permalink": "https://www.instagram.com/p/DbjVPRsFpVD/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/DbjVPRsFpVD/",
+        "engagement": 1
+      },
+      "fb": null,
+      "engagement": 1,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "tz:It tells you why it might be w",
+      "layout": "twozone",
+      "file": "creatives/gt_auto_20260810_130111.jpg",
+      "is_reel": false,
+      "at": "2026-08-10T13:01:18.849250Z",
+      "caption": "It tells you why it might be wrong.\n\nEvery diagnosis ships with the evidence against it and the specific thing that woul",
+      "permalink": "https://www.instagram.com/p/Db3EqhZDk-4/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/Db3EqhZDk-4/",
+        "engagement": 1
+      },
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 1,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "prodsoon:Retention & Churn Tracke",
+      "layout": "prodsoon",
+      "file": "creatives/gt_auto_20260811_010125.jpg",
+      "is_reel": false,
+      "at": "2026-08-11T01:01:30.250388Z",
+      "caption": "Coming soon to the Growth Terminal store: Retention & Churn Tracker.\n\nSee exactly where revenue leaks after the sale.\n\nW",
+      "permalink": "https://www.instagram.com/p/Db4XFa4G-_b/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/Db4XFa4G-_b/",
+        "engagement": 1
+      },
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 1,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "reelcard:Pricing",
+      "layout": "reel:card",
+      "file": "creatives/gt_reel_20260811_210118.jpg",
+      "is_reel": true,
+      "at": "2026-08-11T21:01:50.401357Z",
+      "caption": "This is what a Growth Terminal diagnosis looks like, one constraint, named, priced, and verified against real revenue. H",
+      "permalink": "https://www.instagram.com/reel/Db6gdGwD4lY/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/reel/Db6gdGwD4lY/",
+        "engagement": 1
+      },
+      "fb": null,
+      "engagement": 1,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "prodclaim:funnel:Stop guessing which fu",
+      "layout": "prodclaim",
+      "file": "creatives/gt_auto_20260812_170159.jpg",
+      "is_reel": false,
+      "at": "2026-08-12T17:02:03.626385Z",
+      "caption": "Most trackers show you conversion rates. This one tells you what to do with them: which step is costing you the most, ho",
+      "permalink": "https://www.instagram.com/p/Db8pzngkm_o/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/Db8pzngkm_o/",
+        "engagement": 1
+      },
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 1,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "tz:Why plan a quarter on a hunch?",
+      "layout": "twozone",
+      "file": "creatives/gt_auto_20260813_130127.jpg",
+      "is_reel": false,
+      "at": "2026-08-13T13:01:34.239583Z",
+      "caption": "Why plan a quarter on a hunch?\n\nMost quarterly plans start from a feeling about what is broken. Growth Terminal reads th",
+      "permalink": "https://www.instagram.com/p/Db-zFHlmkRr/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/Db-zFHlmkRr/",
+        "engagement": 1
+      },
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 1,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "feat:Find the one constraint holding your gro:gt_face_01.png",
+      "layout": "feature",
+      "file": "creatives/gt_auto_20260813_170139.jpg",
+      "is_reel": false,
+      "at": "2026-08-13T17:01:45.071879Z",
+      "caption": "Find the one constraint holding your growth back.\n\nGrowth Terminal reads the report you already run, names the single co",
+      "permalink": "https://www.instagram.com/p/Db_OkPclHsA/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/Db_OkPclHsA/",
+        "engagement": 1
+      },
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 1,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "prodshot:funnel:Find the one step your",
+      "layout": "prodshot",
+      "file": "creatives/gt_auto_20260813_210121.jpg",
+      "is_reel": false,
+      "at": "2026-08-13T21:01:27.724301Z",
+      "caption": "Your funnel has one step leaking more than the rest. The Funnel & Conversion Tracker finds it, tells you what fixing it ",
+      "permalink": "https://www.instagram.com/p/Db_p_3lk_2Y/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/Db_p_3lk_2Y/",
+        "engagement": 1
+      },
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 1,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "beha:You check it every morning any",
+      "layout": "behaviourcall",
+      "file": "creatives/gt_auto_20260814_010111.jpg",
+      "is_reel": false,
+      "at": "2026-08-14T01:01:17.046874Z",
+      "caption": "You check it every morning anyway.\n\nThe report you open with your coffee already contains the answer, it just does not r",
+      "permalink": "https://www.instagram.com/p/DcAFcZqEtnt/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/DcAFcZqEtnt/",
+        "engagement": 1
+      },
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 1,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "cons:Traffic",
+      "layout": "statement",
+      "file": "creatives/gt_auto_20260814_130139.jpg",
+      "is_reel": false,
+      "at": "2026-08-14T13:01:48.128919Z",
+      "caption": "Is traffic your #1 constraint right now?\n\nThe tell: the top of the funnel is thinner than the model needs. It's one of t",
+      "permalink": "https://www.instagram.com/p/DcBX5qknAzY/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/DcBX5qknAzY/",
+        "engagement": 1
+      },
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 1,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "reelcard:Retention",
+      "layout": "reel:card",
+      "file": "creatives/gt_reel_20260814_210104.jpg",
+      "is_reel": true,
+      "at": "2026-08-14T21:01:32.183841Z",
+      "caption": "This is what a Growth Terminal diagnosis looks like, one constraint, named, priced, and verified against real revenue. H",
+      "permalink": "https://www.instagram.com/reel/DcCO490lCC3/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/reel/DcCO490lCC3/",
+        "engagement": 1
+      },
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 1,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "prodclaim:funnel:Stop guessing which fu",
+      "layout": "prodclaim",
+      "file": "creatives/gt_auto_20260815_010113.jpg",
+      "is_reel": false,
+      "at": "2026-08-15T01:01:20.251972Z",
+      "caption": "Your funnel has one step leaking more than the rest. The Funnel & Conversion Tracker finds it, tells you what fixing it ",
+      "permalink": "https://www.instagram.com/p/DcCqPp5AQho/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/DcCqPp5AQho/",
+        "engagement": 1
+      },
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 1,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "reelfeat:We name the one constrai",
+      "layout": "reel:feature",
+      "file": "creatives/gt_reel_20260815_130120.jpg",
+      "is_reel": true,
+      "at": "2026-08-15T13:03:05.112865Z",
+      "caption": "We find the one constraint capping your revenue, price the fix, and grade every call against real revenue. Diagnosis, no",
+      "permalink": "https://www.instagram.com/reel/DcD82R3gaep/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/reel/DcD82R3gaep/",
+        "engagement": 1
+      },
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 1,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "reelnum:140",
+      "layout": "reel:countup",
+      "file": "creatives/gt_reel_20260815_170114.jpg",
+      "is_reel": true,
+      "at": "2026-08-15T17:01:44.039061Z",
+      "caption": "Every diagnosis ends with a dollar range, not a vibe. A real number on a real constraint, so you decide with a figure in",
+      "permalink": "https://www.instagram.com/reel/DcEYLTjj06y/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/reel/DcEYLTjj06y/",
+        "engagement": 1
+      },
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 1,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "prodshot:funnel:Stop guessing which fu",
+      "layout": "prodshot",
+      "file": "creatives/gt_auto_20260815_210618.jpg",
+      "is_reel": false,
+      "at": "2026-08-15T21:06:24.196580Z",
+      "caption": "Most trackers show you conversion rates. This one tells you what to do with them: which step is costing you the most, ho",
+      "permalink": "https://www.instagram.com/p/DcE0Jx6k4-v/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/DcE0Jx6k4-v/",
+        "engagement": 1
+      },
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 1,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "chk:Same decision. Less theatre.",
+      "layout": "checklist",
+      "file": "creatives/gt_auto_20260816_010121.jpg",
+      "is_reel": false,
+      "at": "2026-08-16T01:01:27.090908Z",
+      "caption": "Same decision. Less theatre.\n\nA dashboard hands you forty numbers and lets whoever presents it choose the story. Growth ",
+      "permalink": "https://www.instagram.com/p/DcFPDeilpQx/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/DcFPDeilpQx/",
+        "engagement": 1
+      },
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 1,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "prodsoon:Unit Economics Cockpit",
+      "layout": "prodsoon",
+      "file": "creatives/gt_auto_20260816_130121.jpg",
+      "is_reel": false,
+      "at": "2026-08-16T13:01:27.542854Z",
+      "caption": "Coming soon to the Growth Terminal store: Unit Economics Cockpit.\n\nCAC, LTV and payback in one view, so you know if grow",
+      "permalink": "https://www.instagram.com/p/DcGhc8wmqcL/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/DcGhc8wmqcL/",
+        "engagement": 1
+      },
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 1,
       "_ig_attempted": true
     },
     {
@@ -1640,8 +2406,16 @@
       "is_reel": false,
       "at": "2026-08-16T21:01:13.258824Z",
       "caption": "Everyone in growth makes confident calls. Almost no one checks them.\n\nGrowth Terminal logs every forecast and tracks it ",
-      "permalink": "",
-      "ig": null,
+      "permalink": "https://www.instagram.com/p/DcHYWt-k1eb/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/DcHYWt-k1eb/",
+        "engagement": 1
+      },
       "fb": {
         "reactions": 0,
         "comments": 0,
@@ -1649,7 +2423,7 @@
         "reach": 0,
         "engagement": 0
       },
-      "engagement": 0,
+      "engagement": 1,
       "_ig_attempted": true
     },
     {
@@ -1659,8 +2433,16 @@
       "is_reel": false,
       "at": "2026-08-17T01:01:53.121850Z",
       "caption": "The one move worth more than the other ten.\n\nPerfect execution on the wrong constraint still loses the quarter. Growth T",
-      "permalink": "",
-      "ig": null,
+      "permalink": "https://www.instagram.com/p/DcHz5bQD0J-/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/DcHz5bQD0J-/",
+        "engagement": 1
+      },
       "fb": {
         "reactions": 0,
         "comments": 0,
@@ -1668,7 +2450,61 @@
         "reach": 0,
         "engagement": 0
       },
-      "engagement": 0,
+      "engagement": 1,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "reelfeat:Stop guessing where your",
+      "layout": "reel:feature",
+      "file": "creatives/gt_reel_20260817_210118.jpg",
+      "is_reel": true,
+      "at": "2026-08-17T21:02:43.542719Z",
+      "caption": "We find the one constraint capping your revenue, price the fix, and grade every call against real revenue. Diagnosis, no",
+      "permalink": "https://www.instagram.com/reel/DcJ9YGHkfFH/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/reel/DcJ9YGHkfFH/",
+        "engagement": 1
+      },
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 1,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "reelnum:60",
+      "layout": "reel:countup",
+      "file": "creatives/gt_reel_20260818_010116.jpg",
+      "is_reel": true,
+      "at": "2026-08-18T01:01:46.001041Z",
+      "caption": "60 seconds from spreadsheet to diagnosis. Add the add-on to Google Sheets\u2122, point it at the report you already have, and",
+      "permalink": "https://www.instagram.com/reel/DcKYvpClZol/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/reel/DcKYvpClZol/",
+        "engagement": 1
+      },
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 1,
       "_ig_attempted": true
     }
   ],
@@ -1676,306 +2512,225 @@
     {
       "layout": "editorial",
       "posts": 1,
-      "engagement": 2,
-      "ig_engagement": 0,
+      "engagement": 3,
+      "ig_engagement": 1,
       "fb_engagement": 2,
-      "avg_engagement": 2.0
+      "avg_engagement": 3.0
     },
     {
       "layout": "vs",
       "posts": 1,
-      "engagement": 2,
-      "ig_engagement": 0,
+      "engagement": 3,
+      "ig_engagement": 1,
       "fb_engagement": 2,
-      "avg_engagement": 2.0
+      "avg_engagement": 3.0
     },
     {
       "layout": "carousel",
       "posts": 1,
-      "engagement": 2,
-      "ig_engagement": 0,
+      "engagement": 3,
+      "ig_engagement": 1,
       "fb_engagement": 2,
-      "avg_engagement": 2.0
-    },
-    {
-      "layout": "edmanifesto",
-      "posts": 4,
-      "engagement": 8,
-      "ig_engagement": 0,
-      "fb_engagement": 8,
-      "avg_engagement": 2.0
+      "avg_engagement": 3.0
     },
     {
       "layout": "edserif",
       "posts": 2,
-      "engagement": 4,
-      "ig_engagement": 0,
+      "engagement": 6,
+      "ig_engagement": 2,
       "fb_engagement": 4,
-      "avg_engagement": 2.0
+      "avg_engagement": 3.0
     },
     {
       "layout": "tweet",
       "posts": 1,
-      "engagement": 2,
-      "ig_engagement": 0,
+      "engagement": 3,
+      "ig_engagement": 1,
       "fb_engagement": 2,
-      "avg_engagement": 2.0
+      "avg_engagement": 3.0
+    },
+    {
+      "layout": "edmanifesto",
+      "posts": 5,
+      "engagement": 14,
+      "ig_engagement": 6,
+      "fb_engagement": 8,
+      "avg_engagement": 2.8
     },
     {
       "layout": "reel:feature",
-      "posts": 6,
-      "engagement": 11,
-      "ig_engagement": 0,
+      "posts": 7,
+      "engagement": 18,
+      "ig_engagement": 7,
       "fb_engagement": 11,
-      "avg_engagement": 1.8
-    },
-    {
-      "layout": "prodshot",
-      "posts": 6,
-      "engagement": 8,
-      "ig_engagement": 0,
-      "fb_engagement": 8,
-      "avg_engagement": 1.3
-    },
-    {
-      "layout": "prodclaim",
-      "posts": 5,
-      "engagement": 6,
-      "ig_engagement": 0,
-      "fb_engagement": 6,
-      "avg_engagement": 1.2
-    },
-    {
-      "layout": "quote",
-      "posts": 2,
-      "engagement": 2,
-      "ig_engagement": 0,
-      "fb_engagement": 2,
-      "avg_engagement": 1.0
+      "avg_engagement": 2.6
     },
     {
       "layout": "funnel",
       "posts": 2,
-      "engagement": 2,
-      "ig_engagement": 0,
+      "engagement": 5,
+      "ig_engagement": 3,
       "fb_engagement": 2,
-      "avg_engagement": 1.0
+      "avg_engagement": 2.5
     },
     {
       "layout": "reel:countup",
-      "posts": 9,
-      "engagement": 9,
-      "ig_engagement": 0,
-      "fb_engagement": 9,
-      "avg_engagement": 1.0
+      "posts": 11,
+      "engagement": 28,
+      "ig_engagement": 18,
+      "fb_engagement": 10,
+      "avg_engagement": 2.5
     },
     {
-      "layout": "feature",
-      "posts": 5,
-      "engagement": 5,
-      "ig_engagement": 0,
-      "fb_engagement": 5,
-      "avg_engagement": 1.0
-    },
-    {
-      "layout": "carousel:plan",
-      "posts": 4,
-      "engagement": 4,
-      "ig_engagement": 0,
-      "fb_engagement": 4,
-      "avg_engagement": 1.0
+      "layout": "prodshot",
+      "posts": 6,
+      "engagement": 14,
+      "ig_engagement": 6,
+      "fb_engagement": 8,
+      "avg_engagement": 2.3
     },
     {
       "layout": "prodsoon",
       "posts": 6,
-      "engagement": 5,
-      "ig_engagement": 0,
+      "engagement": 13,
+      "ig_engagement": 8,
       "fb_engagement": 5,
-      "avg_engagement": 0.8
+      "avg_engagement": 2.2
     },
     {
-      "layout": "reel:card",
-      "posts": 9,
-      "engagement": 6,
-      "ig_engagement": 0,
+      "layout": "prodclaim",
+      "posts": 5,
+      "engagement": 11,
+      "ig_engagement": 5,
       "fb_engagement": 6,
-      "avg_engagement": 0.7
+      "avg_engagement": 2.2
     },
     {
-      "layout": "carousel:twelve",
-      "posts": 3,
-      "engagement": 2,
-      "ig_engagement": 0,
-      "fb_engagement": 2,
-      "avg_engagement": 0.7
+      "layout": "carousel:plan",
+      "posts": 4,
+      "engagement": 9,
+      "ig_engagement": 5,
+      "fb_engagement": 4,
+      "avg_engagement": 2.2
     },
     {
       "layout": "card",
       "posts": 2,
-      "engagement": 1,
-      "ig_engagement": 0,
+      "engagement": 4,
+      "ig_engagement": 3,
       "fb_engagement": 1,
-      "avg_engagement": 0.5
+      "avg_engagement": 2.0
     },
     {
-      "layout": "twozone",
-      "posts": 3,
-      "engagement": 1,
-      "ig_engagement": 0,
-      "fb_engagement": 1,
-      "avg_engagement": 0.3
-    },
-    {
-      "layout": "statement",
-      "posts": 10,
-      "engagement": 2,
-      "ig_engagement": 0,
+      "layout": "quote",
+      "posts": 2,
+      "engagement": 4,
+      "ig_engagement": 2,
       "fb_engagement": 2,
-      "avg_engagement": 0.2
+      "avg_engagement": 2.0
     },
     {
-      "layout": "stat",
+      "layout": "feature",
+      "posts": 5,
+      "engagement": 10,
+      "ig_engagement": 5,
+      "fb_engagement": 5,
+      "avg_engagement": 2.0
+    },
+    {
+      "layout": "carousel:twelve",
       "posts": 3,
-      "engagement": 0,
-      "ig_engagement": 0,
-      "fb_engagement": 0,
-      "avg_engagement": 0.0
-    },
-    {
-      "layout": "ranked",
-      "posts": 1,
-      "engagement": 0,
-      "ig_engagement": 0,
-      "fb_engagement": 0,
-      "avg_engagement": 0.0
-    },
-    {
-      "layout": "behaviourcall",
-      "posts": 1,
-      "engagement": 0,
-      "ig_engagement": 0,
-      "fb_engagement": 0,
-      "avg_engagement": 0.0
+      "engagement": 6,
+      "ig_engagement": 4,
+      "fb_engagement": 2,
+      "avg_engagement": 2.0
     },
     {
       "layout": "carousel:verdict",
       "posts": 1,
-      "engagement": 0,
-      "ig_engagement": 0,
+      "engagement": 2,
+      "ig_engagement": 2,
       "fb_engagement": 0,
-      "avg_engagement": 0.0
-    },
-    {
-      "layout": "checklist",
-      "posts": 1,
-      "engagement": 0,
-      "ig_engagement": 0,
-      "fb_engagement": 0,
-      "avg_engagement": 0.0
+      "avg_engagement": 2.0
     },
     {
       "layout": "contrast",
       "posts": 1,
-      "engagement": 0,
-      "ig_engagement": 0,
+      "engagement": 2,
+      "ig_engagement": 2,
       "fb_engagement": 0,
-      "avg_engagement": 0.0
+      "avg_engagement": 2.0
+    },
+    {
+      "layout": "reel:card",
+      "posts": 9,
+      "engagement": 17,
+      "ig_engagement": 11,
+      "fb_engagement": 6,
+      "avg_engagement": 1.9
+    },
+    {
+      "layout": "twozone",
+      "posts": 3,
+      "engagement": 4,
+      "ig_engagement": 3,
+      "fb_engagement": 1,
+      "avg_engagement": 1.3
+    },
+    {
+      "layout": "statement",
+      "posts": 10,
+      "engagement": 12,
+      "ig_engagement": 10,
+      "fb_engagement": 2,
+      "avg_engagement": 1.2
+    },
+    {
+      "layout": "stat",
+      "posts": 3,
+      "engagement": 3,
+      "ig_engagement": 3,
+      "fb_engagement": 0,
+      "avg_engagement": 1.0
+    },
+    {
+      "layout": "ranked",
+      "posts": 1,
+      "engagement": 1,
+      "ig_engagement": 1,
+      "fb_engagement": 0,
+      "avg_engagement": 1.0
+    },
+    {
+      "layout": "behaviourcall",
+      "posts": 1,
+      "engagement": 1,
+      "ig_engagement": 1,
+      "fb_engagement": 0,
+      "avg_engagement": 1.0
+    },
+    {
+      "layout": "checklist",
+      "posts": 1,
+      "engagement": 1,
+      "ig_engagement": 1,
+      "fb_engagement": 0,
+      "avg_engagement": 1.0
     },
     {
       "layout": "trajectory",
       "posts": 1,
-      "engagement": 0,
-      "ig_engagement": 0,
+      "engagement": 1,
+      "ig_engagement": 1,
       "fb_engagement": 0,
-      "avg_engagement": 0.0
+      "avg_engagement": 1.0
     }
   ],
   "collection": {
-    "ig_attempted": 91,
-    "ig_succeeded": 0,
-    "ig_errors": [
-      {
-        "media_id": "18481929595099633",
-        "message": "Invalid OAuth access token - Cannot parse access token"
-      },
-      {
-        "media_id": "18125520325664850",
-        "message": "Invalid OAuth access token - Cannot parse access token"
-      },
-      {
-        "media_id": "17984490015041376",
-        "message": "Invalid OAuth access token - Cannot parse access token"
-      },
-      {
-        "media_id": "18119783353852552",
-        "message": "Invalid OAuth access token - Cannot parse access token"
-      },
-      {
-        "media_id": "18132885907619498",
-        "message": "Invalid OAuth access token - Cannot parse access token"
-      },
-      {
-        "media_id": "18116406731297318",
-        "message": "Invalid OAuth access token - Cannot parse access token"
-      },
-      {
-        "media_id": "18112561831949273",
-        "message": "Invalid OAuth access token - Cannot parse access token"
-      },
-      {
-        "media_id": "17891751243664816",
-        "message": "Invalid OAuth access token - Cannot parse access token"
-      },
-      {
-        "media_id": "18377087227233622",
-        "message": "Invalid OAuth access token - Cannot parse access token"
-      },
-      {
-        "media_id": "17959213338076883",
-        "message": "Invalid OAuth access token - Cannot parse access token"
-      },
-      {
-        "media_id": "18118286693509792",
-        "message": "Invalid OAuth access token - Cannot parse access token"
-      },
-      {
-        "media_id": "18349726909223396",
-        "message": "Invalid OAuth access token - Cannot parse access token"
-      },
-      {
-        "media_id": "18090322304118138",
-        "message": "Invalid OAuth access token - Cannot parse access token"
-      },
-      {
-        "media_id": "17900210535483655",
-        "message": "Invalid OAuth access token - Cannot parse access token"
-      },
-      {
-        "media_id": "17906986956287111",
-        "message": "Invalid OAuth access token - Cannot parse access token"
-      },
-      {
-        "media_id": "18606818419058450",
-        "message": "Invalid OAuth access token - Cannot parse access token"
-      },
-      {
-        "media_id": "18099466148213655",
-        "message": "Invalid OAuth access token - Cannot parse access token"
-      },
-      {
-        "media_id": "18190147012388410",
-        "message": "Invalid OAuth access token - Cannot parse access token"
-      },
-      {
-        "media_id": "18101807432211494",
-        "message": "Invalid OAuth access token - Cannot parse access token"
-      },
-      {
-        "media_id": "17868589908586917",
-        "message": "Invalid OAuth access token - Cannot parse access token"
-      }
-    ],
-    "ig_error_count": 91,
-    "fb_succeeded": 81
+    "ig_attempted": 95,
+    "ig_succeeded": 95,
+    "ig_errors": [],
+    "ig_error_count": 0,
+    "fb_succeeded": 85
   }
 }
