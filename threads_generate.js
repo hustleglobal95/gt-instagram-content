@@ -44,14 +44,38 @@ const COMM_THREADS = COMMUNITY.THREADS || [];
 
 const rep = (arr, n) => [].concat(...Array.from({ length: n }, () => arr));
 
-/* Target mix per draw, roughly:
- *   35% community singles, 30% any thread, 20% brand voice singles, 15% brand DR. */
+/* Weights. The old direct response bank used to be 73 percent of the rotation,
+ * which is the material that reads as cringe, and none of it points at a
+ * product. It is now a minority and the audience copy leads.
+ *
+ * Two measured facts drive the shape.
+ *
+ * THREADS PULL 5.7x THE REACH OF SINGLES HERE. Median 63 views against 11
+ * across 78 posts. Threads are about 43 percent of the draw, so at three posts
+ * a day roughly one a day is a thread.
+ *
+ * PRODUCT LINKS LAND AT ABOUT ONE POST IN FOUR. High enough that the account is
+ * visibly selling the guides, low enough that the other three are worth
+ * following for on their own. The ladder and offer formats plus seven of the
+ * twelve threads carry a link.
+ *
+ * The old bank is kept in the repo, not deleted. Some of it is useful and the
+ * markus voice singles still earn their place. When threads_performance_log.json
+ * has enough replies to rank on, replace this block with something that reads it. */
+
+const byKind = (k) => COMM_SINGLES.filter((f) => f.kind === k);
+
 const POOL = [
-  ...rep(COMM_SINGLES, 4),
-  ...rep(COMM_THREADS, 5),
-  ...rep(BRAND_THREADS, 2),
-  ...rep(FORMATS.filter((f) => f.voice === 'markus'), 2),
-  ...BRAND_SINGLES,
+  ...rep(byKind('founders'), 10),      // new start up founders
+  ...rep(byKind('building'), 10),      // people building something
+  ...rep(byKind('tampa'), 10),         // business owners in Tampa Bay
+  ...rep(byKind('ai'), 10),            // new AI companies
+  ...rep(byKind('sell_online'), 10),   // people wanting to sell online
+  ...rep(byKind('ladder'), 6),         // value post that ladders into a guide
+  ...rep(byKind('offer'), 6),          // straight offer
+  ...rep(COMM_THREADS, 3),
+  ...BRAND_THREADS,
+  ...FORMATS.filter((f) => f.voice === 'markus' && !f.thread),
 ];
 
 const MAX_CHARS = 500;
@@ -92,8 +116,15 @@ function nextPost(used, sessionSeen) {
       if (parts.some((p) => p.length === 0 || p.length > MAX_CHARS)) continue; // every part must fit
       const h = hash(parts.join('\n\n'));
       if (used.has(h) || sessionSeen.has(h)) continue;
+
+      /* Hook level dedupe as well as whole post. Some formats in the old bank
+       * reuse an opening line with a different body, which passes the full hash
+       * but reads to a follower as the same post again. The hook is the only
+       * part most people see, so it gets its own key. */
+      const hh = 'k' + hash(parts[0]);
+      if (used.has(hh) || sessionSeen.has(hh)) continue;
       const chars = parts.reduce((n, p) => n + p.length, 0);
-      return { text: parts[0], parts, isThread: parts.length > 1, pillar: fmt.pillar, kind: fmt.kind, chars, hash: h };
+      return { text: parts[0], parts, isThread: parts.length > 1, pillar: fmt.pillar, kind: fmt.kind, chars, hash: h, hookHash: hh };
     }
   }
   return null; // bank exhausted, add formats or clear threads_used_log.json
@@ -112,6 +143,8 @@ function generate(n = 1) {
     if (!p) break;
     seen.add(p.hash);
     used.add(p.hash);
+    seen.add(p.hookHash);
+    used.add(p.hookHash);
     posts.push(p);
   }
   saveUsed(used);
