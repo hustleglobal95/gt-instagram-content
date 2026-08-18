@@ -7,18 +7,25 @@ name: Threads Auto-Poster
 
 on:
   schedule:
-    # 12x/day across 7am to 11pm ET (EDT = UTC-4).
+    # 3x/day. Was 12.
     #
-    # The old schedule asked for 8 and delivered 3 to 7. GitHub drops scheduled
-    # runs under load and there is no retry for a slot that never fired, so the
-    # fix is more slots at less contested minutes rather than one denser list.
-    # Two expressions, both well away from :00, which is when every cron on the
-    # platform wakes up at once.
+    # Twelve posts a day split the velocity window twelve ways. The first 30 to
+    # 60 minutes after a post decide its distribution, and the account cannot be
+    # present for twelve of those windows, so most posts were landing with no
+    # early engagement and teaching the algorithm that this account produces
+    # content nobody responds to. Median reach across 78 posts: 14 views.
     #
-    # When Florida switches to EST (UTC-5) on Nov 2 2026, add 1 hour to every
-    # UTC hour below.
-    - cron: "8 11,14,17,20,23,2 * * *"    # 7am 10am 1pm 4pm 7pm 10pm ET
-    - cron: "38 12,15,18,21,0,3 * * *"    # 8:38am 11:38am 2:38pm 5:38pm 8:38pm 11:38pm ET
+    # Every source lands on 2 to 3 a day. These three sit in the researched
+    # windows: 6 to 8 AM and 7 to 9 PM are peak, with one at midday.
+    #
+    # Minutes are deliberately off :00, where every cron on the platform wakes
+    # at once and GitHub starts dropping runs.
+    #
+    # When Florida switches to EST (UTC-5) on Nov 2 2026, add 1 hour to each.
+    - cron: "8 11 * * *"     # 7:08am ET, morning window
+    - cron: "38 16 * * *"    # 12:38pm ET, midday
+    - cron: "18 23 * * *"    # 7:18pm ET, evening window
+
   workflow_dispatch: {}   # the dashboard "Post one now" button hits this
 
 permissions:
