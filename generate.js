@@ -2523,9 +2523,30 @@ if (require.main === module) (async () => {
     // Product ad (~1 in 3) or brand/value post; product falls back to brand if none is fresh.
     /* In services mode the feature and product paths are skipped entirely: the
      * brand account posts about the four services and nothing else. */
-    const post = (!SERVICES_ONLY && wantFeature ? buildFeaturePost((now.getTime() >>> 0), recent) : null)
+    let post = (!SERVICES_ONLY && wantFeature ? buildFeaturePost((now.getTime() >>> 0), recent) : null)
       || (!SERVICES_ONLY && wantProduct ? buildProductPost((now.getTime() >>> 0), recent) : null)
       || buildPost((now.getTime() >>> 0), recent, { servicesOnly: SERVICES_ONLY });
+
+    /* GT_WANT_LAYOUT pins the format for a single run. The preview path has had
+     * this for a while and the publish path never did, so putting out a chosen
+     * format meant re-rolling the dice until the rotation happened to land on
+     * it. The scheduled runs do not set it, so the rotation is untouched.
+     *
+     * It redraws rather than forcing, which matters: a redrawn post still goes
+     * through the recent-signature check and the products cap, so pinning a
+     * format cannot be used to bypass either. If no draw in four hundred
+     * attempts produces the layout, the ordinary post stands and the run still
+     * publishes, because a pin is a preference and a missed post is a gap. */
+    const WANT_LAYOUT = String(process.env.GT_WANT_LAYOUT || '').trim();
+    if (WANT_LAYOUT) {
+      let pinned = null;
+      for (let t = 0; t < 400 && !pinned; t++) {
+        const cand = buildPost(((now.getTime() >>> 0) + t * 131) >>> 0, recent, { servicesOnly: SERVICES_ONLY });
+        if (cand && cand.layout === WANT_LAYOUT) pinned = cand;
+      }
+      if (pinned) { post = pinned; console.log('pinned layout: ' + WANT_LAYOUT); }
+      else console.log('pinned layout ' + WANT_LAYOUT + ' not drawn in 400 attempts, using the ordinary post');
+    }
     // Editorial posts try a photographic ground; the contrast gate decides. If no photo
     // passes, we render the safe gradient editorial instead; a bad creative never ships.
     if (post.layout === 'editorial' && listEditorialBgs().length) {
