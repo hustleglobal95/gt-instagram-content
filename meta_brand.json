@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-08-19T16:18:47.698Z",
-  "media_file": "creatives/gt_auto_20260819_161847.jpg",
+  "generated_at": "2026-08-19T17:07:49.635Z",
+  "media_file": "creatives/gt_auto_20260819_170749.jpg",
   "is_reel": false,
-  "layout": "svccal",
+  "layout": "portalad",
   "editorial_bg": null,
   "person": null,
   "qa": null,
-  "caption": "Most growth advice is never scored. Growth Terminal logs each forecast and grades it against real revenue once the outcome is known, so the track record is something you can audit rather than something you are told about.\n\n→ growthterminal.io",
-  "hashtags": "#growthterminal #fractionalcmo #marketingops #saasfounder",
-  "first_comment": "When did you last check a prediction against what actually happened?",
+  "caption": "A dashboard hands you every number and lets you decide which one matters. The portal does the deciding: twelve constraints scored, one named, with a severity and a confidence attached to it and both futures written out. What happens if you act. What happens if you wait.\n\nDiagnose your #1 constraint free. Link in bio.",
+  "hashtags": "#growthterminal #revenueoperations #googlesheetstips #agencylife",
+  "first_comment": "Which of the twelve do you think yours is?",
   "alt_text": "",
-  "sig": "svccal:ink:A forecast nobody checks is just a nicer"
+  "sig": "portalad:verdict"
 }
