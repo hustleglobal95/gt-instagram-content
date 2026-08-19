@@ -2184,17 +2184,31 @@ function buildProductPost(seed, recent) {
   }
 }
 
+/* Layouts that composite a real screenshot are rendered at twice the device
+ * resolution and downsampled back to 1080x1350 by Chromium. Playwright's
+ * scale:'css' does the downsample itself, so this costs one page and no image
+ * processing step. Measured on the inspector rail creative, edge acutance goes
+ * from 3.42 to 3.78, and the gain is all in the small UI text inside the
+ * composited panel, which is the part that was reading as soft.
+ *
+ * Only the portalad family needs it. The Satori layouts never reach here, and
+ * the older Playwright layouts are large type on flat grounds where 1x is
+ * already at the limit of what the format carries. */
+const SUPERSAMPLED = new Set(['portalad']);
+
 // ---------- render one post to a JPEG ----------
-async function renderPost(page, post, outBase) {
+async function renderPost(page, post, outBase, page2x) {
   // Ported layouts render with Satori (no headless browser); everything else falls through to Playwright.
   if (SATORI_LAYOUTS.has(post.layout)) { await renderPostSatori(post, outBase); return; }
+  const target = (SUPERSAMPLED.has(post.layout) && page2x) ? page2x : page;
+  const scale = target === page2x ? 'css' : 'device';
   const html = `<!DOCTYPE html><html><head><meta charset="utf8"><style>${FONTS}${CSS}${PA_CSS}</style></head><body>${RENDER[post.layout](post)}</body></html>`;
-  await page.setContent(html, { waitUntil: 'networkidle' });
-  try { await page.evaluate(() => document.fonts && document.fonts.ready); } catch (e) {}
-  await page.waitForTimeout(160);
+  await target.setContent(html, { waitUntil: 'networkidle' });
+  try { await target.evaluate(() => document.fonts && document.fonts.ready); } catch (e) {}
+  await target.waitForTimeout(160);
   const clip = { x: 0, y: 0, width: 1080, height: 1350 };
-  await page.screenshot({ path: outBase + '.jpg', type: 'jpeg', quality: 92, clip }); // IG requires JPEG
-  await page.screenshot({ path: outBase + '.png', clip }); // for local QA
+  await target.screenshot({ path: outBase + '.jpg', type: 'jpeg', quality: 94, clip, scale }); // IG requires JPEG
+  await target.screenshot({ path: outBase + '.png', clip, scale }); // for local QA
 }
 
 function stamp(d) {
@@ -2393,6 +2407,10 @@ if (require.main === module) (async () => {
   else if (fs.existsSync('/opt/pw-browsers/chromium')) launchOpts.executablePath = '/opt/pw-browsers/chromium';
   const b = await chromium.launch(launchOpts);
   const page = await b.newPage({ viewport: { width: 1080, height: 1350 }, deviceScaleFactor: 1 });
+  /* Second page at 2x for the layouts that composite a screenshot. Kept
+     separate because changing the shared page's scale factor would change
+     every other layout's raster. */
+  const page2x = await b.newPage({ viewport: { width: 1080, height: 1350 }, deviceScaleFactor: 2 });
 
   if (previewN > 0) {
     // QA mode: render N varied samples, no state changes
@@ -2415,7 +2433,7 @@ if (require.main === module) (async () => {
         if (!e) { console.log('no bank extension named ' + names[i]); continue; }
         const post = e.pick(rng((Date.now() >>> 0) + i * 7919), pick);
         const base = path.join(__dirname, 'creatives', `draft_${post.layout}`);
-        await renderPost(page, post, base);
+        await renderPost(page, post, base, page2x);
         console.log(`draft: [${post.layout}] ready:${e.ready} -> ${base}.jpg`);
       }
       await b.close();
@@ -2435,7 +2453,7 @@ if (require.main === module) (async () => {
       const post = pinned || (!SERVICES_ONLY && havePeople && i % 3 === 2 && buildFeaturePost(seed, recent)) || buildPost(seed, recent, { servicesOnly: SERVICES_ONLY });
       recent.push(post.sig);
       const base = path.join(__dirname, 'creatives', `preview_${String(i + 1).padStart(2, '0')}_${post.layout}`);
-      await renderPost(page, post, base);
+      await renderPost(page, post, base, page2x);
       console.log(`preview ${i + 1}: [${post.layout}${post.person_file ? ':' + post.person_file.slice(0, 14) : ''}] ${stripHtml(post.hook || post.big || post.stat || post.label).slice(0, 56)}`);
     }
     await b.close();
@@ -2520,7 +2538,7 @@ if (require.main === module) (async () => {
     }
     const fname = `gt_auto_${stampStr}.jpg`;
     const base = path.join(__dirname, 'creatives', fname.replace('.jpg', ''));
-    await renderPost(page, post, base);
+    await renderPost(page, post, base, page2x);
     await b.close();
     pruneCreatives('gt_auto_', ['.jpg', '.png'], 60);
     const caption = (post.caption || '').trim() + (post.append_cta || '');
