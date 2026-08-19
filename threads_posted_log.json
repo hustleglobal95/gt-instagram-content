@@ -1687,5 +1687,26 @@
       "markusreidgt": "18127840045676686"
     },
     "errors": {}
+  },
+  {
+    "at": "2026-08-19T11:10:12.341Z",
+    "text": "Your spreadsheet already knows what is wrong.\n\nMost owners never learn to read it.\n\nFour questions that pull the answer out",
+    "parts": [
+      "Your spreadsheet already knows what is wrong.\n\nMost owners never learn to read it.\n\nFour questions that pull the answer out",
+      "One. Where do people go quiet? Put a percentage between every stage. The lowest one is not a mystery, it is an address.",
+      "Two. What does the average hide? Split by source, by segment, by month. Blended numbers are where constraints go to be invisible.",
+      "Three. What is this costing? Multiply the gap by the value of a customer. A percentage is an opinion. A dollar figure is a decision.",
+      "Four. Did it move? Write the number before you change anything, then check it in thirty days. Without that step you are collecting stories, not evidence."
+    ],
+    "isThread": true,
+    "pillar": "bi",
+    "kind": "thread",
+    "accounts": [
+      "markusreidgt"
+    ],
+    "ids": {
+      "markusreidgt": "18092150834532453"
+    },
+    "errors": {}
   }
 ]
