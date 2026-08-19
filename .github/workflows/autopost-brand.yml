@@ -68,10 +68,36 @@ jobs:
         with:
           node-version: '20'
 
+      # The browser is cached between runs, so the download and the apt
+      # dependency install stop happening every time. That apt call was the
+      # single least reliable thing in this pipeline: it stalled mid
+      # `apt-get update` twice in one day, once for thirty eight minutes, which
+      # also blocked the concurrency group and so the next scheduled run.
+      #
+      # On a cache hit the system libraries are already whatever the runner
+      # image ships, and ubuntu-latest carries what Chromium needs, so only the
+      # browser itself is restored. On a miss it falls back to the full install
+      # including deps. The timeout is the backstop: a stall now fails in eight
+      # minutes instead of sitting on the group for hours.
+      - name: Cache the Playwright browser
+        id: pwcache
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+          restore-keys: playwright-${{ runner.os }}-
+
       - name: Install Playwright + Chromium
+        timeout-minutes: 8
         run: |
           npm install
-          npx playwright install --with-deps chromium
+          if [ "${{ steps.pwcache.outputs.cache-hit }}" = "true" ]; then
+            echo "Browser restored from cache. Skipping the apt dependency install."
+            npx playwright install chromium
+          else
+            echo "Cache miss. Installing the browser and its system dependencies."
+            npx playwright install --with-deps chromium
+          fi
 
       - name: Set up Python
         uses: actions/setup-python@v5
