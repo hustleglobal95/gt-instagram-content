@@ -712,6 +712,89 @@ function L_svcline(p) {
   ]);
 }
 
+/* ---------------------------------------------------------------------------
+   svcdevice: word block plus a device carrying a floating readout.
+
+   Adapted from a reference layout the client supplied. Three things in that
+   reference could not come across. It glowed blue and orange, and Signal Amber
+   is the only accent. Its floating card carried 50k likes, 15k comments and 3k
+   shares, which is invented engagement data and exactly the vanity metric
+   section 27 says not to judge creative by. And its icon was a generic
+   four-point sparkle, which is the house style of every AI product on the feed.
+
+   What survives is the structure, which is genuinely good: one word carrying
+   the idea, deep negative space, a device that makes the product tangible, and
+   a floating card that lifts the numbers off the screen. The numbers here are
+   the portal's own mechanism rather than applause.
+   --------------------------------------------------------------------------- */
+
+function phoneScreenRow(w, dim, k) {
+  return el({ height: 12, width: w, borderRadius: 6, backgroundColor: dim, marginBottom: 12 }, []);
+}
+
+function L_svcdevice(p) {
+  const k = SKINS[p.skin] || SKINS.paper;
+  const dark = k.bg !== PURE_WHITE && k.bg !== ORANGE;
+  /* On the ink skin the frame has to be lighter than the page or the whole
+   * device disappears: ink on ink read as a vague dark smudge. */
+  const frameBg  = dark ? '#37302A' : PAPERINK;
+  const screenBg = dark ? '#191512' : '#FFFFFF';
+  const screenDim = dark ? '#332C25' : '#E8E2D8';
+  const stats = (p.stats || []).slice(0, 3);
+
+  /* 600 tall, not 700. At 700 the frame ran straight through the footer and
+   * the left edge cut across growthterminal.io. */
+  const phone = el({ position: 'absolute', top: 0, right: -44, width: 470, height: 600,
+    borderRadius: 60, backgroundColor: frameBg, paddingTop: 14, paddingLeft: 14, paddingRight: 14 }, [
+    el({ width: 442, height: 600, borderRadius: 48, backgroundColor: screenBg, paddingTop: 34, paddingLeft: 26, paddingRight: 26 }, [
+      txt(clean(p.screen_title || 'Business Diagnosis'), { fontFamily: 'ITight', fontWeight: 800, fontSize: 26, color: dark ? CREAM : PAPERINK, marginBottom: 24 }),
+      el({ borderRadius: 16, backgroundColor: dark ? '#241E19' : '#F6F2EB', padding: 20, marginBottom: 18 }, [
+        txt(clean(p.screen_label || 'PRIMARY CONSTRAINT'), { fontFamily: 'JBM', fontWeight: 700, fontSize: 13, letterSpacing: 13 * 0.16, color: ORANGE, marginBottom: 10 }),
+        txt(clean(p.screen_value || 'Lead conversion'), { fontFamily: 'ITight', fontWeight: 800, fontSize: 27, color: dark ? CREAM : PAPERINK }),
+      ]),
+      phoneScreenRow(300, screenDim), phoneScreenRow(240, screenDim), phoneScreenRow(280, screenDim),
+      phoneScreenRow(190, screenDim), phoneScreenRow(300, screenDim), phoneScreenRow(220, screenDim),
+    ]),
+  ]);
+
+  /* The readout carries a hairline so it reads as a card rather than a hole,
+   * which is how the portal draws every card: a 1px border on a fill. */
+  const card = el({ position: 'absolute', top: 262, right: 12, width: 560, borderRadius: 30,
+    backgroundColor: dark ? '#0E0B09' : PAPERINK,
+    borderWidth: 1, borderStyle: 'solid', borderColor: dark ? '#3A322B' : 'rgba(255,255,255,0.10)',
+    paddingTop: 34, paddingBottom: 34, paddingLeft: 30, paddingRight: 30,
+    flexDirection: 'row', justifyContent: 'space-between' },
+    stats.map((st, i) => el({ alignItems: 'center', flexGrow: 1, flexBasis: 0 }, [
+      txt(clean(st[0]), { fontFamily: 'ITight', fontWeight: 800, fontSize: 62, lineHeight: 1, color: i === 0 ? ORANGE : WHITE }),
+      txt(clean(st[1]), { fontFamily: 'JBM', fontWeight: 700, fontSize: 15, letterSpacing: 15 * 0.14, color: '#9a9084', marginTop: 12 }),
+    ])));
+
+  return el({ width: 1080, height: 1350, backgroundColor: k.bg, paddingTop: 92, paddingLeft: 90, paddingRight: 90, paddingBottom: 92 }, [
+    el({ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }, [
+      logoImg(k.logo === 'cream' ? LOGO_CREAM : k.logo === 'mono' ? LOGO_ON_AMBER : LOGO_INK, 210),
+      txt(clean(p.tag || 'GROWTH TERMINAL'), { fontFamily: 'JBM', fontWeight: 500, fontSize: 19, letterSpacing: 19 * 0.18, color: k.tag }),
+    ]),
+    el({ height: 2, backgroundColor: k.hair, opacity: k.hairOp, marginTop: 22 }, []),
+    el({ marginTop: 60 }, [
+      txt(clean(p.kicker), { fontFamily: 'JBM', fontWeight: 700, fontSize: 22, letterSpacing: 22 * 0.24, color: k.kicker, marginBottom: 26 }),
+      el({ flexDirection: 'row', alignItems: 'center' }, [
+        // the brand monogram in place of the reference's generic sparkle
+        { type: 'img', props: { src: k.logo === 'cream' ? LOGO_ICON_CREAM : k.logo === 'mono' ? LOGO_ICON_AMBER : LOGO_ICON_INK, width: 92, height: Math.round(92 * LOGO_ASPECT.icon), style: { marginRight: 28 } } },
+        txt(clean(p.word), { fontFamily: 'ITight', fontWeight: 800, fontSize: p.size || 96, lineHeight: 1, letterSpacing: -4, color: k.head }),
+      ]),
+      txt(clean(p.sub), { fontFamily: 'ITight', fontWeight: 600, fontSize: 33, lineHeight: 1.28, color: k.detail, marginTop: 28, maxWidth: 545 }),
+    ]),
+    el({ position: 'relative', flexGrow: 1, marginTop: 40 }, [phone, card]),
+    el({ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-end' }, [
+      el({}, [
+        txt(clean(p.cta_label), { fontFamily: 'JBM', fontWeight: 700, fontSize: 25, letterSpacing: 25 * 0.12, color: k.cta }),
+        el({ height: 2, width: 330, backgroundColor: k.ctaRule, marginTop: 11 }, []),
+      ]),
+      txt('growthterminal.io', { fontFamily: 'JBM', fontWeight: 500, fontSize: 22, letterSpacing: 22 * 0.06, color: k.url }),
+    ]),
+  ]);
+}
+
 function edCol(label, value) {
   return el({}, [txt(label, { fontFamily: 'JBM', fontWeight: 500, fontSize: 17, letterSpacing: 17 * 0.1, color: '#8a8074' }), txt(value, { fontFamily: 'ITight', fontWeight: 700, fontSize: 29, color: WHITE, marginTop: 4 })]);
 }
@@ -982,8 +1065,8 @@ function L_prodsoon(p) {
   ]);
 }
 
-const SATORI_LAYOUTS = new Set(['statement', 'stat', 'feature', 'contrast', 'card', 'quote', 'tweet', 'ranked', 'edserif', 'edterminal', 'edmanifesto', 'vs', 'carousel', 'funnel', 'trajectory', 'annotated', 'editorial', 'prodshot', 'prodclaim', 'prodsoon', 'svcfeat', 'svccal', 'svcfals', 'svcline']);
-const BUILDERS = { statement: L_statement, stat: L_stat, feature: L_feature, contrast: L_contrast, card: L_card, quote: L_quote, tweet: L_tweet, ranked: L_ranked, edserif: L_edserif, edterminal: L_edterminal, edmanifesto: L_edmanifesto, vs: L_vs, carousel: L_carousel, funnel: L_funnel, trajectory: L_trajectory, annotated: L_annotated, editorial: L_editorial, prodshot: L_prodshot, prodclaim: L_prodclaim, prodsoon: L_prodsoon, svcfeat: L_svcfeat, svccal: L_svccal, svcfals: L_svcfals, svcline: L_svcline };
+const SATORI_LAYOUTS = new Set(['statement', 'stat', 'feature', 'contrast', 'card', 'quote', 'tweet', 'ranked', 'edserif', 'edterminal', 'edmanifesto', 'vs', 'carousel', 'funnel', 'trajectory', 'annotated', 'editorial', 'prodshot', 'prodclaim', 'prodsoon', 'svcfeat', 'svccal', 'svcfals', 'svcline', 'svcdevice']);
+const BUILDERS = { statement: L_statement, stat: L_stat, feature: L_feature, contrast: L_contrast, card: L_card, quote: L_quote, tweet: L_tweet, ranked: L_ranked, edserif: L_edserif, edterminal: L_edterminal, edmanifesto: L_edmanifesto, vs: L_vs, carousel: L_carousel, funnel: L_funnel, trajectory: L_trajectory, annotated: L_annotated, editorial: L_editorial, prodshot: L_prodshot, prodclaim: L_prodclaim, prodsoon: L_prodsoon, svcfeat: L_svcfeat, svccal: L_svccal, svcfals: L_svcfals, svcline: L_svcline, svcdevice: L_svcdevice };
 
 async function renderPostSatori(post, outBase) {
   const node = await BUILDERS[post.layout](post);
