@@ -656,11 +656,169 @@ function L_feature(p) {
   </div>`;
 }
 
+/* ===========================================================================
+   portalad: the graphic portal showcase.
+
+   This is the only layout on the brand account that renders through Playwright
+   rather than Satori, and it is deliberate. The format depends on three things
+   Satori cannot do: a real box-shadow under a floating card, a radial glow
+   behind the device, and a real screenshot of the product composited into a
+   frame. Every one of those is what makes the ad read as software rather than
+   as a poster about software. The workflow already installs Chromium, so the
+   only cost is that this layout must stay out of SATORI_LAYOUTS.
+
+   Three compositions share one grid: a browser window bleeding off the right
+   edge, a phone, or a flush inspector rail. The left column is always kicker,
+   headline, sub, then a floating card that lifts one line out of the screen
+   behind it, then the call to action. Changing composition changes the shape
+   of the ad without changing where the eye starts.
+
+   Every screen in satori/assets/portal is either a real capture of the portal
+   prototype with the business name replaced by a sample, or a screen built
+   from the portal's own design tokens carrying only verified facts. Nothing in
+   them is an outcome claim. The SAMPLE label on the creative says so out loud,
+   because a screenshot of numbers reads as a result whether or not it is one.
+   =========================================================================== */
+
+const PORTAL_DIR = process.env.GT_PORTAL_DIR || path.join(__dirname, 'satori', 'assets', 'portal');
+const _portalCache = {};
+function portalAsset(name) {
+  if (_portalCache[name]) return _portalCache[name];
+  const p = path.join(PORTAL_DIR, name);
+  const uri = 'data:image/png;base64,' + fs.readFileSync(p).toString('base64');
+  _portalCache[name] = uri;
+  return uri;
+}
+
+function paEsc(s) {
+  return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
+const PA_CSS = `
+/* The global CSS in this file owns short class names like .cta, .foot, .card and
+   .rule for the older layouts, and several of them set display:flex. This block
+   renders inside the same document, so it resets everything under .pa first and
+   then re-declares what it needs. Without this the footer laid itself out as a
+   flex row and the url ended up beside the call to action instead of under it. */
+/* Excluding the svg subtree matters: the logo carries its geometry on a
+   transform attribute and its parts on nested groups, and a blanket
+   transform:none plus display:block on those erased it from the header. */
+.pa, .pa *:not(svg):not(svg *){display:block;box-sizing:border-box;margin:0;padding:0;flex:0 0 auto;
+  border:0;border-radius:0;background:none;box-shadow:none;opacity:1;transform:none;
+  text-align:left;text-transform:none;text-decoration:none;font-style:normal;
+  letter-spacing:normal;white-space:normal;line-height:1.2}
+.pa{position:relative;width:1080px;height:1350px;background:#0F0D0B;
+  background-image:radial-gradient(120% 80% at 12% 8%, #1B1712 0%, #0F0D0B 58%)}
+.pa .hdr{position:absolute;left:90px;top:92px;right:90px;display:flex;justify-content:space-between;align-items:center}
+.pa .hdr svg{width:210px;height:auto;display:block}
+.pa .tag{font-family:'JBM',monospace;font-weight:700;font-size:19px;letter-spacing:.18em;color:#8a8073}
+.pa .rule{position:absolute;left:90px;right:90px;top:168px;height:2px;background:#F5F0E7;opacity:.5}
+.pa .kick{position:absolute;left:90px;top:238px;font-family:'JBM',monospace;font-weight:700;
+  font-size:22px;letter-spacing:.24em;color:#FC5802}
+.pa .head{position:absolute;left:90px;top:288px;font-family:'ITight',sans-serif;font-weight:800;
+  line-height:1.0;letter-spacing:-.03em;color:#F5F0E7}
+.pa .head b{color:#FC5802;font-weight:800}
+.pa .sub{position:absolute;left:90px;width:800px;font-family:'ITight',sans-serif;font-weight:600;
+  font-size:27px;line-height:1.32;color:#a49a8d}
+.pa .glow{position:absolute;border-radius:50%;filter:blur(24px);
+  background:radial-gradient(circle,rgba(252,88,2,.42) 0%,rgba(252,88,2,.12) 46%,rgba(252,88,2,0) 72%)}
+.pa .win{position:absolute;overflow:hidden;background:#0F0D0B;border:1px solid #322B23;
+  box-shadow:0 56px 110px rgba(0,0,0,.66)}
+.pa .chrome{height:48px;background:#1B1712;border-bottom:1px solid #2A241D;display:flex;
+  align-items:center;padding:0 16px;gap:8px}
+.pa .dot{width:10px;height:10px;border-radius:50%;background:#3A322A}
+.pa .pill{margin-left:14px;height:27px;flex:1;border-radius:7px;background:#0F0D0B;border:1px solid #2A241D;
+  display:flex;align-items:center;padding:0 12px;font-family:'JBM',monospace;font-weight:700;
+  font-size:12px;letter-spacing:.04em;color:#7d7568}
+.pa .scr{position:relative;overflow:hidden}
+.pa .scr img{position:absolute;left:0;top:0;display:block}
+.pa .fade{position:absolute;left:0;right:0;bottom:0;
+  background:linear-gradient(to bottom,rgba(15,13,11,0) 0%,rgba(15,13,11,.82) 46%,#0F0D0B 84%)}
+.pa .phone{position:absolute;left:604px;top:296px;width:444px;height:938px;border-radius:64px;padding:11px;
+  background:linear-gradient(150deg,#4A4D53 0%,#2B2D31 28%,#232529 72%,#3A3D42 100%);
+  box-shadow:0 60px 120px rgba(0,0,0,.55)}
+.pa .phone .glass{width:422px;height:916px;border-radius:54px;overflow:hidden;background:#0F0D0B}
+.pa .phone img{width:422px;display:block}
+.pa .call{position:absolute;border-radius:22px;background:#17130F;border:1px solid #2E2720;
+  padding:28px 30px;box-shadow:0 42px 84px rgba(0,0,0,.66);z-index:4}
+.pa .call .lab{font-family:'JBM',monospace;font-weight:700;font-size:15px;letter-spacing:.16em;color:#FC5802}
+.pa .call .txt{font-family:'ITight',sans-serif;font-weight:600;font-size:25px;line-height:1.3;
+  color:#F5F0E7;margin-top:16px}
+.pa .call .big{font-family:'ITight',sans-serif;font-weight:800;font-size:40px;line-height:1;
+  color:#F5F0E7;margin-top:12px}
+.pa .meter{display:flex;gap:8px;margin-top:24px}
+.pa .meter i{flex:1;height:20px;border-radius:4px;background:#2C251D}
+.pa .meter i.on{background:#FC5802}
+.pa .foot{position:absolute;left:90px;bottom:110px;z-index:5}
+.pa .cta{font-family:'JBM',monospace;font-weight:700;font-size:25px;letter-spacing:.12em;
+  color:#FC5802;white-space:nowrap}
+.pa .cta u{display:block;height:2px;background:#FC5802;margin-top:11px}
+.pa .url{font-family:'JBM',monospace;font-weight:700;font-size:22px;letter-spacing:.06em;color:#8a8073;margin-top:20px}
+.pa .samp{position:absolute;left:90px;bottom:52px;font-family:'JBM',monospace;font-weight:700;
+  font-size:14px;letter-spacing:.14em;color:#5c5449;z-index:6}
+`;
+
+/* Each composition returns the device block and the box the floating card must
+   clear, so the card is placed against the artwork rather than guessed at. */
+function paDevice(p) {
+  const img = portalAsset(p.panel);
+  if (p.comp === 'phone') {
+    return { glow: 'left:400px;top:520px;width:520px;height:520px',
+      html: `<div class="phone"><div class="glass"><img src="${img}"></div></div>`,
+      callLeft: 74, callWidth: 534 };
+  }
+  if (p.comp === 'rail') {
+    return { glow: 'left:430px;top:520px;width:560px;height:560px',
+      html: `<div class="win" style="left:634px;top:262px;width:446px;height:1088px;border-radius:20px 0 0 0;border-right:none">
+        <div class="scr" style="height:1088px"><img src="${img}" style="width:446px;top:-4px">
+        <div class="fade" style="height:210px"></div></div></div>`,
+      callLeft: 74, callWidth: 520 };
+  }
+  return { glow: 'left:340px;top:620px;width:600px;height:460px',
+    html: `<div class="win" style="left:432px;top:626px;width:660px;height:724px;border-radius:18px 18px 0 0">
+      <div class="chrome"><div class="dot"></div><div class="dot"></div><div class="dot"></div>
+      <div class="pill">${paEsc(p.pill || 'growthterminal.io / portal')}</div></div>
+      <div class="scr" style="height:676px"><img src="${img}" style="width:660px">
+      <div class="fade" style="height:230px"></div></div></div>`,
+    callLeft: 90, callWidth: 392 };
+}
+
+function L_portalad(p) {
+  const d = paDevice(p);
+  const hs = p.hs || 76;
+  const hw = p.comp === 'window' ? 900 : 520;
+  const subTop = p.sub_top || (p.comp === 'window' ? 470 : 566);
+  const subW = p.comp === 'window' ? 800 : 450;
+  const cw = p.cta_width || 330;
+  const cs = p.cta_size || 25;
+  const meter = p.meter
+    ? `<div class="meter">${Array.from({ length: p.meter.of || 10 },
+        (_, i) => `<i class="${i < p.meter.on ? 'on' : ''}"></i>`).join('')}</div>`
+    : '';
+  const card = p.meter
+    ? `<div class="lab">${paEsc(p.clab)}</div><div class="big">${paEsc(p.ctxt)}</div>${meter}`
+    : `<div class="lab">${paEsc(p.clab)}</div><div class="txt">${paEsc(p.ctxt)}</div>`;
+  return `<div class="pa">
+    <div class="hdr">${logo(ORANGE, CREAM)}<div class="tag">GROWTH TERMINAL</div></div>
+    <div class="rule"></div>
+    <div class="kick">${paEsc(p.kicker)}</div>
+    <div class="head" style="width:${hw}px;font-size:${hs}px">${p.head}</div>
+    <div class="sub" style="top:${subTop}px;width:${subW}px">${paEsc(p.sub)}</div>
+    <div class="glow" style="${d.glow}"></div>
+    ${d.html}
+    <div class="call" style="left:${d.callLeft}px;top:${p.call_top || 790}px;width:${d.callWidth}px">${card}</div>
+    <div class="foot"><div class="cta" style="font-size:${cs}px">${paEsc(p.cta_label)}<u style="width:${cw}px"></u></div>
+      <div class="url">${paEsc(p.url || 'growthterminal.io')}</div></div>
+    <div class="samp">${paEsc(p.samp || 'SAMPLE WORKSPACE')}</div>
+  </div>`;
+}
+
 const RENDER = { statement: L_statement, contrast: L_contrast, stat: L_stat, vs: L_vs, carousel: L_carousel,
   card: L_card, quote: L_quote, annotated: L_annotated, funnel: L_funnel, ranked: L_ranked, trajectory: L_trajectory,
   tweet: L_tweet, editorial: L_editorial, feature: L_feature,
   prodshot: L_prodshot, prodclaim: L_prodclaim, prodsoon: L_prodsoon,
-  edserif: L_edserif, edterminal: L_edterminal, edmanifesto: L_edmanifesto };
+  edserif: L_edserif, edterminal: L_edterminal, edmanifesto: L_edmanifesto,
+  portalad: L_portalad };
 
 // ---------- content atoms ----------
 // The 12 places growth actually gets stuck (GT's core model) + a symptom line each.
@@ -1625,6 +1783,42 @@ function gen_svcline(r) {
     sig:'svcline:'+skin+':'+stripHtml(b.emph).slice(0,40) };
 }
 
+/* Word plus device. The three numbers are the portal's own mechanism, taken
+ * from growthterminal.io/portal-how-it-works: one constraint, a ninety day
+ * plan, decision gates at weeks 4, 8 and 12. They describe how the product
+ * works rather than claiming an outcome, which keeps section 28 satisfied.
+ * The reference this format came from used likes, comments and shares. */
+function gen_svcdevice(r) {
+  const bank = [
+    { kicker:'THE PORTAL', word:'Diagnosis', size:100, sub:'Not a dashboard. One constraint named, priced, and put on a clock.',
+      stats:[['1','CONSTRAINT'],['90','DAYS'],['3','GATES']],
+      screen_title:'Business Diagnosis', screen_label:'PRIMARY CONSTRAINT', screen_value:'Lead conversion',
+      cta:'ENTER THE PORTAL',
+      cap:'A dashboard reports what happened. The portal names the one constraint capping revenue, prices it, and turns it into ninety days with decision gates at weeks 4, 8 and 12. Each gate carries a question and both answers written in advance.',
+      fc:'What is your one constraint right now, in a single sentence?' },
+
+    { kicker:'CALIBRATION', word:'Verified', size:98, sub:'Every forecast is logged and graded against real revenue once the outcome is known.',
+      stats:[['8','GRADED'],['67','LOGGED'],['20','BEFORE A SCORE']],
+      screen_title:'Calibration', screen_label:'FORECASTS GRADED', screen_value:'8 of 67',
+      cta:'ENTER THE PORTAL',
+      cap:'Most growth advice is never scored. The portal logs every forecast and grades it against real revenue once the outcome is known. Eight of sixty-seven so far, and no coverage percentage until there are twenty, because a rate built on eight results is not a rate.',
+      fc:'Would you publish your own miss rate, or only the wins?' },
+
+    { kicker:'THE 90-DAY PLAN', word:'Gated', size:104, sub:'Every checkpoint states what has to be true to keep spending, and what it means if it is not.',
+      stats:[['4','WEEK ONE GATE'],['8','WEEK TWO GATE'],['12','FINAL GATE']],
+      screen_title:'90-Day Plan', screen_label:'WEEK 4 GATE', screen_value:'Keep funding?',
+      cta:'ENTER THE PORTAL',
+      cap:'The part nobody else gives you is permission to stop. Decision gates sit at weeks 4, 8 and 12, each carrying a question with pass and miss written in advance, so a failing initiative gets killed in week four instead of defended until week twelve.',
+      fc:'What is still running that should have been killed in week four?' },
+  ];
+  const b = pick(bank, r);
+  const skin = pick(['paper','paper','ink'], r);
+  return { layout:'svcdevice', skin, kicker:b.kicker, word:b.word, size:b.size, sub:b.sub, stats:b.stats,
+    screen_title:b.screen_title, screen_label:b.screen_label, screen_value:b.screen_value,
+    cta_label:b.cta, caption:b.cap, first_comment:b.fc,
+    sig:'svcdev:'+skin+':'+stripHtml(b.kicker+'|'+b.word).slice(0,40) };
+}
+
 function gen_svc_manifesto(r, opts) {
   const I = s => '<span class="fri" style="font-weight:500;color:'+WHITE+'">'+s+'</span>';
   const bank = [
@@ -1745,7 +1939,150 @@ const LEARNED = (() => {
  * Growth Terminal actually sells. Kept as its own list rather than a filter on
  * GENERATORS so that adding a new general layout upstream cannot silently leak
  * into the brand account. */
-const SERVICE_GENERATORS = [gen_svc_feature, gen_svc_feature, gen_svc_serif, gen_svc_manifesto, gen_svccal, gen_svcfals, gen_svcline];
+/* ---------------------------------------------------------------------------
+   gen_svcportal: the graphic portal showcase, rotated across fourteen angles.
+
+   Weighted heavily in SERVICE_GENERATORS because the account's job is to drive
+   portal sign ups and this is the only format that shows the portal. Every
+   angle ends on ENTER THE PORTAL except the two that would be dishonest: the
+   guides angle sells a separate product and carries the products sig prefix so
+   the one-in-nine cap applies to it, and the diagnostic angle points at a page
+   that explicitly takes no sign up.
+
+   The screens are sample workspaces, labelled as such on the creative. No angle
+   presents a figure inside a screenshot as an outcome the reader can expect.
+   --------------------------------------------------------------------------- */
+function gen_svcportal(r) {
+  const bank = [
+    { id:'verdict', comp:'phone', panel:'p_phone.png', kicker:'THE PORTAL',
+      head:'Not a dashboard.<br><b>A verdict.</b>', hs:74,
+      sub:'One constraint, scored for severity and confidence, with what happens if you act and if you wait.',
+      clab:'SEVERITY', ctxt:'8 of 10, high confidence', meter:{ on:8, of:10 }, call_top:806,
+      cta:'ENTER THE PORTAL', samp:'SAMPLE ANALYSIS',
+      cap:'A dashboard hands you every number and lets you decide which one matters. The portal does the deciding: twelve constraints scored, one named, with a severity and a confidence attached to it and both futures written out. What happens if you act. What happens if you wait.',
+      fc:'Which of the twelve do you think yours is?' },
+
+    { id:'plan', comp:'window', panel:'p_plan.png', kicker:'THE 90 DAY PLAN',
+      head:'Every step names<br><b>where it goes wrong.</b>',
+      sub:'Do this. Needs first. Done when. Produces. And the failure mode written beside it, before you start.',
+      clab:'WHERE THIS GOES WRONG', ctxt:'A blended twelve month win rate hides seasonality and quietly flatters the gap.',
+      pill:'growthterminal.io / portal', cta:'ENTER THE PORTAL',
+      cap:'Most plans tell you what to do. This one also tells you how each step is usually got wrong, in the step itself, before you have spent a week on it. Four fields per step: do this, needs first, done when, produces. Then the failure mode.',
+      fc:'What is the step you have redone the most times?' },
+
+    { id:'falsifier', comp:'rail', panel:'p_rail.png', kicker:'EVERY ANALYSIS',
+      head:'It ships with<br><b>the case against it.</b>', hs:72,
+      sub:'Severity, confidence, the numbers it stands on, and a section called what would prove this wrong.',
+      clab:'JUMP TO', ctxt:'What would prove this wrong', call_top:872,
+      cta:'ENTER THE PORTAL', samp:'SAMPLE ANALYSIS',
+      cap:'Every analysis carries a section headed what would prove this wrong, written before the plan rather than after the result. A verdict that cannot be wrong is not a verdict, it is a sales page.',
+      fc:'What would prove your current plan wrong?' },
+
+    { id:'assistants', comp:'window', panel:'p_ai.png', kicker:'AI ASSISTANTS',
+      head:'They grade<br><b>their own work.</b>',
+      sub:'Three assistants trained on your business, running in the background, and improving from results they score themselves.',
+      clab:'LEAD RESPONSE', ctxt:'Replies in under 90 seconds.',
+      pill:'growthterminal.io / ai-assistants', cta:'ENTER THE PORTAL',
+      cap:'Lead Response replies in under ninety seconds. Follow-Up Sequence keeps the pipeline moving. Growth Intelligence names your number one constraint every week. All three sit on the same business record the portal already holds, and all three score their own runs.',
+      fc:'How long does a new lead currently wait on you?' },
+
+    { id:'content', comp:'window', panel:'p_ce.png', kicker:'CONTENT ENGINE',
+      head:'Drop one idea.<br><b>Get a week.</b>',
+      sub:'It learns your voice, publishes daily across every platform, and gets sharper from what your audience actually responds to.',
+      clab:'IMPROVE', ctxt:'Retires low performers after two weeks of poor signal.',
+      pill:'growthterminal.io / content-engine', cta:'ENTER THE PORTAL',
+      cap:'An always-on content system that learns your brand voice, publishes across every platform daily, and gets sharper from what your audience responds to. Drop a raw idea and get a week of on-brand posts. Anything that does not earn its slot stops being published.',
+      fc:'What idea have you been sitting on for a month?' },
+
+    { id:'teams', comp:'window', panel:'p_team.png', kicker:'BUSINESSES & TEAMS',
+      head:'Nothing ships<br><b>until someone signs it.</b>', hs:66, sub_top:452,
+      sub:'Owner, Analyst, Consultant, Viewer. Tickets move New, In Progress, Client Review, Closed. Approval is a step, not a habit.',
+      clab:'CLIENT REVIEW', ctxt:'The 90 day plan, waiting on approval.',
+      pill:'growthterminal.io / portal', cta:'ENTER THE PORTAL',
+      cap:'Four roles, four ticket states, and one rule underneath both: nothing reaches a client until somebody signs it off. The ticket waits in Client Review until it does. Approval is a state in the system, not a habit you hope people keep.',
+      fc:'Who signs off before something reaches your client?' },
+
+    { id:'guides', comp:'window', panel:'p_gs.png', kicker:'GUIDES & SHEETS',
+      head:'Downloads at checkout.<br><b>Unlocks in the portal.</b>', hs:66, sub_top:452,
+      sub:'Three on sale now. The file lands the moment you buy, and the portal knows it is yours from then on.',
+      clab:'AT CHECKOUT', ctxt:'The file downloads. From then on it is unlocked here.',
+      pill:'growthterminal.io / products', cta:'SEE GUIDES & SHEETS', cta_width:330, cta_size:23,
+      url:'growthterminal.io/products', samp:'SAMPLE LIBRARY', products:true,
+      cap:'Three on sale now: the Funnel & Conversion Tracker as a Google Sheet at seventy-nine dollars, and two PDF guides at fifty-five. The file downloads the moment you buy it, no portal trip needed, and from then on the portal recognises the purchase and keeps it unlocked.',
+      fc:'Which one would actually get used this week?' },
+
+    { id:'calibration', comp:'window', panel:'p_cal.png', kicker:'CALIBRATION',
+      head:'67 logged.<br><b>8 graded.</b>',
+      sub:'Every forecast is written down and scored against real revenue once the outcome is known. There is no coverage percentage yet.',
+      clab:'WHY NO PERCENTAGE', ctxt:'A rate built on eight results is not a rate.',
+      pill:'growthterminal.io / portal', cta:'ENTER THE PORTAL',
+      cap:'Sixty-seven forecasts logged, eight of them graded against real revenue so far. The portal will not show a coverage percentage until there are twenty, because a rate built on eight results moves every time one resolves. Most growth advice is never scored at all.',
+      fc:'When did you last check whether a forecast you made was right?' },
+
+    { id:'honest', comp:'window', panel:'p_honest.png', kicker:'HONEST STATES',
+      head:'It tells you<br><b>when it cannot run.</b>', hs:70,
+      sub:'Out of credits, a failed run, an empty list. Each one says exactly what happened and the one thing that clears it.',
+      clab:'WHAT IT DOES NOT SAY', ctxt:'Something went wrong. Please try again later.',
+      pill:'growthterminal.io / portal', cta:'ENTER THE PORTAL',
+      cap:'Out of credits says out of credits. A failed run says what failed. An empty list says why it is empty. No spinner that never resolves, no something went wrong. A tool you are making decisions with has to tell you when it cannot help, or you cannot trust it when it says it can.',
+      fc:'What is the least honest error message you have seen this week?' },
+
+    { id:'diagnostic', comp:'window', panel:'p_diag.png', kicker:'FREE DIAGNOSTIC',
+      head:'Five inputs.<br><b>No sign up.</b>',
+      sub:'Sixty seconds, five numbers you already know, and your figures never leave your browser.',
+      clab:'WHAT IT COSTS YOU', ctxt:'Sixty seconds. Nothing else.',
+      pill:'growthterminal.io / diagnostic', cta:'RUN THE FREE DIAGNOSTIC', cta_width:330, cta_size:19,
+      samp:'SAMPLE INPUTS',
+      cap:'Five numbers you already know, sixty seconds, and no account. Your figures stay in your browser. What comes back is the category your growth is stuck in and the size of the gap between what you produce and what your target requires.',
+      fc:'Do you know your current gap without opening a spreadsheet?' },
+
+    { id:'numbers', comp:'rail', panel:'p_rail.png', kicker:'THE INSPECTOR',
+      head:'Every figure<br><b>keeps its source.</b>', hs:72,
+      sub:'The numbers the verdict stands on, the run that produced them, and how many rows it actually read.',
+      clab:'RUN DETAILS', ctxt:'5 tabs, 2,088 rows, 12 constraints scored.', call_top:872,
+      cta:'ENTER THE PORTAL', samp:'SAMPLE ANALYSIS',
+      cap:'A number with no source is an opinion with a decimal point. The inspector carries the figures the verdict rests on, the run that produced them, how long it took and how much of your sheet it actually read.',
+      fc:'How many of your dashboard numbers could you trace to source today?' },
+
+    { id:'severity', comp:'phone', panel:'p_phone.png', kicker:'SEVERITY',
+      head:'Eight of ten,<br><b>high confidence.</b>', hs:64,
+      sub:'Scored, not asserted. The portal says how sure it is in the same breath as what it thinks.',
+      clab:'READ IT AS LANGUAGE', ctxt:'Severity 8 of 10, high confidence', meter:{ on:8, of:10 }, call_top:806,
+      cta:'ENTER THE PORTAL', samp:'SAMPLE ANALYSIS',
+      cap:'Severity eight of ten, high confidence. Written as a sentence rather than a badge, because a number with no confidence attached is a guess wearing a uniform. If the portal is unsure it says so on the same line.',
+      fc:'Would you rather have a confident wrong answer or an honest range?' },
+
+    { id:'twelve', comp:'phone', panel:'p_phone.png', kicker:'ONE CONSTRAINT',
+      head:'Twelve scored.<br><b>One named.</b>', hs:74,
+      sub:'Chosen on impact and controllability, not on which number looks worst this month.',
+      clab:'CONSTRAINT CATEGORY', ctxt:'Acquisition, chosen from twelve.', call_top:806,
+      cta:'ENTER THE PORTAL', samp:'SAMPLE ANALYSIS',
+      cap:'Twelve places growth gets stuck, all twelve scored, one named as the constraint. Chosen on impact and on how much of it you can actually control, which is why it is rarely the number that looks worst on the chart.',
+      fc:'Acquisition, activation, retention, conversion. Which is yours?' },
+
+    { id:'fields', comp:'window', panel:'p_plan.png', kicker:'THE 90 DAY PLAN',
+      head:'Do this.<br><b>Done when.</b>',
+      sub:'Four fields on every step, so a plan handed to somebody else still says what finished looks like.',
+      clab:'PRODUCES', ctxt:'One current gap figure plus its twelve month direction.',
+      pill:'growthterminal.io / portal', cta:'ENTER THE PORTAL',
+      cap:'Do this. Needs first. Done when. Produces. Four fields on every step of the ninety days, which is the difference between a plan you can hand to somebody and a list of intentions you have to be in the room to explain.',
+      fc:'Does your current plan say what done looks like?' }
+  ];
+
+  const b = pick(bank, r);
+  return {
+    layout: 'portalad', comp: b.comp, panel: b.panel, kicker: b.kicker, head: b.head,
+    hs: b.hs, sub: b.sub, sub_top: b.sub_top, pill: b.pill,
+    clab: b.clab, ctxt: b.ctxt, meter: b.meter, call_top: b.call_top,
+    cta_label: b.cta, cta_width: b.cta_width, cta_size: b.cta_size, url: b.url, samp: b.samp,
+    caption: b.cap, first_comment: b.fc,
+    sig: (b.products ? PRODUCTS_SIG_PREFIX : '') + 'portalad:' + b.id
+  };
+}
+
+const SERVICE_GENERATORS = [gen_svcportal, gen_svcportal, gen_svcportal,
+  gen_svc_feature, gen_svc_feature, gen_svc_serif, gen_svc_manifesto, gen_svccal,
+  gen_svcfals, gen_svcline, gen_svcdevice];
 
 /* The brand account runs two commercial lines and they are not the same
  * business. The portal is the objective: the account exists to drive sign-ups.
@@ -1851,7 +2188,7 @@ function buildProductPost(seed, recent) {
 async function renderPost(page, post, outBase) {
   // Ported layouts render with Satori (no headless browser); everything else falls through to Playwright.
   if (SATORI_LAYOUTS.has(post.layout)) { await renderPostSatori(post, outBase); return; }
-  const html = `<!DOCTYPE html><html><head><meta charset="utf8"><style>${FONTS}${CSS}</style></head><body>${RENDER[post.layout](post)}</body></html>`;
+  const html = `<!DOCTYPE html><html><head><meta charset="utf8"><style>${FONTS}${CSS}${PA_CSS}</style></head><body>${RENDER[post.layout](post)}</body></html>`;
   await page.setContent(html, { waitUntil: 'networkidle' });
   try { await page.evaluate(() => document.fonts && document.fonts.ready); } catch (e) {}
   await page.waitForTimeout(160);
