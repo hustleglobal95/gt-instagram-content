@@ -34,6 +34,20 @@ on:
         description: "Build the creative but do not publish"
         type: boolean
         default: true
+      layout:
+        description: "Pin the format for this run, blank for the normal rotation"
+        type: choice
+        default: ""
+        options:
+          - ""
+          - portalad
+          - svcfeat
+          - svccal
+          - svcfals
+          - svcline
+          - svcdevice
+          - edserif
+          - edmanifesto
 
 concurrency:
   group: gt-autopost-brand      # separate from gt-autopost; the two may run together
@@ -71,6 +85,7 @@ jobs:
         env:
           GT_FORCE_MODE:   services
           GT_STATE_SUFFIX: brand
+          GT_WANT_LAYOUT:  ${{ inputs.layout }}
         run: node generate.js
 
       - name: Screen creative for AI slop
