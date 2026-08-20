@@ -1,12 +1,14 @@
 {
-  "generated_at": "2026-08-20T13:00:55.915Z",
-  "media_file": "creatives/gt_reel_20260820_130055.jpg",
-  "video_file": "creatives/gt_reel_20260820_130055.mp4",
-  "is_reel": true,
-  "layout": "reel:feature",
-  "caption": "We find the one constraint capping your revenue, price the fix, and grade every call against real revenue. Diagnosis, not a dashboard. Run the free 60-second diagnostic.\n\nRun the free 60-second diagnostic, link in bio.",
-  "hashtags": "#growthterminal #startupmetrics #saasfounder #uniteconomics",
-  "first_comment": "What do you think your #1 constraint is right now?",
-  "alt_text": "",
-  "sig": "reelfeat:Stop guessing where your"
+  "generated_at": "2026-08-20T17:01:04.290Z",
+  "media_file": "creatives/gt_auto_20260820_170104.jpg",
+  "is_reel": false,
+  "layout": "annotated",
+  "editorial_bg": null,
+  "person": null,
+  "qa": null,
+  "caption": "You're not behind. You're working on the wrong constraint.\n\nThe effort is real; the target is off. Growth Terminal points you at the one lever that's actually capping you this quarter.\n\n→ growthterminal.io",
+  "hashtags": "#growthterminal #startupmetrics #b2bmarketing #bootstrappedfounder",
+  "first_comment": "Perfect execution on the wrong target still loses.",
+  "alt_text": "You’re not behind. You’re working on the wrong constraint.",
+  "sig": "ann:wrong constraint"
 }
