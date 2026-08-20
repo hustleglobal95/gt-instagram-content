@@ -1,18 +1,18 @@
 {
   "active": true,
   "diagnostics": {
-    "totalPosts": 98,
-    "totalEngagement": 216,
-    "igEngagement": 131,
+    "totalPosts": 101,
+    "totalEngagement": 227,
+    "igEngagement": 142,
     "fbEngagement": 85,
     "formats": 27,
     "formatsWithAnyEngagement": 27,
     "collectionHealth": {
-      "ig_attempted": 98,
-      "ig_succeeded": 98,
+      "ig_attempted": 101,
+      "ig_succeeded": 101,
       "ig_errors": [],
       "ig_error_count": 0,
-      "fb_succeeded": 88
+      "fb_succeeded": 91
     }
   },
   "weights": {
@@ -20,8 +20,8 @@
     "reel:card": 2,
     "statement": 1
   },
-  "reason": "Ranked 3 formats with at least 8 posts each, against 216 total interactions.",
-  "evaluatedAt": "2026-08-19T05:57:03.102Z",
+  "reason": "Ranked 3 formats with at least 8 posts each, against 227 total interactions.",
+  "evaluatedAt": "2026-08-20T05:57:18.753Z",
   "gates": {
     "MIN_TOTAL_ENGAGEMENT": 100,
     "MIN_POSTS_PER_FORMAT": 8,
