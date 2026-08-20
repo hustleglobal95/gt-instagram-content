@@ -32,7 +32,36 @@
 // ---------------------------------------------------------------------------
 
 const ARROWS = /[←-⇿➔➜➡⬅-⬇]/g;
-const EMOJI = /[\u{1F000}-\u{1FAFF}\u{2600}-\u{27BF}\u{FE0F}\u{2B00}-\u{2BFF}]/gu;
+
+/* Three glyphs are allowed through, and only these.
+ *
+ * The account is permitted an exclamation mark, an alarm clock and a siren,
+ * used sparingly as scroll stoppers. Everything else still goes, because the
+ * original audit found eighteen posts carrying emoji nobody chose, including
+ * a down arrow the brand rules forbid outright.
+ *
+ * Worth knowing before anyone widens this: the account's own numbers do not
+ * support marker emoji. Nine marked posts ran a median of 43 views against 13
+ * unmarked, which looks decisive until you notice all nine were thread
+ * openers. Threads with a marker: median 43. Threads without: median 92. So
+ * inside the format that uses them, marked posts did worse. Nine against
+ * eight is not a finding, which is exactly why this is set up as a test with
+ * a number to check rather than as a rule that was proven.
+ *
+ * U+23F0 already passed, since it sits outside every range below. The
+ * exclamation marks and the siren needed exempting. The siren is U+1F6A8, the
+ * revolving light, not U+1F9DC, which is a merperson.
+ */
+const ALLOWED_EMOJI = '\u2757\u2755\u203C\u23F0\u{1F6A8}';
+
+/* The lookahead runs at the position of the character about to be matched, so
+ * an allowed glyph fails the match and survives both normalise() and the
+ * stray-glyph check, which is built from this same source. */
+const EMOJI = new RegExp(
+  '(?![' + ALLOWED_EMOJI + '])' +
+  '[\u{1F000}-\u{1FAFF}\u{2600}-\u{27BF}\u{FE0F}\u{2B00}-\u{2BFF}]',
+  'gu'
+);
 
 function normalise(text) {
   let t = String(text || '');

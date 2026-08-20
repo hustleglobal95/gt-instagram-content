@@ -114,6 +114,28 @@ const FORMATS = [
   // Sticky one-liner (aphorism)
   { pillar: 'constraint', kind: 'aphorism', render: () => pick(APHORISMS) },
 
+  /* The marker test. Three glyphs are permitted through threads_guard.js and
+     nothing in this file was writing one, so allowing them changed nothing on
+     its own. These carry a marker so the account can find out whether it
+     helps.
+
+     It is set up as a test because the existing numbers argue against it:
+     nine marked posts ran a median of 43 views against 13 unmarked, which
+     looks decisive until you notice all nine were thread openers. Threads
+     with a marker ran 43, threads without ran 92. Nine against eight settles
+     nothing, so this measures rather than assumes.
+
+     Tagged `marker` as its own kind, which is the whole point: threads_learn
+     groups by kind, so after four of these the account reports on them
+     separately instead of burying them in the aphorism pool. */
+  { pillar: 'constraint', kind: 'marker', render: () => pick([
+    clamp(`\u{1F6A8} Most businesses do not die from competition.\n\nThey die from three quarters of nobody looking at the same number.`),
+    clamp(`\u2757You do not have a traffic problem.\n\nYou have a lowest-number-in-the-funnel problem. More people through the top of a leaking system just means a wetter floor.`),
+    clamp(`\u23F0 The window where you can change anything without asking permission closes faster than anyone tells you.\n\nNo staff, no contracts, no brand to protect. Nothing about your business will ever be this cheap to reverse again.`),
+    clamp(`\u{1F6A8} Ten metrics moved an inch is why you feel busy and flat.\n\nOne metric moved a mile is why other people seem to be going faster on less work.`),
+    clamp(`\u2757Nobody tells you that the quiet weeks are the ones doing the work.\n\nThe visible week is downstream of six invisible ones. Quit during an invisible one and you never find out which it was.`),
+  ]) },
+
   // How-to-without
   { pillar: 'playbook', kind: 'howto', render: () => pick([
     clamp(`How to grow without posting more:\n\n1. Find the funnel stage with the biggest drop.\n2. Fix only that.\n3. Watch the same traffic convert harder.\n\nMore reach can\u2019t fix a leak.`),
