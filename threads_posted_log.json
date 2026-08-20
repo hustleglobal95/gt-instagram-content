@@ -1836,5 +1836,27 @@
       "markusreidgt": "18041955176631080"
     },
     "errors": {}
+  },
+  {
+    "at": "2026-08-20T16:03:14.383Z",
+    "text": "The first ten customers are the hardest you will ever get and almost nobody explains why.",
+    "parts": [
+      "The first ten customers are the hardest you will ever get and almost nobody explains why.",
+      "It is not the product. At ten customers the product is usually fine and definitely fixable.",
+      "It is that you have no proof. Every one of those ten is somebody taking a personal risk on a stranger with nothing to point at.",
+      "Which means the early work is not more features. It is the smallest piece of evidence: one person who used it and said something true about it in public.",
+      "And it means judging your idea by month one numbers is judging it during the exact period it cannot show any.",
+      "If you are somewhere in the first ten, say where. I want to know how many of us are in that stretch at the same time."
+    ],
+    "isThread": true,
+    "pillar": "community",
+    "kind": "thread",
+    "accounts": [
+      "markusreidgt"
+    ],
+    "ids": {
+      "markusreidgt": "18139458469599512"
+    },
+    "errors": {}
   }
 ]
