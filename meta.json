@@ -1,14 +1,12 @@
 {
-  "generated_at": "2026-08-20T01:01:21.380Z",
-  "media_file": "creatives/gt_auto_20260820_010121.jpg",
-  "is_reel": false,
-  "layout": "prodclaim",
-  "editorial_bg": null,
-  "person": null,
-  "qa": null,
-  "caption": "Most trackers show you conversion rates. This one tells you what to do with them: which step is costing you the most, how much fixing it is worth, and what your revenue looks like if you close the gap.\n\nFunnel & Conversion Tracker. $79 in Google Sheets™. Link in bio.\n\n→ growthterminal.io",
-  "hashtags": "#growthterminal #foundertips #agencyowner #saasgrowth",
-  "first_comment": "Which funnel step do you think is your weakest right now?",
-  "alt_text": "Stop guessing which funnel step to fix .",
-  "sig": "prodclaim:funnel:Stop guessing which fu"
+  "generated_at": "2026-08-20T13:00:55.915Z",
+  "media_file": "creatives/gt_reel_20260820_130055.jpg",
+  "video_file": "creatives/gt_reel_20260820_130055.mp4",
+  "is_reel": true,
+  "layout": "reel:feature",
+  "caption": "We find the one constraint capping your revenue, price the fix, and grade every call against real revenue. Diagnosis, not a dashboard. Run the free 60-second diagnostic.\n\nRun the free 60-second diagnostic, link in bio.",
+  "hashtags": "#growthterminal #startupmetrics #saasfounder #uniteconomics",
+  "first_comment": "What do you think your #1 constraint is right now?",
+  "alt_text": "",
+  "sig": "reelfeat:Stop guessing where your"
 }
