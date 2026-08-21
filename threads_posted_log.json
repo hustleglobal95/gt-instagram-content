@@ -1992,5 +1992,27 @@
       "markusreidgt": "17943242070289548"
     },
     "errors": {}
+  },
+  {
+    "at": "2026-08-21T22:54:12.436Z",
+    "text": "Demos are the most used and least useful sales tool in this category.",
+    "parts": [
+      "Demos are the most used and least useful sales tool in this category.",
+      "The demo sells the technology and the buyer is trying to buy an outcome.",
+      "People can see that it works. They cannot see what it is for.",
+      "\"It hallucinates sometimes\" is a scope question, not a bug report. Build for the tasks that tolerate a wrong answer.",
+      "Lead with what changes on Tuesday, not with the architecture.",
+      "Capability is table stakes now. Reliability is the product."
+    ],
+    "isThread": true,
+    "pillar": "systems",
+    "kind": "thread",
+    "accounts": [
+      "markusreidgt"
+    ],
+    "ids": {
+      "markusreidgt": "18134948290620783"
+    },
+    "errors": {}
   }
 ]
