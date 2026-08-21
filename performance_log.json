@@ -1,6 +1,6 @@
 {
-  "updated": "2026-08-20T05:57:14.938899Z",
-  "count": 101,
+  "updated": "2026-08-21T05:59:14.748179Z",
+  "count": 106,
   "posts": [
     {
       "sig": "prodclaim:funnel:Your funnel has one we",
@@ -165,6 +165,60 @@
       "_ig_attempted": true
     },
     {
+      "sig": "eds:Find the one constraintcapping your ",
+      "layout": "edserif",
+      "file": "creatives/gt_auto_20260807_170128.jpg",
+      "is_reel": false,
+      "at": "2026-08-07T17:01:33.715824Z",
+      "caption": "Find the one constraint capping your revenue.\n\nMost growth advice hands you ten things to fix. Growth Terminal names the",
+      "permalink": "https://www.instagram.com/p/DbvxxlFGkRl/",
+      "ig": {
+        "likes": 1,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/DbvxxlFGkRl/",
+        "engagement": 2
+      },
+      "fb": {
+        "reactions": 2,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 2
+      },
+      "engagement": 4,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "reelfeat:Your growth has one real",
+      "layout": "reel:feature",
+      "file": "creatives/gt_reel_20260807_210113.jpg",
+      "is_reel": true,
+      "at": "2026-08-07T21:02:46.855993Z",
+      "caption": "We find the one constraint capping your revenue, price the fix, and grade every call against real revenue. Diagnosis, no",
+      "permalink": "https://www.instagram.com/reel/DbwNZLiky4n/",
+      "ig": {
+        "likes": 1,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/reel/DbwNZLiky4n/",
+        "engagement": 2
+      },
+      "fb": {
+        "reactions": 2,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 2
+      },
+      "engagement": 4,
+      "_ig_attempted": true
+    },
+    {
       "sig": "prodshot:funnel:Your funnel has one we",
       "layout": "prodshot",
       "file": "creatives/gt_auto_20260808_010110.jpg",
@@ -273,6 +327,33 @@
       "_ig_attempted": true
     },
     {
+      "sig": "tweet:You don\u2019t need more dashboards. You ",
+      "layout": "tweet",
+      "file": "creatives/gt_auto_20260809_170143.jpg",
+      "is_reel": false,
+      "at": "2026-08-09T17:01:48.345900Z",
+      "caption": "Most teams are drowning in dashboards and starving for a decision. Growth Terminal reads the data you already have and m",
+      "permalink": "https://www.instagram.com/p/Db07ZHSgTGY/",
+      "ig": {
+        "likes": 1,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/Db07ZHSgTGY/",
+        "engagement": 2
+      },
+      "fb": {
+        "reactions": 2,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 2
+      },
+      "engagement": 4,
+      "_ig_attempted": true
+    },
+    {
       "sig": "reelnum:12",
       "layout": "reel:countup",
       "file": "creatives/gt_reel_20260812_210142.jpg",
@@ -322,6 +403,33 @@
         "shares": 0,
         "reach": 0,
         "engagement": 1
+      },
+      "engagement": 4,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "prodclaim:funnel:Your funnel has one we",
+      "layout": "prodclaim",
+      "file": "creatives/gt_auto_20260821_010129.jpg",
+      "is_reel": false,
+      "at": "2026-08-21T01:01:36.200803Z",
+      "caption": "Most trackers show you conversion rates. This one tells you what to do with them: which step is costing you the most, ho",
+      "permalink": "https://www.instagram.com/p/DcSHC2hFOnc/",
+      "ig": {
+        "likes": 0,
+        "comments": 4,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/DcSHC2hFOnc/",
+        "engagement": 4
+      },
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
       },
       "engagement": 4,
       "_ig_attempted": true
@@ -786,60 +894,6 @@
       "_ig_attempted": true
     },
     {
-      "sig": "eds:Find the one constraintcapping your ",
-      "layout": "edserif",
-      "file": "creatives/gt_auto_20260807_170128.jpg",
-      "is_reel": false,
-      "at": "2026-08-07T17:01:33.715824Z",
-      "caption": "Find the one constraint capping your revenue.\n\nMost growth advice hands you ten things to fix. Growth Terminal names the",
-      "permalink": "https://www.instagram.com/p/DbvxxlFGkRl/",
-      "ig": {
-        "likes": 0,
-        "comments": 1,
-        "saved": 0,
-        "shares": 0,
-        "reach": 0,
-        "permalink": "https://www.instagram.com/p/DbvxxlFGkRl/",
-        "engagement": 1
-      },
-      "fb": {
-        "reactions": 2,
-        "comments": 0,
-        "shares": 0,
-        "reach": 0,
-        "engagement": 2
-      },
-      "engagement": 3,
-      "_ig_attempted": true
-    },
-    {
-      "sig": "reelfeat:Your growth has one real",
-      "layout": "reel:feature",
-      "file": "creatives/gt_reel_20260807_210113.jpg",
-      "is_reel": true,
-      "at": "2026-08-07T21:02:46.855993Z",
-      "caption": "We find the one constraint capping your revenue, price the fix, and grade every call against real revenue. Diagnosis, no",
-      "permalink": "https://www.instagram.com/reel/DbwNZLiky4n/",
-      "ig": {
-        "likes": 0,
-        "comments": 1,
-        "saved": 0,
-        "shares": 0,
-        "reach": 0,
-        "permalink": "https://www.instagram.com/reel/DbwNZLiky4n/",
-        "engagement": 1
-      },
-      "fb": {
-        "reactions": 2,
-        "comments": 0,
-        "shares": 0,
-        "reach": 0,
-        "engagement": 2
-      },
-      "engagement": 3,
-      "_ig_attempted": true
-    },
-    {
       "sig": "feat:Find the one constraint holding your gro:gt_face_03.png",
       "layout": "feature",
       "file": "creatives/gt_auto_20260808_210105.jpg",
@@ -854,33 +908,6 @@
         "shares": 0,
         "reach": 0,
         "permalink": "https://www.instagram.com/p/Dbyx_YVnQ4C/",
-        "engagement": 1
-      },
-      "fb": {
-        "reactions": 2,
-        "comments": 0,
-        "shares": 0,
-        "reach": 0,
-        "engagement": 2
-      },
-      "engagement": 3,
-      "_ig_attempted": true
-    },
-    {
-      "sig": "tweet:You don\u2019t need more dashboards. You ",
-      "layout": "tweet",
-      "file": "creatives/gt_auto_20260809_170143.jpg",
-      "is_reel": false,
-      "at": "2026-08-09T17:01:48.345900Z",
-      "caption": "Most teams are drowning in dashboards and starving for a decision. Growth Terminal reads the data you already have and m",
-      "permalink": "https://www.instagram.com/p/Db07ZHSgTGY/",
-      "ig": {
-        "likes": 0,
-        "comments": 1,
-        "saved": 0,
-        "shares": 0,
-        "reach": 0,
-        "permalink": "https://www.instagram.com/p/Db07ZHSgTGY/",
         "engagement": 1
       },
       "fb": {
@@ -1590,6 +1617,33 @@
       "_ig_attempted": true
     },
     {
+      "sig": "tz:Why plan a quarter on a hunch?",
+      "layout": "twozone",
+      "file": "creatives/gt_auto_20260813_130127.jpg",
+      "is_reel": false,
+      "at": "2026-08-13T13:01:34.239583Z",
+      "caption": "Why plan a quarter on a hunch?\n\nMost quarterly plans start from a feeling about what is broken. Growth Terminal reads th",
+      "permalink": "https://www.instagram.com/p/Db-zFHlmkRr/",
+      "ig": {
+        "likes": 1,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/Db-zFHlmkRr/",
+        "engagement": 2
+      },
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 2,
+      "_ig_attempted": true
+    },
+    {
       "sig": "beha:You check it every morning any",
       "layout": "behaviourcall",
       "file": "creatives/gt_auto_20260814_010111.jpg",
@@ -1828,6 +1882,33 @@
         "shares": 0,
         "reach": 0,
         "engagement": 0
+      },
+      "engagement": 2,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "reelfeat:Stop guessing where your",
+      "layout": "reel:feature",
+      "file": "creatives/gt_reel_20260820_130055.jpg",
+      "is_reel": true,
+      "at": "2026-08-20T13:02:28.660054Z",
+      "caption": "We find the one constraint capping your revenue, price the fix, and grade every call against real revenue. Diagnosis, no",
+      "permalink": "https://www.instagram.com/reel/DcQ0wHyEcMK/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/reel/DcQ0wHyEcMK/",
+        "engagement": 1
+      },
+      "fb": {
+        "reactions": 1,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 1
       },
       "engagement": 2,
       "_ig_attempted": true
@@ -2292,33 +2373,6 @@
       "_ig_attempted": true
     },
     {
-      "sig": "tz:Why plan a quarter on a hunch?",
-      "layout": "twozone",
-      "file": "creatives/gt_auto_20260813_130127.jpg",
-      "is_reel": false,
-      "at": "2026-08-13T13:01:34.239583Z",
-      "caption": "Why plan a quarter on a hunch?\n\nMost quarterly plans start from a feeling about what is broken. Growth Terminal reads th",
-      "permalink": "https://www.instagram.com/p/Db-zFHlmkRr/",
-      "ig": {
-        "likes": 0,
-        "comments": 1,
-        "saved": 0,
-        "shares": 0,
-        "reach": 0,
-        "permalink": "https://www.instagram.com/p/Db-zFHlmkRr/",
-        "engagement": 1
-      },
-      "fb": {
-        "reactions": 0,
-        "comments": 0,
-        "shares": 0,
-        "reach": 0,
-        "engagement": 0
-      },
-      "engagement": 1,
-      "_ig_attempted": true
-    },
-    {
       "sig": "feat:Find the one constraint holding your gro:gt_face_01.png",
       "layout": "feature",
       "file": "creatives/gt_auto_20260813_170139.jpg",
@@ -2668,9 +2722,106 @@
       },
       "engagement": 1,
       "_ig_attempted": true
+    },
+    {
+      "sig": "car:plan",
+      "layout": "carousel:plan",
+      "file": "creatives/gt_car_20260820154315_1.jpg",
+      "is_reel": false,
+      "at": "2026-08-20T15:43:21.027205Z",
+      "caption": "A diagnosis without sequencing is just an opinion.\n\nEvery Growth Terminal run ends in a 90 day plan: six phases in order",
+      "permalink": "https://www.instagram.com/p/DcRHNgMFIly/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/DcRHNgMFIly/",
+        "engagement": 1
+      },
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 1,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "ann:wrong constraint",
+      "layout": "annotated",
+      "file": "creatives/gt_auto_20260820_170104.jpg",
+      "is_reel": false,
+      "at": "2026-08-20T17:01:13.188716Z",
+      "caption": "You're not behind. You're working on the wrong constraint.\n\nThe effort is real; the target is off. Growth Terminal point",
+      "permalink": "https://www.instagram.com/p/DcRQEggFcrB/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/DcRQEggFcrB/",
+        "engagement": 1
+      },
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 1,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "car:33 questions that rev",
+      "layout": "carousel",
+      "file": "creatives/gt_auto_20260820_210059.jpg",
+      "is_reel": false,
+      "at": "2026-08-20T21:01:06.872193Z",
+      "caption": "Three questions that reveal your real bottleneck. Save this. \ud83d\udc47\n\n1. Where does momentum die, before signup, at first use,",
+      "permalink": "https://www.instagram.com/p/DcRrhfxlKFx/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/DcRrhfxlKFx/",
+        "engagement": 1
+      },
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 1,
+      "_ig_attempted": true
     }
   ],
   "by_format": [
+    {
+      "layout": "tweet",
+      "posts": 1,
+      "engagement": 4,
+      "ig_engagement": 2,
+      "fb_engagement": 2,
+      "avg_engagement": 4.0
+    },
+    {
+      "layout": "edserif",
+      "posts": 2,
+      "engagement": 7,
+      "ig_engagement": 3,
+      "fb_engagement": 4,
+      "avg_engagement": 3.5
+    },
     {
       "layout": "edmanifesto",
       "posts": 5,
@@ -2681,10 +2832,10 @@
     },
     {
       "layout": "reel:feature",
-      "posts": 7,
-      "engagement": 22,
-      "ig_engagement": 11,
-      "fb_engagement": 11,
+      "posts": 8,
+      "engagement": 25,
+      "ig_engagement": 13,
+      "fb_engagement": 12,
       "avg_engagement": 3.1
     },
     {
@@ -2693,38 +2844,6 @@
       "engagement": 3,
       "ig_engagement": 1,
       "fb_engagement": 2,
-      "avg_engagement": 3.0
-    },
-    {
-      "layout": "carousel",
-      "posts": 1,
-      "engagement": 3,
-      "ig_engagement": 1,
-      "fb_engagement": 2,
-      "avg_engagement": 3.0
-    },
-    {
-      "layout": "edserif",
-      "posts": 2,
-      "engagement": 6,
-      "ig_engagement": 2,
-      "fb_engagement": 4,
-      "avg_engagement": 3.0
-    },
-    {
-      "layout": "tweet",
-      "posts": 1,
-      "engagement": 3,
-      "ig_engagement": 1,
-      "fb_engagement": 2,
-      "avg_engagement": 3.0
-    },
-    {
-      "layout": "carousel:plan",
-      "posts": 4,
-      "engagement": 12,
-      "ig_engagement": 8,
-      "fb_engagement": 4,
       "avg_engagement": 3.0
     },
     {
@@ -2742,6 +2861,22 @@
       "ig_engagement": 6,
       "fb_engagement": 2,
       "avg_engagement": 2.7
+    },
+    {
+      "layout": "prodclaim",
+      "posts": 7,
+      "engagement": 18,
+      "ig_engagement": 12,
+      "fb_engagement": 6,
+      "avg_engagement": 2.6
+    },
+    {
+      "layout": "carousel:plan",
+      "posts": 5,
+      "engagement": 13,
+      "ig_engagement": 9,
+      "fb_engagement": 4,
+      "avg_engagement": 2.6
     },
     {
       "layout": "funnel",
@@ -2774,14 +2909,6 @@
       "ig_engagement": 5,
       "fb_engagement": 0,
       "avg_engagement": 2.5
-    },
-    {
-      "layout": "prodclaim",
-      "posts": 6,
-      "engagement": 14,
-      "ig_engagement": 8,
-      "fb_engagement": 6,
-      "avg_engagement": 2.3
     },
     {
       "layout": "feature",
@@ -2824,6 +2951,14 @@
       "avg_engagement": 2.0
     },
     {
+      "layout": "carousel",
+      "posts": 2,
+      "engagement": 4,
+      "ig_engagement": 2,
+      "fb_engagement": 2,
+      "avg_engagement": 2.0
+    },
+    {
       "layout": "behaviourcall",
       "posts": 1,
       "engagement": 2,
@@ -2850,10 +2985,10 @@
     {
       "layout": "twozone",
       "posts": 3,
-      "engagement": 4,
-      "ig_engagement": 3,
+      "engagement": 5,
+      "ig_engagement": 4,
       "fb_engagement": 1,
-      "avg_engagement": 1.3
+      "avg_engagement": 1.7
     },
     {
       "layout": "statement",
@@ -2886,13 +3021,21 @@
       "ig_engagement": 1,
       "fb_engagement": 0,
       "avg_engagement": 1.0
+    },
+    {
+      "layout": "annotated",
+      "posts": 1,
+      "engagement": 1,
+      "ig_engagement": 1,
+      "fb_engagement": 0,
+      "avg_engagement": 1.0
     }
   ],
   "collection": {
-    "ig_attempted": 101,
-    "ig_succeeded": 101,
+    "ig_attempted": 106,
+    "ig_succeeded": 106,
     "ig_errors": [],
     "ig_error_count": 0,
-    "fb_succeeded": 91
+    "fb_succeeded": 96
   }
 }
