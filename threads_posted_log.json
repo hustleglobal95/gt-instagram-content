@@ -2095,5 +2095,22 @@
       "markusreidgt": "18200748562373457"
     },
     "errors": {}
+  },
+  {
+    "at": "2026-08-22T18:42:35.368Z",
+    "text": "The minimum sellable version, per type, roughly:\n\nTemplate: one file that works, one page telling them how to use it.\nGuide: the method, complete, no filler chapters.\nCourse: one module people finish.\nCommunity: twenty people and a reason to open it on a Monday.\n\nIf version one takes more than a week, the scope is wrong. Every spec is in What To Sell. $29, growthterminal.io/what-to-sell",
+    "parts": [
+      "The minimum sellable version, per type, roughly:\n\nTemplate: one file that works, one page telling them how to use it.\nGuide: the method, complete, no filler chapters.\nCourse: one module people finish.\nCommunity: twenty people and a reason to open it on a Monday.\n\nIf version one takes more than a week, the scope is wrong. Every spec is in What To Sell. $29, growthterminal.io/what-to-sell"
+    ],
+    "isThread": false,
+    "pillar": "playbook",
+    "kind": "ladder",
+    "accounts": [
+      "markusreidgt"
+    ],
+    "ids": {
+      "markusreidgt": "18101869301579984"
+    },
+    "errors": {}
   }
 ]
