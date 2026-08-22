@@ -43,6 +43,7 @@ WAIT_SECONDS = int(gv("WAIT_SECONDS", "10") or "10")
 
 # Facebook Page publishing (optional — enabled automatically if creds are present).
 FB_API_BASE = (gv("FB_API_BASE", "https://graph.facebook.com/v21.0") or "https://graph.facebook.com/v21.0").rstrip("/")
+AUDIO_NAME = gv("GT_REEL_AUDIO_NAME", "Growth Terminal")
 FB_PAGE_ID  = gv("FB_PAGE_ID").strip()
 FB_TOKEN    = gv("FB_PAGE_ACCESS_TOKEN").strip()
 FB_INCLUDE_HASHTAGS = gv("FB_HASHTAGS", "0") == "1"   # default: no hashtag wall on Facebook
@@ -115,8 +116,15 @@ def publish_single(image_url, caption):
 
 def publish_reel(video_url, caption, cover_url=None):
     """Publish an Instagram Reel. Video is processed asynchronously, so we must
-    poll the container until status_code == FINISHED before publishing."""
+    poll the container until status_code == FINISHED before publishing.
+
+    audio_name names the original audio. Instagram gives no way to attach a
+    library track through the publishing API, so the bed is muxed into the mp4
+    at render time and this is what it gets called on the post. Naming it means
+    the audio is attributable to the account instead of showing as untitled."""
     data = {"media_type": "REELS", "video_url": video_url, "caption": caption, "share_to_feed": "true"}
+    if AUDIO_NAME:
+        data["audio_name"] = AUDIO_NAME
     if cover_url:
         data["cover_url"] = cover_url
     c = _api_post(f"{IG_USER_ID}/media", data)

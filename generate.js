@@ -2222,6 +2222,25 @@ const easeOut = x => 1 - Math.pow(1 - clamp01(x), 2);
 const easeIO  = x => { x = clamp01(x); return x < .5 ? 2 * x * x : 1 - Math.pow(-2 * x + 2, 2) / 2; };
 function rlogo(h) { return logo(ORANGE, WHITE).replace('<svg', `<svg style="height:${h}px;width:auto;display:block"`); }
 const RGRAIN = `<div style="position:absolute;inset:0;opacity:.04;pointer-events:none;background-image:radial-gradient(rgba(255,255,255,.5) 1px,transparent 1px);background-size:4px 4px"></div>`;
+
+/* Reels are ten seconds now, not five.
+ *
+ *  The old clips were five seconds of a still photograph with the text fading
+ *  up in the first second, then four seconds of nothing moving. Instagram
+ *  accepted them as Reels because the container said REELS, and they read on
+ *  the feed as photographs, because that is what they were.
+ *
+ *  `beat` replays the existing choreography across the first 55 percent of the
+ *  clip instead of the first 20, and the layouts below carry their own motion
+ *  through the rest. The rule these follow: something has to change in every
+ *  single frame, or the frame is a photograph. */
+const beat = t => clamp01(t / 0.55);
+
+/* Public domain beds, CC0 1.0, from FreePD. Committed to the repo so the
+   runner needs no network for them and no licence travels with the post.
+   Instagram gives no way to attach library music through the publishing API,
+   so a Reel is silent forever unless the audio is inside the file. */
+const REEL_BEDS = ['audio/bed_chronos.m4a', 'audio/bed_limit70.m4a'];
 function rstage(inner, glowT) {
   const g = 150 + Math.sin(glowT * Math.PI * 2) * 30;
   return `<div style="width:1080px;height:1920px;background:${INK};color:${WHITE};position:relative;overflow:hidden;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;padding:150px 96px;display:flex;flex-direction:column">
@@ -2233,13 +2252,19 @@ function rfoot(op) {
     <div style="font-family:ui-monospace,Menlo,monospace;font-size:30px;font-weight:700;color:${ORANGE};display:flex;align-items:center;gap:14px"><span style="width:14px;height:14px;border-radius:50%;background:${ORANGE}"></span>growthterminal.io</div></div>`;
 }
 function cardFrame(t, p) {
-  const appear = easeOut((t - 0.03) / 0.25), wordIn = easeOut((t - 0.12) / 0.28);
-  const meter = easeIO((t - 0.22) / 0.5) * p.pct, conf = Math.round(easeIO((t - 0.30) / 0.5) * p.confidence);
-  const verIn = easeOut((t - 0.72) / 0.12), ctaIn = easeOut((t - 0.80) / 0.18);
+  const b = beat(t);
+  const appear = easeOut((b - 0.03) / 0.25), wordIn = easeOut((b - 0.12) / 0.28);
+  /* The meter and the confidence counter are the only things here that are
+     genuinely animation rather than a fade, so they now run across most of the
+     clip instead of finishing in the first second. */
+  const meter = easeIO((t - 0.16) / 0.50) * p.pct, conf = Math.round(easeIO((t - 0.20) / 0.52) * p.confidence);
+  const verIn = easeOut((t - 0.70) / 0.10), ctaIn = easeOut((t - 0.82) / 0.14);
+  /* A slow drift on the panel itself, so the frame is never twice the same. */
+  const drift = easeIO(t) * -22;
   const inner = `<div style="font-family:ui-monospace,Menlo,monospace;font-size:30px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:${ORANGE};opacity:${appear};transform:translateY(${(1 - appear) * 20}px)">◆ Live diagnosis</div>
     <div style="font-size:66px;font-weight:800;letter-spacing:-.02em;line-height:1.04;margin-top:26px;opacity:${appear};transform:translateY(${(1 - appear) * 24}px)">${p.headline}</div>
     <div style="flex:1;display:flex;align-items:center">
-      <div style="width:100%;background:#211b15;border:1px solid rgba(255,255,255,.1);border-radius:34px;padding:60px 56px;opacity:${appear};transform:translateY(${(1 - appear) * 30}px)">
+      <div style="width:100%;background:#211b15;border:1px solid rgba(255,255,255,.1);border-radius:34px;padding:60px 56px;opacity:${appear};transform:translateY(${(1 - appear) * 30 + drift}px)">
         <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:36px">
           <span style="font-family:ui-monospace,Menlo,monospace;font-size:26px;letter-spacing:.14em;color:#9a8f82;text-transform:uppercase">#1 constraint detected</span>
           <span style="font-family:ui-monospace,Menlo,monospace;font-size:24px;color:${GOOD};display:flex;align-items:center;gap:10px;opacity:${verIn};transform:scale(${0.8 + verIn * 0.2})"><span style="width:12px;height:12px;border-radius:50%;background:${GOOD};display:inline-block"></span>VERIFIED</span></div>
@@ -2251,11 +2276,18 @@ function cardFrame(t, p) {
   return rstage(inner, t);
 }
 function countupFrame(t, p) {
-  const appear = easeOut((t - 0.03) / 0.22), prog = easeIO((t - 0.15) / 0.55);
-  const val = Math.round(prog * p.big), labelIn = easeOut((t - 0.45) / 0.3), ctaIn = easeOut((t - 0.80) / 0.18);
+  const b = beat(t);
+  const appear = easeOut((b - 0.03) / 0.22);
+  /* The number counting is the whole idea of this layout, so it gets most of
+     the ten seconds rather than finishing before anyone has looked at it. */
+  const prog = easeIO((t - 0.10) / 0.58);
+  const val = Math.round(prog * p.big), labelIn = easeOut((t - 0.62) / 0.20), ctaIn = easeOut((t - 0.82) / 0.14);
+  /* The figure grows very slightly as it counts and settles when it lands. */
+  const grow = 0.94 + easeIO(clamp01((t - 0.10) / 0.58)) * 0.06;
+  const drift = easeIO(t) * -18;
   const inner = `<div style="font-family:ui-monospace,Menlo,monospace;font-size:30px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:${ORANGE};opacity:${appear}">◆ ${p.eyebrow}</div>
     <div style="flex:1;display:flex;flex-direction:column;justify-content:center">
-      <div style="font-family:ui-monospace,Menlo,monospace;font-size:340px;font-weight:700;color:${ORANGE};line-height:.9;letter-spacing:-.04em;opacity:${appear}">${p.prefix}${val}${p.suffix}</div>
+      <div style="font-family:ui-monospace,Menlo,monospace;font-size:340px;font-weight:700;color:${ORANGE};line-height:.9;letter-spacing:-.04em;opacity:${appear};transform:scale(${grow}) translateY(${drift}px);transform-origin:left center">${p.prefix}${val}${p.suffix}</div>
       <div style="font-size:52px;font-weight:800;max-width:880px;line-height:1.15;margin-top:24px;opacity:${labelIn};transform:translateY(${(1 - labelIn) * 20}px)">${p.label}</div>
     </div>${rfoot(ctaIn)}`;
   return rstage(inner, t);
@@ -2265,19 +2297,31 @@ function countupFrame(t, p) {
 // message builds over it. One type personality (Inter headline + mono labels + amber),
 // never a font pile-up. Logo always present. Fires only when ./people has images.
 function featureReelFrame(t, p){
-  const zoom = 1.02 + easeIO(t)*0.09;
-  const kIn = easeOut((t-0.05)/0.22), hIn = easeOut((t-0.18)/0.42), fIn = easeOut((t-0.78)/0.18);
+  /* 26 percent across ten seconds, plus a rise. The old push was 9 percent
+     across five, which at feed size is not visible: I compared frames 0, 30,
+     60, 90 and 119 of a shipped clip and the photograph was identical in all
+     five. A camera move you cannot see is a still. */
+  const zoom = 1.03 + easeIO(t)*0.26;
+  const rise = easeIO(t) * -38;
+  const b = beat(t);
+  const kIn = easeOut((b-0.05)/0.22), hIn = easeOut((b-0.18)/0.42);
+  /* The second half is the new part: the headline settles up, the payoff line
+     arrives, and the address lands last. */
+  const pIn = easeOut((t-0.58)/0.20), fIn = easeOut((t-0.76)/0.16);
+  const settle = easeOut((t-0.58)/0.30) * -26;
+  const pulse = 1 + Math.sin(t*Math.PI*4) * 0.12;
   const pos = p.personMode==='scene' ? '68% 42%' : '50% 26%';
   return `<style>${FONTS}</style>
   <div style="width:1080px;height:1920px;background:${INK};position:relative;overflow:hidden">
-    <div style="position:absolute;inset:0;background-image:url('${p.personImage}');background-size:cover;background-position:${pos};transform:scale(${zoom});transform-origin:center;filter:brightness(1.03) contrast(1.03)"></div>
+    <div style="position:absolute;inset:0;background-image:url('${p.personImage}');background-size:cover;background-position:${pos};transform:scale(${zoom}) translateY(${rise}px);transform-origin:center;filter:brightness(1.03) contrast(1.03)"></div>
     <div style="position:absolute;inset:0;background:linear-gradient(180deg, rgba(23,19,15,.5) 0%, rgba(23,19,15,0) 30%, rgba(23,19,15,.5) 58%, rgba(23,19,15,.97) 100%)"></div>
     ${RGRAIN}
     <div style="position:absolute;top:96px;left:96px;opacity:${kIn};transform:translateY(${(1-kIn)*-10}px)">${rlogo(58)}</div>
-    <div style="position:absolute;left:96px;right:96px;bottom:150px;display:flex;flex-direction:column;gap:26px">
+    <div style="position:absolute;left:96px;right:96px;bottom:150px;display:flex;flex-direction:column;gap:26px;transform:translateY(${settle}px)">
       <div style="font-family:'JBM',ui-monospace,monospace;font-size:30px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:${ORANGE};opacity:${kIn};transform:translateY(${(1-kIn)*16}px)">${p.kicker}</div>
       <div style="font-family:'ITight',-apple-system,sans-serif;font-size:98px;font-weight:800;letter-spacing:-.03em;line-height:1.02;color:${WHITE};opacity:${hIn};transform:translateY(${(1-hIn)*26}px)">${p.headline}</div>
-      <div style="display:flex;align-items:center;gap:14px;font-family:'JBM',ui-monospace,monospace;font-size:30px;font-weight:700;color:${CREAM};opacity:${fIn};transform:translateY(${(1-fIn)*16}px)"><span style="width:14px;height:14px;border-radius:50%;background:${ORANGE}"></span>growthterminal.io</div>
+      <div style="font-family:'ITight',-apple-system,sans-serif;font-size:44px;font-weight:600;letter-spacing:-.02em;line-height:1.2;color:${CREAM};opacity:${pIn};transform:translateY(${(1-pIn)*22}px)">One constraint. Priced. Verified against real revenue.</div>
+    <div style="display:flex;align-items:center;gap:14px;font-family:'JBM',ui-monospace,monospace;font-size:30px;font-weight:700;color:${CREAM};opacity:${fIn};transform:translateY(${(1-fIn)*16}px)"><span style="width:14px;height:14px;border-radius:50%;background:${ORANGE};transform:scale(${pulse})"></span>growthterminal.io</div>
     </div>
   </div>`;
 }
@@ -2333,8 +2377,15 @@ const REEL_GENERATORS = [reel_card, reel_card, reel_countup, reel_feature];
 
 function buildReel(seed, recent) {
   const r = rng((seed ^ 0x5bd1e995) >>> 0);
+  /* Pin the layout for one run. Without it the only way to see a countup
+     render was to keep rolling the dice, which is a slow way to check a
+     change to the countup. */
+  const want = String(process.env.GT_REEL_LAYOUT || '').trim().toLowerCase();
+  const GENS = want && REEL_FRAME[want]
+    ? REEL_GENERATORS.filter(g => g.name === 'reel_' + want)
+    : REEL_GENERATORS;
   for (let a = 0; a < 40; a++) {
-    const post = pick(REEL_GENERATORS, r)(r);
+    const post = pick(GENS.length ? GENS : REEL_GENERATORS, r)(r);
     if (!post) continue;
     if (recent.includes(post.sig) && a < 30) continue;
     post.hashtags = tags(r);
@@ -2348,18 +2399,44 @@ async function renderReel(page, post, base) {
   const framesDir = path.join(__dirname, 'reel_frames');
   if (fs.existsSync(framesDir)) fs.rmSync(framesDir, { recursive: true, force: true });
   fs.mkdirSync(framesDir);
-  const FPS = 24, SECS = 5, N = FPS * SECS, fn = REEL_FRAME[post.rlayout];
+  /* Five seconds is the literal floor for Reels tab eligibility and it gave
+     the clip no room for a second beat. Ten is still short enough to loop.
+     Override with GT_REEL_SECS if the watch-through data says otherwise. */
+  const FPS = 30, SECS = parseFloat(process.env.GT_REEL_SECS || '10'), N = Math.round(FPS * SECS);
+  const fn = REEL_FRAME[post.rlayout];
   const clip = { x: 0, y: 0, width: 1080, height: 1920 };
   for (let i = 0; i < N; i++) {
     const t = i / (N - 1);
     await page.setContent(`<!DOCTYPE html><html><head><meta charset="utf8"><style>*{margin:0;padding:0;box-sizing:border-box}</style></head><body>${fn(t, post)}</body></html>`, { waitUntil: 'domcontentloaded' });
     try { await page.evaluate(() => document.fonts && document.fonts.ready); } catch (e) {}
-    await page.screenshot({ path: path.join(framesDir, `f${String(i).padStart(3, '0')}.png`), clip });
+    await page.screenshot({ path: path.join(framesDir, `f${String(i).padStart(4, '0')}.png`), clip });
   }
   await page.screenshot({ path: base + '.jpg', type: 'jpeg', quality: 92, clip }); // last frame = cover
-  execFileSync('ffmpeg', ['-y', '-framerate', String(FPS), '-i', path.join(framesDir, 'f%03d.png'),
-    '-c:v', 'libx264', '-pix_fmt', 'yuv420p', '-movflags', '+faststart', base + '.mp4', '-loglevel', 'error']);
+  /* Mux the bed in. Instagram wants AAC at 48kHz and the audio has to live in
+     the file, so a missing bed is a silent Reel rather than a failed run: the
+     clip still goes out, it just goes out mute, which is what happened every
+     day before this. */
+  /* Alternate the two beds deterministically off the post signature, so the
+     same post always renders the same clip and consecutive posts do not share
+     a track. */
+  let h = 2166136261 >>> 0;
+  for (const ch of String(post.sig || base)) h = Math.imul(h ^ ch.charCodeAt(0), 16777619) >>> 0;
+  const bed = REEL_BEDS[h % REEL_BEDS.length];
+  const bedPath = path.join(__dirname, bed);
+  const args = ['-y', '-framerate', String(FPS), '-i', path.join(framesDir, 'f%04d.png')];
+  const hasBed = fs.existsSync(bedPath);
+  if (hasBed) args.push('-i', bedPath);
+  args.push('-c:v', 'libx264', '-pix_fmt', 'yuv420p', '-r', String(FPS), '-movflags', '+faststart');
+  if (hasBed) {
+    args.push('-c:a', 'aac', '-b:a', '128k', '-ar', '48000', '-ac', '2',
+      '-af', `atrim=0:${SECS},afade=t=out:st=${Math.max(0, SECS - 0.6)}:d=0.6`, '-shortest');
+  } else {
+    console.log('note: no audio bed found, the Reel will be silent');
+  }
+  args.push(base + '.mp4', '-loglevel', 'error');
+  execFileSync('ffmpeg', args);
   fs.rmSync(framesDir, { recursive: true, force: true });
+  if (hasBed) console.log(`  audio bed: ${bed}`);
 }
 function ffmpegAvailable() {
   try { execFileSync('ffmpeg', ['-version'], { stdio: 'ignore' }); return true; } catch { return false; }
