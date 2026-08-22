@@ -1,6 +1,6 @@
 {
-  "updated": "2026-08-21T05:59:14.748179Z",
-  "count": 106,
+  "updated": "2026-08-22T05:54:24.490681Z",
+  "count": 111,
   "posts": [
     {
       "sig": "prodclaim:funnel:Your funnel has one we",
@@ -25,6 +25,33 @@
         "shares": 0,
         "reach": 0,
         "engagement": 3
+      },
+      "engagement": 5,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "prodclaim:funnel:Your funnel has one we",
+      "layout": "prodclaim",
+      "file": "creatives/gt_auto_20260821_010129.jpg",
+      "is_reel": false,
+      "at": "2026-08-21T01:01:36.200803Z",
+      "caption": "Most trackers show you conversion rates. This one tells you what to do with them: which step is costing you the most, ho",
+      "permalink": "https://www.instagram.com/p/DcSHC2hFOnc/",
+      "ig": {
+        "likes": 0,
+        "comments": 5,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/DcSHC2hFOnc/",
+        "engagement": 5
+      },
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
       },
       "engagement": 5,
       "_ig_attempted": true
@@ -403,33 +430,6 @@
         "shares": 0,
         "reach": 0,
         "engagement": 1
-      },
-      "engagement": 4,
-      "_ig_attempted": true
-    },
-    {
-      "sig": "prodclaim:funnel:Your funnel has one we",
-      "layout": "prodclaim",
-      "file": "creatives/gt_auto_20260821_010129.jpg",
-      "is_reel": false,
-      "at": "2026-08-21T01:01:36.200803Z",
-      "caption": "Most trackers show you conversion rates. This one tells you what to do with them: which step is costing you the most, ho",
-      "permalink": "https://www.instagram.com/p/DcSHC2hFOnc/",
-      "ig": {
-        "likes": 0,
-        "comments": 4,
-        "saved": 0,
-        "shares": 0,
-        "reach": 0,
-        "permalink": "https://www.instagram.com/p/DcSHC2hFOnc/",
-        "engagement": 4
-      },
-      "fb": {
-        "reactions": 0,
-        "comments": 0,
-        "shares": 0,
-        "reach": 0,
-        "engagement": 0
       },
       "engagement": 4,
       "_ig_attempted": true
@@ -1914,6 +1914,33 @@
       "_ig_attempted": true
     },
     {
+      "sig": "car:twelve",
+      "layout": "carousel:twelve",
+      "file": "creatives/gt_car_20260821154228_1.jpg",
+      "is_reel": false,
+      "at": "2026-08-21T15:42:34.890690Z",
+      "caption": "Growth gets stuck in twelve places. Only one of them is yours this quarter.\n\nDemand side: acquisition, traffic, conversi",
+      "permalink": "https://www.instagram.com/p/DcTr7VUlps9/",
+      "ig": {
+        "likes": 1,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/DcTr7VUlps9/",
+        "engagement": 2
+      },
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 2,
+      "_ig_attempted": true
+    },
+    {
       "sig": "stat:$0The cost to find out what's really stu",
       "layout": "stat",
       "file": "creatives/gt_auto_20260731_024003.jpg",
@@ -2803,6 +2830,114 @@
       },
       "engagement": 1,
       "_ig_attempted": true
+    },
+    {
+      "sig": "prodshot:funnel:Stop guessing which fu",
+      "layout": "prodshot",
+      "file": "creatives/gt_auto_20260821_130101.jpg",
+      "is_reel": false,
+      "at": "2026-08-21T13:01:08.854446Z",
+      "caption": "Most trackers show you conversion rates. This one tells you what to do with them: which step is costing you the most, ho",
+      "permalink": "https://www.instagram.com/p/DcTZY_fFL59/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/DcTZY_fFL59/",
+        "engagement": 1
+      },
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 1,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "ba:stable>8 of 10",
+      "layout": "beforeafter",
+      "file": "creatives/gt_auto_20260821_170056.jpg",
+      "is_reel": false,
+      "at": "2026-08-21T17:01:02.379825Z",
+      "caption": "Conversion held. Volume did not.\n\nWhen one part of the funnel is steady and another is not, the constraint is usually ob",
+      "permalink": "https://www.instagram.com/p/DcT02B9Gqp6/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/DcT02B9Gqp6/",
+        "engagement": 1
+      },
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 1,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "prodsoon:Unit Economics Cockpit",
+      "layout": "prodsoon",
+      "file": "creatives/gt_auto_20260821_210059.jpg",
+      "is_reel": false,
+      "at": "2026-08-21T21:01:05.979555Z",
+      "caption": "Coming soon to the Growth Terminal store: Unit Economics Cockpit.\n\nCAC, LTV and payback in one view, so you know if grow",
+      "permalink": "https://www.instagram.com/p/DcUQURiEqMV/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/DcUQURiEqMV/",
+        "engagement": 1
+      },
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 1,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "prodsoon:Unit Economics Cockpit",
+      "layout": "prodsoon",
+      "file": "creatives/gt_auto_20260822_010050.jpg",
+      "is_reel": false,
+      "at": "2026-08-22T01:01:00.893345Z",
+      "caption": "Coming soon to the Growth Terminal store: Unit Economics Cockpit.\n\nCAC, LTV and payback in one view, so you know if grow",
+      "permalink": "https://www.instagram.com/p/DcUrxiVGf-d/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/DcUrxiVGf-d/",
+        "engagement": 1
+      },
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 1,
+      "_ig_attempted": true
     }
   ],
   "by_format": [
@@ -2855,20 +2990,12 @@
       "avg_engagement": 3.0
     },
     {
-      "layout": "carousel:twelve",
-      "posts": 3,
-      "engagement": 8,
-      "ig_engagement": 6,
-      "fb_engagement": 2,
-      "avg_engagement": 2.7
-    },
-    {
       "layout": "prodclaim",
       "posts": 7,
-      "engagement": 18,
-      "ig_engagement": 12,
+      "engagement": 19,
+      "ig_engagement": 13,
       "fb_engagement": 6,
-      "avg_engagement": 2.6
+      "avg_engagement": 2.7
     },
     {
       "layout": "carousel:plan",
@@ -2903,6 +3030,14 @@
       "avg_engagement": 2.5
     },
     {
+      "layout": "carousel:twelve",
+      "posts": 4,
+      "engagement": 10,
+      "ig_engagement": 8,
+      "fb_engagement": 2,
+      "avg_engagement": 2.5
+    },
+    {
       "layout": "contrast",
       "posts": 2,
       "engagement": 5,
@@ -2917,22 +3052,6 @@
       "ig_engagement": 6,
       "fb_engagement": 5,
       "avg_engagement": 2.2
-    },
-    {
-      "layout": "prodsoon",
-      "posts": 7,
-      "engagement": 15,
-      "ig_engagement": 10,
-      "fb_engagement": 5,
-      "avg_engagement": 2.1
-    },
-    {
-      "layout": "prodshot",
-      "posts": 7,
-      "engagement": 15,
-      "ig_engagement": 7,
-      "fb_engagement": 8,
-      "avg_engagement": 2.1
     },
     {
       "layout": "card",
@@ -2959,6 +3078,14 @@
       "avg_engagement": 2.0
     },
     {
+      "layout": "prodshot",
+      "posts": 8,
+      "engagement": 16,
+      "ig_engagement": 8,
+      "fb_engagement": 8,
+      "avg_engagement": 2.0
+    },
+    {
       "layout": "behaviourcall",
       "posts": 1,
       "engagement": 2,
@@ -2980,6 +3107,14 @@
       "engagement": 19,
       "ig_engagement": 13,
       "fb_engagement": 6,
+      "avg_engagement": 1.9
+    },
+    {
+      "layout": "prodsoon",
+      "posts": 9,
+      "engagement": 17,
+      "ig_engagement": 12,
+      "fb_engagement": 5,
       "avg_engagement": 1.9
     },
     {
@@ -3029,13 +3164,21 @@
       "ig_engagement": 1,
       "fb_engagement": 0,
       "avg_engagement": 1.0
+    },
+    {
+      "layout": "beforeafter",
+      "posts": 1,
+      "engagement": 1,
+      "ig_engagement": 1,
+      "fb_engagement": 0,
+      "avg_engagement": 1.0
     }
   ],
   "collection": {
-    "ig_attempted": 106,
-    "ig_succeeded": 106,
+    "ig_attempted": 111,
+    "ig_succeeded": 111,
     "ig_errors": [],
     "ig_error_count": 0,
-    "fb_succeeded": 96
+    "fb_succeeded": 101
   }
 }
