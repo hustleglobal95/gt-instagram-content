@@ -53,6 +53,19 @@ def _get(base, path, params):
 # metric refuses the whole call, so walk down rather than give up. Whatever
 # happens is recorded: "the API would not tell us" and "nobody saw it" are
 # different facts and only one of them belongs in a ranking.
+# Facebook retired post_impressions_unique and published no field-level mapping
+# for what replaces it. Rather than guess one name and swallow the failure the
+# way this file used to, try the candidates and record which one the API
+# actually accepts, so the next person reading this knows.
+FB_REACH_LADDER = [
+    "post_impressions_unique",
+    "post_views_unique",
+    "post_unique_media_viewers",
+    "post_media_viewers_unique",
+    "post_impressions",
+    "post_views",
+]
+
 IG_METRIC_LADDER = [
     "reach,saved,shares,total_interactions,views",
     "reach,saved,shares",
@@ -110,7 +123,7 @@ def ig_metrics(media_id, is_reel, own_comments=0):
 
 
 def fb_metrics(post_id):
-    out = {"reactions": 0, "comments": 0, "shares": 0, "reach": 0}
+    out = {"reactions": 0, "comments": 0, "shares": 0, "reach": 0, "reach_metric": ""}
     base = _get(FB_API, post_id, {
         "fields": "reactions.summary(true),comments.summary(true),shares",
         "access_token": FB_TOKEN})
@@ -119,13 +132,18 @@ def fb_metrics(post_id):
     out["reactions"] = int((base.get("reactions") or {}).get("summary", {}).get("total_count") or 0)
     out["comments"] = int((base.get("comments") or {}).get("summary", {}).get("total_count") or 0)
     out["shares"] = int((base.get("shares") or {}).get("count") or 0)
-    ins = _get(FB_API, f"{post_id}/insights", {"metric": "post_impressions_unique", "access_token": FB_TOKEN})
-    if not isinstance(ins.get("data"), list):
-        FB_ERRORS.append({"post_id": post_id,
-                          "message": "reach unavailable: " + (ins.get("error") or {}).get("message", "no data field")})
-    if isinstance(ins.get("data"), list) and ins["data"]:
-        vals = ins["data"][0].get("values") or [{}]
-        out["reach"] = int((vals[0] or {}).get("value") or 0)
+    last_err = ""
+    for metric in FB_REACH_LADDER:
+        ins = _get(FB_API, f"{post_id}/insights", {"metric": metric, "access_token": FB_TOKEN})
+        if isinstance(ins.get("data"), list):
+            if ins["data"]:
+                vals = ins["data"][0].get("values") or [{}]
+                out["reach"] = int((vals[0] or {}).get("value") or 0)
+            out["reach_metric"] = metric
+            break
+        last_err = (ins.get("error") or {}).get("message", "no data field")
+    if not out.get("reach_metric"):
+        FB_ERRORS.append({"post_id": post_id, "message": "reach unavailable: " + last_err})
     out["engagement"] = out["reactions"] + out["comments"] + out["shares"]
     return out
 
@@ -206,6 +224,9 @@ def main():
             "ig_with_insights": sum(1 for r in rows if (r.get("ig") or {}).get("insights_ok")),
             "ig_reach_total": sum((r.get("ig") or {}).get("reach", 0) for r in rows),
             "fb_reach_total": sum((r.get("fb") or {}).get("reach", 0) for r in rows),
+            # Which metric name Facebook accepted, so the retirement of the next
+            # one is a one line change instead of another silent zero.
+            "fb_reach_metric": next((m for m in ((r.get("fb") or {}).get("reach_metric") for r in rows) if m), ""),
             "own_comments_excluded": sum((r.get("ig") or {}).get("own_comments", 0) for r in rows),
         },
     }
@@ -213,7 +234,8 @@ def main():
         json.dump(out, f, indent=2)
     print(f"Wrote {OUT_FILE}: {len(rows)} posts, {len(fmt)} formats.")
     c = out["collection"]
-    print(f"Reach: {c['ig_reach_total']} on Instagram, {c['fb_reach_total']} on Facebook. "
+    print(f"Reach: {c['ig_reach_total']} on Instagram, {c['fb_reach_total']} on Facebook "
+          f"(via {c['fb_reach_metric'] or 'no working metric'}). "
           f"{c['ig_with_insights']}/{c['ig_attempted']} posts returned insights.")
     print(f"Excluded {c['own_comments_excluded']} comment(s) this app posted on its own posts.")
     if c["ig_with_insights"] == 0 and c["ig_attempted"]:
