@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-23T14:40:30.169Z",
+  "updated": "2026-08-23T15:04:45.206Z",
   "count": 157,
   "ranking_basis": "per_1k",
   "min_views_for_rate": 25,
@@ -21,13 +21,17 @@
     "chain_parts_folded_in": 133,
     "posts_missing_from_local_log": 35,
     "outbound_replies": 267,
+    "outbound_reply_views": 35473,
+    "outbound_reply_interactions": 128,
+    "outbound_replies_measured": 267,
+    "total_views_incl_replies": 48185,
     "summed_views": 12712,
-    "platform_views": null,
-    "ratio": null
+    "platform_views": 44492,
+    "ratio": 1.083
   },
   "platform": {
     "Markus": {
-      "views": 0,
+      "views": 44492,
       "likes": 390,
       "replies": 282,
       "reposts": 9,
