@@ -1,6 +1,6 @@
 {
-  "updated": "2026-08-22T05:54:24.490681Z",
-  "count": 111,
+  "updated": "2026-08-23T05:57:31.887051Z",
+  "count": 116,
   "posts": [
     {
       "sig": "prodclaim:funnel:Your funnel has one we",
@@ -1245,6 +1245,60 @@
       "_ig_attempted": true
     },
     {
+      "sig": "car:twelve",
+      "layout": "carousel:twelve",
+      "file": "creatives/gt_car_20260822153039_1.jpg",
+      "is_reel": false,
+      "at": "2026-08-22T15:30:46.493473Z",
+      "caption": "Growth gets stuck in twelve places. Only one of them is yours this quarter.\n\nDemand side: acquisition, traffic, conversi",
+      "permalink": "https://www.instagram.com/p/DcWPXeSDH0O/",
+      "ig": {
+        "likes": 1,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/DcWPXeSDH0O/",
+        "engagement": 2
+      },
+      "fb": {
+        "reactions": 1,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 1
+      },
+      "engagement": 3,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "ba:$0>$24k",
+      "layout": "beforeafter",
+      "file": "creatives/gt_auto_20260822_210053.jpg",
+      "is_reel": false,
+      "at": "2026-08-22T21:00:59.552998Z",
+      "caption": "Every quarter the wrong fix runs, this gap holds.\n\nEffort is rarely the problem. Aim is. Growth Terminal ranks the twelv",
+      "permalink": "https://www.instagram.com/p/DcW1GYFG3MF/",
+      "ig": {
+        "likes": 1,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/DcW1GYFG3MF/",
+        "engagement": 2
+      },
+      "fb": {
+        "reactions": 1,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 1
+      },
+      "engagement": 3,
+      "_ig_attempted": true
+    },
+    {
       "sig": "reelcard:Pricing",
       "layout": "reel:card",
       "file": "creatives/gt_reel_20260801_010107.jpg",
@@ -1936,6 +1990,60 @@
         "shares": 0,
         "reach": 0,
         "engagement": 0
+      },
+      "engagement": 2,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "prodshot:funnel:Stop guessing which fu",
+      "layout": "prodshot",
+      "file": "creatives/gt_auto_20260822_130059.jpg",
+      "is_reel": false,
+      "at": "2026-08-22T13:01:07.177555Z",
+      "caption": "Your funnel has one step leaking more than the rest. The Funnel & Conversion Tracker finds it, tells you what fixing it ",
+      "permalink": "https://www.instagram.com/p/DcV-Lq0lmd-/",
+      "ig": {
+        "likes": 1,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/DcV-Lq0lmd-/",
+        "engagement": 2
+      },
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 2,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "dem:Stop guessing which fix matter",
+      "layout": "demoted",
+      "file": "creatives/gt_auto_20260822_170110.jpg",
+      "is_reel": false,
+      "at": "2026-08-22T17:01:15.998246Z",
+      "caption": "Stop guessing which fix matters.\n\nEffort is rarely the problem. Aim is. Growth Terminal ranks the twelve places growth g",
+      "permalink": "https://www.instagram.com/p/DcWZqjmG7BC/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/DcWZqjmG7BC/",
+        "engagement": 1
+      },
+      "fb": {
+        "reactions": 1,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 1
       },
       "engagement": 2,
       "_ig_attempted": true
@@ -2938,6 +3046,33 @@
       },
       "engagement": 1,
       "_ig_attempted": true
+    },
+    {
+      "sig": "prodclaim:funnel:Stop guessing which fu",
+      "layout": "prodclaim",
+      "file": "creatives/gt_auto_20260823_010100.jpg",
+      "is_reel": false,
+      "at": "2026-08-23T01:01:05.481008Z",
+      "caption": "Most trackers show you conversion rates. This one tells you what to do with them: which step is costing you the most, ho",
+      "permalink": "https://www.instagram.com/p/DcXQk3kDEfw/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "permalink": "https://www.instagram.com/p/DcXQk3kDEfw/",
+        "engagement": 1
+      },
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "engagement": 0
+      },
+      "engagement": 1,
+      "_ig_attempted": true
     }
   ],
   "by_format": [
@@ -2990,12 +3125,12 @@
       "avg_engagement": 3.0
     },
     {
-      "layout": "prodclaim",
-      "posts": 7,
-      "engagement": 19,
-      "ig_engagement": 13,
-      "fb_engagement": 6,
-      "avg_engagement": 2.7
+      "layout": "carousel:twelve",
+      "posts": 5,
+      "engagement": 13,
+      "ig_engagement": 10,
+      "fb_engagement": 3,
+      "avg_engagement": 2.6
     },
     {
       "layout": "carousel:plan",
@@ -3030,11 +3165,11 @@
       "avg_engagement": 2.5
     },
     {
-      "layout": "carousel:twelve",
-      "posts": 4,
-      "engagement": 10,
-      "ig_engagement": 8,
-      "fb_engagement": 2,
+      "layout": "prodclaim",
+      "posts": 8,
+      "engagement": 20,
+      "ig_engagement": 14,
+      "fb_engagement": 6,
       "avg_engagement": 2.5
     },
     {
@@ -3079,9 +3214,9 @@
     },
     {
       "layout": "prodshot",
-      "posts": 8,
-      "engagement": 16,
-      "ig_engagement": 8,
+      "posts": 9,
+      "engagement": 18,
+      "ig_engagement": 10,
       "fb_engagement": 8,
       "avg_engagement": 2.0
     },
@@ -3099,6 +3234,22 @@
       "engagement": 2,
       "ig_engagement": 2,
       "fb_engagement": 0,
+      "avg_engagement": 2.0
+    },
+    {
+      "layout": "beforeafter",
+      "posts": 2,
+      "engagement": 4,
+      "ig_engagement": 3,
+      "fb_engagement": 1,
+      "avg_engagement": 2.0
+    },
+    {
+      "layout": "demoted",
+      "posts": 1,
+      "engagement": 2,
+      "ig_engagement": 1,
+      "fb_engagement": 1,
       "avg_engagement": 2.0
     },
     {
@@ -3164,21 +3315,13 @@
       "ig_engagement": 1,
       "fb_engagement": 0,
       "avg_engagement": 1.0
-    },
-    {
-      "layout": "beforeafter",
-      "posts": 1,
-      "engagement": 1,
-      "ig_engagement": 1,
-      "fb_engagement": 0,
-      "avg_engagement": 1.0
     }
   ],
   "collection": {
-    "ig_attempted": 111,
-    "ig_succeeded": 111,
+    "ig_attempted": 116,
+    "ig_succeeded": 116,
     "ig_errors": [],
     "ig_error_count": 0,
-    "fb_succeeded": 101
+    "fb_succeeded": 106
   }
 }
