@@ -2134,5 +2134,27 @@
       "markusreidgt": "18325840408273077"
     },
     "errors": {}
+  },
+  {
+    "at": "2026-08-23T02:07:25.555Z",
+    "text": "AI moved the cost of building down and did nothing to the cost of being chosen.",
+    "parts": [
+      "AI moved the cost of building down and did nothing to the cost of being chosen.",
+      "Which means the hard part is further along than it used to be, and most people are still optimising the easy part.",
+      "Speed of shipping went to nearly zero and speed of being believed did not move at all.",
+      "The work that used to be optional is now the whole job.",
+      "Spend the time you saved building on the part that got harder.",
+      "That gap is the entire strategic situation right now."
+    ],
+    "isThread": true,
+    "pillar": "systems",
+    "kind": "thread",
+    "accounts": [
+      "markusreidgt"
+    ],
+    "ids": {
+      "markusreidgt": "17903794758512879"
+    },
+    "errors": {}
   }
 ]
