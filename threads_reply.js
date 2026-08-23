@@ -34,6 +34,10 @@ const { MECHANICS, COMMUNITY, OFFER_POLICY, AUDIENCES } = require('./threads_kb'
 const { guardThread } = require('./threads_guard');
 
 const HOST = 'graph.threads.net';
+// Meta moved the Threads API to graph.threads.com. The legacy .net host still
+// answers the read and reply endpoints but returns HTTP 500 for keyword_search,
+// which is what made outbound look like a missing permission for weeks.
+const SEARCH_HOST = 'graph.threads.com';
 const API = '/v1.0';
 const STATE = path.join(__dirname, 'threads_reply_log.json');
 
@@ -42,10 +46,10 @@ const DAILY_TARGET = COMMUNITY.repliesPerDay.target;        // [10, 15]
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
-function getJson(pathname, params) {
+function getJson(pathname, params, host) {
   const qs = new URLSearchParams(params).toString();
   return new Promise((resolve, reject) => {
-    const req = https.request({ host: HOST, path: API + pathname + '?' + qs, method: 'GET' }, (res) => {
+    const req = https.request({ host: host || HOST, path: API + pathname + '?' + qs, method: 'GET' }, (res) => {
       let d = '';
       res.on('data', (c) => (d += c));
       res.on('end', () => {
@@ -359,12 +363,9 @@ async function fetchInbound(account, opts = {}) {
 /* ---------------------------------------------------------------------------
    Outbound: other people's posts, by keyword. Needs threads_keyword_search.
    --------------------------------------------------------------------------- */
-/* Threads keyword search rejected every multi word phrase with HTTP 500 or
- * error code 1, while the permission itself is granted. Single words are the
- * shape the endpoint accepts, so the list is single words now. */
 const KEYWORDS = [
-  'freelancer', 'invoice', 'etsy', 'solopreneur',
-  'spreadsheet', 'clients', 'pricing', 'launch',
+  'digital product', 'first customer', 'launched today', 'building in public',
+  'tampa small business', 'ai startup', 'sell online', 'no sales yet',
 ];
 
 async function fetchOutbound(account, opts = {}) {
@@ -376,10 +377,12 @@ async function fetchOutbound(account, opts = {}) {
   for (const q of tried) {
     try {
       const res = await getJson('/keyword_search', {
-        q, search_type: 'TOP', fields: 'id,text,username,timestamp,permalink', access_token: token,
-      });
+        q, search_type: 'TOP', media_type: 'TEXT', limit: 25,
+        fields: 'id,text,username,timestamp,permalink,is_reply', access_token: token,
+      }, SEARCH_HOST);
       for (const p of (res.data || [])) {
         if (p.username && account.username && p.username === account.username) continue;
+        if (p.is_reply) continue;
         found.push({ id: p.id, text: p.text, username: p.username, ts: p.timestamp, keyword: q, outbound: true });
       }
     } catch (e) {
