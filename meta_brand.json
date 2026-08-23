@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-08-22T15:44:59.720Z",
-  "media_file": "creatives/gt_auto_20260822_154459.jpg",
+  "generated_at": "2026-08-23T15:46:09.476Z",
+  "media_file": "creatives/gt_auto_20260823_154609.jpg",
   "is_reel": false,
-  "layout": "svcfeat",
+  "layout": "svcline",
   "editorial_bg": null,
   "person": null,
   "qa": null,
-  "caption": "A generic model discounts to avoid a hard question. An assistant trained on your business works the objection and keeps the margin, and it runs in the background rather than waiting for someone to remember it.\n\nDiagnose your #1 constraint free. Link in bio.",
-  "hashtags": "#growthterminal #bootstrappedfounder #startupmetrics #b2bsaas",
-  "first_comment": "What is the objection your team discounts to avoid?",
+  "caption": "More output is not the win. Growth Terminal assistants work from your business context, and their results get evaluated rather than assumed, so the work that compounds is the work that was actually right.\n\nDiagnose your #1 constraint free. Link in bio.",
+  "hashtags": "#growthterminal #uniteconomics #agencylife #saasgrowth",
+  "first_comment": "How would you know if your automation had been wrong all quarter?",
   "alt_text": "",
-  "sig": "svcfeat:signal:AI ASSISTANTS|It works the objection."
+  "sig": "svcline:paper:Without evaluation it also scales mistak"
 }
