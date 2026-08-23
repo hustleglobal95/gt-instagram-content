@@ -12,13 +12,22 @@
  *
  * Same credentials as the poster, so nothing new to configure:
  *   THREADS_ACCOUNTS   JSON array of {name,userId,token}
- *   GT_THREADS_LOOKBACK   how many recent posts to refresh (default 200)
+ *   GT_THREADS_MAX_MEDIA    media to pull per edge per account (default 400)
+ *   GT_THREADS_WINDOW_DAYS  window for the account level cross check (default 30)
  *
- * Two things worth knowing about the numbers.
+ * Three things worth knowing about the numbers.
  *
- * A thread's id is the id of its hook. Replies are chained onto it, so the
- * metrics here describe the whole chain as readers experienced it, which is
- * what you want when comparing a thread against a single post.
+ * A thread's id is the id of its hook, and for a long time this file measured
+ * only that hook. Every chained part after it is its own media with its own
+ * views, so a six part thread was being counted as one sixth of itself. The
+ * collector now enumerates media from the API rather than trusting the local
+ * posted log, and folds each chain part back into the post it belongs to.
+ *
+ * It also asks the account level endpoint what the platform thinks the account
+ * got over the same window, and writes that number next to the summed one. If
+ * the two disagree, the file says so. A collector that quietly measures a
+ * fraction of an account is worse than no collector, because the learning loop
+ * believes it.
  *
  * Raw engagement flatters old posts, because they have had longer to collect
  * it. So this ranks on engagement per thousand views where views exist, and
@@ -38,7 +47,12 @@ const POSTED_FILE = path.join(__dirname, 'threads_posted_log.json');
 /* Overridable so the collector can be exercised against a stub without ever
    writing invented numbers into the file the dashboard trusts. */
 const OUT_FILE = process.env.GT_THREADS_PERF_OUT || path.join(__dirname, 'threads_performance_log.json');
-const LOOKBACK = parseInt(process.env.GT_THREADS_LOOKBACK || '200', 10);
+/* How much media to pull per edge per account. Threads chains mean the reply
+   edge is several times larger than the post edge, so this is generous. */
+const MAX_MEDIA = parseInt(process.env.GT_THREADS_MAX_MEDIA || '400', 10);
+/* Window for the account level cross check. The endpoint defaults to two days
+   if you omit since and until, which is not a useful comparison. */
+const WINDOW_DAYS = parseInt(process.env.GT_THREADS_WINDOW_DAYS || '30', 10);
 
 /* Engagement per thousand views stops meaning anything when the views are in
    single figures. The first real run proved it: a post with three views and
@@ -89,6 +103,59 @@ function flatten(payload) {
     else if (typeof m.total_value === 'object' && m.total_value && typeof m.total_value.value === 'number') out[m.name] = m.total_value.value;
   }
   return out;
+}
+
+/* Walk a paged edge until it runs out or we hit the cap. The old collector
+   read threads_posted_log.json instead, which meant anything the log did not
+   know about, a post made by hand, a post from the backup workflow, every
+   chained part of every thread, was invisible to it. */
+async function allPages(pathname, params, max, errors, label) {
+  const out = [];
+  let after = null;
+  for (let page = 0; page < 40 && out.length < max; page++) {
+    try {
+      const q = { ...params, limit: 100 };
+      if (after) q.after = after;
+      const r = await getJson(pathname, q);
+      const batch = r.data || [];
+      out.push(...batch);
+      after = r.paging && r.paging.cursors && r.paging.cursors.after;
+      if (!after || !batch.length) break;
+      await sleep(150);
+    } catch (e) {
+      errors.push({ mediaId: label || pathname, message: `${label || pathname} page ${page}: ${e.message}` });
+      break;
+    }
+  }
+  return out.slice(0, max);
+}
+
+const MEDIA_FIELDS = 'id,timestamp,text,media_type,is_quote_post';
+const REPLY_FIELDS = 'id,timestamp,text,media_type,root_post,replied_to,is_reply_owned_by_me';
+
+/* Everything this account has published: its own posts, and its own replies,
+   which is where the chained parts of every thread actually live. */
+async function enumerateMedia(account, max, errors) {
+  const { userId, token } = account;
+  const posts = await allPages(`/${userId}/threads`,
+    { fields: MEDIA_FIELDS, access_token: token }, max, errors, `${account.name} threads`);
+  const replies = await allPages(`/${userId}/replies`,
+    { fields: REPLY_FIELDS, access_token: token }, max, errors, `${account.name} replies`);
+  return { posts, replies };
+}
+
+/* What the platform says the account got, so the summed figure has something
+   to be checked against instead of being taken on faith. */
+async function accountInsights(account, sinceUnix, errors) {
+  const metrics = ['views', 'likes', 'replies', 'reposts', 'quotes', 'followers_count'];
+  const params = { metric: metrics.join(','), access_token: account.token };
+  if (sinceUnix) { params.since = sinceUnix; params.until = Math.floor(Date.now() / 1000); }
+  try {
+    return flatten(await getJson(`/${account.userId}/threads_insights`, params));
+  } catch (e) {
+    errors.push({ mediaId: `${account.name} account insights`, message: e.message });
+    return null;
+  }
 }
 
 async function metricsFor(mediaId, token, errors) {
@@ -146,83 +213,129 @@ async function main() {
   if (!raw) throw new Error('THREADS_ACCOUNTS env var is not set (JSON array of {name,userId,token}).');
   let accounts;
   try { accounts = JSON.parse(raw); } catch { throw new Error('THREADS_ACCOUNTS is not valid JSON.'); }
-  const tokenOf = new Map(accounts.map((a) => [a.name, a.token]));
 
+  /* Metadata the API does not carry: which pillar a post belongs to, which
+     shape it was written as. That lives in the local posted log, so the log is
+     still read, but only to decorate media the API reported. It is no longer
+     the list of what exists. */
   let log = [];
   try { log = JSON.parse(fs.readFileSync(POSTED_FILE, 'utf8')); } catch { log = []; }
-  const recent = log.slice(-LOOKBACK);
+  const metaById = new Map();
+  for (const rec of log) {
+    for (const id of Object.values(rec.ids || {})) {
+      if (id) metaById.set(String(id), rec);
+    }
+  }
 
   const errors = [];
   let attempted = 0, succeeded = 0, reduced = 0;
-  const posts = [];
 
-  for (const rec of recent) {
-    const ids = rec.ids || {};
-    const totals = {};
-    let any = false, full = true;
-    let permalink = '';
+  const units = [];          // one entry per piece of content: a single post, or a whole thread
+  const outboundReplies = [];  // replies to other people, which are outreach, not content
+  const platform = {};
+  let apiPosts = 0, apiReplies = 0;
 
-    for (const [acct, mediaId] of Object.entries(ids)) {
-      const token = tokenOf.get(acct);
-      if (!token || !mediaId) continue;
-      attempted++;
-      const got = await metricsFor(mediaId, token, errors);
-      await sleep(120);
-      if (!got) continue;
-      succeeded++;
-      if (!got.full) full = false;
-      any = true;
-      for (const [k, v] of Object.entries(got.m)) totals[k] = (totals[k] || 0) + v;
-      if (!permalink) permalink = await permalinkFor(mediaId, token);
+  const sinceUnix = WINDOW_DAYS > 0
+    ? Math.max(1712991600, Math.floor(Date.now() / 1000) - WINDOW_DAYS * 86400)
+    : null;
+
+  for (const account of accounts) {
+    if (!account || !account.userId || !account.token) continue;
+
+    const acct = await accountInsights(account, sinceUnix, errors);
+    if (acct) platform[account.name || account.userId] = acct;
+
+    const { posts, replies } = await enumerateMedia(account, MAX_MEDIA, errors);
+    apiPosts += posts.length;
+    apiReplies += replies.length;
+
+    const ownPostIds = new Set(posts.map((p) => String(p.id)));
+
+    /* A chained thread part is published as a reply to our own hook, so it
+       lands in the replies edge, not the posts edge. That is exactly why it
+       was never being counted. */
+    const chainsByRoot = new Map();
+    for (const r of replies) {
+      const rootId = r.root_post && r.root_post.id ? String(r.root_post.id) : null;
+      if (rootId && ownPostIds.has(rootId)) {
+        if (!chainsByRoot.has(rootId)) chainsByRoot.set(rootId, []);
+        chainsByRoot.get(rootId).push(r);
+      } else {
+        outboundReplies.push({ account: account.name, id: String(r.id), at: r.timestamp, rootId });
+      }
     }
 
-    if (!any) continue;
-    if (!full) reduced++;
+    for (const post of posts) {
+      const id = String(post.id);
+      const chain = chainsByRoot.get(id) || [];
+      const members = [post, ...chain];
 
-    const engagement = sum(totals, INTERACTIONS);
-    const views = typeof totals.views === 'number' ? totals.views : null;
-    posts.push({
-      at: rec.at,
-      pillar: rec.pillar || 'unknown',
-      kind: rec.kind || 'unknown',
-      isThread: !!rec.isThread,
-      parts: Array.isArray(rec.parts) ? rec.parts.length : 1,
-      text: String(rec.text || '').slice(0, 240),
-      accounts: Object.keys(ids),
-      permalink,
-      metrics: totals,
-      views,
-      engagement,
-      /* engagement per thousand views: the only comparison that is fair
-         between a post from last week and one from this morning. */
-      per_1k: views && views > 0 ? +((engagement / views) * 1000).toFixed(2) : null,
-      /* Enough views for the rate to be worth reading. */
-      rateReliable: typeof views === 'number' && views >= MIN_VIEWS_FOR_RATE,
-      basis: views && views >= MIN_VIEWS_FOR_RATE ? 'per_1k' : 'total',
-    });
+      const totals = {};
+      let any = false, full = true, measured = 0;
+
+      for (const media of members) {
+        attempted++;
+        const got = await metricsFor(media.id, account.token, errors);
+        await sleep(120);
+        if (!got) continue;
+        succeeded++;
+        measured++;
+        if (!got.full) full = false;
+        any = true;
+        for (const [k, v] of Object.entries(got.m)) totals[k] = (totals[k] || 0) + v;
+      }
+
+      if (!any) continue;
+      if (!full) reduced++;
+
+      const rec = metaById.get(id) || {};
+      const engagement = sum(totals, INTERACTIONS);
+      const views = typeof totals.views === 'number' ? totals.views : null;
+
+      units.push({
+        at: post.timestamp || rec.at || null,
+        pillar: rec.pillar || 'unknown',
+        kind: rec.kind || 'unknown',
+        isThread: chain.length > 0 || !!rec.isThread,
+        parts: members.length,
+        parts_measured: measured,
+        /* Whether the local log knew this post existed at all. Anything false
+           here was going out without ever being learned from. */
+        in_posted_log: metaById.has(id),
+        text: String(post.text || rec.text || '').slice(0, 240),
+        accounts: [account.name],
+        permalink: await permalinkFor(post.id, account.token),
+        metrics: totals,
+        views,
+        engagement,
+        per_1k: views && views > 0 ? +((engagement / views) * 1000).toFixed(2) : null,
+        rateReliable: typeof views === 'number' && views >= MIN_VIEWS_FOR_RATE,
+        basis: views && views >= MIN_VIEWS_FOR_RATE ? 'per_1k' : 'total',
+      });
+      await sleep(60);
+    }
   }
 
-  /* Two tiers. Posts with enough views rank on rate, because that is the fair
-     comparison. Everything else falls below them and ranks on raw interactions,
-     because a rate computed on nine views is not a comparison at all. */
+  const posts = units;
+
   const ranked = [...posts].sort((a, b) => {
     if (a.rateReliable !== b.rateReliable) return a.rateReliable ? -1 : 1;
     if (a.rateReliable) return (b.per_1k ?? -1) - (a.per_1k ?? -1) || b.engagement - a.engagement;
     return b.engagement - a.engagement || (b.views ?? 0) - (a.views ?? 0);
   });
 
+  const summedViews = posts.reduce((n, p) => n + (p.views || 0), 0);
+  const platformViews = Object.values(platform)
+    .reduce((n, m) => n + (typeof m.views === 'number' ? m.views : 0), 0);
+
   const out = {
     updated: new Date().toISOString(),
     count: posts.length,
-    /* If no post came back with a views number, every ranking in this file is
-       a raw total and therefore biased towards whatever has been up longest.
-       The dashboard reads this flag and says so instead of pretending. */
     ranking_basis: posts.some((p) => p.basis === 'per_1k') ? 'per_1k' : 'total',
     min_views_for_rate: MIN_VIEWS_FOR_RATE,
     rate_eligible: posts.filter((p) => p.rateReliable).length,
-    /* Reach totals, which stay meaningful when the rates do not. */
     reach: {
-      views: posts.reduce((n, p) => n + (p.views || 0), 0),
+      views: summedViews,
       interactions: posts.reduce((n, p) => n + p.engagement, 0),
       median_views: (() => {
         const v = posts.map((p) => p.views || 0).sort((a, b) => a - b);
@@ -231,6 +344,23 @@ async function main() {
       })(),
       zero_interaction_posts: posts.filter((p) => p.engagement === 0).length,
     },
+    /* The honesty block. summed is what this file measured, platform is what
+       the account level endpoint reports for the same window. A ratio far from
+       1 means the collector is still blind to something, and every ranking
+       below is drawn from a sample rather than the account. */
+    coverage: {
+      window_days: WINDOW_DAYS,
+      media_from_api: { posts: apiPosts, replies: apiReplies },
+      content_units: posts.length,
+      media_measured: succeeded,
+      chain_parts_folded_in: posts.reduce((n, p) => n + Math.max(0, p.parts - 1), 0),
+      posts_missing_from_local_log: posts.filter((p) => !p.in_posted_log).length,
+      outbound_replies: outboundReplies.length,
+      summed_views: summedViews,
+      platform_views: platformViews || null,
+      ratio: platformViews ? +(summedViews / platformViews).toFixed(3) : null,
+    },
+    platform,
     top: ranked.slice(0, 10),
     posts: ranked,
     by_pillar: group(posts, 'pillar'),
@@ -240,9 +370,15 @@ async function main() {
   };
 
   fs.writeFileSync(OUT_FILE, JSON.stringify(out, null, 2));
-  console.log(`Threads insights: ${succeeded}/${attempted} media fetched across ${posts.length} posts.`);
-  console.log(`Ranking basis: ${out.ranking_basis}. ${out.rate_eligible} of ${posts.length} posts cleared ${MIN_VIEWS_FOR_RATE} views and are ranked on rate.`);
-  console.log(`Reach: ${out.reach.views} views, ${out.reach.interactions} interactions, median ${out.reach.median_views} views per post.`);
+  console.log(`Threads insights: ${succeeded}/${attempted} media fetched across ${posts.length} pieces of content.`);
+  console.log(`From the API: ${apiPosts} posts, ${apiReplies} replies. ${out.coverage.chain_parts_folded_in} chain parts folded into their posts, ${outboundReplies.length} replies to other people set aside.`);
+  console.log(`${out.coverage.posts_missing_from_local_log} post(s) the local posted log did not know about.`);
+  if (platformViews) {
+    console.log(`Coverage: measured ${summedViews} views against ${platformViews} reported by the platform, ratio ${out.coverage.ratio}.`);
+  } else {
+    console.log(`Coverage: measured ${summedViews} views. The account level endpoint returned nothing, so there is no cross check this run.`);
+  }
+  console.log(`Ranking basis: ${out.ranking_basis}. ${out.rate_eligible} of ${posts.length} cleared ${MIN_VIEWS_FOR_RATE} views and are ranked on rate.`);
   if (errors.length) console.log(`${errors.length} error(s), first: ${errors[0].message}`);
   for (const p of out.top.slice(0, 5)) {
     console.log(`  ${p.per_1k !== null ? p.per_1k + '/1k' : p.engagement + ' total'}  ${p.pillar}/${p.kind}  ${p.text.split('\n')[0].slice(0, 60)}`);

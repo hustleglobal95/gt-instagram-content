@@ -49,9 +49,27 @@ def _get(base, path, params):
     return j
 
 
-def ig_metrics(media_id, is_reel):
-    """Base counts always; insights (reach/saved/shares) best-effort."""
-    out = {"likes": 0, "comments": 0, "saved": 0, "shares": 0, "reach": 0, "permalink": ""}
+# Insight metric sets, widest first. A token or a media type that refuses one
+# metric refuses the whole call, so walk down rather than give up. Whatever
+# happens is recorded: "the API would not tell us" and "nobody saw it" are
+# different facts and only one of them belongs in a ranking.
+IG_METRIC_LADDER = [
+    "reach,saved,shares,total_interactions,views",
+    "reach,saved,shares",
+    "reach",
+]
+
+
+def ig_metrics(media_id, is_reel, own_comments=0):
+    """Base counts always; insights (reach/saved/shares) walked down a ladder.
+
+    own_comments is how many comments this app posted on the media itself. The
+    poster leaves a first comment on almost every post, and counting it as
+    engagement means the account has been applauding itself into its own
+    learning loop, giving every post the same invented floor."""
+    out = {"likes": 0, "comments": 0, "saved": 0, "shares": 0, "reach": 0,
+           "views": 0, "permalink": "", "insights_ok": False, "insights_metrics": "",
+           "own_comments": int(own_comments or 0), "comments_external": 0}
     base = _get(IG_API, media_id, {"fields": "like_count,comments_count,permalink", "access_token": IG_TOKEN})
     if "error" in base:
         msg = (base.get("error") or {}).get("message", "unknown error")
@@ -64,17 +82,30 @@ def ig_metrics(media_id, is_reel):
     out["likes"] = int(base.get("like_count") or 0)
     out["comments"] = int(base.get("comments_count") or 0)
     out["permalink"] = base.get("permalink", "")
-    # Insights: metric set differs for reels vs feed; both optional.
-    metric = "reach,saved,shares" if not is_reel else "reach,saved,shares"
-    ins = _get(IG_API, f"{media_id}/insights", {"metric": metric, "access_token": IG_TOKEN})
-    if isinstance(ins.get("data"), list):
-        for m in ins["data"]:
-            name = m.get("name")
-            vals = m.get("values") or [{}]
-            v = int((vals[0] or {}).get("value") or 0)
-            if name in out:
-                out[name] = v
-    out["engagement"] = out["likes"] + out["comments"] + out["saved"] + out["shares"]
+    # Insights. This used to be one call whose failure was swallowed, which is
+    # why every reach figure in this file has been zero since the beginning
+    # while the account looked merely unpopular rather than unmeasured.
+    last_err = ""
+    for metric in IG_METRIC_LADDER:
+        ins = _get(IG_API, f"{media_id}/insights", {"metric": metric, "access_token": IG_TOKEN})
+        if isinstance(ins.get("data"), list):
+            for m in ins["data"]:
+                name = m.get("name")
+                vals = m.get("values") or [{}]
+                v = int((vals[0] or {}).get("value") or 0)
+                if name in out:
+                    out[name] = v
+            out["insights_ok"] = True
+            out["insights_metrics"] = metric
+            break
+        last_err = (ins.get("error") or {}).get("message", "no data field in response")
+    if not out["insights_ok"]:
+        IG_ERRORS.append({"media_id": media_id, "message": "insights unavailable: " + last_err})
+        print("  ig insights FAILED for %s: %s" % (media_id, last_err), flush=True)
+
+    out["comments_external"] = max(0, out["comments"] - out["own_comments"])
+    # Engagement means other people. Our own first comment is not engagement.
+    out["engagement"] = out["likes"] + out["comments_external"] + out["saved"] + out["shares"]
     return out
 
 
@@ -89,6 +120,9 @@ def fb_metrics(post_id):
     out["comments"] = int((base.get("comments") or {}).get("summary", {}).get("total_count") or 0)
     out["shares"] = int((base.get("shares") or {}).get("count") or 0)
     ins = _get(FB_API, f"{post_id}/insights", {"metric": "post_impressions_unique", "access_token": FB_TOKEN})
+    if not isinstance(ins.get("data"), list):
+        FB_ERRORS.append({"post_id": post_id,
+                          "message": "reach unavailable: " + (ins.get("error") or {}).get("message", "no data field")})
     if isinstance(ins.get("data"), list) and ins["data"]:
         vals = ins["data"][0].get("values") or [{}]
         out["reach"] = int((vals[0] or {}).get("value") or 0)
@@ -122,7 +156,8 @@ def main():
         }
         if IG_TOKEN and p.get("media_id"):
             row["_ig_attempted"] = True
-            ig = ig_metrics(p["media_id"], row["is_reel"])
+            own = 1 if (p.get("first_comment") or "").strip() else 0
+            ig = ig_metrics(p["media_id"], row["is_reel"], own_comments=own)
             if ig:
                 row["ig"] = ig
                 row["permalink"] = ig.get("permalink", "")
@@ -164,11 +199,26 @@ def main():
             "ig_errors": IG_ERRORS[:20],
             "ig_error_count": len(IG_ERRORS),
             "fb_succeeded": sum(1 for r in rows if r.get("fb")),
+            "fb_errors": FB_ERRORS[:20],
+            "fb_error_count": len(FB_ERRORS),
+            # The question that decides whether a creative problem is even the
+            # right problem: do we know how many people saw any of this.
+            "ig_with_insights": sum(1 for r in rows if (r.get("ig") or {}).get("insights_ok")),
+            "ig_reach_total": sum((r.get("ig") or {}).get("reach", 0) for r in rows),
+            "fb_reach_total": sum((r.get("fb") or {}).get("reach", 0) for r in rows),
+            "own_comments_excluded": sum((r.get("ig") or {}).get("own_comments", 0) for r in rows),
         },
     }
     with open(OUT_FILE, "w") as f:
         json.dump(out, f, indent=2)
     print(f"Wrote {OUT_FILE}: {len(rows)} posts, {len(fmt)} formats.")
+    c = out["collection"]
+    print(f"Reach: {c['ig_reach_total']} on Instagram, {c['fb_reach_total']} on Facebook. "
+          f"{c['ig_with_insights']}/{c['ig_attempted']} posts returned insights.")
+    print(f"Excluded {c['own_comments_excluded']} comment(s) this app posted on its own posts.")
+    if c["ig_with_insights"] == 0 and c["ig_attempted"]:
+        print("No post returned reach. Until that is fixed, nothing here can tell you "
+              "whether the creative is weak or whether nobody is being shown it.")
     if IG_ERRORS:
         print(f"WARNING: {len(IG_ERRORS)} Instagram lookups failed. "
               f"First: {IG_ERRORS[0]['message']}")
