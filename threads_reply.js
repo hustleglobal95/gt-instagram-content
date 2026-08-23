@@ -268,15 +268,17 @@ function composeReply(incomingText, opts = {}) {
   if (stop) return { blocked: true, stop };
 
   const shape = classify(incomingText);
-  if (!shape) return null;                       // nothing safe to say
+  // "nothing safe to say" has three distinct causes and they need different
+  // fixes, so each one names itself rather than collapsing into one silence.
+  if (!shape) return { declined: 'message does not classify into a reply shape' };
   const aud = detectAudience(incomingText);
   const sel = selectReply(shape, incomingText || '');
-  if (!sel) return null;
+  if (!sel) return { declined: `no reply atom available for shape "${shape}"` };
 
   /* A question deserves an answer to the question asked. If nothing in the
    * bank actually addresses it, a fluent generic reply is worse than silence:
    * that is precisely the failure that reads as automated. Decline instead. */
-  if (shape === 'question' && !sel.matched) return null;
+  if (shape === 'question' && !sel.matched) return { declined: 'a question the reply bank does not actually answer' };
 
   const body = sel.entry.text(aud);
 
@@ -357,9 +359,12 @@ async function fetchInbound(account, opts = {}) {
 /* ---------------------------------------------------------------------------
    Outbound: other people's posts, by keyword. Needs threads_keyword_search.
    --------------------------------------------------------------------------- */
+/* Threads keyword search rejected every multi word phrase with HTTP 500 or
+ * error code 1, while the permission itself is granted. Single words are the
+ * shape the endpoint accepts, so the list is single words now. */
 const KEYWORDS = [
-  'digital product', 'first customer', 'launched today', 'building in public',
-  'tampa small business', 'ai startup', 'sell online', 'no sales yet',
+  'freelancer', 'invoice', 'etsy', 'solopreneur',
+  'spreadsheet', 'clients', 'pricing', 'launch',
 ];
 
 async function fetchOutbound(account, opts = {}) {
@@ -432,7 +437,7 @@ async function run(account, opts = {}) {
     const drafted = composeReply(c.text, { outbound: c.outbound });
 
     if (drafted && drafted.blocked) {
-      report.skipped.push({ id: c.id, why: 'safety stop: ' + drafted.stop.id });
+      report.skipped.push({ id: c.id, from: c.username, text: c.text, why: 'safety stop: ' + drafted.stop.id });
       if (drafted.stop.escalate) {
         /* A person needs to see this one. Never answered automatically, never
          * silently dropped either. */
@@ -440,10 +445,22 @@ async function run(account, opts = {}) {
       }
       continue;
     }
-    if (!drafted) { report.skipped.push({ id: c.id, why: 'nothing safe to say about this message' }); continue; }
+    if (!drafted || drafted.declined) {
+      report.skipped.push({
+        id: c.id, from: c.username, text: c.text,
+        why: 'nothing safe to say: ' + ((drafted && drafted.declined) || 'unknown'),
+      });
+      continue;
+    }
 
     const checked = checkReply(drafted.text, c.text);
-    if (!checked.ok) { report.skipped.push({ id: c.id, why: checked.failures.map((f) => f.id).join(', ') }); continue; }
+    if (!checked.ok) {
+      report.skipped.push({
+        id: c.id, from: c.username, text: c.text,
+        why: 'reply gate: ' + checked.failures.map((f) => f.id).join(', '), draft: checked.text,
+      });
+      continue;
+    }
 
     if (!dry) {
       const { publishText } = require('./threads_publish');

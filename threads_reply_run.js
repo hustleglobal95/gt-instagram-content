@@ -35,7 +35,11 @@ const { run } = require('./threads_reply');
 
     if (r.skipped.length) {
       console.log(`\n  ${r.skipped.length} skipped, and why:`);
-      for (const s of r.skipped) console.log(`     ${s.id}: ${s.why}`);
+      for (const s of r.skipped) {
+        console.log(`     ${s.why}`);
+        if (s.text) console.log(`       they said: ${String(s.text).slice(0, 160).replace(/\n/g, ' ')}`);
+        if (s.draft) console.log(`       draft was: ${String(s.draft).slice(0, 160).replace(/\n/g, ' ')}`);
+      }
     }
     for (const s of r.sent) {
       console.log(`  -> @${s.to || '?'} [${s.shape}${s.audience ? '/' + s.audience : ''}] ${s.text.slice(0, 90).replace(/\n/g, ' ')}`);
