@@ -368,6 +368,35 @@ const KEYWORDS = [
   'tampa small business', 'ai startup', 'sell online', 'no sales yet',
 ];
 
+/* When keyword search fails, the error Meta returns is always "An unknown
+ * error occurred", which names nothing. This walks the request back to the
+ * documented minimum one parameter at a time so the log says which parameter
+ * the endpoint actually objects to, or rules the parameters out entirely. */
+const SEARCH_PROBES = [
+  ['bare q only', (t, q) => ({ q, access_token: t })],
+  ['q + fields', (t, q) => ({ q, fields: 'id,text,username,timestamp,permalink', access_token: t })],
+  ['doc example', (t, q) => ({
+    q, search_type: 'TOP',
+    fields: 'id,text,media_type,permalink,timestamp,username,has_replies,is_quote_post,is_reply',
+    access_token: t,
+  })],
+  ['single word', (t) => ({ q: 'invoice', access_token: t })],
+];
+
+async function probeSearch(token, q) {
+  const lines = [];
+  for (const [label, build] of SEARCH_PROBES) {
+    try {
+      const res = await getJson('/keyword_search', build(token, q), SEARCH_HOST);
+      lines.push(`${label}: OK, ${(res.data || []).length} result(s)`);
+    } catch (e) {
+      lines.push(`${label}: ${e.message}`);
+    }
+    await sleep(200);
+  }
+  return lines;
+}
+
 async function fetchOutbound(account, opts = {}) {
   const { userId, token } = account;
   const kws = opts.keywords || KEYWORDS;
@@ -394,7 +423,8 @@ async function fetchOutbound(account, opts = {}) {
   }
   if (failures.length === tried.length) {
     const denied = /permission|scope|unsupported|unknown path/i.test(failures.join(' '));
-    return { available: false, reason: failures.join(' | '), items: [], denied };
+    const probe = await probeSearch(token, tried[0]);
+    return { available: false, reason: failures.join(' | '), items: [], denied, probe };
   }
   return { available: true, items: found, partialFailures: failures };
 }
@@ -428,7 +458,7 @@ async function run(account, opts = {}) {
   if (candidates.length < remaining && opts.outbound !== false) {
     const ob = await fetchOutbound(account, opts);
     report.outboundAvailable = ob.available;
-    if (!ob.available) report.outboundReason = ob.reason;
+    if (!ob.available) { report.outboundReason = ob.reason; report.outboundProbe = ob.probe; }
     if (ob.available && (ob.partialFailures || []).length) report.outboundPartial = ob.partialFailures;
     if (ob.available) candidates = candidates.concat(ob.items);
   }
