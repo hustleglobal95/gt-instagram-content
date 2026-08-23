@@ -53,6 +53,9 @@ const MAX_MEDIA = parseInt(process.env.GT_THREADS_MAX_MEDIA || '400', 10);
 /* Window for the account level cross check. The endpoint defaults to two days
    if you omit since and until, which is not a useful comparison. */
 const WINDOW_DAYS = parseInt(process.env.GT_THREADS_WINDOW_DAYS || '30', 10);
+/* Replies to other people to measure. Capped so a chatty week cannot turn one
+   collector run into thousands of calls. */
+const OUTBOUND_MAX = parseInt(process.env.GT_THREADS_OUTBOUND_MAX || '400', 10);
 
 /* Engagement per thousand views stops meaning anything when the views are in
    single figures. The first real run proved it: a post with three views and
@@ -146,12 +149,24 @@ async function enumerateMedia(account, max, errors) {
 
 /* What the platform says the account got, so the summed figure has something
    to be checked against instead of being taken on faith. */
+function flattenSeries(payload) {
+  const out = {};
+  for (const m of (payload && payload.data) || []) {
+    if (Array.isArray(m.values) && m.values.length) {
+      out[m.name] = m.values.reduce((n, v) => n + (typeof v.value === 'number' ? v.value : 0), 0);
+    } else if (m.total_value && typeof m.total_value.value === 'number') {
+      out[m.name] = m.total_value.value;
+    }
+  }
+  return out;
+}
+
 async function accountInsights(account, sinceUnix, errors) {
   const metrics = ['views', 'likes', 'replies', 'reposts', 'quotes', 'followers_count'];
   const params = { metric: metrics.join(','), access_token: account.token };
   if (sinceUnix) { params.since = sinceUnix; params.until = Math.floor(Date.now() / 1000); }
   try {
-    return flatten(await getJson(`/${account.userId}/threads_insights`, params));
+    return flattenSeries(await getJson(`/${account.userId}/threads_insights`, params));
   } catch (e) {
     errors.push({ mediaId: `${account.name} account insights`, message: e.message });
     return null;
@@ -261,7 +276,7 @@ async function main() {
         if (!chainsByRoot.has(rootId)) chainsByRoot.set(rootId, []);
         chainsByRoot.get(rootId).push(r);
       } else {
-        outboundReplies.push({ account: account.name, id: String(r.id), at: r.timestamp, rootId });
+        outboundReplies.push({ account: account.name, id: String(r.id), at: r.timestamp, rootId, token: account.token });
       }
     }
 
@@ -316,6 +331,19 @@ async function main() {
     }
   }
 
+  /* Replies to other people, measured separately. They are not content, so they
+     do not belong in the rankings, but leaving them unmeasured is how you end up
+     believing your posts are your reach. */
+  const outbound = { count: outboundReplies.length, measured: 0, views: 0, interactions: 0 };
+  for (const r of outboundReplies.slice(0, OUTBOUND_MAX)) {
+    const got = await metricsFor(r.id, r.token, errors);
+    await sleep(120);
+    if (!got) continue;
+    outbound.measured++;
+    outbound.views += typeof got.m.views === 'number' ? got.m.views : 0;
+    outbound.interactions += sum(got.m, INTERACTIONS);
+  }
+
   const posts = units;
 
   const ranked = [...posts].sort((a, b) => {
@@ -356,9 +384,15 @@ async function main() {
       chain_parts_folded_in: posts.reduce((n, p) => n + Math.max(0, p.parts - 1), 0),
       posts_missing_from_local_log: posts.filter((p) => !p.in_posted_log).length,
       outbound_replies: outboundReplies.length,
+      outbound_reply_views: outbound.views,
+      outbound_reply_interactions: outbound.interactions,
+      outbound_replies_measured: outbound.measured,
+      /* Posts plus replies. This is the number the platform's own recap is
+         closest to, and the one to check the ratio against. */
+      total_views_incl_replies: summedViews + outbound.views,
       summed_views: summedViews,
       platform_views: platformViews || null,
-      ratio: platformViews ? +(summedViews / platformViews).toFixed(3) : null,
+      ratio: platformViews ? +((summedViews + outbound.views) / platformViews).toFixed(3) : null,
     },
     platform,
     top: ranked.slice(0, 10),
@@ -373,6 +407,8 @@ async function main() {
   console.log(`Threads insights: ${succeeded}/${attempted} media fetched across ${posts.length} pieces of content.`);
   console.log(`From the API: ${apiPosts} posts, ${apiReplies} replies. ${out.coverage.chain_parts_folded_in} chain parts folded into their posts, ${outboundReplies.length} replies to other people set aside.`);
   console.log(`${out.coverage.posts_missing_from_local_log} post(s) the local posted log did not know about.`);
+  console.log(`Replies to other people: ${outbound.measured} measured, ${outbound.views} views, ${outbound.interactions} interactions.`);
+  console.log(`Posts ${summedViews} views, replies ${outbound.views} views, total ${summedViews + outbound.views}.`);
   if (platformViews) {
     console.log(`Coverage: measured ${summedViews} views against ${platformViews} reported by the platform, ratio ${out.coverage.ratio}.`);
   } else {
