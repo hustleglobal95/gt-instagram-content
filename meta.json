@@ -1,12 +1,14 @@
 {
-  "generated_at": "2026-08-23T13:00:59.484Z",
-  "media_file": "creatives/gt_reel_20260823_130059.jpg",
-  "video_file": "creatives/gt_reel_20260823_130059.mp4",
-  "is_reel": true,
-  "layout": "reel:feature",
-  "caption": "We find the one constraint capping your revenue, price the fix, and grade every call against real revenue. Diagnosis, not a dashboard. Run the free 60-second diagnostic.\n\nDiagnose your #1 constraint free. Link in bio.",
-  "hashtags": "#growthterminal #startupmetrics #b2bmarketing #googlesheetstips",
-  "first_comment": "What do you think your #1 constraint is right now?",
+  "generated_at": "2026-08-23T17:00:59.407Z",
+  "media_file": "creatives/gt_auto_20260823_170059.jpg",
+  "is_reel": false,
+  "layout": "bigquote",
+  "editorial_bg": null,
+  "person": null,
+  "qa": null,
+  "caption": "The plan tells you when to stop.\n\nCheckpoints at weeks four, eight and twelve, each with a question attached. If the answer is no, the plan says stop and re-diagnose instead of spending another month on it.\n\nDiagnose your #1 constraint free. Link in bio.",
+  "hashtags": "#growthterminal #uniteconomics #revenueoperations #marketingops",
+  "first_comment": "What would it take for you to call time on something that is not working?",
   "alt_text": "",
-  "sig": "reelfeat:Stop guessing where your"
+  "sig": "bq:The plan tells you when to s"
 }
