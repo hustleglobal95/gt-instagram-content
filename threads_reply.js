@@ -368,35 +368,6 @@ const KEYWORDS = [
   'tampa small business', 'ai startup', 'sell online', 'no sales yet',
 ];
 
-/* When keyword search fails, the error Meta returns is always "An unknown
- * error occurred", which names nothing. This walks the request back to the
- * documented minimum one parameter at a time so the log says which parameter
- * the endpoint actually objects to, or rules the parameters out entirely. */
-const SEARCH_PROBES = [
-  ['bare q only', (t, q) => ({ q, access_token: t })],
-  ['q + fields', (t, q) => ({ q, fields: 'id,text,username,timestamp,permalink', access_token: t })],
-  ['doc example', (t, q) => ({
-    q, search_type: 'TOP',
-    fields: 'id,text,media_type,permalink,timestamp,username,has_replies,is_quote_post,is_reply',
-    access_token: t,
-  })],
-  ['single word', (t) => ({ q: 'invoice', access_token: t })],
-];
-
-async function probeSearch(token, q) {
-  const lines = [];
-  for (const [label, build] of SEARCH_PROBES) {
-    try {
-      const res = await getJson('/keyword_search', build(token, q), SEARCH_HOST);
-      lines.push(`${label}: OK, ${(res.data || []).length} result(s)`);
-    } catch (e) {
-      lines.push(`${label}: ${e.message}`);
-    }
-    await sleep(200);
-  }
-  return lines;
-}
-
 async function fetchOutbound(account, opts = {}) {
   const { userId, token } = account;
   const kws = opts.keywords || KEYWORDS;
@@ -423,8 +394,7 @@ async function fetchOutbound(account, opts = {}) {
   }
   if (failures.length === tried.length) {
     const denied = /permission|scope|unsupported|unknown path/i.test(failures.join(' '));
-    const probe = await probeSearch(token, tried[0]);
-    return { available: false, reason: failures.join(' | '), items: [], denied, probe };
+    return { available: false, reason: failures.join(' | '), items: [], denied };
   }
   return { available: true, items: found, partialFailures: failures };
 }
@@ -454,11 +424,26 @@ async function run(account, opts = {}) {
   report.inboundNotes = inboundNotes;
   report.inboundFound = candidates.length;
 
-  // 2. outbound, if the token can
-  if (candidates.length < remaining && opts.outbound !== false) {
+  /* 2. Outbound, once the app can actually search.
+   *
+   * Public keyword search is not available to an unpublished app. Every query
+   * shape, down to the documented one parameter minimum, comes back "An
+   * unknown error occurred", on both API hosts, while the same token reads
+   * posts and replies without complaint. It is App Review, not the code and
+   * not the permission, which already shows Ready for testing.
+   *
+   * Attempting it eight times a day just fills the log with the same failure,
+   * so it stays off until GT Threads is published. Set GT_THREADS_OUTBOUND=1
+   * to turn it back on the day that changes. */
+  const outboundOn = process.env.GT_THREADS_OUTBOUND === '1';
+  if (!outboundOn && opts.outbound !== false) {
+    report.outboundAvailable = false;
+    report.outboundReason = 'off: public keyword search needs the GT Threads app to pass App Review and be published';
+  }
+  if (outboundOn && candidates.length < remaining && opts.outbound !== false) {
     const ob = await fetchOutbound(account, opts);
     report.outboundAvailable = ob.available;
-    if (!ob.available) { report.outboundReason = ob.reason; report.outboundProbe = ob.probe; }
+    if (!ob.available) report.outboundReason = ob.reason;
     if (ob.available && (ob.partialFailures || []).length) report.outboundPartial = ob.partialFailures;
     if (ob.available) candidates = candidates.concat(ob.items);
   }

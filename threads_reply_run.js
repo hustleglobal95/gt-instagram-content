@@ -25,9 +25,7 @@ const { run } = require('./threads_reply');
     for (const n of (r.inboundNotes || [])) console.log(`     ${n}`);
 
     if (r.outboundAvailable === false) {
-      console.log(`outbound keyword search unavailable: ${r.outboundReason}`);
-      console.log('This is expected unless the token carries threads_keyword_search. Inbound replies still ran.');
-      for (const line of (r.outboundProbe || [])) console.log(`     probe ${line}`);
+      console.log(`outbound keyword search: ${r.outboundReason}`);
     }
     if ((r.outboundPartial || []).length) {
       console.log(`outbound ran, but some keywords failed:`);
