@@ -40,7 +40,8 @@ jobs:
       - name: Collect Threads engagement
         env:
           THREADS_ACCOUNTS: ${{ secrets.THREADS_ACCOUNTS }}   # same secret as the poster
-          GT_THREADS_LOOKBACK: ${{ vars.GT_THREADS_LOOKBACK }} # how many recent posts to refresh
+          GT_THREADS_MAX_MEDIA: ${{ vars.GT_THREADS_MAX_MEDIA }}     # media per edge per account
+          GT_THREADS_WINDOW_DAYS: ${{ vars.GT_THREADS_WINDOW_DAYS }} # window for the platform cross check
         run: node threads_insights.js
 
       - name: Commit performance log
