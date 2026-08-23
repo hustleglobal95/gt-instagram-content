@@ -51,7 +51,20 @@ function getJson(pathname, params) {
       res.on('end', () => {
         let j; try { j = JSON.parse(d); } catch { j = { raw: d }; }
         if (res.statusCode >= 200 && res.statusCode < 300 && !j.error) resolve(j);
-        else { const e = new Error(j.error ? j.error.message : `HTTP ${res.statusCode}`); e.code = j.error && j.error.code; e.status = res.statusCode; reject(e); }
+        else {
+          const err = j.error || {};
+          // Meta's generic "An unknown error occurred" is useless on its own.
+          // Carry the code, subcode and type so a failing call names itself.
+          const detail = [
+            err.code !== undefined ? `code ${err.code}` : null,
+            err.error_subcode !== undefined ? `subcode ${err.error_subcode}` : null,
+            err.type || null,
+          ].filter(Boolean).join(', ');
+          const e = new Error(
+            (j.error ? err.message : `HTTP ${res.statusCode}`) + (detail ? ` (${detail})` : '')
+          );
+          e.code = err.code; e.subcode = err.error_subcode; e.status = res.statusCode; reject(e);
+        }
       });
     });
     req.on('error', reject);
@@ -315,16 +328,20 @@ async function fetchInbound(account, opts = {}) {
   const { userId, token } = account;
   const limit = opts.limit || 25;
   const out = [];
+  // A caller-supplied array collects per-post failures. Swallowing these is
+  // what made a missing threads_read_replies permission look like silence.
+  const notes = opts.notes || [];
   const mine = await getJson(`/${userId}/threads`, {
     fields: 'id,timestamp,text', limit, access_token: token,
   });
+  notes.push(`scanned ${(mine.data || []).length} of my own posts`);
   for (const post of (mine.data || [])) {
     let conv;
     try {
       conv = await getJson(`/${post.id}/replies`, {
         fields: 'id,text,username,timestamp,replied_to,is_reply_owned_by_me', access_token: token,
       });
-    } catch (e) { continue; }
+    } catch (e) { notes.push(`replies on ${post.id}: ${e.message}`); continue; }
     for (const r of (conv.data || [])) {
       // skip our own chained thread parts, which is what made the old
       // dashboard report 52 replies on an account that had received none
@@ -349,7 +366,9 @@ async function fetchOutbound(account, opts = {}) {
   const { userId, token } = account;
   const kws = opts.keywords || KEYWORDS;
   const found = [];
-  for (const q of kws.slice(0, opts.maxKeywords || 4)) {
+  const tried = kws.slice(0, opts.maxKeywords || 4);
+  const failures = [];
+  for (const q of tried) {
     try {
       const res = await getJson('/keyword_search', {
         q, search_type: 'TOP', fields: 'id,text,username,timestamp,permalink', access_token: token,
@@ -359,12 +378,17 @@ async function fetchOutbound(account, opts = {}) {
         found.push({ id: p.id, text: p.text, username: p.username, ts: p.timestamp, keyword: q, outbound: true });
       }
     } catch (e) {
-      const denied = e.status === 400 || e.status === 403 || /permission|scope|unsupported|unknown path/i.test(e.message || '');
-      return { available: false, reason: e.message, items: [], denied };
+      // One keyword failing is not the same as the permission missing. Record
+      // it, keep going, and only call outbound unavailable if every query died.
+      failures.push(`"${q}": ${e.message}`);
     }
     await sleep(200);
   }
-  return { available: true, items: found };
+  if (failures.length === tried.length) {
+    const denied = /permission|scope|unsupported|unknown path/i.test(failures.join(' '));
+    return { available: false, reason: failures.join(' | '), items: [], denied };
+  }
+  return { available: true, items: found, partialFailures: failures };
 }
 
 /* ---------------------------------------------------------------------------
@@ -386,14 +410,18 @@ async function run(account, opts = {}) {
 
   // 1. inbound first, always
   let candidates = [];
-  try { candidates = await fetchInbound(account, opts); }
+  const inboundNotes = [];
+  try { candidates = await fetchInbound(account, { ...opts, notes: inboundNotes }); }
   catch (e) { report.inboundError = e.message; }
+  report.inboundNotes = inboundNotes;
+  report.inboundFound = candidates.length;
 
   // 2. outbound, if the token can
   if (candidates.length < remaining && opts.outbound !== false) {
     const ob = await fetchOutbound(account, opts);
     report.outboundAvailable = ob.available;
     if (!ob.available) report.outboundReason = ob.reason;
+    if (ob.available && (ob.partialFailures || []).length) report.outboundPartial = ob.partialFailures;
     if (ob.available) candidates = candidates.concat(ob.items);
   }
 

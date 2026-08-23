@@ -21,9 +21,21 @@ const { run } = require('./threads_reply');
     console.log(`\n=== ${account.name || account.userId} ===`);
     console.log(`${dry ? 'DRY RUN, nothing sent. ' : ''}replied ${r.sent.length}, skipped ${r.skipped.length}, cap remaining ${r.remaining}`);
 
+    console.log(`inbound found ${r.inboundFound ?? 0} message(s) to consider`);
+    for (const n of (r.inboundNotes || [])) console.log(`     ${n}`);
+
     if (r.outboundAvailable === false) {
       console.log(`outbound keyword search unavailable: ${r.outboundReason}`);
       console.log('This is expected unless the token carries threads_keyword_search. Inbound replies still ran.');
+    }
+    if ((r.outboundPartial || []).length) {
+      console.log(`outbound ran, but some keywords failed:`);
+      for (const f of r.outboundPartial) console.log(`     ${f}`);
+    }
+
+    if (r.skipped.length) {
+      console.log(`\n  ${r.skipped.length} skipped, and why:`);
+      for (const s of r.skipped) console.log(`     ${s.id}: ${s.why}`);
     }
     for (const s of r.sent) {
       console.log(`  -> @${s.to || '?'} [${s.shape}${s.audience ? '/' + s.audience : ''}] ${s.text.slice(0, 90).replace(/\n/g, ' ')}`);
