@@ -2348,5 +2348,27 @@
       "Markus": "18628320619036920"
     },
     "errors": {}
+  },
+  {
+    "at": "2026-08-24T22:56:06.269Z",
+    "text": "The first ten customers are the hardest you will ever get.",
+    "parts": [
+      "The first ten customers are the hardest you will ever get.",
+      "The problem is not persuasion. It is that you have nothing to point at.",
+      "Every one of those ten is somebody taking a personal risk on a stranger.",
+      "Which means the early work is not more features. It is one person who used it and said something true about it in public.",
+      "So the job is not to get better at asking. It is to need to ask less.",
+      "It gets easier, and not for the reason people tell you."
+    ],
+    "isThread": true,
+    "pillar": "early",
+    "kind": "thread",
+    "accounts": [
+      "Markus"
+    ],
+    "ids": {
+      "Markus": "17927116704162706"
+    },
+    "errors": {}
   }
 ]
