@@ -2276,5 +2276,26 @@
       "Markus": "18083620136279853"
     },
     "errors": {}
+  },
+  {
+    "at": "2026-08-24T11:13:46.317Z",
+    "text": "The first ten customers are the hardest you'll ever get.\n\nNobody warns you why",
+    "parts": [
+      "The first ten customers are the hardest you'll ever get.\n\nNobody warns you why",
+      "It isn't the product. At ten customers your product is usually fine and definitely fixable.\n\nIt's that you have no proof, so every sale is somebody taking a personal risk on you.",
+      "Which means the early ones don't come from marketing. They come from people who already trust you, or people you talk to directly, one at a time, in a way that does not scale and is not supposed to.",
+      "This is the part most people try to skip, because it feels like it doesn't count. It counts more than anything you'll do later. Those ten tell you what you actually sell.",
+      "It gets easier at around thirty. Not because you got better at asking. Because you stopped having to.\n\nIf you're under ten right now, you're not behind. You're in the part that has no shortcut."
+    ],
+    "isThread": true,
+    "pillar": "early",
+    "kind": "thread",
+    "accounts": [
+      "Markus"
+    ],
+    "ids": {
+      "Markus": "18456267979188958"
+    },
+    "errors": {}
   }
 ]
