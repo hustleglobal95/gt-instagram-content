@@ -1231,5 +1231,228 @@
     "whyItWorks": "The article emphasizes that a website serves as a permanent home for content, which is essential for brand control and accurate information dissemination. Evidence: SparkToro invested months and a budget to rebuild their website from scratch, indicating its importance as a content hub.",
     "gtAngle": "Create an ad campaign showcasing the website as the ultimate source for brand information and customer engagement.",
     "url": "https://sparktoro.com/blog/does-your-website-still-matter-in-the-zero-click-era/"
+  },
+  {
+    "id": "rs_hksgqn",
+    "source": "rss",
+    "url": "https://www.marketingdive.com/news/publicis-tackles-fragmented-nil-market-with-travis-kelce-3-arts-sports/828498/",
+    "capturedAt": "2026-08-24T15:21:36.714Z",
+    "structure": {
+      "wordCount": 11,
+      "lineCount": 1,
+      "avgWordsPerLine": 11,
+      "hookLength": 11,
+      "signals": [],
+      "hasImage": false,
+      "hasVideo": false,
+      "platforms": []
+    },
+    "nearestExistingLayout": null,
+    "novelty": "no close match in the bank",
+    "note": "headline pattern from https://www.marketingdive.com/feeds/news/",
+    "gtAngle": "",
+    "status": "new"
+  },
+  {
+    "id": "rs_dp9pmk",
+    "source": "rss",
+    "url": "https://www.marketingdive.com/news/wendys-hires-ex-mcdonalds-cmo-as-chief-marketing-customer-growth-officer/828580/",
+    "capturedAt": "2026-08-24T15:21:36.714Z",
+    "structure": {
+      "wordCount": 10,
+      "lineCount": 1,
+      "avgWordsPerLine": 10,
+      "hookLength": 10,
+      "signals": [],
+      "hasImage": false,
+      "hasVideo": false,
+      "platforms": []
+    },
+    "nearestExistingLayout": null,
+    "novelty": "no close match in the bank",
+    "note": "headline pattern from https://www.marketingdive.com/feeds/news/",
+    "gtAngle": "",
+    "status": "new"
+  },
+  {
+    "id": "rs_1ftymzo",
+    "source": "rss",
+    "url": "https://www.marketingdive.com/news/how-fantas-haunted-universe-helps-turn-halloween-into-a-platform/828481/",
+    "capturedAt": "2026-08-24T15:21:36.714Z",
+    "structure": {
+      "wordCount": 11,
+      "lineCount": 1,
+      "avgWordsPerLine": 11,
+      "hookLength": 11,
+      "signals": [],
+      "hasImage": false,
+      "hasVideo": false,
+      "platforms": []
+    },
+    "nearestExistingLayout": null,
+    "novelty": "no close match in the bank",
+    "note": "headline pattern from https://www.marketingdive.com/feeds/news/",
+    "gtAngle": "",
+    "status": "new"
+  },
+  {
+    "id": "rs_vifoki",
+    "source": "rss",
+    "url": "https://www.marketingdive.com/news/microdrama-advertising-surges-as-downloads-soar-report/828416/",
+    "capturedAt": "2026-08-24T15:21:36.714Z",
+    "structure": {
+      "wordCount": 7,
+      "lineCount": 1,
+      "avgWordsPerLine": 7,
+      "hookLength": 7,
+      "signals": [],
+      "hasImage": false,
+      "hasVideo": false,
+      "platforms": []
+    },
+    "nearestExistingLayout": null,
+    "novelty": "no close match in the bank",
+    "note": "headline pattern from https://www.marketingdive.com/feeds/news/",
+    "gtAngle": "",
+    "status": "new"
+  },
+  {
+    "id": "rs_65as24",
+    "source": "rss",
+    "url": "https://www.marketingdive.com/spons/why-smarter-dooh-campaigns-start-with-the-audience/828064/",
+    "capturedAt": "2026-08-24T15:21:36.714Z",
+    "structure": {
+      "wordCount": 8,
+      "lineCount": 1,
+      "avgWordsPerLine": 8,
+      "hookLength": 8,
+      "signals": [],
+      "hasImage": false,
+      "hasVideo": false,
+      "platforms": []
+    },
+    "nearestExistingLayout": null,
+    "novelty": "no close match in the bank",
+    "note": "headline pattern from https://www.marketingdive.com/feeds/news/",
+    "gtAngle": "",
+    "status": "new"
+  },
+  {
+    "id": "rs_14dvobj",
+    "source": "rss",
+    "url": "https://www.marketingdive.com/spons/the-aor-or-indie-debate-is-over-the-best-brands-do-both/828048/",
+    "capturedAt": "2026-08-24T15:21:36.714Z",
+    "structure": {
+      "wordCount": 10,
+      "lineCount": 1,
+      "avgWordsPerLine": 10,
+      "hookLength": 10,
+      "signals": [],
+      "hasImage": false,
+      "hasVideo": false,
+      "platforms": []
+    },
+    "nearestExistingLayout": null,
+    "novelty": "no close match in the bank",
+    "note": "headline pattern from https://www.marketingdive.com/feeds/news/",
+    "gtAngle": "",
+    "status": "new"
+  },
+  {
+    "id": "rs_1a80zi9",
+    "source": "rss",
+    "url": "https://www.marketingdive.com/spons/drop-the-hysteria-paid-search-is-here-to-stay/827985/",
+    "capturedAt": "2026-08-24T15:21:36.714Z",
+    "structure": {
+      "wordCount": 9,
+      "lineCount": 1,
+      "avgWordsPerLine": 9,
+      "hookLength": 9,
+      "signals": [],
+      "hasImage": false,
+      "hasVideo": false,
+      "platforms": []
+    },
+    "nearestExistingLayout": null,
+    "novelty": "no close match in the bank",
+    "note": "headline pattern from https://www.marketingdive.com/feeds/news/",
+    "gtAngle": "",
+    "status": "new"
+  },
+  {
+    "id": "rs_r1lv16",
+    "source": "rss",
+    "url": "https://www.marketingdive.com/news/ann-taylor-stages-a-brand-comeback-with-substack-fall-fashion-blitz/828397/",
+    "capturedAt": "2026-08-24T15:21:36.714Z",
+    "structure": {
+      "wordCount": 11,
+      "lineCount": 1,
+      "avgWordsPerLine": 11,
+      "hookLength": 11,
+      "signals": [],
+      "hasImage": false,
+      "hasVideo": false,
+      "platforms": []
+    },
+    "nearestExistingLayout": null,
+    "novelty": "no close match in the bank",
+    "note": "headline pattern from https://www.marketingdive.com/feeds/news/",
+    "gtAngle": "",
+    "status": "new"
+  },
+  {
+    "id": "rs_aig3fk",
+    "source": "rss",
+    "url": "https://www.marketingdive.com/news/creator-fit-beats-follower-count-for-brands-heres-what-the-numbers-say/828421/",
+    "capturedAt": "2026-08-24T15:21:36.714Z",
+    "structure": {
+      "wordCount": 12,
+      "lineCount": 1,
+      "avgWordsPerLine": 12,
+      "hookLength": 12,
+      "signals": [],
+      "hasImage": false,
+      "hasVideo": false,
+      "platforms": []
+    },
+    "nearestExistingLayout": null,
+    "novelty": "no close match in the bank",
+    "note": "headline pattern from https://www.marketingdive.com/feeds/news/",
+    "gtAngle": "",
+    "status": "new"
+  },
+  {
+    "id": "rs_1yn6m7y",
+    "source": "rss",
+    "url": "https://www.marketingdive.com/news/sociable-youtube-rolls-out-improvements-for-connected-tv/828408/",
+    "capturedAt": "2026-08-24T15:21:36.714Z",
+    "structure": {
+      "wordCount": 8,
+      "lineCount": 1,
+      "avgWordsPerLine": 8,
+      "hookLength": 8,
+      "signals": [],
+      "hasImage": false,
+      "hasVideo": false,
+      "platforms": []
+    },
+    "nearestExistingLayout": null,
+    "novelty": "no close match in the bank",
+    "note": "headline pattern from https://www.marketingdive.com/feeds/news/",
+    "gtAngle": "",
+    "status": "new"
+  },
+  {
+    "id": "dr_20260824_1",
+    "source": "deep_research",
+    "name": "customer-driven development",
+    "status": "new",
+    "addedAt": "2026-08-24T15:21:36.985Z",
+    "structure": {
+      "anatomy": "listens to customer feedback and incorporates it into product features"
+    },
+    "whyItWorks": "The article emphasizes that SparkToro built its persona tool based on direct feedback from customers, ensuring it meets their needs and preferences. Evidence: In May, I ran a survey to our customers asking about 26 different kinds of data...21 received at least a handful of votes for inclusion, and we built every single one of those data elements into the persona tool.",
+    "gtAngle": "Create an ad showcasing how customer feedback directly shaped a new product feature.",
+    "url": "https://sparktoro.com/blog/the-best-persona-tool-on-the-web-is-now-live/"
   }
 ]

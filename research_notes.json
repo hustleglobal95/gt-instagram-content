@@ -2,6 +2,39 @@
   "about": "Deep research knowledge base. Newest run first.",
   "runs": [
     {
+      "at": "2026-08-24T15:21:36.985Z",
+      "provider": "openai",
+      "articles": [
+        {
+          "title": "The Best Persona Tool On the Web Is Now Live",
+          "url": "https://sparktoro.com/blog/the-best-persona-tool-on-the-web-is-now-live/"
+        }
+      ],
+      "findings": [
+        {
+          "id": "dr_20260824_1",
+          "name": "customer-driven development",
+          "device": "listens to customer feedback and incorporates it into product features",
+          "evidence": "In May, I ran a survey to our customers asking about 26 different kinds of data...21 received at least a handful of votes for inclusion, and we built every single one of those data elements into the persona tool.",
+          "angle": "Create an ad showcasing how customer feedback directly shaped a new product feature.",
+          "url": "https://sparktoro.com/blog/the-best-persona-tool-on-the-web-is-now-live/"
+        }
+      ],
+      "log": [
+        "DEEP RESEARCH RUN 2026-08-24T15:21:36.985Z",
+        "feed ok: https://copyhackers.com/feed/ (14 items)",
+        "feed ok: https://adespresso.com/feed/ (10 items)",
+        "  junk title skipped: 15 Fresh Facebook Ad Examples to Inspire Your Next Campaign ",
+        "feed ok: https://sparktoro.com/blog/feed/ (10 items)",
+        "feed FAILED: https://www.marketingweek.com/feed/ (HTTP 403)",
+        "feed FAILED: https://www.growthunhinged.com/feed (HTTP 404)",
+        "feed FAILED: https://ariyh.com/feed (HTTP 404)",
+        "1 fresh articles collected",
+        "distilling with openai",
+        "  STRONG finding: customer-driven development"
+      ]
+    },
+    {
       "at": "2026-08-17T14:59:30.290Z",
       "provider": "openai",
       "articles": [
