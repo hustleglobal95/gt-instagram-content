@@ -1,42 +1,42 @@
 {
-  "updated": "2026-08-23T15:04:45.206Z",
-  "count": 157,
+  "updated": "2026-08-24T07:22:26.597Z",
+  "count": 162,
   "ranking_basis": "per_1k",
   "min_views_for_rate": 25,
   "rate_eligible": 55,
   "reach": {
-    "views": 12712,
-    "interactions": 268,
-    "median_views": 14,
-    "zero_interaction_posts": 102
+    "views": 12738,
+    "interactions": 280,
+    "median_views": 13,
+    "zero_interaction_posts": 104
   },
   "coverage": {
     "window_days": 30,
     "media_from_api": {
-      "posts": 157,
+      "posts": 162,
       "replies": 400
     },
-    "content_units": 157,
-    "media_measured": 290,
-    "chain_parts_folded_in": 133,
-    "posts_missing_from_local_log": 35,
-    "outbound_replies": 267,
-    "outbound_reply_views": 35473,
-    "outbound_reply_interactions": 128,
-    "outbound_replies_measured": 267,
-    "total_views_incl_replies": 48185,
-    "summed_views": 12712,
-    "platform_views": 44492,
-    "ratio": 1.083
+    "content_units": 162,
+    "media_measured": 308,
+    "chain_parts_folded_in": 146,
+    "posts_missing_from_local_log": 36,
+    "outbound_replies": 254,
+    "outbound_reply_views": 35208,
+    "outbound_reply_interactions": 124,
+    "outbound_replies_measured": 254,
+    "total_views_incl_replies": 47946,
+    "summed_views": 12738,
+    "platform_views": 44567,
+    "ratio": 1.076
   },
   "platform": {
     "Markus": {
-      "views": 44492,
-      "likes": 390,
-      "replies": 282,
+      "views": 44567,
+      "likes": 394,
+      "replies": 283,
       "reposts": 9,
       "quotes": 2,
-      "followers_count": 33
+      "followers_count": 38
     }
   },
   "top": [
@@ -704,16 +704,16 @@
       ],
       "permalink": "https://www.threads.com/@markusreidgt/post/DcKtscEjQ-8",
       "metrics": {
-        "views": 362,
-        "likes": 17,
+        "views": 368,
+        "likes": 16,
         "replies": 0,
         "reposts": 0,
         "quotes": 0,
         "shares": 0
       },
-      "views": 362,
-      "engagement": 17,
-      "per_1k": 46.96,
+      "views": 368,
+      "engagement": 16,
+      "per_1k": 43.48,
       "rateReliable": true,
       "basis": "per_1k"
     },
@@ -758,16 +758,16 @@
       ],
       "permalink": "https://www.threads.com/@markusreidgt/post/DcKqzSpDfj2",
       "metrics": {
-        "views": 59,
+        "views": 69,
         "likes": 1,
         "replies": 0,
         "reposts": 0,
         "quotes": 1,
         "shares": 0
       },
-      "views": 59,
+      "views": 69,
       "engagement": 2,
-      "per_1k": 33.9,
+      "per_1k": 28.99,
       "rateReliable": true,
       "basis": "per_1k"
     },
@@ -1906,6 +1906,33 @@
       "basis": "total"
     },
     {
+      "at": "2026-08-23T18:41:58+0000",
+      "pillar": "early",
+      "kind": "thread",
+      "isThread": true,
+      "parts": 6,
+      "parts_measured": 6,
+      "in_posted_log": true,
+      "text": "The first month cannot tell you what you want it to tell you.",
+      "accounts": [
+        "Markus"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/DcZJ95-GGsO",
+      "metrics": {
+        "views": 4,
+        "likes": 0,
+        "replies": 5,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 4,
+      "engagement": 5,
+      "per_1k": 1250,
+      "rateReliable": false,
+      "basis": "total"
+    },
+    {
       "at": "2026-08-23T02:07:34+0000",
       "pillar": "systems",
       "kind": "thread",
@@ -2068,6 +2095,33 @@
       "basis": "total"
     },
     {
+      "at": "2026-08-23T22:52:23+0000",
+      "pillar": "early",
+      "kind": "thread",
+      "isThread": true,
+      "parts": 5,
+      "parts_measured": 5,
+      "in_posted_log": true,
+      "text": "If I started again from zero tomorrow, I'd skip almost everything I did in year one.\n\nHere's what I'd actually do",
+      "accounts": [
+        "Markus"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/DcZmoBvGws1",
+      "metrics": {
+        "views": 3,
+        "likes": 0,
+        "replies": 4,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 3,
+      "engagement": 4,
+      "per_1k": 1333.33,
+      "rateReliable": false,
+      "basis": "total"
+    },
+    {
       "at": "2026-08-10T13:39:14+0000",
       "pillar": "authority",
       "kind": "thread",
@@ -2091,6 +2145,33 @@
       "views": 3,
       "engagement": 4,
       "per_1k": 1333.33,
+      "rateReliable": false,
+      "basis": "total"
+    },
+    {
+      "at": "2026-08-24T02:05:07+0000",
+      "pillar": "systems",
+      "kind": "thread",
+      "isThread": true,
+      "parts": 5,
+      "parts_measured": 5,
+      "in_posted_log": true,
+      "text": "Your content isn't the problem.\n\nYour distribution is.\n\nWhy great posts die and average posts win",
+      "accounts": [
+        "Markus"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/DcZ8rmrFoQY",
+      "metrics": {
+        "views": 1,
+        "likes": 0,
+        "replies": 4,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 1,
+      "engagement": 4,
+      "per_1k": 4000,
       "rateReliable": false,
       "basis": "total"
     },
@@ -4174,6 +4255,60 @@
       "basis": "total"
     },
     {
+      "at": "2026-08-23T20:37:52+0000",
+      "pillar": "unknown",
+      "kind": "unknown",
+      "isThread": false,
+      "parts": 1,
+      "parts_measured": 1,
+      "in_posted_log": false,
+      "text": "MAMBA4EVER",
+      "accounts": [
+        "Markus"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/DcZXPv5o-d6",
+      "metrics": {
+        "views": 1,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 1,
+      "engagement": 0,
+      "per_1k": 0,
+      "rateReliable": false,
+      "basis": "total"
+    },
+    {
+      "at": "2026-08-23T15:55:24+0000",
+      "pillar": "early",
+      "kind": "offer",
+      "isThread": false,
+      "parts": 1,
+      "parts_measured": 1,
+      "in_posted_log": true,
+      "text": "The first ten customers are the hardest you will ever get.\n\nIt is not the product. At ten customers the product is usually fine and definitely fixable.\n\nThe smallest useful thing you can build is evidence, not scope.\n\nI wrote the long versi",
+      "accounts": [
+        "Markus"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/DcY25tpn2Qs",
+      "metrics": {
+        "views": 1,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 1,
+      "engagement": 0,
+      "per_1k": 0,
+      "rateReliable": false,
+      "basis": "total"
+    },
+    {
       "at": "2026-08-15T23:32:39+0000",
       "pillar": "early",
       "kind": "real",
@@ -4542,25 +4677,25 @@
     },
     {
       "key": "unknown",
-      "posts": 35,
-      "engagement": 66,
-      "avg_engagement": 1.89,
-      "views": 970,
-      "avg_per_1k": 49.16
+      "posts": 36,
+      "engagement": 65,
+      "avg_engagement": 1.81,
+      "views": 986,
+      "avg_per_1k": 48.11
     },
     {
       "key": "early",
-      "posts": 10,
-      "engagement": 9,
-      "avg_engagement": 0.9,
+      "posts": 13,
+      "engagement": 18,
+      "avg_engagement": 1.38,
       "views": 127,
       "avg_per_1k": 44.44
     },
     {
       "key": "systems",
-      "posts": 26,
-      "engagement": 58,
-      "avg_engagement": 2.23,
+      "posts": 27,
+      "engagement": 62,
+      "avg_engagement": 2.3,
       "views": 3327,
       "avg_per_1k": 27.86
     },
@@ -4655,20 +4790,20 @@
       "avg_per_1k": 160
     },
     {
-      "key": "unknown",
-      "posts": 35,
-      "engagement": 66,
-      "avg_engagement": 1.89,
-      "views": 970,
-      "avg_per_1k": 49.16
-    },
-    {
       "key": "thread",
-      "posts": 31,
-      "engagement": 169,
-      "avg_engagement": 5.45,
+      "posts": 34,
+      "engagement": 182,
+      "avg_engagement": 5.35,
       "views": 6873,
       "avg_per_1k": 48.24
+    },
+    {
+      "key": "unknown",
+      "posts": 36,
+      "engagement": 65,
+      "avg_engagement": 1.81,
+      "views": 986,
+      "avg_per_1k": 48.11
     },
     {
       "key": "aphorism",
@@ -4808,9 +4943,9 @@
     },
     {
       "key": "offer",
-      "posts": 9,
+      "posts": 10,
       "engagement": 2,
-      "avg_engagement": 0.22,
+      "avg_engagement": 0.2,
       "views": 0,
       "avg_per_1k": null
     },
@@ -5002,24 +5137,24 @@
   "by_shape": [
     {
       "key": "thread",
-      "posts": 35,
-      "engagement": 226,
-      "avg_engagement": 6.46,
+      "posts": 38,
+      "engagement": 239,
+      "avg_engagement": 6.29,
       "views": 7377,
       "avg_per_1k": 55.4
     },
     {
       "key": "single",
-      "posts": 122,
-      "engagement": 42,
-      "avg_engagement": 0.34,
-      "views": 4468,
-      "avg_per_1k": 8.46
+      "posts": 124,
+      "engagement": 41,
+      "avg_engagement": 0.33,
+      "views": 4484,
+      "avg_per_1k": 8.2
     }
   ],
   "collection": {
-    "attempted": 290,
-    "succeeded": 290,
+    "attempted": 308,
+    "succeeded": 308,
     "reduced_metric_set": 0,
     "errors": []
   }
