@@ -2314,5 +2314,22 @@
       "Markus": "17954456739211775"
     },
     "errors": {}
+  },
+  {
+    "at": "2026-08-24T16:08:29.018Z",
+    "text": "Speed of building went to nearly zero. Speed of trust did not move at all.\n\nThat gap is the entire strategic situation right now, and almost nobody is planning around it.",
+    "parts": [
+      "Speed of building went to nearly zero. Speed of trust did not move at all.\n\nThat gap is the entire strategic situation right now, and almost nobody is planning around it."
+    ],
+    "isThread": false,
+    "pillar": "systems",
+    "kind": "ai",
+    "accounts": [
+      "Markus"
+    ],
+    "ids": {
+      "Markus": "17972388164930959"
+    },
+    "errors": {}
   }
 ]
