@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-08-25T17:02:21.906Z",
-  "media_file": "creatives/gt_auto_20260825_170221.jpg",
+  "generated_at": "2026-08-25T21:02:21.983Z",
+  "media_file": "creatives/gt_auto_20260825_210221.jpg",
   "is_reel": false,
-  "layout": "feature",
+  "layout": "prodsoon",
   "editorial_bg": null,
-  "person": "gt_face_06.png",
+  "person": null,
   "qa": null,
-  "caption": "Stop guessing where your growth is stuck.\n\nMost teams pour budget into the part of the funnel that already works. Growth Terminal ranks the twelve places growth gets stuck, names yours, and puts a dollar range on the fix.\n\n→ growthterminal.io",
-  "hashtags": "#growthterminal #agencyowner #saasfounder #consultingbusiness",
-  "first_comment": "Which of the 12 constraints do you think is biting hardest right now?",
-  "alt_text": "Stop guessing where your growth is stuck.",
-  "sig": "feat:Stop guessing where your growth is stuck:gt_face_06.png"
+  "caption": "Coming soon to the Growth Terminal store: Pricing & Offer Analyzer.\n\nFind the margin you're leaving on the table on every deal.\n\nWant it first? Link in bio.\n\n→ growthterminal.io",
+  "hashtags": "#growthterminal #bootstrappedfounder #foundertips #marketingops",
+  "first_comment": "What would you want this one to do? Tell me below.",
+  "alt_text": "Coming soon: Pricing & Offer Analyzer.",
+  "sig": "prodsoon:Pricing & Offer Analyzer"
 }
