@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-08-25T01:00:54.898Z",
-  "media_file": "creatives/gt_reel_20260825_010054.jpg",
-  "video_file": "creatives/gt_reel_20260825_010054.mp4",
+  "generated_at": "2026-08-25T13:00:51.899Z",
+  "media_file": "creatives/gt_reel_20260825_130051.jpg",
+  "video_file": "creatives/gt_reel_20260825_130051.mp4",
   "is_reel": true,
-  "layout": "reel:feature",
-  "caption": "We find the one constraint capping your revenue, price the fix, and grade every call against real revenue. Diagnosis, not a dashboard. Run the free 60-second diagnostic.\n\nDiagnose your #1 constraint free. Link in bio.",
-  "hashtags": "#growthterminal #b2bsaas #saasfounder #marketingops",
-  "first_comment": "What do you think your #1 constraint is right now?",
-  "alt_text": "",
-  "sig": "reelfeat:Your growth has one real"
+  "layout": "reel:countup",
+  "caption": "60 seconds from spreadsheet to diagnosis. Add the add-on to Google Sheets™, point it at the report you already have, and get your #1 constraint ranked and priced before your coffee's cold.\n\nDiagnose your #1 constraint free. Link in bio.",
+  "hashtags": "#growthterminal #saasfounder #foundertips #marketingops",
+  "first_comment": "Genuinely ~60 seconds. It reads the sheet you already have open.",
+  "alt_text": "60 sec",
+  "sig": "reelnum:60"
 }
