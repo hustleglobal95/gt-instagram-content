@@ -1,14 +1,12 @@
 {
-  "generated_at": "2026-08-24T21:00:54.390Z",
-  "media_file": "creatives/gt_auto_20260824_210054.jpg",
-  "is_reel": false,
-  "layout": "feature",
-  "editorial_bg": null,
-  "person": "gt_scene_01.png",
-  "qa": null,
-  "caption": "Stop guessing where your growth is stuck.\n\nMost teams pour budget into the part of the funnel that already works. Growth Terminal ranks the twelve places growth gets stuck, names yours, and puts a dollar range on the fix.\n\n→ growthterminal.io",
-  "hashtags": "#growthterminal #saasgrowth #agencyowner #saasfounder",
-  "first_comment": "Which of the 12 constraints do you think is biting hardest right now?",
-  "alt_text": "Stop guessing where your growth is stuck.",
-  "sig": "feat:Stop guessing where your growth is stuck:gt_scene_01.png"
+  "generated_at": "2026-08-25T01:00:54.898Z",
+  "media_file": "creatives/gt_reel_20260825_010054.jpg",
+  "video_file": "creatives/gt_reel_20260825_010054.mp4",
+  "is_reel": true,
+  "layout": "reel:feature",
+  "caption": "We find the one constraint capping your revenue, price the fix, and grade every call against real revenue. Diagnosis, not a dashboard. Run the free 60-second diagnostic.\n\nDiagnose your #1 constraint free. Link in bio.",
+  "hashtags": "#growthterminal #b2bsaas #saasfounder #marketingops",
+  "first_comment": "What do you think your #1 constraint is right now?",
+  "alt_text": "",
+  "sig": "reelfeat:Your growth has one real"
 }
