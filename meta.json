@@ -1,12 +1,14 @@
 {
-  "generated_at": "2026-08-25T13:00:51.899Z",
-  "media_file": "creatives/gt_reel_20260825_130051.jpg",
-  "video_file": "creatives/gt_reel_20260825_130051.mp4",
-  "is_reel": true,
-  "layout": "reel:countup",
-  "caption": "60 seconds from spreadsheet to diagnosis. Add the add-on to Google Sheets™, point it at the report you already have, and get your #1 constraint ranked and priced before your coffee's cold.\n\nDiagnose your #1 constraint free. Link in bio.",
-  "hashtags": "#growthterminal #saasfounder #foundertips #marketingops",
-  "first_comment": "Genuinely ~60 seconds. It reads the sheet you already have open.",
-  "alt_text": "60 sec",
-  "sig": "reelnum:60"
+  "generated_at": "2026-08-25T17:02:21.906Z",
+  "media_file": "creatives/gt_auto_20260825_170221.jpg",
+  "is_reel": false,
+  "layout": "feature",
+  "editorial_bg": null,
+  "person": "gt_face_06.png",
+  "qa": null,
+  "caption": "Stop guessing where your growth is stuck.\n\nMost teams pour budget into the part of the funnel that already works. Growth Terminal ranks the twelve places growth gets stuck, names yours, and puts a dollar range on the fix.\n\n→ growthterminal.io",
+  "hashtags": "#growthterminal #agencyowner #saasfounder #consultingbusiness",
+  "first_comment": "Which of the 12 constraints do you think is biting hardest right now?",
+  "alt_text": "Stop guessing where your growth is stuck.",
+  "sig": "feat:Stop guessing where your growth is stuck:gt_face_06.png"
 }
