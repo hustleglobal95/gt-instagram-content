@@ -2404,5 +2404,27 @@
       "Markus": "18085829858241665"
     },
     "errors": {}
+  },
+  {
+    "at": "2026-08-25T13:12:16.494Z",
+    "text": "One question separates AI products that will exist in two years from the ones that will not.",
+    "parts": [
+      "One question separates AI products that will exist in two years from the ones that will not.",
+      "If the model got twice as good tomorrow, and free, what would still be worth paying you for?",
+      "If the honest answer is \"nothing\", that is not a failure. It means you are selling a trade, not an asset, and trades have to be sold fast while the window is open.",
+      "If the answer is the workflow, the data, or the relationship, you own something. The model underneath can change and the product survives.",
+      "The mistake is not picking the trade. It is picking the trade and then planning like you picked the asset.",
+      "If you are building with AI: what part of your product would break first if your provider swapped the model tonight?"
+    ],
+    "isThread": true,
+    "pillar": "systems",
+    "kind": "thread",
+    "accounts": [
+      "Markus"
+    ],
+    "ids": {
+      "Markus": "18111859169281555"
+    },
+    "errors": {}
   }
 ]
