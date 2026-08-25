@@ -1,6 +1,6 @@
 {
-  "updated": "2026-08-24T06:07:35.536889Z",
-  "count": 121,
+  "updated": "2026-08-25T06:02:00.008459Z",
+  "count": 126,
   "posts": [
     {
       "sig": "prodclaim:funnel:Your funnel has one we",
@@ -2622,6 +2622,72 @@
       "_ig_attempted": true
     },
     {
+      "sig": "proof:The plan tells you when to s",
+      "layout": "proofcards",
+      "file": "creatives/gt_auto_20260824_170202.jpg",
+      "is_reel": false,
+      "at": "2026-08-24T17:02:09.620149Z",
+      "caption": "The plan tells you when to stop.\n\nEvery ninety day plan carries checkpoints at weeks four, eight and twelve. Each one ha",
+      "permalink": "https://www.instagram.com/p/DcbjW1snS5r/",
+      "ig": {
+        "likes": 1,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "views": 0,
+        "permalink": "https://www.instagram.com/p/DcbjW1snS5r/",
+        "insights_ok": false,
+        "insights_metrics": "",
+        "own_comments": 1,
+        "comments_external": 0,
+        "engagement": 1
+      },
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "reach_metric": "",
+        "engagement": 0
+      },
+      "engagement": 1,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "reelfeat:Your growth has one real",
+      "layout": "reel:feature",
+      "file": "creatives/gt_reel_20260825_010054.jpg",
+      "is_reel": true,
+      "at": "2026-08-25T01:05:38.043479Z",
+      "caption": "We find the one constraint capping your revenue, price the fix, and grade every call against real revenue. Diagnosis, no",
+      "permalink": "https://www.instagram.com/reel/DccasTkjsUI/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "views": 0,
+        "permalink": "https://www.instagram.com/reel/DccasTkjsUI/",
+        "insights_ok": false,
+        "insights_metrics": "",
+        "own_comments": 1,
+        "comments_external": 0,
+        "engagement": 0
+      },
+      "fb": {
+        "reactions": 1,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "reach_metric": "",
+        "engagement": 1
+      },
+      "engagement": 1,
+      "_ig_attempted": true
+    },
+    {
       "sig": "stmt:Stop guessing which lever to pull .",
       "layout": "statement",
       "file": "creatives/gt_auto_20260731_171731.jpg",
@@ -3924,6 +3990,105 @@
       },
       "engagement": 0,
       "_ig_attempted": true
+    },
+    {
+      "sig": "reelcard:Retention",
+      "layout": "reel:card",
+      "file": "creatives/gt_reel_20260824_130143.jpg",
+      "is_reel": true,
+      "at": "2026-08-24T13:02:31.071871Z",
+      "caption": "This is what a Growth Terminal diagnosis looks like, one constraint, named, priced, and verified against real revenue. H",
+      "permalink": "https://www.instagram.com/reel/DcbH8HvgfA3/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "views": 0,
+        "permalink": "https://www.instagram.com/reel/DcbH8HvgfA3/",
+        "insights_ok": false,
+        "insights_metrics": "",
+        "own_comments": 1,
+        "comments_external": 0,
+        "engagement": 0
+      },
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "reach_metric": "",
+        "engagement": 0
+      },
+      "engagement": 0,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "car:plan",
+      "layout": "carousel:plan",
+      "file": "creatives/gt_car_20260824155007_1.jpg",
+      "is_reel": false,
+      "at": "2026-08-24T15:50:15.650545Z",
+      "caption": "A diagnosis without sequencing is just an opinion.\n\nEvery Growth Terminal run ends in a 90 day plan: six phases in order",
+      "permalink": "https://www.instagram.com/p/DcbbMQXIK84/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "views": 0,
+        "permalink": "https://www.instagram.com/p/DcbbMQXIK84/",
+        "insights_ok": false,
+        "insights_metrics": "",
+        "own_comments": 1,
+        "comments_external": 0,
+        "engagement": 0
+      },
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "reach_metric": "",
+        "engagement": 0
+      },
+      "engagement": 0,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "feat:Stop guessing where your growth is stuck:gt_scene_01.png",
+      "layout": "feature",
+      "file": "creatives/gt_auto_20260824_210054.jpg",
+      "is_reel": false,
+      "at": "2026-08-24T21:01:00.651855Z",
+      "caption": "Stop guessing where your growth is stuck.\n\nMost teams pour budget into the part of the funnel that already works. Growth",
+      "permalink": "https://www.instagram.com/p/Dcb-sRtICWz/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "views": 0,
+        "permalink": "https://www.instagram.com/p/Dcb-sRtICWz/",
+        "insights_ok": false,
+        "insights_metrics": "",
+        "own_comments": 1,
+        "comments_external": 0,
+        "engagement": 0
+      },
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "reach_metric": "",
+        "engagement": 0
+      },
+      "engagement": 0,
+      "_ig_attempted": true
     }
   ],
   "by_format": [
@@ -3952,19 +4117,19 @@
       "avg_engagement": 2.4
     },
     {
-      "layout": "reel:feature",
-      "posts": 9,
-      "engagement": 19,
-      "ig_engagement": 6,
-      "fb_engagement": 13,
-      "avg_engagement": 2.1
-    },
-    {
       "layout": "vs",
       "posts": 1,
       "engagement": 2,
       "ig_engagement": 0,
       "fb_engagement": 2,
+      "avg_engagement": 2.0
+    },
+    {
+      "layout": "reel:feature",
+      "posts": 10,
+      "engagement": 20,
+      "ig_engagement": 6,
+      "fb_engagement": 14,
       "avg_engagement": 2.0
     },
     {
@@ -3974,14 +4139,6 @@
       "ig_engagement": 2,
       "fb_engagement": 0,
       "avg_engagement": 2.0
-    },
-    {
-      "layout": "carousel:plan",
-      "posts": 5,
-      "engagement": 8,
-      "ig_engagement": 4,
-      "fb_engagement": 4,
-      "avg_engagement": 1.6
     },
     {
       "layout": "funnel",
@@ -4032,6 +4189,14 @@
       "avg_engagement": 1.3
     },
     {
+      "layout": "carousel:plan",
+      "posts": 6,
+      "engagement": 8,
+      "ig_engagement": 4,
+      "fb_engagement": 4,
+      "avg_engagement": 1.3
+    },
+    {
       "layout": "card",
       "posts": 2,
       "engagement": 2,
@@ -4061,14 +4226,6 @@
       "engagement": 9,
       "ig_engagement": 1,
       "fb_engagement": 8,
-      "avg_engagement": 1.0
-    },
-    {
-      "layout": "feature",
-      "posts": 6,
-      "engagement": 6,
-      "ig_engagement": 1,
-      "fb_engagement": 5,
       "avg_engagement": 1.0
     },
     {
@@ -4112,6 +4269,14 @@
       "avg_engagement": 1.0
     },
     {
+      "layout": "proofcards",
+      "posts": 1,
+      "engagement": 1,
+      "ig_engagement": 1,
+      "fb_engagement": 0,
+      "avg_engagement": 1.0
+    },
+    {
       "layout": "prodsoon",
       "posts": 9,
       "engagement": 8,
@@ -4120,8 +4285,16 @@
       "avg_engagement": 0.9
     },
     {
+      "layout": "feature",
+      "posts": 7,
+      "engagement": 6,
+      "ig_engagement": 1,
+      "fb_engagement": 5,
+      "avg_engagement": 0.9
+    },
+    {
       "layout": "reel:card",
-      "posts": 11,
+      "posts": 12,
       "engagement": 9,
       "ig_engagement": 3,
       "fb_engagement": 6,
@@ -4177,8 +4350,8 @@
     }
   ],
   "collection": {
-    "ig_attempted": 121,
-    "ig_succeeded": 121,
+    "ig_attempted": 126,
+    "ig_succeeded": 126,
     "ig_errors": [
       {
         "media_id": "18481929595099633",
@@ -4261,8 +4434,8 @@
         "message": "insights unavailable: (#10) Application does not have permission for this action"
       }
     ],
-    "ig_error_count": 121,
-    "fb_succeeded": 111,
+    "ig_error_count": 126,
+    "fb_succeeded": 116,
     "fb_errors": [
       {
         "post_id": "1087307654468135_122100816704536059",
@@ -4345,11 +4518,11 @@
         "message": "reach unavailable: (#100) The value must be a valid insights metric"
       }
     ],
-    "fb_error_count": 111,
+    "fb_error_count": 116,
     "ig_with_insights": 0,
     "ig_reach_total": 0,
     "fb_reach_total": 0,
     "fb_reach_metric": "",
-    "own_comments_excluded": 119
+    "own_comments_excluded": 124
   }
 }
