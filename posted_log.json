@@ -1800,5 +1800,26 @@
     "caption": "Is utilisation your #1 constraint right now?\n\nThe tell: you own the capacity and it sits half-used. It's one of the twelve places growth gets stuck, but it's only worth fixing first if it's actually your biggest. Growth Terminal ranks all twelve against your data and tells you whether utilisation is really the one, or a symptom of something upstream.\n\nDiagnose your #1 constraint free. Link in bio.",
     "hashtags": "#growthterminal #agencyowner #saasfounder #foundertips",
     "first_comment": "Does \"you own the capacity and it sits half-used\" sound like your account this quarter? \ud83d\udc47"
+  },
+  {
+    "media_id": "17907323517501197",
+    "fb_post_id": "1087307654468135_122101661828536059",
+    "at": "2026-08-26T16:25:32.091955Z",
+    "file": "creatives/gt_car_20260826162524_1.jpg",
+    "media_files": [
+      "creatives/gt_car_20260826162524_1.jpg",
+      "creatives/gt_car_20260826162524_2.jpg",
+      "creatives/gt_car_20260826162524_3.jpg",
+      "creatives/gt_car_20260826162524_4.jpg",
+      "creatives/gt_car_20260826162524_5.jpg"
+    ],
+    "is_reel": false,
+    "is_carousel": true,
+    "panels": 5,
+    "layout": "carousel:twelve",
+    "sig": "car:twelve",
+    "caption": "Growth gets stuck in twelve places. Only one of them is yours this quarter.\n\nDemand side: acquisition, traffic, conversion, offer.\nKeep side: activation, retention, churn, fulfilment.\nCapacity side: capacity, utilisation, pricing, cash collection.\n\nWorking the wrong one is why effort stops turning into revenue. Growth Terminal names which is yours, prices it, and grades the call.",
+    "hashtags": "#growthterminal #saasgrowth #marketingops #saasfounder",
+    "first_comment": "Which of the twelve would you guess is yours right now?"
   }
 ]
