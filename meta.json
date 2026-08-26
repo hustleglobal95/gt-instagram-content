@@ -1,12 +1,14 @@
 {
-  "generated_at": "2026-08-26T17:02:25.210Z",
-  "media_file": "creatives/gt_reel_20260826_170225.jpg",
-  "video_file": "creatives/gt_reel_20260826_170225.mp4",
-  "is_reel": true,
-  "layout": "reel:countup",
-  "caption": "Every diagnosis ends with a dollar range, not a vibe. A real number on a real constraint, so you decide with a figure instead of a hunch.\n\n→ growthterminal.io",
-  "hashtags": "#growthterminal #agencylife #saasfounder #revenueoperations",
-  "first_comment": "What would change if every problem came pre-priced?",
-  "alt_text": "$140K",
-  "sig": "reelnum:140"
+  "generated_at": "2026-08-26T21:01:03.314Z",
+  "media_file": "creatives/gt_auto_20260826_210103.jpg",
+  "is_reel": false,
+  "layout": "feature",
+  "editorial_bg": null,
+  "person": "gt_face_01.png",
+  "qa": null,
+  "caption": "Know what is capping revenue before you scale it.\n\nGrowth Terminal diagnoses the constraint, forecasts the upside as a range, and grades the call against real revenue. Verified, not vibes.\n\nRun the free 60-second diagnostic, link in bio.",
+  "hashtags": "#growthterminal #fractionalcmo #b2bsaas #agencyowner",
+  "first_comment": "How many of last quarter's \"wins\" did you actually verify?",
+  "alt_text": "Know what's capping revenue before you scale.",
+  "sig": "feat:Know what's capping revenue before you s:gt_face_01.png"
 }
