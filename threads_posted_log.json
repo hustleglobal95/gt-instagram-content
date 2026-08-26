@@ -2515,5 +2515,22 @@
       "Markus": "18112988336094124"
     },
     "errors": {}
+  },
+  {
+    "at": "2026-08-26T13:17:31.215Z",
+    "text": "The customers who teach you the most are the ones who nearly did not buy.\n\nThey can name the exact sentence that almost stopped them, which is something no happy customer can do for you.",
+    "parts": [
+      "The customers who teach you the most are the ones who nearly did not buy.\n\nThey can name the exact sentence that almost stopped them, which is something no happy customer can do for you."
+    ],
+    "isThread": false,
+    "pillar": "playbook",
+    "kind": "sell_online",
+    "accounts": [
+      "Markus"
+    ],
+    "ids": {
+      "Markus": "17915152137438985"
+    },
+    "errors": {}
   }
 ]
