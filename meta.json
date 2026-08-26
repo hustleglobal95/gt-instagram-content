@@ -1,14 +1,12 @@
 {
-  "generated_at": "2026-08-26T13:02:12.355Z",
-  "media_file": "creatives/gt_auto_20260826_130212.jpg",
-  "is_reel": false,
-  "layout": "statement",
-  "editorial_bg": null,
-  "person": null,
-  "qa": null,
-  "caption": "Is utilisation your #1 constraint right now?\n\nThe tell: you own the capacity and it sits half-used. It's one of the twelve places growth gets stuck, but it's only worth fixing first if it's actually your biggest. Growth Terminal ranks all twelve against your data and tells you whether utilisation is really the one, or a symptom of something upstream.\n\nDiagnose your #1 constraint free. Link in bio.",
-  "hashtags": "#growthterminal #agencyowner #saasfounder #foundertips",
-  "first_comment": "Does \"you own the capacity and it sits half-used\" sound like your account this quarter? 👇",
-  "alt_text": "Is utilisation your #1 constraint?",
-  "sig": "cons:Utilisation"
+  "generated_at": "2026-08-26T17:02:25.210Z",
+  "media_file": "creatives/gt_reel_20260826_170225.jpg",
+  "video_file": "creatives/gt_reel_20260826_170225.mp4",
+  "is_reel": true,
+  "layout": "reel:countup",
+  "caption": "Every diagnosis ends with a dollar range, not a vibe. A real number on a real constraint, so you decide with a figure instead of a hunch.\n\n→ growthterminal.io",
+  "hashtags": "#growthterminal #agencylife #saasfounder #revenueoperations",
+  "first_comment": "What would change if every problem came pre-priced?",
+  "alt_text": "$140K",
+  "sig": "reelnum:140"
 }
