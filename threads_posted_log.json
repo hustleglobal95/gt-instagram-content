@@ -2498,5 +2498,22 @@
       "Markus": "18107878100031488"
     },
     "errors": {}
+  },
+  {
+    "at": "2026-08-26T11:14:46.439Z",
+    "text": "What are you building right now, in one sentence, no pitch?\n\nI want to see what people are actually working on rather than what they are announcing.",
+    "parts": [
+      "What are you building right now, in one sentence, no pitch?\n\nI want to see what people are actually working on rather than what they are announcing."
+    ],
+    "isThread": false,
+    "pillar": "community",
+    "kind": "building",
+    "accounts": [
+      "Markus"
+    ],
+    "ids": {
+      "Markus": "18112988336094124"
+    },
+    "errors": {}
   }
 ]
