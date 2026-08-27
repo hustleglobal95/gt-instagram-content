@@ -1,6 +1,6 @@
 {
-  "updated": "2026-08-26T06:04:35.384639Z",
-  "count": 131,
+  "updated": "2026-08-27T16:43:56.646489Z",
+  "count": 137,
   "posts": [
     {
       "sig": "prodclaim:funnel:Your funnel has one we",
@@ -526,6 +526,39 @@
         "reach": 0,
         "reach_metric": "",
         "engagement": 1
+      },
+      "engagement": 3,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "reelnum:60",
+      "layout": "reel:countup",
+      "file": "creatives/gt_reel_20260825_130051.jpg",
+      "is_reel": true,
+      "at": "2026-08-25T13:01:56.350327Z",
+      "caption": "60 seconds from spreadsheet to diagnosis. Add the add-on to Google Sheets\u2122, point it at the report you already have, and",
+      "permalink": "https://www.instagram.com/reel/DcdsxOZjS8W/",
+      "ig": {
+        "likes": 1,
+        "comments": 3,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "views": 0,
+        "permalink": "https://www.instagram.com/reel/DcdsxOZjS8W/",
+        "insights_ok": false,
+        "insights_metrics": "",
+        "own_comments": 1,
+        "comments_external": 2,
+        "engagement": 3
+      },
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "reach_metric": "",
+        "engagement": 0
       },
       "engagement": 3,
       "_ig_attempted": true
@@ -2622,6 +2655,39 @@
       "_ig_attempted": true
     },
     {
+      "sig": "feat:Find the one constraint holding your gro:gt_scene_01.png",
+      "layout": "feature",
+      "file": "creatives/gt_auto_20260824_010058.jpg",
+      "is_reel": false,
+      "at": "2026-08-24T01:01:04.547023Z",
+      "caption": "Find the one constraint holding your growth back.\n\nGrowth Terminal reads the report you already run, names the single co",
+      "permalink": "https://www.instagram.com/p/DcZ1XouGjD4/",
+      "ig": {
+        "likes": 1,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "views": 0,
+        "permalink": "https://www.instagram.com/p/DcZ1XouGjD4/",
+        "insights_ok": false,
+        "insights_metrics": "",
+        "own_comments": 1,
+        "comments_external": 0,
+        "engagement": 1
+      },
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "reach_metric": "",
+        "engagement": 0
+      },
+      "engagement": 1,
+      "_ig_attempted": true
+    },
+    {
       "sig": "proof:The plan tells you when to s",
       "layout": "proofcards",
       "file": "creatives/gt_auto_20260824_170202.jpg",
@@ -2688,39 +2754,6 @@
       "_ig_attempted": true
     },
     {
-      "sig": "reelnum:60",
-      "layout": "reel:countup",
-      "file": "creatives/gt_reel_20260825_130051.jpg",
-      "is_reel": true,
-      "at": "2026-08-25T13:01:56.350327Z",
-      "caption": "60 seconds from spreadsheet to diagnosis. Add the add-on to Google Sheets\u2122, point it at the report you already have, and",
-      "permalink": "https://www.instagram.com/reel/DcdsxOZjS8W/",
-      "ig": {
-        "likes": 1,
-        "comments": 1,
-        "saved": 0,
-        "shares": 0,
-        "reach": 0,
-        "views": 0,
-        "permalink": "https://www.instagram.com/reel/DcdsxOZjS8W/",
-        "insights_ok": false,
-        "insights_metrics": "",
-        "own_comments": 1,
-        "comments_external": 0,
-        "engagement": 1
-      },
-      "fb": {
-        "reactions": 0,
-        "comments": 0,
-        "shares": 0,
-        "reach": 0,
-        "reach_metric": "",
-        "engagement": 0
-      },
-      "engagement": 1,
-      "_ig_attempted": true
-    },
-    {
       "sig": "feat:Stop guessing where your growth is stuck:gt_face_06.png",
       "layout": "feature",
       "file": "creatives/gt_auto_20260825_170221.jpg",
@@ -2782,6 +2815,72 @@
         "reach": 0,
         "reach_metric": "",
         "engagement": 0
+      },
+      "engagement": 1,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "car:twelve",
+      "layout": "carousel:twelve",
+      "file": "creatives/gt_car_20260826162524_1.jpg",
+      "is_reel": false,
+      "at": "2026-08-26T16:25:32.091955Z",
+      "caption": "Growth gets stuck in twelve places. Only one of them is yours this quarter.\n\nDemand side: acquisition, traffic, conversi",
+      "permalink": "https://www.instagram.com/p/Dcgo0NVIKeL/",
+      "ig": {
+        "likes": 0,
+        "comments": 2,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "views": 0,
+        "permalink": "https://www.instagram.com/p/Dcgo0NVIKeL/",
+        "insights_ok": false,
+        "insights_metrics": "",
+        "own_comments": 1,
+        "comments_external": 1,
+        "engagement": 1
+      },
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "reach_metric": "",
+        "engagement": 0
+      },
+      "engagement": 1,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "feat:Know what's capping revenue before you s:gt_face_01.png",
+      "layout": "feature",
+      "file": "creatives/gt_auto_20260826_210103.jpg",
+      "is_reel": false,
+      "at": "2026-08-26T21:01:12.022200Z",
+      "caption": "Know what is capping revenue before you scale it.\n\nGrowth Terminal diagnoses the constraint, forecasts the upside as a r",
+      "permalink": "https://www.instagram.com/p/DchITXmgSbX/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "views": 0,
+        "permalink": "https://www.instagram.com/p/DchITXmgSbX/",
+        "insights_ok": false,
+        "insights_metrics": "",
+        "own_comments": 1,
+        "comments_external": 0,
+        "engagement": 0
+      },
+      "fb": {
+        "reactions": 1,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "reach_metric": "",
+        "engagement": 1
       },
       "engagement": 1,
       "_ig_attempted": true
@@ -4058,39 +4157,6 @@
       "_ig_attempted": true
     },
     {
-      "sig": "feat:Find the one constraint holding your gro:gt_scene_01.png",
-      "layout": "feature",
-      "file": "creatives/gt_auto_20260824_010058.jpg",
-      "is_reel": false,
-      "at": "2026-08-24T01:01:04.547023Z",
-      "caption": "Find the one constraint holding your growth back.\n\nGrowth Terminal reads the report you already run, names the single co",
-      "permalink": "https://www.instagram.com/p/DcZ1XouGjD4/",
-      "ig": {
-        "likes": 0,
-        "comments": 1,
-        "saved": 0,
-        "shares": 0,
-        "reach": 0,
-        "views": 0,
-        "permalink": "https://www.instagram.com/p/DcZ1XouGjD4/",
-        "insights_ok": false,
-        "insights_metrics": "",
-        "own_comments": 1,
-        "comments_external": 0,
-        "engagement": 0
-      },
-      "fb": {
-        "reactions": 0,
-        "comments": 0,
-        "shares": 0,
-        "reach": 0,
-        "reach_metric": "",
-        "engagement": 0
-      },
-      "engagement": 0,
-      "_ig_attempted": true
-    },
-    {
       "sig": "reelcard:Retention",
       "layout": "reel:card",
       "file": "creatives/gt_reel_20260824_130143.jpg",
@@ -4254,6 +4320,138 @@
       },
       "engagement": 0,
       "_ig_attempted": true
+    },
+    {
+      "sig": "cons:Utilisation",
+      "layout": "statement",
+      "file": "creatives/gt_auto_20260826_130212.jpg",
+      "is_reel": false,
+      "at": "2026-08-26T13:02:18.498852Z",
+      "caption": "Is utilisation your #1 constraint right now?\n\nThe tell: you own the capacity and it sits half-used. It's one of the twel",
+      "permalink": "https://www.instagram.com/p/DcgRf9xlsPm/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "views": 0,
+        "permalink": "https://www.instagram.com/p/DcgRf9xlsPm/",
+        "insights_ok": false,
+        "insights_metrics": "",
+        "own_comments": 1,
+        "comments_external": 0,
+        "engagement": 0
+      },
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "reach_metric": "",
+        "engagement": 0
+      },
+      "engagement": 0,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "reelnum:140",
+      "layout": "reel:countup",
+      "file": "creatives/gt_reel_20260826_170225.jpg",
+      "is_reel": true,
+      "at": "2026-08-26T17:03:07.609396Z",
+      "caption": "Every diagnosis ends with a dollar range, not a vibe. A real number on a real constraint, so you decide with a figure in",
+      "permalink": "https://www.instagram.com/reel/DcgtEPLjbWY/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "views": 0,
+        "permalink": "https://www.instagram.com/reel/DcgtEPLjbWY/",
+        "insights_ok": false,
+        "insights_metrics": "",
+        "own_comments": 1,
+        "comments_external": 0,
+        "engagement": 0
+      },
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "reach_metric": "",
+        "engagement": 0
+      },
+      "engagement": 0,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "prodclaim:funnel:Find the one step your",
+      "layout": "prodclaim",
+      "file": "creatives/gt_auto_20260827_010102.jpg",
+      "is_reel": false,
+      "at": "2026-08-27T01:01:08.308783Z",
+      "caption": "Most trackers show you conversion rates. This one tells you what to do with them: which step is costing you the most, ho",
+      "permalink": "https://www.instagram.com/p/DchjwtEmNXg/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "views": 0,
+        "permalink": "https://www.instagram.com/p/DchjwtEmNXg/",
+        "insights_ok": false,
+        "insights_metrics": "",
+        "own_comments": 1,
+        "comments_external": 0,
+        "engagement": 0
+      },
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "reach_metric": "",
+        "engagement": 0
+      },
+      "engagement": 0,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "prodshot:funnel:Your funnel has one we",
+      "layout": "prodshot",
+      "file": "creatives/gt_auto_20260827_130058.jpg",
+      "is_reel": false,
+      "at": "2026-08-27T13:01:05.258763Z",
+      "caption": "Most trackers show you conversion rates. This one tells you what to do with them: which step is costing you the most, ho",
+      "permalink": "https://www.instagram.com/p/Dci2J4MIBJi/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "views": 0,
+        "permalink": "https://www.instagram.com/p/Dci2J4MIBJi/",
+        "insights_ok": false,
+        "insights_metrics": "",
+        "own_comments": 1,
+        "comments_external": 0,
+        "engagement": 0
+      },
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "reach_metric": "",
+        "engagement": 0
+      },
+      "engagement": 0,
+      "_ig_attempted": true
     }
   ],
   "by_format": [
@@ -4323,9 +4521,9 @@
     },
     {
       "layout": "reel:countup",
-      "posts": 12,
-      "engagement": 18,
-      "ig_engagement": 8,
+      "posts": 13,
+      "engagement": 20,
+      "ig_engagement": 10,
       "fb_engagement": 10,
       "avg_engagement": 1.5
     },
@@ -4338,20 +4536,20 @@
       "avg_engagement": 1.5
     },
     {
-      "layout": "prodclaim",
-      "posts": 8,
-      "engagement": 12,
-      "ig_engagement": 6,
-      "fb_engagement": 6,
-      "avg_engagement": 1.5
-    },
-    {
       "layout": "contrast",
       "posts": 2,
       "engagement": 3,
       "ig_engagement": 3,
       "fb_engagement": 0,
       "avg_engagement": 1.5
+    },
+    {
+      "layout": "prodclaim",
+      "posts": 9,
+      "engagement": 12,
+      "ig_engagement": 6,
+      "fb_engagement": 6,
+      "avg_engagement": 1.3
     },
     {
       "layout": "carousel:plan",
@@ -4363,9 +4561,9 @@
     },
     {
       "layout": "carousel:twelve",
-      "posts": 7,
-      "engagement": 8,
-      "ig_engagement": 5,
+      "posts": 8,
+      "engagement": 9,
+      "ig_engagement": 6,
       "fb_engagement": 3,
       "avg_engagement": 1.1
     },
@@ -4394,11 +4592,11 @@
       "avg_engagement": 1.0
     },
     {
-      "layout": "prodshot",
+      "layout": "feature",
       "posts": 9,
       "engagement": 9,
-      "ig_engagement": 1,
-      "fb_engagement": 8,
+      "ig_engagement": 2,
+      "fb_engagement": 7,
       "avg_engagement": 1.0
     },
     {
@@ -4442,11 +4640,11 @@
       "avg_engagement": 0.9
     },
     {
-      "layout": "feature",
-      "posts": 8,
-      "engagement": 7,
+      "layout": "prodshot",
+      "posts": 10,
+      "engagement": 9,
       "ig_engagement": 1,
-      "fb_engagement": 6,
+      "fb_engagement": 8,
       "avg_engagement": 0.9
     },
     {
@@ -4483,7 +4681,7 @@
     },
     {
       "layout": "statement",
-      "posts": 10,
+      "posts": 11,
       "engagement": 3,
       "ig_engagement": 1,
       "fb_engagement": 2,
@@ -4515,8 +4713,8 @@
     }
   ],
   "collection": {
-    "ig_attempted": 131,
-    "ig_succeeded": 131,
+    "ig_attempted": 137,
+    "ig_succeeded": 137,
     "ig_errors": [
       {
         "media_id": "18481929595099633",
@@ -4599,8 +4797,8 @@
         "message": "insights unavailable: (#10) Application does not have permission for this action"
       }
     ],
-    "ig_error_count": 131,
-    "fb_succeeded": 121,
+    "ig_error_count": 137,
+    "fb_succeeded": 127,
     "fb_errors": [
       {
         "post_id": "1087307654468135_122100816704536059",
@@ -4683,11 +4881,11 @@
         "message": "reach unavailable: (#100) The value must be a valid insights metric"
       }
     ],
-    "fb_error_count": 121,
+    "fb_error_count": 127,
     "ig_with_insights": 0,
     "ig_reach_total": 0,
     "fb_reach_total": 0,
     "fb_reach_metric": "",
-    "own_comments_excluded": 129
+    "own_comments_excluded": 135
   }
 }
