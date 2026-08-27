@@ -2583,5 +2583,27 @@
       "Markus": "18091362149223507"
     },
     "errors": {}
+  },
+  {
+    "at": "2026-08-27T10:03:32.198Z",
+    "text": "Something I notice at every Tampa Bay event: the people doing best are asking the most questions.",
+    "parts": [
+      "Something I notice at every Tampa Bay event: the people doing best are asking the most questions.",
+      "They are the obvious answer to one specific question, and the answer travels without them present.",
+      "Being findable is cheap here. Being verifiable is not, and that is what people are actually checking.",
+      "Being the obvious choice for one thing beats being an option for six.",
+      "Growth locally is a trust problem before it is a reach problem.",
+      "What is the one thing people come to you for specifically?"
+    ],
+    "isThread": true,
+    "pillar": "community",
+    "kind": "thread",
+    "accounts": [
+      "Markus"
+    ],
+    "ids": {
+      "Markus": "18088142195656150"
+    },
+    "errors": {}
   }
 ]
