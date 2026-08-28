@@ -2644,5 +2644,26 @@
       "Markus": "18616321117048454"
     },
     "errors": {}
+  },
+  {
+    "at": "2026-08-28T00:35:39.100Z",
+    "text": "The first line is doing more work than the rest of the post, and it is usually the line people spend the least time on.",
+    "parts": [
+      "The first line is doing more work than the rest of the post, and it is usually the line people spend the least time on.",
+      "Most posts that go nowhere are not badly written. They open with a warm-up.\n\n\"Today I want to talk about\" is a warm-up. Nobody stops for one.",
+      "What seems to work instead, at least from what I can see in other people's posts:\n\nname the person, name the problem, say what they get if they keep reading. All in the first two lines, because that is where the platform cuts you off.",
+      "The uncomfortable version of this: your best idea with a weak opening line performs identically to no idea at all. The reader never got far enough to know the difference.",
+      "So the rule I am trying to hold myself to is spending as long on line one as on the other ten.\n\nI am early and my numbers are small, so treat this as what I am testing rather than what I have proven."
+    ],
+    "isThread": true,
+    "pillar": "authority",
+    "kind": "thread",
+    "accounts": [
+      "Markus"
+    ],
+    "ids": {
+      "Markus": "18365423665246020"
+    },
+    "errors": {}
   }
 ]
