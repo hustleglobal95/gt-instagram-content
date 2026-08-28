@@ -2682,5 +2682,27 @@
       "Markus": "18645633916008190"
     },
     "errors": {}
+  },
+  {
+    "at": "2026-08-28T06:16:13.803Z",
+    "text": "Most of the advice you are following was written for a company ten times your size.",
+    "parts": [
+      "Most of the advice you are following was written for a company ten times your size.",
+      "It quietly assumes distribution you have not built and a year of runway you are not sitting on.",
+      "At four hours a week that advice does not scale down, it inverts.",
+      "The tell is whether the advice needs an audience to work. Most of it does.",
+      "Read it as if you have four hours, not four people, and half of it stops applying.",
+      "Worth checking what you are optimising and who wrote the list."
+    ],
+    "isThread": true,
+    "pillar": "early",
+    "kind": "thread",
+    "accounts": [
+      "Markus"
+    ],
+    "ids": {
+      "Markus": "17921477112199994"
+    },
+    "errors": {}
   }
 ]
