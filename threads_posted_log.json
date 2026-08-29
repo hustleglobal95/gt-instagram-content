@@ -2897,5 +2897,27 @@
       "Markus": "18429033136179975"
     },
     "errors": {}
+  },
+  {
+    "at": "2026-08-29T20:51:26.760Z",
+    "text": "Pricing your first product low is the most expensive safe decision available.",
+    "parts": [
+      "Pricing your first product low is the most expensive safe decision available.",
+      "Price is a quality signal when the buyer has no other information about you, and early on they have none.",
+      "In a category where everything sits between nineteen and thirty nine, a nine dollar product does not read as a bargain. It reads as unfinished.",
+      "Raising later is harder than starting there.",
+      "Record what everyone else charges first. Not to match it, but to know what you are asking a buyer to unlearn.",
+      "What is the band in your category, and where did you land against it?"
+    ],
+    "isThread": true,
+    "pillar": "playbook",
+    "kind": "thread",
+    "accounts": [
+      "Markus"
+    ],
+    "ids": {
+      "Markus": "18022648268883665"
+    },
+    "errors": {}
   }
 ]
