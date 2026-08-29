@@ -1,79 +1,52 @@
 {
-  "updated": "2026-08-28T18:46:00.106Z",
-  "count": 189,
+  "updated": "2026-08-29T12:45:29.012Z",
+  "count": 195,
   "ranking_basis": "per_1k",
   "min_views_for_rate": 25,
-  "rate_eligible": 60,
+  "rate_eligible": 63,
   "reach": {
-    "views": 13689,
-    "interactions": 351,
+    "views": 14275,
+    "interactions": 388,
     "median_views": 12,
-    "zero_interaction_posts": 118
+    "zero_interaction_posts": 120
   },
   "coverage": {
     "window_days": 30,
     "media_from_api": {
-      "posts": 189,
+      "posts": 195,
       "replies": 400
     },
-    "content_units": 189,
-    "media_measured": 370,
-    "chain_parts_folded_in": 181,
+    "content_units": 195,
+    "media_measured": 403,
+    "chain_parts_folded_in": 208,
     "posts_missing_from_local_log": 40,
-    "outbound_replies": 219,
-    "outbound_reply_views": 36512,
-    "outbound_reply_interactions": 115,
-    "outbound_replies_measured": 219,
-    "total_views_incl_replies": 50201,
-    "summed_views": 13689,
-    "platform_views": 47443,
-    "ratio": 1.058
+    "outbound_replies": 192,
+    "outbound_reply_views": 36182,
+    "outbound_reply_interactions": 107,
+    "outbound_replies_measured": 192,
+    "total_views_incl_replies": 50457,
+    "summed_views": 14275,
+    "platform_views": 48088,
+    "ratio": 1.049
   },
   "platform": {
     "Markus": {
-      "views": 47443,
-      "likes": 417,
-      "replies": 322,
+      "views": 48088,
+      "likes": 419,
+      "replies": 338,
       "reposts": 9,
       "quotes": 2,
-      "followers_count": 35
+      "followers_count": 36
     }
   },
   "top": [
-    {
-      "at": "2026-08-26T11:14:54+0000",
-      "pillar": "community",
-      "kind": "building",
-      "isThread": true,
-      "parts": 13,
-      "parts_measured": 13,
-      "in_posted_log": true,
-      "text": "What are you building right now, in one sentence, no pitch?\n\nI want to see what people are actually working on rather than what they are announcing.",
-      "accounts": [
-        "Markus"
-      ],
-      "permalink": "https://www.threads.com/@markusreidgt/post/DcgFMKPFGf8",
-      "metrics": {
-        "views": 69,
-        "likes": 5,
-        "replies": 15,
-        "reposts": 0,
-        "quotes": 0,
-        "shares": 0
-      },
-      "views": 69,
-      "engagement": 20,
-      "per_1k": 289.86,
-      "rateReliable": true,
-      "basis": "per_1k"
-    },
     {
       "at": "2026-08-18T02:01:49+0000",
       "pillar": "constraint",
       "kind": "pas",
       "isThread": true,
-      "parts": 9,
-      "parts_measured": 9,
+      "parts": 5,
+      "parts_measured": 5,
       "in_posted_log": true,
       "text": "“Ads are too expensive.”\n\nNo — that’s the symptom.\n\nThe real problem is a message-market-match problem. And more effort on the wrong lever just makes the drop steeper.\n\nFix it at the source: you’re not overpaying for clicks, you’re underpay",
       "accounts": [
@@ -81,16 +54,43 @@
       ],
       "permalink": "https://www.threads.com/@markusreidgt/post/DcKfiJvmm3A",
       "metrics": {
-        "views": 74,
+        "views": 50,
         "likes": 1,
         "replies": 19,
         "reposts": 0,
         "quotes": 0,
         "shares": 0
       },
-      "views": 74,
+      "views": 50,
       "engagement": 20,
-      "per_1k": 270.27,
+      "per_1k": 400,
+      "rateReliable": true,
+      "basis": "per_1k"
+    },
+    {
+      "at": "2026-08-26T11:14:54+0000",
+      "pillar": "community",
+      "kind": "building",
+      "isThread": true,
+      "parts": 21,
+      "parts_measured": 21,
+      "in_posted_log": true,
+      "text": "What are you building right now, in one sentence, no pitch?\n\nI want to see what people are actually working on rather than what they are announcing.",
+      "accounts": [
+        "Markus"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/DcgFMKPFGf8",
+      "metrics": {
+        "views": 74,
+        "likes": 6,
+        "replies": 23,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 74,
+      "engagement": 29,
+      "per_1k": 391.89,
       "rateReliable": true,
       "basis": "per_1k"
     },
@@ -288,8 +288,8 @@
       "pillar": "unknown",
       "kind": "unknown",
       "isThread": true,
-      "parts": 18,
-      "parts_measured": 18,
+      "parts": 14,
+      "parts_measured": 14,
       "in_posted_log": false,
       "text": "If it scares you, it's probably a good sign. \n\nDo it anyway.",
       "accounts": [
@@ -297,55 +297,28 @@
       ],
       "permalink": "https://www.threads.com/@markusreidgt/post/DcMBFjykRTK",
       "metrics": {
-        "views": 323,
+        "views": 314,
         "likes": 1,
         "replies": 26,
         "reposts": 0,
         "quotes": 0,
         "shares": 0
       },
-      "views": 323,
+      "views": 314,
       "engagement": 27,
-      "per_1k": 83.59,
+      "per_1k": 85.99,
       "rateReliable": true,
       "basis": "per_1k"
     }
   ],
   "posts": [
     {
-      "at": "2026-08-26T11:14:54+0000",
-      "pillar": "community",
-      "kind": "building",
-      "isThread": true,
-      "parts": 13,
-      "parts_measured": 13,
-      "in_posted_log": true,
-      "text": "What are you building right now, in one sentence, no pitch?\n\nI want to see what people are actually working on rather than what they are announcing.",
-      "accounts": [
-        "Markus"
-      ],
-      "permalink": "https://www.threads.com/@markusreidgt/post/DcgFMKPFGf8",
-      "metrics": {
-        "views": 69,
-        "likes": 5,
-        "replies": 15,
-        "reposts": 0,
-        "quotes": 0,
-        "shares": 0
-      },
-      "views": 69,
-      "engagement": 20,
-      "per_1k": 289.86,
-      "rateReliable": true,
-      "basis": "per_1k"
-    },
-    {
       "at": "2026-08-18T02:01:49+0000",
       "pillar": "constraint",
       "kind": "pas",
       "isThread": true,
-      "parts": 9,
-      "parts_measured": 9,
+      "parts": 5,
+      "parts_measured": 5,
       "in_posted_log": true,
       "text": "“Ads are too expensive.”\n\nNo — that’s the symptom.\n\nThe real problem is a message-market-match problem. And more effort on the wrong lever just makes the drop steeper.\n\nFix it at the source: you’re not overpaying for clicks, you’re underpay",
       "accounts": [
@@ -353,16 +326,43 @@
       ],
       "permalink": "https://www.threads.com/@markusreidgt/post/DcKfiJvmm3A",
       "metrics": {
-        "views": 74,
+        "views": 50,
         "likes": 1,
         "replies": 19,
         "reposts": 0,
         "quotes": 0,
         "shares": 0
       },
-      "views": 74,
+      "views": 50,
       "engagement": 20,
-      "per_1k": 270.27,
+      "per_1k": 400,
+      "rateReliable": true,
+      "basis": "per_1k"
+    },
+    {
+      "at": "2026-08-26T11:14:54+0000",
+      "pillar": "community",
+      "kind": "building",
+      "isThread": true,
+      "parts": 21,
+      "parts_measured": 21,
+      "in_posted_log": true,
+      "text": "What are you building right now, in one sentence, no pitch?\n\nI want to see what people are actually working on rather than what they are announcing.",
+      "accounts": [
+        "Markus"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/DcgFMKPFGf8",
+      "metrics": {
+        "views": 74,
+        "likes": 6,
+        "replies": 23,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 74,
+      "engagement": 29,
+      "per_1k": 391.89,
       "rateReliable": true,
       "basis": "per_1k"
     },
@@ -560,8 +560,8 @@
       "pillar": "unknown",
       "kind": "unknown",
       "isThread": true,
-      "parts": 18,
-      "parts_measured": 18,
+      "parts": 14,
+      "parts_measured": 14,
       "in_posted_log": false,
       "text": "If it scares you, it's probably a good sign. \n\nDo it anyway.",
       "accounts": [
@@ -569,16 +569,16 @@
       ],
       "permalink": "https://www.threads.com/@markusreidgt/post/DcMBFjykRTK",
       "metrics": {
-        "views": 323,
+        "views": 314,
         "likes": 1,
         "replies": 26,
         "reposts": 0,
         "quotes": 0,
         "shares": 0
       },
-      "views": 323,
+      "views": 314,
       "engagement": 27,
-      "per_1k": 83.59,
+      "per_1k": 85.99,
       "rateReliable": true,
       "basis": "per_1k"
     },
@@ -664,6 +664,33 @@
       "basis": "per_1k"
     },
     {
+      "at": "2026-08-28T22:21:57+0000",
+      "pillar": "forecast",
+      "kind": "thread",
+      "isThread": true,
+      "parts": 6,
+      "parts_measured": 6,
+      "in_posted_log": true,
+      "text": "Write the number that would prove you wrong before you start. Not after.",
+      "accounts": [
+        "Markus"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/DcmbHXMmGli",
+      "metrics": {
+        "views": 93,
+        "likes": 0,
+        "replies": 5,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 93,
+      "engagement": 5,
+      "per_1k": 53.76,
+      "rateReliable": true,
+      "basis": "per_1k"
+    },
+    {
       "at": "2026-08-21T00:03:04+0000",
       "pillar": "unknown",
       "kind": "unknown",
@@ -714,6 +741,33 @@
       "views": 118,
       "engagement": 6,
       "per_1k": 50.85,
+      "rateReliable": true,
+      "basis": "per_1k"
+    },
+    {
+      "at": "2026-08-29T03:50:10+0000",
+      "pillar": "early",
+      "kind": "thread",
+      "isThread": true,
+      "parts": 6,
+      "parts_measured": 6,
+      "in_posted_log": true,
+      "text": "The hardest part of the first year is that nothing you say about your product is backed by anything yet.",
+      "accounts": [
+        "Markus"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/DcnArXmEZ9R",
+      "metrics": {
+        "views": 115,
+        "likes": 0,
+        "replies": 5,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 115,
+      "engagement": 5,
+      "per_1k": 43.48,
       "rateReliable": true,
       "basis": "per_1k"
     },
@@ -1038,6 +1092,33 @@
       "views": 407,
       "engagement": 6,
       "per_1k": 14.74,
+      "rateReliable": true,
+      "basis": "per_1k"
+    },
+    {
+      "at": "2026-08-29T07:13:37+0000",
+      "pillar": "community",
+      "kind": "thread",
+      "isThread": true,
+      "parts": 6,
+      "parts_measured": 6,
+      "in_posted_log": true,
+      "text": "Your positioning is not the sentence on your website.",
+      "accounts": [
+        "Markus"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/DcnX9jnGzO9",
+      "metrics": {
+        "views": 376,
+        "likes": 0,
+        "replies": 5,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 376,
+      "engagement": 5,
+      "per_1k": 13.3,
       "rateReliable": true,
       "basis": "per_1k"
     },
@@ -1937,8 +2018,8 @@
       "pillar": "early",
       "kind": "founders",
       "isThread": true,
-      "parts": 19,
-      "parts_measured": 19,
+      "parts": 27,
+      "parts_measured": 27,
       "in_posted_log": true,
       "text": "The hardest part of the first year is that nothing you say about your product is backed by anything yet.\n\nIt is not the product. At ten customers the product is usually fine and definitely fixable.\n\nWhich means the early work is not more fe",
       "accounts": [
@@ -1946,16 +2027,16 @@
       ],
       "permalink": "https://www.threads.com/@markusreidgt/post/Dcew4QYCcz1",
       "metrics": {
-        "views": 19,
-        "likes": 0,
-        "replies": 19,
+        "views": 24,
+        "likes": 1,
+        "replies": 27,
         "reposts": 0,
         "quotes": 0,
         "shares": 0
       },
-      "views": 19,
-      "engagement": 19,
-      "per_1k": 1000,
+      "views": 24,
+      "engagement": 28,
+      "per_1k": 1166.67,
       "rateReliable": false,
       "basis": "total"
     },
@@ -2334,6 +2415,33 @@
       "views": 11,
       "engagement": 4,
       "per_1k": 363.64,
+      "rateReliable": false,
+      "basis": "total"
+    },
+    {
+      "at": "2026-08-28T21:15:13+0000",
+      "pillar": "systems",
+      "kind": "thread",
+      "isThread": true,
+      "parts": 5,
+      "parts_measured": 5,
+      "in_posted_log": true,
+      "text": "You were busy all week and the business didn't move.\n\nHere's what usually happened",
+      "accounts": [
+        "Markus"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/DcmTewdCQSa",
+      "metrics": {
+        "views": 7,
+        "likes": 0,
+        "replies": 4,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 7,
+      "engagement": 4,
+      "per_1k": 571.43,
       "rateReliable": false,
       "basis": "total"
     },
@@ -3661,6 +3769,33 @@
       "basis": "total"
     },
     {
+      "at": "2026-08-29T00:05:53+0000",
+      "pillar": "systems",
+      "kind": "ai",
+      "isThread": false,
+      "parts": 1,
+      "parts_measured": 1,
+      "in_posted_log": true,
+      "text": "AI moved the cost of building down and did nothing to the cost of being chosen.\n\nYour costs move with usage and your buyer wants a flat number. Somebody absorbs that variance.\n\nDecide on purpose who eats the variance, because the default is",
+      "accounts": [
+        "Markus"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/DcmnAuiH5Ww",
+      "metrics": {
+        "views": 9,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 9,
+      "engagement": 0,
+      "per_1k": 0,
+      "rateReliable": false,
+      "basis": "total"
+    },
+    {
       "at": "2026-08-18T03:07:04+0000",
       "pillar": "community",
       "kind": "cost",
@@ -3682,6 +3817,33 @@
         "shares": 0
       },
       "views": 9,
+      "engagement": 0,
+      "per_1k": 0,
+      "rateReliable": false,
+      "basis": "total"
+    },
+    {
+      "at": "2026-08-29T01:43:13+0000",
+      "pillar": "community",
+      "kind": "building",
+      "isThread": false,
+      "parts": 1,
+      "parts_measured": 1,
+      "in_posted_log": true,
+      "text": "Ten things at ten percent effort leaves you with nothing anyone outside would notice.\n\nPick one and let the other nine sit visibly undone.\n\nIt feels worse and works better.",
+      "accounts": [
+        "Markus"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/DcmyJkNlvwu",
+      "metrics": {
+        "views": 8,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 8,
       "engagement": 0,
       "per_1k": 0,
       "rateReliable": false,
@@ -3727,6 +3889,33 @@
         "Markus"
       ],
       "permalink": "https://www.threads.com/@markusreidgt/post/DcNJwlyjUTi",
+      "metrics": {
+        "views": 8,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 8,
+      "engagement": 0,
+      "per_1k": 0,
+      "rateReliable": false,
+      "basis": "total"
+    },
+    {
+      "at": "2026-08-18T22:55:01+0000",
+      "pillar": "community",
+      "kind": "tampa",
+      "isThread": false,
+      "parts": 1,
+      "parts_measured": 1,
+      "in_posted_log": true,
+      "text": "When somebody refers you, they use words you have probably never heard.\n\nIt is almost never the thing you spent money saying. It is shorter and slightly unflattering.\n\nWhatever comes back is your actual positioning. Work from that.\n\nThat se",
+      "accounts": [
+        "Markus"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/DcMu81bGg0G",
       "metrics": {
         "views": 8,
         "likes": 0,
@@ -3835,33 +4024,6 @@
         "Markus"
       ],
       "permalink": "https://www.threads.com/@markusreidgt/post/DchBKbOlJ4A",
-      "metrics": {
-        "views": 7,
-        "likes": 0,
-        "replies": 0,
-        "reposts": 0,
-        "quotes": 0,
-        "shares": 0
-      },
-      "views": 7,
-      "engagement": 0,
-      "per_1k": 0,
-      "rateReliable": false,
-      "basis": "total"
-    },
-    {
-      "at": "2026-08-18T22:55:01+0000",
-      "pillar": "community",
-      "kind": "tampa",
-      "isThread": false,
-      "parts": 1,
-      "parts_measured": 1,
-      "in_posted_log": true,
-      "text": "When somebody refers you, they use words you have probably never heard.\n\nIt is almost never the thing you spent money saying. It is shorter and slightly unflattering.\n\nWhatever comes back is your actual positioning. Work from that.\n\nThat se",
-      "accounts": [
-        "Markus"
-      ],
-      "permalink": "https://www.threads.com/@markusreidgt/post/DcMu81bGg0G",
       "metrics": {
         "views": 7,
         "likes": 0,
@@ -5399,35 +5561,43 @@
     },
     {
       "key": "community",
-      "posts": 27,
-      "engagement": 104,
-      "avg_engagement": 3.85,
-      "views": 2592,
-      "avg_per_1k": 65.37
+      "posts": 29,
+      "engagement": 118,
+      "avg_engagement": 4.07,
+      "views": 2973,
+      "avg_per_1k": 70.37
     },
     {
-      "key": "unknown",
-      "posts": 40,
-      "engagement": 56,
-      "avg_engagement": 1.4,
-      "views": 1448,
-      "avg_per_1k": 37.37
-    },
-    {
-      "key": "systems",
-      "posts": 31,
-      "engagement": 67,
-      "avg_engagement": 2.16,
-      "views": 3543,
-      "avg_per_1k": 27.64
+      "key": "forecast",
+      "posts": 3,
+      "engagement": 5,
+      "avg_engagement": 1.67,
+      "views": 93,
+      "avg_per_1k": 53.76
     },
     {
       "key": "constraint",
       "posts": 20,
       "engagement": 30,
       "avg_engagement": 1.5,
-      "views": 3508,
-      "avg_per_1k": 27.2
+      "views": 3484,
+      "avg_per_1k": 38.99
+    },
+    {
+      "key": "unknown",
+      "posts": 40,
+      "engagement": 56,
+      "avg_engagement": 1.4,
+      "views": 1439,
+      "avg_per_1k": 37.63
+    },
+    {
+      "key": "systems",
+      "posts": 33,
+      "engagement": 71,
+      "avg_engagement": 2.15,
+      "views": 3543,
+      "avg_per_1k": 27.64
     },
     {
       "key": "bi",
@@ -5436,6 +5606,14 @@
       "avg_engagement": 1.09,
       "views": 624,
       "avg_per_1k": 26.11
+    },
+    {
+      "key": "early",
+      "posts": 20,
+      "engagement": 70,
+      "avg_engagement": 3.5,
+      "views": 212,
+      "avg_per_1k": 14.49
     },
     {
       "key": "playbook",
@@ -5452,14 +5630,6 @@
       "avg_engagement": 0.6,
       "views": 520,
       "avg_per_1k": 1.92
-    },
-    {
-      "key": "early",
-      "posts": 19,
-      "engagement": 56,
-      "avg_engagement": 2.95,
-      "views": 97,
-      "avg_per_1k": 0
     },
     {
       "key": "mistake",
@@ -5486,14 +5656,6 @@
       "avg_per_1k": null
     },
     {
-      "key": "forecast",
-      "posts": 2,
-      "engagement": 0,
-      "avg_engagement": 0,
-      "views": 0,
-      "avg_per_1k": null
-    },
-    {
       "key": "solution",
       "posts": 3,
       "engagement": 0,
@@ -5504,36 +5666,36 @@
   ],
   "by_kind": [
     {
-      "key": "building",
-      "posts": 5,
-      "engagement": 22,
-      "avg_engagement": 4.4,
-      "views": 69,
-      "avg_per_1k": 289.86
-    },
-    {
       "key": "pas",
       "posts": 6,
       "engagement": 20,
       "avg_engagement": 3.33,
+      "views": 50,
+      "avg_per_1k": 400
+    },
+    {
+      "key": "building",
+      "posts": 6,
+      "engagement": 31,
+      "avg_engagement": 5.17,
       "views": 74,
-      "avg_per_1k": 270.27
+      "avg_per_1k": 391.89
     },
     {
       "key": "thread",
-      "posts": 42,
-      "engagement": 220,
-      "avg_engagement": 5.24,
-      "views": 7246,
-      "avg_per_1k": 49.4
+      "posts": 46,
+      "engagement": 239,
+      "avg_engagement": 5.2,
+      "views": 7830,
+      "avg_per_1k": 47.95
     },
     {
       "key": "unknown",
       "posts": 40,
       "engagement": 56,
       "avg_engagement": 1.4,
-      "views": 1448,
-      "avg_per_1k": 37.37
+      "views": 1439,
+      "avg_per_1k": 37.63
     },
     {
       "key": "aphorism",
@@ -5642,8 +5804,8 @@
     {
       "key": "founders",
       "posts": 3,
-      "engagement": 19,
-      "avg_engagement": 6.33,
+      "engagement": 28,
+      "avg_engagement": 9.33,
       "views": 0,
       "avg_per_1k": null
     },
@@ -5688,6 +5850,14 @@
       "avg_per_1k": null
     },
     {
+      "key": "ai",
+      "posts": 3,
+      "engagement": 0,
+      "avg_engagement": 0,
+      "views": 0,
+      "avg_per_1k": null
+    },
+    {
       "key": "position",
       "posts": 1,
       "engagement": 0,
@@ -5698,14 +5868,6 @@
     {
       "key": "sell_online",
       "posts": 1,
-      "engagement": 0,
-      "avg_engagement": 0,
-      "views": 0,
-      "avg_per_1k": null
-    },
-    {
-      "key": "ai",
-      "posts": 2,
       "engagement": 0,
       "avg_engagement": 0,
       "views": 0,
@@ -5891,15 +6053,15 @@
   "by_shape": [
     {
       "key": "thread",
-      "posts": 48,
-      "engagement": 310,
-      "avg_engagement": 6.46,
-      "views": 7750,
-      "avg_per_1k": 67.87
+      "posts": 52,
+      "engagement": 347,
+      "avg_engagement": 6.67,
+      "views": 8306,
+      "avg_per_1k": 72.57
     },
     {
       "key": "single",
-      "posts": 141,
+      "posts": 143,
       "engagement": 41,
       "avg_engagement": 0.29,
       "views": 4964,
@@ -5907,8 +6069,8 @@
     }
   ],
   "collection": {
-    "attempted": 370,
-    "succeeded": 370,
+    "attempted": 403,
+    "succeeded": 403,
     "reduced_metric_set": 0,
     "errors": []
   }
