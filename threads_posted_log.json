@@ -2798,5 +2798,27 @@
       "Markus": "18098765102567214"
     },
     "errors": {}
+  },
+  {
+    "at": "2026-08-29T03:50:01.490Z",
+    "text": "The hardest part of the first year is that nothing you say about your product is backed by anything yet.",
+    "parts": [
+      "The hardest part of the first year is that nothing you say about your product is backed by anything yet.",
+      "Every one of those ten is somebody taking a personal risk on a stranger.",
+      "The problem is not persuasion. It is that you have nothing to point at.",
+      "So the job is not to get better at asking. It is to need to ask less.",
+      "The smallest useful thing you can build is evidence, not scope.",
+      "What was the first piece of proof you could actually point at?"
+    ],
+    "isThread": true,
+    "pillar": "early",
+    "kind": "thread",
+    "accounts": [
+      "Markus"
+    ],
+    "ids": {
+      "Markus": "17943884628313233"
+    },
+    "errors": {}
   }
 ]
