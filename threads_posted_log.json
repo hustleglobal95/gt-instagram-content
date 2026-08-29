@@ -2764,5 +2764,22 @@
       "Markus": "18111172612832603"
     },
     "errors": {}
+  },
+  {
+    "at": "2026-08-29T00:05:45.226Z",
+    "text": "AI moved the cost of building down and did nothing to the cost of being chosen.\n\nYour costs move with usage and your buyer wants a flat number. Somebody absorbs that variance.\n\nDecide on purpose who eats the variance, because the default is you.",
+    "parts": [
+      "AI moved the cost of building down and did nothing to the cost of being chosen.\n\nYour costs move with usage and your buyer wants a flat number. Somebody absorbs that variance.\n\nDecide on purpose who eats the variance, because the default is you."
+    ],
+    "isThread": false,
+    "pillar": "systems",
+    "kind": "ai",
+    "accounts": [
+      "Markus"
+    ],
+    "ids": {
+      "Markus": "18456818029139696"
+    },
+    "errors": {}
   }
 ]
