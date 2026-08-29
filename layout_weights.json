@@ -1,15 +1,15 @@
 {
   "active": true,
   "diagnostics": {
-    "totalPosts": 143,
+    "totalPosts": 146,
     "totalEngagement": 160,
     "igEngagement": 67,
     "fbEngagement": 93,
     "formats": 32,
     "formatsWithAnyEngagement": 29,
     "collectionHealth": {
-      "ig_attempted": 143,
-      "ig_succeeded": 143,
+      "ig_attempted": 146,
+      "ig_succeeded": 146,
       "ig_errors": [
         {
           "media_id": "18481929595099633",
@@ -92,8 +92,8 @@
           "message": "insights unavailable: (#10) Application does not have permission for this action"
         }
       ],
-      "ig_error_count": 143,
-      "fb_succeeded": 133,
+      "ig_error_count": 146,
+      "fb_succeeded": 136,
       "fb_errors": [
         {
           "post_id": "1087307654468135_122100816704536059",
@@ -176,12 +176,12 @@
           "message": "reach unavailable: (#100) The value must be a valid insights metric"
         }
       ],
-      "fb_error_count": 133,
+      "fb_error_count": 136,
       "ig_with_insights": 0,
       "ig_reach_total": 0,
       "fb_reach_total": 0,
       "fb_reach_metric": "",
-      "own_comments_excluded": 141
+      "own_comments_excluded": 144
     }
   },
   "weights": {
@@ -189,14 +189,14 @@
     "reel:countup": 3,
     "prodclaim": 2,
     "feature": 2,
-    "carousel:twelve": 2,
     "prodsoon": 2,
+    "carousel:twelve": 2,
     "prodshot": 2,
     "reel:card": 1,
     "statement": 1
   },
   "reason": "Ranked 9 formats with at least 8 posts each, against 160 total interactions.",
-  "evaluatedAt": "2026-08-28T17:44:42.935Z",
+  "evaluatedAt": "2026-08-29T11:52:47.334Z",
   "gates": {
     "MIN_TOTAL_ENGAGEMENT": 100,
     "MIN_POSTS_PER_FORMAT": 8,

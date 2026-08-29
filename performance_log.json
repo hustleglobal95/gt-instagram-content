@@ -1,6 +1,6 @@
 {
-  "updated": "2026-08-28T17:44:38.351611Z",
-  "count": 143,
+  "updated": "2026-08-29T11:52:43.169694Z",
+  "count": 146,
   "posts": [
     {
       "sig": "prodclaim:funnel:Your funnel has one we",
@@ -4650,6 +4650,105 @@
       },
       "engagement": 0,
       "_ig_attempted": true
+    },
+    {
+      "sig": "prodshot:funnel:Your funnel has one we",
+      "layout": "prodshot",
+      "file": "creatives/gt_auto_20260828_210115.jpg",
+      "is_reel": false,
+      "at": "2026-08-28T21:01:22.515802Z",
+      "caption": "Most trackers show you conversion rates. This one tells you what to do with them: which step is costing you the most, ho",
+      "permalink": "https://www.instagram.com/p/DcmR6cnk-Iy/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "views": 0,
+        "permalink": "https://www.instagram.com/p/DcmR6cnk-Iy/",
+        "insights_ok": false,
+        "insights_metrics": "",
+        "own_comments": 1,
+        "comments_external": 0,
+        "engagement": 0
+      },
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "reach_metric": "",
+        "engagement": 0
+      },
+      "engagement": 0,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "car:twelve",
+      "layout": "carousel:twelve",
+      "file": "creatives/gt_car_20260828235942_1.jpg",
+      "is_reel": false,
+      "at": "2026-08-28T23:59:47.906066Z",
+      "caption": "Growth gets stuck in twelve places. Only one of them is yours this quarter.\n\nDemand side: acquisition, traffic, conversi",
+      "permalink": "https://www.instagram.com/p/DcmmYqigUpN/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "views": 0,
+        "permalink": "https://www.instagram.com/p/DcmmYqigUpN/",
+        "insights_ok": false,
+        "insights_metrics": "",
+        "own_comments": 1,
+        "comments_external": 0,
+        "engagement": 0
+      },
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "reach_metric": "",
+        "engagement": 0
+      },
+      "engagement": 0,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "prodshot:funnel:Stop guessing which fu",
+      "layout": "prodshot",
+      "file": "creatives/gt_auto_20260829_010104.jpg",
+      "is_reel": false,
+      "at": "2026-08-29T01:01:11.357098Z",
+      "caption": "Most trackers show you conversion rates. This one tells you what to do with them: which step is costing you the most, ho",
+      "permalink": "https://www.instagram.com/p/DcmtW3mElvM/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "views": 0,
+        "permalink": "https://www.instagram.com/p/DcmtW3mElvM/",
+        "insights_ok": false,
+        "insights_metrics": "",
+        "own_comments": 1,
+        "comments_external": 0,
+        "engagement": 0
+      },
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "reach_metric": "",
+        "engagement": 0
+      },
+      "engagement": 0,
+      "_ig_attempted": true
     }
   ],
   "by_format": [
@@ -4798,14 +4897,6 @@
       "avg_engagement": 1.0
     },
     {
-      "layout": "carousel:twelve",
-      "posts": 9,
-      "engagement": 9,
-      "ig_engagement": 6,
-      "fb_engagement": 3,
-      "avg_engagement": 1.0
-    },
-    {
       "layout": "behaviourcall",
       "posts": 1,
       "engagement": 1,
@@ -4838,12 +4929,20 @@
       "avg_engagement": 0.9
     },
     {
-      "layout": "prodshot",
+      "layout": "carousel:twelve",
       "posts": 10,
+      "engagement": 9,
+      "ig_engagement": 6,
+      "fb_engagement": 3,
+      "avg_engagement": 0.9
+    },
+    {
+      "layout": "prodshot",
+      "posts": 12,
       "engagement": 9,
       "ig_engagement": 1,
       "fb_engagement": 8,
-      "avg_engagement": 0.9
+      "avg_engagement": 0.8
     },
     {
       "layout": "reel:card",
@@ -4911,8 +5010,8 @@
     }
   ],
   "collection": {
-    "ig_attempted": 143,
-    "ig_succeeded": 143,
+    "ig_attempted": 146,
+    "ig_succeeded": 146,
     "ig_errors": [
       {
         "media_id": "18481929595099633",
@@ -4995,8 +5094,8 @@
         "message": "insights unavailable: (#10) Application does not have permission for this action"
       }
     ],
-    "ig_error_count": 143,
-    "fb_succeeded": 133,
+    "ig_error_count": 146,
+    "fb_succeeded": 136,
     "fb_errors": [
       {
         "post_id": "1087307654468135_122100816704536059",
@@ -5079,11 +5178,11 @@
         "message": "reach unavailable: (#100) The value must be a valid insights metric"
       }
     ],
-    "fb_error_count": 133,
+    "fb_error_count": 136,
     "ig_with_insights": 0,
     "ig_reach_total": 0,
     "fb_reach_total": 0,
     "fb_reach_metric": "",
-    "own_comments_excluded": 141
+    "own_comments_excluded": 144
   }
 }
