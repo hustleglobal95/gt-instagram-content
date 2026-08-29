@@ -2842,5 +2842,22 @@
       "Markus": "18021691898858824"
     },
     "errors": {}
+  },
+  {
+    "at": "2026-08-29T15:20:46.200Z",
+    "text": "\"It hallucinates sometimes\" is not a bug report. It is a product scope question.\n\nWhich tasks tolerate a wrong answer, and which ones do not? Build for the first list and stay out of the second until you can prove otherwise.",
+    "parts": [
+      "\"It hallucinates sometimes\" is not a bug report. It is a product scope question.\n\nWhich tasks tolerate a wrong answer, and which ones do not? Build for the first list and stay out of the second until you can prove otherwise."
+    ],
+    "isThread": false,
+    "pillar": "systems",
+    "kind": "ai",
+    "accounts": [
+      "Markus"
+    ],
+    "ids": {
+      "Markus": "18439473352135895"
+    },
+    "errors": {}
   }
 ]
