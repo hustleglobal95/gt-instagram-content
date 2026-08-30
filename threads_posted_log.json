@@ -2997,5 +2997,27 @@
       "Markus": "18117442168737814"
     },
     "errors": {}
+  },
+  {
+    "at": "2026-08-30T18:48:10.884Z",
+    "text": "The startup playbook you are reading assumes a team you do not have.",
+    "parts": [
+      "The startup playbook you are reading assumes a team you do not have.",
+      "It was written by people describing what worked after they already had reach.",
+      "It quietly assumes distribution you have not built and a year of runway you are not sitting on.",
+      "Read it as if you have four hours, not four people, and half of it stops applying.",
+      "The tell is whether the advice needs an audience to work. Most of it does.",
+      "What is the advice you followed longest before realising it was written for someone else?"
+    ],
+    "isThread": true,
+    "pillar": "early",
+    "kind": "thread",
+    "accounts": [
+      "Markus"
+    ],
+    "ids": {
+      "Markus": "18011280146940696"
+    },
+    "errors": {}
   }
 ]
