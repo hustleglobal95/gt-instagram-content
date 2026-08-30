@@ -1,12 +1,14 @@
 {
-  "generated_at": "2026-08-30T17:01:11.626Z",
-  "media_file": "creatives/gt_reel_20260830_170111.jpg",
-  "video_file": "creatives/gt_reel_20260830_170111.mp4",
-  "is_reel": true,
-  "layout": "reel:countup",
-  "caption": "Growth only gets stuck in twelve places. The hard part is knowing which one is YOUR #1 right now, with a dollar range attached. That's the whole job Growth Terminal does.\n\n→ growthterminal.io",
-  "hashtags": "#growthterminal #saasgrowth #startupmetrics #googlesheetstips",
-  "first_comment": "Which of the 12 is biting hardest this quarter?",
-  "alt_text": "12",
-  "sig": "reelnum:12"
+  "generated_at": "2026-08-30T21:01:02.123Z",
+  "media_file": "creatives/gt_auto_20260830_210102.jpg",
+  "is_reel": false,
+  "layout": "edterminal",
+  "editorial_bg": null,
+  "person": null,
+  "qa": null,
+  "caption": "One constraint is capping you every month. Here is which.\n\nA constraint report names the single place growth is stuck, prices the fix, and grades the call against real revenue. This one: retention, worth about +29%.\n\n→ growthterminal.io",
+  "hashtags": "#growthterminal #startupmetrics #consultingbusiness #agencyowner",
+  "first_comment": "Refilling a leaky bucket every month? That is a retention constraint.",
+  "alt_text": "",
+  "sig": "edt:RETENTION · +29%"
 }
