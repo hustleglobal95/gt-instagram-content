@@ -3019,5 +3019,27 @@
       "Markus": "18011280146940696"
     },
     "errors": {}
+  },
+  {
+    "at": "2026-08-30T20:57:54.277Z",
+    "text": "Do not price below the band in your category.",
+    "parts": [
+      "Do not price below the band in your category.",
+      "The people who buy at the low price are the ones who tell everyone else what it is worth.",
+      "In a category where everything sits between nineteen and thirty nine, a nine dollar product does not read as a bargain. It reads as unfinished.",
+      "Set the number from the category, not from your nerves.",
+      "Record what everyone else charges first. Not to match it, but to know what you are asking a buyer to unlearn.",
+      "The discount you are giving is mostly to yourself."
+    ],
+    "isThread": true,
+    "pillar": "playbook",
+    "kind": "thread",
+    "accounts": [
+      "Markus"
+    ],
+    "ids": {
+      "Markus": "18119015120483434"
+    },
+    "errors": {}
   }
 ]
