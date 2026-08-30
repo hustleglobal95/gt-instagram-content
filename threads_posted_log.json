@@ -2919,5 +2919,22 @@
       "Markus": "18022648268883665"
     },
     "errors": {}
+  },
+  {
+    "at": "2026-08-30T00:37:34.799Z",
+    "text": "Nobody is impressed by AI on its own anymore.\n\n\"It hallucinates sometimes\" is a scope question, not a bug report. Build for the tasks that tolerate a wrong answer.\n\nWhat is the job your product actually does, in one sentence, no architecture?",
+    "parts": [
+      "Nobody is impressed by AI on its own anymore.\n\n\"It hallucinates sometimes\" is a scope question, not a bug report. Build for the tasks that tolerate a wrong answer.\n\nWhat is the job your product actually does, in one sentence, no architecture?"
+    ],
+    "isThread": false,
+    "pillar": "systems",
+    "kind": "offer",
+    "accounts": [
+      "Markus"
+    ],
+    "ids": {
+      "Markus": "17873982618632360"
+    },
+    "errors": {}
   }
 ]
