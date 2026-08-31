@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-30T10:43:54.651224Z",
+  "updated": "2026-08-31T11:57:09.607848Z",
   "count": 150,
   "posts": [
     {
@@ -526,6 +526,39 @@
         "reach": 0,
         "reach_metric": "",
         "engagement": 1
+      },
+      "engagement": 3,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "feat:Find the one constraint holding your gro:gt_scene_01.png",
+      "layout": "feature",
+      "file": "creatives/gt_auto_20260824_010058.jpg",
+      "is_reel": false,
+      "at": "2026-08-24T01:01:04.547023Z",
+      "caption": "Find the one constraint holding your growth back.\n\nGrowth Terminal reads the report you already run, names the single co",
+      "permalink": "https://www.instagram.com/p/DcZ1XouGjD4/",
+      "ig": {
+        "likes": 3,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "views": 0,
+        "permalink": "https://www.instagram.com/p/DcZ1XouGjD4/",
+        "insights_ok": false,
+        "insights_metrics": "",
+        "own_comments": 1,
+        "comments_external": 0,
+        "engagement": 3
+      },
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "reach_metric": "",
+        "engagement": 0
       },
       "engagement": 3,
       "_ig_attempted": true
@@ -2690,39 +2723,6 @@
         "reach": 0,
         "reach_metric": "",
         "engagement": 1
-      },
-      "engagement": 1,
-      "_ig_attempted": true
-    },
-    {
-      "sig": "feat:Find the one constraint holding your gro:gt_scene_01.png",
-      "layout": "feature",
-      "file": "creatives/gt_auto_20260824_010058.jpg",
-      "is_reel": false,
-      "at": "2026-08-24T01:01:04.547023Z",
-      "caption": "Find the one constraint holding your growth back.\n\nGrowth Terminal reads the report you already run, names the single co",
-      "permalink": "https://www.instagram.com/p/DcZ1XouGjD4/",
-      "ig": {
-        "likes": 1,
-        "comments": 1,
-        "saved": 0,
-        "shares": 0,
-        "reach": 0,
-        "views": 0,
-        "permalink": "https://www.instagram.com/p/DcZ1XouGjD4/",
-        "insights_ok": false,
-        "insights_metrics": "",
-        "own_comments": 1,
-        "comments_external": 0,
-        "engagement": 1
-      },
-      "fb": {
-        "reactions": 0,
-        "comments": 0,
-        "shares": 0,
-        "reach": 0,
-        "reach_metric": "",
-        "engagement": 0
       },
       "engagement": 1,
       "_ig_attempted": true
@@ -4996,6 +4996,14 @@
       "avg_engagement": 1.3
     },
     {
+      "layout": "feature",
+      "posts": 9,
+      "engagement": 11,
+      "ig_engagement": 4,
+      "fb_engagement": 7,
+      "avg_engagement": 1.2
+    },
+    {
       "layout": "carousel:plan",
       "posts": 7,
       "engagement": 8,
@@ -5025,14 +5033,6 @@
       "engagement": 2,
       "ig_engagement": 0,
       "fb_engagement": 2,
-      "avg_engagement": 1.0
-    },
-    {
-      "layout": "feature",
-      "posts": 9,
-      "engagement": 9,
-      "ig_engagement": 2,
-      "fb_engagement": 7,
       "avg_engagement": 1.0
     },
     {
