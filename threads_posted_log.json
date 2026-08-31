@@ -3041,5 +3041,22 @@
       "Markus": "18119015120483434"
     },
     "errors": {}
+  },
+  {
+    "at": "2026-08-31T00:47:58.928Z",
+    "text": "The sentence I write before starting anything now:\n\n\"By [date], [number] people will [action]. If fewer than [number] do, I was wrong about [the thing], and I will [stop or change].\"\n\nTwo minutes. It is the difference between a result you can learn from and one you can read however you are feeling that day.",
+    "parts": [
+      "The sentence I write before starting anything now:\n\n\"By [date], [number] people will [action]. If fewer than [number] do, I was wrong about [the thing], and I will [stop or change].\"\n\nTwo minutes. It is the difference between a result you can learn from and one you can read however you are feeling that day."
+    ],
+    "isThread": false,
+    "pillar": "community",
+    "kind": "building",
+    "accounts": [
+      "Markus"
+    ],
+    "ids": {
+      "Markus": "18137801446721714"
+    },
+    "errors": {}
   }
 ]
