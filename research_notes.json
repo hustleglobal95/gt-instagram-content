@@ -2,6 +2,39 @@
   "about": "Deep research knowledge base. Newest run first.",
   "runs": [
     {
+      "at": "2026-08-31T20:22:28.683Z",
+      "provider": "openai",
+      "articles": [
+        {
+          "title": "How We&#8217;d Market a $400 Skincare Device Before Black Friday",
+          "url": "https://sparktoro.com/blog/how-wed-market-a-400-skincare-device-before-black-friday/"
+        }
+      ],
+      "findings": [
+        {
+          "id": "dr_20260831_1",
+          "name": "pre-sale audience research",
+          "device": "identify audience research habits and address their questions before the sale",
+          "evidence": "SparkToro estimates that audience at just over 1 million people, with an estimated market value of $44.9-$56.7 billion.",
+          "angle": "Create a targeted ad campaign addressing common questions about LED masks before Black Friday.",
+          "url": "https://sparktoro.com/blog/how-wed-market-a-400-skincare-device-before-black-friday/"
+        }
+      ],
+      "log": [
+        "DEEP RESEARCH RUN 2026-08-31T20:22:28.683Z",
+        "feed ok: https://copyhackers.com/feed/ (14 items)",
+        "feed ok: https://adespresso.com/feed/ (10 items)",
+        "  junk title skipped: 15 Fresh Facebook Ad Examples to Inspire Your Next Campaign ",
+        "feed ok: https://sparktoro.com/blog/feed/ (10 items)",
+        "feed FAILED: https://www.marketingweek.com/feed/ (HTTP 403)",
+        "feed FAILED: https://www.growthunhinged.com/feed (HTTP 404)",
+        "feed FAILED: https://ariyh.com/feed (HTTP 404)",
+        "1 fresh articles collected",
+        "distilling with openai",
+        "  STRONG finding: pre-sale audience research"
+      ]
+    },
+    {
       "at": "2026-08-24T15:21:36.985Z",
       "provider": "openai",
       "articles": [
