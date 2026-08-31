@@ -3080,5 +3080,27 @@
       "Markus": "18192275047388627"
     },
     "errors": {}
+  },
+  {
+    "at": "2026-08-31T17:42:57.457Z",
+    "text": "Building an AI product right now has a problem nobody mentions in the launch posts.",
+    "parts": [
+      "Building an AI product right now has a problem nobody mentions in the launch posts.",
+      "Your product depends on somebody else's model. When they update it, half your behaviour changes and you find out from a support ticket.",
+      "That is not a reason to avoid it. It is a reason to price the window honestly. A prompt pack is a trade. A workflow that survives a model swap is an asset.",
+      "Four weeks on an asset is an investment. Four weeks on a trade only pays if you can reach buyers fast, because your inventory spoils.",
+      "The question I would ask before building: what has to stay the same for this to still be worth buying in eighteen months?\n\nIf the answer is a roadmap you do not control, you are renting.",
+      "What To Sell has the full version of this, including which product types decay fastest and which still sell in year three.\n\n$29. growthterminal.io/what-to-sell"
+    ],
+    "isThread": true,
+    "pillar": "playbook",
+    "kind": "thread",
+    "accounts": [
+      "Markus"
+    ],
+    "ids": {
+      "Markus": "18334133923258027"
+    },
+    "errors": {}
   }
 ]
