@@ -1,14 +1,12 @@
 {
-  "generated_at": "2026-08-30T21:01:02.123Z",
-  "media_file": "creatives/gt_auto_20260830_210102.jpg",
-  "is_reel": false,
-  "layout": "edterminal",
-  "editorial_bg": null,
-  "person": null,
-  "qa": null,
-  "caption": "One constraint is capping you every month. Here is which.\n\nA constraint report names the single place growth is stuck, prices the fix, and grades the call against real revenue. This one: retention, worth about +29%.\n\n→ growthterminal.io",
-  "hashtags": "#growthterminal #startupmetrics #consultingbusiness #agencyowner",
-  "first_comment": "Refilling a leaky bucket every month? That is a retention constraint.",
-  "alt_text": "",
-  "sig": "edt:RETENTION · +29%"
+  "generated_at": "2026-08-31T01:01:17.106Z",
+  "media_file": "creatives/gt_reel_20260831_010117.jpg",
+  "video_file": "creatives/gt_reel_20260831_010117.mp4",
+  "is_reel": true,
+  "layout": "reel:card",
+  "caption": "This is what a Growth Terminal diagnosis looks like, one constraint, named, priced, and verified against real revenue. Here, retention was capping the business by $88K-$140K a year.\n\nYours is one run away.\n\nRun the free 60-second diagnostic, link in bio.",
+  "hashtags": "#growthterminal #agencyowner #agencylife #fractionalcmo",
+  "first_comment": "What would you do differently if your #1 constraint came pre-priced?",
+  "alt_text": "#1 constraint: Retention",
+  "sig": "reelcard:Retention"
 }
