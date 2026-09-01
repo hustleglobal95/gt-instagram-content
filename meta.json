@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-09-01T17:01:34.974Z",
-  "media_file": "creatives/gt_reel_20260901_170134.jpg",
-  "video_file": "creatives/gt_reel_20260901_170134.mp4",
+  "generated_at": "2026-09-01T21:01:17.399Z",
+  "media_file": "creatives/gt_reel_20260901_210117.jpg",
+  "video_file": "creatives/gt_reel_20260901_210117.mp4",
   "is_reel": true,
-  "layout": "reel:feature",
-  "caption": "We find the one constraint capping your revenue, price the fix, and grade every call against real revenue. Diagnosis, not a dashboard. Run the free 60-second diagnostic.\n\n→ growthterminal.io",
-  "hashtags": "#growthterminal #consultingbusiness #saasgrowth #bootstrappedfounder",
-  "first_comment": "What do you think your #1 constraint is right now?",
-  "alt_text": "",
-  "sig": "reelfeat:We name the one constrai"
+  "layout": "reel:card",
+  "caption": "This is what a Growth Terminal diagnosis looks like, one constraint, named, priced, and verified against real revenue. Here, pricing was capping the business by $120K-$300K a year.\n\nYours is one run away.\n\n→ growthterminal.io",
+  "hashtags": "#growthterminal #saasgrowth #bootstrappedfounder #googlesheetstips",
+  "first_comment": "What would you do differently if your #1 constraint came pre-priced?",
+  "alt_text": "#1 constraint: Pricing",
+  "sig": "reelcard:Pricing"
 }
