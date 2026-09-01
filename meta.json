@@ -1,14 +1,12 @@
 {
-  "generated_at": "2026-09-01T13:01:13.319Z",
-  "media_file": "creatives/gt_auto_20260901_130113.jpg",
-  "is_reel": false,
-  "layout": "prodsoon",
-  "editorial_bg": null,
-  "person": null,
-  "qa": null,
-  "caption": "Coming soon to the Growth Terminal store: Retention & Churn Tracker.\n\nSee exactly where revenue leaks after the sale.\n\nWant it first? Link in bio.\n\n→ growthterminal.io",
-  "hashtags": "#growthterminal #foundertips #googlesheetstips #agencyowner",
-  "first_comment": "What would you want this one to do? Tell me below.",
-  "alt_text": "Coming soon: Retention & Churn Tracker.",
-  "sig": "prodsoon:Retention & Churn Tracke"
+  "generated_at": "2026-09-01T17:01:34.974Z",
+  "media_file": "creatives/gt_reel_20260901_170134.jpg",
+  "video_file": "creatives/gt_reel_20260901_170134.mp4",
+  "is_reel": true,
+  "layout": "reel:feature",
+  "caption": "We find the one constraint capping your revenue, price the fix, and grade every call against real revenue. Diagnosis, not a dashboard. Run the free 60-second diagnostic.\n\n→ growthterminal.io",
+  "hashtags": "#growthterminal #consultingbusiness #saasgrowth #bootstrappedfounder",
+  "first_comment": "What do you think your #1 constraint is right now?",
+  "alt_text": "",
+  "sig": "reelfeat:We name the one constrai"
 }
