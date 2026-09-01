@@ -196,7 +196,7 @@
     "statement": 1
   },
   "reason": "Ranked 9 formats with at least 8 posts each, against 164 total interactions.",
-  "evaluatedAt": "2026-08-31T11:57:15.172Z",
+  "evaluatedAt": "2026-09-01T10:24:45.423Z",
   "gates": {
     "MIN_TOTAL_ENGAGEMENT": 100,
     "MIN_POSTS_PER_FORMAT": 8,
