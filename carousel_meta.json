@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-08-31T20:46:22.976Z",
+  "generated_at": "2026-09-01T18:23:28.195Z",
   "kind": "carousel",
-  "layout": "carousel:verdict",
+  "layout": "carousel:twelve",
   "media_files": [
-    "creatives/gt_car_20260831204621_1.jpg",
-    "creatives/gt_car_20260831204621_2.jpg",
-    "creatives/gt_car_20260831204621_3.jpg",
-    "creatives/gt_car_20260831204621_4.jpg",
-    "creatives/gt_car_20260831204621_5.jpg"
+    "creatives/gt_car_20260901182327_1.jpg",
+    "creatives/gt_car_20260901182327_2.jpg",
+    "creatives/gt_car_20260901182327_3.jpg",
+    "creatives/gt_car_20260901182327_4.jpg",
+    "creatives/gt_car_20260901182327_5.jpg"
   ],
-  "caption": "Most tools show you what agrees with them.\n\nGrowth Terminal names the constraint, lists the evidence for the call, then publishes the evidence against it and what would prove the diagnosis wrong.\n\nThen a 90 day plan with decision gates, and a grade against real revenue once the quarter plays out.",
-  "hashtags": "#growthterminal #bootstrappedfounder #foundertips #startupmetrics",
-  "first_comment": "When did a tool last tell you why it might be wrong?",
-  "alt_text": "Most tools show you what agrees with them. Growth Terminal names the constraint, lists the evidence for the call, then p",
-  "sig": "car:verdict"
+  "caption": "Growth gets stuck in twelve places. Only one of them is yours this quarter.\n\nDemand side: acquisition, traffic, conversion, offer.\nKeep side: activation, retention, churn, fulfilment.\nCapacity side: capacity, utilisation, pricing, cash collection.\n\nWorking the wrong one is why effort stops turning into revenue. Growth Terminal names which is yours, prices it, and grades the call.",
+  "hashtags": "#growthterminal #consultingbusiness #startupmetrics #b2bsaas",
+  "first_comment": "Which of the twelve would you guess is yours right now?",
+  "alt_text": "Growth gets stuck in twelve places. Only one of them is yours this quarter. Demand side: acquisition, traffic, conversio",
+  "sig": "car:twelve"
 }
