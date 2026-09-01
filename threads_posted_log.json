@@ -3170,5 +3170,26 @@
       "Markus": "18278128657292347"
     },
     "errors": {}
+  },
+  {
+    "at": "2026-09-01T05:23:31.985Z",
+    "text": "The reason you feel busy and flat:\n\nyou're moving ten metrics an inch instead of one metric a mile.\n\nThe one-metric week",
+    "parts": [
+      "The reason you feel busy and flat:\n\nyou're moving ten metrics an inch instead of one metric a mile.\n\nThe one-metric week",
+      "Pick the single number your constraint lives in. Just one. Conversion, or reply rate, or activation, whatever's lowest.",
+      "For 7 days, every action has to move THAT number. If a task doesn't touch it, it waits.",
+      "This kills the real enemy: shallow effort spread across everything. Depth on one lever beats a thin layer on ten.",
+      "Next week, new constraint, new metric. That's a system, not a scramble.\n\nMore of these on @markusreidgt."
+    ],
+    "isThread": true,
+    "pillar": "systems",
+    "kind": "thread",
+    "accounts": [
+      "Markus"
+    ],
+    "ids": {
+      "Markus": "18126183907686318"
+    },
+    "errors": {}
   }
 ]
