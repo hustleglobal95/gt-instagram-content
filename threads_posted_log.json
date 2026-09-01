@@ -3153,5 +3153,22 @@
       "Markus": "18099839141626821"
     },
     "errors": {}
+  },
+  {
+    "at": "2026-09-01T01:22:54.936Z",
+    "text": "Building got cheap. Trust did not.\n\nWhich means the hard part is further along than it used to be, and most people are still optimising the easy part.\n\nThe work that used to be optional is now the whole job.\n\nWhat part of your product breaks first if your provider swaps the model tonight?",
+    "parts": [
+      "Building got cheap. Trust did not.\n\nWhich means the hard part is further along than it used to be, and most people are still optimising the easy part.\n\nThe work that used to be optional is now the whole job.\n\nWhat part of your product breaks first if your provider swaps the model tonight?"
+    ],
+    "isThread": false,
+    "pillar": "systems",
+    "kind": "ai",
+    "accounts": [
+      "Markus"
+    ],
+    "ids": {
+      "Markus": "18278128657292347"
+    },
+    "errors": {}
   }
 ]
