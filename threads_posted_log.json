@@ -3225,5 +3225,27 @@
       "Markus": "17937550905358779"
     },
     "errors": {}
+  },
+  {
+    "at": "2026-09-01T18:48:59.499Z",
+    "text": "Building got cheap. Trust did not.",
+    "parts": [
+      "Building got cheap. Trust did not.",
+      "Your costs move with usage and your buyer wants a flat number. Somebody absorbs that variance.",
+      "Which means the hard part is further along than it used to be, and most people are still optimising the easy part.",
+      "The work that used to be optional is now the whole job.",
+      "Decide on purpose who eats the variance, because the default is you.",
+      "That gap is the entire strategic situation right now."
+    ],
+    "isThread": true,
+    "pillar": "systems",
+    "kind": "thread",
+    "accounts": [
+      "Markus"
+    ],
+    "ids": {
+      "Markus": "18225190657326359"
+    },
+    "errors": {}
   }
 ]
