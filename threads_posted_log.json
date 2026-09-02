@@ -3337,5 +3337,22 @@
       "Markus": "18008963276762894"
     },
     "errors": {}
+  },
+  {
+    "at": "2026-09-02T18:56:28.286Z",
+    "text": "Tampa, St Pete, Clearwater, Sarasota. Four markets that get treated as one because they share a map.\n\nThey do not share the same customer, the same rent, or the same summer.\n\nWhere are you actually, and who actually buys from you?",
+    "parts": [
+      "Tampa, St Pete, Clearwater, Sarasota. Four markets that get treated as one because they share a map.\n\nThey do not share the same customer, the same rent, or the same summer.\n\nWhere are you actually, and who actually buys from you?"
+    ],
+    "isThread": false,
+    "pillar": "community",
+    "kind": "tampa",
+    "accounts": [
+      "Markus"
+    ],
+    "ids": {
+      "Markus": "18113548063920698"
+    },
+    "errors": {}
   }
 ]
