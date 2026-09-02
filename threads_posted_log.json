@@ -3298,5 +3298,27 @@
       "Markus": "18464815081119254"
     },
     "errors": {}
+  },
+  {
+    "at": "2026-09-02T14:44:40.939Z",
+    "text": "Nobody is impressed by AI on its own anymore.",
+    "parts": [
+      "Nobody is impressed by AI on its own anymore.",
+      "The demo sells the technology and the buyer is trying to buy an outcome.",
+      "A demo proves capability. Buyers are shopping for reliability, and those are almost unrelated.",
+      "The pitch that lands is the job, done, with a number attached. Three hours becomes twenty minutes.",
+      "Lead with what changes on Tuesday, not with the architecture.",
+      "Capability is table stakes now. Reliability is the product."
+    ],
+    "isThread": true,
+    "pillar": "systems",
+    "kind": "thread",
+    "accounts": [
+      "Markus"
+    ],
+    "ids": {
+      "Markus": "18073364567448612"
+    },
+    "errors": {}
   }
 ]
