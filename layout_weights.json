@@ -2,8 +2,8 @@
   "active": true,
   "diagnostics": {
     "totalPosts": 150,
-    "totalEngagement": 164,
-    "igEngagement": 71,
+    "totalEngagement": 172,
+    "igEngagement": 79,
     "fbEngagement": 93,
     "formats": 32,
     "formatsWithAnyEngagement": 28,
@@ -187,16 +187,16 @@
   "weights": {
     "reel:feature": 4,
     "reel:countup": 3,
-    "prodclaim": 2,
+    "prodclaim": 3,
     "feature": 2,
-    "prodsoon": 2,
     "carousel:twelve": 2,
+    "prodsoon": 2,
     "reel:card": 1,
     "prodshot": 1,
     "statement": 1
   },
-  "reason": "Ranked 9 formats with at least 8 posts each, against 164 total interactions.",
-  "evaluatedAt": "2026-09-01T10:24:45.423Z",
+  "reason": "Ranked 9 formats with at least 8 posts each, against 172 total interactions.",
+  "evaluatedAt": "2026-09-02T09:58:04.901Z",
   "gates": {
     "MIN_TOTAL_ENGAGEMENT": 100,
     "MIN_POSTS_PER_FORMAT": 8,
