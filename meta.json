@@ -1,12 +1,14 @@
 {
-  "generated_at": "2026-09-03T17:01:07.551Z",
-  "media_file": "creatives/gt_reel_20260903_170107.jpg",
-  "video_file": "creatives/gt_reel_20260903_170107.mp4",
-  "is_reel": true,
-  "layout": "reel:card",
-  "caption": "This is what a Growth Terminal diagnosis looks like, one constraint, named, priced, and verified against real revenue. Here, activation was capping the business by $60K-$110K a year.\n\nYours is one run away.\n\n→ growthterminal.io",
-  "hashtags": "#growthterminal #googlesheetstips #b2bsaas #consultingbusiness",
-  "first_comment": "What would you do differently if your #1 constraint came pre-priced?",
-  "alt_text": "#1 constraint: Activation",
-  "sig": "reelcard:Activation"
+  "generated_at": "2026-09-03T21:01:20.007Z",
+  "media_file": "creatives/gt_auto_20260903_210120.jpg",
+  "is_reel": false,
+  "layout": "edserif",
+  "editorial_bg": null,
+  "person": null,
+  "qa": null,
+  "caption": "The difference between a chatbot and an assistant is context. Ours carries what you sell, what you charge, what you refuse to do, and who the handoff goes to. Trained on your business.\n\nDiagnose your #1 constraint free. Link in bio.",
+  "hashtags": "#growthterminal #revenueoperations #b2bsaas #saasfounder",
+  "first_comment": "What would you need it to know before you trusted it with a lead?",
+  "alt_text": "",
+  "sig": "svcs:CUSTOM AI ASSISTANTS|A teammate,"
 }
