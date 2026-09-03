@@ -3388,5 +3388,26 @@
       "Markus": "17889868089433775"
     },
     "errors": {}
+  },
+  {
+    "at": "2026-09-03T04:47:47.395Z",
+    "text": "The number you've been avoiding is your constraint.\n\nI'm fairly sure this is always true",
+    "parts": [
+      "The number you've been avoiding is your constraint.\n\nI'm fairly sure this is always true",
+      "Not because avoidance is magic. Because you already half know it's bad, and looking would mean owning it.",
+      "Refund rate. Churn past month one. How many enquiries never got a reply. The gap between what you quoted and what you invoiced.\n\nOne of those just made you uncomfortable. That's the one.",
+      "The discomfort is the signal, and it's the most reliable diagnostic tool you have, because it costs nothing and you already ran it.",
+      "Open it today. It's almost never as bad as the version you've been carrying around not looking at."
+    ],
+    "isThread": true,
+    "pillar": "bi",
+    "kind": "thread",
+    "accounts": [
+      "Markus"
+    ],
+    "ids": {
+      "Markus": "18134702089623020"
+    },
+    "errors": {}
   }
 ]
