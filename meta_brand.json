@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-09-02T18:51:18.406Z",
-  "media_file": "creatives/gt_auto_20260902_185118.jpg",
+  "generated_at": "2026-09-03T18:49:11.027Z",
+  "media_file": "creatives/gt_auto_20260903_184911.jpg",
   "is_reel": false,
-  "layout": "edserif",
+  "layout": "svccal",
   "editorial_bg": null,
   "person": null,
   "qa": null,
-  "caption": "Nobody posts consistently on willpower. The Growth Terminal content engine builds on-brand creatives from your bank and publishes them daily, in the weeks that go to plan and the weeks that do not.\n\nDiagnose your #1 constraint free. Link in bio.",
-  "hashtags": "#growthterminal #revenueoperations #fractionalcmo #marketingops",
-  "first_comment": "What usually breaks your posting streak first?",
+  "caption": "Growth Terminal logs every forecast and grades it against real revenue once the outcome is known. Eight of sixty-seven are graded so far. We are not publishing a coverage percentage until there are twenty, because a rate built on eight results tells you nothing. You can watch the number move.\n\nRun the free 60-second diagnostic, link in bio.",
+  "hashtags": "#growthterminal #marketingops #uniteconomics #consultingbusiness",
+  "first_comment": "Would you publish your own miss rate, or only the wins?",
   "alt_text": "",
-  "sig": "svcs:AUTOMATED CONTENT ENGINE|Consistency is a system"
+  "sig": "svccal:paper:We publish the scorecard before it flatt"
 }
