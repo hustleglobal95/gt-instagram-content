@@ -1,14 +1,12 @@
 {
-  "generated_at": "2026-09-02T21:01:04.684Z",
-  "media_file": "creatives/gt_auto_20260902_210104.jpg",
-  "is_reel": false,
-  "layout": "prodclaim",
-  "editorial_bg": null,
-  "person": null,
-  "qa": null,
-  "caption": "Most trackers show you conversion rates. This one tells you what to do with them: which step is costing you the most, how much fixing it is worth, and what your revenue looks like if you close the gap.\n\nFunnel & Conversion Tracker. $79 in Google Sheets™. Link in bio.\n\n→ growthterminal.io",
-  "hashtags": "#growthterminal #consultingbusiness #marketingops #b2bsaas",
-  "first_comment": "Diagnosis before treatment, even in a spreadsheet.",
-  "alt_text": "Your funnel has one weak step. This finds it.",
-  "sig": "prodclaim:funnel:Your funnel has one we"
+  "generated_at": "2026-09-03T01:01:23.029Z",
+  "media_file": "creatives/gt_reel_20260903_010123.jpg",
+  "video_file": "creatives/gt_reel_20260903_010123.mp4",
+  "is_reel": true,
+  "layout": "reel:card",
+  "caption": "This is what a Growth Terminal diagnosis looks like, one constraint, named, priced, and verified against real revenue. Here, activation was capping the business by $60K-$110K a year.\n\nYours is one run away.\n\nDiagnose your #1 constraint free. Link in bio.",
+  "hashtags": "#growthterminal #saasgrowth #googlesheetstips #agencyowner",
+  "first_comment": "What would you do differently if your #1 constraint came pre-priced?",
+  "alt_text": "#1 constraint: Activation",
+  "sig": "reelcard:Activation"
 }
