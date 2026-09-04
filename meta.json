@@ -1,14 +1,12 @@
 {
-  "generated_at": "2026-09-04T17:01:09.851Z",
-  "media_file": "creatives/gt_auto_20260904_170109.jpg",
-  "is_reel": false,
-  "layout": "prodsoon",
-  "editorial_bg": null,
-  "person": null,
-  "qa": null,
-  "caption": "Coming soon to the Growth Terminal store: Pricing & Offer Analyzer.\n\nFind the margin you're leaving on the table on every deal.\n\nWant it first? Link in bio.\n\n→ growthterminal.io",
-  "hashtags": "#growthterminal #consultingbusiness #b2bsaas #agencylife",
-  "first_comment": "What would you want this one to do? Tell me below.",
-  "alt_text": "Coming soon: Pricing & Offer Analyzer.",
-  "sig": "prodsoon:Pricing & Offer Analyzer"
+  "generated_at": "2026-09-04T21:00:56.977Z",
+  "media_file": "creatives/gt_reel_20260904_210056.jpg",
+  "video_file": "creatives/gt_reel_20260904_210056.mp4",
+  "is_reel": true,
+  "layout": "reel:countup",
+  "caption": "60 seconds from spreadsheet to diagnosis. Add the add-on to Google Sheets™, point it at the report you already have, and get your #1 constraint ranked and priced before your coffee's cold.\n\n→ growthterminal.io",
+  "hashtags": "#growthterminal #revenueoperations #consultingbusiness #bootstrappedfounder",
+  "first_comment": "Genuinely ~60 seconds. It reads the sheet you already have open.",
+  "alt_text": "60 sec",
+  "sig": "reelnum:60"
 }
