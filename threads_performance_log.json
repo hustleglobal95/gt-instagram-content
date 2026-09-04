@@ -1,38 +1,38 @@
 {
-  "updated": "2026-09-03T11:15:31.340Z",
-  "count": 225,
+  "updated": "2026-09-04T11:21:17.157Z",
+  "count": 231,
   "ranking_basis": "per_1k",
   "min_views_for_rate": 25,
-  "rate_eligible": 75,
+  "rate_eligible": 76,
   "reach": {
-    "views": 17585,
-    "interactions": 500,
+    "views": 17631,
+    "interactions": 504,
     "median_views": 11,
-    "zero_interaction_posts": 137
+    "zero_interaction_posts": 142
   },
   "coverage": {
     "window_days": 30,
     "media_from_api": {
-      "posts": 225,
+      "posts": 231,
       "replies": 400
     },
-    "content_units": 225,
-    "media_measured": 508,
-    "chain_parts_folded_in": 283,
+    "content_units": 231,
+    "media_measured": 519,
+    "chain_parts_folded_in": 288,
     "posts_missing_from_local_log": 40,
-    "outbound_replies": 117,
-    "outbound_reply_views": 4079,
-    "outbound_reply_interactions": 57,
-    "outbound_replies_measured": 117,
-    "total_views_incl_replies": 21664,
-    "summed_views": 17585,
-    "platform_views": 51729,
-    "ratio": 0.419
+    "outbound_replies": 112,
+    "outbound_reply_views": 4030,
+    "outbound_reply_interactions": 54,
+    "outbound_replies_measured": 112,
+    "total_views_incl_replies": 21661,
+    "summed_views": 17631,
+    "platform_views": 51180,
+    "ratio": 0.423
   },
   "platform": {
     "Markus": {
-      "views": 51729,
-      "likes": 429,
+      "views": 51180,
+      "likes": 430,
       "replies": 387,
       "reposts": 9,
       "quotes": 2,
@@ -91,6 +91,33 @@
       "views": 88,
       "engagement": 37,
       "per_1k": 420.45,
+      "rateReliable": true,
+      "basis": "per_1k"
+    },
+    {
+      "at": "2026-09-03T18:51:59+0000",
+      "pillar": "community",
+      "kind": "thread",
+      "isThread": true,
+      "parts": 6,
+      "parts_measured": 6,
+      "in_posted_log": true,
+      "text": "There is a sentence about your business doing all the work, and you did not write it.",
+      "accounts": [
+        "Markus"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/Dc1f2-gD2zO",
+      "metrics": {
+        "views": 25,
+        "likes": 0,
+        "replies": 5,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 25,
+      "engagement": 5,
+      "per_1k": 200,
       "rateReliable": true,
       "basis": "per_1k"
     },
@@ -189,16 +216,16 @@
       ],
       "permalink": "https://www.threads.com/@markusreidgt/post/DcqykjCm4Jw",
       "metrics": {
-        "views": 393,
-        "likes": 2,
+        "views": 395,
+        "likes": 3,
         "replies": 39,
         "reposts": 0,
         "quotes": 0,
         "shares": 0
       },
-      "views": 393,
-      "engagement": 41,
-      "per_1k": 104.33,
+      "views": 395,
+      "engagement": 42,
+      "per_1k": 106.33,
       "rateReliable": true,
       "basis": "per_1k"
     },
@@ -282,33 +309,6 @@
       "per_1k": 93.02,
       "rateReliable": true,
       "basis": "per_1k"
-    },
-    {
-      "at": "2026-08-27T10:03:40+0000",
-      "pillar": "community",
-      "kind": "thread",
-      "isThread": true,
-      "parts": 6,
-      "parts_measured": 6,
-      "in_posted_log": true,
-      "text": "Something I notice at every Tampa Bay event: the people doing best are asking the most questions.",
-      "accounts": [
-        "Markus"
-      ],
-      "permalink": "https://www.threads.com/@markusreidgt/post/Dcih1Rmljjs",
-      "metrics": {
-        "views": 69,
-        "likes": 1,
-        "replies": 5,
-        "reposts": 0,
-        "quotes": 0,
-        "shares": 0
-      },
-      "views": 69,
-      "engagement": 6,
-      "per_1k": 86.96,
-      "rateReliable": true,
-      "basis": "per_1k"
     }
   ],
   "posts": [
@@ -363,6 +363,33 @@
       "views": 88,
       "engagement": 37,
       "per_1k": 420.45,
+      "rateReliable": true,
+      "basis": "per_1k"
+    },
+    {
+      "at": "2026-09-03T18:51:59+0000",
+      "pillar": "community",
+      "kind": "thread",
+      "isThread": true,
+      "parts": 6,
+      "parts_measured": 6,
+      "in_posted_log": true,
+      "text": "There is a sentence about your business doing all the work, and you did not write it.",
+      "accounts": [
+        "Markus"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/Dc1f2-gD2zO",
+      "metrics": {
+        "views": 25,
+        "likes": 0,
+        "replies": 5,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 25,
+      "engagement": 5,
+      "per_1k": 200,
       "rateReliable": true,
       "basis": "per_1k"
     },
@@ -461,16 +488,16 @@
       ],
       "permalink": "https://www.threads.com/@markusreidgt/post/DcqykjCm4Jw",
       "metrics": {
-        "views": 393,
-        "likes": 2,
+        "views": 395,
+        "likes": 3,
         "replies": 39,
         "reposts": 0,
         "quotes": 0,
         "shares": 0
       },
-      "views": 393,
-      "engagement": 41,
-      "per_1k": 104.33,
+      "views": 395,
+      "engagement": 42,
+      "per_1k": 106.33,
       "rateReliable": true,
       "basis": "per_1k"
     },
@@ -894,15 +921,15 @@
       "permalink": "https://www.threads.com/@markusreidgt/post/DcKtscEjQ-8",
       "metrics": {
         "views": 372,
-        "likes": 14,
+        "likes": 12,
         "replies": 0,
         "reposts": 0,
         "quotes": 0,
         "shares": 0
       },
       "views": 372,
-      "engagement": 14,
-      "per_1k": 37.63,
+      "engagement": 12,
+      "per_1k": 32.26,
       "rateReliable": true,
       "basis": "per_1k"
     },
@@ -2378,16 +2405,16 @@
       ],
       "permalink": "https://www.threads.com/@markusreidgt/post/DcoZQWSmlhP",
       "metrics": {
-        "views": 7,
+        "views": 9,
         "likes": 2,
         "replies": 4,
         "reposts": 0,
         "quotes": 0,
         "shares": 0
       },
-      "views": 7,
+      "views": 9,
       "engagement": 6,
-      "per_1k": 857.14,
+      "per_1k": 666.67,
       "rateReliable": false,
       "basis": "total"
     },
@@ -4930,6 +4957,33 @@
       "basis": "total"
     },
     {
+      "at": "2026-09-03T16:26:52+0000",
+      "pillar": "early",
+      "kind": "offer",
+      "isThread": false,
+      "parts": 1,
+      "parts_measured": 1,
+      "in_posted_log": true,
+      "text": "Nobody warns you that early sales feel like asking for a favour.\n\nThe problem is not persuasion. It is that you have nothing to point at.\n\nThe smallest useful thing you can build is evidence, not scope.\n\nThe full method is in What To Sell. ",
+      "accounts": [
+        "Markus"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/Dc1PP6aDkk2",
+      "metrics": {
+        "views": 5,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 5,
+      "engagement": 0,
+      "per_1k": 0,
+      "rateReliable": false,
+      "basis": "total"
+    },
+    {
       "at": "2026-08-31T19:08:44+0000",
       "pillar": "community",
       "kind": "building",
@@ -5227,6 +5281,33 @@
       "basis": "total"
     },
     {
+      "at": "2026-09-04T04:49:44+0000",
+      "pillar": "early",
+      "kind": "founders",
+      "isThread": false,
+      "parts": 1,
+      "parts_measured": 1,
+      "in_posted_log": true,
+      "text": "Interest is the metric that fooled me longest.\n\nPeople telling you it is a good idea costs them nothing. It is not a signal, it is politeness with a nice haircut.\n\nThe cheapest real signal is somebody asking when they can have it.",
+      "accounts": [
+        "Markus"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/Dc2kQ8REXAd",
+      "metrics": {
+        "views": 4,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 4,
+      "engagement": 0,
+      "per_1k": 0,
+      "rateReliable": false,
+      "basis": "total"
+    },
+    {
       "at": "2026-09-02T20:57:21+0000",
       "pillar": "community",
       "kind": "offer",
@@ -5416,6 +5497,60 @@
       "basis": "total"
     },
     {
+      "at": "2026-09-03T20:55:42+0000",
+      "pillar": "authority",
+      "kind": "position",
+      "isThread": false,
+      "parts": 1,
+      "parts_measured": 1,
+      "in_posted_log": true,
+      "text": "Most growth advice is a guess wearing a confident tone.\n\nI know that is not the popular read. Most of what gets posted here rewards sounding certain, and certainty is cheap when nobody checks later.\n\nI would rather be the account that write",
+      "accounts": [
+        "Markus"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/Dc1uA_uCSjY",
+      "metrics": {
+        "views": 3,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 3,
+      "engagement": 0,
+      "per_1k": 0,
+      "rateReliable": false,
+      "basis": "total"
+    },
+    {
+      "at": "2026-09-03T14:44:43+0000",
+      "pillar": "community",
+      "kind": "building",
+      "isThread": false,
+      "parts": 1,
+      "parts_measured": 1,
+      "in_posted_log": true,
+      "text": "The version in your head is finished. The version on the screen is not.\n\nYou are comparing real work against an imagined finished thing, which is not a fair comparison and never will be.\n\nYou do not get better at closing it. You get better ",
+      "accounts": [
+        "Markus"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/Dc1DjzCFc1J",
+      "metrics": {
+        "views": 3,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 3,
+      "engagement": 0,
+      "per_1k": 0,
+      "rateReliable": false,
+      "basis": "total"
+    },
+    {
       "at": "2026-08-28T11:34:54+0000",
       "pillar": "product",
       "kind": "offer",
@@ -5599,6 +5734,33 @@
         "shares": 0
       },
       "views": 3,
+      "engagement": 0,
+      "per_1k": 0,
+      "rateReliable": false,
+      "basis": "total"
+    },
+    {
+      "at": "2026-09-04T00:18:43+0000",
+      "pillar": "community",
+      "kind": "tampa",
+      "isThread": false,
+      "parts": 1,
+      "parts_measured": 1,
+      "in_posted_log": true,
+      "text": "Something I notice at every Tampa Bay event: the people doing best are asking the most questions.\n\nThey are the obvious answer to one specific question, and the answer travels without them present.\n\nMake yourself easy to check rather than h",
+      "accounts": [
+        "Markus"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/Dc2FP-jmF8K",
+      "metrics": {
+        "views": 2,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 2,
       "engagement": 0,
       "per_1k": 0,
       "rateReliable": false,
@@ -6363,27 +6525,27 @@
   "by_pillar": [
     {
       "key": "early",
-      "posts": 24,
+      "posts": 26,
       "engagement": 83,
-      "avg_engagement": 3.46,
+      "avg_engagement": 3.19,
       "views": 475,
       "avg_per_1k": 187.21
     },
     {
       "key": "authority",
-      "posts": 8,
+      "posts": 9,
       "engagement": 18,
-      "avg_engagement": 2.25,
+      "avg_engagement": 2,
       "views": 75,
       "avg_per_1k": 112.44
     },
     {
       "key": "community",
-      "posts": 41,
-      "engagement": 167,
-      "avg_engagement": 4.07,
-      "views": 3350,
-      "avg_per_1k": 78.75
+      "posts": 44,
+      "engagement": 173,
+      "avg_engagement": 3.93,
+      "views": 3377,
+      "avg_per_1k": 89.02
     },
     {
       "key": "forecast",
@@ -6396,10 +6558,10 @@
     {
       "key": "unknown",
       "posts": 40,
-      "engagement": 56,
-      "avg_engagement": 1.4,
+      "engagement": 54,
+      "avg_engagement": 1.35,
       "views": 1386,
-      "avg_per_1k": 39.57
+      "avg_per_1k": 38.98
     },
     {
       "key": "systems",
@@ -6477,35 +6639,35 @@
   "by_kind": [
     {
       "key": "founders",
-      "posts": 5,
+      "posts": 6,
       "engagement": 36,
-      "avg_engagement": 7.2,
+      "avg_engagement": 6,
       "views": 39,
       "avg_per_1k": 871.79
     },
     {
       "key": "building",
-      "posts": 8,
+      "posts": 9,
       "engagement": 39,
-      "avg_engagement": 4.88,
+      "avg_engagement": 4.33,
       "views": 88,
       "avg_per_1k": 420.45
     },
     {
       "key": "thread",
-      "posts": 58,
-      "engagement": 335,
+      "posts": 59,
+      "engagement": 341,
       "avg_engagement": 5.78,
-      "views": 10980,
-      "avg_per_1k": 44.01
+      "views": 11007,
+      "avg_per_1k": 48.28
     },
     {
       "key": "unknown",
       "posts": 40,
-      "engagement": 56,
-      "avg_engagement": 1.4,
+      "engagement": 54,
+      "avg_engagement": 1.35,
       "views": 1386,
-      "avg_per_1k": 39.57
+      "avg_per_1k": 38.98
     },
     {
       "key": "aphorism",
@@ -6533,7 +6695,7 @@
     },
     {
       "key": "offer",
-      "posts": 22,
+      "posts": 23,
       "engagement": 2,
       "avg_engagement": 0.09,
       "views": 26,
@@ -6652,14 +6814,6 @@
       "avg_per_1k": null
     },
     {
-      "key": "tampa",
-      "posts": 6,
-      "engagement": 2,
-      "avg_engagement": 0.33,
-      "views": 0,
-      "avg_per_1k": null
-    },
-    {
       "key": "callout",
       "posts": 3,
       "engagement": 1,
@@ -6668,7 +6822,15 @@
       "avg_per_1k": null
     },
     {
-      "key": "smallwin",
+      "key": "tampa",
+      "posts": 7,
+      "engagement": 2,
+      "avg_engagement": 0.29,
+      "views": 0,
+      "avg_per_1k": null
+    },
+    {
+      "key": "position",
       "posts": 2,
       "engagement": 0,
       "avg_engagement": 0,
@@ -6676,8 +6838,8 @@
       "avg_per_1k": null
     },
     {
-      "key": "position",
-      "posts": 1,
+      "key": "smallwin",
+      "posts": 2,
       "engagement": 0,
       "avg_engagement": 0,
       "views": 0,
@@ -6871,24 +7033,24 @@
   "by_shape": [
     {
       "key": "thread",
-      "posts": 63,
-      "engagement": 437,
-      "avg_engagement": 6.94,
-      "views": 11406,
-      "avg_per_1k": 75.82
+      "posts": 64,
+      "engagement": 443,
+      "avg_engagement": 6.92,
+      "views": 11433,
+      "avg_per_1k": 78.9
     },
     {
       "key": "single",
-      "posts": 162,
-      "engagement": 63,
-      "avg_engagement": 0.39,
+      "posts": 167,
+      "engagement": 61,
+      "avg_engagement": 0.37,
       "views": 5061,
-      "avg_per_1k": 6.48
+      "avg_per_1k": 6.33
     }
   ],
   "collection": {
-    "attempted": 508,
-    "succeeded": 508,
+    "attempted": 519,
+    "succeeded": 519,
     "reduced_metric_set": 0,
     "errors": []
   }
