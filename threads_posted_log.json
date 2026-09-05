@@ -3601,5 +3601,27 @@
       "Markus": "18423854641150987"
     },
     "errors": {}
+  },
+  {
+    "at": "2026-09-05T04:43:53.287Z",
+    "text": "The list of things that would be nice will happily consume the entire week.",
+    "parts": [
+      "The list of things that would be nice will happily consume the entire week.",
+      "Improvement is not linear. Almost everything worth doing has a threshold, and under it the return is zero, not small.",
+      "Half a landing page does not convert half as well. It converts like no landing page.",
+      "So the question each week is not what could I do. It is what can I get over the line.",
+      "Deciding what you are allowed to leave unfinished is half the job.",
+      "What is the one thing you are getting over the line this week?"
+    ],
+    "isThread": true,
+    "pillar": "community",
+    "kind": "thread",
+    "accounts": [
+      "Markus"
+    ],
+    "ids": {
+      "Markus": "17961869012980550"
+    },
+    "errors": {}
   }
 ]
