@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-09-04T18:31:31.764Z",
-  "media_file": "creatives/gt_auto_20260904_183131.jpg",
+  "generated_at": "2026-09-05T17:26:53.655Z",
+  "media_file": "creatives/gt_auto_20260905_172653.jpg",
   "is_reel": false,
-  "layout": "svccal",
+  "layout": "portalad",
   "editorial_bg": null,
   "person": null,
   "qa": null,
-  "caption": "Growth Terminal logs every forecast and grades it against real revenue once the outcome is known. Eight of sixty-seven are graded so far. We are not publishing a coverage percentage until there are twenty, because a rate built on eight results tells you nothing. You can watch the number move.\n\nRun the free 60-second diagnostic, link in bio.",
-  "hashtags": "#growthterminal #consultingbusiness #saasfounder #startupmetrics",
-  "first_comment": "Would you publish your own miss rate, or only the wins?",
+  "caption": "Five numbers you already know, sixty seconds, and no account. Your figures stay in your browser. What comes back is the category your growth is stuck in and the size of the gap between what you produce and what your target requires.\n\nDiagnose your #1 constraint free. Link in bio.",
+  "hashtags": "#growthterminal #saasfounder #consultingbusiness #agencyowner",
+  "first_comment": "Do you know your current gap without opening a spreadsheet?",
   "alt_text": "",
-  "sig": "svccal:ink:We publish the scorecard before it flatt"
+  "sig": "portalad:diagnostic"
 }
