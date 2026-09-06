@@ -3701,5 +3701,22 @@
       "Markus": "18126284500696586"
     },
     "errors": {}
+  },
+  {
+    "at": "2026-09-06T00:11:03.745Z",
+    "text": "Demos are the most used and least useful sales tool in this category.\n\n\"It hallucinates sometimes\" is a scope question, not a bug report. Build for the tasks that tolerate a wrong answer.\n\nCapability is table stakes now. Reliability is the product.",
+    "parts": [
+      "Demos are the most used and least useful sales tool in this category.\n\n\"It hallucinates sometimes\" is a scope question, not a bug report. Build for the tasks that tolerate a wrong answer.\n\nCapability is table stakes now. Reliability is the product."
+    ],
+    "isThread": false,
+    "pillar": "systems",
+    "kind": "ai",
+    "accounts": [
+      "Markus"
+    ],
+    "ids": {
+      "Markus": "18098855021632639"
+    },
+    "errors": {}
   }
 ]
