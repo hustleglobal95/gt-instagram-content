@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-09-06T01:01:35.032Z",
-  "media_file": "creatives/gt_auto_20260906_010135.jpg",
+  "generated_at": "2026-09-06T13:02:05.398Z",
+  "media_file": "creatives/gt_auto_20260906_130205.jpg",
   "is_reel": false,
-  "layout": "prodshot",
+  "layout": "pipeline",
   "editorial_bg": null,
   "person": null,
   "qa": null,
-  "caption": "Your funnel has one step leaking more than the rest. The Funnel & Conversion Tracker finds it, tells you what fixing it is worth in dollars, and lets you simulate the upside before you spend a cent.\n\n8 tabs, built in Google Sheets™. $79, instant download. Link in bio.\n\n→ growthterminal.io",
-  "hashtags": "#growthterminal #consultingbusiness #revenueoperations #fractionalcmo",
-  "first_comment": "Which funnel step do you think is your weakest right now?",
-  "alt_text": "Stop guessing which funnel step to fix .",
-  "sig": "prodshot:funnel:Stop guessing which fu"
+  "caption": "From 40 numbers to 1 decision.\n\nThe report has everything and says nothing. Growth Terminal reads it, ranks every gap against benchmarks, and hands back one instruction with the annual value attached. This sample: paid CAC at $113 against an $85 benchmark, worth $1.2M a year.\n\n→ growthterminal.io",
+  "hashtags": "#growthterminal #saasgrowth #consultingbusiness #googlesheetstips",
+  "first_comment": "What would your one ringed row be?",
+  "alt_text": "",
+  "sig": "pipe:Paid CAC"
 }
