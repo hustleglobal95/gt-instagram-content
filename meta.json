@@ -1,14 +1,12 @@
 {
-  "generated_at": "2026-09-06T13:02:05.398Z",
-  "media_file": "creatives/gt_auto_20260906_130205.jpg",
-  "is_reel": false,
-  "layout": "pipeline",
-  "editorial_bg": null,
-  "person": null,
-  "qa": null,
-  "caption": "From 40 numbers to 1 decision.\n\nThe report has everything and says nothing. Growth Terminal reads it, ranks every gap against benchmarks, and hands back one instruction with the annual value attached. This sample: paid CAC at $113 against an $85 benchmark, worth $1.2M a year.\n\n→ growthterminal.io",
-  "hashtags": "#growthterminal #saasgrowth #consultingbusiness #googlesheetstips",
-  "first_comment": "What would your one ringed row be?",
-  "alt_text": "",
-  "sig": "pipe:Paid CAC"
+  "generated_at": "2026-09-06T17:01:25.683Z",
+  "media_file": "creatives/gt_reel_20260906_170125.jpg",
+  "video_file": "creatives/gt_reel_20260906_170125.mp4",
+  "is_reel": true,
+  "layout": "reel:card",
+  "caption": "This is what a Growth Terminal diagnosis looks like, one constraint, named, priced, and verified against real revenue. Here, activation was capping the business by $60K-$110K a year.\n\nYours is one run away.\n\nRun the free 60-second diagnostic, link in bio.",
+  "hashtags": "#growthterminal #bootstrappedfounder #consultingbusiness #fractionalcmo",
+  "first_comment": "What would you do differently if your #1 constraint came pre-priced?",
+  "alt_text": "#1 constraint: Activation",
+  "sig": "reelcard:Activation"
 }
