@@ -30,6 +30,11 @@ on:
 
   workflow_dispatch:
     inputs:
+      skip_generate:
+        description: "Publish the meta already committed instead of generating a new creative."
+        required: false
+        default: false
+        type: boolean
       dry_run:
         description: "Build the creative but do not publish"
         type: boolean
@@ -108,6 +113,7 @@ jobs:
         run: pip install requests
 
       - name: Generate a services creative
+        if: ${{ !inputs.skip_generate }}
         env:
           GT_FORCE_MODE:   services
           GT_STATE_SUFFIX: brand
