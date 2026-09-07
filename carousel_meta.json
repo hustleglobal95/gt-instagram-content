@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-09-06T17:35:54.680Z",
+  "generated_at": "2026-09-07T19:06:46.066Z",
   "kind": "carousel",
-  "layout": "carousel:twelve",
+  "layout": "carousel:verdict",
   "media_files": [
-    "creatives/gt_car_20260906173553_1.jpg",
-    "creatives/gt_car_20260906173553_2.jpg",
-    "creatives/gt_car_20260906173553_3.jpg",
-    "creatives/gt_car_20260906173553_4.jpg",
-    "creatives/gt_car_20260906173553_5.jpg"
+    "creatives/gt_car_20260907190645_1.jpg",
+    "creatives/gt_car_20260907190645_2.jpg",
+    "creatives/gt_car_20260907190645_3.jpg",
+    "creatives/gt_car_20260907190645_4.jpg",
+    "creatives/gt_car_20260907190645_5.jpg"
   ],
-  "caption": "Growth gets stuck in twelve places. Only one of them is yours this quarter.\n\nDemand side: acquisition, traffic, conversion, offer.\nKeep side: activation, retention, churn, fulfilment.\nCapacity side: capacity, utilisation, pricing, cash collection.\n\nWorking the wrong one is why effort stops turning into revenue. Growth Terminal names which is yours, prices it, and grades the call.",
-  "hashtags": "#growthterminal #saasfounder #googlesheetstips #consultingbusiness",
-  "first_comment": "Which of the twelve would you guess is yours right now?",
-  "alt_text": "Growth gets stuck in twelve places. Only one of them is yours this quarter. Demand side: acquisition, traffic, conversio",
-  "sig": "car:twelve"
+  "caption": "Most tools show you what agrees with them.\n\nGrowth Terminal names the constraint, lists the evidence for the call, then publishes the evidence against it and what would prove the diagnosis wrong.\n\nThen a 90 day plan with decision gates, and a grade against real revenue once the quarter plays out.",
+  "hashtags": "#growthterminal #marketingops #agencylife #fractionalcmo",
+  "first_comment": "When did a tool last tell you why it might be wrong?",
+  "alt_text": "Most tools show you what agrees with them. Growth Terminal names the constraint, lists the evidence for the call, then p",
+  "sig": "car:verdict"
 }
