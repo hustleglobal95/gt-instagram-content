@@ -3812,5 +3812,27 @@
       "Markus": "17930527578145340"
     },
     "errors": {}
+  },
+  {
+    "at": "2026-09-07T00:17:22.606Z",
+    "text": "Nobody warns you that early sales feel like asking for a favour.",
+    "parts": [
+      "Nobody warns you that early sales feel like asking for a favour.",
+      "The problem is not persuasion. It is that you have nothing to point at.",
+      "Every one of those ten is somebody taking a personal risk on a stranger.",
+      "The smallest useful thing you can build is evidence, not scope.",
+      "Which means the early work is not more features. It is one person who used it and said something true about it in public.",
+      "It gets easier, and not for the reason people tell you."
+    ],
+    "isThread": true,
+    "pillar": "early",
+    "kind": "thread",
+    "accounts": [
+      "Markus"
+    ],
+    "ids": {
+      "Markus": "18106972549924515"
+    },
+    "errors": {}
   }
 ]
