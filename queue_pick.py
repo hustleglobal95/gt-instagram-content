@@ -6,9 +6,9 @@ daily rotation and wrong for a set of ads that were drawn by hand and signed
 off. This picks the next unused entry from ads_queue.json, writes the meta the
 publisher reads, and records it as used so it does not repeat.
 
-When the queue is empty it says so and exits 0 without writing anything, and
-the workflow falls through to generate.js exactly as before. Nothing about the
-old path changes.
+This is the only source of a post. If it cannot hand over an approved ad it
+exits non-zero and the run stops, because the alternative is publishing an old
+creative and none of those are ever to appear again.
 
   GT_STATE_SUFFIX=brand  ->  meta_brand.json / used_ads_brand.json
 """
@@ -21,24 +21,21 @@ META   = "meta%s.json" % tag
 USED   = "used_ads%s.json" % tag
 
 
-def out(key, value):
-    p = os.environ.get("GITHUB_OUTPUT")
-    if p:
-        with open(p, "a") as f:
-            f.write("%s=%s\n" % (key, value))
-    print("%s=%s" % (key, value))
+def stop(msg):
+    """Refuse rather than fall back. Nothing unapproved is ever published."""
+    print("REFUSING TO POST: " + msg)
+    print("The queue is the only approved source. Add an ad to ads_queue.json.")
+    sys.exit(1)
 
 
 def main():
     if not pathlib.Path(QUEUE).exists():
-        print("No %s. Falling through to the generator." % QUEUE)
-        return out("picked", "false")
+        stop("no %s in the repo." % QUEUE)
 
     queue = json.load(open(QUEUE))
     ads = queue.get("ads", [])
     if not ads:
-        print("Queue is empty. Falling through to the generator.")
-        return out("picked", "false")
+        stop("%s has no ads in it." % QUEUE)
 
     used = []
     if pathlib.Path(USED).exists():
@@ -50,17 +47,15 @@ def main():
 
     nxt = next((a for a in ads if a["id"] not in used_ids), None)
     if nxt is None:
-        if queue.get("loop"):
-            print("Every ad used once. Looping, oldest first.")
+        if queue.get("loop", True):
+            print("Every ad has run once. Starting the rotation again.")
             used, nxt = [], ads[0]
         else:
-            print("Every ad in the queue has run. Falling through to the generator.")
-            return out("picked", "false")
+            stop("every ad has run and looping is switched off.")
 
     media = nxt["media_file"]
     if not pathlib.Path(media).exists():
-        print("MISSING FILE: %s. Falling through rather than posting a broken URL." % media)
-        return out("picked", "false")
+        stop("%s is named in the queue but not in the repo." % media)
 
     meta = {
         "generated_at": datetime.datetime.now(datetime.timezone.utc)
@@ -81,8 +76,7 @@ def main():
     json.dump(used, open(USED, "w"), indent=2, ensure_ascii=False)
 
     print("Picked %s -> %s" % (nxt["id"], media))
-    print("%d of %d used." % (len(used), len(ads)))
-    out("picked", "true")
+    print("%d of %d in this rotation." % (len(used), len(ads)))
 
 
 if __name__ == "__main__":

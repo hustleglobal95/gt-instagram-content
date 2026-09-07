@@ -1,6 +1,6 @@
 {
-  "note": "Approved ads, published in order. When every one has run the workflow falls back to generate.js. Set loop to true to cycle instead.",
-  "loop": false,
+  "note": "The only source of a post. queue_pick.py takes the next one each run and loops when it reaches the end. Nothing outside this file is ever published. generate.js is off unless a run explicitly asks for it.",
+  "loop": true,
   "ads": [
     {
       "id": "ad02-busy-not-blocked",
