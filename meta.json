@@ -1,12 +1,14 @@
 {
-  "generated_at": "2026-09-07T17:01:13.002Z",
-  "media_file": "creatives/gt_reel_20260907_170113.jpg",
-  "video_file": "creatives/gt_reel_20260907_170113.mp4",
-  "is_reel": true,
-  "layout": "reel:card",
-  "caption": "This is what a Growth Terminal diagnosis looks like, one constraint, named, priced, and verified against real revenue. Here, retention was capping the business by $88K-$140K a year.\n\nYours is one run away.\n\n→ growthterminal.io",
-  "hashtags": "#growthterminal #saasgrowth #foundertips #consultingbusiness",
-  "first_comment": "What would you do differently if your #1 constraint came pre-priced?",
-  "alt_text": "#1 constraint: Retention",
-  "sig": "reelcard:Retention"
+  "generated_at": "2026-09-07T17:50:19.951456Z",
+  "media_file": "creatives/gt_ad_20260907_01_nobody-came-back.jpg",
+  "is_reel": false,
+  "layout": "statement",
+  "editorial_bg": null,
+  "person": null,
+  "qa": null,
+  "caption": "Consultants leave. Dashboards refresh. The recommendation that started it all is never revisited.\n\nGrowth Terminal commits a baseline before the work starts, then compares it against what actually happened and records one of three verdicts: worked, missed, or not enough evidence.\n\n→ growthterminal.io",
+  "hashtags": "#growthterminal #b2bsaas #agencyowner #fractionalcmo #growthstrategy #revenueoperations #consulting #datadriven #kpis #decisionmaking #accountability",
+  "first_comment": "Two of the three verdicts are not good news. That is the point. A tool that can only tell you it worked is not measuring anything.",
+  "alt_text": "Poster reading: Nobody ever came back and told you if it worked.",
+  "sig": "ad:gt_ad_20260907_01_nobody-came-back"
 }
