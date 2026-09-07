@@ -1,0 +1,42 @@
+{
+  "note": "Approved ads, published in order. When every one has run the workflow falls back to generate.js. Set loop to true to cycle instead.",
+  "loop": false,
+  "ads": [
+    {
+      "id": "ad02-busy-not-blocked",
+      "media_file": "creatives/gt_ad_20260907_02_busy-not-blocked.jpg",
+      "caption": "Production went up. The shortfall went up faster. That is the difference between a team working hard and a business that is actually moving.\n\nGrowth Terminal reads the reports you already have, names what is holding growth back, and shows the evidence behind the call.\n\n→ growthterminal.io",
+      "first_comment": "The screen is a demo workspace with sample data. The gap shown is measured in that workspace, not a forecast.",
+      "alt_text": "Poster reading: Busy is not the same as blocked, above a chart of qualified leads against requirement.",
+      "hashtags": "#growthterminal #b2bsaas #agencyowner #fractionalcmo #growthstrategy #revenueoperations #consulting #datadriven #kpis #decisionmaking #accountability",
+      "layout": "statement"
+    },
+    {
+      "id": "ad03-who-owns-it",
+      "media_file": "creatives/gt_ad_20260907_03_who-owns-it.jpg",
+      "caption": "A priority with no owner is a conversation.\n\nThe decision becomes work with a name against it, a state, and an approval before anything reaches a client.\n\n→ growthterminal.io",
+      "first_comment": "Owners, review states and approvals as the app records them. Demo workspace, sample data.",
+      "alt_text": "Poster reading: Who owns the next move, above a board of open tickets with owners and review states.",
+      "hashtags": "#growthterminal #b2bsaas #agencyowner #fractionalcmo #growthstrategy #revenueoperations #consulting #datadriven #kpis #decisionmaking #accountability",
+      "layout": "statement"
+    },
+    {
+      "id": "ad04-decision-stays",
+      "media_file": "creatives/gt_ad_20260907_04_decision-stays.jpg",
+      "caption": "Every call your team made, still where you left it, with the evidence and the severity attached.\n\nIncluding the runs that did not work, because a record that only keeps the wins is not a record.\n\n→ growthterminal.io",
+      "first_comment": "That list includes one run marked failed and one still running. Demo workspace, sample data.",
+      "alt_text": "Poster reading: The meeting ends, the decision stays, above a list of analyses with severity and status.",
+      "hashtags": "#growthterminal #b2bsaas #agencyowner #fractionalcmo #growthstrategy #revenueoperations #consulting #datadriven #kpis #decisionmaking #accountability",
+      "layout": "statement"
+    },
+    {
+      "id": "ad01-nobody-came-back",
+      "media_file": "creatives/gt_ad_20260907_01_nobody-came-back.jpg",
+      "caption": "Consultants leave. Dashboards refresh. The recommendation that started it all is never revisited.\n\nGrowth Terminal commits a baseline before the work starts, then compares it against what actually happened and records one of three verdicts: worked, missed, or not enough evidence.\n\n→ growthterminal.io",
+      "first_comment": "Two of the three verdicts are not good news. That is the point. A tool that can only tell you it worked is not measuring anything.",
+      "alt_text": "Poster reading: Nobody ever came back and told you if it worked.",
+      "hashtags": "#growthterminal #b2bsaas #agencyowner #fractionalcmo #growthstrategy #revenueoperations #consulting #datadriven #kpis #decisionmaking #accountability",
+      "layout": "statement"
+    }
+  ]
+}
