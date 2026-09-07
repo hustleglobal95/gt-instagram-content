@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-09-07T17:50:19.951456Z",
-  "media_file": "creatives/gt_ad_20260907_01_nobody-came-back.jpg",
+  "generated_at": "2026-09-07T18:09:42.581253Z",
+  "media_file": "creatives/gt_ad_20260907_05_wordmark-reveal.jpg",
   "is_reel": false,
   "layout": "statement",
   "editorial_bg": null,
   "person": null,
   "qa": null,
-  "caption": "Consultants leave. Dashboards refresh. The recommendation that started it all is never revisited.\n\nGrowth Terminal commits a baseline before the work starts, then compares it against what actually happened and records one of three verdicts: worked, missed, or not enough evidence.\n\n→ growthterminal.io",
-  "hashtags": "#growthterminal #b2bsaas #agencyowner #fractionalcmo #growthstrategy #revenueoperations #consulting #datadriven #kpis #decisionmaking #accountability",
-  "first_comment": "Two of the three verdicts are not good news. That is the point. A tool that can only tell you it worked is not measuring anything.",
-  "alt_text": "Poster reading: Nobody ever came back and told you if it worked.",
-  "sig": "ad:gt_ad_20260907_01_nobody-came-back"
+  "caption": "We built Growth Terminal because nobody ever fixed a dark house by rewiring it.\n\nWhen the power goes, an electrician does not start opening walls. They walk to the panel. Every switch in there looks identical and only one of them is thrown. Finding it is the entire job. Everything after that is a flick of a finger.\n\nGrowth almost never gets treated that way. Traffic dips, so the team rewrites the ads. Deals stall, so the team rewrites the deck. Retention slips, so the team ships a feature. Four people opening four walls in a house with one thrown switch, and every one of them can show you a chart proving their wall is the right one.\n\nSo the mark is one letter with one square held inside it, and that square is the only thing wearing colour.\n\n→ growthterminal.io",
+  "hashtags": "#growthterminal #newlogo #brandidentity #b2bsaas #logodesign #wordmark #growthstrategy #startups #branding #designsystem #rebrand",
+  "first_comment": "The panel metaphor is the product, not a flourish. It ranks what is holding the rest back and tells you what would prove it wrong before you spend anything acting on it.",
+  "alt_text": "The Growth Terminal wordmark in white on near black, with one orange square inside the G.",
+  "sig": "reveal:wordmark:20260907"
 }
