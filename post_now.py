@@ -69,8 +69,10 @@ def raw_url(path):
     return f"{RAW}/{str(path).lstrip('/')}?t={int(time.time())}"
 
 
-def wait_for_url(url, tries=12, delay=5):
-    """After a git push, the raw URL can take a few seconds to go live."""
+def wait_for_url(url, tries=40, delay=10):
+    """After a git push, the raw URL can take minutes to go live, not seconds.
+       Twelve tries at five seconds was a sixty second budget and every run since
+       29 August 2026 spent it and gave up just before the file appeared."""
     for i in range(tries):
         try:
             r = requests.get(url, timeout=20)
