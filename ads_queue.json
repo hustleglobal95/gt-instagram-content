@@ -12,11 +12,29 @@
       "layout": "statement"
     },
     {
+      "id": "ad05-one-wins-the-quarter",
+      "media_file": "creatives/gt_ad_20260907_05_one-wins-the-quarter.jpg",
+      "caption": "A list of thirty priorities is not a plan. It is a way of avoiding the one decision that actually moves the quarter.\n\nGrowth Terminal scores where growth is stuck across your own numbers and names the single constraint costing you the most right now.\n\n→ growthterminal.io",
+      "first_comment": "The rest stay ranked and stay visible. They are just not the one to work on this quarter.",
+      "alt_text": "Poster reading: Thirty priorities is none. One wins the quarter.",
+      "hashtags": "#growthterminal #b2bsaas #agencyowner #fractionalcmo #growthstrategy #revenueoperations #consulting #datadriven #kpis #decisionmaking #accountability",
+      "layout": "statement"
+    },
+    {
       "id": "ad03-who-owns-it",
       "media_file": "creatives/gt_ad_20260907_03_who-owns-it.jpg",
       "caption": "A priority with no owner is a conversation.\n\nThe decision becomes work with a name against it, a state, and an approval before anything reaches a client.\n\n→ growthterminal.io",
       "first_comment": "Owners, review states and approvals as the app records them. Demo workspace, sample data.",
       "alt_text": "Poster reading: Who owns the next move, above a board of open tickets with owners and review states.",
+      "hashtags": "#growthterminal #b2bsaas #agencyowner #fractionalcmo #growthstrategy #revenueoperations #consulting #datadriven #kpis #decisionmaking #accountability",
+      "layout": "statement"
+    },
+    {
+      "id": "ad06-already-paid",
+      "media_file": "creatives/gt_ad_20260907_06_already-paid.jpg",
+      "caption": "Last quarter's guess was not free. It cost you a quarter.\n\nGrowth Terminal names one constraint and attaches a dollar range to it before you spend, so the choice is made against a number instead of a hunch.\n\n→ growthterminal.io",
+      "first_comment": "The range is modelled from your own figures, and the run is kept so you can check it later against what actually happened.",
+      "alt_text": "Poster reading: You already paid for last quarter's wrong guess. One constraint, priced.",
       "hashtags": "#growthterminal #b2bsaas #agencyowner #fractionalcmo #growthstrategy #revenueoperations #consulting #datadriven #kpis #decisionmaking #accountability",
       "layout": "statement"
     },
@@ -30,11 +48,65 @@
       "layout": "statement"
     },
     {
+      "id": "ad11-wrong-column",
+      "media_file": "creatives/gt_ad_20260907_11_wrong-column.jpg",
+      "caption": "A chart drawn from the wrong column looks exactly like a chart drawn from the right one. That is what makes it expensive.\n\nSo Growth Terminal shows you which column it read, in plain English, before it draws anything.\n\n→ growthterminal.io",
+      "first_comment": "Column matching is resolved in the browser by rule. Nothing is uploaded for that step and no credit is spent.",
+      "alt_text": "Poster reading: The wrong column looks exactly like the right one, above a panel showing which columns the app read.",
+      "hashtags": "#growthterminal #b2bsaas #agencyowner #fractionalcmo #growthstrategy #revenueoperations #consulting #datadriven #kpis #decisionmaking #accountability",
+      "layout": "statement"
+    },
+    {
+      "id": "ad08-cannot-spend-a-forecast",
+      "media_file": "creatives/gt_ad_20260907_08_cannot-spend-a-forecast.jpg",
+      "caption": "A forecast is not money. It is a claim, and most tools never go back and check theirs.\n\nGrowth Terminal commits its number in advance, then grades that number against what actually landed.\n\n→ growthterminal.io",
+      "first_comment": "Worked, missed, or not enough evidence. Two of the three are not good news.",
+      "alt_text": "Poster reading: You cannot spend a forecast. So we grade ours against the real number, after.",
+      "hashtags": "#growthterminal #b2bsaas #agencyowner #fractionalcmo #growthstrategy #revenueoperations #consulting #datadriven #kpis #decisionmaking #accountability",
+      "layout": "statement"
+    },
+    {
       "id": "ad01-nobody-came-back",
       "media_file": "creatives/gt_ad_20260907_01_nobody-came-back.jpg",
       "caption": "Consultants leave. Dashboards refresh. The recommendation that started it all is never revisited.\n\nGrowth Terminal commits a baseline before the work starts, then compares it against what actually happened and records one of three verdicts: worked, missed, or not enough evidence.\n\n→ growthterminal.io",
       "first_comment": "Two of the three verdicts are not good news. That is the point. A tool that can only tell you it worked is not measuring anything.",
       "alt_text": "Poster reading: Nobody ever came back and told you if it worked.",
+      "hashtags": "#growthterminal #b2bsaas #agencyowner #fractionalcmo #growthstrategy #revenueoperations #consulting #datadriven #kpis #decisionmaking #accountability",
+      "layout": "statement"
+    },
+    {
+      "id": "ad09-only-one-is-the-reason",
+      "media_file": "creatives/gt_ad_20260907_09_only-one-is-the-reason.jpg",
+      "caption": "Growth is stuck in one place. The rest of the list is noise you can leave alone this quarter.\n\nGrowth Terminal scores each area against your own numbers and shows the working, so the ranking is something you can argue with rather than accept.\n\n→ growthterminal.io",
+      "first_comment": "Scores shown are from a demo workspace with sample data. Yours are drawn from the sheet you point it at.",
+      "alt_text": "Poster reading: Acquisition, scored 66, above a ranked list. Only one of these is the reason.",
+      "hashtags": "#growthterminal #b2bsaas #agencyowner #fractionalcmo #growthstrategy #revenueoperations #consulting #datadriven #kpis #decisionmaking #accountability",
+      "layout": "statement"
+    },
+    {
+      "id": "ad12-decision-nobody-executes",
+      "media_file": "creatives/gt_ad_20260907_12_decision-nobody-executes.jpg",
+      "caption": "The hard part was never naming the priority. It was that the priority never became anyone's job.\n\nEvery decision becomes work with an owner, a state and an approval, kept in the same place as the analysis that caused it.\n\n→ growthterminal.io",
+      "first_comment": "Demo workspace with sample data. The board is sorted worst first, not newest first.",
+      "alt_text": "Poster reading: A decision nobody executes is not a decision, above a work board with owners and states.",
+      "hashtags": "#growthterminal #b2bsaas #agencyowner #fractionalcmo #growthstrategy #revenueoperations #consulting #datadriven #kpis #decisionmaking #accountability",
+      "layout": "statement"
+    },
+    {
+      "id": "ad10-analysis-is-long",
+      "media_file": "creatives/gt_ad_20260907_10_analysis-is-long.jpg",
+      "caption": "Nobody is confused about how to diagnose a growth problem. They are out of time to do it every quarter.\n\nGrowth Terminal runs it on the sheet you already keep and hands back the ranking, the evidence and the number.\n\n→ growthterminal.io",
+      "first_comment": "It reads the spreadsheet you point it at. Nothing to migrate and nothing to rebuild.",
+      "alt_text": "Poster reading: The analysis is not hard. It is long. Run it on the sheet you keep.",
+      "hashtags": "#growthterminal #b2bsaas #agencyowner #fractionalcmo #growthstrategy #revenueoperations #consulting #datadriven #kpis #decisionmaking #accountability",
+      "layout": "statement"
+    },
+    {
+      "id": "ad07-busy-statement",
+      "media_file": "creatives/gt_ad_20260907_07_busy-is-not-blocked.jpg",
+      "caption": "Working harder on the wrong thing is still the wrong thing. Effort is not the constraint.\n\nGrowth Terminal names what is actually holding growth back and shows the evidence behind the call.\n\n→ growthterminal.io",
+      "first_comment": "Every call comes with what would prove it wrong attached. If that test fails, the call was wrong.",
+      "alt_text": "Poster reading: Busy is not the same as blocked. Working harder on the wrong thing is still the wrong thing.",
       "hashtags": "#growthterminal #b2bsaas #agencyowner #fractionalcmo #growthstrategy #revenueoperations #consulting #datadriven #kpis #decisionmaking #accountability",
       "layout": "statement"
     }
