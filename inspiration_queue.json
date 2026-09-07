@@ -1679,5 +1679,217 @@
     "whyItWorks": "Understanding the audience's research habits allows for targeted marketing strategies before the sale, increasing conversion rates. Evidence: SparkToro estimates that audience at just over 1 million people, with an estimated market value of $44.9-$56.7 billion.",
     "gtAngle": "Create a targeted ad campaign addressing common questions about LED masks before Black Friday.",
     "url": "https://sparktoro.com/blog/how-wed-market-a-400-skincare-device-before-black-friday/"
+  },
+  {
+    "id": "rs_g6d0s9",
+    "source": "rss",
+    "url": "https://www.marketingdive.com/news/kfc-names-first-global-chief-brand-officer-amid-identity-overhaul/829675/",
+    "capturedAt": "2026-09-07T18:51:37.712Z",
+    "structure": {
+      "wordCount": 10,
+      "lineCount": 1,
+      "avgWordsPerLine": 10,
+      "hookLength": 10,
+      "signals": [],
+      "hasImage": false,
+      "hasVideo": false,
+      "platforms": []
+    },
+    "nearestExistingLayout": null,
+    "novelty": "no close match in the bank",
+    "note": "headline pattern from https://www.marketingdive.com/feeds/news/",
+    "gtAngle": "",
+    "status": "new"
+  },
+  {
+    "id": "rs_1e1jlzd",
+    "source": "rss",
+    "url": "https://www.marketingdive.com/news/back-to-school-marketing-is-a-mash-up-of-ai-tech-and-value-messaging/829626/",
+    "capturedAt": "2026-09-07T18:51:37.712Z",
+    "structure": {
+      "wordCount": 12,
+      "lineCount": 1,
+      "avgWordsPerLine": 12,
+      "hookLength": 12,
+      "signals": [],
+      "hasImage": false,
+      "hasVideo": false,
+      "platforms": []
+    },
+    "nearestExistingLayout": null,
+    "novelty": "no close match in the bank",
+    "note": "headline pattern from https://www.marketingdive.com/feeds/news/",
+    "gtAngle": "",
+    "status": "new"
+  },
+  {
+    "id": "rs_y7marv",
+    "source": "rss",
+    "url": "https://www.marketingdive.com/news/hoka-builds-strava-running-stats-into-digital-ooh-campaign/829480/",
+    "capturedAt": "2026-09-07T18:51:37.712Z",
+    "structure": {
+      "wordCount": 9,
+      "lineCount": 1,
+      "avgWordsPerLine": 9,
+      "hookLength": 9,
+      "signals": [],
+      "hasImage": false,
+      "hasVideo": false,
+      "platforms": []
+    },
+    "nearestExistingLayout": null,
+    "novelty": "no close match in the bank",
+    "note": "headline pattern from https://www.marketingdive.com/feeds/news/",
+    "gtAngle": "",
+    "status": "new"
+  },
+  {
+    "id": "rs_183hk2c",
+    "source": "rss",
+    "url": "https://www.marketingdive.com/news/pepsico-hands-global-media-to-publicis-amid-transformation-at-cpg-giant/829556/",
+    "capturedAt": "2026-09-07T18:51:37.712Z",
+    "structure": {
+      "wordCount": 11,
+      "lineCount": 1,
+      "avgWordsPerLine": 11,
+      "hookLength": 11,
+      "signals": [],
+      "hasImage": false,
+      "hasVideo": false,
+      "platforms": []
+    },
+    "nearestExistingLayout": null,
+    "novelty": "no close match in the bank",
+    "note": "headline pattern from https://www.marketingdive.com/feeds/news/",
+    "gtAngle": "",
+    "status": "new"
+  },
+  {
+    "id": "rs_1t3xm0t",
+    "source": "rss",
+    "url": "https://www.marketingdive.com/news/how-graza-hopes-to-lap-the-competition-with-some-help-from-nascar/829333/",
+    "capturedAt": "2026-09-07T18:51:37.712Z",
+    "structure": {
+      "wordCount": 12,
+      "lineCount": 1,
+      "avgWordsPerLine": 12,
+      "hookLength": 12,
+      "signals": [],
+      "hasImage": false,
+      "hasVideo": false,
+      "platforms": []
+    },
+    "nearestExistingLayout": null,
+    "novelty": "no close match in the bank",
+    "note": "headline pattern from https://www.marketingdive.com/feeds/news/",
+    "gtAngle": "",
+    "status": "new"
+  },
+  {
+    "id": "rs_1flmbk2",
+    "source": "rss",
+    "url": "https://www.marketingdive.com/news/how-marketers-can-navigate-machine-bias-as-ai-takes-over-media/829315/",
+    "capturedAt": "2026-09-07T18:51:37.712Z",
+    "structure": {
+      "wordCount": 11,
+      "lineCount": 1,
+      "avgWordsPerLine": 11,
+      "hookLength": 11,
+      "signals": [],
+      "hasImage": false,
+      "hasVideo": false,
+      "platforms": []
+    },
+    "nearestExistingLayout": null,
+    "novelty": "no close match in the bank",
+    "note": "headline pattern from https://www.marketingdive.com/feeds/news/",
+    "gtAngle": "",
+    "status": "new"
+  },
+  {
+    "id": "rs_1v12rl0",
+    "source": "rss",
+    "url": "https://www.marketingdive.com/news/axe-vies-for-more-mature-brand-positioning-while-nodding-to-y2k-roots/829426/",
+    "capturedAt": "2026-09-07T18:51:37.713Z",
+    "structure": {
+      "wordCount": 12,
+      "lineCount": 1,
+      "avgWordsPerLine": 12,
+      "hookLength": 12,
+      "signals": [
+        "leads with a number, concrete claim"
+      ],
+      "hasImage": false,
+      "hasVideo": false,
+      "platforms": []
+    },
+    "nearestExistingLayout": "stat",
+    "novelty": "variant of stat",
+    "note": "headline pattern from https://www.marketingdive.com/feeds/news/",
+    "gtAngle": "",
+    "status": "parked"
+  },
+  {
+    "id": "rs_eqjzp5",
+    "source": "rss",
+    "url": "https://www.marketingdive.com/news/athletic-brewing-appoints-new-cmo-amid-marketing-push/829349/",
+    "capturedAt": "2026-09-07T18:51:37.713Z",
+    "structure": {
+      "wordCount": 8,
+      "lineCount": 1,
+      "avgWordsPerLine": 8,
+      "hookLength": 8,
+      "signals": [],
+      "hasImage": false,
+      "hasVideo": false,
+      "platforms": []
+    },
+    "nearestExistingLayout": null,
+    "novelty": "no close match in the bank",
+    "note": "headline pattern from https://www.marketingdive.com/feeds/news/",
+    "gtAngle": "",
+    "status": "new"
+  },
+  {
+    "id": "rs_dcuoby",
+    "source": "rss",
+    "url": "https://www.marketingdive.com/news/the-ups-store-enlists-first-brand-character-to-support-franchisees/829215/",
+    "capturedAt": "2026-09-07T18:51:37.713Z",
+    "structure": {
+      "wordCount": 10,
+      "lineCount": 1,
+      "avgWordsPerLine": 10,
+      "hookLength": 10,
+      "signals": [],
+      "hasImage": false,
+      "hasVideo": false,
+      "platforms": []
+    },
+    "nearestExistingLayout": null,
+    "novelty": "no close match in the bank",
+    "note": "headline pattern from https://www.marketingdive.com/feeds/news/",
+    "gtAngle": "",
+    "status": "new"
+  },
+  {
+    "id": "rs_86fvnm",
+    "source": "rss",
+    "url": "https://www.marketingdive.com/news/how-hersheys-katseye-campaign-takes-on-gen-zs-desire-for-indulgence/829013/",
+    "capturedAt": "2026-09-07T18:51:37.713Z",
+    "structure": {
+      "wordCount": 11,
+      "lineCount": 1,
+      "avgWordsPerLine": 11,
+      "hookLength": 11,
+      "signals": [],
+      "hasImage": false,
+      "hasVideo": false,
+      "platforms": []
+    },
+    "nearestExistingLayout": null,
+    "novelty": "no close match in the bank",
+    "note": "headline pattern from https://www.marketingdive.com/feeds/news/",
+    "gtAngle": "",
+    "status": "new"
   }
 ]
