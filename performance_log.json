@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-06T09:51:23.853616Z",
+  "updated": "2026-09-07T10:42:47.701798Z",
   "count": 150,
   "posts": [
     {
@@ -11,7 +11,7 @@
       "caption": "Find the one constraint holding your growth back.\n\nGrowth Terminal reads the report you already run, names the single co",
       "permalink": "https://www.instagram.com/p/DcZ1XouGjD4/",
       "ig": {
-        "likes": 6,
+        "likes": 8,
         "comments": 1,
         "saved": 0,
         "shares": 0,
@@ -22,7 +22,7 @@
         "insights_metrics": "",
         "own_comments": 1,
         "comments_external": 0,
-        "engagement": 6
+        "engagement": 8
       },
       "fb": {
         "reactions": 0,
@@ -32,7 +32,7 @@
         "reach_metric": "",
         "engagement": 0
       },
-      "engagement": 6,
+      "engagement": 8,
       "_ig_attempted": true
     },
     {
@@ -88,6 +88,39 @@
         "insights_metrics": "",
         "own_comments": 1,
         "comments_external": 4,
+        "engagement": 4
+      },
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "reach_metric": "",
+        "engagement": 0
+      },
+      "engagement": 4,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "prodclaim:funnel:Find the one step your",
+      "layout": "prodclaim",
+      "file": "creatives/gt_auto_20260830_010103.jpg",
+      "is_reel": false,
+      "at": "2026-08-30T01:01:08.926368Z",
+      "caption": "Most trackers show you conversion rates. This one tells you what to do with them: which step is costing you the most, ho",
+      "permalink": "https://www.instagram.com/p/DcpSJb_D1NS/",
+      "ig": {
+        "likes": 3,
+        "comments": 2,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "views": 0,
+        "permalink": "https://www.instagram.com/p/DcpSJb_D1NS/",
+        "insights_ok": false,
+        "insights_metrics": "",
+        "own_comments": 1,
+        "comments_external": 1,
         "engagement": 4
       },
       "fb": {
@@ -583,39 +616,6 @@
         "insights_metrics": "",
         "own_comments": 1,
         "comments_external": 2,
-        "engagement": 3
-      },
-      "fb": {
-        "reactions": 0,
-        "comments": 0,
-        "shares": 0,
-        "reach": 0,
-        "reach_metric": "",
-        "engagement": 0
-      },
-      "engagement": 3,
-      "_ig_attempted": true
-    },
-    {
-      "sig": "prodclaim:funnel:Find the one step your",
-      "layout": "prodclaim",
-      "file": "creatives/gt_auto_20260830_010103.jpg",
-      "is_reel": false,
-      "at": "2026-08-30T01:01:08.926368Z",
-      "caption": "Most trackers show you conversion rates. This one tells you what to do with them: which step is costing you the most, ho",
-      "permalink": "https://www.instagram.com/p/DcpSJb_D1NS/",
-      "ig": {
-        "likes": 2,
-        "comments": 2,
-        "saved": 0,
-        "shares": 0,
-        "reach": 0,
-        "views": 0,
-        "permalink": "https://www.instagram.com/p/DcpSJb_D1NS/",
-        "insights_ok": false,
-        "insights_metrics": "",
-        "own_comments": 1,
-        "comments_external": 1,
         "engagement": 3
       },
       "fb": {
@@ -4948,20 +4948,20 @@
       "avg_engagement": 2.0
     },
     {
+      "layout": "feature",
+      "posts": 9,
+      "engagement": 16,
+      "ig_engagement": 9,
+      "fb_engagement": 7,
+      "avg_engagement": 1.8
+    },
+    {
       "layout": "edserif",
       "posts": 3,
       "engagement": 5,
       "ig_engagement": 1,
       "fb_engagement": 4,
       "avg_engagement": 1.7
-    },
-    {
-      "layout": "feature",
-      "posts": 9,
-      "engagement": 14,
-      "ig_engagement": 7,
-      "fb_engagement": 7,
-      "avg_engagement": 1.6
     },
     {
       "layout": "funnel",
@@ -4988,20 +4988,20 @@
       "avg_engagement": 1.5
     },
     {
+      "layout": "prodclaim",
+      "posts": 11,
+      "engagement": 16,
+      "ig_engagement": 10,
+      "fb_engagement": 6,
+      "avg_engagement": 1.5
+    },
+    {
       "layout": "contrast",
       "posts": 2,
       "engagement": 3,
       "ig_engagement": 3,
       "fb_engagement": 0,
       "avg_engagement": 1.5
-    },
-    {
-      "layout": "prodclaim",
-      "posts": 11,
-      "engagement": 15,
-      "ig_engagement": 9,
-      "fb_engagement": 6,
-      "avg_engagement": 1.4
     },
     {
       "layout": "carousel:plan",
