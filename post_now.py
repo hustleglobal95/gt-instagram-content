@@ -23,7 +23,7 @@ Secrets it reads (all prefixed GT_ so they never collide with other projects):
   GT_HASHTAGS_AS_COMMENT - default 0: 1 = post hashtags as the first comment
   GT_DRY_RUN          - default 1: keep 1 to test, set 0 to publish for real
 """
-import os, re, sys, json, time, datetime
+import os, sys, json, time, datetime
 import requests
 
 
@@ -43,25 +43,13 @@ WAIT_SECONDS = int(gv("WAIT_SECONDS", "10") or "10")
 
 # Facebook Page publishing (optional — enabled automatically if creds are present).
 FB_API_BASE = (gv("FB_API_BASE", "https://graph.facebook.com/v21.0") or "https://graph.facebook.com/v21.0").rstrip("/")
-AUDIO_NAME = gv("GT_REEL_AUDIO_NAME", "Growth Terminal")
 FB_PAGE_ID  = gv("FB_PAGE_ID").strip()
 FB_TOKEN    = gv("FB_PAGE_ACCESS_TOKEN").strip()
 FB_INCLUDE_HASHTAGS = gv("FB_HASHTAGS", "0") == "1"   # default: no hashtag wall on Facebook
 FB_ENABLED  = gv("FB_ENABLED", "1") != "0" and bool(FB_PAGE_ID and FB_TOKEN)
 
 RAW = f"https://raw.githubusercontent.com/{REPO}/{BRANCH}"
-# Per account state. A second Instagram account running this same pipeline would
-# otherwise share meta.json and posted_log.json with the first: meta.json is the
-# handoff from generate.js, so two concurrent runs race on it, and posted_log.json
-# is committed by the workflow, so they conflict on push. GT_STATE_SUFFIX gives
-# each account its own files. Unset keeps the original names, so the existing
-# account is unaffected.
-_SUFFIX = re.sub(r"[^A-Za-z0-9_-]", "", os.environ.get("GT_STATE_SUFFIX", ""))
-def _state(base, ext):
-    return f"{base}_{_SUFFIX}.{ext}" if _SUFFIX else f"{base}.{ext}"
-
-STATE_FILE = _state("posted_log", "json")
-META_FILE = _state("meta", "json")
+STATE_FILE = "posted_log.json"
 
 
 def raw_url(path):
@@ -69,10 +57,8 @@ def raw_url(path):
     return f"{RAW}/{str(path).lstrip('/')}?t={int(time.time())}"
 
 
-def wait_for_url(url, tries=40, delay=10):
-    """After a git push, the raw URL can take minutes to go live, not seconds.
-       Twelve tries at five seconds was a sixty second budget and every run since
-       29 August 2026 spent it and gave up just before the file appeared."""
+def wait_for_url(url, tries=12, delay=5):
+    """After a git push, the raw URL can take a few seconds to go live."""
     for i in range(tries):
         try:
             r = requests.get(url, timeout=20)
@@ -118,15 +104,8 @@ def publish_single(image_url, caption):
 
 def publish_reel(video_url, caption, cover_url=None):
     """Publish an Instagram Reel. Video is processed asynchronously, so we must
-    poll the container until status_code == FINISHED before publishing.
-
-    audio_name names the original audio. Instagram gives no way to attach a
-    library track through the publishing API, so the bed is muxed into the mp4
-    at render time and this is what it gets called on the post. Naming it means
-    the audio is attributable to the account instead of showing as untitled."""
+    poll the container until status_code == FINISHED before publishing."""
     data = {"media_type": "REELS", "video_url": video_url, "caption": caption, "share_to_feed": "true"}
-    if AUDIO_NAME:
-        data["audio_name"] = AUDIO_NAME
     if cover_url:
         data["cover_url"] = cover_url
     c = _api_post(f"{IG_USER_ID}/media", data)
@@ -169,6 +148,41 @@ def publish_facebook_photo(image_url, message):
     return j.get("post_id") or j.get("id")
 
 
+APPROVED_SOURCE = "ads_queue.json"
+
+
+def approved_media():
+    """Every creative that is allowed out, by path, read fresh on each run."""
+    try:
+        with open(APPROVED_SOURCE) as f:
+            return {str(a.get("media_file", "")).lstrip("/")
+                    for a in json.load(f).get("ads", []) if a.get("media_file")}
+    except Exception as e:
+        print("Could not read %s: %s" % (APPROVED_SOURCE, e))
+        return set()
+
+
+def gate(meta):
+    """The last line before anything reaches a public account.
+
+    Whatever generated this creative and whichever workflow is running, it does
+    not publish unless the queue names it. Every generator in this repo writes
+    meta.json, so checking the queue here covers all of them at once rather than
+    one workflow at a time. It fails closed: no queue, no post.
+    """
+    allowed = approved_media()
+    media = str(meta.get("media_file", "")).lstrip("/")
+    if not allowed:
+        print("REFUSING TO POST: %s is missing or has no ads in it." % APPROVED_SOURCE)
+        sys.exit(1)
+    if media not in allowed:
+        print("REFUSING TO POST: %s is not in %s." % (media, APPROVED_SOURCE))
+        print("The queue is the only approved source of a creative.")
+        print("To publish something else, add it to the queue first.")
+        sys.exit(1)
+    print("  approved: %s is in %s" % (media, APPROVED_SOURCE))
+
+
 def load_state():
     try:
         with open(STATE_FILE) as f:
@@ -197,11 +211,13 @@ def main():
         sys.exit(1)
 
     try:
-        with open(META_FILE) as f:
+        with open("meta.json") as f:
             meta = json.load(f)
     except Exception as e:
-        print(f"✗ Could not read {META_FILE} (did generate.js run?): {e}")
+        print(f"✗ Could not read meta.json (did generate.js run?): {e}")
         sys.exit(1)
+
+    gate(meta)                                          # nothing unapproved goes past here
 
     caption = build_caption(meta)                       # Instagram: caption + hashtags
     comment = meta.get("first_comment") or (meta.get("hashtags") if TAGS_AS_COMMENT else "")
