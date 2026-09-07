@@ -1,14 +1,12 @@
 {
-  "generated_at": "2026-09-07T01:01:21.654Z",
-  "media_file": "creatives/gt_auto_20260907_010121.jpg",
-  "is_reel": false,
-  "layout": "prodsoon",
-  "editorial_bg": null,
-  "person": null,
-  "qa": null,
-  "caption": "Coming soon to the Growth Terminal store: Unit Economics Cockpit.\n\nCAC, LTV and payback in one view, so you know if growth actually pays.\n\nWant it first? Link in bio.\n\n→ growthterminal.io",
-  "hashtags": "#growthterminal #agencyowner #revenueoperations #startupmetrics",
-  "first_comment": "What would you want this one to do? Tell me below.",
-  "alt_text": "Coming soon: Unit Economics Cockpit.",
-  "sig": "prodsoon:Unit Economics Cockpit"
+  "generated_at": "2026-09-07T13:01:11.180Z",
+  "media_file": "creatives/gt_reel_20260907_130111.jpg",
+  "video_file": "creatives/gt_reel_20260907_130111.mp4",
+  "is_reel": true,
+  "layout": "reel:feature",
+  "caption": "We find the one constraint capping your revenue, price the fix, and grade every call against real revenue. Diagnosis, not a dashboard. Run the free 60-second diagnostic.\n\n→ growthterminal.io",
+  "hashtags": "#growthterminal #marketingops #saasfounder #b2bmarketing",
+  "first_comment": "What do you think your #1 constraint is right now?",
+  "alt_text": "",
+  "sig": "reelfeat:We name the one constrai"
 }
