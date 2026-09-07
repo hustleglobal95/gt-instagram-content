@@ -6,6 +6,11 @@ name: GT Auto-Post (4x/day)
 on:
   workflow_dispatch:        # fired by cron-job.org (and lets you run it by hand)
     inputs:
+      allow_generate:
+        description: "DANGER. Build a new creative from the old generator instead of the approved queue."
+        required: false
+        default: false
+        type: boolean
       skip_generate:
         description: "Publish the meta already committed instead of generating a new creative."
         required: false
@@ -82,11 +87,11 @@ jobs:
 
       - name: Take the next approved ad
         id: queue
-        if: ${{ !inputs.skip_generate }}
+        if: ${{ !inputs.skip_generate && !inputs.allow_generate }}
         run: python queue_pick.py
 
       - name: Generate a fresh creative
-        if: ${{ !inputs.skip_generate && steps.queue.outputs.picked != 'true' }}
+        if: ${{ inputs.allow_generate }}
         # GT_FORCE_MODE belongs here: generate.js is what reads it. It used to be
         # set only on the publish step below, where post_now.py never looks at it,
         # so choosing "reel" or "product" from the run dialog silently did nothing

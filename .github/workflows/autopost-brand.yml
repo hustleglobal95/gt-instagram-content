@@ -30,6 +30,11 @@ on:
 
   workflow_dispatch:
     inputs:
+      allow_generate:
+        description: "DANGER. Build a new creative from the old generator instead of the approved queue."
+        required: false
+        default: false
+        type: boolean
       skip_generate:
         description: "Publish the meta already committed instead of generating a new creative."
         required: false
@@ -114,13 +119,13 @@ jobs:
 
       - name: Take the next approved ad
         id: queue
-        if: ${{ !inputs.skip_generate }}
+        if: ${{ !inputs.skip_generate && !inputs.allow_generate }}
         env:
           GT_STATE_SUFFIX: brand
         run: python queue_pick.py
 
       - name: Generate a services creative
-        if: ${{ !inputs.skip_generate && steps.queue.outputs.picked != 'true' }}
+        if: ${{ inputs.allow_generate }}
         env:
           GT_FORCE_MODE:   services
           GT_STATE_SUFFIX: brand
