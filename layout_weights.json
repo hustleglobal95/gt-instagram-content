@@ -2,35 +2,15 @@
   "active": true,
   "diagnostics": {
     "totalPosts": 150,
-    "totalEngagement": 177,
-    "igEngagement": 84,
+    "totalEngagement": 176,
+    "igEngagement": 83,
     "fbEngagement": 93,
     "formats": 32,
     "formatsWithAnyEngagement": 28,
     "collectionHealth": {
       "ig_attempted": 150,
-      "ig_succeeded": 150,
+      "ig_succeeded": 148,
       "ig_errors": [
-        {
-          "media_id": "18125520325664850",
-          "message": "insights unavailable: (#10) Application does not have permission for this action"
-        },
-        {
-          "media_id": "17984490015041376",
-          "message": "insights unavailable: (#10) Application does not have permission for this action"
-        },
-        {
-          "media_id": "18119783353852552",
-          "message": "insights unavailable: (#10) Application does not have permission for this action"
-        },
-        {
-          "media_id": "18132885907619498",
-          "message": "insights unavailable: (#10) Application does not have permission for this action"
-        },
-        {
-          "media_id": "18116406731297318",
-          "message": "insights unavailable: (#10) Application does not have permission for this action"
-        },
         {
           "media_id": "18112561831949273",
           "message": "insights unavailable: (#10) Application does not have permission for this action"
@@ -90,10 +70,30 @@
         {
           "media_id": "18019140833908421",
           "message": "insights unavailable: (#10) Application does not have permission for this action"
+        },
+        {
+          "media_id": "17927467278147510",
+          "message": "insights unavailable: (#10) Application does not have permission for this action"
+        },
+        {
+          "media_id": "18161590462413468",
+          "message": "insights unavailable: (#10) Application does not have permission for this action"
+        },
+        {
+          "media_id": "17960472426178494",
+          "message": "insights unavailable: (#10) Application does not have permission for this action"
+        },
+        {
+          "media_id": "18438299215130376",
+          "message": "insights unavailable: (#10) Application does not have permission for this action"
+        },
+        {
+          "media_id": "17895953769375014",
+          "message": "insights unavailable: (#10) Application does not have permission for this action"
         }
       ],
       "ig_error_count": 150,
-      "fb_succeeded": 141,
+      "fb_succeeded": 144,
       "fb_errors": [
         {
           "post_id": "1087307654468135_122100816704536059",
@@ -176,12 +176,12 @@
           "message": "reach unavailable: (#100) The value must be a valid insights metric"
         }
       ],
-      "fb_error_count": 141,
+      "fb_error_count": 144,
       "ig_with_insights": 0,
       "ig_reach_total": 0,
       "fb_reach_total": 0,
       "fb_reach_metric": "",
-      "own_comments_excluded": 149
+      "own_comments_excluded": 148
     }
   },
   "weights": {
@@ -191,12 +191,12 @@
     "prodclaim": 3,
     "carousel:twelve": 2,
     "prodsoon": 2,
-    "reel:card": 1,
     "prodshot": 1,
+    "reel:card": 1,
     "statement": 1
   },
-  "reason": "Ranked 9 formats with at least 8 posts each, against 177 total interactions.",
-  "evaluatedAt": "2026-09-07T10:42:52.695Z",
+  "reason": "Ranked 9 formats with at least 8 posts each, against 176 total interactions.",
+  "evaluatedAt": "2026-09-08T10:07:09.859Z",
   "gates": {
     "MIN_TOTAL_ENGAGEMENT": 100,
     "MIN_POSTS_PER_FORMAT": 8,
