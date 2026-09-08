@@ -5,54 +5,54 @@
     {
       "id": "svc01-not-a-template",
       "media_file": "creatives/gt_svc_20260908_s01-not-a-template.jpg",
-      "caption": "Most business websites open with a header, a headline and a stock photo. They read like a document.\n\nThis one opens on a city at golden hour and holds one line of type over it. Same job, entirely different first three seconds.\n\nWe build sites that open like a film, for businesses whose work deserves to be seen before it is described.\n\n→ growthterminal.io",
-      "first_comment": "The site in the frame is live at growthterminal.io/atelier-veyra. Everything shown is a real screen, not a rendering of one.",
-      "alt_text": "Poster reading: A homepage can open like a film, above a browser window showing an architecture site with an aerial city view.",
+      "caption": "Atelier Veyra opens on a single line of type over a cinematic aerial, then descends through ten scenes to street level. The homepage is a camera move rather than a page you scroll.\n\nWe build sites this way for practices whose work is visual and whose first impression carries most of the sale.\n\n→ growthterminal.io",
+      "first_comment": "Live at growthterminal.io/atelier-veyra. Every frame in the post is the running site.",
+      "alt_text": "Growth Terminal poster reading: A cinematic homepage for an architecture practice, above a browser window showing an aerial view of a building at golden hour.",
       "hashtags": "#webdesign #webdevelopment #uidesign #uxdesign #creativedirection #digitalproductdesign #interactiondesign #aiautomation #customsoftware #brandidentity #growthterminal",
       "layout": "statement"
     },
     {
       "id": "svc05-founder",
       "media_file": "creatives/gt_svc_20260908_s05-founder.jpg",
-      "caption": "Most founder sites are a bio, a photo and a contact form. They list you.\n\nA founder site can do more than that. It can show the work, explain how you think, and give someone a reason to start the conversation before they ever email you.\n\nWe build personal sites for founders, operators and people whose reputation is the product.\n\n→ growthterminal.io",
-      "first_comment": "One page, a fixed rail, a contact action that never leaves the screen, and the work carrying the argument instead of the copy.",
-      "alt_text": "Poster reading: A founder site should do more than list you, above a browser window showing a portfolio site.",
+      "caption": "A founder site organised around the work rather than the biography. One page, a fixed navigation rail, and a contact action that stays in view at every scroll position.\n\nWe build personal sites for founders and operators whose reputation is the thing being evaluated.\n\n→ growthterminal.io",
+      "first_comment": "Live at growthterminal.io/founder-portfolio.",
+      "alt_text": "Growth Terminal poster reading: A founder site built around the work, not the biography, above a browser window showing a portfolio site.",
       "hashtags": "#webdesign #webdevelopment #uidesign #uxdesign #creativedirection #digitalproductdesign #interactiondesign #aiautomation #customsoftware #brandidentity #growthterminal",
       "layout": "statement"
     },
     {
       "id": "svc03-library",
       "media_file": "creatives/gt_svc_20260908_s03-library.jpg",
-      "caption": "A product catalogue that lives as a PDF gets downloaded once and opened never.\n\nThe same information as a browsable library, each item its own object, gets used. People come back to it, send it to a colleague, and arrive at the conversation already knowing what they want.\n\nIf your products are physical and your catalogue is a file, that is a build worth doing.\n\nDM BUILD and we will take a look at what you have.",
-      "first_comment": "The materials shown are from a live library at growthterminal.io/atelier-veyra/materials.",
-      "alt_text": "Poster reading: A catalogue nobody opens is not a catalogue, above a browser window showing a dark materials library.",
+      "caption": "A materials library rendered as a browsable set rather than a specification PDF. Each specimen is its own object, lit consistently, labelled with its finish and treatment.\n\nWe build product showcases for businesses whose catalogue is currently a file that gets sent once and opened never.\n\nDM BUILD to talk about yours.",
+      "first_comment": "Live at growthterminal.io/atelier-veyra/materials.",
+      "alt_text": "Growth Terminal poster reading: A materials library built to be browsed, above a browser window showing a dark materials grid.",
       "hashtags": "#webdesign #webdevelopment #uidesign #uxdesign #creativedirection #digitalproductdesign #interactiondesign #aiautomation #customsoftware #brandidentity #growthterminal",
       "layout": "statement"
     },
     {
       "id": "svc06-our-own",
       "media_file": "creatives/gt_svc_20260908_s06-our-own.jpg",
-      "caption": "Every studio says it does good work. Fewer will point at their own site as the example.\n\nOurs is built the way we would build yours. One idea in the first screen, the interface doing the explaining, and nothing on the page that is only there to fill space.\n\nIf you want to know what we would do with your business, start with what we did with ours.\n\nStart a project at growthterminal.io",
-      "first_comment": "Websites, immersive digital experiences, AI systems, business tools, and the infrastructure connecting them.",
-      "alt_text": "Poster reading: We build ours the way we would build yours, above a browser window showing the Growth Terminal homepage.",
+      "caption": "We build our own site to the standard we apply to client work. One idea per screen, the interface explaining itself, and nothing on the page that is only there to fill space.\n\nWebsites, immersive digital experiences, AI systems, business tools, and the infrastructure connecting them.\n\nStart a project at growthterminal.io",
+      "first_comment": "The clearest way to judge a studio is the work it does when it is its own client.",
+      "alt_text": "Growth Terminal poster reading: Our own site, built to the standard we apply to client work, above a browser window showing the Growth Terminal homepage.",
       "hashtags": "#webdesign #webdevelopment #uidesign #uxdesign #creativedirection #digitalproductdesign #interactiondesign #aiautomation #customsoftware #brandidentity #growthterminal",
       "layout": "statement"
     },
     {
       "id": "svc02-portfolio",
       "media_file": "creatives/gt_svc_20260908_s02-portfolio.jpg",
-      "caption": "For an architecture firm, a design studio or a developer, the portfolio is not marketing that supports the sale. It is the sale.\n\nWhich makes a grid of thumbnails a strange thing to hand someone deciding whether to trust you with a building.\n\nWe design portfolios and case studies as the thing that closes, not the thing that decorates.\n\n→ growthterminal.io",
-      "first_comment": "One project per view, the image at full weight, the detail beside it rather than under it.",
-      "alt_text": "Poster reading: For some businesses the portfolio is the whole sale, above a browser window showing a selected works page.",
+      "caption": "Selected Works presents one project per view. The image at full weight, the year, typology and location set beside it rather than beneath it.\n\nFor an architecture practice or a developer, the portfolio is the proposal. It is worth designing as carefully as the work it contains.\n\n→ growthterminal.io",
+      "first_comment": "Structure, hierarchy and pacing are the design decisions here. The photography is doing less work than it appears to.",
+      "alt_text": "Growth Terminal poster reading: One project per view, at full weight, above a browser window showing a selected works page.",
       "hashtags": "#webdesign #webdevelopment #uidesign #uxdesign #creativedirection #digitalproductdesign #interactiondesign #aiautomation #customsoftware #brandidentity #growthterminal",
       "layout": "statement"
     },
     {
       "id": "svc04-typography",
       "media_file": "creatives/gt_svc_20260908_s04-typography.jpg",
-      "caption": "Type is the cheapest thing on a page. No photography, no render, no licence. It is also the first thing that tells someone whether you are serious.\n\nMost business sites take whatever the template shipped with, then spend the budget on imagery to compensate.\n\nWe start with the type, because it is doing more work than anything else on the screen.\n\n→ growthterminal.io",
-      "first_comment": "Set at reading width, one weight, generous line spacing. Nothing else is happening on this page.",
-      "alt_text": "Poster reading: Type is the cheapest thing on the page and the loudest, above a browser window showing a studio page.",
+      "caption": "The studio page carries its argument in typography alone. One weight, one measure, generous line spacing, no imagery above the fold.\n\nType is the first signal of seriousness a visitor receives and it costs nothing but judgement. We treat it as a primary design decision rather than a default.\n\n→ growthterminal.io",
+      "first_comment": "Live at growthterminal.io/atelier-veyra/studio.",
+      "alt_text": "Growth Terminal poster reading: Typography that carries the page on its own, above a browser window showing a studio page.",
       "hashtags": "#webdesign #webdevelopment #uidesign #uxdesign #creativedirection #digitalproductdesign #interactiondesign #aiautomation #customsoftware #brandidentity #growthterminal",
       "layout": "statement"
     }
