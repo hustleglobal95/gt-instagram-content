@@ -30,6 +30,15 @@
       "layout": "statement"
     },
     {
+      "id": "nex-intake",
+      "media_file": "creatives/gt_svc_20260908_s07-nexus-intake.jpg",
+      "caption": "Nexus Workflow is an operations tool. A request arrives, it validates the detail, applies the routing rules, and hands the job to a named person.\n\nThe intake screen does the unglamorous part: it checks the fields, normalises the text, and tells you where the request is going before it goes there.\n\n→ growthterminal.io",
+      "first_comment": "The interactive version runs entirely in the browser with sample data, so nothing is sent anywhere. These screens show it in our own design system.",
+      "alt_text": "Growth Terminal poster reading: An operations tool that turns a request into assigned work, above a dark product interface showing a request intake form.",
+      "hashtags": "#automation #workflowautomation #aisystems #opsautomation #customsoftware #productdesign #uidesign #designsystems #logistics #businesstools #growthterminal",
+      "layout": "statement"
+    },
+    {
       "id": "cw02-architecture",
       "media_file": "creatives/gt_cw_20260908_s02.jpg",
       "caption": "Architecture sites carry photography that already contains every colour the page needs. So the palette gets out of the way: stone ground, a slightly deeper surface, near black ink.\n\nOne earth accent, held for navigation states and the enquiry.\n\n→ growthterminal.io",
@@ -57,6 +66,15 @@
       "layout": "statement"
     },
     {
+      "id": "nex-run",
+      "media_file": "creatives/gt_svc_20260908_s08-nexus-run.jpg",
+      "caption": "Three stages of Nexus Workflow run without anyone watching. Intake, validation, routing. The fourth waits for a person, because that is the part that needs judgement.\n\nEvery step is written in plain language rather than codes, so an operator can read what happened without learning the system first.\n\n→ growthterminal.io",
+      "first_comment": "The interactive version runs entirely in the browser with sample data, so nothing is sent anywhere. These screens show it in our own design system.",
+      "alt_text": "Growth Terminal poster reading: Three stages ran without a person, the fourth waits for one, above a dark product interface showing a run log.",
+      "hashtags": "#automation #workflowautomation #aisystems #opsautomation #customsoftware #productdesign #uidesign #designsystems #logistics #businesstools #growthterminal",
+      "layout": "statement"
+    },
+    {
       "id": "svc06-our-own",
       "media_file": "creatives/gt_svc_20260908_s06-our-own.jpg",
       "caption": "We build our own site to the standard we apply to client work. One idea per screen, the interface explaining itself, and nothing on the page that is only there to fill space.\n\nWebsites, immersive digital experiences, AI systems, business tools, and the infrastructure connecting them.\n\nStart a project at growthterminal.io",
@@ -81,6 +99,15 @@
       "first_comment": "Structure, hierarchy and pacing are the design decisions here. The photography is doing less work than it appears to.",
       "alt_text": "Growth Terminal poster reading: One project per view, at full weight, above a browser window showing a selected works page.",
       "hashtags": "#webdesign #webdevelopment #uidesign #uxdesign #creativedirection #digitalproductdesign #interactiondesign #aiautomation #customsoftware #brandidentity #growthterminal",
+      "layout": "statement"
+    },
+    {
+      "id": "nex-handoff",
+      "media_file": "creatives/gt_svc_20260908_s09-nexus-handoff.jpg",
+      "caption": "Automation is worth having up to the point where judgement starts. After that it should stop and hand over cleanly.\n\nNexus Workflow hands over with an owner, a state, and an approval that has to happen before anything reaches the client. Automation without that is a faster way to send the wrong thing.\n\n→ growthterminal.io",
+      "first_comment": "The interactive version runs entirely in the browser with sample data, so nothing is sent anywhere. These screens show it in our own design system.",
+      "alt_text": "Growth Terminal poster reading: Automation that stops where judgement starts, above a dark product interface showing a work order handoff.",
+      "hashtags": "#automation #workflowautomation #aisystems #opsautomation #customsoftware #productdesign #uidesign #designsystems #logistics #businesstools #growthterminal",
       "layout": "statement"
     },
     {
