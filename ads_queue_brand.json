@@ -1,5 +1,5 @@
 {
-  "note": "The only approved source of a post for @growthterminal.io. That account promotes the studio's services and nothing else: websites, immersive digital experiences, AI systems, business tools and digital products, and growth infrastructure. No platform content. Platform creatives live in ads_queue.json and belong to the other account.",
+  "note": "The only approved source of a post for @growthterminal.io. That account promotes the studio's services and nothing else: websites, immersive digital experiences, AI systems, business tools and digital products, and growth infrastructure. No platform content. Platform creatives live in ads_queue.json and belong to the other account. The colourway creatives (gt_cw_20260908_*) are deliberately not listed here: they stay in the repo but out of circulation, and post_now.py refuses anything this file does not name.",
   "loop": true,
   "ads": [
     {
@@ -9,15 +9,6 @@
       "first_comment": "Live at growthterminal.io/atelier-veyra. Every frame in the post is the running site.",
       "alt_text": "Growth Terminal poster reading: A cinematic homepage for an architecture practice, above a browser window showing an aerial view of a building at golden hour.",
       "hashtags": "#webdesign #webdevelopment #uidesign #uxdesign #creativedirection #digitalproductdesign #interactiondesign #aiautomation #customsoftware #brandidentity #growthterminal",
-      "layout": "statement"
-    },
-    {
-      "id": "cw01-hospitality",
-      "media_file": "creatives/gt_cw_20260908_s01.jpg",
-      "caption": "A hospitality site lit like the room it is selling. Warm near black ground, a second warmer surface for panels, and cream rather than white for type.\n\nThe accent is brass. It reads as a material the property already contains rather than a colour chosen for a button.\n\n→ growthterminal.io",
-      "first_comment": "Proportion is the point. The accent is three percent of the page and appears once per view.",
-      "alt_text": "Colour specification for luxury hospitality: warm near black ground, cream ink, brass accent, shown as a proportion bar.",
-      "hashtags": "#colourtheory #webdesign #uidesign #brandidentity #designsystems #creativedirection #interiordesign #architecture #hospitalitydesign #realestatemarketing #growthterminal",
       "layout": "statement"
     },
     {
@@ -39,30 +30,12 @@
       "layout": "statement"
     },
     {
-      "id": "cw02-architecture",
-      "media_file": "creatives/gt_cw_20260908_s02.jpg",
-      "caption": "Architecture sites carry photography that already contains every colour the page needs. So the palette gets out of the way: stone ground, a slightly deeper surface, near black ink.\n\nOne earth accent, held for navigation states and the enquiry.\n\n→ growthterminal.io",
-      "first_comment": "Sixty percent ground is not emptiness. It is what makes the work look considered.",
-      "alt_text": "Colour specification for an architecture practice: stone ground, near black ink, terracotta accent, shown as a proportion bar.",
-      "hashtags": "#colourtheory #webdesign #uidesign #brandidentity #designsystems #creativedirection #interiordesign #architecture #hospitalitydesign #realestatemarketing #growthterminal",
-      "layout": "statement"
-    },
-    {
       "id": "svc03-library",
       "media_file": "creatives/gt_svc_20260908_s03-library.jpg",
       "caption": "A materials library rendered as a browsable set rather than a specification PDF. Each specimen is its own object, lit consistently, labelled with its finish and treatment.\n\nWe build product showcases for businesses whose catalogue is currently a file that gets sent once and opened never.\n\nDM BUILD to talk about yours.",
       "first_comment": "Live at growthterminal.io/atelier-veyra/materials.",
       "alt_text": "Growth Terminal poster reading: A materials library built to be browsed, above a browser window showing a dark materials grid.",
       "hashtags": "#webdesign #webdevelopment #uidesign #uxdesign #creativedirection #digitalproductdesign #interactiondesign #aiautomation #customsoftware #brandidentity #growthterminal",
-      "layout": "statement"
-    },
-    {
-      "id": "cw03-professional",
-      "media_file": "creatives/gt_cw_20260908_s03.jpg",
-      "caption": "Advisory and legal sites earn trust through restraint. Near white ground, deep ink, and a single restrained blue reserved for the decisions a visitor can actually take.\n\nColour used sparingly reads as confidence. Colour used everywhere reads as a template.\n\n→ growthterminal.io",
-      "first_comment": "The accent appears on one action per screen. Everything else stays neutral.",
-      "alt_text": "Colour specification for professional services: near white ground, deep ink, restrained blue accent, shown as a proportion bar.",
-      "hashtags": "#colourtheory #webdesign #uidesign #brandidentity #designsystems #creativedirection #interiordesign #architecture #hospitalitydesign #realestatemarketing #growthterminal",
       "layout": "statement"
     },
     {
@@ -84,15 +57,6 @@
       "layout": "statement"
     },
     {
-      "id": "cw04-realestate",
-      "media_file": "creatives/gt_cw_20260908_s04.jpg",
-      "caption": "Development sites live on daylight photography, so the interface stays bright and steps back. Near white ground, a cool surface for cards, deep ink for type.\n\nOne deep accent marks the enquiry, which is the only action on the page that matters.\n\n→ growthterminal.io",
-      "first_comment": "Twelve percent ink. Enough for hierarchy, not enough to compete with the renders.",
-      "alt_text": "Colour specification for real estate development: daylight ground, deep ink, teal accent, shown as a proportion bar.",
-      "hashtags": "#colourtheory #webdesign #uidesign #brandidentity #designsystems #creativedirection #interiordesign #architecture #hospitalitydesign #realestatemarketing #growthterminal",
-      "layout": "statement"
-    },
-    {
       "id": "svc02-portfolio",
       "media_file": "creatives/gt_svc_20260908_s02-portfolio.jpg",
       "caption": "Selected Works presents one project per view. The image at full weight, the year, typology and location set beside it rather than beneath it.\n\nFor an architecture practice or a developer, the portfolio is the proposal. It is worth designing as carefully as the work it contains.\n\n→ growthterminal.io",
@@ -111,30 +75,12 @@
       "layout": "statement"
     },
     {
-      "id": "cw05-wellness",
-      "media_file": "creatives/gt_cw_20260908_s05.jpg",
-      "caption": "Nothing at full strength. A warm off white ground, a soft green surface, and ink that is dark without being black.\n\nThe restraint is the product. A wellness site that shouts contradicts the thing it is selling.\n\n→ growthterminal.io",
-      "first_comment": "Low saturation across the whole palette, including the accent.",
-      "alt_text": "Colour specification for wellness and hospitality rooms: off white ground, soft green surface, muted green accent, shown as a proportion bar.",
-      "hashtags": "#colourtheory #webdesign #uidesign #brandidentity #designsystems #creativedirection #interiordesign #architecture #hospitalitydesign #realestatemarketing #growthterminal",
-      "layout": "statement"
-    },
-    {
       "id": "svc04-typography",
       "media_file": "creatives/gt_svc_20260908_s04-typography.jpg",
       "caption": "The studio page carries its argument in typography alone. One weight, one measure, generous line spacing, no imagery above the fold.\n\nType is the first signal of seriousness a visitor receives and it costs nothing but judgement. We treat it as a primary design decision rather than a default.\n\n→ growthterminal.io",
       "first_comment": "Live at growthterminal.io/atelier-veyra/studio.",
       "alt_text": "Growth Terminal poster reading: Typography that carries the page on its own, above a browser window showing a studio page.",
       "hashtags": "#webdesign #webdevelopment #uidesign #uxdesign #creativedirection #digitalproductdesign #interactiondesign #aiautomation #customsoftware #brandidentity #growthterminal",
-      "layout": "statement"
-    },
-    {
-      "id": "cw06-technology",
-      "media_file": "creatives/gt_cw_20260908_s06.jpg",
-      "caption": "Dark ground, high contrast type, and a single signal colour that means something. On a product interface the accent is a state rather than decoration.\n\nIf it appears more than once in a view it stops being a signal.\n\n→ growthterminal.io",
-      "first_comment": "Fifty eight percent ground, three percent accent. The ratio is what keeps a dark interface readable.",
-      "alt_text": "Colour specification for technology and product: dark ground, high contrast ink, blue signal accent, shown as a proportion bar.",
-      "hashtags": "#colourtheory #webdesign #uidesign #brandidentity #designsystems #creativedirection #interiordesign #architecture #hospitalitydesign #realestatemarketing #growthterminal",
       "layout": "statement"
     }
   ]
