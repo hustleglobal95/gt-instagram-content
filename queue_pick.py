@@ -10,13 +10,18 @@ This is the only source of a post. If it cannot hand over an approved ad it
 exits non-zero and the run stops, because the alternative is publishing an old
 creative and none of those are ever to appear again.
 
-  GT_STATE_SUFFIX=brand  ->  meta_brand.json / used_ads_brand.json
+  GT_STATE_SUFFIX=brand  ->  ads_queue_brand.json / meta_brand.json /
+                            used_ads_brand.json
+
+Each account has its own queue, not just its own state. @growthterminal.io sells
+the studio's services and must never draw a platform creative, so it reads
+ads_queue_brand.json and nothing else.
 """
 import json, os, sys, datetime, pathlib
 
 SUFFIX = os.environ.get("GT_STATE_SUFFIX", "").strip()
 tag    = ("_" + SUFFIX) if SUFFIX else ""
-QUEUE  = "ads_queue.json"
+QUEUE  = "ads_queue%s.json" % tag
 META   = "meta%s.json" % tag
 USED   = "used_ads%s.json" % tag
 
@@ -24,7 +29,7 @@ USED   = "used_ads%s.json" % tag
 def stop(msg):
     """Refuse rather than fall back. Nothing unapproved is ever published."""
     print("REFUSING TO POST: " + msg)
-    print("The queue is the only approved source. Add an ad to ads_queue.json.")
+    print("The queue is the only approved source. Add an ad to %s." % QUEUE)
     sys.exit(1)
 
 

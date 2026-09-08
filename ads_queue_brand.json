@@ -1,0 +1,5 @@
+{
+  "note": "The only approved source of a post for @growthterminal.io. That account promotes the studio's services and nothing else: websites, immersive digital experiences, AI systems, business tools and digital products, and growth infrastructure. No platform content. No constraint detection, forecasting, 90 day plans or portal features unless specifically instructed. Platform creatives live in ads_queue.json and belong to the other account. Empty on purpose: the services creatives do not exist yet, and queue_pick.py fails closed rather than borrow one.",
+  "loop": true,
+  "ads": []
+}

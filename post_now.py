@@ -148,7 +148,8 @@ def publish_facebook_photo(image_url, message):
     return j.get("post_id") or j.get("id")
 
 
-APPROVED_SOURCE = "ads_queue.json"
+_SUFFIX = os.environ.get("GT_STATE_SUFFIX", "").strip()
+APPROVED_SOURCE = "ads_queue%s.json" % (("_" + _SUFFIX) if _SUFFIX else "")
 
 
 def approved_media():
@@ -166,7 +167,8 @@ def gate(meta):
     """The last line before anything reaches a public account.
 
     Whatever generated this creative and whichever workflow is running, it does
-    not publish unless the queue names it. Every generator in this repo writes
+    not publish unless this account's own queue names it. The suffix keeps the
+    accounts apart: a creative approved for one is not approved for the other. Every generator in this repo writes
     meta.json, so checking the queue here covers all of them at once rather than
     one workflow at a time. It fails closed: no queue, no post.
     """
