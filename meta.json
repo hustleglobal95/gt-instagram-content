@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-09-08T21:01:45.505092Z",
-  "media_file": "creatives/gt_ad_20260907_04_decision-stays.jpg",
+  "generated_at": "2026-09-09T01:01:13.806520Z",
+  "media_file": "creatives/gt_ad_20260907_11_wrong-column.jpg",
   "is_reel": false,
   "layout": "statement",
   "editorial_bg": null,
   "person": null,
   "qa": null,
-  "caption": "Every call your team made, still where you left it, with the evidence and the severity attached.\n\nIncluding the runs that did not work, because a record that only keeps the wins is not a record.\n\n→ growthterminal.io",
+  "caption": "A chart drawn from the wrong column looks exactly like a chart drawn from the right one. That is what makes it expensive.\n\nSo Growth Terminal shows you which column it read, in plain English, before it draws anything.\n\n→ growthterminal.io",
   "hashtags": "#growthterminal #b2bsaas #agencyowner #fractionalcmo #growthstrategy #revenueoperations #consulting #datadriven #kpis #decisionmaking #accountability",
-  "first_comment": "That list includes one run marked failed and one still running. Demo workspace, sample data.",
-  "alt_text": "Poster reading: The meeting ends, the decision stays, above a list of analyses with severity and status.",
-  "sig": "queue:ad04-decision-stays"
+  "first_comment": "Column matching is resolved in the browser by rule. Nothing is uploaded for that step and no credit is spent.",
+  "alt_text": "Poster reading: The wrong column looks exactly like the right one, above a panel showing which columns the app read.",
+  "sig": "queue:ad11-wrong-column"
 }
