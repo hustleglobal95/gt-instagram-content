@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-09-10T01:01:15.051355Z",
-  "media_file": "creatives/gt_ad_20260907_12_decision-nobody-executes.jpg",
+  "generated_at": "2026-09-10T13:02:15.877624Z",
+  "media_file": "creatives/gt_ad_20260907_10_analysis-is-long.jpg",
   "is_reel": false,
   "layout": "statement",
   "editorial_bg": null,
   "person": null,
   "qa": null,
-  "caption": "The hard part was never naming the priority. It was that the priority never became anyone's job.\n\nEvery decision becomes work with an owner, a state and an approval, kept in the same place as the analysis that caused it.\n\n→ growthterminal.io",
+  "caption": "Nobody is confused about how to diagnose a growth problem. They are out of time to do it every quarter.\n\nGrowth Terminal runs it on the sheet you already keep and hands back the ranking, the evidence and the number.\n\n→ growthterminal.io",
   "hashtags": "#growthterminal #b2bsaas #agencyowner #fractionalcmo #growthstrategy #revenueoperations #consulting #datadriven #kpis #decisionmaking #accountability",
-  "first_comment": "Demo workspace with sample data. The board is sorted worst first, not newest first.",
-  "alt_text": "Poster reading: A decision nobody executes is not a decision, above a work board with owners and states.",
-  "sig": "queue:ad12-decision-nobody-executes"
+  "first_comment": "It reads the spreadsheet you point it at. Nothing to migrate and nothing to rebuild.",
+  "alt_text": "Poster reading: The analysis is not hard. It is long. Run it on the sheet you keep.",
+  "sig": "queue:ad10-analysis-is-long"
 }
