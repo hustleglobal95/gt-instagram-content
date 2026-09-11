@@ -2,31 +2,15 @@
   "active": true,
   "diagnostics": {
     "totalPosts": 150,
-    "totalEngagement": 181,
-    "igEngagement": 88,
-    "fbEngagement": 93,
-    "formats": 31,
-    "formatsWithAnyEngagement": 28,
+    "totalEngagement": 178,
+    "igEngagement": 86,
+    "fbEngagement": 92,
+    "formats": 30,
+    "formatsWithAnyEngagement": 27,
     "collectionHealth": {
       "ig_attempted": 150,
       "ig_succeeded": 148,
       "ig_errors": [
-        {
-          "media_id": "17906986956287111",
-          "message": "insights unavailable: (#10) Application does not have permission for this action"
-        },
-        {
-          "media_id": "18606818419058450",
-          "message": "insights unavailable: (#10) Application does not have permission for this action"
-        },
-        {
-          "media_id": "18099466148213655",
-          "message": "insights unavailable: (#10) Application does not have permission for this action"
-        },
-        {
-          "media_id": "18190147012388410",
-          "message": "insights unavailable: (#10) Application does not have permission for this action"
-        },
         {
           "media_id": "18101807432211494",
           "message": "insights unavailable: (#10) Application does not have permission for this action"
@@ -90,27 +74,27 @@
         {
           "media_id": "18323598730273707",
           "message": "insights unavailable: (#10) Application does not have permission for this action"
+        },
+        {
+          "media_id": "17919354288422290",
+          "message": "insights unavailable: (#10) Application does not have permission for this action"
+        },
+        {
+          "media_id": "18105190046332026",
+          "message": "insights unavailable: (#10) Application does not have permission for this action"
+        },
+        {
+          "media_id": "18084504929246165",
+          "message": "insights unavailable: (#10) Application does not have permission for this action"
+        },
+        {
+          "media_id": "18112268123472186",
+          "message": "insights unavailable: (#10) Application does not have permission for this action"
         }
       ],
       "ig_error_count": 150,
       "fb_succeeded": 146,
       "fb_errors": [
-        {
-          "post_id": "1087307654468135_122100835472536059",
-          "message": "reach unavailable: (#100) The value must be a valid insights metric"
-        },
-        {
-          "post_id": "1087307654468135_122100838868536059",
-          "message": "reach unavailable: (#100) The value must be a valid insights metric"
-        },
-        {
-          "post_id": "1087307654468135_122100842192536059",
-          "message": "reach unavailable: (#100) The value must be a valid insights metric"
-        },
-        {
-          "post_id": "1087307654468135_122100846032536059",
-          "message": "reach unavailable: (#100) The value must be a valid insights metric"
-        },
         {
           "post_id": "1087307654468135_122100862034536059",
           "message": "reach unavailable: (#100) The value must be a valid insights metric"
@@ -174,6 +158,22 @@
         {
           "post_id": "1087307654468135_122100945350536059",
           "message": "reach unavailable: (#100) The value must be a valid insights metric"
+        },
+        {
+          "post_id": "1087307654468135_122100951986536059",
+          "message": "reach unavailable: (#100) The value must be a valid insights metric"
+        },
+        {
+          "post_id": "1087307654468135_122100957176536059",
+          "message": "reach unavailable: (#100) The value must be a valid insights metric"
+        },
+        {
+          "post_id": "1087307654468135_122100957476536059",
+          "message": "reach unavailable: (#100) The value must be a valid insights metric"
+        },
+        {
+          "post_id": "1087307654468135_122100961190536059",
+          "message": "reach unavailable: (#100) The value must be a valid insights metric"
         }
       ],
       "fb_error_count": 146,
@@ -195,8 +195,8 @@
     "prodshot": 1,
     "statement": 1
   },
-  "reason": "Ranked 9 formats with at least 8 posts each, against 181 total interactions.",
-  "evaluatedAt": "2026-09-10T10:03:16.359Z",
+  "reason": "Ranked 9 formats with at least 8 posts each, against 178 total interactions.",
+  "evaluatedAt": "2026-09-11T09:59:43.911Z",
   "gates": {
     "MIN_TOTAL_ENGAGEMENT": 100,
     "MIN_POSTS_PER_FORMAT": 8,
