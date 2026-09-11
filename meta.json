@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-09-11T17:02:08.708028Z",
-  "media_file": "creatives/gt_ad_20260907_06_already-paid.jpg",
+  "generated_at": "2026-09-11T21:01:17.036683Z",
+  "media_file": "creatives/gt_ad_20260907_04_decision-stays.jpg",
   "is_reel": false,
   "layout": "statement",
   "editorial_bg": null,
   "person": null,
   "qa": null,
-  "caption": "Last quarter's guess was not free. It cost you a quarter.\n\nGrowth Terminal names one constraint and attaches a dollar range to it before you spend, so the choice is made against a number instead of a hunch.\n\n→ growthterminal.io",
+  "caption": "Every call your team made, still where you left it, with the evidence and the severity attached.\n\nIncluding the runs that did not work, because a record that only keeps the wins is not a record.\n\n→ growthterminal.io",
   "hashtags": "#growthterminal #b2bsaas #agencyowner #fractionalcmo #growthstrategy #revenueoperations #consulting #datadriven #kpis #decisionmaking #accountability",
-  "first_comment": "The range is modelled from your own figures, and the run is kept so you can check it later against what actually happened.",
-  "alt_text": "Poster reading: You already paid for last quarter's wrong guess. One constraint, priced.",
-  "sig": "queue:ad06-already-paid"
+  "first_comment": "That list includes one run marked failed and one still running. Demo workspace, sample data.",
+  "alt_text": "Poster reading: The meeting ends, the decision stays, above a list of analyses with severity and status.",
+  "sig": "queue:ad04-decision-stays"
 }
