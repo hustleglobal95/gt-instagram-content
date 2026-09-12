@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-09-12T01:01:01.353791Z",
-  "media_file": "creatives/gt_ad_20260907_11_wrong-column.jpg",
+  "generated_at": "2026-09-12T13:01:34.944758Z",
+  "media_file": "creatives/gt_ad_20260907_08_cannot-spend-a-forecast.jpg",
   "is_reel": false,
   "layout": "statement",
   "editorial_bg": null,
   "person": null,
   "qa": null,
-  "caption": "A chart drawn from the wrong column looks exactly like a chart drawn from the right one. That is what makes it expensive.\n\nSo Growth Terminal shows you which column it read, in plain English, before it draws anything.\n\n→ growthterminal.io",
+  "caption": "A forecast is not money. It is a claim, and most tools never go back and check theirs.\n\nGrowth Terminal commits its number in advance, then grades that number against what actually landed.\n\n→ growthterminal.io",
   "hashtags": "#growthterminal #b2bsaas #agencyowner #fractionalcmo #growthstrategy #revenueoperations #consulting #datadriven #kpis #decisionmaking #accountability",
-  "first_comment": "Column matching is resolved in the browser by rule. Nothing is uploaded for that step and no credit is spent.",
-  "alt_text": "Poster reading: The wrong column looks exactly like the right one, above a panel showing which columns the app read.",
-  "sig": "queue:ad11-wrong-column"
+  "first_comment": "Worked, missed, or not enough evidence. Two of the three are not good news.",
+  "alt_text": "Poster reading: You cannot spend a forecast. So we grade ours against the real number, after.",
+  "sig": "queue:ad08-cannot-spend-a-forecast"
 }

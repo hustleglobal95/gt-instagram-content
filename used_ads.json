@@ -28,5 +28,10 @@
     "id": "ad11-wrong-column",
     "at": "2026-09-12T01:01:01.353791Z",
     "file": "creatives/gt_ad_20260907_11_wrong-column.jpg"
+  },
+  {
+    "id": "ad08-cannot-spend-a-forecast",
+    "at": "2026-09-12T13:01:34.944758Z",
+    "file": "creatives/gt_ad_20260907_08_cannot-spend-a-forecast.jpg"
   }
 ]
