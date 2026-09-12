@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-09-12T13:01:34.944758Z",
-  "media_file": "creatives/gt_ad_20260907_08_cannot-spend-a-forecast.jpg",
+  "generated_at": "2026-09-12T17:01:20.253974Z",
+  "media_file": "creatives/gt_ad_20260907_01_nobody-came-back.jpg",
   "is_reel": false,
   "layout": "statement",
   "editorial_bg": null,
   "person": null,
   "qa": null,
-  "caption": "A forecast is not money. It is a claim, and most tools never go back and check theirs.\n\nGrowth Terminal commits its number in advance, then grades that number against what actually landed.\n\n→ growthterminal.io",
+  "caption": "Consultants leave. Dashboards refresh. The recommendation that started it all is never revisited.\n\nGrowth Terminal commits a baseline before the work starts, then compares it against what actually happened and records one of three verdicts: worked, missed, or not enough evidence.\n\n→ growthterminal.io",
   "hashtags": "#growthterminal #b2bsaas #agencyowner #fractionalcmo #growthstrategy #revenueoperations #consulting #datadriven #kpis #decisionmaking #accountability",
-  "first_comment": "Worked, missed, or not enough evidence. Two of the three are not good news.",
-  "alt_text": "Poster reading: You cannot spend a forecast. So we grade ours against the real number, after.",
-  "sig": "queue:ad08-cannot-spend-a-forecast"
+  "first_comment": "Two of the three verdicts are not good news. That is the point. A tool that can only tell you it worked is not measuring anything.",
+  "alt_text": "Poster reading: Nobody ever came back and told you if it worked.",
+  "sig": "queue:ad01-nobody-came-back"
 }
