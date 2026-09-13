@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-09-12T21:01:08.132775Z",
-  "media_file": "creatives/gt_ad_20260907_09_only-one-is-the-reason.jpg",
+  "generated_at": "2026-09-13T01:01:04.904965Z",
+  "media_file": "creatives/gt_ad_20260907_12_decision-nobody-executes.jpg",
   "is_reel": false,
   "layout": "statement",
   "editorial_bg": null,
   "person": null,
   "qa": null,
-  "caption": "Growth is stuck in one place. The rest of the list is noise you can leave alone this quarter.\n\nGrowth Terminal scores each area against your own numbers and shows the working, so the ranking is something you can argue with rather than accept.\n\n→ growthterminal.io",
+  "caption": "The hard part was never naming the priority. It was that the priority never became anyone's job.\n\nEvery decision becomes work with an owner, a state and an approval, kept in the same place as the analysis that caused it.\n\n→ growthterminal.io",
   "hashtags": "#growthterminal #b2bsaas #agencyowner #fractionalcmo #growthstrategy #revenueoperations #consulting #datadriven #kpis #decisionmaking #accountability",
-  "first_comment": "Scores shown are from a demo workspace with sample data. Yours are drawn from the sheet you point it at.",
-  "alt_text": "Poster reading: Acquisition, scored 66, above a ranked list. Only one of these is the reason.",
-  "sig": "queue:ad09-only-one-is-the-reason"
+  "first_comment": "Demo workspace with sample data. The board is sorted worst first, not newest first.",
+  "alt_text": "Poster reading: A decision nobody executes is not a decision, above a work board with owners and states.",
+  "sig": "queue:ad12-decision-nobody-executes"
 }
