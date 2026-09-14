@@ -1891,5 +1891,215 @@
     "note": "headline pattern from https://www.marketingdive.com/feeds/news/",
     "gtAngle": "",
     "status": "new"
+  },
+  {
+    "id": "rs_h9xbv7",
+    "source": "rss",
+    "url": "https://www.marketingdive.com/spons/the-ai-content-tsunami-creation-is-the-easy-part/830184/",
+    "capturedAt": "2026-09-14T19:35:31.110Z",
+    "structure": {
+      "wordCount": 9,
+      "lineCount": 1,
+      "avgWordsPerLine": 9,
+      "hookLength": 9,
+      "signals": [],
+      "hasImage": false,
+      "hasVideo": false,
+      "platforms": []
+    },
+    "nearestExistingLayout": null,
+    "novelty": "no close match in the bank",
+    "note": "headline pattern from https://www.marketingdive.com/feeds/news/",
+    "gtAngle": "",
+    "status": "new"
+  },
+  {
+    "id": "rs_1y5q9wp",
+    "source": "rss",
+    "url": "https://www.marketingdive.com/news/googles-upgrades-meridian-with-agentic-ai-upper-funnel-capabilities/830253/",
+    "capturedAt": "2026-09-14T19:35:31.110Z",
+    "structure": {
+      "wordCount": 8,
+      "lineCount": 1,
+      "avgWordsPerLine": 8,
+      "hookLength": 8,
+      "signals": [],
+      "hasImage": false,
+      "hasVideo": false,
+      "platforms": []
+    },
+    "nearestExistingLayout": null,
+    "novelty": "no close match in the bank",
+    "note": "headline pattern from https://www.marketingdive.com/feeds/news/",
+    "gtAngle": "",
+    "status": "new"
+  },
+  {
+    "id": "rs_jp3m5",
+    "source": "rss",
+    "url": "https://www.marketingdive.com/news/how-the-new-york-jets-extends-ooh-marketing-for-better-storytelling/830049/",
+    "capturedAt": "2026-09-14T19:35:31.111Z",
+    "structure": {
+      "wordCount": 11,
+      "lineCount": 1,
+      "avgWordsPerLine": 11,
+      "hookLength": 11,
+      "signals": [],
+      "hasImage": false,
+      "hasVideo": false,
+      "platforms": []
+    },
+    "nearestExistingLayout": null,
+    "novelty": "no close match in the bank",
+    "note": "headline pattern from https://www.marketingdive.com/feeds/news/",
+    "gtAngle": "",
+    "status": "new"
+  },
+  {
+    "id": "rs_on6nxj",
+    "source": "rss",
+    "url": "https://www.marketingdive.com/news/ihop-bites-into-little-treat-trend-with-katseye-soundtracked-campaign/830014/",
+    "capturedAt": "2026-09-14T19:35:31.111Z",
+    "structure": {
+      "wordCount": 9,
+      "lineCount": 1,
+      "avgWordsPerLine": 9,
+      "hookLength": 9,
+      "signals": [],
+      "hasImage": false,
+      "hasVideo": false,
+      "platforms": []
+    },
+    "nearestExistingLayout": null,
+    "novelty": "no close match in the bank",
+    "note": "headline pattern from https://www.marketingdive.com/feeds/news/",
+    "gtAngle": "",
+    "status": "new"
+  },
+  {
+    "id": "rs_f2x25m",
+    "source": "rss",
+    "url": "https://www.marketingdive.com/news/how-columbias-marketing-breaks-through-with-fax-machines-flat-earth/829991/",
+    "capturedAt": "2026-09-14T19:35:31.111Z",
+    "structure": {
+      "wordCount": 10,
+      "lineCount": 1,
+      "avgWordsPerLine": 10,
+      "hookLength": 10,
+      "signals": [],
+      "hasImage": false,
+      "hasVideo": false,
+      "platforms": []
+    },
+    "nearestExistingLayout": null,
+    "novelty": "no close match in the bank",
+    "note": "headline pattern from https://www.marketingdive.com/feeds/news/",
+    "gtAngle": "",
+    "status": "new"
+  },
+  {
+    "id": "rs_1ejqgh8",
+    "source": "rss",
+    "url": "https://www.marketingdive.com/news/cadbury-pairs-crystal-clutch-with-comedy-series-for-major-us-campaign/830112/",
+    "capturedAt": "2026-09-14T19:35:31.111Z",
+    "structure": {
+      "wordCount": 11,
+      "lineCount": 1,
+      "avgWordsPerLine": 11,
+      "hookLength": 11,
+      "signals": [],
+      "hasImage": false,
+      "hasVideo": false,
+      "platforms": []
+    },
+    "nearestExistingLayout": null,
+    "novelty": "no close match in the bank",
+    "note": "headline pattern from https://www.marketingdive.com/feeds/news/",
+    "gtAngle": "",
+    "status": "new"
+  },
+  {
+    "id": "rs_17qlnau",
+    "source": "rss",
+    "url": "https://www.marketingdive.com/news/hilton-cmo-mark-weinstein-steps-down/830161/",
+    "capturedAt": "2026-09-14T19:35:31.111Z",
+    "structure": {
+      "wordCount": 6,
+      "lineCount": 1,
+      "avgWordsPerLine": 6,
+      "hookLength": 6,
+      "signals": [],
+      "hasImage": false,
+      "hasVideo": false,
+      "platforms": []
+    },
+    "nearestExistingLayout": null,
+    "novelty": "no close match in the bank",
+    "note": "headline pattern from https://www.marketingdive.com/feeds/news/",
+    "gtAngle": "",
+    "status": "new"
+  },
+  {
+    "id": "rs_1559kbi",
+    "source": "rss",
+    "url": "https://www.marketingdive.com/news/old-navys-mrbeast-deal-boosts-engagement-amid-bigger-bet-on-creators/830100/",
+    "capturedAt": "2026-09-14T19:35:31.111Z",
+    "structure": {
+      "wordCount": 11,
+      "lineCount": 1,
+      "avgWordsPerLine": 11,
+      "hookLength": 11,
+      "signals": [],
+      "hasImage": false,
+      "hasVideo": false,
+      "platforms": []
+    },
+    "nearestExistingLayout": null,
+    "novelty": "no close match in the bank",
+    "note": "headline pattern from https://www.marketingdive.com/feeds/news/",
+    "gtAngle": "",
+    "status": "new"
+  },
+  {
+    "id": "rs_1f7vhyo",
+    "source": "rss",
+    "url": "https://www.marketingdive.com/news/campaign-trail-cheez-it-convenes-couch-committee-for-college-football/830011/",
+    "capturedAt": "2026-09-14T19:35:31.111Z",
+    "structure": {
+      "wordCount": 9,
+      "lineCount": 1,
+      "avgWordsPerLine": 9,
+      "hookLength": 9,
+      "signals": [],
+      "hasImage": false,
+      "hasVideo": false,
+      "platforms": []
+    },
+    "nearestExistingLayout": null,
+    "novelty": "no close match in the bank",
+    "note": "headline pattern from https://www.marketingdive.com/feeds/news/",
+    "gtAngle": "",
+    "status": "new"
+  },
+  {
+    "id": "rs_13rdvel",
+    "source": "rss",
+    "url": "https://www.marketingdive.com/news/sociable-youtube-expands-watch-with-to-more-creators/830037/",
+    "capturedAt": "2026-09-14T19:35:31.111Z",
+    "structure": {
+      "wordCount": 8,
+      "lineCount": 1,
+      "avgWordsPerLine": 8,
+      "hookLength": 8,
+      "signals": [],
+      "hasImage": false,
+      "hasVideo": false,
+      "platforms": []
+    },
+    "nearestExistingLayout": null,
+    "novelty": "no close match in the bank",
+    "note": "headline pattern from https://www.marketingdive.com/feeds/news/",
+    "gtAngle": "",
+    "status": "new"
   }
 ]
