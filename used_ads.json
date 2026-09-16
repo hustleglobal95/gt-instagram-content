@@ -1,62 +1,7 @@
 [
   {
     "id": "ad02-busy-not-blocked",
-    "at": "2026-09-13T21:01:03.632867Z",
+    "at": "2026-09-16T21:01:15.651594Z",
     "file": "creatives/gt_ad_20260907_02_busy-not-blocked.jpg"
-  },
-  {
-    "id": "ad05-one-wins-the-quarter",
-    "at": "2026-09-14T01:01:26.853447Z",
-    "file": "creatives/gt_ad_20260907_05_one-wins-the-quarter.jpg"
-  },
-  {
-    "id": "ad03-who-owns-it",
-    "at": "2026-09-14T13:01:01.917649Z",
-    "file": "creatives/gt_ad_20260907_03_who-owns-it.jpg"
-  },
-  {
-    "id": "ad06-already-paid",
-    "at": "2026-09-14T17:01:20.518917Z",
-    "file": "creatives/gt_ad_20260907_06_already-paid.jpg"
-  },
-  {
-    "id": "ad04-decision-stays",
-    "at": "2026-09-14T21:01:02.901195Z",
-    "file": "creatives/gt_ad_20260907_04_decision-stays.jpg"
-  },
-  {
-    "id": "ad11-wrong-column",
-    "at": "2026-09-15T01:01:27.079170Z",
-    "file": "creatives/gt_ad_20260907_11_wrong-column.jpg"
-  },
-  {
-    "id": "ad08-cannot-spend-a-forecast",
-    "at": "2026-09-15T13:01:19.805347Z",
-    "file": "creatives/gt_ad_20260907_08_cannot-spend-a-forecast.jpg"
-  },
-  {
-    "id": "ad01-nobody-came-back",
-    "at": "2026-09-15T17:01:31.835927Z",
-    "file": "creatives/gt_ad_20260907_01_nobody-came-back.jpg"
-  },
-  {
-    "id": "ad09-only-one-is-the-reason",
-    "at": "2026-09-15T21:01:03.052068Z",
-    "file": "creatives/gt_ad_20260907_09_only-one-is-the-reason.jpg"
-  },
-  {
-    "id": "ad12-decision-nobody-executes",
-    "at": "2026-09-16T01:01:25.221315Z",
-    "file": "creatives/gt_ad_20260907_12_decision-nobody-executes.jpg"
-  },
-  {
-    "id": "ad10-analysis-is-long",
-    "at": "2026-09-16T13:01:15.435377Z",
-    "file": "creatives/gt_ad_20260907_10_analysis-is-long.jpg"
-  },
-  {
-    "id": "ad07-busy-statement",
-    "at": "2026-09-16T17:00:59.900421Z",
-    "file": "creatives/gt_ad_20260907_07_busy-is-not-blocked.jpg"
   }
 ]
