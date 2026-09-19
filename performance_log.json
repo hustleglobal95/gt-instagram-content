@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-18T10:03:36.052472Z",
+  "updated": "2026-09-19T09:45:09.040294Z",
   "count": 150,
   "posts": [
     {
@@ -11,7 +11,7 @@
       "caption": "Find the one constraint holding your growth back.\n\nGrowth Terminal reads the report you already run, names the single co",
       "permalink": "https://www.instagram.com/p/DcZ1XouGjD4/",
       "ig": {
-        "likes": 19,
+        "likes": 18,
         "comments": 1,
         "saved": 0,
         "shares": 0,
@@ -22,7 +22,7 @@
         "insights_metrics": "",
         "own_comments": 1,
         "comments_external": 0,
-        "engagement": 19
+        "engagement": 18
       },
       "fb": {
         "reactions": 0,
@@ -32,40 +32,7 @@
         "reach_metric": "",
         "engagement": 0
       },
-      "engagement": 19,
-      "_ig_attempted": true
-    },
-    {
-      "sig": "prodclaim:funnel:Your funnel has one we",
-      "layout": "prodclaim",
-      "file": "creatives/gt_auto_20260808_130127.jpg",
-      "is_reel": false,
-      "at": "2026-08-08T13:01:32.563626Z",
-      "caption": "Most trackers show you conversion rates. This one tells you what to do with them: which step is costing you the most, ho",
-      "permalink": "https://www.instagram.com/p/Dbx7Go7n86A/",
-      "ig": {
-        "likes": 1,
-        "comments": 1,
-        "saved": 0,
-        "shares": 0,
-        "reach": 0,
-        "views": 0,
-        "permalink": "https://www.instagram.com/p/Dbx7Go7n86A/",
-        "insights_ok": false,
-        "insights_metrics": "",
-        "own_comments": 1,
-        "comments_external": 0,
-        "engagement": 1
-      },
-      "fb": {
-        "reactions": 3,
-        "comments": 0,
-        "shares": 0,
-        "reach": 0,
-        "reach_metric": "",
-        "engagement": 3
-      },
-      "engagement": 4,
+      "engagement": 18,
       "_ig_attempted": true
     },
     {
@@ -132,72 +99,6 @@
         "engagement": 0
       },
       "engagement": 4,
-      "_ig_attempted": true
-    },
-    {
-      "sig": "prodshot:funnel:Your funnel has one we",
-      "layout": "prodshot",
-      "file": "creatives/gt_auto_20260808_010110.jpg",
-      "is_reel": false,
-      "at": "2026-08-08T01:01:15.699230Z",
-      "caption": "Most trackers show you conversion rates. This one tells you what to do with them: which step is costing you the most, ho",
-      "permalink": "https://www.instagram.com/p/Dbwoq94DSzT/",
-      "ig": {
-        "likes": 0,
-        "comments": 1,
-        "saved": 0,
-        "shares": 0,
-        "reach": 0,
-        "views": 0,
-        "permalink": "https://www.instagram.com/p/Dbwoq94DSzT/",
-        "insights_ok": false,
-        "insights_metrics": "",
-        "own_comments": 1,
-        "comments_external": 0,
-        "engagement": 0
-      },
-      "fb": {
-        "reactions": 3,
-        "comments": 0,
-        "shares": 0,
-        "reach": 0,
-        "reach_metric": "",
-        "engagement": 3
-      },
-      "engagement": 3,
-      "_ig_attempted": true
-    },
-    {
-      "sig": "reelnum:140",
-      "layout": "reel:countup",
-      "file": "creatives/gt_reel_20260808_170112.jpg",
-      "is_reel": true,
-      "at": "2026-08-08T17:01:42.344463Z",
-      "caption": "Every diagnosis ends with a dollar range, not a vibe. A real number on a real constraint, so you decide with a figure in",
-      "permalink": "https://www.instagram.com/reel/DbyWmCIjnvc/",
-      "ig": {
-        "likes": 0,
-        "comments": 1,
-        "saved": 0,
-        "shares": 0,
-        "reach": 0,
-        "views": 0,
-        "permalink": "https://www.instagram.com/reel/DbyWmCIjnvc/",
-        "insights_ok": false,
-        "insights_metrics": "",
-        "own_comments": 1,
-        "comments_external": 0,
-        "engagement": 0
-      },
-      "fb": {
-        "reactions": 3,
-        "comments": 0,
-        "shares": 0,
-        "reach": 0,
-        "reach_metric": "",
-        "engagement": 3
-      },
-      "engagement": 3,
       "_ig_attempted": true
     },
     {
@@ -396,39 +297,6 @@
         "engagement": 0
       },
       "engagement": 3,
-      "_ig_attempted": true
-    },
-    {
-      "sig": "feat:Find the one constraint holding your gro:gt_face_03.png",
-      "layout": "feature",
-      "file": "creatives/gt_auto_20260808_210105.jpg",
-      "is_reel": false,
-      "at": "2026-08-08T21:01:10.349469Z",
-      "caption": "Find the one constraint holding your growth back.\n\nGrowth Terminal reads the report you already run, names the single co",
-      "permalink": "https://www.instagram.com/p/Dbyx_YVnQ4C/",
-      "ig": {
-        "likes": 0,
-        "comments": 1,
-        "saved": 0,
-        "shares": 0,
-        "reach": 0,
-        "views": 0,
-        "permalink": "https://www.instagram.com/p/Dbyx_YVnQ4C/",
-        "insights_ok": false,
-        "insights_metrics": "",
-        "own_comments": 1,
-        "comments_external": 0,
-        "engagement": 0
-      },
-      "fb": {
-        "reactions": 2,
-        "comments": 0,
-        "shares": 0,
-        "reach": 0,
-        "reach_metric": "",
-        "engagement": 2
-      },
-      "engagement": 2,
       "_ig_attempted": true
     },
     {
@@ -4904,23 +4772,155 @@
       },
       "engagement": 0,
       "_ig_attempted": true
+    },
+    {
+      "sig": "queue:ad08-cannot-spend-a-forecast",
+      "layout": "statement",
+      "file": "creatives/gt_ad_20260907_08_cannot-spend-a-forecast.jpg",
+      "is_reel": false,
+      "at": "2026-09-18T13:01:17.626588Z",
+      "caption": "A forecast is not money. It is a claim, and most tools never go back and check theirs.\n\nGrowth Terminal commits its numb",
+      "permalink": "https://www.instagram.com/p/DdbfqkAHTlD/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "views": 0,
+        "permalink": "https://www.instagram.com/p/DdbfqkAHTlD/",
+        "insights_ok": false,
+        "insights_metrics": "",
+        "own_comments": 1,
+        "comments_external": 0,
+        "engagement": 0
+      },
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "reach_metric": "",
+        "engagement": 0
+      },
+      "engagement": 0,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "queue:ad01-nobody-came-back",
+      "layout": "statement",
+      "file": "creatives/gt_ad_20260907_01_nobody-came-back.jpg",
+      "is_reel": false,
+      "at": "2026-09-18T17:01:54.318657Z",
+      "caption": "Consultants leave. Dashboards refresh. The recommendation that started it all is never revisited.\n\nGrowth Terminal commi",
+      "permalink": "https://www.instagram.com/p/Ddb7M5el4An/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "views": 0,
+        "permalink": "https://www.instagram.com/p/Ddb7M5el4An/",
+        "insights_ok": false,
+        "insights_metrics": "",
+        "own_comments": 1,
+        "comments_external": 0,
+        "engagement": 0
+      },
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "reach_metric": "",
+        "engagement": 0
+      },
+      "engagement": 0,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "queue:ad09-only-one-is-the-reason",
+      "layout": "statement",
+      "file": "creatives/gt_ad_20260907_09_only-one-is-the-reason.jpg",
+      "is_reel": false,
+      "at": "2026-09-18T21:01:21.062362Z",
+      "caption": "Growth is stuck in one place. The rest of the list is noise you can leave alone this quarter.\n\nGrowth Terminal scores ea",
+      "permalink": "https://www.instagram.com/p/DdcWmpmGMrg/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "views": 0,
+        "permalink": "https://www.instagram.com/p/DdcWmpmGMrg/",
+        "insights_ok": false,
+        "insights_metrics": "",
+        "own_comments": 1,
+        "comments_external": 0,
+        "engagement": 0
+      },
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "reach_metric": "",
+        "engagement": 0
+      },
+      "engagement": 0,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "queue:ad12-decision-nobody-executes",
+      "layout": "statement",
+      "file": "creatives/gt_ad_20260907_12_decision-nobody-executes.jpg",
+      "is_reel": false,
+      "at": "2026-09-19T01:01:24.823327Z",
+      "caption": "The hard part was never naming the priority. It was that the priority never became anyone's job.\n\nEvery decision becomes",
+      "permalink": "https://www.instagram.com/p/DdcyE4end0P/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "views": 0,
+        "permalink": "https://www.instagram.com/p/DdcyE4end0P/",
+        "insights_ok": false,
+        "insights_metrics": "",
+        "own_comments": 1,
+        "comments_external": 0,
+        "engagement": 0
+      },
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "reach_metric": "",
+        "engagement": 0
+      },
+      "engagement": 0,
+      "_ig_attempted": true
     }
   ],
   "by_format": [
-    {
-      "layout": "feature",
-      "posts": 9,
-      "engagement": 27,
-      "ig_engagement": 20,
-      "fb_engagement": 7,
-      "avg_engagement": 3.0
-    },
     {
       "layout": "tweet",
       "posts": 1,
       "engagement": 3,
       "ig_engagement": 1,
       "fb_engagement": 2,
+      "avg_engagement": 3.0
+    },
+    {
+      "layout": "feature",
+      "posts": 8,
+      "engagement": 24,
+      "ig_engagement": 19,
+      "fb_engagement": 5,
       "avg_engagement": 3.0
     },
     {
@@ -4948,14 +4948,6 @@
       "avg_engagement": 2.0
     },
     {
-      "layout": "reel:countup",
-      "posts": 9,
-      "engagement": 14,
-      "ig_engagement": 10,
-      "fb_engagement": 4,
-      "avg_engagement": 1.6
-    },
-    {
       "layout": "contrast",
       "posts": 2,
       "engagement": 3,
@@ -4964,11 +4956,11 @@
       "avg_engagement": 1.5
     },
     {
-      "layout": "prodclaim",
-      "posts": 10,
-      "engagement": 14,
+      "layout": "reel:countup",
+      "posts": 8,
+      "engagement": 11,
       "ig_engagement": 10,
-      "fb_engagement": 4,
+      "fb_engagement": 1,
       "avg_engagement": 1.4
     },
     {
@@ -4986,6 +4978,14 @@
       "ig_engagement": 5,
       "fb_engagement": 4,
       "avg_engagement": 1.3
+    },
+    {
+      "layout": "prodclaim",
+      "posts": 9,
+      "engagement": 10,
+      "ig_engagement": 9,
+      "fb_engagement": 1,
+      "avg_engagement": 1.1
     },
     {
       "layout": "carousel:twelve",
@@ -5052,14 +5052,6 @@
       "avg_engagement": 0.7
     },
     {
-      "layout": "prodshot",
-      "posts": 11,
-      "engagement": 7,
-      "ig_engagement": 3,
-      "fb_engagement": 4,
-      "avg_engagement": 0.6
-    },
-    {
       "layout": "twozone",
       "posts": 4,
       "engagement": 2,
@@ -5076,8 +5068,16 @@
       "avg_engagement": 0.4
     },
     {
+      "layout": "prodshot",
+      "posts": 10,
+      "engagement": 4,
+      "ig_engagement": 3,
+      "fb_engagement": 1,
+      "avg_engagement": 0.4
+    },
+    {
       "layout": "statement",
-      "posts": 45,
+      "posts": 49,
       "engagement": 3,
       "ig_engagement": 3,
       "fb_engagement": 0,
@@ -5120,22 +5120,6 @@
     "ig_attempted": 150,
     "ig_succeeded": 148,
     "ig_errors": [
-      {
-        "media_id": "18613112839018638",
-        "message": "insights unavailable: (#10) Application does not have permission for this action"
-      },
-      {
-        "media_id": "18214834165341118",
-        "message": "insights unavailable: (#10) Application does not have permission for this action"
-      },
-      {
-        "media_id": "17978659191060859",
-        "message": "insights unavailable: (#10) Application does not have permission for this action"
-      },
-      {
-        "media_id": "18087233720406047",
-        "message": "insights unavailable: (#10) Application does not have permission for this action"
-      },
       {
         "media_id": "18004340273967584",
         "message": "insights unavailable: (#10) Application does not have permission for this action"
@@ -5199,27 +5183,27 @@
       {
         "media_id": "18085283732230731",
         "message": "insights unavailable: (#10) Application does not have permission for this action"
+      },
+      {
+        "media_id": "17860346373677167",
+        "message": "insights unavailable: (#10) Application does not have permission for this action"
+      },
+      {
+        "media_id": "17870006139585326",
+        "message": "insights unavailable: (#10) Application does not have permission for this action"
+      },
+      {
+        "media_id": "17942727288314375",
+        "message": "insights unavailable: (#10) Application does not have permission for this action"
+      },
+      {
+        "media_id": "18109553909016002",
+        "message": "insights unavailable: (#10) Application does not have permission for this action"
       }
     ],
     "ig_error_count": 150,
     "fb_succeeded": 147,
     "fb_errors": [
-      {
-        "post_id": "1087307654468135_122101018394536059",
-        "message": "reach unavailable: (#100) The value must be a valid insights metric"
-      },
-      {
-        "post_id": "1087307654468135_122101033382536059",
-        "message": "reach unavailable: (#100) The value must be a valid insights metric"
-      },
-      {
-        "post_id": "1087307654468135_122101039532536059",
-        "message": "reach unavailable: (#100) The value must be a valid insights metric"
-      },
-      {
-        "post_id": "1087307654468135_122101044674536059",
-        "message": "reach unavailable: (#100) The value must be a valid insights metric"
-      },
       {
         "post_id": "1087307654468135_122101049150536059",
         "message": "reach unavailable: (#100) The value must be a valid insights metric"
@@ -5282,6 +5266,22 @@
       },
       {
         "post_id": "1087307654468135_122101160030536059",
+        "message": "reach unavailable: (#100) The value must be a valid insights metric"
+      },
+      {
+        "post_id": "1087307654468135_122101164872536059",
+        "message": "reach unavailable: (#100) The value must be a valid insights metric"
+      },
+      {
+        "post_id": "1087307654468135_122101165886536059",
+        "message": "reach unavailable: (#100) The value must be a valid insights metric"
+      },
+      {
+        "post_id": "1087307654468135_122101168832536059",
+        "message": "reach unavailable: (#100) The value must be a valid insights metric"
+      },
+      {
+        "post_id": "1087307654468135_122101173446536059",
         "message": "reach unavailable: (#100) The value must be a valid insights metric"
       }
     ],
