@@ -1,14 +1,14 @@
 {
-  "updated": "2026-09-22T11:39:15.232Z",
+  "updated": "2026-09-23T11:36:38.943Z",
   "count": 253,
   "ranking_basis": "per_1k",
   "min_views_for_rate": 25,
   "rate_eligible": 85,
   "reach": {
-    "views": 18396,
-    "interactions": 851,
+    "views": 18382,
+    "interactions": 867,
     "median_views": 12,
-    "zero_interaction_posts": 154
+    "zero_interaction_posts": 153
   },
   "coverage": {
     "window_days": 30,
@@ -21,19 +21,19 @@
     "chain_parts_folded_in": 397,
     "posts_missing_from_local_log": 41,
     "outbound_replies": 3,
-    "outbound_reply_views": 36,
+    "outbound_reply_views": 37,
     "outbound_reply_interactions": 1,
     "outbound_replies_measured": 3,
-    "total_views_incl_replies": 18432,
-    "summed_views": 18396,
-    "platform_views": 9439,
-    "ratio": 1.953
+    "total_views_incl_replies": 18419,
+    "summed_views": 18382,
+    "platform_views": 9351,
+    "ratio": 1.97
   },
   "platform": {
     "Markus": {
-      "views": 9439,
-      "likes": 69,
-      "replies": 429,
+      "views": 9351,
+      "likes": 65,
+      "replies": 446,
       "reposts": 0,
       "quotes": 0,
       "followers_count": 33
@@ -45,8 +45,8 @@
       "pillar": "community",
       "kind": "permission",
       "isThread": true,
-      "parts": 145,
-      "parts_measured": 145,
+      "parts": 153,
+      "parts_measured": 153,
       "in_posted_log": true,
       "text": "If you are building something and nobody is engaging yet:\n\nthat is the normal part. It is not evidence about you or about the thing.\n\nThe people who make it are mostly just the ones still there in month six.\n\nWhat is the smallest thing that",
       "accounts": [
@@ -56,14 +56,14 @@
       "metrics": {
         "views": 58,
         "likes": 22,
-        "replies": 172,
+        "replies": 180,
         "reposts": 0,
         "quotes": 0,
         "shares": 0
       },
       "views": 58,
-      "engagement": 194,
-      "per_1k": 3344.83,
+      "engagement": 202,
+      "per_1k": 3482.76,
       "rateReliable": true,
       "basis": "per_1k"
     },
@@ -72,8 +72,8 @@
       "pillar": "early",
       "kind": "thread",
       "isThread": true,
-      "parts": 128,
-      "parts_measured": 128,
+      "parts": 136,
+      "parts_measured": 136,
       "in_posted_log": true,
       "text": "Nobody warns you that early sales feel like asking for a favour.",
       "accounts": [
@@ -83,14 +83,14 @@
       "metrics": {
         "views": 74,
         "likes": 2,
-        "replies": 128,
+        "replies": 136,
         "reposts": 0,
         "quotes": 0,
         "shares": 0
       },
       "views": 74,
-      "engagement": 130,
-      "per_1k": 1756.76,
+      "engagement": 138,
+      "per_1k": 1864.86,
       "rateReliable": true,
       "basis": "per_1k"
     },
@@ -98,9 +98,9 @@
       "at": "2026-08-26T11:14:54+0000",
       "pillar": "community",
       "kind": "building",
-      "isThread": true,
-      "parts": 5,
-      "parts_measured": 5,
+      "isThread": false,
+      "parts": 1,
+      "parts_measured": 1,
       "in_posted_log": true,
       "text": "What are you building right now, in one sentence, no pitch?\n\nI want to see what people are actually working on rather than what they are announcing.",
       "accounts": [
@@ -108,16 +108,16 @@
       ],
       "permalink": "https://www.threads.com/@markusreidgt/post/DcgFMKPFGf8",
       "metrics": {
-        "views": 59,
+        "views": 54,
         "likes": 4,
         "replies": 31,
         "reposts": 0,
         "quotes": 0,
         "shares": 0
       },
-      "views": 59,
+      "views": 54,
       "engagement": 35,
-      "per_1k": 593.22,
+      "per_1k": 648.15,
       "rateReliable": true,
       "basis": "per_1k"
     },
@@ -207,8 +207,8 @@
       "pillar": "community",
       "kind": "thread",
       "isThread": true,
-      "parts": 38,
-      "parts_measured": 38,
+      "parts": 33,
+      "parts_measured": 33,
       "in_posted_log": true,
       "text": "Ten things at ten percent effort leaves you with nothing anyone outside would notice.",
       "accounts": [
@@ -317,8 +317,8 @@
       "pillar": "community",
       "kind": "permission",
       "isThread": true,
-      "parts": 145,
-      "parts_measured": 145,
+      "parts": 153,
+      "parts_measured": 153,
       "in_posted_log": true,
       "text": "If you are building something and nobody is engaging yet:\n\nthat is the normal part. It is not evidence about you or about the thing.\n\nThe people who make it are mostly just the ones still there in month six.\n\nWhat is the smallest thing that",
       "accounts": [
@@ -328,14 +328,14 @@
       "metrics": {
         "views": 58,
         "likes": 22,
-        "replies": 172,
+        "replies": 180,
         "reposts": 0,
         "quotes": 0,
         "shares": 0
       },
       "views": 58,
-      "engagement": 194,
-      "per_1k": 3344.83,
+      "engagement": 202,
+      "per_1k": 3482.76,
       "rateReliable": true,
       "basis": "per_1k"
     },
@@ -344,8 +344,8 @@
       "pillar": "early",
       "kind": "thread",
       "isThread": true,
-      "parts": 128,
-      "parts_measured": 128,
+      "parts": 136,
+      "parts_measured": 136,
       "in_posted_log": true,
       "text": "Nobody warns you that early sales feel like asking for a favour.",
       "accounts": [
@@ -355,14 +355,14 @@
       "metrics": {
         "views": 74,
         "likes": 2,
-        "replies": 128,
+        "replies": 136,
         "reposts": 0,
         "quotes": 0,
         "shares": 0
       },
       "views": 74,
-      "engagement": 130,
-      "per_1k": 1756.76,
+      "engagement": 138,
+      "per_1k": 1864.86,
       "rateReliable": true,
       "basis": "per_1k"
     },
@@ -370,9 +370,9 @@
       "at": "2026-08-26T11:14:54+0000",
       "pillar": "community",
       "kind": "building",
-      "isThread": true,
-      "parts": 5,
-      "parts_measured": 5,
+      "isThread": false,
+      "parts": 1,
+      "parts_measured": 1,
       "in_posted_log": true,
       "text": "What are you building right now, in one sentence, no pitch?\n\nI want to see what people are actually working on rather than what they are announcing.",
       "accounts": [
@@ -380,16 +380,16 @@
       ],
       "permalink": "https://www.threads.com/@markusreidgt/post/DcgFMKPFGf8",
       "metrics": {
-        "views": 59,
+        "views": 54,
         "likes": 4,
         "replies": 31,
         "reposts": 0,
         "quotes": 0,
         "shares": 0
       },
-      "views": 59,
+      "views": 54,
       "engagement": 35,
-      "per_1k": 593.22,
+      "per_1k": 648.15,
       "rateReliable": true,
       "basis": "per_1k"
     },
@@ -479,8 +479,8 @@
       "pillar": "community",
       "kind": "thread",
       "isThread": true,
-      "parts": 38,
-      "parts_measured": 38,
+      "parts": 33,
+      "parts_measured": 33,
       "in_posted_log": true,
       "text": "Ten things at ten percent effort leaves you with nothing anyone outside would notice.",
       "accounts": [
@@ -1073,8 +1073,8 @@
       "pillar": "playbook",
       "kind": "thread",
       "isThread": true,
-      "parts": 6,
-      "parts_measured": 6,
+      "parts": 2,
+      "parts_measured": 2,
       "in_posted_log": true,
       "text": "Every list of digital product ideas you have read was sorted by how exciting the category sounds.",
       "accounts": [
@@ -1082,16 +1082,16 @@
       ],
       "permalink": "https://www.threads.com/@markusreidgt/post/Dcq91SUE8Zs",
       "metrics": {
-        "views": 188,
+        "views": 183,
         "likes": 0,
         "replies": 5,
         "reposts": 0,
         "quotes": 0,
         "shares": 0
       },
-      "views": 188,
+      "views": 183,
       "engagement": 5,
-      "per_1k": 26.6,
+      "per_1k": 27.32,
       "rateReliable": true,
       "basis": "per_1k"
     },
@@ -1865,14 +1865,14 @@
       ],
       "permalink": "https://www.threads.com/@markusreidgt/post/Dc6zB3gGFPn",
       "metrics": {
-        "views": 65,
+        "views": 69,
         "likes": 0,
         "replies": 0,
         "reposts": 0,
         "quotes": 0,
         "shares": 0
       },
-      "views": 65,
+      "views": 69,
       "engagement": 0,
       "per_1k": 0,
       "rateReliable": true,
@@ -2611,9 +2611,9 @@
       "at": "2026-08-25T22:58:11+0000",
       "pillar": "early",
       "kind": "founders",
-      "isThread": true,
-      "parts": 4,
-      "parts_measured": 4,
+      "isThread": false,
+      "parts": 1,
+      "parts_measured": 1,
       "in_posted_log": true,
       "text": "The hardest part of the first year is that nothing you say about your product is backed by anything yet.\n\nIt is not the product. At ten customers the product is usually fine and definitely fixable.\n\nWhich means the early work is not more fe",
       "accounts": [
@@ -2621,16 +2621,16 @@
       ],
       "permalink": "https://www.threads.com/@markusreidgt/post/Dcew4QYCcz1",
       "metrics": {
-        "views": 9,
+        "views": 1,
         "likes": 0,
         "replies": 33,
         "reposts": 0,
         "quotes": 0,
         "shares": 0
       },
-      "views": 9,
+      "views": 1,
       "engagement": 33,
-      "per_1k": 3666.67,
+      "per_1k": 33000,
       "rateReliable": false,
       "basis": "total"
     },
@@ -2685,33 +2685,6 @@
       "views": 0,
       "engagement": 6,
       "per_1k": null,
-      "rateReliable": false,
-      "basis": "total"
-    },
-    {
-      "at": "2026-08-29T16:44:10+0000",
-      "pillar": "authority",
-      "kind": "thread",
-      "isThread": true,
-      "parts": 1,
-      "parts_measured": 1,
-      "in_posted_log": true,
-      "text": "I have been posting daily for two weeks to a very small account.\n\nHere is what the numbers actually said, including the part that stung",
-      "accounts": [
-        "Markus"
-      ],
-      "permalink": "https://www.threads.com/@markusreidgt/post/DcoZQWSmlhP",
-      "metrics": {
-        "views": 15,
-        "likes": 1,
-        "replies": 4,
-        "reposts": 0,
-        "quotes": 0,
-        "shares": 0
-      },
-      "views": 15,
-      "engagement": 5,
-      "per_1k": 333.33,
       "rateReliable": false,
       "basis": "total"
     },
@@ -3009,6 +2982,33 @@
       "views": 23,
       "engagement": 4,
       "per_1k": 173.91,
+      "rateReliable": false,
+      "basis": "total"
+    },
+    {
+      "at": "2026-08-29T16:44:10+0000",
+      "pillar": "authority",
+      "kind": "thread",
+      "isThread": true,
+      "parts": 1,
+      "parts_measured": 1,
+      "in_posted_log": true,
+      "text": "I have been posting daily for two weeks to a very small account.\n\nHere is what the numbers actually said, including the part that stung",
+      "accounts": [
+        "Markus"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/DcoZQWSmlhP",
+      "metrics": {
+        "views": 15,
+        "likes": 0,
+        "replies": 4,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 15,
+      "engagement": 4,
+      "per_1k": 266.67,
       "rateReliable": false,
       "basis": "total"
     },
@@ -3488,6 +3488,33 @@
         "views": 14,
         "likes": 1,
         "replies": 0,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 14,
+      "engagement": 1,
+      "per_1k": 71.43,
+      "rateReliable": false,
+      "basis": "total"
+    },
+    {
+      "at": "2026-08-18T13:25:25+0000",
+      "pillar": "community",
+      "kind": "openinvite",
+      "isThread": false,
+      "parts": 1,
+      "parts_measured": 1,
+      "in_posted_log": true,
+      "text": "Shipping something you were proud of to complete silence.\n\nThat is where I am this week. Not a lesson, just where I am.\n\nIf you are somewhere similar, say so. Half of what makes this bearable is finding out the number of people quietly in t",
+      "accounts": [
+        "Markus"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/DcLtw3omN2C",
+      "metrics": {
+        "views": 14,
+        "likes": 0,
+        "replies": 1,
         "reposts": 0,
         "quotes": 0,
         "shares": 0
@@ -4213,33 +4240,6 @@
         "Markus"
       ],
       "permalink": "https://www.threads.com/@markusreidgt/post/DcTaqCBII72",
-      "metrics": {
-        "views": 14,
-        "likes": 0,
-        "replies": 0,
-        "reposts": 0,
-        "quotes": 0,
-        "shares": 0
-      },
-      "views": 14,
-      "engagement": 0,
-      "per_1k": 0,
-      "rateReliable": false,
-      "basis": "total"
-    },
-    {
-      "at": "2026-08-18T13:25:25+0000",
-      "pillar": "community",
-      "kind": "openinvite",
-      "isThread": false,
-      "parts": 1,
-      "parts_measured": 1,
-      "in_posted_log": true,
-      "text": "Shipping something you were proud of to complete silence.\n\nThat is where I am this week. Not a lesson, just where I am.\n\nIf you are somewhere similar, say so. Half of what makes this bearable is finding out the number of people quietly in t",
-      "accounts": [
-        "Markus"
-      ],
-      "permalink": "https://www.threads.com/@markusreidgt/post/DcLtw3omN2C",
       "metrics": {
         "views": 14,
         "likes": 0,
@@ -7113,24 +7113,24 @@
     {
       "key": "early",
       "posts": 27,
-      "engagement": 212,
-      "avg_engagement": 7.85,
+      "engagement": 220,
+      "avg_engagement": 8.15,
       "views": 511,
-      "avg_per_1k": 364.47
+      "avg_per_1k": 386.09
     },
     {
       "key": "community",
       "posts": 56,
-      "engagement": 376,
-      "avg_engagement": 6.71,
-      "views": 3238,
-      "avg_per_1k": 274.83
+      "engagement": 385,
+      "avg_engagement": 6.88,
+      "views": 3233,
+      "avg_per_1k": 286.17
     },
     {
       "key": "authority",
       "posts": 9,
-      "engagement": 17,
-      "avg_engagement": 1.89,
+      "engagement": 16,
+      "avg_engagement": 1.78,
       "views": 46,
       "avg_per_1k": 86.96
     },
@@ -7155,7 +7155,7 @@
       "posts": 45,
       "engagement": 95,
       "avg_engagement": 2.11,
-      "views": 4975,
+      "views": 4979,
       "avg_per_1k": 24.47
     },
     {
@@ -7171,8 +7171,8 @@
       "posts": 18,
       "engagement": 41,
       "avg_engagement": 2.28,
-      "views": 2065,
-      "avg_per_1k": 18.86
+      "views": 2060,
+      "avg_per_1k": 18.94
     },
     {
       "key": "constraint",
@@ -7227,26 +7227,26 @@
     {
       "key": "permission",
       "posts": 2,
-      "engagement": 194,
-      "avg_engagement": 97,
+      "engagement": 202,
+      "avg_engagement": 101,
       "views": 58,
-      "avg_per_1k": 3344.83
+      "avg_per_1k": 3482.76
     },
     {
       "key": "building",
       "posts": 10,
       "engagement": 37,
       "avg_engagement": 3.7,
-      "views": 59,
-      "avg_per_1k": 593.22
+      "views": 54,
+      "avg_per_1k": 648.15
     },
     {
       "key": "thread",
       "posts": 67,
-      "engagement": 498,
-      "avg_engagement": 7.43,
-      "views": 11546,
-      "avg_per_1k": 81.64
+      "engagement": 505,
+      "avg_engagement": 7.54,
+      "views": 11541,
+      "avg_per_1k": 84.11
     },
     {
       "key": "unknown",
@@ -7293,7 +7293,7 @@
       "posts": 8,
       "engagement": 0,
       "avg_engagement": 0,
-      "views": 139,
+      "views": 143,
       "avg_per_1k": 0
     },
     {
@@ -7409,6 +7409,14 @@
       "avg_per_1k": null
     },
     {
+      "key": "openinvite",
+      "posts": 2,
+      "engagement": 1,
+      "avg_engagement": 0.5,
+      "views": 0,
+      "avg_per_1k": null
+    },
+    {
       "key": "tampa",
       "posts": 10,
       "engagement": 4,
@@ -7421,14 +7429,6 @@
       "posts": 3,
       "engagement": 1,
       "avg_engagement": 0.33,
-      "views": 0,
-      "avg_per_1k": null
-    },
-    {
-      "key": "openinvite",
-      "posts": 2,
-      "engagement": 0,
-      "avg_engagement": 0,
       "views": 0,
       "avg_per_1k": null
     },
@@ -7628,19 +7628,19 @@
   "by_shape": [
     {
       "key": "thread",
-      "posts": 70,
-      "engagement": 760,
-      "avg_engagement": 10.86,
-      "views": 11663,
-      "avg_per_1k": 163.7
+      "posts": 68,
+      "engagement": 707,
+      "avg_engagement": 10.4,
+      "views": 11599,
+      "avg_per_1k": 159.64
     },
     {
       "key": "single",
-      "posts": 183,
-      "engagement": 91,
-      "avg_engagement": 0.5,
-      "views": 5437,
-      "avg_per_1k": 10.31
+      "posts": 185,
+      "engagement": 160,
+      "avg_engagement": 0.86,
+      "views": 5495,
+      "avg_per_1k": 26.25
     }
   ],
   "collection": {
