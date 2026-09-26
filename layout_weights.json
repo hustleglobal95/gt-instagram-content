@@ -2,31 +2,15 @@
   "active": false,
   "diagnostics": {
     "totalPosts": 150,
-    "totalEngagement": 77,
-    "igEngagement": 67,
+    "totalEngagement": 74,
+    "igEngagement": 64,
     "fbEngagement": 10,
-    "formats": 25,
-    "formatsWithAnyEngagement": 20,
+    "formats": 24,
+    "formatsWithAnyEngagement": 18,
     "collectionHealth": {
       "ig_attempted": 150,
       "ig_succeeded": 148,
       "ig_errors": [
-        {
-          "media_id": "18108976658024915",
-          "message": "insights unavailable: (#10) Application does not have permission for this action"
-        },
-        {
-          "media_id": "18108997694107667",
-          "message": "insights unavailable: (#10) Application does not have permission for this action"
-        },
-        {
-          "media_id": "17897241744571630",
-          "message": "insights unavailable: (#10) Application does not have permission for this action"
-        },
-        {
-          "media_id": "18129044326631391",
-          "message": "insights unavailable: (#10) Application does not have permission for this action"
-        },
         {
           "media_id": "17895902379590676",
           "message": "insights unavailable: (#10) Application does not have permission for this action"
@@ -90,27 +74,27 @@
         {
           "media_id": "18065576354738299",
           "message": "insights unavailable: (#10) Application does not have permission for this action"
+        },
+        {
+          "media_id": "18121140985851642",
+          "message": "insights unavailable: (#10) Application does not have permission for this action"
+        },
+        {
+          "media_id": "17887294077611366",
+          "message": "insights unavailable: (#10) Application does not have permission for this action"
+        },
+        {
+          "media_id": "17883252405681751",
+          "message": "insights unavailable: (#10) Application does not have permission for this action"
+        },
+        {
+          "media_id": "17966914095138669",
+          "message": "insights unavailable: (#10) Application does not have permission for this action"
         }
       ],
       "ig_error_count": 150,
       "fb_succeeded": 148,
       "fb_errors": [
-        {
-          "post_id": "1087307654468135_122101202240536059",
-          "message": "reach unavailable: (#100) The value must be a valid insights metric"
-        },
-        {
-          "post_id": "1087307654468135_122101214540536059",
-          "message": "reach unavailable: (#100) The value must be a valid insights metric"
-        },
-        {
-          "post_id": "1087307654468135_122101229474536059",
-          "message": "reach unavailable: (#100) The value must be a valid insights metric"
-        },
-        {
-          "post_id": "1087307654468135_122101233242536059",
-          "message": "reach unavailable: (#100) The value must be a valid insights metric"
-        },
         {
           "post_id": "1087307654468135_122101234922536059",
           "message": "reach unavailable: (#100) The value must be a valid insights metric"
@@ -174,6 +158,22 @@
         {
           "post_id": "1087307654468135_122101338860536059",
           "message": "reach unavailable: (#100) The value must be a valid insights metric"
+        },
+        {
+          "post_id": "1087307654468135_122101342508536059",
+          "message": "reach unavailable: (#100) The value must be a valid insights metric"
+        },
+        {
+          "post_id": "1087307654468135_122101356416536059",
+          "message": "reach unavailable: (#100) The value must be a valid insights metric"
+        },
+        {
+          "post_id": "1087307654468135_122101365716536059",
+          "message": "reach unavailable: (#100) The value must be a valid insights metric"
+        },
+        {
+          "post_id": "1087307654468135_122101369340536059",
+          "message": "reach unavailable: (#100) The value must be a valid insights metric"
         }
       ],
       "fb_error_count": 148,
@@ -184,8 +184,8 @@
       "own_comments_excluded": 148
     }
   },
-  "reason": "Only 77 total interactions across 150 posts. Under 100 the gaps between formats are noise, not ranking. The bottleneck here is distribution, not creative format, and reweighting the rotation would optimise against randomness.",
-  "evaluatedAt": "2026-09-25T10:28:06.692Z",
+  "reason": "Only 74 total interactions across 150 posts. Under 100 the gaps between formats are noise, not ranking. The bottleneck here is distribution, not creative format, and reweighting the rotation would optimise against randomness.",
+  "evaluatedAt": "2026-09-26T10:08:20.092Z",
   "gates": {
     "MIN_TOTAL_ENGAGEMENT": 100,
     "MIN_POSTS_PER_FORMAT": 8,
