@@ -1,12 +1,12 @@
 {
-  "updated": "2026-09-26T11:26:30.941Z",
+  "updated": "2026-09-27T12:04:15.327Z",
   "count": 253,
   "ranking_basis": "per_1k",
   "min_views_for_rate": 25,
   "rate_eligible": 85,
   "reach": {
-    "views": 18311,
-    "interactions": 914,
+    "views": 18291,
+    "interactions": 932,
     "median_views": 12,
     "zero_interaction_posts": 153
   },
@@ -24,16 +24,16 @@
     "outbound_reply_views": 25,
     "outbound_reply_interactions": 1,
     "outbound_replies_measured": 2,
-    "total_views_incl_replies": 18336,
-    "summed_views": 18311,
-    "platform_views": 6841,
-    "ratio": 2.68
+    "total_views_incl_replies": 18316,
+    "summed_views": 18291,
+    "platform_views": 6606,
+    "ratio": 2.773
   },
   "platform": {
     "Markus": {
-      "views": 6841,
-      "likes": 46,
-      "replies": 459,
+      "views": 6606,
+      "likes": 45,
+      "replies": 461,
       "reposts": 0,
       "quotes": 0,
       "followers_count": 33
@@ -45,8 +45,8 @@
       "pillar": "community",
       "kind": "permission",
       "isThread": true,
-      "parts": 177,
-      "parts_measured": 177,
+      "parts": 185,
+      "parts_measured": 185,
       "in_posted_log": true,
       "text": "If you are building something and nobody is engaging yet:\n\nthat is the normal part. It is not evidence about you or about the thing.\n\nThe people who make it are mostly just the ones still there in month six.\n\nWhat is the smallest thing that",
       "accounts": [
@@ -54,16 +54,16 @@
       ],
       "permalink": "https://www.threads.com/@markusreidgt/post/Dc3nOEmoH6m",
       "metrics": {
-        "views": 64,
-        "likes": 22,
-        "replies": 204,
+        "views": 65,
+        "likes": 23,
+        "replies": 213,
         "reposts": 0,
         "quotes": 0,
         "shares": 0
       },
-      "views": 64,
-      "engagement": 226,
-      "per_1k": 3531.25,
+      "views": 65,
+      "engagement": 236,
+      "per_1k": 3630.77,
       "rateReliable": true,
       "basis": "per_1k"
     },
@@ -72,8 +72,8 @@
       "pillar": "early",
       "kind": "thread",
       "isThread": true,
-      "parts": 160,
-      "parts_measured": 160,
+      "parts": 168,
+      "parts_measured": 168,
       "in_posted_log": true,
       "text": "Nobody warns you that early sales feel like asking for a favour.",
       "accounts": [
@@ -83,14 +83,14 @@
       "metrics": {
         "views": 87,
         "likes": 2,
-        "replies": 160,
+        "replies": 168,
         "reposts": 0,
         "quotes": 0,
         "shares": 0
       },
       "views": 87,
-      "engagement": 162,
-      "per_1k": 1862.07,
+      "engagement": 170,
+      "per_1k": 1954.02,
       "rateReliable": true,
       "basis": "per_1k"
     },
@@ -153,8 +153,8 @@
       "pillar": "community",
       "kind": "thread",
       "isThread": true,
-      "parts": 15,
-      "parts_measured": 15,
+      "parts": 5,
+      "parts_measured": 5,
       "in_posted_log": true,
       "text": "Ten things at ten percent effort leaves you with nothing anyone outside would notice.",
       "accounts": [
@@ -162,16 +162,16 @@
       ],
       "permalink": "https://www.threads.com/@markusreidgt/post/DcqykjCm4Jw",
       "metrics": {
-        "views": 320,
+        "views": 299,
         "likes": 2,
         "replies": 39,
         "reposts": 0,
         "quotes": 0,
         "shares": 0
       },
-      "views": 320,
+      "views": 299,
       "engagement": 41,
-      "per_1k": 128.13,
+      "per_1k": 137.12,
       "rateReliable": true,
       "basis": "per_1k"
     },
@@ -317,8 +317,8 @@
       "pillar": "community",
       "kind": "permission",
       "isThread": true,
-      "parts": 177,
-      "parts_measured": 177,
+      "parts": 185,
+      "parts_measured": 185,
       "in_posted_log": true,
       "text": "If you are building something and nobody is engaging yet:\n\nthat is the normal part. It is not evidence about you or about the thing.\n\nThe people who make it are mostly just the ones still there in month six.\n\nWhat is the smallest thing that",
       "accounts": [
@@ -326,16 +326,16 @@
       ],
       "permalink": "https://www.threads.com/@markusreidgt/post/Dc3nOEmoH6m",
       "metrics": {
-        "views": 64,
-        "likes": 22,
-        "replies": 204,
+        "views": 65,
+        "likes": 23,
+        "replies": 213,
         "reposts": 0,
         "quotes": 0,
         "shares": 0
       },
-      "views": 64,
-      "engagement": 226,
-      "per_1k": 3531.25,
+      "views": 65,
+      "engagement": 236,
+      "per_1k": 3630.77,
       "rateReliable": true,
       "basis": "per_1k"
     },
@@ -344,8 +344,8 @@
       "pillar": "early",
       "kind": "thread",
       "isThread": true,
-      "parts": 160,
-      "parts_measured": 160,
+      "parts": 168,
+      "parts_measured": 168,
       "in_posted_log": true,
       "text": "Nobody warns you that early sales feel like asking for a favour.",
       "accounts": [
@@ -355,14 +355,14 @@
       "metrics": {
         "views": 87,
         "likes": 2,
-        "replies": 160,
+        "replies": 168,
         "reposts": 0,
         "quotes": 0,
         "shares": 0
       },
       "views": 87,
-      "engagement": 162,
-      "per_1k": 1862.07,
+      "engagement": 170,
+      "per_1k": 1954.02,
       "rateReliable": true,
       "basis": "per_1k"
     },
@@ -425,8 +425,8 @@
       "pillar": "community",
       "kind": "thread",
       "isThread": true,
-      "parts": 15,
-      "parts_measured": 15,
+      "parts": 5,
+      "parts_measured": 5,
       "in_posted_log": true,
       "text": "Ten things at ten percent effort leaves you with nothing anyone outside would notice.",
       "accounts": [
@@ -434,16 +434,16 @@
       ],
       "permalink": "https://www.threads.com/@markusreidgt/post/DcqykjCm4Jw",
       "metrics": {
-        "views": 320,
+        "views": 299,
         "likes": 2,
         "replies": 39,
         "reposts": 0,
         "quotes": 0,
         "shares": 0
       },
-      "views": 320,
+      "views": 299,
       "engagement": 41,
-      "per_1k": 128.13,
+      "per_1k": 137.12,
       "rateReliable": true,
       "basis": "per_1k"
     },
@@ -1433,16 +1433,16 @@
       ],
       "permalink": "https://www.threads.com/@markusreidgt/post/DctplpdFJTg",
       "metrics": {
-        "views": 322,
+        "views": 323,
         "likes": 0,
         "replies": 5,
         "reposts": 0,
         "quotes": 0,
         "shares": 0
       },
-      "views": 322,
+      "views": 323,
       "engagement": 5,
-      "per_1k": 15.53,
+      "per_1k": 15.48,
       "rateReliable": true,
       "basis": "per_1k"
     },
@@ -1478,8 +1478,8 @@
       "pillar": "systems",
       "kind": "thread",
       "isThread": true,
-      "parts": 6,
-      "parts_measured": 6,
+      "parts": 1,
+      "parts_measured": 1,
       "in_posted_log": true,
       "text": "Nobody is impressed by AI on its own anymore.",
       "accounts": [
@@ -1487,16 +1487,16 @@
       ],
       "permalink": "https://www.threads.com/@markusreidgt/post/DcyextwEfBI",
       "metrics": {
-        "views": 420,
+        "views": 411,
         "likes": 0,
         "replies": 6,
         "reposts": 0,
         "quotes": 0,
         "shares": 0
       },
-      "views": 420,
+      "views": 411,
       "engagement": 6,
-      "per_1k": 14.29,
+      "per_1k": 14.6,
       "rateReliable": true,
       "basis": "per_1k"
     },
@@ -1541,16 +1541,16 @@
       ],
       "permalink": "https://www.threads.com/@markusreidgt/post/DcnX9jnGzO9",
       "metrics": {
-        "views": 386,
+        "views": 387,
         "likes": 0,
         "replies": 5,
         "reposts": 0,
         "quotes": 0,
         "shares": 0
       },
-      "views": 386,
+      "views": 387,
       "engagement": 5,
-      "per_1k": 12.95,
+      "per_1k": 12.92,
       "rateReliable": true,
       "basis": "per_1k"
     },
@@ -1586,8 +1586,8 @@
       "pillar": "systems",
       "kind": "thread",
       "isThread": true,
-      "parts": 2,
-      "parts_measured": 2,
+      "parts": 1,
+      "parts_measured": 1,
       "in_posted_log": true,
       "text": "Building got cheap. Trust did not.",
       "accounts": [
@@ -1865,14 +1865,14 @@
       ],
       "permalink": "https://www.threads.com/@markusreidgt/post/Dc6zB3gGFPn",
       "metrics": {
-        "views": 80,
+        "views": 84,
         "likes": 0,
         "replies": 0,
         "reposts": 0,
         "quotes": 0,
         "shares": 0
       },
-      "views": 80,
+      "views": 84,
       "engagement": 0,
       "per_1k": 0,
       "rateReliable": true,
@@ -1892,14 +1892,14 @@
       ],
       "permalink": "https://www.threads.com/@markusreidgt/post/DcpPcsXlHc-",
       "metrics": {
-        "views": 28,
+        "views": 29,
         "likes": 0,
         "replies": 0,
         "reposts": 0,
         "quotes": 0,
         "shares": 0
       },
-      "views": 28,
+      "views": 29,
       "engagement": 0,
       "per_1k": 0,
       "rateReliable": true,
@@ -4552,6 +4552,33 @@
       "basis": "total"
     },
     {
+      "at": "2026-09-04T16:22:50+0000",
+      "pillar": "community",
+      "kind": "building",
+      "isThread": false,
+      "parts": 1,
+      "parts_measured": 1,
+      "in_posted_log": true,
+      "text": "The folder of unfinished projects is data, not a character flaw.\n\nThey have a shape. Mine were all things that needed me to show up daily forever.\n\nPick the thing whose ongoing cost matches a week you actually have.\n\nWhat shape are the ones",
+      "accounts": [
+        "Markus"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/Dc3zlZ2Fcvb",
+      "metrics": {
+        "views": 10,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 10,
+      "engagement": 0,
+      "per_1k": 0,
+      "rateReliable": false,
+      "basis": "total"
+    },
+    {
       "at": "2026-08-29T00:05:53+0000",
       "pillar": "systems",
       "kind": "ai",
@@ -4699,33 +4726,6 @@
         "Markus"
       ],
       "permalink": "https://www.threads.com/@markusreidgt/post/Dc_2jZZIA3Z",
-      "metrics": {
-        "views": 9,
-        "likes": 0,
-        "replies": 0,
-        "reposts": 0,
-        "quotes": 0,
-        "shares": 0
-      },
-      "views": 9,
-      "engagement": 0,
-      "per_1k": 0,
-      "rateReliable": false,
-      "basis": "total"
-    },
-    {
-      "at": "2026-09-04T16:22:50+0000",
-      "pillar": "community",
-      "kind": "building",
-      "isThread": false,
-      "parts": 1,
-      "parts_measured": 1,
-      "in_posted_log": true,
-      "text": "The folder of unfinished projects is data, not a character flaw.\n\nThey have a shape. Mine were all things that needed me to show up daily forever.\n\nPick the thing whose ongoing cost matches a week you actually have.\n\nWhat shape are the ones",
-      "accounts": [
-        "Markus"
-      ],
-      "permalink": "https://www.threads.com/@markusreidgt/post/Dc3zlZ2Fcvb",
       "metrics": {
         "views": 9,
         "likes": 0,
@@ -6091,6 +6091,33 @@
       "basis": "total"
     },
     {
+      "at": "2026-09-01T01:23:02+0000",
+      "pillar": "systems",
+      "kind": "ai",
+      "isThread": false,
+      "parts": 1,
+      "parts_measured": 1,
+      "in_posted_log": true,
+      "text": "Building got cheap. Trust did not.\n\nWhich means the hard part is further along than it used to be, and most people are still optimising the easy part.\n\nThe work that used to be optional is now the whole job.\n\nWhat part of your product break",
+      "accounts": [
+        "Markus"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/DcueOeZnby6",
+      "metrics": {
+        "views": 3,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 3,
+      "engagement": 0,
+      "per_1k": 0,
+      "rateReliable": false,
+      "basis": "total"
+    },
+    {
       "at": "2026-08-31T22:45:09+0000",
       "pillar": "community",
       "kind": "tampa",
@@ -6400,33 +6427,6 @@
         "Markus"
       ],
       "permalink": "https://www.threads.com/@markusreidgt/post/Dcwkp_JklpE",
-      "metrics": {
-        "views": 2,
-        "likes": 0,
-        "replies": 0,
-        "reposts": 0,
-        "quotes": 0,
-        "shares": 0
-      },
-      "views": 2,
-      "engagement": 0,
-      "per_1k": 0,
-      "rateReliable": false,
-      "basis": "total"
-    },
-    {
-      "at": "2026-09-01T01:23:02+0000",
-      "pillar": "systems",
-      "kind": "ai",
-      "isThread": false,
-      "parts": 1,
-      "parts_measured": 1,
-      "in_posted_log": true,
-      "text": "Building got cheap. Trust did not.\n\nWhich means the hard part is further along than it used to be, and most people are still optimising the easy part.\n\nThe work that used to be optional is now the whole job.\n\nWhat part of your product break",
-      "accounts": [
-        "Markus"
-      ],
-      "permalink": "https://www.threads.com/@markusreidgt/post/DcueOeZnby6",
       "metrics": {
         "views": 2,
         "likes": 0,
@@ -7113,18 +7113,18 @@
     {
       "key": "early",
       "posts": 27,
-      "engagement": 244,
-      "avg_engagement": 9.04,
+      "engagement": 252,
+      "avg_engagement": 9.33,
       "views": 521,
-      "avg_per_1k": 385.59
+      "avg_per_1k": 403.98
     },
     {
       "key": "community",
       "posts": 56,
-      "engagement": 408,
-      "avg_engagement": 7.29,
-      "views": 3163,
-      "avg_per_1k": 290.32
+      "engagement": 418,
+      "avg_engagement": 7.46,
+      "views": 3144,
+      "avg_per_1k": 296.71
     },
     {
       "key": "authority",
@@ -7155,8 +7155,8 @@
       "posts": 45,
       "engagement": 95,
       "avg_engagement": 2.11,
-      "views": 4991,
-      "avg_per_1k": 24.47
+      "views": 4987,
+      "avg_per_1k": 24.49
     },
     {
       "key": "bi",
@@ -7171,8 +7171,8 @@
       "posts": 18,
       "engagement": 41,
       "avg_engagement": 2.28,
-      "views": 2031,
-      "avg_per_1k": 19.07
+      "views": 2032,
+      "avg_per_1k": 19.06
     },
     {
       "key": "constraint",
@@ -7227,10 +7227,10 @@
     {
       "key": "permission",
       "posts": 2,
-      "engagement": 226,
-      "avg_engagement": 113,
-      "views": 64,
-      "avg_per_1k": 3531.25
+      "engagement": 236,
+      "avg_engagement": 118,
+      "views": 65,
+      "avg_per_1k": 3630.77
     },
     {
       "key": "building",
@@ -7243,10 +7243,10 @@
     {
       "key": "thread",
       "posts": 67,
-      "engagement": 528,
-      "avg_engagement": 7.88,
-      "views": 11447,
-      "avg_per_1k": 84.58
+      "engagement": 536,
+      "avg_engagement": 8,
+      "views": 11419,
+      "avg_per_1k": 86.88
     },
     {
       "key": "unknown",
@@ -7285,7 +7285,7 @@
       "posts": 25,
       "engagement": 2,
       "avg_engagement": 0.08,
-      "views": 54,
+      "views": 55,
       "avg_per_1k": 0
     },
     {
@@ -7293,7 +7293,7 @@
       "posts": 8,
       "engagement": 0,
       "avg_engagement": 0,
-      "views": 154,
+      "views": 158,
       "avg_per_1k": 0
     },
     {
@@ -7629,17 +7629,17 @@
     {
       "key": "thread",
       "posts": 68,
-      "engagement": 754,
-      "avg_engagement": 11.09,
-      "views": 11511,
-      "avg_per_1k": 161.17
+      "engagement": 772,
+      "avg_engagement": 11.35,
+      "views": 11484,
+      "avg_per_1k": 165.63
     },
     {
       "key": "single",
       "posts": 185,
       "engagement": 160,
       "avg_engagement": 0.86,
-      "views": 5507,
+      "views": 5512,
       "avg_per_1k": 26.25
     }
   ],
