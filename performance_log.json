@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-26T10:08:16.347926Z",
+  "updated": "2026-09-27T10:47:53.673438Z",
   "count": 150,
   "posts": [
     {
@@ -495,72 +495,6 @@
         "engagement": 0
       },
       "engagement": 2,
-      "_ig_attempted": true
-    },
-    {
-      "sig": "prodsoon:Unit Economics Cockpit",
-      "layout": "prodsoon",
-      "file": "creatives/gt_auto_20260814_170108.jpg",
-      "is_reel": false,
-      "at": "2026-08-14T17:01:15.139566Z",
-      "caption": "Coming soon to the Growth Terminal store: Unit Economics Cockpit.\n\nCAC, LTV and payback in one view, so you know if grow",
-      "permalink": "https://www.instagram.com/p/DcBzTaRDaPt/",
-      "ig": {
-        "likes": 1,
-        "comments": 1,
-        "saved": 0,
-        "shares": 0,
-        "reach": 0,
-        "views": 0,
-        "permalink": "https://www.instagram.com/p/DcBzTaRDaPt/",
-        "insights_ok": false,
-        "insights_metrics": "",
-        "own_comments": 1,
-        "comments_external": 0,
-        "engagement": 1
-      },
-      "fb": {
-        "reactions": 0,
-        "comments": 0,
-        "shares": 0,
-        "reach": 0,
-        "reach_metric": "",
-        "engagement": 0
-      },
-      "engagement": 1,
-      "_ig_attempted": true
-    },
-    {
-      "sig": "prodclaim:funnel:Stop guessing which fu",
-      "layout": "prodclaim",
-      "file": "creatives/gt_auto_20260815_010113.jpg",
-      "is_reel": false,
-      "at": "2026-08-15T01:01:20.251972Z",
-      "caption": "Your funnel has one step leaking more than the rest. The Funnel & Conversion Tracker finds it, tells you what fixing it ",
-      "permalink": "https://www.instagram.com/p/DcCqPp5AQho/",
-      "ig": {
-        "likes": 1,
-        "comments": 1,
-        "saved": 0,
-        "shares": 0,
-        "reach": 0,
-        "views": 0,
-        "permalink": "https://www.instagram.com/p/DcCqPp5AQho/",
-        "insights_ok": false,
-        "insights_metrics": "",
-        "own_comments": 1,
-        "comments_external": 0,
-        "engagement": 1
-      },
-      "fb": {
-        "reactions": 0,
-        "comments": 0,
-        "shares": 0,
-        "reach": 0,
-        "reach_metric": "",
-        "engagement": 0
-      },
-      "engagement": 1,
       "_ig_attempted": true
     },
     {
@@ -1353,72 +1287,6 @@
         "engagement": 0
       },
       "engagement": 1,
-      "_ig_attempted": true
-    },
-    {
-      "sig": "reelcard:Retention",
-      "layout": "reel:card",
-      "file": "creatives/gt_reel_20260814_210104.jpg",
-      "is_reel": true,
-      "at": "2026-08-14T21:01:32.183841Z",
-      "caption": "This is what a Growth Terminal diagnosis looks like, one constraint, named, priced, and verified against real revenue. H",
-      "permalink": "https://www.instagram.com/reel/DcCO490lCC3/",
-      "ig": {
-        "likes": 0,
-        "comments": 1,
-        "saved": 0,
-        "shares": 0,
-        "reach": 0,
-        "views": 0,
-        "permalink": "https://www.instagram.com/reel/DcCO490lCC3/",
-        "insights_ok": false,
-        "insights_metrics": "",
-        "own_comments": 1,
-        "comments_external": 0,
-        "engagement": 0
-      },
-      "fb": {
-        "reactions": 0,
-        "comments": 0,
-        "shares": 0,
-        "reach": 0,
-        "reach_metric": "",
-        "engagement": 0
-      },
-      "engagement": 0,
-      "_ig_attempted": true
-    },
-    {
-      "sig": "reelfeat:We name the one constrai",
-      "layout": "reel:feature",
-      "file": "creatives/gt_reel_20260815_130120.jpg",
-      "is_reel": true,
-      "at": "2026-08-15T13:03:05.112865Z",
-      "caption": "We find the one constraint capping your revenue, price the fix, and grade every call against real revenue. Diagnosis, no",
-      "permalink": "https://www.instagram.com/reel/DcD82R3gaep/",
-      "ig": {
-        "likes": 0,
-        "comments": 1,
-        "saved": 0,
-        "shares": 0,
-        "reach": 0,
-        "views": 0,
-        "permalink": "https://www.instagram.com/reel/DcD82R3gaep/",
-        "insights_ok": false,
-        "insights_metrics": "",
-        "own_comments": 1,
-        "comments_external": 0,
-        "engagement": 0
-      },
-      "fb": {
-        "reactions": 0,
-        "comments": 0,
-        "shares": 0,
-        "reach": 0,
-        "reach_metric": "",
-        "engagement": 0
-      },
-      "engagement": 0,
       "_ig_attempted": true
     },
     {
@@ -4911,6 +4779,138 @@
       },
       "engagement": 0,
       "_ig_attempted": true
+    },
+    {
+      "sig": "queue:ad03-who-owns-it",
+      "layout": "statement",
+      "file": "creatives/gt_ad_20260907_03_who-owns-it.jpg",
+      "is_reel": false,
+      "at": "2026-09-26T13:01:39.998833Z",
+      "caption": "A priority with no owner is a conversation.\n\nThe decision becomes work with a name against it, a state, and an approval ",
+      "permalink": "https://www.instagram.com/p/DdwGEWvGFqU/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "views": 0,
+        "permalink": "https://www.instagram.com/p/DdwGEWvGFqU/",
+        "insights_ok": false,
+        "insights_metrics": "",
+        "own_comments": 1,
+        "comments_external": 0,
+        "engagement": 0
+      },
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "reach_metric": "",
+        "engagement": 0
+      },
+      "engagement": 0,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "queue:ad06-already-paid",
+      "layout": "statement",
+      "file": "creatives/gt_ad_20260907_06_already-paid.jpg",
+      "is_reel": false,
+      "at": "2026-09-26T17:01:20.340743Z",
+      "caption": "Last quarter's guess was not free. It cost you a quarter.\n\nGrowth Terminal names one constraint and attaches a dollar ra",
+      "permalink": "https://www.instagram.com/p/DdwhfwTGE08/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "views": 0,
+        "permalink": "https://www.instagram.com/p/DdwhfwTGE08/",
+        "insights_ok": false,
+        "insights_metrics": "",
+        "own_comments": 1,
+        "comments_external": 0,
+        "engagement": 0
+      },
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "reach_metric": "",
+        "engagement": 0
+      },
+      "engagement": 0,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "queue:ad04-decision-stays",
+      "layout": "statement",
+      "file": "creatives/gt_ad_20260907_04_decision-stays.jpg",
+      "is_reel": false,
+      "at": "2026-09-26T21:01:22.484254Z",
+      "caption": "Every call your team made, still where you left it, with the evidence and the severity attached.\n\nIncluding the runs tha",
+      "permalink": "https://www.instagram.com/p/Ddw891mks-w/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "views": 0,
+        "permalink": "https://www.instagram.com/p/Ddw891mks-w/",
+        "insights_ok": false,
+        "insights_metrics": "",
+        "own_comments": 1,
+        "comments_external": 0,
+        "engagement": 0
+      },
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "reach_metric": "",
+        "engagement": 0
+      },
+      "engagement": 0,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "queue:ad11-wrong-column",
+      "layout": "statement",
+      "file": "creatives/gt_ad_20260907_11_wrong-column.jpg",
+      "is_reel": false,
+      "at": "2026-09-27T01:01:07.925136Z",
+      "caption": "A chart drawn from the wrong column looks exactly like a chart drawn from the right one. That is what makes it expensive",
+      "permalink": "https://www.instagram.com/p/DdxYZ10lzno/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "views": 0,
+        "permalink": "https://www.instagram.com/p/DdxYZ10lzno/",
+        "insights_ok": false,
+        "insights_metrics": "",
+        "own_comments": 1,
+        "comments_external": 0,
+        "engagement": 0
+      },
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "reach_metric": "",
+        "engagement": 0
+      },
+      "engagement": 0,
+      "_ig_attempted": true
     }
   ],
   "by_format": [
@@ -4956,9 +4956,9 @@
     },
     {
       "layout": "prodclaim",
-      "posts": 7,
-      "engagement": 9,
-      "ig_engagement": 9,
+      "posts": 6,
+      "engagement": 8,
+      "ig_engagement": 8,
       "fb_engagement": 0,
       "avg_engagement": 1.3
     },
@@ -4972,11 +4972,11 @@
     },
     {
       "layout": "reel:feature",
-      "posts": 5,
+      "posts": 4,
       "engagement": 5,
       "ig_engagement": 2,
       "fb_engagement": 3,
-      "avg_engagement": 1.0
+      "avg_engagement": 1.2
     },
     {
       "layout": "carousel:plan",
@@ -5027,20 +5027,12 @@
       "avg_engagement": 0.7
     },
     {
-      "layout": "prodsoon",
-      "posts": 7,
-      "engagement": 3,
-      "ig_engagement": 3,
-      "fb_engagement": 0,
-      "avg_engagement": 0.4
-    },
-    {
       "layout": "reel:card",
-      "posts": 7,
+      "posts": 6,
       "engagement": 3,
       "ig_engagement": 3,
       "fb_engagement": 0,
-      "avg_engagement": 0.4
+      "avg_engagement": 0.5
     },
     {
       "layout": "prodshot",
@@ -5049,6 +5041,14 @@
       "ig_engagement": 3,
       "fb_engagement": 0,
       "avg_engagement": 0.4
+    },
+    {
+      "layout": "prodsoon",
+      "posts": 6,
+      "engagement": 2,
+      "ig_engagement": 2,
+      "fb_engagement": 0,
+      "avg_engagement": 0.3
     },
     {
       "layout": "trajectory",
@@ -5076,7 +5076,7 @@
     },
     {
       "layout": "statement",
-      "posts": 76,
+      "posts": 80,
       "engagement": 3,
       "ig_engagement": 3,
       "fb_engagement": 0,
@@ -5111,22 +5111,6 @@
     "ig_attempted": 150,
     "ig_succeeded": 148,
     "ig_errors": [
-      {
-        "media_id": "17895902379590676",
-        "message": "insights unavailable: (#10) Application does not have permission for this action"
-      },
-      {
-        "media_id": "18085351778228206",
-        "message": "insights unavailable: (#10) Application does not have permission for this action"
-      },
-      {
-        "media_id": "18112230325780836",
-        "message": "insights unavailable: (#10) Application does not have permission for this action"
-      },
-      {
-        "media_id": "18570618316068513",
-        "message": "insights unavailable: (#10) Application does not have permission for this action"
-      },
       {
         "media_id": "18102191573182545",
         "message": "insights unavailable: (#10) Application does not have permission for this action"
@@ -5190,27 +5174,27 @@
       {
         "media_id": "17966914095138669",
         "message": "insights unavailable: (#10) Application does not have permission for this action"
+      },
+      {
+        "media_id": "17917508895221066",
+        "message": "insights unavailable: (#10) Application does not have permission for this action"
+      },
+      {
+        "media_id": "18153269989504712",
+        "message": "insights unavailable: (#10) Application does not have permission for this action"
+      },
+      {
+        "media_id": "17861179431679116",
+        "message": "insights unavailable: (#10) Application does not have permission for this action"
+      },
+      {
+        "media_id": "18064159754737182",
+        "message": "insights unavailable: (#10) Application does not have permission for this action"
       }
     ],
     "ig_error_count": 150,
     "fb_succeeded": 148,
     "fb_errors": [
-      {
-        "post_id": "1087307654468135_122101234922536059",
-        "message": "reach unavailable: (#100) The value must be a valid insights metric"
-      },
-      {
-        "post_id": "1087307654468135_122101238690536059",
-        "message": "reach unavailable: (#100) The value must be a valid insights metric"
-      },
-      {
-        "post_id": "1087307654468135_122101244120536059",
-        "message": "reach unavailable: (#100) The value must be a valid insights metric"
-      },
-      {
-        "post_id": "1087307654468135_122101259492536059",
-        "message": "reach unavailable: (#100) The value must be a valid insights metric"
-      },
       {
         "post_id": "1087307654468135_122101263176536059",
         "message": "reach unavailable: (#100) The value must be a valid insights metric"
@@ -5273,6 +5257,22 @@
       },
       {
         "post_id": "1087307654468135_122101369340536059",
+        "message": "reach unavailable: (#100) The value must be a valid insights metric"
+      },
+      {
+        "post_id": "1087307654468135_122101384160536059",
+        "message": "reach unavailable: (#100) The value must be a valid insights metric"
+      },
+      {
+        "post_id": "1087307654468135_122101398824536059",
+        "message": "reach unavailable: (#100) The value must be a valid insights metric"
+      },
+      {
+        "post_id": "1087307654468135_122101402226536059",
+        "message": "reach unavailable: (#100) The value must be a valid insights metric"
+      },
+      {
+        "post_id": "1087307654468135_122101416002536059",
         "message": "reach unavailable: (#100) The value must be a valid insights metric"
       }
     ],
