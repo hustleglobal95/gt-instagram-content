@@ -40,6 +40,7 @@ concurrency:
 
 jobs:
   reply:
+    if: ${{ false }}   # PAUSED 2026-09-28: owner stopped all @markusreidgt posting. Delete this line to resume.
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
