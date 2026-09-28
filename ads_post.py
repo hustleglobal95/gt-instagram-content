@@ -22,6 +22,7 @@ import os, sys, json, datetime
 import requests
 
 import post_now as pn
+from price_guard import refuse_if_price
 
 META = "ads_meta.json"
 STATE = "ads_posted_log.json"
@@ -78,6 +79,7 @@ def main():
     fb_message = (meta.get("caption") or "").rstrip()
     if pn.FB_INCLUDE_HASHTAGS and meta.get("hashtags"):
         fb_message = fb_message + "\n\n" + meta["hashtags"]
+    refuse_if_price("ad", caption, fb_message, meta.get("first_comment"), meta.get("alt_text"))
 
     video_url = pn.raw_url(meta["video_file"])
     cover_url = pn.raw_url(meta["media_file"])

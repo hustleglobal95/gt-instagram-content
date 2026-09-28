@@ -21,7 +21,7 @@ concurrency:
 
 jobs:
   post-ad:
-    if: ${{ false }}   # PAUSED 2026-09-28: owner stopped all @markusreidgt posting. Delete this line to resume.
+    if: ${{ false }}   # PAUSED 2026-09-28: @markusreidgt posts studio content only. Delete this line only when this account's queue holds owner-approved studio posts.
     runs-on: ubuntu-latest
     permissions:
       contents: write

@@ -1,0 +1,6 @@
+{
+  "note": "The only approved source of a Threads post for @markusreidgt. Since 28 September 2026 the account posts about Growth Terminal as a design studio and nothing else. A post is added here only after the owner approves that exact text and image. Each post runs once: there is no loop, and an empty queue means the account stays quiet. text is 500 characters at most, no dashes, no emoji, and ends on growthterminal.io. media_file is optional and must be committed in the repo. Nothing here may also appear on @growthterminal.io. threads_bank.js is platform content and is no longer read by the publisher.",
+  "account": "markusreidgt",
+  "loop": false,
+  "posts": []
+}

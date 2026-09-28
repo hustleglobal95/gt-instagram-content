@@ -19,8 +19,9 @@ on:
     # minutes, which clears the 30 to 60 minute velocity window, so no post is
     # competing with the account's own previous post for early replies.
     #
-    # The bank supports it: 149 days of unique posts at six a day before the
-    # no-repeat log runs dry, no repeated post and no repeated opening line.
+    # Posts come only from threads_queue.json (approved by the owner, studio
+    # content only, no loop). These slots are an upper bound, not a promise:
+    # when the queue is empty the run refuses and nothing is published.
     #
     # Minutes are deliberately off :00, where every cron on the platform wakes
     # at once and GitHub starts dropping runs.
@@ -44,7 +45,7 @@ concurrency:
 
 jobs:
   post:
-    if: ${{ false }}   # PAUSED 2026-09-28: owner stopped all @markusreidgt posting. Delete this line to resume.
+    if: ${{ false }}   # PAUSED 2026-09-28: @markusreidgt posts studio content only. Delete this line only when this account's queue holds owner-approved studio posts.
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -53,7 +54,7 @@ jobs:
         with:
           node-version: "20"
 
-      - name: Publish next Threads post
+      - name: Publish the next approved Threads post
         env:
           THREADS_ACCOUNTS: ${{ secrets.THREADS_ACCOUNTS }}   # JSON array of {name,userId,token}
           GT_DRY_RUN: ${{ vars.GT_DRY_RUN }}                  # set to 1 to pause (generates + logs, no publish)
@@ -63,6 +64,6 @@ jobs:
         run: |
           git config user.name "gt-threads-bot"
           git config user.email "bot@growthterminal.local"
-          git add threads_posted_log.json threads_used_log.json 2>/dev/null || true
+          git add threads_posted_log.json threads_queue_used.json 2>/dev/null || true
           git diff --staged --quiet || git commit -m "threads: publish + log [skip ci]"
           git push

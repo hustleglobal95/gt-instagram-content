@@ -34,6 +34,7 @@ Secrets it reads (all prefixed GT_ so they never collide with other projects):
   GT_DRY_RUN          - default 1: keep 1 to test, set 0 to publish for real
 """
 import os, sys, json, time, datetime
+from price_guard import refuse_if_price
 import requests
 
 
@@ -207,6 +208,7 @@ def main():
 
     caption = build_caption(meta)
     comment = meta.get("first_comment") or (meta.get("hashtags") if TAGS_AS_COMMENT else "")
+    refuse_if_price("carousel", caption, comment, meta.get("caption"), meta.get("alt_text"))
     fb_message = (meta.get("caption") or "").rstrip()
     if FB_INCLUDE_HASHTAGS and meta.get("hashtags"):
         fb_message = fb_message + "\n\n" + meta["hashtags"]

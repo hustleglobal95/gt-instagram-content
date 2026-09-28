@@ -24,6 +24,7 @@ Secrets it reads (all prefixed GT_ so they never collide with other projects):
   GT_DRY_RUN          - default 1: keep 1 to test, set 0 to publish for real
 """
 import os, sys, json, time, datetime
+from price_guard import refuse_if_price
 import requests
 
 
@@ -183,6 +184,8 @@ def gate(meta):
         print("To publish something else, add it to the queue first.")
         sys.exit(1)
     print("  approved: %s is in %s" % (media, APPROVED_SOURCE))
+    refuse_if_price("post", meta.get("caption"), meta.get("hashtags"),
+                    meta.get("first_comment"), meta.get("alt_text"))
 
 
 def load_state():
