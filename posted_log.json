@@ -3238,5 +3238,23 @@
     ],
     "caption": "Look closer. Growth Terminal is a creative technology studio.\n\nWe design and build the websites, product stories and interactive pieces that make an offer clear enough to choose.\n\nAtelier Veyra, Meridian, Casa Nera and Nocturne are concept studies by the studio.\n\nStart a project at growthterminal.io",
     "sig": "studio:01-look-closer"
+  },
+  {
+    "media_id": "17985164397099584",
+    "at": "2026-09-29T21:04:52.848688Z",
+    "file": "studio/carousels/02-atelier-veyra-walkthrough/01.jpg",
+    "is_carousel": true,
+    "carousel": "02-atelier-veyra-walkthrough",
+    "slides": [
+      "studio/carousels/02-atelier-veyra-walkthrough/01.jpg",
+      "studio/carousels/02-atelier-veyra-walkthrough/02.jpg",
+      "studio/carousels/02-atelier-veyra-walkthrough/03.jpg",
+      "studio/carousels/02-atelier-veyra-walkthrough/04.jpg",
+      "studio/carousels/02-atelier-veyra-walkthrough/05.jpg",
+      "studio/carousels/02-atelier-veyra-walkthrough/06.jpg",
+      "studio/carousels/02-atelier-veyra-walkthrough/07.jpg"
+    ],
+    "caption": "Atelier Veyra: a studio headquarters you can walk from the street to the roof, before anyone books a visit.\n\nA fictional studio, built by Growth Terminal as an interactive concept. The live walkthrough runs in the browser: reception, materials library, design studio, rooftop.\n\ngrowthterminal.io/atelier-veyra",
+    "sig": "studio:02-atelier-veyra-walkthrough"
   }
 ]
