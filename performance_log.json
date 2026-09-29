@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-28T11:56:48.777538Z",
+  "updated": "2026-09-29T11:35:02.335525Z",
   "count": 150,
   "posts": [
     {
@@ -11,7 +11,7 @@
       "caption": "Find the one constraint holding your growth back.\n\nGrowth Terminal reads the report you already run, names the single co",
       "permalink": "https://www.instagram.com/p/DcZ1XouGjD4/",
       "ig": {
-        "likes": 14,
+        "likes": 11,
         "comments": 1,
         "saved": 0,
         "shares": 0,
@@ -22,7 +22,7 @@
         "insights_metrics": "",
         "own_comments": 1,
         "comments_external": 0,
-        "engagement": 14
+        "engagement": 11
       },
       "fb": {
         "reactions": 0,
@@ -32,7 +32,7 @@
         "reach_metric": "",
         "engagement": 0
       },
-      "engagement": 14,
+      "engagement": 11,
       "_ig_attempted": true
     },
     {
@@ -165,72 +165,6 @@
         "engagement": 0
       },
       "engagement": 3,
-      "_ig_attempted": true
-    },
-    {
-      "sig": "car:plan",
-      "layout": "carousel:plan",
-      "file": "creatives/gt_car_20260816153131_1.jpg",
-      "is_reel": false,
-      "at": "2026-08-16T15:31:38.415947Z",
-      "caption": "A diagnosis without sequencing is just an opinion.\n\nEvery Growth Terminal run ends in a 90 day plan: six phases in order",
-      "permalink": "https://www.instagram.com/p/DcGysz7llgj/",
-      "ig": {
-        "likes": 2,
-        "comments": 1,
-        "saved": 0,
-        "shares": 0,
-        "reach": 0,
-        "views": 0,
-        "permalink": "https://www.instagram.com/p/DcGysz7llgj/",
-        "insights_ok": false,
-        "insights_metrics": "",
-        "own_comments": 1,
-        "comments_external": 0,
-        "engagement": 2
-      },
-      "fb": {
-        "reactions": 0,
-        "comments": 0,
-        "shares": 0,
-        "reach": 0,
-        "reach_metric": "",
-        "engagement": 0
-      },
-      "engagement": 2,
-      "_ig_attempted": true
-    },
-    {
-      "sig": "con:THE PAIN AND THE CAUSE ARE NOT THE SAME ",
-      "layout": "contrast",
-      "file": "creatives/gt_auto_20260816_170109.jpg",
-      "is_reel": false,
-      "at": "2026-08-16T17:01:15.390914Z",
-      "caption": "The bottleneck is rarely where it hurts.\n\nChurn shows up at the end of the journey, but it usually starts at a weak acti",
-      "permalink": "https://www.instagram.com/p/DcG85Q0GuLC/",
-      "ig": {
-        "likes": 2,
-        "comments": 1,
-        "saved": 0,
-        "shares": 0,
-        "reach": 0,
-        "views": 0,
-        "permalink": "https://www.instagram.com/p/DcG85Q0GuLC/",
-        "insights_ok": false,
-        "insights_metrics": "",
-        "own_comments": 1,
-        "comments_external": 0,
-        "engagement": 2
-      },
-      "fb": {
-        "reactions": 0,
-        "comments": 0,
-        "shares": 0,
-        "reach": 0,
-        "reach_metric": "",
-        "engagement": 0
-      },
-      "engagement": 2,
       "_ig_attempted": true
     },
     {
@@ -1221,39 +1155,6 @@
         "engagement": 0
       },
       "engagement": 1,
-      "_ig_attempted": true
-    },
-    {
-      "sig": "prodsoon:Unit Economics Cockpit",
-      "layout": "prodsoon",
-      "file": "creatives/gt_auto_20260816_130121.jpg",
-      "is_reel": false,
-      "at": "2026-08-16T13:01:27.542854Z",
-      "caption": "Coming soon to the Growth Terminal store: Unit Economics Cockpit.\n\nCAC, LTV and payback in one view, so you know if grow",
-      "permalink": "https://www.instagram.com/p/DcGhc8wmqcL/",
-      "ig": {
-        "likes": 0,
-        "comments": 1,
-        "saved": 0,
-        "shares": 0,
-        "reach": 0,
-        "views": 0,
-        "permalink": "https://www.instagram.com/p/DcGhc8wmqcL/",
-        "insights_ok": false,
-        "insights_metrics": "",
-        "own_comments": 1,
-        "comments_external": 0,
-        "engagement": 0
-      },
-      "fb": {
-        "reactions": 0,
-        "comments": 0,
-        "shares": 0,
-        "reach": 0,
-        "reach_metric": "",
-        "engagement": 0
-      },
-      "engagement": 0,
       "_ig_attempted": true
     },
     {
@@ -4911,16 +4812,108 @@
       },
       "engagement": 0,
       "_ig_attempted": true
+    },
+    {
+      "sig": "queue:ad10-analysis-is-long",
+      "layout": "statement",
+      "file": "creatives/gt_ad_20260907_10_analysis-is-long.jpg",
+      "is_reel": false,
+      "at": "2026-09-28T13:01:34.023428Z",
+      "caption": "Nobody is confused about how to diagnose a growth problem. They are out of time to do it every quarter.\n\nGrowth Terminal",
+      "permalink": "https://www.instagram.com/p/Dd1PpX9mM0w/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "views": 0,
+        "permalink": "https://www.instagram.com/p/Dd1PpX9mM0w/",
+        "insights_ok": false,
+        "insights_metrics": "",
+        "own_comments": 1,
+        "comments_external": 0,
+        "engagement": 0
+      },
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "reach_metric": "",
+        "engagement": 0
+      },
+      "engagement": 0,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "queue:ad07-busy-statement",
+      "layout": "statement",
+      "file": "creatives/gt_ad_20260907_07_busy-is-not-blocked.jpg",
+      "is_reel": false,
+      "at": "2026-09-28T17:01:13.733399Z",
+      "caption": "Working harder on the wrong thing is still the wrong thing. Effort is not the constraint.\n\nGrowth Terminal names what is",
+      "permalink": "https://www.instagram.com/p/Dd1rEshnA3O/",
+      "ig": {
+        "likes": 0,
+        "comments": 1,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "views": 0,
+        "permalink": "https://www.instagram.com/p/Dd1rEshnA3O/",
+        "insights_ok": false,
+        "insights_metrics": "",
+        "own_comments": 1,
+        "comments_external": 0,
+        "engagement": 0
+      },
+      "fb": {
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reach": 0,
+        "reach_metric": "",
+        "engagement": 0
+      },
+      "engagement": 0,
+      "_ig_attempted": true
+    },
+    {
+      "sig": "studio:01-look-closer",
+      "layout": null,
+      "file": "studio/carousels/01-look-closer/01.jpg",
+      "is_reel": false,
+      "at": "2026-09-29T00:59:50.828086Z",
+      "caption": "Look closer. Growth Terminal is a creative technology studio.\n\nWe design and build the websites, product stories and int",
+      "permalink": "https://www.instagram.com/p/Dd2hz-HFF-R/",
+      "ig": {
+        "likes": 0,
+        "comments": 0,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "views": 0,
+        "permalink": "https://www.instagram.com/p/Dd2hz-HFF-R/",
+        "insights_ok": false,
+        "insights_metrics": "",
+        "own_comments": 0,
+        "comments_external": 0,
+        "engagement": 0
+      },
+      "fb": null,
+      "engagement": 0,
+      "_ig_attempted": true
     }
   ],
   "by_format": [
     {
       "layout": "feature",
       "posts": 5,
-      "engagement": 17,
-      "ig_engagement": 15,
+      "engagement": 14,
+      "ig_engagement": 12,
       "fb_engagement": 2,
-      "avg_engagement": 3.4
+      "avg_engagement": 2.8
     },
     {
       "layout": "edmanifesto",
@@ -4947,14 +4940,6 @@
       "avg_engagement": 2.0
     },
     {
-      "layout": "contrast",
-      "posts": 2,
-      "engagement": 3,
-      "ig_engagement": 3,
-      "fb_engagement": 0,
-      "avg_engagement": 1.5
-    },
-    {
       "layout": "reel:countup",
       "posts": 5,
       "engagement": 7,
@@ -4979,6 +4964,14 @@
       "avg_engagement": 1.2
     },
     {
+      "layout": "contrast",
+      "posts": 1,
+      "engagement": 1,
+      "ig_engagement": 1,
+      "fb_engagement": 0,
+      "avg_engagement": 1.0
+    },
+    {
       "layout": "editorial",
       "posts": 1,
       "engagement": 1,
@@ -4993,14 +4986,6 @@
       "ig_engagement": 0,
       "fb_engagement": 1,
       "avg_engagement": 1.0
-    },
-    {
-      "layout": "carousel:plan",
-      "posts": 4,
-      "engagement": 3,
-      "ig_engagement": 3,
-      "fb_engagement": 0,
-      "avg_engagement": 0.8
     },
     {
       "layout": "carousel:twelve",
@@ -5036,9 +5021,17 @@
     },
     {
       "layout": "prodsoon",
-      "posts": 6,
+      "posts": 5,
       "engagement": 2,
       "ig_engagement": 2,
+      "fb_engagement": 0,
+      "avg_engagement": 0.4
+    },
+    {
+      "layout": "carousel:plan",
+      "posts": 3,
+      "engagement": 1,
+      "ig_engagement": 1,
       "fb_engagement": 0,
       "avg_engagement": 0.3
     },
@@ -5068,7 +5061,7 @@
     },
     {
       "layout": "statement",
-      "posts": 84,
+      "posts": 86,
       "engagement": 3,
       "ig_engagement": 3,
       "fb_engagement": 0,
@@ -5097,24 +5090,20 @@
       "ig_engagement": 0,
       "fb_engagement": 0,
       "avg_engagement": 0.0
+    },
+    {
+      "layout": "unknown",
+      "posts": 1,
+      "engagement": 0,
+      "ig_engagement": 0,
+      "fb_engagement": 0,
+      "avg_engagement": 0.0
     }
   ],
   "collection": {
     "ig_attempted": 150,
     "ig_succeeded": 148,
     "ig_errors": [
-      {
-        "media_id": "17949120447256990",
-        "message": "insights unavailable: (#10) Application does not have permission for this action"
-      },
-      {
-        "media_id": "18023301233853957",
-        "message": "insights unavailable: (#10) Application does not have permission for this action"
-      },
-      {
-        "media_id": "18134023525538283",
-        "message": "insights unavailable: (#10) Application does not have permission for this action"
-      },
       {
         "media_id": "18117991348925167",
         "message": "insights unavailable: (#10) Application does not have permission for this action"
@@ -5182,23 +5171,23 @@
       {
         "media_id": "18114149357063686",
         "message": "insights unavailable: (#10) Application does not have permission for this action"
+      },
+      {
+        "media_id": "18110528342022763",
+        "message": "insights unavailable: (#10) Application does not have permission for this action"
+      },
+      {
+        "media_id": "18108380396125749",
+        "message": "insights unavailable: (#10) Application does not have permission for this action"
+      },
+      {
+        "media_id": "18122917880496110",
+        "message": "insights unavailable: (#10) Application does not have permission for this action"
       }
     ],
     "ig_error_count": 150,
-    "fb_succeeded": 148,
+    "fb_succeeded": 147,
     "fb_errors": [
-      {
-        "post_id": "1087307654468135_122101294256536059",
-        "message": "reach unavailable: (#100) The value must be a valid insights metric"
-      },
-      {
-        "post_id": "1087307654468135_122101300226536059",
-        "message": "reach unavailable: (#100) The value must be a valid insights metric"
-      },
-      {
-        "post_id": "1087307654468135_122101301960536059",
-        "message": "reach unavailable: (#100) The value must be a valid insights metric"
-      },
       {
         "post_id": "1087307654468135_122101306850536059",
         "message": "reach unavailable: (#100) The value must be a valid insights metric"
@@ -5266,13 +5255,25 @@
       {
         "post_id": "1087307654468135_122101436714536059",
         "message": "reach unavailable: (#100) The value must be a valid insights metric"
+      },
+      {
+        "post_id": "1087307654468135_122101453532536059",
+        "message": "reach unavailable: (#100) The value must be a valid insights metric"
+      },
+      {
+        "post_id": "1087307654468135_122101457618536059",
+        "message": "reach unavailable: (#100) The value must be a valid insights metric"
+      },
+      {
+        "post_id": "1087307654468135_122101459880536059",
+        "message": "reach unavailable: (#100) The value must be a valid insights metric"
       }
     ],
-    "fb_error_count": 148,
+    "fb_error_count": 147,
     "ig_with_insights": 0,
     "ig_reach_total": 0,
     "fb_reach_total": 0,
     "fb_reach_metric": "",
-    "own_comments_excluded": 148
+    "own_comments_excluded": 147
   }
 }

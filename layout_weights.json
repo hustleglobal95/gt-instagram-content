@@ -2,27 +2,15 @@
   "active": false,
   "diagnostics": {
     "totalPosts": 150,
-    "totalEngagement": 69,
-    "igEngagement": 60,
+    "totalEngagement": 62,
+    "igEngagement": 53,
     "fbEngagement": 9,
-    "formats": 23,
+    "formats": 24,
     "formatsWithAnyEngagement": 17,
     "collectionHealth": {
       "ig_attempted": 150,
       "ig_succeeded": 148,
       "ig_errors": [
-        {
-          "media_id": "17949120447256990",
-          "message": "insights unavailable: (#10) Application does not have permission for this action"
-        },
-        {
-          "media_id": "18023301233853957",
-          "message": "insights unavailable: (#10) Application does not have permission for this action"
-        },
-        {
-          "media_id": "18134023525538283",
-          "message": "insights unavailable: (#10) Application does not have permission for this action"
-        },
         {
           "media_id": "18117991348925167",
           "message": "insights unavailable: (#10) Application does not have permission for this action"
@@ -90,23 +78,23 @@
         {
           "media_id": "18114149357063686",
           "message": "insights unavailable: (#10) Application does not have permission for this action"
+        },
+        {
+          "media_id": "18110528342022763",
+          "message": "insights unavailable: (#10) Application does not have permission for this action"
+        },
+        {
+          "media_id": "18108380396125749",
+          "message": "insights unavailable: (#10) Application does not have permission for this action"
+        },
+        {
+          "media_id": "18122917880496110",
+          "message": "insights unavailable: (#10) Application does not have permission for this action"
         }
       ],
       "ig_error_count": 150,
-      "fb_succeeded": 148,
+      "fb_succeeded": 147,
       "fb_errors": [
-        {
-          "post_id": "1087307654468135_122101294256536059",
-          "message": "reach unavailable: (#100) The value must be a valid insights metric"
-        },
-        {
-          "post_id": "1087307654468135_122101300226536059",
-          "message": "reach unavailable: (#100) The value must be a valid insights metric"
-        },
-        {
-          "post_id": "1087307654468135_122101301960536059",
-          "message": "reach unavailable: (#100) The value must be a valid insights metric"
-        },
         {
           "post_id": "1087307654468135_122101306850536059",
           "message": "reach unavailable: (#100) The value must be a valid insights metric"
@@ -174,18 +162,30 @@
         {
           "post_id": "1087307654468135_122101436714536059",
           "message": "reach unavailable: (#100) The value must be a valid insights metric"
+        },
+        {
+          "post_id": "1087307654468135_122101453532536059",
+          "message": "reach unavailable: (#100) The value must be a valid insights metric"
+        },
+        {
+          "post_id": "1087307654468135_122101457618536059",
+          "message": "reach unavailable: (#100) The value must be a valid insights metric"
+        },
+        {
+          "post_id": "1087307654468135_122101459880536059",
+          "message": "reach unavailable: (#100) The value must be a valid insights metric"
         }
       ],
-      "fb_error_count": 148,
+      "fb_error_count": 147,
       "ig_with_insights": 0,
       "ig_reach_total": 0,
       "fb_reach_total": 0,
       "fb_reach_metric": "",
-      "own_comments_excluded": 148
+      "own_comments_excluded": 147
     }
   },
-  "reason": "Only 69 total interactions across 150 posts. Under 100 the gaps between formats are noise, not ranking. The bottleneck here is distribution, not creative format, and reweighting the rotation would optimise against randomness.",
-  "evaluatedAt": "2026-09-28T11:56:53.125Z",
+  "reason": "Only 62 total interactions across 150 posts. Under 100 the gaps between formats are noise, not ranking. The bottleneck here is distribution, not creative format, and reweighting the rotation would optimise against randomness.",
+  "evaluatedAt": "2026-09-29T11:35:06.797Z",
   "gates": {
     "MIN_TOTAL_ENGAGEMENT": 100,
     "MIN_POSTS_PER_FORMAT": 8,
