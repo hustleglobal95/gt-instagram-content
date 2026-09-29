@@ -1,0 +1,277 @@
+{
+  "note": "The only source of a Growth Terminal studio carousel for @markusreidgt on Instagram. Every carousel here was approved by the owner on 29 September 2026. studio_carousel_post.py publishes the next unused one, once a day, in order. There is no loop: when the list is done the workflow posts nothing. No slide, caption or comment may show a price, and concept or image studies stay labelled as such.",
+  "account": "markusreidgt",
+  "loop": false,
+  "carousels": [
+    {
+      "id": "01-look-closer",
+      "dir": "studio/carousels/01-look-closer",
+      "slides": [
+        "01.jpg",
+        "02.jpg",
+        "03.jpg",
+        "04.jpg",
+        "05.jpg",
+        "06.jpg",
+        "07.jpg",
+        "08.jpg",
+        "09.jpg"
+      ],
+      "caption": "Look closer. Growth Terminal is a creative technology studio.\n\nWe design and build the websites, product stories and interactive pieces that make an offer clear enough to choose.\n\nAtelier Veyra, Meridian, Casa Nera and Nocturne are concept studies by the studio.\n\nStart a project at growthterminal.io"
+    },
+    {
+      "id": "02-atelier-veyra-walkthrough",
+      "dir": "studio/carousels/02-atelier-veyra-walkthrough",
+      "slides": [
+        "01.jpg",
+        "02.jpg",
+        "03.jpg",
+        "04.jpg",
+        "05.jpg",
+        "06.jpg",
+        "07.jpg"
+      ],
+      "caption": "Atelier Veyra: a studio headquarters you can walk from the street to the roof, before anyone books a visit.\n\nA fictional studio, built by Growth Terminal as an interactive concept. The live walkthrough runs in the browser: reception, materials library, design studio, rooftop.\n\ngrowthterminal.io/atelier-veyra"
+    },
+    {
+      "id": "03-product-storytelling",
+      "dir": "studio/carousels/03-product-storytelling",
+      "slides": [
+        "01.jpg",
+        "02.jpg",
+        "03.jpg",
+        "04.jpg",
+        "05.jpg",
+        "06.jpg"
+      ],
+      "caption": "Product storytelling: buyers understand how it is made, before they ask sales.\n\nFor products where the value is in the build: modular structures, furniture, equipment, materials. Meridian Pavilion is a Growth Terminal image study, not a working configurator.\n\ngrowthterminal.io/services"
+    },
+    {
+      "id": "04-casa-nera",
+      "dir": "studio/carousels/04-casa-nera",
+      "slides": [
+        "01.jpg",
+        "02.jpg",
+        "03.jpg",
+        "04.jpg",
+        "05.jpg",
+        "06.jpg"
+      ],
+      "caption": "Casa Nera: what a listing photo leaves out. Light, height, the sea.\n\nA Growth Terminal image study: a coastal house in late daylight, paired with the interior detail a listing usually skips.\n\ngrowthterminal.io/work"
+    },
+    {
+      "id": "05-one-team",
+      "dir": "studio/carousels/05-one-team",
+      "slides": [
+        "01.jpg",
+        "02.jpg",
+        "03.jpg",
+        "04.jpg",
+        "05.jpg"
+      ],
+      "caption": "One team from first sketch to launch.\n\nGrowth Terminal is a founder-led creative technology studio. Creative direction and front-end production sit together, so the experience you approve is the one visitors use.\n\ngrowthterminal.io/studio"
+    },
+    {
+      "id": "06-interactive-brand-experiences",
+      "dir": "studio/carousels/06-interactive-brand-experiences",
+      "slides": [
+        "01.jpg",
+        "02.jpg",
+        "03.jpg",
+        "04.jpg",
+        "05.jpg",
+        "06.jpg"
+      ],
+      "caption": "Interactive brand experiences: visitors explore at their own pace and reach the inquiry already convinced.\n\nFor studios, hospitality, residential and showrooms. Atelier Veyra is a Growth Terminal studio concept, not a client commission.\n\ngrowthterminal.io/services"
+    },
+    {
+      "id": "07-meridian-pavilion",
+      "dir": "studio/carousels/07-meridian-pavilion",
+      "slides": [
+        "01.jpg",
+        "02.jpg",
+        "03.jpg",
+        "04.jpg",
+        "05.jpg",
+        "06.jpg"
+      ],
+      "caption": "Meridian Pavilion: a modular pavilion shown standing on site, then taken apart into roof, frame, glazing and footings.\n\nA Growth Terminal image study, not a working configurator. The pairing is the brief for a product story.\n\ngrowthterminal.io/work"
+    },
+    {
+      "id": "08-most-launches-show-a-product",
+      "dir": "studio/carousels/08-most-launches-show-a-product",
+      "slides": [
+        "01.jpg",
+        "02.jpg",
+        "03.jpg",
+        "04.jpg",
+        "05.jpg",
+        "06.jpg"
+      ],
+      "caption": "Most launches show a product. Few help anyone understand it.\n\nGrowth Terminal designs and builds the websites, product stories and interactive pieces that make an offer clear enough to choose.\n\ngrowthterminal.io"
+    },
+    {
+      "id": "09-nocturne",
+      "dir": "studio/carousels/09-nocturne",
+      "slides": [
+        "01.jpg",
+        "02.jpg",
+        "03.jpg",
+        "04.jpg",
+        "05.jpg"
+      ],
+      "caption": "Nocturne: a city venue after dark, sold on atmosphere.\n\nA Growth Terminal image study, pairing the street with a warm interior, the moment a listing usually skips.\n\ngrowthterminal.io/work"
+    },
+    {
+      "id": "10-digital-launch-experiences",
+      "dir": "studio/carousels/10-digital-launch-experiences",
+      "slides": [
+        "01.jpg",
+        "02.jpg",
+        "03.jpg",
+        "04.jpg",
+        "05.jpg"
+      ],
+      "caption": "Digital launch experiences: one page that explains the new thing, shows it and asks for the next step.\n\nFor announcements with a date: product releases, property launches, new collections.\n\ngrowthterminal.io/services"
+    },
+    {
+      "id": "11-understand-explore-remember-choose",
+      "dir": "studio/carousels/11-understand-explore-remember-choose",
+      "slides": [
+        "01.jpg",
+        "02.jpg",
+        "03.jpg",
+        "04.jpg",
+        "05.jpg",
+        "06.jpg"
+      ],
+      "caption": "We make things buyers understand, explore, remember and choose.\n\nProduct stories, interactive brand experiences and digital launches, designed and built by one studio. All work shown is Growth Terminal studio concept and image studies.\n\ngrowthterminal.io/work"
+    },
+    {
+      "id": "12-explain-not-decorate",
+      "dir": "studio/carousels/12-explain-not-decorate",
+      "slides": [
+        "01.jpg",
+        "02.jpg",
+        "03.jpg",
+        "04.jpg",
+        "05.jpg",
+        "06.jpg",
+        "07.jpg"
+      ],
+      "caption": "Design, motion, 3D and code, chosen to explain the offer, not to decorate it.\n\nEvery Growth Terminal engagement is designed and built by the same team: creative direction, motion, 3D where it earns its place, and front-end code.\n\ngrowthterminal.io/services"
+    },
+    {
+      "id": "13-the-work-labelled-honestly",
+      "dir": "studio/carousels/13-the-work-labelled-honestly",
+      "slides": [
+        "01.jpg",
+        "02.jpg",
+        "03.jpg",
+        "04.jpg",
+        "05.jpg",
+        "06.jpg",
+        "07.jpg"
+      ],
+      "caption": "Good work explains itself. Great work gets explored.\n\nOne interactive concept you can use right now and three image studies. All are Growth Terminal studio work made to show what the formats can do. None are client commissions.\n\ngrowthterminal.io/work"
+    },
+    {
+      "id": "14-not-a-template",
+      "dir": "studio/carousels/14-not-a-template",
+      "slides": [
+        "01.jpg",
+        "02.jpg",
+        "03.jpg",
+        "04.jpg",
+        "05.jpg",
+        "06.jpg"
+      ],
+      "caption": "Not a template, a point of view. Built for the moment buyers decide.\n\nGrowth Terminal is a creative technology studio for product storytelling, interactive brand experiences and digital launches. Work shown is studio concept and image studies.\n\ngrowthterminal.io"
+    },
+    {
+      "id": "15-products-brands-launches",
+      "dir": "studio/carousels/15-products-brands-launches",
+      "slides": [
+        "01.jpg",
+        "02.jpg",
+        "03.jpg",
+        "04.jpg",
+        "05.jpg"
+      ],
+      "caption": "Products, brands, launches.\n\nProduct storytelling for products where the value is in the build. Interactive brand experiences for places that sell on feel. Launch pages for announcements with a date. Images are Growth Terminal image studies.\n\ngrowthterminal.io/services"
+    },
+    {
+      "id": "16-planned-in-from-the-start",
+      "dir": "studio/carousels/16-planned-in-from-the-start",
+      "slides": [
+        "01.jpg",
+        "02.jpg",
+        "03.jpg",
+        "04.jpg",
+        "05.jpg"
+      ],
+      "caption": "Responsive screens, accessibility and reduced motion, planned in from the start.\n\nAt Growth Terminal the people who design it also build it, so what you approve is what visitors use.\n\ngrowthterminal.io/studio"
+    },
+    {
+      "id": "17-from-exploring-to-inquiry",
+      "dir": "studio/carousels/17-from-exploring-to-inquiry",
+      "slides": [
+        "01.jpg",
+        "02.jpg",
+        "03.jpg",
+        "04.jpg",
+        "05.jpg",
+        "06.jpg"
+      ],
+      "caption": "A clear path from exploring to getting in touch.\n\nVisitors explore at their own pace and reach the inquiry already convinced. Inquiry, waitlist or booking is wired in and tested. Atelier Veyra is a Growth Terminal studio concept.\n\ngrowthterminal.io/services"
+    },
+    {
+      "id": "18-yours-after-handover",
+      "dir": "studio/carousels/18-yours-after-handover",
+      "slides": [
+        "01.jpg",
+        "02.jpg",
+        "03.jpg",
+        "04.jpg",
+        "05.jpg"
+      ],
+      "caption": "Yours after handover.\n\nGrowth Terminal builds sites your team can maintain, with a handover so you can update them after launch.\n\ngrowthterminal.io/studio"
+    },
+    {
+      "id": "19-film-3d-or-photography",
+      "dir": "studio/carousels/19-film-3d-or-photography",
+      "slides": [
+        "01.jpg",
+        "02.jpg",
+        "03.jpg",
+        "04.jpg",
+        "05.jpg"
+      ],
+      "caption": "Film, 3D or photography, chosen to fit what you already have.\n\nThe Atelier Veyra walkthrough uses film chapters. Meridian Pavilion uses a layered image study. Both are Growth Terminal studio work, not client commissions.\n\ngrowthterminal.io/work"
+    },
+    {
+      "id": "20-already-have-a-team",
+      "dir": "studio/carousels/20-already-have-a-team",
+      "slides": [
+        "01.jpg",
+        "02.jpg",
+        "03.jpg",
+        "04.jpg",
+        "05.jpg"
+      ],
+      "caption": "Already have a team? Tell us what is in place and where you need help.\n\nGrowth Terminal works for fewer handoffs and fewer surprises between the concept and the live site.\n\ngrowthterminal.io/studio"
+    },
+    {
+      "id": "21-how-a-project-starts",
+      "dir": "studio/carousels/21-how-a-project-starts",
+      "slides": [
+        "01.jpg",
+        "02.jpg",
+        "03.jpg",
+        "04.jpg",
+        "05.jpg"
+      ],
+      "caption": "How a project starts: you send the brief, we reply directly, we scope it together.\n\nA person from the Growth Terminal studio reads every inquiry. Format, media and schedule are agreed before any build starts.\n\ngrowthterminal.io/start-a-project"
+    }
+  ]
+}
