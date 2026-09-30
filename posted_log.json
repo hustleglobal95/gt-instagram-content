@@ -3256,5 +3256,22 @@
     ],
     "caption": "Atelier Veyra: a studio headquarters you can walk from the street to the roof, before anyone books a visit.\n\nA fictional studio, built by Growth Terminal as an interactive concept. The live walkthrough runs in the browser: reception, materials library, design studio, rooftop.\n\ngrowthterminal.io/atelier-veyra",
     "sig": "studio:02-atelier-veyra-walkthrough"
+  },
+  {
+    "media_id": "18116724724984992",
+    "at": "2026-09-30T21:02:15.024322Z",
+    "file": "studio/carousels/03-product-storytelling/01.jpg",
+    "is_carousel": true,
+    "carousel": "03-product-storytelling",
+    "slides": [
+      "studio/carousels/03-product-storytelling/01.jpg",
+      "studio/carousels/03-product-storytelling/02.jpg",
+      "studio/carousels/03-product-storytelling/03.jpg",
+      "studio/carousels/03-product-storytelling/04.jpg",
+      "studio/carousels/03-product-storytelling/05.jpg",
+      "studio/carousels/03-product-storytelling/06.jpg"
+    ],
+    "caption": "Product storytelling: buyers understand how it is made, before they ask sales.\n\nFor products where the value is in the build: modular structures, furniture, equipment, materials. Meridian Pavilion is a Growth Terminal image study, not a working configurator.\n\ngrowthterminal.io/services",
+    "sig": "studio:03-product-storytelling"
   }
 ]
