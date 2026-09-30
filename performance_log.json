@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-29T11:35:02.335525Z",
+  "updated": "2026-09-30T11:22:51.943861Z",
   "count": 150,
   "posts": [
     {
@@ -11,7 +11,7 @@
       "caption": "Find the one constraint holding your growth back.\n\nGrowth Terminal reads the report you already run, names the single co",
       "permalink": "https://www.instagram.com/p/DcZ1XouGjD4/",
       "ig": {
-        "likes": 11,
+        "likes": 12,
         "comments": 1,
         "saved": 0,
         "shares": 0,
@@ -22,7 +22,7 @@
         "insights_metrics": "",
         "own_comments": 1,
         "comments_external": 0,
-        "engagement": 11
+        "engagement": 12
       },
       "fb": {
         "reactions": 0,
@@ -32,7 +32,7 @@
         "reach_metric": "",
         "engagement": 0
       },
-      "engagement": 11,
+      "engagement": 12,
       "_ig_attempted": true
     },
     {
@@ -1155,39 +1155,6 @@
         "engagement": 0
       },
       "engagement": 1,
-      "_ig_attempted": true
-    },
-    {
-      "sig": "traj:224",
-      "layout": "trajectory",
-      "file": "creatives/gt_auto_20260816_210108.jpg",
-      "is_reel": false,
-      "at": "2026-08-16T21:01:13.258824Z",
-      "caption": "Everyone in growth makes confident calls. Almost no one checks them.\n\nGrowth Terminal logs every forecast and tracks it ",
-      "permalink": "https://www.instagram.com/p/DcHYWt-k1eb/",
-      "ig": {
-        "likes": 0,
-        "comments": 1,
-        "saved": 0,
-        "shares": 0,
-        "reach": 0,
-        "views": 0,
-        "permalink": "https://www.instagram.com/p/DcHYWt-k1eb/",
-        "insights_ok": false,
-        "insights_metrics": "",
-        "own_comments": 1,
-        "comments_external": 0,
-        "engagement": 0
-      },
-      "fb": {
-        "reactions": 0,
-        "comments": 0,
-        "shares": 0,
-        "reach": 0,
-        "reach_metric": "",
-        "engagement": 0
-      },
-      "engagement": 0,
       "_ig_attempted": true
     },
     {
@@ -4904,16 +4871,42 @@
       "fb": null,
       "engagement": 0,
       "_ig_attempted": true
+    },
+    {
+      "sig": "studio:02-atelier-veyra-walkthrough",
+      "layout": null,
+      "file": "studio/carousels/02-atelier-veyra-walkthrough/01.jpg",
+      "is_reel": false,
+      "at": "2026-09-29T21:04:52.848688Z",
+      "caption": "Atelier Veyra: a studio headquarters you can walk from the street to the roof, before anyone books a visit.\n\nA fictional",
+      "permalink": "https://www.instagram.com/p/Dd4rt5QlEMp/",
+      "ig": {
+        "likes": 0,
+        "comments": 0,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "views": 0,
+        "permalink": "https://www.instagram.com/p/Dd4rt5QlEMp/",
+        "insights_ok": false,
+        "insights_metrics": "",
+        "own_comments": 0,
+        "comments_external": 0,
+        "engagement": 0
+      },
+      "fb": null,
+      "engagement": 0,
+      "_ig_attempted": true
     }
   ],
   "by_format": [
     {
       "layout": "feature",
       "posts": 5,
-      "engagement": 14,
-      "ig_engagement": 12,
+      "engagement": 15,
+      "ig_engagement": 13,
       "fb_engagement": 2,
-      "avg_engagement": 2.8
+      "avg_engagement": 3.0
     },
     {
       "layout": "edmanifesto",
@@ -5036,14 +5029,6 @@
       "avg_engagement": 0.3
     },
     {
-      "layout": "trajectory",
-      "posts": 1,
-      "engagement": 0,
-      "ig_engagement": 0,
-      "fb_engagement": 0,
-      "avg_engagement": 0.0
-    },
-    {
       "layout": "annotated",
       "posts": 1,
       "engagement": 0,
@@ -5093,7 +5078,7 @@
     },
     {
       "layout": "unknown",
-      "posts": 1,
+      "posts": 2,
       "engagement": 0,
       "ig_engagement": 0,
       "fb_engagement": 0,
@@ -5104,10 +5089,6 @@
     "ig_attempted": 150,
     "ig_succeeded": 148,
     "ig_errors": [
-      {
-        "media_id": "18117991348925167",
-        "message": "insights unavailable: (#10) Application does not have permission for this action"
-      },
       {
         "media_id": "17898342933574123",
         "message": "insights unavailable: (#10) Application does not have permission for this action"
@@ -5183,15 +5164,15 @@
       {
         "media_id": "18122917880496110",
         "message": "insights unavailable: (#10) Application does not have permission for this action"
+      },
+      {
+        "media_id": "18126071398766221",
+        "message": "insights unavailable: (#10) Application does not have permission for this action"
       }
     ],
     "ig_error_count": 150,
-    "fb_succeeded": 147,
+    "fb_succeeded": 146,
     "fb_errors": [
-      {
-        "post_id": "1087307654468135_122101306850536059",
-        "message": "reach unavailable: (#100) The value must be a valid insights metric"
-      },
       {
         "post_id": "1087307654468135_122101316924536059",
         "message": "reach unavailable: (#100) The value must be a valid insights metric"
@@ -5267,13 +5248,17 @@
       {
         "post_id": "1087307654468135_122101459880536059",
         "message": "reach unavailable: (#100) The value must be a valid insights metric"
+      },
+      {
+        "post_id": "1087307654468135_122101466750536059",
+        "message": "reach unavailable: (#100) The value must be a valid insights metric"
       }
     ],
-    "fb_error_count": 147,
+    "fb_error_count": 146,
     "ig_with_insights": 0,
     "ig_reach_total": 0,
     "fb_reach_total": 0,
     "fb_reach_metric": "",
-    "own_comments_excluded": 147
+    "own_comments_excluded": 146
   }
 }
