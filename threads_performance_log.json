@@ -1,11 +1,11 @@
 {
-  "updated": "2026-09-29T12:54:33.369Z",
+  "updated": "2026-09-30T12:35:03.189Z",
   "count": 253,
   "ranking_basis": "per_1k",
   "min_views_for_rate": 25,
   "rate_eligible": 85,
   "reach": {
-    "views": 18310,
+    "views": 18314,
     "interactions": 948,
     "median_views": 12,
     "zero_interaction_posts": 153
@@ -24,16 +24,16 @@
     "outbound_reply_views": 25,
     "outbound_reply_interactions": 1,
     "outbound_replies_measured": 2,
-    "total_views_incl_replies": 18335,
-    "summed_views": 18310,
-    "platform_views": 5448,
-    "ratio": 3.365
+    "total_views_incl_replies": 18339,
+    "summed_views": 18314,
+    "platform_views": 4319,
+    "ratio": 4.246
   },
   "platform": {
     "Markus": {
-      "views": 5448,
-      "likes": 43,
-      "replies": 455,
+      "views": 4319,
+      "likes": 42,
+      "replies": 447,
       "reposts": 0,
       "quotes": 0,
       "followers_count": 33
@@ -1487,16 +1487,16 @@
       ],
       "permalink": "https://www.threads.com/@markusreidgt/post/DcyextwEfBI",
       "metrics": {
-        "views": 411,
+        "views": 412,
         "likes": 0,
         "replies": 6,
         "reposts": 0,
         "quotes": 0,
         "shares": 0
       },
-      "views": 411,
+      "views": 412,
       "engagement": 6,
-      "per_1k": 14.6,
+      "per_1k": 14.56,
       "rateReliable": true,
       "basis": "per_1k"
     },
@@ -1865,14 +1865,14 @@
       ],
       "permalink": "https://www.threads.com/@markusreidgt/post/Dc6zB3gGFPn",
       "metrics": {
-        "views": 97,
+        "views": 99,
         "likes": 0,
         "replies": 0,
         "reposts": 0,
         "quotes": 0,
         "shares": 0
       },
-      "views": 97,
+      "views": 99,
       "engagement": 0,
       "per_1k": 0,
       "rateReliable": true,
@@ -5362,6 +5362,33 @@
       "basis": "total"
     },
     {
+      "at": "2026-09-04T04:49:44+0000",
+      "pillar": "early",
+      "kind": "founders",
+      "isThread": false,
+      "parts": 1,
+      "parts_measured": 1,
+      "in_posted_log": true,
+      "text": "Interest is the metric that fooled me longest.\n\nPeople telling you it is a good idea costs them nothing. It is not a signal, it is politeness with a nice haircut.\n\nThe cheapest real signal is somebody asking when they can have it.",
+      "accounts": [
+        "Markus"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/Dc2kQ8REXAd",
+      "metrics": {
+        "views": 6,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 6,
+      "engagement": 0,
+      "per_1k": 0,
+      "rateReliable": false,
+      "basis": "total"
+    },
+    {
       "at": "2026-09-02T00:28:19+0000",
       "pillar": "systems",
       "kind": "offer",
@@ -5464,33 +5491,6 @@
         "shares": 0
       },
       "views": 6,
-      "engagement": 0,
-      "per_1k": 0,
-      "rateReliable": false,
-      "basis": "total"
-    },
-    {
-      "at": "2026-09-04T04:49:44+0000",
-      "pillar": "early",
-      "kind": "founders",
-      "isThread": false,
-      "parts": 1,
-      "parts_measured": 1,
-      "in_posted_log": true,
-      "text": "Interest is the metric that fooled me longest.\n\nPeople telling you it is a good idea costs them nothing. It is not a signal, it is politeness with a nice haircut.\n\nThe cheapest real signal is somebody asking when they can have it.",
-      "accounts": [
-        "Markus"
-      ],
-      "permalink": "https://www.threads.com/@markusreidgt/post/Dc2kQ8REXAd",
-      "metrics": {
-        "views": 5,
-        "likes": 0,
-        "replies": 0,
-        "reposts": 0,
-        "quotes": 0,
-        "shares": 0
-      },
-      "views": 5,
       "engagement": 0,
       "per_1k": 0,
       "rateReliable": false,
@@ -7155,7 +7155,7 @@
       "posts": 45,
       "engagement": 95,
       "avg_engagement": 2.11,
-      "views": 5001,
+      "views": 5004,
       "avg_per_1k": 24.48
     },
     {
@@ -7245,7 +7245,7 @@
       "posts": 67,
       "engagement": 544,
       "avg_engagement": 8.12,
-      "views": 11416,
+      "views": 11417,
       "avg_per_1k": 88.38
     },
     {
@@ -7293,7 +7293,7 @@
       "posts": 8,
       "engagement": 0,
       "avg_engagement": 0,
-      "views": 171,
+      "views": 173,
       "avg_per_1k": 0
     },
     {
@@ -7631,7 +7631,7 @@
       "posts": 68,
       "engagement": 788,
       "avg_engagement": 11.59,
-      "views": 11484,
+      "views": 11485,
       "avg_per_1k": 166.15
     },
     {
@@ -7639,7 +7639,7 @@
       "posts": 185,
       "engagement": 160,
       "avg_engagement": 0.86,
-      "views": 5525,
+      "views": 5527,
       "avg_per_1k": 26.25
     }
   ],
