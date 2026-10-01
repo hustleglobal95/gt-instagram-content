@@ -65,7 +65,10 @@ def main():
     if not str(nxt.get("campaign_goal", "")).strip():
         refuse(f"{nxt['id']} has no campaign_goal.")
 
-    slides = [f"{nxt['dir']}/{s}" for s in nxt["slides"]]
+    if nxt.get("media_files"):
+        slides = [str(s).lstrip("/") for s in nxt["media_files"]]
+    else:
+        slides = [f"{nxt['dir']}/{s}" for s in nxt["slides"]]
     if len(slides) < 3:
         refuse(f"{nxt['id']} has fewer than 3 slides; curated marketing campaigns require at least 3.")
     if not cp.MIN_PANELS <= len(slides) <= cp.MAX_PANELS:
