@@ -3273,5 +3273,22 @@
     ],
     "caption": "Product storytelling: buyers understand how it is made, before they ask sales.\n\nFor products where the value is in the build: modular structures, furniture, equipment, materials. Meridian Pavilion is a Growth Terminal image study, not a working configurator.\n\ngrowthterminal.io/services",
     "sig": "studio:03-product-storytelling"
+  },
+  {
+    "media_id": "17933222790406658",
+    "at": "2026-10-01T21:25:11.755009Z",
+    "file": "studio/carousels/04-casa-nera/01.jpg",
+    "is_carousel": true,
+    "carousel": "04-casa-nera",
+    "slides": [
+      "studio/carousels/04-casa-nera/01.jpg",
+      "studio/carousels/04-casa-nera/02.jpg",
+      "studio/carousels/04-casa-nera/03.jpg",
+      "studio/carousels/04-casa-nera/04.jpg",
+      "studio/carousels/04-casa-nera/05.jpg",
+      "studio/carousels/04-casa-nera/06.jpg"
+    ],
+    "caption": "Casa Nera: what a listing photo leaves out. Light, height, the sea.\n\nA Growth Terminal image study: a coastal house in late daylight, paired with the interior detail a listing usually skips.\n\ngrowthterminal.io/work",
+    "sig": "studio:04-casa-nera"
   }
 ]
