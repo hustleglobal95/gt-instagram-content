@@ -53,7 +53,21 @@ def main():
         print("Every approved carousel has been posted. There is no loop, so nothing runs today.")
         return 0
 
+    # Marketing quality gate. Future queue entries fail closed unless the owner
+    # has explicitly approved them and they are image-led. This prevents the
+    # autoposter from drifting back to generic text-card campaigns.
+    if nxt.get("approved") is not True:
+        refuse(f"{nxt.get('id', '<unknown>')} is not explicitly approved.")
+    if nxt.get("visual_mode") != "image-led":
+        refuse(f"{nxt['id']} is not image-led.")
+    if not str(nxt.get("source_project", "")).strip():
+        refuse(f"{nxt['id']} has no source_project.")
+    if not str(nxt.get("campaign_goal", "")).strip():
+        refuse(f"{nxt['id']} has no campaign_goal.")
+
     slides = [f"{nxt['dir']}/{s}" for s in nxt["slides"]]
+    if len(slides) < 3:
+        refuse(f"{nxt['id']} has fewer than 3 slides; curated marketing campaigns require at least 3.")
     if not cp.MIN_PANELS <= len(slides) <= cp.MAX_PANELS:
         refuse(f"{nxt['id']} has {len(slides)} slides; Instagram accepts {cp.MIN_PANELS} to {cp.MAX_PANELS}.")
     missing = [s for s in slides if not pathlib.Path(s).exists()]
