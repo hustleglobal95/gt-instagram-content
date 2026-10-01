@@ -1,11 +1,11 @@
 {
-  "updated": "2026-09-30T12:35:03.189Z",
+  "updated": "2026-10-01T13:13:16.286Z",
   "count": 253,
   "ranking_basis": "per_1k",
   "min_views_for_rate": 25,
   "rate_eligible": 85,
   "reach": {
-    "views": 18314,
+    "views": 18316,
     "interactions": 948,
     "median_views": 12,
     "zero_interaction_posts": 153
@@ -17,23 +17,23 @@
       "replies": 400
     },
     "content_units": 253,
-    "media_measured": 651,
-    "chain_parts_folded_in": 398,
+    "media_measured": 650,
+    "chain_parts_folded_in": 397,
     "posts_missing_from_local_log": 41,
-    "outbound_replies": 2,
+    "outbound_replies": 3,
     "outbound_reply_views": 25,
     "outbound_reply_interactions": 1,
-    "outbound_replies_measured": 2,
-    "total_views_incl_replies": 18339,
-    "summed_views": 18314,
-    "platform_views": 4319,
-    "ratio": 4.246
+    "outbound_replies_measured": 3,
+    "total_views_incl_replies": 18341,
+    "summed_views": 18316,
+    "platform_views": 3614,
+    "ratio": 5.075
   },
   "platform": {
     "Markus": {
-      "views": 4319,
-      "likes": 42,
-      "replies": 447,
+      "views": 3614,
+      "likes": 39,
+      "replies": 439,
       "reposts": 0,
       "quotes": 0,
       "followers_count": 33
@@ -1046,8 +1046,8 @@
       "pillar": "community",
       "kind": "thread",
       "isThread": true,
-      "parts": 6,
-      "parts_measured": 6,
+      "parts": 5,
+      "parts_measured": 5,
       "in_posted_log": true,
       "text": "The list of things that would be nice will happily consume the entire week.",
       "accounts": [
@@ -1055,16 +1055,16 @@
       ],
       "permalink": "https://www.threads.com/@markusreidgt/post/Dc5IZ-EnNUV",
       "metrics": {
-        "views": 183,
+        "views": 182,
         "likes": 0,
         "replies": 5,
         "reposts": 0,
         "quotes": 0,
         "shares": 0
       },
-      "views": 183,
+      "views": 182,
       "engagement": 5,
-      "per_1k": 27.32,
+      "per_1k": 27.47,
       "rateReliable": true,
       "basis": "per_1k"
     },
@@ -3350,16 +3350,16 @@
       ],
       "permalink": "https://www.threads.com/@markusreidgt/post/DcyrhGoHNLp",
       "metrics": {
-        "views": 11,
+        "views": 12,
         "likes": 1,
         "replies": 1,
         "reposts": 0,
         "quotes": 0,
         "shares": 0
       },
-      "views": 11,
+      "views": 12,
       "engagement": 2,
-      "per_1k": 181.82,
+      "per_1k": 166.67,
       "rateReliable": false,
       "basis": "total"
     },
@@ -4984,6 +4984,33 @@
       "basis": "total"
     },
     {
+      "at": "2026-08-31T19:08:44+0000",
+      "pillar": "community",
+      "kind": "building",
+      "isThread": false,
+      "parts": 1,
+      "parts_measured": 1,
+      "in_posted_log": true,
+      "text": "Ten things at ten percent effort leaves you with nothing anyone outside would notice.\n\nImprovement is not linear. Almost everything worth doing has a threshold, and under it the return is zero, not small.\n\nPick one and let the other nine si",
+      "accounts": [
+        "Markus"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/DctzY3cm9-m",
+      "metrics": {
+        "views": 8,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 8,
+      "engagement": 0,
+      "per_1k": 0,
+      "rateReliable": false,
+      "basis": "total"
+    },
+    {
       "at": "2026-08-19T02:49:08+0000",
       "pillar": "unknown",
       "kind": "unknown",
@@ -5158,33 +5185,6 @@
         "Markus"
       ],
       "permalink": "https://www.threads.com/@markusreidgt/post/Dcv9T90n7kJ",
-      "metrics": {
-        "views": 7,
-        "likes": 0,
-        "replies": 0,
-        "reposts": 0,
-        "quotes": 0,
-        "shares": 0
-      },
-      "views": 7,
-      "engagement": 0,
-      "per_1k": 0,
-      "rateReliable": false,
-      "basis": "total"
-    },
-    {
-      "at": "2026-08-31T19:08:44+0000",
-      "pillar": "community",
-      "kind": "building",
-      "isThread": false,
-      "parts": 1,
-      "parts_measured": 1,
-      "in_posted_log": true,
-      "text": "Ten things at ten percent effort leaves you with nothing anyone outside would notice.\n\nImprovement is not linear. Almost everything worth doing has a threshold, and under it the return is zero, not small.\n\nPick one and let the other nine si",
-      "accounts": [
-        "Markus"
-      ],
-      "permalink": "https://www.threads.com/@markusreidgt/post/DctzY3cm9-m",
       "metrics": {
         "views": 7,
         "likes": 0,
@@ -5497,6 +5497,33 @@
       "basis": "total"
     },
     {
+      "at": "2026-09-07T04:59:04+0000",
+      "pillar": "community",
+      "kind": "offer",
+      "isThread": false,
+      "parts": 1,
+      "parts_measured": 1,
+      "in_posted_log": true,
+      "text": "Everyone has a graveyard of half built things and almost nobody looks at it properly.\n\nThey have a shape. Mine were all things that needed me to show up daily forever.\n\nSo the question before you start is not can I build this. It is have I ",
+      "accounts": [
+        "Markus"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/Dc-Tt64HFIb",
+      "metrics": {
+        "views": 5,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 5,
+      "engagement": 0,
+      "per_1k": 0,
+      "rateReliable": false,
+      "basis": "total"
+    },
+    {
       "at": "2026-09-03T16:26:52+0000",
       "pillar": "early",
       "kind": "offer",
@@ -5734,33 +5761,6 @@
         "shares": 0
       },
       "views": 5,
-      "engagement": 0,
-      "per_1k": 0,
-      "rateReliable": false,
-      "basis": "total"
-    },
-    {
-      "at": "2026-09-07T04:59:04+0000",
-      "pillar": "community",
-      "kind": "offer",
-      "isThread": false,
-      "parts": 1,
-      "parts_measured": 1,
-      "in_posted_log": true,
-      "text": "Everyone has a graveyard of half built things and almost nobody looks at it properly.\n\nThey have a shape. Mine were all things that needed me to show up daily forever.\n\nSo the question before you start is not can I build this. It is have I ",
-      "accounts": [
-        "Markus"
-      ],
-      "permalink": "https://www.threads.com/@markusreidgt/post/Dc-Tt64HFIb",
-      "metrics": {
-        "views": 4,
-        "likes": 0,
-        "replies": 0,
-        "reposts": 0,
-        "quotes": 0,
-        "shares": 0
-      },
-      "views": 4,
       "engagement": 0,
       "per_1k": 0,
       "rateReliable": false,
@@ -7123,7 +7123,7 @@
       "posts": 56,
       "engagement": 424,
       "avg_engagement": 7.57,
-      "views": 3141,
+      "views": 3140,
       "avg_per_1k": 294.07
     },
     {
@@ -7245,7 +7245,7 @@
       "posts": 67,
       "engagement": 544,
       "avg_engagement": 8.12,
-      "views": 11417,
+      "views": 11416,
       "avg_per_1k": 88.38
     },
     {
@@ -7631,7 +7631,7 @@
       "posts": 68,
       "engagement": 788,
       "avg_engagement": 11.59,
-      "views": 11485,
+      "views": 11484,
       "avg_per_1k": 166.15
     },
     {
@@ -7644,8 +7644,8 @@
     }
   ],
   "collection": {
-    "attempted": 651,
-    "succeeded": 651,
+    "attempted": 650,
+    "succeeded": 650,
     "reduced_metric_set": 0,
     "errors": []
   }
