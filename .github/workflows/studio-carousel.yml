@@ -38,6 +38,9 @@ jobs:
       - name: Install Python deps
         run: pip install requests
 
+      - name: Validate curated marketing queue
+        run: python studio_queue_validate.py
+
       - name: Publish the next approved carousel
         env:
           GT_IG_USER_ID:      ${{ secrets.GT_IG_USER_ID }}
