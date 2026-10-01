@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-30T11:22:51.943861Z",
+  "updated": "2026-10-01T11:50:18.749435Z",
   "count": 150,
   "posts": [
     {
@@ -396,39 +396,6 @@
         "engagement": 0
       },
       "engagement": 2,
-      "_ig_attempted": true
-    },
-    {
-      "sig": "feat:The one fix worth more than the other te:gt_face_06.png",
-      "layout": "feature",
-      "file": "creatives/gt_auto_20260817_010147.jpg",
-      "is_reel": false,
-      "at": "2026-08-17T01:01:53.121850Z",
-      "caption": "The one move worth more than the other ten.\n\nPerfect execution on the wrong constraint still loses the quarter. Growth T",
-      "permalink": "https://www.instagram.com/p/DcHz5bQD0J-/",
-      "ig": {
-        "likes": 1,
-        "comments": 1,
-        "saved": 0,
-        "shares": 0,
-        "reach": 0,
-        "views": 0,
-        "permalink": "https://www.instagram.com/p/DcHz5bQD0J-/",
-        "insights_ok": false,
-        "insights_metrics": "",
-        "own_comments": 1,
-        "comments_external": 0,
-        "engagement": 1
-      },
-      "fb": {
-        "reactions": 0,
-        "comments": 0,
-        "shares": 0,
-        "reach": 0,
-        "reach_metric": "",
-        "engagement": 0
-      },
-      "engagement": 1,
       "_ig_attempted": true
     },
     {
@@ -4897,16 +4864,42 @@
       "fb": null,
       "engagement": 0,
       "_ig_attempted": true
+    },
+    {
+      "sig": "studio:03-product-storytelling",
+      "layout": null,
+      "file": "studio/carousels/03-product-storytelling/01.jpg",
+      "is_reel": false,
+      "at": "2026-09-30T21:02:15.024322Z",
+      "caption": "Product storytelling: buyers understand how it is made, before they ask sales.\n\nFor products where the value is in the b",
+      "permalink": "https://www.instagram.com/p/Dd7QNdgGLO8/",
+      "ig": {
+        "likes": 0,
+        "comments": 0,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "views": 0,
+        "permalink": "https://www.instagram.com/p/Dd7QNdgGLO8/",
+        "insights_ok": false,
+        "insights_metrics": "",
+        "own_comments": 0,
+        "comments_external": 0,
+        "engagement": 0
+      },
+      "fb": null,
+      "engagement": 0,
+      "_ig_attempted": true
     }
   ],
   "by_format": [
     {
       "layout": "feature",
-      "posts": 5,
-      "engagement": 15,
-      "ig_engagement": 13,
+      "posts": 4,
+      "engagement": 14,
+      "ig_engagement": 12,
       "fb_engagement": 2,
-      "avg_engagement": 3.0
+      "avg_engagement": 3.5
     },
     {
       "layout": "edmanifesto",
@@ -5078,7 +5071,7 @@
     },
     {
       "layout": "unknown",
-      "posts": 2,
+      "posts": 3,
       "engagement": 0,
       "ig_engagement": 0,
       "fb_engagement": 0,
@@ -5089,10 +5082,6 @@
     "ig_attempted": 150,
     "ig_succeeded": 148,
     "ig_errors": [
-      {
-        "media_id": "17898342933574123",
-        "message": "insights unavailable: (#10) Application does not have permission for this action"
-      },
       {
         "media_id": "18115874315303091",
         "message": "insights unavailable: (#10) Application does not have permission for this action"
@@ -5168,15 +5157,15 @@
       {
         "media_id": "18126071398766221",
         "message": "insights unavailable: (#10) Application does not have permission for this action"
+      },
+      {
+        "media_id": "18424323328196585",
+        "message": "insights unavailable: (#10) Application does not have permission for this action"
       }
     ],
     "ig_error_count": 150,
-    "fb_succeeded": 146,
+    "fb_succeeded": 145,
     "fb_errors": [
-      {
-        "post_id": "1087307654468135_122101316924536059",
-        "message": "reach unavailable: (#100) The value must be a valid insights metric"
-      },
       {
         "post_id": "1087307654468135_122101328630536059",
         "message": "reach unavailable: (#100) The value must be a valid insights metric"
@@ -5252,13 +5241,17 @@
       {
         "post_id": "1087307654468135_122101466750536059",
         "message": "reach unavailable: (#100) The value must be a valid insights metric"
+      },
+      {
+        "post_id": "1087307654468135_122101473008536059",
+        "message": "reach unavailable: (#100) The value must be a valid insights metric"
       }
     ],
-    "fb_error_count": 146,
+    "fb_error_count": 145,
     "ig_with_insights": 0,
     "ig_reach_total": 0,
     "fb_reach_total": 0,
     "fb_reach_metric": "",
-    "own_comments_excluded": 146
+    "own_comments_excluded": 145
   }
 }
