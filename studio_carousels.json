@@ -1,5 +1,5 @@
 {
-  "note": "Curated future queue for @markusreidgt. Rebuilt 1 Oct 2026 after the owner rejected generic carousel output. Every entry must be explicitly approved and image-led. The previous 21-carousel queue is preserved in archive/studio_carousels_2026-09-29.json. The publisher never loops.",
+  "note": "Curated future queue for @markusreidgt. Rebuilt 1 Oct 2026 after the owner rejected generic carousel output, then expanded with a second image-led batch the same day. Every entry must be explicitly approved and image-led. Campaigns may use media_files to curate the strongest approved frames across the visual library. The publisher never loops.",
   "account": "markusreidgt",
   "loop": false,
   "visual_standard": {
@@ -49,6 +49,96 @@
         "03.jpg"
       ],
       "caption": "For hospitality and place-based brands, atmosphere is part of the product.\\n\\nThe street, the threshold and the interior should feel like one story, not three disconnected listing photos.\\n\\nNocturne is a Growth Terminal image study, not a client commission.\\n\\ngrowthterminal.io/work"
+    },
+    {
+      "id": "25-walk-the-experience",
+      "approved": true,
+      "visual_mode": "image-led",
+      "creative_type": "spatial-sequence",
+      "source_project": "Atelier Veyra",
+      "campaign_goal": "Show a complete spatial journey instead of a flat gallery.",
+      "audience": "hospitality, residential, showroom and studio brands",
+      "media_files": [
+        "studio/carousels/19-film-3d-or-photography/02.jpg",
+        "studio/carousels/17-from-exploring-to-inquiry/01.jpg",
+        "studio/carousels/17-from-exploring-to-inquiry/05.jpg"
+      ],
+      "caption": "A flat gallery asks people to imagine the experience. A spatial story lets them move through it.\\n\\nAtelier Veyra is a Growth Terminal studio concept shown from street to interior to rooftop, built to demonstrate how a place can be explored before anyone books a visit.\\n\\ngrowthterminal.io/work"
+    },
+    {
+      "id": "26-context-to-construction",
+      "approved": true,
+      "visual_mode": "image-led",
+      "creative_type": "product-deconstruction",
+      "source_project": "Meridian Pavilion",
+      "campaign_goal": "Move from finished product context into the system underneath it.",
+      "audience": "product, architecture, manufacturing and modular brands",
+      "media_files": [
+        "studio/carousels/08-most-launches-show-a-product/01.jpg",
+        "studio/carousels/15-products-brands-launches/02.jpg",
+        "studio/carousels/08-most-launches-show-a-product/04.jpg"
+      ],
+      "caption": "The finished object is only half the story.\\n\\nFor products where value lives in materials, construction or assembly, the website should show the result and the system underneath it. Meridian Pavilion is a Growth Terminal image study, not a working configurator.\\n\\ngrowthterminal.io/work"
+    },
+    {
+      "id": "27-places-sell-on-feel",
+      "approved": true,
+      "visual_mode": "image-led",
+      "creative_type": "atmosphere-study",
+      "source_project": "Nocturne and Casa Nera",
+      "campaign_goal": "Show that atmosphere is a sellable part of place-based brands.",
+      "audience": "hospitality, residential, destination and experience brands",
+      "media_files": [
+        "studio/carousels/15-products-brands-launches/03.jpg",
+        "studio/carousels/14-not-a-template/04.jpg",
+        "studio/carousels/13-the-work-labelled-honestly/06.jpg"
+      ],
+      "caption": "For places that sell on feel, atmosphere is part of the product.\\n\\nThe street, material, light, interior and surrounding landscape should work as one story instead of a stack of disconnected listing images. Nocturne and Casa Nera are Growth Terminal image studies.\\n\\ngrowthterminal.io/work"
+    },
+    {
+      "id": "28-studio-range",
+      "approved": true,
+      "visual_mode": "image-led",
+      "creative_type": "portfolio-range",
+      "source_project": "Growth Terminal studio work",
+      "campaign_goal": "Show range across spatial concept, product story and visual language without pretending the studies are client commissions.",
+      "audience": "founders and brand teams evaluating Growth Terminal",
+      "media_files": [
+        "studio/carousels/13-the-work-labelled-honestly/04.jpg",
+        "studio/carousels/13-the-work-labelled-honestly/05.jpg",
+        "studio/carousels/05-one-team/01.jpg"
+      ],
+      "caption": "Different briefs should not collapse into the same visual answer.\\n\\nGrowth Terminal works across spatial concepts, product stories and interactive brand experiences, choosing the format around what the offer needs people to understand. Work shown here is studio concept and image study work, not client commissions.\\n\\ngrowthterminal.io/work"
+    },
+    {
+      "id": "29-medium-follows-material",
+      "approved": true,
+      "visual_mode": "image-led",
+      "creative_type": "media-selection",
+      "source_project": "Growth Terminal format studies",
+      "campaign_goal": "Explain that photography, technical imagery and 3D are selected by communication need.",
+      "audience": "brands with mixed existing assets",
+      "media_files": [
+        "studio/carousels/14-not-a-template/03.jpg",
+        "studio/carousels/19-film-3d-or-photography/03.jpg",
+        "studio/carousels/11-understand-explore-remember-choose/01.jpg"
+      ],
+      "caption": "The medium should follow the material.\\n\\nA spatial experience may need photography or film. A product story may need a technical breakdown. A brand system may need a 3D object that becomes part of the interface. Growth Terminal chooses the medium around the job it has to do.\\n\\ngrowthterminal.io/services"
+    },
+    {
+      "id": "30-point-of-view-not-template",
+      "approved": true,
+      "visual_mode": "image-led",
+      "creative_type": "brand-positioning",
+      "source_project": "Growth Terminal visual language",
+      "campaign_goal": "Position the studio around authored visual direction rather than reusable templates.",
+      "audience": "brands that need a distinct launch or identity-led digital experience",
+      "media_files": [
+        "studio/carousels/14-not-a-template/01.jpg",
+        "studio/carousels/05-one-team/02.jpg",
+        "studio/carousels/08-most-launches-show-a-product/03.jpg"
+      ],
+      "caption": "A template starts with a layout. A point of view starts with what the buyer needs to notice.\\n\\nGrowth Terminal combines creative direction and front-end production so the visual idea is not handed off and diluted before launch.\\n\\ngrowthterminal.io/studio"
     }
   ]
 }
