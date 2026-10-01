@@ -41,12 +41,19 @@ def main():
         if not str(car.get("campaign_goal", "")).strip():
             fail(f"{cid} is missing campaign_goal")
 
-        slides = car.get("slides")
-        if not isinstance(slides, list) or not (3 <= len(slides) <= 10):
-            fail(f"{cid} must contain 3 to 10 slides")
-        base = pathlib.Path(str(car.get("dir", "")))
-        for slide in slides:
-            path = base / str(slide)
+        media_files = car.get("media_files")
+        if media_files is not None:
+            if not isinstance(media_files, list) or not (3 <= len(media_files) <= 10):
+                fail(f"{cid} media_files must contain 3 to 10 slides")
+            paths = [pathlib.Path(str(slide)) for slide in media_files]
+        else:
+            slides = car.get("slides")
+            if not isinstance(slides, list) or not (3 <= len(slides) <= 10):
+                fail(f"{cid} must contain 3 to 10 slides")
+            base = pathlib.Path(str(car.get("dir", "")))
+            paths = [base / str(slide) for slide in slides]
+
+        for path in paths:
             if not path.is_file():
                 fail(f"{cid} references missing slide {path}")
             key = str(path)
