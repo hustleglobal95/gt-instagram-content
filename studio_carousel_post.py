@@ -30,20 +30,24 @@ def main():
     queue = load(QUEUE, None)
     if not queue or not queue.get("carousels"):
         refuse("studio_carousels.json is missing or empty.")
+
     used = load(USED, [])
     used_ids = {u.get("id") for u in used}
     nxt = next((p for p in queue["carousels"] if p["id"] not in used_ids), None)
+
     if nxt is None:
         print("Every approved informative post has been published. Nothing runs today.")
         return 0
 
     pid = nxt.get("id", "<unknown>")
+
     if nxt.get("approved") is not True:
         refuse(f"{pid} is not explicitly approved.")
     if nxt.get("content_type") != "informative":
         refuse(f"{pid} is not informative.")
     if nxt.get("topic") not in ALLOWED_TOPICS:
         refuse(f"{pid} is outside Growth Terminal's approved business topics.")
+
     refs = set(nxt.get("references") or [])
     if not refs or not refs.issubset(ALLOWED_REFERENCES):
         refuse(f"{pid} uses an unapproved editorial reference.")
@@ -54,29 +58,39 @@ def main():
     if not str(nxt.get("lesson", "")).strip():
         refuse(f"{pid} has no lesson.")
 
-    if nxt.get("media_files"):
+    if nxt.get("media_urls"):
+        images = [str(u).strip() for u in nxt["media_urls"]]
+        urls = list(images)
+    elif nxt.get("media_files"):
         images = [str(s).lstrip("/") for s in nxt["media_files"]]
+        missing = [s for s in images if not pathlib.Path(s).exists()]
+        if missing:
+            refuse(f"{pid} names images that are not in the repo: {missing}")
+        urls = [cp.raw_url(s) for s in images]
     else:
         images = [f"{nxt['dir']}/{s}" for s in nxt["slides"]]
-    if not 1 <= len(images) <= 10:
-        refuse(f"{pid} has {len(images)} images; expected 1 to 10.")
-    missing = [s for s in images if not pathlib.Path(s).exists()]
-    if missing:
-        refuse(f"{pid} names images that are not in the repo: {missing}")
+        missing = [s for s in images if not pathlib.Path(s).exists()]
+        if missing:
+            refuse(f"{pid} names images that are not in the repo: {missing}")
+        urls = [cp.raw_url(s) for s in images]
+
+    if not 1 <= len(urls) <= 10:
+        refuse(f"{pid} has {len(urls)} images; expected 1 to 10.")
 
     caption = nxt["caption"].strip()
     refuse_if_price("caption", caption)
+
     if re.search("[–—]", caption):
         refuse(f"{pid} caption contains a banned dash.")
 
     if not cp.IG_USER_ID or not cp.TOKEN or not cp.REPO:
         refuse("GT_IG_USER_ID, GT_IG_ACCESS_TOKEN and GT_GITHUB_REPO must all be set.")
 
-    urls = [cp.raw_url(s) for s in images]
     for url in urls:
         if not cp.wait_for_url(url):
             refuse(f"image is not live at {url}")
-    print(f"Next approved informative post: {pid} ({len(images)} image(s))")
+
+    print(f"Next approved informative post: {pid} ({len(urls)} image(s))")
 
     if cp.DRY_RUN:
         print("[DRY RUN] every check passed. Nothing published, nothing recorded.")
@@ -88,6 +102,7 @@ def main():
         media_id = cp.publish_carousel(urls, caption)
 
     now = datetime.datetime.now(datetime.timezone.utc).isoformat().replace("+00:00", "Z")
+
     used.append({"id": pid, "at": now, "media_id": media_id})
     with open(USED, "w") as f:
         json.dump(used, f, indent=2)
@@ -105,6 +120,7 @@ def main():
         "sig": f"informative:{pid}"
     })
     cp.save_state(log)
+
     print(f"published {pid} as Instagram media {media_id}")
     return 0
 
