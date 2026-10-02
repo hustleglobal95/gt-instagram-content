@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-01T11:50:18.749435Z",
+  "updated": "2026-10-02T11:19:53.661028Z",
   "count": 150,
   "posts": [
     {
@@ -165,39 +165,6 @@
         "engagement": 0
       },
       "engagement": 3,
-      "_ig_attempted": true
-    },
-    {
-      "sig": "edm:We do.Every forecast, graded against",
-      "layout": "edmanifesto",
-      "file": "creatives/gt_auto_20260817_130118.jpg",
-      "is_reel": false,
-      "at": "2026-08-17T13:01:24.111731Z",
-      "caption": "Everyone makes confident growth calls. Almost no one checks them.\n\nWe do. Every forecast Growth Terminal makes is logged",
-      "permalink": "https://www.instagram.com/p/DcJGPYQjrTh/",
-      "ig": {
-        "likes": 2,
-        "comments": 1,
-        "saved": 0,
-        "shares": 0,
-        "reach": 0,
-        "views": 0,
-        "permalink": "https://www.instagram.com/p/DcJGPYQjrTh/",
-        "insights_ok": false,
-        "insights_metrics": "",
-        "own_comments": 1,
-        "comments_external": 0,
-        "engagement": 2
-      },
-      "fb": {
-        "reactions": 0,
-        "comments": 0,
-        "shares": 0,
-        "reach": 0,
-        "reach_metric": "",
-        "engagement": 0
-      },
-      "engagement": 2,
       "_ig_attempted": true
     },
     {
@@ -4890,6 +4857,32 @@
       "fb": null,
       "engagement": 0,
       "_ig_attempted": true
+    },
+    {
+      "sig": "studio:04-casa-nera",
+      "layout": null,
+      "file": "studio/carousels/04-casa-nera/01.jpg",
+      "is_reel": false,
+      "at": "2026-10-01T21:25:11.755009Z",
+      "caption": "Casa Nera: what a listing photo leaves out. Light, height, the sea.\n\nA Growth Terminal image study: a coastal house in l",
+      "permalink": "https://www.instagram.com/p/Dd93n6wgFnr/",
+      "ig": {
+        "likes": 0,
+        "comments": 0,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "views": 0,
+        "permalink": "https://www.instagram.com/p/Dd93n6wgFnr/",
+        "insights_ok": false,
+        "insights_metrics": "",
+        "own_comments": 0,
+        "comments_external": 0,
+        "engagement": 0
+      },
+      "fb": null,
+      "engagement": 0,
+      "_ig_attempted": true
     }
   ],
   "by_format": [
@@ -4900,14 +4893,6 @@
       "ig_engagement": 12,
       "fb_engagement": 2,
       "avg_engagement": 3.5
-    },
-    {
-      "layout": "edmanifesto",
-      "posts": 1,
-      "engagement": 2,
-      "ig_engagement": 2,
-      "fb_engagement": 0,
-      "avg_engagement": 2.0
     },
     {
       "layout": "bigquote",
@@ -5071,7 +5056,7 @@
     },
     {
       "layout": "unknown",
-      "posts": 3,
+      "posts": 4,
       "engagement": 0,
       "ig_engagement": 0,
       "fb_engagement": 0,
@@ -5082,10 +5067,6 @@
     "ig_attempted": 150,
     "ig_succeeded": 148,
     "ig_errors": [
-      {
-        "media_id": "18115874315303091",
-        "message": "insights unavailable: (#10) Application does not have permission for this action"
-      },
       {
         "media_id": "18132986023730276",
         "message": "insights unavailable: (#10) Application does not have permission for this action"
@@ -5161,15 +5142,15 @@
       {
         "media_id": "18424323328196585",
         "message": "insights unavailable: (#10) Application does not have permission for this action"
+      },
+      {
+        "media_id": "18101910842257853",
+        "message": "insights unavailable: (#10) Application does not have permission for this action"
       }
     ],
     "ig_error_count": 150,
-    "fb_succeeded": 145,
+    "fb_succeeded": 144,
     "fb_errors": [
-      {
-        "post_id": "1087307654468135_122101328630536059",
-        "message": "reach unavailable: (#100) The value must be a valid insights metric"
-      },
       {
         "post_id": "1087307654468135_122101334912536059",
         "message": "reach unavailable: (#100) The value must be a valid insights metric"
@@ -5245,13 +5226,17 @@
       {
         "post_id": "1087307654468135_122101473008536059",
         "message": "reach unavailable: (#100) The value must be a valid insights metric"
+      },
+      {
+        "post_id": "1087307654468135_122101494692536059",
+        "message": "reach unavailable: (#100) The value must be a valid insights metric"
       }
     ],
-    "fb_error_count": 145,
+    "fb_error_count": 144,
     "ig_with_insights": 0,
     "ig_reach_total": 0,
     "fb_reach_total": 0,
     "fb_reach_metric": "",
-    "own_comments_excluded": 145
+    "own_comments_excluded": 144
   }
 }
