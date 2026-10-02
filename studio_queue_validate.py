@@ -4,6 +4,7 @@ import json
 import pathlib
 import re
 import sys
+from urllib.parse import urlparse
 
 QUEUE = pathlib.Path("studio_carousels.json")
 PRICE = re.compile(r"[$€£¥]\s?\d|\b\d[\d,.]*\s?(?:usd|eur|gbp|dollars?|euros?|pounds?)\b", re.I)
@@ -27,12 +28,14 @@ def main():
         fail("carousels must be a non-empty list")
 
     seen_ids = set()
-    seen_files = set()
+    seen_media = set()
+
     for post in posts:
         pid = str(post.get("id", "")).strip()
         if not pid or pid in seen_ids:
             fail(f"missing or duplicate id: {pid!r}")
         seen_ids.add(pid)
+
         if post.get("approved") is not True:
             fail(f"{pid} is not explicitly approved")
         if post.get("content_type") != "informative":
@@ -51,19 +54,30 @@ def main():
         if not str(post.get("lesson", "")).strip():
             fail(f"{pid} is missing lesson")
 
-        if post.get("media_files"):
-            slides = [str(s).lstrip("/") for s in post["media_files"]]
+        if post.get("media_urls"):
+            media = [str(u).strip() for u in post["media_urls"]]
+            for u in media:
+                parsed = urlparse(u)
+                if parsed.scheme != "https" or not parsed.netloc:
+                    fail(f"{pid} has invalid media_url {u}")
+        elif post.get("media_files"):
+            media = [str(s).lstrip("/") for s in post["media_files"]]
+            for s in media:
+                if not pathlib.Path(s).is_file():
+                    fail(f"{pid} references missing image {s}")
         else:
-            slides = [str(pathlib.Path(str(post.get("dir", ""))) / str(s)) for s in post.get("slides", [])]
-        if not (1 <= len(slides) <= 10):
+            media = [str(pathlib.Path(str(post.get("dir", ""))) / str(s)) for s in post.get("slides", [])]
+            for s in media:
+                if not pathlib.Path(s).is_file():
+                    fail(f"{pid} references missing image {s}")
+
+        if not (1 <= len(media) <= 10):
             fail(f"{pid} must contain 1 to 10 images")
-        for slide in slides:
-            path = pathlib.Path(slide)
-            if not path.is_file():
-                fail(f"{pid} references missing image {path}")
-            if slide in seen_files:
-                fail(f"image reused across future posts: {slide}")
-            seen_files.add(slide)
+
+        for item in media:
+            if item in seen_media:
+                fail(f"image reused across future posts: {item}")
+            seen_media.add(item)
 
         caption = str(post.get("caption", "")).strip()
         if not caption:
@@ -73,7 +87,7 @@ def main():
         if re.search("[–—]", caption):
             fail(f"{pid} caption contains a banned dash")
 
-    print(f"queue valid: {len(posts)} informative posts / {len(seen_files)} unique images")
+    print(f"queue valid: {len(posts)} informative posts / {len(seen_media)} unique images")
     return 0
 
 if __name__ == "__main__":
