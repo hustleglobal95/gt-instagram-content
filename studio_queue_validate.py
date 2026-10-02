@@ -7,6 +7,8 @@ import sys
 
 QUEUE = pathlib.Path("studio_carousels.json")
 PRICE = re.compile(r"[$€£¥]\s?\d|\b\d[\d,.]*\s?(?:usd|eur|gbp|dollars?|euros?|pounds?)\b", re.I)
+ALLOWED_TOPICS = {"interactive-websites", "product-launches", "3d-scroll", "product-storytelling"}
+ALLOWED_REFERENCES = {"DIGI MONK", "Alex Hormozi"}
 
 def fail(message):
     print("QUEUE INVALID: " + message)
@@ -34,12 +36,21 @@ def main():
 
         if car.get("approved") is not True:
             fail(f"{cid} is not explicitly approved")
+        if car.get("content_type") != "informative":
+            fail(f"{cid} must use content_type=informative")
+        if car.get("topic") not in ALLOWED_TOPICS:
+            fail(f"{cid} topic must be one of {sorted(ALLOWED_TOPICS)}")
+        refs = set(car.get("references") or [])
+        if not refs or not refs.issubset(ALLOWED_REFERENCES):
+            fail(f"{cid} references must contain only DIGI MONK and/or Alex Hormozi")
+        if car.get("uses_project_assets") is not False:
+            fail(f"{cid} must set uses_project_assets=false")
         if car.get("visual_mode") != "image-led":
             fail(f"{cid} must use visual_mode=image-led")
-        if not str(car.get("source_project", "")).strip():
-            fail(f"{cid} is missing source_project")
         if not str(car.get("campaign_goal", "")).strip():
             fail(f"{cid} is missing campaign_goal")
+        if not str(car.get("lesson", "")).strip():
+            fail(f"{cid} is missing lesson")
 
         slides = car.get("slides")
         if not isinstance(slides, list) or not (3 <= len(slides) <= 10):
@@ -62,7 +73,7 @@ def main():
         if re.search("[–—]", caption):
             fail(f"{cid} caption contains a banned dash")
 
-    print(f"queue valid: {len(cars)} image-led campaigns / {len(seen_files)} unique slides")
+    print(f"queue valid: {len(cars)} informative campaigns / {len(seen_files)} unique slides")
     return 0
 
 if __name__ == "__main__":
