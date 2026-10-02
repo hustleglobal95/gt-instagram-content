@@ -12,12 +12,17 @@
       "approved": true,
       "content_type": "informative",
       "topic": "interactive-websites",
-      "references": ["DIGI MONK", "Alex Hormozi"],
+      "references": [
+        "DIGI MONK",
+        "Alex Hormozi"
+      ],
       "uses_project_assets": false,
       "visual_mode": "image-led",
       "campaign_goal": "Explain what an interactive website should do for a buyer.",
       "lesson": "Interaction should capture attention, explain the offer, sustain engagement, and make the next action clearer.",
-      "media_files": ["studio/informative/01-attention-to-sales.jpg"],
+      "media_files": [
+        "studio/informative/01-attention-to-sales.jpg"
+      ],
       "caption": "An interactive website should do more than look different.\n\nThe job is to make the offer easier to understand and the experience easier to remember.\n\nA useful interaction has a purpose: capture attention, explain the product, keep the buyer engaged, then make the next action obvious.\n\nThat is the difference between adding motion and designing an experience.\n\ngrowthterminal.io"
     },
     {
@@ -25,13 +30,72 @@
       "approved": true,
       "content_type": "informative",
       "topic": "product-launches",
-      "references": ["DIGI MONK", "Alex Hormozi"],
+      "references": [
+        "DIGI MONK",
+        "Alex Hormozi"
+      ],
       "uses_project_assets": false,
       "visual_mode": "image-led",
       "campaign_goal": "Teach the structure of a strong digital product launch.",
       "lesson": "A launch experience should move from positioning to design, interaction, and a clear launch path.",
-      "media_files": ["studio/informative/02-idea-to-launch.jpg"],
+      "media_files": [
+        "studio/informative/02-idea-to-launch.jpg"
+      ],
       "caption": "A product launch site is not just a homepage with a new product on it.\n\nThe experience needs a sequence.\n\nStart with the reason to care. Show the product clearly. Reveal the details that justify the value. Use interaction where it improves understanding. Then give the buyer a clear next step.\n\nGood launch design turns information into a story people can follow.\n\ngrowthterminal.io"
+    },
+    {
+      "id": "27-motion-should-explain",
+      "approved": true,
+      "content_type": "informative",
+      "topic": "interactive-websites",
+      "references": [
+        "DIGI MONK",
+        "Alex Hormozi"
+      ],
+      "uses_project_assets": false,
+      "visual_mode": "image-led",
+      "campaign_goal": "Teach why website motion should have a business purpose.",
+      "lesson": "Motion should help a buyer understand the product or next action instead of existing as decoration.",
+      "media_files": [
+        "studio/informative/03-motion-should-explain.jpg"
+      ],
+      "caption": "Motion is not the strategy.\n\nA useful website interaction should help a buyer understand something faster: what the product does, why it matters, how it works, or what to do next.\n\nIf the animation cannot answer one of those questions, it may be decoration rather than communication.\n\ngrowthterminal.io"
+    },
+    {
+      "id": "28-3d-needs-a-reason",
+      "approved": true,
+      "content_type": "informative",
+      "topic": "3d-scroll",
+      "references": [
+        "DIGI MONK",
+        "Alex Hormozi"
+      ],
+      "uses_project_assets": false,
+      "visual_mode": "image-led",
+      "campaign_goal": "Explain when 3D adds real value to a website.",
+      "lesson": "3D is most useful when depth helps explain scale, construction, function, or configuration.",
+      "media_files": [
+        "studio/informative/04-3d-needs-a-reason.jpg"
+      ],
+      "caption": "A 3D website needs a reason to be 3D.\n\nDepth is useful when it helps people understand scale, construction, function, configuration, or a detail that a flat image cannot communicate as clearly.\n\nThe goal is not to make an object spin. The goal is to make the product easier to understand.\n\ngrowthterminal.io"
+    },
+    {
+      "id": "29-launch-questions-in-order",
+      "approved": true,
+      "content_type": "informative",
+      "topic": "product-launches",
+      "references": [
+        "DIGI MONK",
+        "Alex Hormozi"
+      ],
+      "uses_project_assets": false,
+      "visual_mode": "image-led",
+      "campaign_goal": "Teach the information sequence behind a clear product launch.",
+      "lesson": "A launch should answer why the buyer should care, what the product is, why it is better, and what to do next.",
+      "media_files": [
+        "studio/informative/05-launch-questions-in-order.jpg"
+      ],
+      "caption": "A strong product launch answers questions in the order the buyer experiences them.\n\nWhy should I care?\nWhat is it?\nWhy is it better?\nWhat do I do next?\n\nWhen a launch experience answers those questions clearly, design and interaction have a job instead of becoming noise.\n\ngrowthterminal.io"
     }
   ]
 }
