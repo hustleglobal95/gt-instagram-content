@@ -3290,5 +3290,17 @@
     ],
     "caption": "Casa Nera: what a listing photo leaves out. Light, height, the sea.\n\nA Growth Terminal image study: a coastal house in late daylight, paired with the interior detail a listing usually skips.\n\ngrowthterminal.io/work",
     "sig": "studio:04-casa-nera"
+  },
+  {
+    "media_id": "18103710704161518",
+    "at": "2026-10-02T21:00:37.025795Z",
+    "file": "studio/informative/01-attention-to-sales.jpg",
+    "is_carousel": false,
+    "carousel": "25-attention-to-sales",
+    "slides": [
+      "studio/informative/01-attention-to-sales.jpg"
+    ],
+    "caption": "An interactive website should do more than look different.\n\nThe job is to make the offer easier to understand and the experience easier to remember.\n\nA useful interaction has a purpose: capture attention, explain the product, keep the buyer engaged, then make the next action obvious.\n\nThat is the difference between adding motion and designing an experience.\n\ngrowthterminal.io",
+    "sig": "informative:25-attention-to-sales"
   }
 ]
