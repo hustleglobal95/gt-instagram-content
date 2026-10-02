@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the curated Growth Terminal studio marketing queue without secrets."""
+"""Validate owner-approved informative Growth Terminal posts."""
 import json
 import pathlib
 import re
@@ -7,6 +7,8 @@ import sys
 
 QUEUE = pathlib.Path("studio_carousels.json")
 PRICE = re.compile(r"[$€£¥]\s?\d|\b\d[\d,.]*\s?(?:usd|eur|gbp|dollars?|euros?|pounds?)\b", re.I)
+ALLOWED_TOPICS = {"interactive-websites", "product-launches", "3d-scroll", "product-storytelling"}
+ALLOWED_REFERENCES = {"DIGI MONK", "Alex Hormozi"}
 
 def fail(message):
     print("QUEUE INVALID: " + message)
@@ -20,56 +22,58 @@ def main():
 
     if data.get("loop") is not False:
         fail("loop must be false")
-    cars = data.get("carousels")
-    if not isinstance(cars, list) or not cars:
+    posts = data.get("carousels")
+    if not isinstance(posts, list) or not posts:
         fail("carousels must be a non-empty list")
 
     seen_ids = set()
     seen_files = set()
-    for car in cars:
-        cid = str(car.get("id", "")).strip()
-        if not cid or cid in seen_ids:
-            fail(f"missing or duplicate id: {cid!r}")
-        seen_ids.add(cid)
+    for post in posts:
+        pid = str(post.get("id", "")).strip()
+        if not pid or pid in seen_ids:
+            fail(f"missing or duplicate id: {pid!r}")
+        seen_ids.add(pid)
+        if post.get("approved") is not True:
+            fail(f"{pid} is not explicitly approved")
+        if post.get("content_type") != "informative":
+            fail(f"{pid} must use content_type=informative")
+        if post.get("topic") not in ALLOWED_TOPICS:
+            fail(f"{pid} has an unsupported business topic")
+        refs = set(post.get("references") or [])
+        if not refs or not refs.issubset(ALLOWED_REFERENCES):
+            fail(f"{pid} may reference only DIGI MONK and Alex Hormozi")
+        if post.get("uses_project_assets") is not False:
+            fail(f"{pid} must set uses_project_assets=false")
+        if post.get("visual_mode") != "image-led":
+            fail(f"{pid} must use visual_mode=image-led")
+        if not str(post.get("campaign_goal", "")).strip():
+            fail(f"{pid} is missing campaign_goal")
+        if not str(post.get("lesson", "")).strip():
+            fail(f"{pid} is missing lesson")
 
-        if car.get("approved") is not True:
-            fail(f"{cid} is not explicitly approved")
-        if car.get("visual_mode") != "image-led":
-            fail(f"{cid} must use visual_mode=image-led")
-        if not str(car.get("source_project", "")).strip():
-            fail(f"{cid} is missing source_project")
-        if not str(car.get("campaign_goal", "")).strip():
-            fail(f"{cid} is missing campaign_goal")
-
-        media_files = car.get("media_files")
-        if media_files is not None:
-            if not isinstance(media_files, list) or not (3 <= len(media_files) <= 10):
-                fail(f"{cid} media_files must contain 3 to 10 slides")
-            paths = [pathlib.Path(str(slide)) for slide in media_files]
+        if post.get("media_files"):
+            slides = [str(s).lstrip("/") for s in post["media_files"]]
         else:
-            slides = car.get("slides")
-            if not isinstance(slides, list) or not (3 <= len(slides) <= 10):
-                fail(f"{cid} must contain 3 to 10 slides")
-            base = pathlib.Path(str(car.get("dir", "")))
-            paths = [base / str(slide) for slide in slides]
-
-        for path in paths:
+            slides = [str(pathlib.Path(str(post.get("dir", ""))) / str(s)) for s in post.get("slides", [])]
+        if not (1 <= len(slides) <= 10):
+            fail(f"{pid} must contain 1 to 10 images")
+        for slide in slides:
+            path = pathlib.Path(slide)
             if not path.is_file():
-                fail(f"{cid} references missing slide {path}")
-            key = str(path)
-            if key in seen_files:
-                fail(f"slide reused across future campaigns: {key}")
-            seen_files.add(key)
+                fail(f"{pid} references missing image {path}")
+            if slide in seen_files:
+                fail(f"image reused across future posts: {slide}")
+            seen_files.add(slide)
 
-        caption = str(car.get("caption", "")).strip()
+        caption = str(post.get("caption", "")).strip()
         if not caption:
-            fail(f"{cid} has no caption")
+            fail(f"{pid} has no caption")
         if PRICE.search(caption):
-            fail(f"{cid} caption shows a price")
+            fail(f"{pid} caption shows a price")
         if re.search("[–—]", caption):
-            fail(f"{cid} caption contains a banned dash")
+            fail(f"{pid} caption contains a banned dash")
 
-    print(f"queue valid: {len(cars)} image-led campaigns / {len(seen_files)} unique slides")
+    print(f"queue valid: {len(posts)} informative posts / {len(seen_files)} unique images")
     return 0
 
 if __name__ == "__main__":
