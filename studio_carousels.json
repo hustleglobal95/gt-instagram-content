@@ -96,6 +96,78 @@
         "studio/informative/05-launch-questions-in-order.jpg"
       ],
       "caption": "A strong product launch answers questions in the order the buyer experiences them.\n\nWhy should I care?\nWhat is it?\nWhy is it better?\nWhat do I do next?\n\nWhen a launch experience answers those questions clearly, design and interaction have a job instead of becoming noise.\n\ngrowthterminal.io"
+    },
+    {
+      "id": "30-websites-make-offer-clear",
+      "approved": true,
+      "content_type": "informative",
+      "topic": "interactive-websites",
+      "references": [
+        "DIGI MONK",
+        "Alex Hormozi"
+      ],
+      "uses_project_assets": false,
+      "visual_mode": "image-led",
+      "campaign_goal": "Explain the job of a high-performing website.",
+      "lesson": "A website should capture attention, explain the offer, guide the next step, and make the brand memorable.",
+      "media_urls": [
+        "https://d2ol7oe51mr4n9.cloudfront.net/user_3FugzGV89ehMBrUoVdwLJxFujO5/612400ab-1817-4e50-9bbf-b74f9fcdc41d.jpg"
+      ],
+      "caption": "The best websites do not just look good.\n\nThey make the offer easier to understand.\n\nA strong site should capture attention quickly, explain what you do, guide the next step, and leave the brand easier to remember.\n\nDesign earns its place when it improves clarity.\n\ngrowthterminal.io"
+    },
+    {
+      "id": "31-launch-needs-sequence",
+      "approved": true,
+      "content_type": "informative",
+      "topic": "product-launches",
+      "references": [
+        "DIGI MONK",
+        "Alex Hormozi"
+      ],
+      "uses_project_assets": false,
+      "visual_mode": "image-led",
+      "campaign_goal": "Explain why product launches need a deliberate sequence.",
+      "lesson": "A launch should move from interest to details to experience to action.",
+      "media_urls": [
+        "https://d2ol7oe51mr4n9.cloudfront.net/user_3FugzGV89ehMBrUoVdwLJxFujO5/9f638a82-de12-4b42-9af5-baaa6dc61e57.jpg"
+      ],
+      "caption": "A product launch needs a sequence, not just a page.\n\nCreate interest first. Then show the product clearly. Explain the details that justify the value. Show how it fits into real use. End with an obvious next step.\n\nThe sequence is what turns information into a launch experience.\n\ngrowthterminal.io"
+    },
+    {
+      "id": "32-experiences-help-decide",
+      "approved": true,
+      "content_type": "informative",
+      "topic": "product-storytelling",
+      "references": [
+        "DIGI MONK",
+        "Alex Hormozi"
+      ],
+      "uses_project_assets": false,
+      "visual_mode": "image-led",
+      "campaign_goal": "Show how interactive experiences can help buyers make decisions.",
+      "lesson": "Interactive experiences are useful when they let buyers explore, inspect, compare, and choose with more confidence.",
+      "media_urls": [
+        "https://d2ol7oe51mr4n9.cloudfront.net/user_3FugzGV89ehMBrUoVdwLJxFujO5/05f853a8-2937-4b71-a790-a17a8fe011c6.jpg"
+      ],
+      "caption": "Interactive experiences should help people decide, not just impress them.\n\nLet buyers explore the offer. Let them inspect important details. Let them compare options. Give them enough context to choose with confidence.\n\nInteraction is strongest when it removes uncertainty.\n\ngrowthterminal.io"
+    },
+    {
+      "id": "33-product-displays-reduce-confusion",
+      "approved": true,
+      "content_type": "informative",
+      "topic": "product-storytelling",
+      "references": [
+        "DIGI MONK",
+        "Alex Hormozi"
+      ],
+      "uses_project_assets": false,
+      "visual_mode": "image-led",
+      "campaign_goal": "Explain what a strong digital product display should accomplish.",
+      "lesson": "A product display should reveal the product, explain key parts, show what makes it valuable, and reduce buyer confusion.",
+      "media_urls": [
+        "https://d2ol7oe51mr4n9.cloudfront.net/user_3FugzGV89ehMBrUoVdwLJxFujO5/273cdb63-9410-4434-ac98-f39dadb92abf.jpg"
+      ],
+      "caption": "Product displays should reduce confusion.\n\nShow the whole product clearly. Break down the parts that matter. Reveal the features that create value. Then make the next step obvious.\n\nThe more complex the product, the more useful a clear visual explanation becomes.\n\ngrowthterminal.io"
     }
   ]
 }
