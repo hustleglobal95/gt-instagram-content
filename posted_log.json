@@ -3302,5 +3302,17 @@
     ],
     "caption": "An interactive website should do more than look different.\n\nThe job is to make the offer easier to understand and the experience easier to remember.\n\nA useful interaction has a purpose: capture attention, explain the product, keep the buyer engaged, then make the next action obvious.\n\nThat is the difference between adding motion and designing an experience.\n\ngrowthterminal.io",
     "sig": "informative:25-attention-to-sales"
+  },
+  {
+    "media_id": "18126761254644336",
+    "at": "2026-10-03T19:28:53.698935Z",
+    "file": "studio/informative/02-idea-to-launch.jpg",
+    "is_carousel": false,
+    "carousel": "26-idea-to-launch",
+    "slides": [
+      "studio/informative/02-idea-to-launch.jpg"
+    ],
+    "caption": "A product launch site is not just a homepage with a new product on it.\n\nThe experience needs a sequence.\n\nStart with the reason to care. Show the product clearly. Reveal the details that justify the value. Use interaction where it improves understanding. Then give the buyer a clear next step.\n\nGood launch design turns information into a story people can follow.\n\ngrowthterminal.io",
+    "sig": "informative:26-idea-to-launch"
   }
 ]
