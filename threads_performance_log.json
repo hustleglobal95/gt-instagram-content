@@ -1,11 +1,11 @@
 {
-  "updated": "2026-10-02T12:35:42.227Z",
+  "updated": "2026-10-03T11:41:34.988Z",
   "count": 253,
   "ranking_basis": "per_1k",
   "min_views_for_rate": 25,
   "rate_eligible": 88,
   "reach": {
-    "views": 18550,
+    "views": 18552,
     "interactions": 948,
     "median_views": 13,
     "zero_interaction_posts": 153
@@ -24,16 +24,16 @@
     "outbound_reply_views": 30,
     "outbound_reply_interactions": 1,
     "outbound_replies_measured": 3,
-    "total_views_incl_replies": 18580,
-    "summed_views": 18550,
-    "platform_views": 3373,
-    "ratio": 5.508
+    "total_views_incl_replies": 18582,
+    "summed_views": 18552,
+    "platform_views": 2715,
+    "ratio": 6.844
   },
   "platform": {
     "Markus": {
-      "views": 3373,
-      "likes": 35,
-      "replies": 429,
+      "views": 2715,
+      "likes": 33,
+      "replies": 428,
       "reposts": 0,
       "quotes": 0,
       "followers_count": 33
@@ -1325,16 +1325,16 @@
       ],
       "permalink": "https://www.threads.com/@markusreidgt/post/DcKqzSpDfj2",
       "metrics": {
-        "views": 88,
+        "views": 89,
         "likes": 1,
         "replies": 0,
         "reposts": 0,
         "quotes": 1,
         "shares": 0
       },
-      "views": 88,
+      "views": 89,
       "engagement": 2,
-      "per_1k": 22.73,
+      "per_1k": 22.47,
       "rateReliable": true,
       "basis": "per_1k"
     },
@@ -1946,14 +1946,14 @@
       ],
       "permalink": "https://www.threads.com/@markusreidgt/post/Dc6zB3gGFPn",
       "metrics": {
-        "views": 100,
+        "views": 101,
         "likes": 0,
         "replies": 0,
         "reposts": 0,
         "quotes": 0,
         "shares": 0
       },
-      "views": 100,
+      "views": 101,
       "engagement": 0,
       "per_1k": 0,
       "rateReliable": true,
@@ -7155,15 +7155,15 @@
       "posts": 41,
       "engagement": 51,
       "avg_engagement": 1.24,
-      "views": 1389,
-      "avg_per_1k": 40.7
+      "views": 1390,
+      "avg_per_1k": 40.67
     },
     {
       "key": "systems",
       "posts": 45,
       "engagement": 95,
       "avg_engagement": 2.11,
-      "views": 5025,
+      "views": 5026,
       "avg_per_1k": 24.1
     },
     {
@@ -7261,8 +7261,8 @@
       "posts": 41,
       "engagement": 51,
       "avg_engagement": 1.24,
-      "views": 1389,
-      "avg_per_1k": 40.7
+      "views": 1390,
+      "avg_per_1k": 40.67
     },
     {
       "key": "aphorism",
@@ -7301,7 +7301,7 @@
       "posts": 8,
       "engagement": 0,
       "avg_engagement": 0,
-      "views": 175,
+      "views": 176,
       "avg_per_1k": 0
     },
     {
@@ -7639,8 +7639,8 @@
       "posts": 185,
       "engagement": 160,
       "avg_engagement": 0.86,
-      "views": 5615,
-      "avg_per_1k": 44.53
+      "views": 5617,
+      "avg_per_1k": 44.52
     }
   ],
   "collection": {
