@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-02T11:19:53.661028Z",
+  "updated": "2026-10-03T10:38:30.112803Z",
   "count": 150,
   "posts": [
     {
@@ -11,7 +11,7 @@
       "caption": "Find the one constraint holding your growth back.\n\nGrowth Terminal reads the report you already run, names the single co",
       "permalink": "https://www.instagram.com/p/DcZ1XouGjD4/",
       "ig": {
-        "likes": 12,
+        "likes": 13,
         "comments": 1,
         "saved": 0,
         "shares": 0,
@@ -22,7 +22,7 @@
         "insights_metrics": "",
         "own_comments": 1,
         "comments_external": 0,
-        "engagement": 12
+        "engagement": 13
       },
       "fb": {
         "reactions": 0,
@@ -32,7 +32,7 @@
         "reach_metric": "",
         "engagement": 0
       },
-      "engagement": 12,
+      "engagement": 13,
       "_ig_attempted": true
     },
     {
@@ -99,39 +99,6 @@
         "engagement": 0
       },
       "engagement": 4,
-      "_ig_attempted": true
-    },
-    {
-      "sig": "reelnum:12",
-      "layout": "reel:countup",
-      "file": "creatives/gt_reel_20260817_170103.jpg",
-      "is_reel": true,
-      "at": "2026-08-17T17:01:31.584511Z",
-      "caption": "Growth only gets stuck in twelve places. The hard part is knowing which one is YOUR #1 right now, with a dollar range at",
-      "permalink": "https://www.instagram.com/reel/DcJhuWfgef4/",
-      "ig": {
-        "likes": 2,
-        "comments": 1,
-        "saved": 0,
-        "shares": 0,
-        "reach": 0,
-        "views": 0,
-        "permalink": "https://www.instagram.com/reel/DcJhuWfgef4/",
-        "insights_ok": false,
-        "insights_metrics": "",
-        "own_comments": 1,
-        "comments_external": 0,
-        "engagement": 2
-      },
-      "fb": {
-        "reactions": 1,
-        "comments": 0,
-        "shares": 0,
-        "reach": 0,
-        "reach_metric": "",
-        "engagement": 1
-      },
-      "engagement": 3,
       "_ig_attempted": true
     },
     {
@@ -4883,16 +4850,42 @@
       "fb": null,
       "engagement": 0,
       "_ig_attempted": true
+    },
+    {
+      "sig": "informative:25-attention-to-sales",
+      "layout": null,
+      "file": "studio/informative/01-attention-to-sales.jpg",
+      "is_reel": false,
+      "at": "2026-10-02T21:00:37.025795Z",
+      "caption": "An interactive website should do more than look different.\n\nThe job is to make the offer easier to understand and the ex",
+      "permalink": "https://www.instagram.com/p/DeAZnNeGFoS/",
+      "ig": {
+        "likes": 0,
+        "comments": 0,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "views": 0,
+        "permalink": "https://www.instagram.com/p/DeAZnNeGFoS/",
+        "insights_ok": false,
+        "insights_metrics": "",
+        "own_comments": 0,
+        "comments_external": 0,
+        "engagement": 0
+      },
+      "fb": null,
+      "engagement": 0,
+      "_ig_attempted": true
     }
   ],
   "by_format": [
     {
       "layout": "feature",
       "posts": 4,
-      "engagement": 14,
-      "ig_engagement": 12,
+      "engagement": 15,
+      "ig_engagement": 13,
       "fb_engagement": 2,
-      "avg_engagement": 3.5
+      "avg_engagement": 3.8
     },
     {
       "layout": "bigquote",
@@ -4911,14 +4904,6 @@
       "avg_engagement": 2.0
     },
     {
-      "layout": "reel:countup",
-      "posts": 5,
-      "engagement": 7,
-      "ig_engagement": 6,
-      "fb_engagement": 1,
-      "avg_engagement": 1.4
-    },
-    {
       "layout": "prodclaim",
       "posts": 6,
       "engagement": 8,
@@ -4933,6 +4918,14 @@
       "ig_engagement": 2,
       "fb_engagement": 3,
       "avg_engagement": 1.2
+    },
+    {
+      "layout": "reel:countup",
+      "posts": 4,
+      "engagement": 4,
+      "ig_engagement": 4,
+      "fb_engagement": 0,
+      "avg_engagement": 1.0
     },
     {
       "layout": "contrast",
@@ -5056,7 +5049,7 @@
     },
     {
       "layout": "unknown",
-      "posts": 4,
+      "posts": 5,
       "engagement": 0,
       "ig_engagement": 0,
       "fb_engagement": 0,
@@ -5067,10 +5060,6 @@
     "ig_attempted": 150,
     "ig_succeeded": 148,
     "ig_errors": [
-      {
-        "media_id": "18132986023730276",
-        "message": "insights unavailable: (#10) Application does not have permission for this action"
-      },
       {
         "media_id": "18065576354738299",
         "message": "insights unavailable: (#10) Application does not have permission for this action"
@@ -5146,15 +5135,15 @@
       {
         "media_id": "18101910842257853",
         "message": "insights unavailable: (#10) Application does not have permission for this action"
+      },
+      {
+        "media_id": "18620864836042263",
+        "message": "insights unavailable: (#10) Application does not have permission for this action"
       }
     ],
     "ig_error_count": 150,
-    "fb_succeeded": 144,
+    "fb_succeeded": 143,
     "fb_errors": [
-      {
-        "post_id": "1087307654468135_122101334912536059",
-        "message": "reach unavailable: (#100) The value must be a valid insights metric"
-      },
       {
         "post_id": "1087307654468135_122101338860536059",
         "message": "reach unavailable: (#100) The value must be a valid insights metric"
@@ -5230,13 +5219,17 @@
       {
         "post_id": "1087307654468135_122101494692536059",
         "message": "reach unavailable: (#100) The value must be a valid insights metric"
+      },
+      {
+        "post_id": "1087307654468135_122101500356536059",
+        "message": "reach unavailable: (#100) The value must be a valid insights metric"
       }
     ],
-    "fb_error_count": 144,
+    "fb_error_count": 143,
     "ig_with_insights": 0,
     "ig_reach_total": 0,
     "fb_reach_total": 0,
     "fb_reach_metric": "",
-    "own_comments_excluded": 144
+    "own_comments_excluded": 143
   }
 }
