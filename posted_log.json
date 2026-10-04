@@ -3314,5 +3314,17 @@
     ],
     "caption": "A product launch site is not just a homepage with a new product on it.\n\nThe experience needs a sequence.\n\nStart with the reason to care. Show the product clearly. Reveal the details that justify the value. Use interaction where it improves understanding. Then give the buyer a clear next step.\n\nGood launch design turns information into a story people can follow.\n\ngrowthterminal.io",
     "sig": "informative:26-idea-to-launch"
+  },
+  {
+    "media_id": "18412051105083445",
+    "at": "2026-10-04T19:49:07.107885Z",
+    "file": "studio/informative/03-motion-should-explain.jpg",
+    "is_carousel": false,
+    "carousel": "27-motion-should-explain",
+    "slides": [
+      "studio/informative/03-motion-should-explain.jpg"
+    ],
+    "caption": "Motion is not the strategy.\n\nA useful website interaction should help a buyer understand something faster: what the product does, why it matters, how it works, or what to do next.\n\nIf the animation cannot answer one of those questions, it may be decoration rather than communication.\n\ngrowthterminal.io",
+    "sig": "informative:27-motion-should-explain"
   }
 ]
