@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-03T10:38:30.112803Z",
+  "updated": "2026-10-04T11:18:43.475285Z",
   "count": 150,
   "posts": [
     {
@@ -330,39 +330,6 @@
         "engagement": 0
       },
       "engagement": 2,
-      "_ig_attempted": true
-    },
-    {
-      "sig": "reelfeat:Stop guessing where your",
-      "layout": "reel:feature",
-      "file": "creatives/gt_reel_20260817_210118.jpg",
-      "is_reel": true,
-      "at": "2026-08-17T21:02:43.542719Z",
-      "caption": "We find the one constraint capping your revenue, price the fix, and grade every call against real revenue. Diagnosis, no",
-      "permalink": "https://www.instagram.com/reel/DcJ9YGHkfFH/",
-      "ig": {
-        "likes": 1,
-        "comments": 1,
-        "saved": 0,
-        "shares": 0,
-        "reach": 0,
-        "views": 0,
-        "permalink": "https://www.instagram.com/reel/DcJ9YGHkfFH/",
-        "insights_ok": false,
-        "insights_metrics": "",
-        "own_comments": 1,
-        "comments_external": 0,
-        "engagement": 1
-      },
-      "fb": {
-        "reactions": 0,
-        "comments": 0,
-        "shares": 0,
-        "reach": 0,
-        "reach_metric": "",
-        "engagement": 0
-      },
-      "engagement": 1,
       "_ig_attempted": true
     },
     {
@@ -4876,6 +4843,32 @@
       "fb": null,
       "engagement": 0,
       "_ig_attempted": true
+    },
+    {
+      "sig": "informative:26-idea-to-launch",
+      "layout": null,
+      "file": "studio/informative/02-idea-to-launch.jpg",
+      "is_reel": false,
+      "at": "2026-10-03T19:28:53.698935Z",
+      "caption": "A product launch site is not just a homepage with a new product on it.\n\nThe experience needs a sequence.\n\nStart with the",
+      "permalink": "https://www.instagram.com/p/DeCz6PXmOyE/",
+      "ig": {
+        "likes": 0,
+        "comments": 0,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "views": 0,
+        "permalink": "https://www.instagram.com/p/DeCz6PXmOyE/",
+        "insights_ok": false,
+        "insights_metrics": "",
+        "own_comments": 0,
+        "comments_external": 0,
+        "engagement": 0
+      },
+      "fb": null,
+      "engagement": 0,
+      "_ig_attempted": true
     }
   ],
   "by_format": [
@@ -4913,11 +4906,11 @@
     },
     {
       "layout": "reel:feature",
-      "posts": 4,
-      "engagement": 5,
-      "ig_engagement": 2,
+      "posts": 3,
+      "engagement": 4,
+      "ig_engagement": 1,
       "fb_engagement": 3,
-      "avg_engagement": 1.2
+      "avg_engagement": 1.3
     },
     {
       "layout": "reel:countup",
@@ -5049,7 +5042,7 @@
     },
     {
       "layout": "unknown",
-      "posts": 5,
+      "posts": 6,
       "engagement": 0,
       "ig_engagement": 0,
       "fb_engagement": 0,
@@ -5060,10 +5053,6 @@
     "ig_attempted": 150,
     "ig_succeeded": 148,
     "ig_errors": [
-      {
-        "media_id": "18065576354738299",
-        "message": "insights unavailable: (#10) Application does not have permission for this action"
-      },
       {
         "media_id": "18121140985851642",
         "message": "insights unavailable: (#10) Application does not have permission for this action"
@@ -5139,15 +5128,15 @@
       {
         "media_id": "18620864836042263",
         "message": "insights unavailable: (#10) Application does not have permission for this action"
+      },
+      {
+        "media_id": "18140741197570316",
+        "message": "insights unavailable: (#10) Application does not have permission for this action"
       }
     ],
     "ig_error_count": 150,
-    "fb_succeeded": 143,
+    "fb_succeeded": 142,
     "fb_errors": [
-      {
-        "post_id": "1087307654468135_122101338860536059",
-        "message": "reach unavailable: (#100) The value must be a valid insights metric"
-      },
       {
         "post_id": "1087307654468135_122101342508536059",
         "message": "reach unavailable: (#100) The value must be a valid insights metric"
@@ -5223,13 +5212,17 @@
       {
         "post_id": "1087307654468135_122101500356536059",
         "message": "reach unavailable: (#100) The value must be a valid insights metric"
+      },
+      {
+        "post_id": "1087307654468135_122101502774536059",
+        "message": "reach unavailable: (#100) The value must be a valid insights metric"
       }
     ],
-    "fb_error_count": 143,
+    "fb_error_count": 142,
     "ig_with_insights": 0,
     "ig_reach_total": 0,
     "fb_reach_total": 0,
     "fb_reach_metric": "",
-    "own_comments_excluded": 143
+    "own_comments_excluded": 142
   }
 }
