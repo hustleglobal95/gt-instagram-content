@@ -1,12 +1,12 @@
 {
-  "updated": "2026-10-03T11:41:34.988Z",
+  "updated": "2026-10-04T12:22:22.869Z",
   "count": 253,
   "ranking_basis": "per_1k",
   "min_views_for_rate": 25,
   "rate_eligible": 88,
   "reach": {
-    "views": 18552,
-    "interactions": 948,
+    "views": 18553,
+    "interactions": 947,
     "median_views": 13,
     "zero_interaction_posts": 153
   },
@@ -24,16 +24,16 @@
     "outbound_reply_views": 30,
     "outbound_reply_interactions": 1,
     "outbound_replies_measured": 3,
-    "total_views_incl_replies": 18582,
-    "summed_views": 18552,
-    "platform_views": 2715,
-    "ratio": 6.844
+    "total_views_incl_replies": 18583,
+    "summed_views": 18553,
+    "platform_views": 2629,
+    "ratio": 7.068
   },
   "platform": {
     "Markus": {
-      "views": 2715,
-      "likes": 33,
-      "replies": 428,
+      "views": 2629,
+      "likes": 29,
+      "replies": 416,
       "reposts": 0,
       "quotes": 0,
       "followers_count": 33
@@ -3013,33 +3013,6 @@
       "basis": "total"
     },
     {
-      "at": "2026-08-29T16:44:10+0000",
-      "pillar": "authority",
-      "kind": "thread",
-      "isThread": true,
-      "parts": 1,
-      "parts_measured": 1,
-      "in_posted_log": true,
-      "text": "I have been posting daily for two weeks to a very small account.\n\nHere is what the numbers actually said, including the part that stung",
-      "accounts": [
-        "Markus"
-      ],
-      "permalink": "https://www.threads.com/@markusreidgt/post/DcoZQWSmlhP",
-      "metrics": {
-        "views": 17,
-        "likes": 0,
-        "replies": 4,
-        "reposts": 0,
-        "quotes": 0,
-        "shares": 0
-      },
-      "views": 17,
-      "engagement": 4,
-      "per_1k": 235.29,
-      "rateReliable": false,
-      "basis": "total"
-    },
-    {
       "at": "2026-08-19T13:09:36+0000",
       "pillar": "early",
       "kind": "thread",
@@ -3306,6 +3279,33 @@
       "views": 2,
       "engagement": 4,
       "per_1k": 2000,
+      "rateReliable": false,
+      "basis": "total"
+    },
+    {
+      "at": "2026-08-29T16:44:10+0000",
+      "pillar": "authority",
+      "kind": "thread",
+      "isThread": true,
+      "parts": 1,
+      "parts_measured": 1,
+      "in_posted_log": true,
+      "text": "I have been posting daily for two weeks to a very small account.\n\nHere is what the numbers actually said, including the part that stung",
+      "accounts": [
+        "Markus"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/DcoZQWSmlhP",
+      "metrics": {
+        "views": 17,
+        "likes": 0,
+        "replies": 3,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 17,
+      "engagement": 3,
+      "per_1k": 176.47,
       "rateReliable": false,
       "basis": "total"
     },
@@ -3863,14 +3863,14 @@
       ],
       "permalink": "https://www.threads.com/@markusreidgt/post/Dc7uZXFm4nM",
       "metrics": {
-        "views": 20,
+        "views": 21,
         "likes": 0,
         "replies": 0,
         "reposts": 0,
         "quotes": 0,
         "shares": 0
       },
-      "views": 20,
+      "views": 21,
       "engagement": 0,
       "per_1k": 0,
       "rateReliable": false,
@@ -7129,8 +7129,8 @@
     {
       "key": "authority",
       "posts": 9,
-      "engagement": 16,
-      "avg_engagement": 1.78,
+      "engagement": 15,
+      "avg_engagement": 1.67,
       "views": 72,
       "avg_per_1k": 122.56
     },
@@ -7251,8 +7251,8 @@
     {
       "key": "thread",
       "posts": 67,
-      "engagement": 544,
-      "avg_engagement": 8.12,
+      "engagement": 543,
+      "avg_engagement": 8.1,
       "views": 11486,
       "avg_per_1k": 88.8
     },
@@ -7629,8 +7629,8 @@
     {
       "key": "thread",
       "posts": 68,
-      "engagement": 788,
-      "avg_engagement": 11.59,
+      "engagement": 787,
+      "avg_engagement": 11.57,
       "views": 11555,
       "avg_per_1k": 163.74
     },
