@@ -1,0 +1,102 @@
+{
+  "version": "2.0.0",
+  "note": "Conversion-first creative briefs. These are not publishable until a visual is produced and explicitly approved. They exist to stop the autoposter from drifting back into generic educational content.",
+  "briefs": [
+    {
+      "id": "cx01-product-is-interface",
+      "approved": false,
+      "archetype": "experience-demo",
+      "buyer": "premium product brand planning a launch",
+      "service": "3D scroll experiences",
+      "hook": "MAKE THE PRODUCT THE INTERFACE.",
+      "support": "Let people inspect, reveal, and understand it while they scroll.",
+      "cta": "Build the experience",
+      "conversion_goal": "start-project",
+      "visual_concept": "A premium physical product isolated in a dark studio. Three exploded states of the same object float along one scroll path, connected by a precise orange motion line. No browser chrome. The product is the dominant visual."
+    },
+    {
+      "id": "cx02-launch-reveal",
+      "approved": false,
+      "archetype": "launch-transformation",
+      "buyer": "brand launching a new product",
+      "service": "product launches",
+      "hook": "A LAUNCH SHOULD FEEL LIKE A REVEAL.",
+      "support": "Build anticipation, show the detail, then make the next step obvious.",
+      "cta": "Start a project",
+      "conversion_goal": "start-project",
+      "visual_concept": "One object moves from silhouette to partially revealed to fully lit. The states overlap like one continuous cinematic sequence. The composition feels like a campaign still, not a website screenshot."
+    },
+    {
+      "id": "cx03-demo-dont-describe",
+      "approved": false,
+      "archetype": "experience-demo",
+      "buyer": "company selling a product that needs explanation",
+      "service": "interactive websites",
+      "hook": "DEMO IT. DON'T DESCRIBE IT.",
+      "support": "Turn features into something the buyer can explore.",
+      "cta": "See the work",
+      "conversion_goal": "visit-work",
+      "visual_concept": "A product cross-section with three labeled interactive hotspots and one visible cursor path. The product occupies more than half the frame. Copy remains secondary."
+    },
+    {
+      "id": "cx04-static-launch",
+      "approved": false,
+      "archetype": "buyer-problem",
+      "buyer": "brand with a high-value launch using a conventional landing page",
+      "service": "product launches",
+      "hook": "YOUR PRODUCT MOVES. YOUR SITE SHOULD TOO.",
+      "support": "Make the launch behave like the thing you're selling.",
+      "cta": "Request a concept",
+      "conversion_goal": "request-concept",
+      "visual_concept": "Hard visual contrast: left side a flat static card, right side the same product breaking out into layered depth and motion. The right side must feel materially richer, not merely brighter."
+    },
+    {
+      "id": "cx05-scroll-story",
+      "approved": false,
+      "archetype": "launch-transformation",
+      "buyer": "brand that needs a cinematic story rather than a brochure site",
+      "service": "3D scroll experiences",
+      "hook": "TURN SCROLL INTO THE STORY.",
+      "support": "One continuous sequence from first frame to final action.",
+      "cta": "Build the experience",
+      "conversion_goal": "start-project",
+      "visual_concept": "A vertical narrative path with four cinematic frames of one hero object changing state. Frames are connected physically, not arranged as a generic four-card grid."
+    },
+    {
+      "id": "cx06-premium-feel",
+      "approved": false,
+      "archetype": "buyer-problem",
+      "buyer": "premium brand whose current website undersells the product",
+      "service": "custom digital experiences",
+      "hook": "PREMIUM SHOULD BE FELT BEFORE IT'S READ.",
+      "support": "Interaction, pacing, and detail make the first impression do the selling.",
+      "cta": "See the work",
+      "conversion_goal": "visit-work",
+      "visual_concept": "Editorial macro product detail with a controlled cursor-reveal window exposing hidden material or internal structure. No generic luxury gradients."
+    },
+    {
+      "id": "cx07-process-proof",
+      "approved": false,
+      "archetype": "process-proof",
+      "buyer": "founder comparing custom studios",
+      "service": "custom digital experiences",
+      "hook": "BUILT AROUND THE PRODUCT. NOT A TEMPLATE.",
+      "support": "Story, interaction, motion, and responsive behavior designed together.",
+      "cta": "Start a project",
+      "conversion_goal": "start-project",
+      "visual_concept": "One final polished screen sits above a stripped-back system layer showing motion path, interaction states, type scale, and responsive frames. It should look like evidence from a real design process, not a moodboard."
+    },
+    {
+      "id": "cx08-detail-sells",
+      "approved": false,
+      "archetype": "experience-demo",
+      "buyer": "brand selling a product where construction or material quality matters",
+      "service": "interactive websites",
+      "hook": "SHOW THE DETAIL THEY'RE PAYING FOR.",
+      "support": "Use interaction to reveal construction, materials, and function.",
+      "cta": "Request a concept",
+      "conversion_goal": "request-concept",
+      "visual_concept": "Macro component detail expands into a clean exploded view. One orange annotation line identifies a meaningful feature. The object, not the copy, carries the frame."
+    }
+  ]
+}
