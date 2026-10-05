@@ -10,7 +10,7 @@ from PIL import Image, ImageStat
 
 QUEUE = pathlib.Path("studio_carousels.json")
 APPROVED_MEDIA = pathlib.Path("studio_approved_media.json")
-PRICE = re.compile(r"[$€£¥]\\s?\\d|\\b\\d[\\d,.]*\\s?(?:usd|eur|gbp|dollars?|euros?|pounds?)\\b", re.I)
+PRICE = re.compile(r"[$€£¥]\s?\d|\b\d[\d,.]*\s?(?:usd|eur|gbp|dollars?|euros?|pounds?)\b", re.I)
 MIN_BYTES = 100_000
 MIN_SIDE = 1000
 MIN_CONTRAST = 12.0
@@ -32,7 +32,7 @@ def load_json(path):
 def git_blob_sha(path):
     data = path.read_bytes()
     h = hashlib.sha1()
-    h.update(f"blob {len(data)}\\0".encode("utf-8"))
+    h.update(f"blob {len(data)}\0".encode("utf-8"))
     h.update(data)
     return h.hexdigest()
 
