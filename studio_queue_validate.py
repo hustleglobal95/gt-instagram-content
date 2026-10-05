@@ -1,25 +1,78 @@
 #!/usr/bin/env python3
-"""Validate owner-approved informative Growth Terminal posts."""
+"""Fail closed unless the Instagram queue contains owner-approved, high-quality local media."""
+import hashlib
 import json
 import pathlib
 import re
 import sys
-from urllib.parse import urlparse
+
+from PIL import Image, ImageStat
 
 QUEUE = pathlib.Path("studio_carousels.json")
-PRICE = re.compile(r"[$€£¥]\s?\d|\b\d[\d,.]*\s?(?:usd|eur|gbp|dollars?|euros?|pounds?)\b", re.I)
-ALLOWED_TOPICS = {"interactive-websites", "product-launches", "3d-scroll", "product-storytelling"}
-ALLOWED_REFERENCES = {"DIGI MONK", "Alex Hormozi"}
+APPROVED_MEDIA = pathlib.Path("studio_approved_media.json")
+PRICE = re.compile(r"[$€£¥]\\s?\\d|\\b\\d[\\d,.]*\\s?(?:usd|eur|gbp|dollars?|euros?|pounds?)\\b", re.I)
+MIN_BYTES = 100_000
+MIN_SIDE = 1000
+MIN_CONTRAST = 12.0
+ALLOWED_FORMATS = {"JPEG", "PNG", "WEBP"}
+
 
 def fail(message):
     print("QUEUE INVALID: " + message)
     raise SystemExit(1)
 
-def main():
+
+def load_json(path):
     try:
-        data = json.loads(QUEUE.read_text())
+        return json.loads(path.read_text())
     except Exception as exc:
-        fail(f"cannot read {QUEUE}: {exc}")
+        fail(f"cannot read {path}: {exc}")
+
+
+def git_blob_sha(path):
+    data = path.read_bytes()
+    h = hashlib.sha1()
+    h.update(f"blob {len(data)}\\0".encode("utf-8"))
+    h.update(data)
+    return h.hexdigest()
+
+
+def validate_image(path, expected_sha):
+    if not path.is_file():
+        fail(f"missing image {path}")
+    if path.stat().st_size < MIN_BYTES:
+        fail(f"{path} is only {path.stat().st_size} bytes; low-quality media is blocked")
+
+    actual_sha = git_blob_sha(path)
+    if actual_sha != expected_sha:
+        fail(f"{path} does not match its owner-approved blob SHA")
+
+    try:
+        with Image.open(path) as im:
+            fmt = im.format
+            width, height = im.size
+            if fmt not in ALLOWED_FORMATS:
+                fail(f"{path} has unsupported format {fmt}")
+            if width < MIN_SIDE or height < MIN_SIDE:
+                fail(f"{path} is {width}x{height}; both sides must be at least {MIN_SIDE}px")
+            gray = im.convert("L").resize((128, 128))
+            contrast = float(ImageStat.Stat(gray).stddev[0])
+            if contrast < MIN_CONTRAST:
+                fail(f"{path} is visually too flat/sparse (contrast {contrast:.1f})")
+    except SystemExit:
+        raise
+    except Exception as exc:
+        fail(f"cannot decode {path}: {exc}")
+
+    return width, height, path.stat().st_size
+
+
+def main():
+    data = load_json(QUEUE)
+    approved_data = load_json(APPROVED_MEDIA)
+    approved = approved_data.get("media")
+    if not isinstance(approved, dict) or not approved:
+        fail("studio_approved_media.json has no approved media")
 
     if data.get("loop") is not False:
         fail("loop must be false")
@@ -38,46 +91,35 @@ def main():
 
         if post.get("approved") is not True:
             fail(f"{pid} is not explicitly approved")
-        if post.get("content_type") != "informative":
-            fail(f"{pid} must use content_type=informative")
-        if post.get("topic") not in ALLOWED_TOPICS:
-            fail(f"{pid} has an unsupported business topic")
-        refs = set(post.get("references") or [])
-        if not refs or not refs.issubset(ALLOWED_REFERENCES):
-            fail(f"{pid} may reference only DIGI MONK and Alex Hormozi")
-        if post.get("uses_project_assets") is not False:
-            fail(f"{pid} must set uses_project_assets=false")
+        if post.get("owner_visual_approved") is not True:
+            fail(f"{pid} is missing owner_visual_approved=true")
+        if post.get("content_type") != "marketing":
+            fail(f"{pid} must use content_type=marketing")
         if post.get("visual_mode") != "image-led":
             fail(f"{pid} must use visual_mode=image-led")
         if not str(post.get("campaign_goal", "")).strip():
             fail(f"{pid} is missing campaign_goal")
-        if not str(post.get("lesson", "")).strip():
-            fail(f"{pid} is missing lesson")
-
         if post.get("media_urls"):
-            media = [str(u).strip() for u in post["media_urls"]]
-            for u in media:
-                parsed = urlparse(u)
-                if parsed.scheme != "https" or not parsed.netloc:
-                    fail(f"{pid} has invalid media_url {u}")
-        elif post.get("media_files"):
-            media = [str(s).lstrip("/") for s in post["media_files"]]
-            for s in media:
-                if not pathlib.Path(s).is_file():
-                    fail(f"{pid} references missing image {s}")
-        else:
-            media = [str(pathlib.Path(str(post.get("dir", ""))) / str(s)) for s in post.get("slides", [])]
-            for s in media:
-                if not pathlib.Path(s).is_file():
-                    fail(f"{pid} references missing image {s}")
+            fail(f"{pid} uses remote media; only owner-approved repo files may publish")
 
-        if not (1 <= len(media) <= 10):
-            fail(f"{pid} must contain 1 to 10 images")
+        media = post.get("media_files")
+        if not isinstance(media, list) or not (1 <= len(media) <= 10):
+            fail(f"{pid} media_files must contain 1 to 10 images")
 
-        for item in media:
-            if item in seen_media:
-                fail(f"image reused across future posts: {item}")
-            seen_media.add(item)
+        for raw_path in media:
+            key = str(raw_path).lstrip("/").replace("\\", "/")
+            if key in seen_media:
+                fail(f"image reused across future posts: {key}")
+            seen_media.add(key)
+
+            record = approved.get(key)
+            if not isinstance(record, dict):
+                fail(f"{pid} references media that is not in the owner approval registry: {key}")
+            expected_sha = str(record.get("git_blob_sha", "")).strip()
+            if not re.fullmatch(r"[0-9a-f]{40}", expected_sha):
+                fail(f"{key} has an invalid approved blob SHA")
+            width, height, size = validate_image(pathlib.Path(key), expected_sha)
+            print(f"verified media: {key} ({width}x{height}, {size} bytes)")
 
         caption = str(post.get("caption", "")).strip()
         if not caption:
@@ -87,8 +129,9 @@ def main():
         if re.search("[–—]", caption):
             fail(f"{pid} caption contains a banned dash")
 
-    print(f"queue valid: {len(posts)} informative posts / {len(seen_media)} unique images")
+    print(f"queue valid: {len(posts)} owner-approved marketing post(s) / {len(seen_media)} unique image(s)")
     return 0
+
 
 if __name__ == "__main__":
     sys.exit(main())
