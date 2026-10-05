@@ -170,6 +170,13 @@ def main():
             "sig": p.get("sig"), "layout": p.get("layout"), "file": p.get("file"),
             "is_reel": bool(p.get("is_reel")), "at": p.get("at"),
             "caption": (p.get("caption") or "")[:120], "permalink": "",
+            "campaign_key": p.get("campaign_key"),
+            "archetype": p.get("archetype"),
+            "service": p.get("service"),
+            "buyer": p.get("buyer"),
+            "hook": p.get("hook"),
+            "cta": p.get("cta"),
+            "conversion_goal": p.get("conversion_goal"),
             "ig": None, "fb": None, "engagement": 0,
         }
         if IG_TOKEN and p.get("media_id"):
@@ -203,11 +210,28 @@ def main():
     for d in fmt.values():
         d["avg_engagement"] = round(d["engagement"] / d["posts"], 1) if d["posts"] else 0
 
+    def rollup(field):
+        groups = {}
+        for r in rows:
+            key = r.get(field)
+            if not key:
+                continue
+            d = groups.setdefault(key, {"key": key, "posts": 0, "engagement": 0})
+            d["posts"] += 1
+            d["engagement"] += r["engagement"]
+        for d in groups.values():
+            d["avg_engagement"] = round(d["engagement"] / d["posts"], 1) if d["posts"] else 0
+        return sorted(groups.values(), key=lambda d: d["avg_engagement"], reverse=True)
+
     out = {
         "updated": datetime.datetime.utcnow().isoformat() + "Z",
         "count": len(rows),
         "posts": sorted(rows, key=lambda r: r["engagement"], reverse=True),
         "by_format": sorted(fmt.values(), key=lambda d: d["avg_engagement"], reverse=True),
+        "by_archetype": rollup("archetype"),
+        "by_service": rollup("service"),
+        "by_conversion_goal": rollup("conversion_goal"),
+        "by_campaign": rollup("campaign_key"),
         # Collection health. Without this, a total API failure and a genuine
         # zero engagement week look identical in the file, and anything that
         # reads this file downstream cannot tell which it is looking at.
