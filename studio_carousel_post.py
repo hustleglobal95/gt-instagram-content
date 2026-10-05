@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Publish the next owner-approved Growth Terminal marketing post to Instagram."""
+"""Publish the next owner-approved Growth Terminal conversion post to Instagram."""
 import datetime
 import hashlib
 import json
@@ -14,6 +14,7 @@ from price_guard import refuse_if_price
 QUEUE = "studio_carousels.json"
 USED = "studio_carousels_used.json"
 APPROVED_MEDIA = "studio_approved_media.json"
+SYSTEM = "studio_design_system.json"
 
 
 def refuse(msg):
@@ -39,23 +40,35 @@ def git_blob_sha(path):
 
 def main():
     queue = load(QUEUE, None)
-    if not queue or not queue.get("carousels"):
-        refuse("studio_carousels.json is missing or empty.")
+    if queue is None or not isinstance(queue.get("carousels"), list):
+        refuse("studio_carousels.json is missing or invalid.")
+
+    if not queue["carousels"]:
+        print("Conversion queue is empty. Nothing publishes until a finished visual is owner-approved.")
+        return 0
 
     approved_data = load(APPROVED_MEDIA, None)
     approved_media = (approved_data or {}).get("media")
     if not isinstance(approved_media, dict) or not approved_media:
         refuse("studio_approved_media.json is missing or empty.")
 
+    system = load(SYSTEM, None)
+    if not isinstance(system, dict):
+        refuse("studio_design_system.json is missing.")
+
     used = load(USED, [])
     used_ids = {u.get("id") for u in used}
     nxt = next((p for p in queue["carousels"] if p["id"] not in used_ids), None)
 
     if nxt is None:
-        print("Every owner-approved marketing post has been published. Nothing runs today.")
+        print("Every owner-approved conversion post has been published. Nothing runs today.")
         return 0
 
     pid = nxt.get("id", "<unknown>")
+    required = ["buyer", "service", "archetype", "hook", "cta", "conversion_goal", "visual_concept", "campaign_key"]
+    missing = [k for k in required if not str(nxt.get(k, "")).strip()]
+    if missing:
+        refuse(f"{pid} is missing conversion metadata: {missing}")
 
     if nxt.get("approved") is not True:
         refuse(f"{pid} is not explicitly approved.")
@@ -65,8 +78,6 @@ def main():
         refuse(f"{pid} is not marketing content.")
     if nxt.get("visual_mode") != "image-led":
         refuse(f"{pid} is not image-led.")
-    if not str(nxt.get("campaign_goal", "")).strip():
-        refuse(f"{pid} has no campaign goal.")
     if nxt.get("media_urls"):
         refuse(f"{pid} uses remote media. Remote media is blocked.")
 
@@ -99,7 +110,7 @@ def main():
         if not cp.wait_for_url(url):
             refuse(f"image is not live at {url}")
 
-    print(f"Next owner-approved marketing post: {pid} ({len(urls)} image(s))")
+    print(f"Next conversion post: {pid} ({len(urls)} image(s))")
 
     if cp.DRY_RUN:
         print("[DRY RUN] every check passed. Nothing published, nothing recorded.")
@@ -112,7 +123,7 @@ def main():
 
     now = datetime.datetime.now(datetime.timezone.utc).isoformat().replace("+00:00", "Z")
 
-    used.append({"id": pid, "at": now, "media_id": media_id})
+    used.append({"id": pid, "at": now, "media_id": media_id, "campaign_key": nxt["campaign_key"]})
     with open(USED, "w") as f:
         json.dump(used, f, indent=2)
         f.write("\n")
@@ -126,7 +137,14 @@ def main():
         "carousel": pid,
         "slides": images,
         "caption": caption,
-        "sig": f"marketing:{pid}"
+        "sig": f"conversion:{pid}",
+        "campaign_key": nxt["campaign_key"],
+        "archetype": nxt["archetype"],
+        "service": nxt["service"],
+        "buyer": nxt["buyer"],
+        "hook": nxt["hook"],
+        "cta": nxt["cta"],
+        "conversion_goal": nxt["conversion_goal"]
     })
     cp.save_state(log)
 
