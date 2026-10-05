@@ -1,9 +1,9 @@
-name: GT Studio Carousel (1x/day)
+name: GT Studio Conversion Publisher (1x/day)
 
-# Publishes the next approved Growth Terminal carousel to @markusreidgt on Instagram.
-# The only source is studio_carousels.json (owner approved, 29 Sep 2026). Each
-# carousel posts once, in order; there is no loop, and when the list is done the
-# job posts nothing. Instagram only: no Facebook, no Threads.
+# Publishes only owner-approved Growth Terminal conversion creative to @markusreidgt.
+# studio_design_system.json defines the visual and conversion rules. The queue is
+# allowed to be empty: an idle day is better than publishing filler. Posts run once,
+# in order, never loop, and never fall back to legacy generators.
 #
 # 16:45 UTC is 12:45pm in Florida while it is on EDT (11:45am after Nov 2 2026).
 # The minute is off :00 on purpose, where GitHub drops scheduled runs.
@@ -38,10 +38,13 @@ jobs:
       - name: Install Python deps
         run: pip install requests pillow
 
-      - name: Validate owner-approved media queue
+      - name: Validate conversion design system
+        run: python studio_system_validate.py
+
+      - name: Validate conversion-ready media queue
         run: python studio_queue_validate.py
 
-      - name: Publish the next approved carousel
+      - name: Publish the next conversion-ready post
         env:
           GT_IG_USER_ID:      ${{ secrets.GT_IG_USER_ID }}
           GT_IG_ACCESS_TOKEN: ${{ secrets.GT_IG_ACCESS_TOKEN }}
