@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-04T11:18:43.475285Z",
+  "updated": "2026-10-05T12:37:39.229382Z",
   "count": 150,
   "posts": [
     {
@@ -11,7 +11,7 @@
       "caption": "Find the one constraint holding your growth back.\n\nGrowth Terminal reads the report you already run, names the single co",
       "permalink": "https://www.instagram.com/p/DcZ1XouGjD4/",
       "ig": {
-        "likes": 13,
+        "likes": 12,
         "comments": 1,
         "saved": 0,
         "shares": 0,
@@ -22,7 +22,7 @@
         "insights_metrics": "",
         "own_comments": 1,
         "comments_external": 0,
-        "engagement": 13
+        "engagement": 12
       },
       "fb": {
         "reactions": 0,
@@ -32,7 +32,7 @@
         "reach_metric": "",
         "engagement": 0
       },
-      "engagement": 13,
+      "engagement": 12,
       "_ig_attempted": true
     },
     {
@@ -1023,39 +1023,6 @@
         "engagement": 0
       },
       "engagement": 1,
-      "_ig_attempted": true
-    },
-    {
-      "sig": "reelnum:60",
-      "layout": "reel:countup",
-      "file": "creatives/gt_reel_20260818_010116.jpg",
-      "is_reel": true,
-      "at": "2026-08-18T01:01:46.001041Z",
-      "caption": "60 seconds from spreadsheet to diagnosis. Add the add-on to Google Sheets\u2122, point it at the report you already have, and",
-      "permalink": "https://www.instagram.com/reel/DcKYvpClZol/",
-      "ig": {
-        "likes": 0,
-        "comments": 1,
-        "saved": 0,
-        "shares": 0,
-        "reach": 0,
-        "views": 0,
-        "permalink": "https://www.instagram.com/reel/DcKYvpClZol/",
-        "insights_ok": false,
-        "insights_metrics": "",
-        "own_comments": 1,
-        "comments_external": 0,
-        "engagement": 0
-      },
-      "fb": {
-        "reactions": 0,
-        "comments": 0,
-        "shares": 0,
-        "reach": 0,
-        "reach_metric": "",
-        "engagement": 0
-      },
-      "engagement": 0,
       "_ig_attempted": true
     },
     {
@@ -4869,16 +4836,42 @@
       "fb": null,
       "engagement": 0,
       "_ig_attempted": true
+    },
+    {
+      "sig": "informative:27-motion-should-explain",
+      "layout": null,
+      "file": "studio/informative/03-motion-should-explain.jpg",
+      "is_reel": false,
+      "at": "2026-10-04T19:49:07.107885Z",
+      "caption": "Motion is not the strategy.\n\nA useful website interaction should help a buyer understand something faster: what the prod",
+      "permalink": "https://www.instagram.com/p/DeFbBNRj1T0/",
+      "ig": {
+        "likes": 0,
+        "comments": 0,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "views": 0,
+        "permalink": "https://www.instagram.com/p/DeFbBNRj1T0/",
+        "insights_ok": false,
+        "insights_metrics": "",
+        "own_comments": 0,
+        "comments_external": 0,
+        "engagement": 0
+      },
+      "fb": null,
+      "engagement": 0,
+      "_ig_attempted": true
     }
   ],
   "by_format": [
     {
       "layout": "feature",
       "posts": 4,
-      "engagement": 15,
-      "ig_engagement": 13,
+      "engagement": 14,
+      "ig_engagement": 12,
       "fb_engagement": 2,
-      "avg_engagement": 3.8
+      "avg_engagement": 3.5
     },
     {
       "layout": "bigquote",
@@ -4914,11 +4907,11 @@
     },
     {
       "layout": "reel:countup",
-      "posts": 4,
+      "posts": 3,
       "engagement": 4,
       "ig_engagement": 4,
       "fb_engagement": 0,
-      "avg_engagement": 1.0
+      "avg_engagement": 1.3
     },
     {
       "layout": "contrast",
@@ -5042,7 +5035,7 @@
     },
     {
       "layout": "unknown",
-      "posts": 6,
+      "posts": 7,
       "engagement": 0,
       "ig_engagement": 0,
       "fb_engagement": 0,
@@ -5053,10 +5046,6 @@
     "ig_attempted": 150,
     "ig_succeeded": 148,
     "ig_errors": [
-      {
-        "media_id": "18121140985851642",
-        "message": "insights unavailable: (#10) Application does not have permission for this action"
-      },
       {
         "media_id": "17887294077611366",
         "message": "insights unavailable: (#10) Application does not have permission for this action"
@@ -5132,15 +5121,15 @@
       {
         "media_id": "18140741197570316",
         "message": "insights unavailable: (#10) Application does not have permission for this action"
+      },
+      {
+        "media_id": "18096986405419335",
+        "message": "insights unavailable: (#10) Application does not have permission for this action"
       }
     ],
     "ig_error_count": 150,
-    "fb_succeeded": 142,
+    "fb_succeeded": 141,
     "fb_errors": [
-      {
-        "post_id": "1087307654468135_122101342508536059",
-        "message": "reach unavailable: (#100) The value must be a valid insights metric"
-      },
       {
         "post_id": "1087307654468135_122101356416536059",
         "message": "reach unavailable: (#100) The value must be a valid insights metric"
@@ -5216,13 +5205,17 @@
       {
         "post_id": "1087307654468135_122101502774536059",
         "message": "reach unavailable: (#100) The value must be a valid insights metric"
+      },
+      {
+        "post_id": "1087307654468135_122101509356536059",
+        "message": "reach unavailable: (#100) The value must be a valid insights metric"
       }
     ],
-    "fb_error_count": 142,
+    "fb_error_count": 141,
     "ig_with_insights": 0,
     "ig_reach_total": 0,
     "fb_reach_total": 0,
     "fb_reach_metric": "",
-    "own_comments_excluded": 142
+    "own_comments_excluded": 141
   }
 }
