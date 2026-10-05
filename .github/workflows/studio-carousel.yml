@@ -36,9 +36,9 @@ jobs:
           python-version: '3.11'
 
       - name: Install Python deps
-        run: pip install requests
+        run: pip install requests pillow
 
-      - name: Validate curated marketing queue
+      - name: Validate owner-approved media queue
         run: python studio_queue_validate.py
 
       - name: Publish the next approved carousel

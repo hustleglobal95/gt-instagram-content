@@ -1,173 +1,27 @@
 {
-  "note": "Owner-approved informative Growth Terminal posts. DIGI MONK and Alex Hormozi are the only editorial references. Posts publish once, in order, and never loop.",
+  "note": "Fail-closed Growth Terminal Instagram queue. Rebuilt 4 Oct 2026 after a low-quality post escaped the prior metadata-only gate. Every queued visual must be an exact file in studio_approved_media.json. No remote media and no generated filler may publish automatically.",
   "account": "markusreidgt",
   "loop": false,
   "visual_standard": {
     "required_mode": "image-led",
-    "rule": "Every post teaches a useful business lesson about interactive websites, product launches, 3D scroll experiences, or product storytelling. No project-asset filler."
+    "local_media_only": true,
+    "owner_visual_approval_required": true,
+    "minimum_side_px": 1000,
+    "minimum_file_bytes": 100000,
+    "rule": "Publish the visual, not a generic text lesson. The image must sell or demonstrate interactive websites, product launches, or 3D scroll experiences."
   },
   "carousels": [
     {
-      "id": "25-attention-to-sales",
+      "id": "34-approved-core-services",
       "approved": true,
-      "content_type": "informative",
-      "topic": "interactive-websites",
-      "references": [
-        "DIGI MONK",
-        "Alex Hormozi"
-      ],
-      "uses_project_assets": false,
+      "owner_visual_approved": true,
+      "content_type": "marketing",
       "visual_mode": "image-led",
-      "campaign_goal": "Explain what an interactive website should do for a buyer.",
-      "lesson": "Interaction should capture attention, explain the offer, sustain engagement, and make the next action clearer.",
+      "campaign_goal": "Sell Growth Terminal's core offer with the owner-approved interactive websites, product launches, and 3D scroll creative.",
       "media_files": [
-        "studio/informative/01-attention-to-sales.jpg"
+        "creatives/gt_approved_20261001_interactive-websites-product-launches-3d-scroll.png"
       ],
-      "caption": "An interactive website should do more than look different.\n\nThe job is to make the offer easier to understand and the experience easier to remember.\n\nA useful interaction has a purpose: capture attention, explain the product, keep the buyer engaged, then make the next action obvious.\n\nThat is the difference between adding motion and designing an experience.\n\ngrowthterminal.io"
-    },
-    {
-      "id": "26-idea-to-launch",
-      "approved": true,
-      "content_type": "informative",
-      "topic": "product-launches",
-      "references": [
-        "DIGI MONK",
-        "Alex Hormozi"
-      ],
-      "uses_project_assets": false,
-      "visual_mode": "image-led",
-      "campaign_goal": "Teach the structure of a strong digital product launch.",
-      "lesson": "A launch experience should move from positioning to design, interaction, and a clear launch path.",
-      "media_files": [
-        "studio/informative/02-idea-to-launch.jpg"
-      ],
-      "caption": "A product launch site is not just a homepage with a new product on it.\n\nThe experience needs a sequence.\n\nStart with the reason to care. Show the product clearly. Reveal the details that justify the value. Use interaction where it improves understanding. Then give the buyer a clear next step.\n\nGood launch design turns information into a story people can follow.\n\ngrowthterminal.io"
-    },
-    {
-      "id": "27-motion-should-explain",
-      "approved": true,
-      "content_type": "informative",
-      "topic": "interactive-websites",
-      "references": [
-        "DIGI MONK",
-        "Alex Hormozi"
-      ],
-      "uses_project_assets": false,
-      "visual_mode": "image-led",
-      "campaign_goal": "Teach why website motion should have a business purpose.",
-      "lesson": "Motion should help a buyer understand the product or next action instead of existing as decoration.",
-      "media_files": [
-        "studio/informative/03-motion-should-explain.jpg"
-      ],
-      "caption": "Motion is not the strategy.\n\nA useful website interaction should help a buyer understand something faster: what the product does, why it matters, how it works, or what to do next.\n\nIf the animation cannot answer one of those questions, it may be decoration rather than communication.\n\ngrowthterminal.io"
-    },
-    {
-      "id": "28-3d-needs-a-reason",
-      "approved": true,
-      "content_type": "informative",
-      "topic": "3d-scroll",
-      "references": [
-        "DIGI MONK",
-        "Alex Hormozi"
-      ],
-      "uses_project_assets": false,
-      "visual_mode": "image-led",
-      "campaign_goal": "Explain when 3D adds real value to a website.",
-      "lesson": "3D is most useful when depth helps explain scale, construction, function, or configuration.",
-      "media_files": [
-        "studio/informative/04-3d-needs-a-reason.jpg"
-      ],
-      "caption": "A 3D website needs a reason to be 3D.\n\nDepth is useful when it helps people understand scale, construction, function, configuration, or a detail that a flat image cannot communicate as clearly.\n\nThe goal is not to make an object spin. The goal is to make the product easier to understand.\n\ngrowthterminal.io"
-    },
-    {
-      "id": "29-launch-questions-in-order",
-      "approved": true,
-      "content_type": "informative",
-      "topic": "product-launches",
-      "references": [
-        "DIGI MONK",
-        "Alex Hormozi"
-      ],
-      "uses_project_assets": false,
-      "visual_mode": "image-led",
-      "campaign_goal": "Teach the information sequence behind a clear product launch.",
-      "lesson": "A launch should answer why the buyer should care, what the product is, why it is better, and what to do next.",
-      "media_files": [
-        "studio/informative/05-launch-questions-in-order.jpg"
-      ],
-      "caption": "A strong product launch answers questions in the order the buyer experiences them.\n\nWhy should I care?\nWhat is it?\nWhy is it better?\nWhat do I do next?\n\nWhen a launch experience answers those questions clearly, design and interaction have a job instead of becoming noise.\n\ngrowthterminal.io"
-    },
-    {
-      "id": "30-websites-make-offer-clear",
-      "approved": true,
-      "content_type": "informative",
-      "topic": "interactive-websites",
-      "references": [
-        "DIGI MONK",
-        "Alex Hormozi"
-      ],
-      "uses_project_assets": false,
-      "visual_mode": "image-led",
-      "campaign_goal": "Explain the job of a high-performing website.",
-      "lesson": "A website should capture attention, explain the offer, guide the next step, and make the brand memorable.",
-      "media_urls": [
-        "https://d2ol7oe51mr4n9.cloudfront.net/user_3FugzGV89ehMBrUoVdwLJxFujO5/612400ab-1817-4e50-9bbf-b74f9fcdc41d.jpg"
-      ],
-      "caption": "The best websites do not just look good.\n\nThey make the offer easier to understand.\n\nA strong site should capture attention quickly, explain what you do, guide the next step, and leave the brand easier to remember.\n\nDesign earns its place when it improves clarity.\n\ngrowthterminal.io"
-    },
-    {
-      "id": "31-launch-needs-sequence",
-      "approved": true,
-      "content_type": "informative",
-      "topic": "product-launches",
-      "references": [
-        "DIGI MONK",
-        "Alex Hormozi"
-      ],
-      "uses_project_assets": false,
-      "visual_mode": "image-led",
-      "campaign_goal": "Explain why product launches need a deliberate sequence.",
-      "lesson": "A launch should move from interest to details to experience to action.",
-      "media_urls": [
-        "https://d2ol7oe51mr4n9.cloudfront.net/user_3FugzGV89ehMBrUoVdwLJxFujO5/9f638a82-de12-4b42-9af5-baaa6dc61e57.jpg"
-      ],
-      "caption": "A product launch needs a sequence, not just a page.\n\nCreate interest first. Then show the product clearly. Explain the details that justify the value. Show how it fits into real use. End with an obvious next step.\n\nThe sequence is what turns information into a launch experience.\n\ngrowthterminal.io"
-    },
-    {
-      "id": "32-experiences-help-decide",
-      "approved": true,
-      "content_type": "informative",
-      "topic": "product-storytelling",
-      "references": [
-        "DIGI MONK",
-        "Alex Hormozi"
-      ],
-      "uses_project_assets": false,
-      "visual_mode": "image-led",
-      "campaign_goal": "Show how interactive experiences can help buyers make decisions.",
-      "lesson": "Interactive experiences are useful when they let buyers explore, inspect, compare, and choose with more confidence.",
-      "media_urls": [
-        "https://d2ol7oe51mr4n9.cloudfront.net/user_3FugzGV89ehMBrUoVdwLJxFujO5/05f853a8-2937-4b71-a790-a17a8fe011c6.jpg"
-      ],
-      "caption": "Interactive experiences should help people decide, not just impress them.\n\nLet buyers explore the offer. Let them inspect important details. Let them compare options. Give them enough context to choose with confidence.\n\nInteraction is strongest when it removes uncertainty.\n\ngrowthterminal.io"
-    },
-    {
-      "id": "33-product-displays-reduce-confusion",
-      "approved": true,
-      "content_type": "informative",
-      "topic": "product-storytelling",
-      "references": [
-        "DIGI MONK",
-        "Alex Hormozi"
-      ],
-      "uses_project_assets": false,
-      "visual_mode": "image-led",
-      "campaign_goal": "Explain what a strong digital product display should accomplish.",
-      "lesson": "A product display should reveal the product, explain key parts, show what makes it valuable, and reduce buyer confusion.",
-      "media_urls": [
-        "https://d2ol7oe51mr4n9.cloudfront.net/user_3FugzGV89ehMBrUoVdwLJxFujO5/273cdb63-9410-4434-ac98-f39dadb92abf.jpg"
-      ],
-      "caption": "Product displays should reduce confusion.\n\nShow the whole product clearly. Break down the parts that matter. Reveal the features that create value. Then make the next step obvious.\n\nThe more complex the product, the more useful a clear visual explanation becomes.\n\ngrowthterminal.io"
+      "caption": "Interactive websites. Product launches. 3D scroll experiences.\n\nGrowth Terminal builds digital experiences that let people explore the product, understand the value, and remember the brand.\n\nBuilt around the offer, not a template.\n\ngrowthterminal.io"
     }
   ]
 }

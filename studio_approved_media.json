@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "policy": "Only exact repository media explicitly approved by the owner may be published by the studio Instagram workflow.",
+  "media": {
+    "creatives/gt_approved_20261001_interactive-websites-product-launches-3d-scroll.png": {
+      "git_blob_sha": "4a1452708721f6ccd4b607fe81e629ed5ab9b52d",
+      "approval": "owner-explicit",
+      "approved_at": "2026-10-01",
+      "purpose": "Growth Terminal marketing for interactive websites, product launches, and 3D scroll experiences"
+    }
+  }
+}
