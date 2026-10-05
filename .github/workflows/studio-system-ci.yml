@@ -1,0 +1,40 @@
+name: Studio Conversion System CI
+
+on:
+  pull_request:
+    paths:
+      - "studio_design_system.json"
+      - "studio_conversion_briefs.json"
+      - "studio_carousels.json"
+      - "studio_approved_media.json"
+      - "studio_system_validate.py"
+      - "studio_queue_validate.py"
+      - "studio_carousel_post.py"
+      - "collect_insights.py"
+      - ".github/workflows/studio-carousel.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install validator dependencies
+        run: pip install pillow requests
+
+      - name: Compile Python
+        run: python -m py_compile studio_system_validate.py studio_queue_validate.py studio_carousel_post.py collect_insights.py
+
+      - name: Validate design system
+        run: python studio_system_validate.py
+
+      - name: Validate publish queue
+        run: python studio_queue_validate.py
