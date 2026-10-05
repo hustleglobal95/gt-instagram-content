@@ -1,0 +1,165 @@
+{
+  "version": "2.0.0",
+  "name": "Growth Terminal Instagram Conversion System",
+  "objective": "Turn feed attention into qualified interest in Growth Terminal custom digital experiences.",
+  "services": [
+    "interactive websites",
+    "product launches",
+    "3D scroll experiences",
+    "custom digital experiences"
+  ],
+  "canvas": {
+    "feed_width": 1080,
+    "feed_height": 1350,
+    "aspect_ratio": "4:5",
+    "safe_margin_px": 72,
+    "minimum_visual_coverage": 0.58,
+    "maximum_text_coverage": 0.28
+  },
+  "palette": {
+    "ink": "#17130F",
+    "warm_white": "#FDFCFC",
+    "paper": "#F5F0E7",
+    "signal_orange": "#FC5802",
+    "muted": "#81786F",
+    "rules": [
+      "Signal orange is the only accent.",
+      "No gradients used as the main visual.",
+      "No large empty grey fields.",
+      "The artwork must still work if every decorative effect is removed."
+    ]
+  },
+  "type": {
+    "display": {
+      "family": "ITight",
+      "weights": [700, 800],
+      "min_px": 82,
+      "max_px": 132,
+      "max_words": 7,
+      "max_lines": 3
+    },
+    "support": {
+      "family": "ITight",
+      "weights": [600],
+      "min_px": 30,
+      "max_px": 42,
+      "max_words": 14
+    },
+    "metadata": {
+      "family": "JBM",
+      "weights": [500, 700],
+      "min_px": 18,
+      "max_px": 24
+    },
+    "rules": [
+      "One dominant headline. Nothing competes with it.",
+      "No tiny navigation-style typography.",
+      "No paragraph blocks on the artwork.",
+      "Fraunces is not used in the conversion system.",
+      "The hook must be readable on a phone before the caption is opened."
+    ]
+  },
+  "composition": {
+    "brand_mark": {
+      "position": "top-left",
+      "width_px": 210,
+      "quiet": true
+    },
+    "cta": {
+      "required": true,
+      "position": "bottom-left-or-bottom-right",
+      "min_font_px": 26,
+      "style": "high-contrast action line or signal-orange action block"
+    },
+    "hero": {
+      "required": true,
+      "rule": "One hero visual demonstrates the service. It must not be a website header crop, a generic browser rectangle, or decorative filler."
+    },
+    "rules": [
+      "Asymmetry over centered poster layouts.",
+      "Hero visual owns most of the frame.",
+      "Use one primary idea per post.",
+      "Do not place a full website navigation bar inside an Instagram creative.",
+      "Do not use empty texture or blank color as the hero.",
+      "If the visual does not demonstrate the offer, the post fails."
+    ]
+  },
+  "conversion": {
+    "allowed_goals": [
+      "visit-work",
+      "start-project",
+      "request-concept",
+      "book-conversation"
+    ],
+    "allowed_ctas": [
+      "See the work",
+      "Start a project",
+      "Request a concept",
+      "Build the experience"
+    ],
+    "rules": [
+      "Every post names or unmistakably shows what Growth Terminal sells.",
+      "Every post gives the viewer a next action on the artwork, not only in the caption.",
+      "Generic education is not a conversion objective.",
+      "No post may use content_type=informative.",
+      "No philosophical statement is allowed unless the second read ties directly to a service."
+    ]
+  },
+  "archetypes": {
+    "experience-demo": {
+      "share_of_rotation": 0.35,
+      "purpose": "Show what an interactive or immersive experience feels like.",
+      "required": ["hero_visual", "hook", "service_label", "cta"],
+      "cover_formula": "service demonstration + 3 to 7 word hook + visible next action"
+    },
+    "buyer-problem": {
+      "share_of_rotation": 0.20,
+      "purpose": "Name the buyer's current website or launch problem and make the contrast visual.",
+      "required": ["problem", "contrast_visual", "hook", "cta"],
+      "cover_formula": "recognizable problem + visual contrast + next action"
+    },
+    "launch-transformation": {
+      "share_of_rotation": 0.25,
+      "purpose": "Show how a static product story becomes a launch sequence.",
+      "required": ["before_state", "after_state", "hook", "cta"],
+      "cover_formula": "before/after or assembled/revealed sequence + direct promise"
+    },
+    "process-proof": {
+      "share_of_rotation": 0.20,
+      "purpose": "Make the custom process tangible without inventing client results.",
+      "required": ["deliverable", "process_visual", "hook", "cta"],
+      "cover_formula": "real deliverable or workflow + concise outcome + next action"
+    }
+  },
+  "feed_mix": {
+    "sell_or_demo": 0.70,
+    "process_or_proof": 0.20,
+    "point_of_view": 0.10,
+    "maximum_consecutive_same_archetype": 2
+  },
+  "quality_gates": {
+    "owner_visual_approval": true,
+    "local_media_only": true,
+    "minimum_side_px": 1000,
+    "minimum_file_bytes": 100000,
+    "minimum_contrast": 12.0,
+    "requires_hook": true,
+    "requires_cta": true,
+    "requires_buyer": true,
+    "requires_visual_concept": true,
+    "requires_conversion_goal": true
+  },
+  "reject_patterns": [
+    "website header crop",
+    "blank field",
+    "generic educational card",
+    "tiny top navigation",
+    "body-copy poster",
+    "stock dashboard screenshot with no story",
+    "generic AI abstract art",
+    "decorative 3D object with no relation to the service",
+    "random section numbering",
+    "filler texture",
+    "multiple competing CTAs"
+  ]
+}
