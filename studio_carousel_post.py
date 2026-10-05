@@ -32,7 +32,7 @@ def load(path, default):
 def git_blob_sha(path):
     data = pathlib.Path(path).read_bytes()
     h = hashlib.sha1()
-    h.update(f"blob {len(data)}\\0".encode("utf-8"))
+    h.update(f"blob {len(data)}\0".encode("utf-8"))
     h.update(data)
     return h.hexdigest()
 
@@ -115,7 +115,7 @@ def main():
     used.append({"id": pid, "at": now, "media_id": media_id})
     with open(USED, "w") as f:
         json.dump(used, f, indent=2)
-        f.write("\\n")
+        f.write("\n")
 
     log = load(cp.STATE_FILE, [])
     log.append({
