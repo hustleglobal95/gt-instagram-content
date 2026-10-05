@@ -1,27 +1,8 @@
 {
-  "note": "Fail-closed Growth Terminal Instagram queue. Rebuilt 4 Oct 2026 after a low-quality post escaped the prior metadata-only gate. Every queued visual must be an exact file in studio_approved_media.json. No remote media and no generated filler may publish automatically.",
+  "note": "Growth Terminal Instagram Conversion System v2 is active. The previous generic queue is retired. This queue stays safely idle until a finished visual is explicitly owner-approved and passes studio_design_system.json. No fallback content is allowed.",
   "account": "markusreidgt",
+  "design_system": "studio_design_system.json",
+  "creative_briefs": "studio_conversion_briefs.json",
   "loop": false,
-  "visual_standard": {
-    "required_mode": "image-led",
-    "local_media_only": true,
-    "owner_visual_approval_required": true,
-    "minimum_side_px": 1000,
-    "minimum_file_bytes": 100000,
-    "rule": "Publish the visual, not a generic text lesson. The image must sell or demonstrate interactive websites, product launches, or 3D scroll experiences."
-  },
-  "carousels": [
-    {
-      "id": "34-approved-core-services",
-      "approved": true,
-      "owner_visual_approved": true,
-      "content_type": "marketing",
-      "visual_mode": "image-led",
-      "campaign_goal": "Sell Growth Terminal's core offer with the owner-approved interactive websites, product launches, and 3D scroll creative.",
-      "media_files": [
-        "creatives/gt_approved_20261001_interactive-websites-product-launches-3d-scroll.png"
-      ],
-      "caption": "Interactive websites. Product launches. 3D scroll experiences.\n\nGrowth Terminal builds digital experiences that let people explore the product, understand the value, and remember the brand.\n\nBuilt around the offer, not a template.\n\ngrowthterminal.io"
-    }
-  ]
+  "carousels": []
 }
