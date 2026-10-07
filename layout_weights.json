@@ -9,7 +9,7 @@
     "formatsWithAnyEngagement": 16,
     "collectionHealth": {
       "ig_attempted": 150,
-      "ig_succeeded": 148,
+      "ig_succeeded": 147,
       "ig_errors": [
         {
           "media_id": "17887294077611366",
@@ -185,7 +185,7 @@
     }
   },
   "reason": "Only 56 total interactions across 150 posts. Under 100 the gaps between formats are noise, not ranking. The bottleneck here is distribution, not creative format, and reweighting the rotation would optimise against randomness.",
-  "evaluatedAt": "2026-10-06T12:14:17.289Z",
+  "evaluatedAt": "2026-10-07T11:59:23.038Z",
   "gates": {
     "MIN_TOTAL_ENGAGEMENT": 100,
     "MIN_POSTS_PER_FORMAT": 8,
