@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-07T13:23:40.231Z",
+  "updated": "2026-10-08T13:30:19.031Z",
   "count": 253,
   "ranking_basis": "per_1k",
   "min_views_for_rate": 25,
@@ -26,14 +26,14 @@
     "outbound_replies_measured": 3,
     "total_views_incl_replies": 18583,
     "summed_views": 18553,
-    "platform_views": 1557,
-    "ratio": 11.935
+    "platform_views": 1064,
+    "ratio": 17.465
   },
   "platform": {
     "Markus": {
-      "views": 1557,
-      "likes": 23,
-      "replies": 381,
+      "views": 1064,
+      "likes": 18,
+      "replies": 364,
       "reposts": 0,
       "quotes": 0,
       "followers_count": 31
