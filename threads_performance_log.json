@@ -1,11 +1,11 @@
 {
-  "updated": "2026-10-15T11:32:05.851Z",
+  "updated": "2026-10-16T11:25:27.304Z",
   "count": 253,
   "ranking_basis": "per_1k",
   "min_views_for_rate": 25,
   "rate_eligible": 88,
   "reach": {
-    "views": 18561,
+    "views": 18563,
     "interactions": 947,
     "median_views": 13,
     "zero_interaction_posts": 153
@@ -24,16 +24,16 @@
     "outbound_reply_views": 30,
     "outbound_reply_interactions": 1,
     "outbound_replies_measured": 3,
-    "total_views_incl_replies": 18591,
-    "summed_views": 18561,
-    "platform_views": 759,
-    "ratio": 24.494
+    "total_views_incl_replies": 18593,
+    "summed_views": 18563,
+    "platform_views": 736,
+    "ratio": 25.262
   },
   "platform": {
     "Markus": {
-      "views": 759,
+      "views": 736,
       "likes": 6,
-      "replies": 242,
+      "replies": 221,
       "reposts": 0,
       "quotes": 0,
       "followers_count": 31
@@ -3296,16 +3296,16 @@
       ],
       "permalink": "https://www.threads.com/@markusreidgt/post/DcoZQWSmlhP",
       "metrics": {
-        "views": 19,
+        "views": 20,
         "likes": 0,
         "replies": 3,
         "reposts": 0,
         "quotes": 0,
         "shares": 0
       },
-      "views": 19,
+      "views": 20,
       "engagement": 3,
-      "per_1k": 157.89,
+      "per_1k": 150,
       "rateReliable": false,
       "basis": "total"
     },
@@ -4336,6 +4336,33 @@
       "basis": "total"
     },
     {
+      "at": "2026-09-07T19:22:44+0000",
+      "pillar": "playbook",
+      "kind": "offer",
+      "isThread": false,
+      "parts": 1,
+      "parts_measured": 1,
+      "in_posted_log": true,
+      "text": "Read the three star reviews on your competitors and ignore the five star ones.\n\nThree stars means somebody wanted it to work, used it properly, and was let down by something specific enough to name.\n\nCollect twenty and the same three compla",
+      "accounts": [
+        "Markus"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/Dc_2jZZIA3Z",
+      "metrics": {
+        "views": 13,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 13,
+      "engagement": 0,
+      "per_1k": 0,
+      "rateReliable": false,
+      "basis": "total"
+    },
+    {
       "at": "2026-09-06T00:11:13+0000",
       "pillar": "systems",
       "kind": "ai",
@@ -4465,33 +4492,6 @@
         "shares": 0
       },
       "views": 13,
-      "engagement": 0,
-      "per_1k": 0,
-      "rateReliable": false,
-      "basis": "total"
-    },
-    {
-      "at": "2026-09-07T19:22:44+0000",
-      "pillar": "playbook",
-      "kind": "offer",
-      "isThread": false,
-      "parts": 1,
-      "parts_measured": 1,
-      "in_posted_log": true,
-      "text": "Read the three star reviews on your competitors and ignore the five star ones.\n\nThree stars means somebody wanted it to work, used it properly, and was let down by something specific enough to name.\n\nCollect twenty and the same three compla",
-      "accounts": [
-        "Markus"
-      ],
-      "permalink": "https://www.threads.com/@markusreidgt/post/Dc_2jZZIA3Z",
-      "metrics": {
-        "views": 12,
-        "likes": 0,
-        "replies": 0,
-        "reposts": 0,
-        "quotes": 0,
-        "shares": 0
-      },
-      "views": 12,
       "engagement": 0,
       "per_1k": 0,
       "rateReliable": false,
