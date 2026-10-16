@@ -185,7 +185,7 @@
     }
   },
   "reason": "Only 58 total interactions across 150 posts. Under 100 the gaps between formats are noise, not ranking. The bottleneck here is distribution, not creative format, and reweighting the rotation would optimise against randomness.",
-  "evaluatedAt": "2026-10-15T10:15:47.333Z",
+  "evaluatedAt": "2026-10-16T10:09:44.956Z",
   "gates": {
     "MIN_TOTAL_ENGAGEMENT": 100,
     "MIN_POSTS_PER_FORMAT": 8,
