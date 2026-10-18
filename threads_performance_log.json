@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-17T10:45:04.810Z",
+  "updated": "2026-10-18T11:04:30.929Z",
   "count": 253,
   "ranking_basis": "per_1k",
   "min_views_for_rate": 25,
@@ -17,23 +17,23 @@
       "replies": 400
     },
     "content_units": 253,
-    "media_measured": 650,
-    "chain_parts_folded_in": 397,
+    "media_measured": 649,
+    "chain_parts_folded_in": 396,
     "posts_missing_from_local_log": 41,
-    "outbound_replies": 3,
-    "outbound_reply_views": 30,
+    "outbound_replies": 4,
+    "outbound_reply_views": 31,
     "outbound_reply_interactions": 1,
-    "outbound_replies_measured": 3,
-    "total_views_incl_replies": 18593,
+    "outbound_replies_measured": 4,
+    "total_views_incl_replies": 18594,
     "summed_views": 18563,
-    "platform_views": 710,
-    "ratio": 26.187
+    "platform_views": 699,
+    "ratio": 26.601
   },
   "platform": {
     "Markus": {
-      "views": 710,
-      "likes": 6,
-      "replies": 201,
+      "views": 699,
+      "likes": 5,
+      "replies": 173,
       "reposts": 0,
       "quotes": 0,
       "followers_count": 31
@@ -1127,8 +1127,8 @@
       "pillar": "community",
       "kind": "thread",
       "isThread": true,
-      "parts": 5,
-      "parts_measured": 5,
+      "parts": 4,
+      "parts_measured": 4,
       "in_posted_log": true,
       "text": "The list of things that would be nice will happily consume the entire week.",
       "accounts": [
@@ -7644,8 +7644,8 @@
     }
   ],
   "collection": {
-    "attempted": 650,
-    "succeeded": 650,
+    "attempted": 649,
+    "succeeded": 649,
     "reduced_metric_set": 0,
     "errors": []
   }
