@@ -1,12 +1,12 @@
 {
-  "updated": "2026-10-19T13:12:18.952Z",
+  "updated": "2026-10-20T11:36:15.969Z",
   "count": 253,
   "ranking_basis": "per_1k",
   "min_views_for_rate": 25,
   "rate_eligible": 88,
   "reach": {
     "views": 18563,
-    "interactions": 947,
+    "interactions": 946,
     "median_views": 13,
     "zero_interaction_posts": 153
   },
@@ -26,14 +26,14 @@
     "outbound_replies_measured": 4,
     "total_views_incl_replies": 18597,
     "summed_views": 18563,
-    "platform_views": 695,
-    "ratio": 26.758
+    "platform_views": 681,
+    "ratio": 27.308
   },
   "platform": {
     "Markus": {
-      "views": 695,
-      "likes": 4,
-      "replies": 149,
+      "views": 681,
+      "likes": 3,
+      "replies": 127,
       "reposts": 0,
       "quotes": 0,
       "followers_count": 31
@@ -1204,33 +1204,6 @@
       "basis": "per_1k"
     },
     {
-      "at": "2026-08-18T04:05:25+0000",
-      "pillar": "unknown",
-      "kind": "unknown",
-      "isThread": false,
-      "parts": 1,
-      "parts_measured": 1,
-      "in_posted_log": false,
-      "text": "Most businesses don’t need more ideas.\n\nThey need to know which offer has the strongest chance of actually selling.\n\nGrowth Terminal helps you identify what to sell, who it’s for, and why customers would choose it.\n\nStop guessing. Build the",
-      "accounts": [
-        "Markus"
-      ],
-      "permalink": "https://www.threads.com/@markusreidgt/post/DcKtscEjQ-8",
-      "metrics": {
-        "views": 373,
-        "likes": 9,
-        "replies": 0,
-        "reposts": 0,
-        "quotes": 0,
-        "shares": 0
-      },
-      "views": 373,
-      "engagement": 9,
-      "per_1k": 24.13,
-      "rateReliable": true,
-      "basis": "per_1k"
-    },
-    {
       "at": "2026-08-13T22:29:35+0000",
       "pillar": "unknown",
       "kind": "unknown",
@@ -1362,6 +1335,33 @@
       "views": 226,
       "engagement": 5,
       "per_1k": 22.12,
+      "rateReliable": true,
+      "basis": "per_1k"
+    },
+    {
+      "at": "2026-08-18T04:05:25+0000",
+      "pillar": "unknown",
+      "kind": "unknown",
+      "isThread": false,
+      "parts": 1,
+      "parts_measured": 1,
+      "in_posted_log": false,
+      "text": "Most businesses don’t need more ideas.\n\nThey need to know which offer has the strongest chance of actually selling.\n\nGrowth Terminal helps you identify what to sell, who it’s for, and why customers would choose it.\n\nStop guessing. Build the",
+      "accounts": [
+        "Markus"
+      ],
+      "permalink": "https://www.threads.com/@markusreidgt/post/DcKtscEjQ-8",
+      "metrics": {
+        "views": 373,
+        "likes": 8,
+        "replies": 0,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0
+      },
+      "views": 373,
+      "engagement": 8,
+      "per_1k": 21.45,
       "rateReliable": true,
       "basis": "per_1k"
     },
@@ -7153,10 +7153,10 @@
     {
       "key": "unknown",
       "posts": 41,
-      "engagement": 51,
-      "avg_engagement": 1.24,
+      "engagement": 50,
+      "avg_engagement": 1.22,
       "views": 1390,
-      "avg_per_1k": 40.67
+      "avg_per_1k": 40.4
     },
     {
       "key": "systems",
@@ -7259,10 +7259,10 @@
     {
       "key": "unknown",
       "posts": 41,
-      "engagement": 51,
-      "avg_engagement": 1.24,
+      "engagement": 50,
+      "avg_engagement": 1.22,
       "views": 1390,
-      "avg_per_1k": 40.67
+      "avg_per_1k": 40.4
     },
     {
       "key": "aphorism",
@@ -7637,10 +7637,10 @@
     {
       "key": "single",
       "posts": 185,
-      "engagement": 160,
+      "engagement": 159,
       "avg_engagement": 0.86,
       "views": 5617,
-      "avg_per_1k": 44.52
+      "avg_per_1k": 44.46
     }
   ],
   "collection": {
