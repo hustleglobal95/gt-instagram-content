@@ -2,8 +2,8 @@
   "active": false,
   "diagnostics": {
     "totalPosts": 150,
-    "totalEngagement": 61,
-    "igEngagement": 53,
+    "totalEngagement": 63,
+    "igEngagement": 55,
     "fbEngagement": 8,
     "formats": 22,
     "formatsWithAnyEngagement": 17,
@@ -184,8 +184,8 @@
       "own_comments_excluded": 141
     }
   },
-  "reason": "Only 61 total interactions across 150 posts. Under 100 the gaps between formats are noise, not ranking. The bottleneck here is distribution, not creative format, and reweighting the rotation would optimise against randomness.",
-  "evaluatedAt": "2026-10-19T11:09:17.555Z",
+  "reason": "Only 63 total interactions across 150 posts. Under 100 the gaps between formats are noise, not ranking. The bottleneck here is distribution, not creative format, and reweighting the rotation would optimise against randomness.",
+  "evaluatedAt": "2026-10-20T10:20:03.691Z",
   "gates": {
     "MIN_TOTAL_ENGAGEMENT": 100,
     "MIN_POSTS_PER_FORMAT": 8,
