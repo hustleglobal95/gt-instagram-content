@@ -1,7 +1,40 @@
 {
-  "updated": "2026-10-31T11:06:13.521811Z",
+  "updated": "2026-11-01T12:02:43.910682Z",
   "count": 150,
   "posts": [
+    {
+      "sig": "informative:26-idea-to-launch",
+      "layout": null,
+      "file": "studio/informative/02-idea-to-launch.jpg",
+      "is_reel": false,
+      "at": "2026-10-03T19:28:53.698935Z",
+      "caption": "A product launch site is not just a homepage with a new product on it.\n\nThe experience needs a sequence.\n\nStart with the",
+      "permalink": "https://www.instagram.com/p/DeCz6PXmOyE/",
+      "campaign_key": null,
+      "archetype": null,
+      "service": null,
+      "buyer": null,
+      "hook": null,
+      "cta": null,
+      "conversion_goal": null,
+      "ig": {
+        "likes": 17,
+        "comments": 0,
+        "saved": 0,
+        "shares": 0,
+        "reach": 0,
+        "views": 0,
+        "permalink": "https://www.instagram.com/p/DeCz6PXmOyE/",
+        "insights_ok": false,
+        "insights_metrics": "",
+        "own_comments": 0,
+        "comments_external": 0,
+        "engagement": 17
+      },
+      "fb": null,
+      "engagement": 17,
+      "_ig_attempted": true
+    },
     {
       "sig": "feat:Find the one constraint holding your gro:gt_scene_01.png",
       "layout": "feature",
@@ -39,39 +72,6 @@
         "reach_metric": "",
         "engagement": 0
       },
-      "engagement": 14,
-      "_ig_attempted": true
-    },
-    {
-      "sig": "informative:26-idea-to-launch",
-      "layout": null,
-      "file": "studio/informative/02-idea-to-launch.jpg",
-      "is_reel": false,
-      "at": "2026-10-03T19:28:53.698935Z",
-      "caption": "A product launch site is not just a homepage with a new product on it.\n\nThe experience needs a sequence.\n\nStart with the",
-      "permalink": "https://www.instagram.com/p/DeCz6PXmOyE/",
-      "campaign_key": null,
-      "archetype": null,
-      "service": null,
-      "buyer": null,
-      "hook": null,
-      "cta": null,
-      "conversion_goal": null,
-      "ig": {
-        "likes": 14,
-        "comments": 0,
-        "saved": 0,
-        "shares": 0,
-        "reach": 0,
-        "views": 0,
-        "permalink": "https://www.instagram.com/p/DeCz6PXmOyE/",
-        "insights_ok": false,
-        "insights_metrics": "",
-        "own_comments": 0,
-        "comments_external": 0,
-        "engagement": 14
-      },
-      "fb": null,
       "engagement": 14,
       "_ig_attempted": true
     },
@@ -5911,6 +5911,14 @@
       "avg_engagement": 4.0
     },
     {
+      "layout": "unknown",
+      "posts": 7,
+      "engagement": 17,
+      "ig_engagement": 17,
+      "fb_engagement": 0,
+      "avg_engagement": 2.4
+    },
+    {
       "layout": "bigquote",
       "posts": 1,
       "engagement": 2,
@@ -5923,14 +5931,6 @@
       "posts": 1,
       "engagement": 2,
       "ig_engagement": 2,
-      "fb_engagement": 0,
-      "avg_engagement": 2.0
-    },
-    {
-      "layout": "unknown",
-      "posts": 7,
-      "engagement": 14,
-      "ig_engagement": 14,
       "fb_engagement": 0,
       "avg_engagement": 2.0
     },
