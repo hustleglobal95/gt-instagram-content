@@ -94,98 +94,17 @@
       ],
       "ig_error_count": 150,
       "fb_succeeded": 141,
-      "fb_errors": [
-        {
-          "post_id": "1087307654468135_122101356416536059",
-          "message": "reach unavailable: (#100) The value must be a valid insights metric"
-        },
-        {
-          "post_id": "1087307654468135_122101365716536059",
-          "message": "reach unavailable: (#100) The value must be a valid insights metric"
-        },
-        {
-          "post_id": "1087307654468135_122101369340536059",
-          "message": "reach unavailable: (#100) The value must be a valid insights metric"
-        },
-        {
-          "post_id": "1087307654468135_122101384160536059",
-          "message": "reach unavailable: (#100) The value must be a valid insights metric"
-        },
-        {
-          "post_id": "1087307654468135_122101398824536059",
-          "message": "reach unavailable: (#100) The value must be a valid insights metric"
-        },
-        {
-          "post_id": "1087307654468135_122101402226536059",
-          "message": "reach unavailable: (#100) The value must be a valid insights metric"
-        },
-        {
-          "post_id": "1087307654468135_122101416002536059",
-          "message": "reach unavailable: (#100) The value must be a valid insights metric"
-        },
-        {
-          "post_id": "1087307654468135_122101421984536059",
-          "message": "reach unavailable: (#100) The value must be a valid insights metric"
-        },
-        {
-          "post_id": "1087307654468135_122101425044536059",
-          "message": "reach unavailable: (#100) The value must be a valid insights metric"
-        },
-        {
-          "post_id": "1087307654468135_122101428668536059",
-          "message": "reach unavailable: (#100) The value must be a valid insights metric"
-        },
-        {
-          "post_id": "1087307654468135_122101436714536059",
-          "message": "reach unavailable: (#100) The value must be a valid insights metric"
-        },
-        {
-          "post_id": "1087307654468135_122101453532536059",
-          "message": "reach unavailable: (#100) The value must be a valid insights metric"
-        },
-        {
-          "post_id": "1087307654468135_122101457618536059",
-          "message": "reach unavailable: (#100) The value must be a valid insights metric"
-        },
-        {
-          "post_id": "1087307654468135_122101459880536059",
-          "message": "reach unavailable: (#100) The value must be a valid insights metric"
-        },
-        {
-          "post_id": "1087307654468135_122101466750536059",
-          "message": "reach unavailable: (#100) The value must be a valid insights metric"
-        },
-        {
-          "post_id": "1087307654468135_122101473008536059",
-          "message": "reach unavailable: (#100) The value must be a valid insights metric"
-        },
-        {
-          "post_id": "1087307654468135_122101494692536059",
-          "message": "reach unavailable: (#100) The value must be a valid insights metric"
-        },
-        {
-          "post_id": "1087307654468135_122101500356536059",
-          "message": "reach unavailable: (#100) The value must be a valid insights metric"
-        },
-        {
-          "post_id": "1087307654468135_122101502774536059",
-          "message": "reach unavailable: (#100) The value must be a valid insights metric"
-        },
-        {
-          "post_id": "1087307654468135_122101509356536059",
-          "message": "reach unavailable: (#100) The value must be a valid insights metric"
-        }
-      ],
-      "fb_error_count": 141,
+      "fb_errors": [],
+      "fb_error_count": 0,
       "ig_with_insights": 0,
       "ig_reach_total": 0,
       "fb_reach_total": 0,
-      "fb_reach_metric": "",
+      "fb_reach_metric": "post_impressions_unique",
       "own_comments_excluded": 141
     }
   },
   "reason": "Only 83 total interactions across 150 posts. Under 100 the gaps between formats are noise, not ranking. The bottleneck here is distribution, not creative format, and reweighting the rotation would optimise against randomness.",
-  "evaluatedAt": "2026-11-05T13:31:23.753Z",
+  "evaluatedAt": "2026-11-06T13:11:52.753Z",
   "gates": {
     "MIN_TOTAL_ENGAGEMENT": 100,
     "MIN_POSTS_PER_FORMAT": 8,
