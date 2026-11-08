@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-07T11:54:57.354790Z",
+  "updated": "2026-11-08T12:09:12.405592Z",
   "count": 150,
   "posts": [
     {
@@ -18,7 +18,7 @@
       "cta": null,
       "conversion_goal": null,
       "ig": {
-        "likes": 27,
+        "likes": 30,
         "comments": 0,
         "saved": 0,
         "shares": 0,
@@ -29,10 +29,10 @@
         "insights_metrics": "",
         "own_comments": 0,
         "comments_external": 0,
-        "engagement": 27
+        "engagement": 30
       },
       "fb": null,
-      "engagement": 27,
+      "engagement": 30,
       "_ig_attempted": true
     },
     {
@@ -51,7 +51,7 @@
       "cta": null,
       "conversion_goal": null,
       "ig": {
-        "likes": 14,
+        "likes": 13,
         "comments": 1,
         "saved": 0,
         "shares": 0,
@@ -62,7 +62,7 @@
         "insights_metrics": "",
         "own_comments": 1,
         "comments_external": 0,
-        "engagement": 14
+        "engagement": 13
       },
       "fb": {
         "reactions": 0,
@@ -72,7 +72,7 @@
         "reach_metric": "post_impressions_unique",
         "engagement": 0
       },
-      "engagement": 14,
+      "engagement": 13,
       "_ig_attempted": true
     },
     {
@@ -5903,20 +5903,20 @@
   ],
   "by_format": [
     {
-      "layout": "feature",
-      "posts": 4,
-      "engagement": 16,
-      "ig_engagement": 14,
-      "fb_engagement": 2,
-      "avg_engagement": 4.0
-    },
-    {
       "layout": "unknown",
       "posts": 7,
-      "engagement": 27,
-      "ig_engagement": 27,
+      "engagement": 30,
+      "ig_engagement": 30,
       "fb_engagement": 0,
-      "avg_engagement": 3.9
+      "avg_engagement": 4.3
+    },
+    {
+      "layout": "feature",
+      "posts": 4,
+      "engagement": 15,
+      "ig_engagement": 13,
+      "fb_engagement": 2,
+      "avg_engagement": 3.8
     },
     {
       "layout": "bigquote",
