@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-11T14:13:56.173Z",
+  "updated": "2026-11-12T15:07:06.189Z",
   "count": 0,
   "ranking_basis": "total",
   "min_views_for_rate": 25,
@@ -42,15 +42,15 @@
     "errors": [
       {
         "mediaId": "Markus account insights",
-        "message": "Error validating access token: Session has expired on Wednesday, 21-Oct-26 19:14:49 PDT. The current time is Wednesday, 11-Nov-26 06:13:55 PST."
+        "message": "Error validating access token: Session has expired on Wednesday, 21-Oct-26 19:14:49 PDT. The current time is Thursday, 12-Nov-26 07:07:05 PST."
       },
       {
         "mediaId": "Markus threads",
-        "message": "Markus threads page 0: Error validating access token: Session has expired on Wednesday, 21-Oct-26 19:14:49 PDT. The current time is Wednesday, 11-Nov-26 06:13:56 PST."
+        "message": "Markus threads page 0: Error validating access token: Session has expired on Wednesday, 21-Oct-26 19:14:49 PDT. The current time is Thursday, 12-Nov-26 07:07:06 PST."
       },
       {
         "mediaId": "Markus replies",
-        "message": "Markus replies page 0: Error validating access token: Session has expired on Wednesday, 21-Oct-26 19:14:49 PDT. The current time is Wednesday, 11-Nov-26 06:13:56 PST."
+        "message": "Markus replies page 0: Error validating access token: Session has expired on Wednesday, 21-Oct-26 19:14:49 PDT. The current time is Thursday, 12-Nov-26 07:07:06 PST."
       }
     ]
   }
