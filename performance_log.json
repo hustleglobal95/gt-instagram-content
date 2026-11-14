@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-13T13:23:40.339423Z",
+  "updated": "2026-11-14T12:27:34.153827Z",
   "count": 150,
   "posts": [
     {
@@ -18,7 +18,7 @@
       "cta": null,
       "conversion_goal": null,
       "ig": {
-        "likes": 33,
+        "likes": 35,
         "comments": 0,
         "saved": 0,
         "shares": 0,
@@ -29,10 +29,10 @@
         "insights_metrics": "",
         "own_comments": 0,
         "comments_external": 0,
-        "engagement": 33
+        "engagement": 35
       },
       "fb": null,
-      "engagement": 33,
+      "engagement": 35,
       "_ig_attempted": true
     },
     {
@@ -5905,10 +5905,10 @@
     {
       "layout": "unknown",
       "posts": 7,
-      "engagement": 33,
-      "ig_engagement": 33,
+      "engagement": 35,
+      "ig_engagement": 35,
       "fb_engagement": 0,
-      "avg_engagement": 4.7
+      "avg_engagement": 5.0
     },
     {
       "layout": "feature",
