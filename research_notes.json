@@ -2,6 +2,78 @@
   "about": "Deep research knowledge base. Newest run first.",
   "runs": [
     {
+      "at": "2026-11-16T23:30:16.343Z",
+      "provider": "openai",
+      "articles": [
+        {
+          "title": "New Research: Traffic to the Open Web Has Fallen 12% in 5 years; Visits/web User Are Down 30%",
+          "url": "https://sparktoro.com/blog/new-research-traffic-to-the-open-web-has-fallen-24-in-5-years/"
+        },
+        {
+          "title": "20 Zero Click Marketing Questions Everyone&#8217;s Asking",
+          "url": "https://sparktoro.com/blog/20-zero-click-marketing-questions-everyones-asking/"
+        },
+        {
+          "title": "Is AI Visibility a Marketing BoonDoggle?",
+          "url": "https://sparktoro.com/blog/is-ai-visibility-a-marketing-boondoggle/"
+        },
+        {
+          "title": "What Pokemon Pokopia Taught Me About the Future of Marketing",
+          "url": "https://sparktoro.com/blog/what-pokemon-pokopia-taught-me-about-the-future-of-marketing/"
+        }
+      ],
+      "findings": [
+        {
+          "id": "dr_20261116_1",
+          "name": "traffic decline statistic",
+          "device": "include a specific percentage change in traffic or user engagement in your marketing message",
+          "evidence": "Total traffic peaked in Q1 2022 at 2.243 trillion visits. At the low point (Q1 2026 1.914T), traffic was down 14.7% from the 2022 high.",
+          "angle": "Create an ad campaign that emphasizes the 14.7% decline in traffic to encourage businesses to adapt their strategies.",
+          "url": "https://sparktoro.com/blog/new-research-traffic-to-the-open-web-has-fallen-24-in-5-years/"
+        },
+        {
+          "id": "dr_20261116_2",
+          "name": "Competitor Success Evidence",
+          "device": "provide specific competitor examples to illustrate success",
+          "evidence": "The article suggests showing examples of competitors having success with social engagement and endorsements from notable publications.",
+          "angle": "Create a case study ad showcasing competitor success in zero-click marketing to persuade executives.",
+          "url": "https://sparktoro.com/blog/20-zero-click-marketing-questions-everyones-asking/"
+        },
+        {
+          "id": "dr_20261116_3",
+          "name": "Engagement Metrics Focus",
+          "device": "list top engagement metrics relevant to specific channels in under 10 words",
+          "evidence": "The article states that for Instagram and TikTok, impressions, views, engagements, and follows should be part of top-of-funnel metrics.",
+          "angle": "Design an infographic highlighting key engagement metrics for Instagram and TikTok.",
+          "url": "https://sparktoro.com/blog/20-zero-click-marketing-questions-everyones-asking/"
+        },
+        {
+          "id": "dr_20261116_4",
+          "name": "AI Traffic Conversion Rate",
+          "device": "Include a specific percentage comparison of AI traffic to traditional traffic in the headline.",
+          "evidence": "Marie Haynes found that ChatGPT traffic was 0.62% and all LLMs combined was 0.73%, which is less than DuckDuckGo.",
+          "angle": "Create an ad that compares AI traffic conversion rates to Google, showcasing the stark difference in effectiveness.",
+          "url": "https://sparktoro.com/blog/is-ai-visibility-a-marketing-boondoggle/"
+        }
+      ],
+      "log": [
+        "DEEP RESEARCH RUN 2026-11-16T23:30:16.343Z",
+        "feed ok: https://copyhackers.com/feed/ (14 items)",
+        "feed ok: https://adespresso.com/feed/ (10 items)",
+        "  junk title skipped: 15 Fresh Facebook Ad Examples to Inspire Your Next Campaign ",
+        "feed ok: https://sparktoro.com/blog/feed/ (10 items)",
+        "feed FAILED: https://www.marketingweek.com/feed/ (HTTP 403)",
+        "feed FAILED: https://www.growthunhinged.com/feed (HTTP 404)",
+        "feed FAILED: https://ariyh.com/feed (HTTP 404)",
+        "4 fresh articles collected",
+        "distilling with openai",
+        "  STRONG finding: traffic decline statistic",
+        "  STRONG finding: Competitor Success Evidence",
+        "  STRONG finding: Engagement Metrics Focus",
+        "  STRONG finding: AI Traffic Conversion Rate"
+      ]
+    },
+    {
       "at": "2026-09-21T19:43:37.051Z",
       "provider": "openai",
       "articles": [],
