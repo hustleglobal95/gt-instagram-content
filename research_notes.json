@@ -2,6 +2,39 @@
   "about": "Deep research knowledge base. Newest run first.",
   "runs": [
     {
+      "at": "2026-11-24T01:53:31.690Z",
+      "provider": "openai",
+      "articles": [
+        {
+          "title": "We Analyzed 118,000 ChatGPT Prompts from 12,000+ Users to Answer: How Do Americans Use AI Tools in 2026?",
+          "url": "https://sparktoro.com/blog/we-analyzed-11800-chatgpt-prompts-from-12000-users-to-answer-how-do-americans-use-ai-tools-in-2026/"
+        }
+      ],
+      "findings": [
+        {
+          "id": "dr_20261124_1",
+          "name": "brand engagement statistic",
+          "device": "include a specific percentage of brand mentions in AI responses to highlight engagement",
+          "evidence": "12.1% of responses containing one or more brands/products/companies is nothing to shake a stick at",
+          "angle": "Create an infographic showing the percentage of brand mentions in AI responses to attract marketers",
+          "url": "https://sparktoro.com/blog/we-analyzed-11800-chatgpt-prompts-from-12000-users-to-answer-how-do-americans-use-ai-tools-in-2026/"
+        }
+      ],
+      "log": [
+        "DEEP RESEARCH RUN 2026-11-24T01:53:31.690Z",
+        "feed ok: https://copyhackers.com/feed/ (14 items)",
+        "feed ok: https://adespresso.com/feed/ (10 items)",
+        "  junk title skipped: 15 Fresh Facebook Ad Examples to Inspire Your Next Campaign ",
+        "feed ok: https://sparktoro.com/blog/feed/ (10 items)",
+        "feed FAILED: https://www.marketingweek.com/feed/ (HTTP 403)",
+        "feed FAILED: https://www.growthunhinged.com/feed (fetch failed)",
+        "feed FAILED: https://ariyh.com/feed (HTTP 404)",
+        "1 fresh articles collected",
+        "distilling with openai",
+        "  STRONG finding: brand engagement statistic"
+      ]
+    },
+    {
       "at": "2026-11-16T23:30:16.343Z",
       "provider": "openai",
       "articles": [
